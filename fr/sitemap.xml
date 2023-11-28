@@ -2,16 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://florae006.github.io/about/</loc>
-    <lastmod>2023-11-28T19:11:55+08:00</lastmod>
+    <loc>https://florae006.github.io/fr/frcategories/</loc>
   </url><url>
-    <loc>https://florae006.github.io/categories/</loc>
+    <loc>https://florae006.github.io/fr/frseries/</loc>
   </url><url>
-    <loc>https://florae006.github.io/</loc>
+    <loc>https://florae006.github.io/fr/frtags/</loc>
+  </url><url>
+    <loc>https://florae006.github.io/fr/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://florae006.github.io/fr/"
+                hreflang="en"
+                href="https://florae006.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -20,12 +21,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://florae006.github.io/"
+                hreflang="fr"
+                href="https://florae006.github.io/fr/"
                 />
-  </url><url>
-    <loc>https://florae006.github.io/series/</loc>
-  </url><url>
-    <loc>https://florae006.github.io/tags/</loc>
   </url>
 </urlset>
