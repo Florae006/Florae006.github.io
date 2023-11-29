@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/post/my-first-post/</loc>
-    <lastmod>2023-11-29T10:42:03+08:00</lastmod>
-  </url><url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/</loc>
+    <loc>https://florae006.github.io/</loc>
     <lastmod>2023-11-29T10:42:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://adityatelange.github.io/hugo-PaperMod/fr/"
+                href="https://florae006.github.io/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://adityatelange.github.io/hugo-PaperMod/fa/"
+                href="https://florae006.github.io/fa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://adityatelange.github.io/hugo-PaperMod/"
+                href="https://florae006.github.io/"
                 />
   </url><url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/post/</loc>
+    <loc>https://florae006.github.io/post/my-first-post/</loc>
     <lastmod>2023-11-29T10:42:03+08:00</lastmod>
   </url><url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/post/first/</loc>
+    <loc>https://florae006.github.io/post/</loc>
+    <lastmod>2023-11-29T10:42:03+08:00</lastmod>
+  </url><url>
+    <loc>https://florae006.github.io/post/first/</loc>
     <lastmod>2023-11-28T20:43:11+08:00</lastmod>
   </url><url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/about/</loc>
+    <loc>https://florae006.github.io/about/</loc>
     <lastmod>2023-11-28T19:11:55+08:00</lastmod>
   </url><url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/categories/</loc>
+    <loc>https://florae006.github.io/categories/</loc>
   </url><url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/series/</loc>
+    <loc>https://florae006.github.io/series/</loc>
   </url><url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/tags/</loc>
+    <loc>https://florae006.github.io/tags/</loc>
   </url>
 </urlset>

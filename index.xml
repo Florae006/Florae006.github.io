@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>PaperMod</title>
-    <link>https://adityatelange.github.io/hugo-PaperMod/</link>
-    <description>Recent content on PaperMod</description>
+    <title>DODOLA&#39;s WareHouse</title>
+    <link>https://florae006.github.io/</link>
+    <description>Recent content on DODOLA&#39;s WareHouse</description>
     <image>
-      <title>PaperMod</title>
-      <url>https://adityatelange.github.io/hugo-PaperMod/papermod-cover.png</url>
-      <link>https://adityatelange.github.io/hugo-PaperMod/papermod-cover.png</link>
+      <title>DODOLA&#39;s WareHouse</title>
+      <url>https://florae006.github.io/papermod-cover.png</url>
+      <link>https://florae006.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Nov 2023 10:42:03 +0800</lastBuildDate><atom:link href="https://adityatelange.github.io/hugo-PaperMod/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Nov 2023 10:42:03 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>https://adityatelange.github.io/hugo-PaperMod/post/my-first-post/</link>
+      <link>https://florae006.github.io/post/my-first-post/</link>
       <pubDate>Wed, 29 Nov 2023 10:42:03 +0800</pubDate>
       
-      <guid>https://adityatelange.github.io/hugo-PaperMod/post/my-first-post/</guid>
+      <guid>https://florae006.github.io/post/my-first-post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>First</title>
-      <link>https://adityatelange.github.io/hugo-PaperMod/post/first/</link>
+      <link>https://florae006.github.io/post/first/</link>
       <pubDate>Tue, 28 Nov 2023 20:43:11 +0800</pubDate>
       
-      <guid>https://adityatelange.github.io/hugo-PaperMod/post/first/</guid>
+      <guid>https://florae006.github.io/post/first/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://adityatelange.github.io/hugo-PaperMod/about/</link>
+      <link>https://florae006.github.io/about/</link>
       <pubDate>Tue, 28 Nov 2023 19:11:55 +0800</pubDate>
       
-      <guid>https://adityatelange.github.io/hugo-PaperMod/about/</guid>
+      <guid>https://florae006.github.io/about/</guid>
       <description></description>
     </item>
     
