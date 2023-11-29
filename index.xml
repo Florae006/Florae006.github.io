@@ -11,7 +11,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Nov 2023 12:21:00 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Nov 2023 12:24:21 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Start</title>
+      <link>https://florae006.github.io/posts/startsite/start/</link>
+      <pubDate>Wed, 29 Nov 2023 12:24:21 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/posts/startsite/start/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>First Tech Blog</title>
       <link>https://florae006.github.io/posts/tech/first-tech-blog/</link>
