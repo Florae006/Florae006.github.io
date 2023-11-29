@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>DODOLA&#39;s WareHouse</title>
+    <title>📔技术 on DODOLA&#39;s WareHouse</title>
     <link>https://florae006.github.io/posts/tech/</link>
-    <description>Recent content on DODOLA&#39;s WareHouse</description>
+    <description>Recent content in 📔技术 on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
       <url>https://florae006.github.io/papermod-cover.png</url>
@@ -11,16 +11,6 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Nov 2023 12:21:00 +0800</lastBuildDate><atom:link href="https://florae006.github.io/posts/tech/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>First Tech Blog</title>
-      <link>https://florae006.github.io/posts/tech/first-tech-blog/</link>
-      <pubDate>Wed, 29 Nov 2023 12:21:00 +0800</pubDate>
-      
-      <guid>https://florae006.github.io/posts/tech/first-tech-blog/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
+    <lastBuildDate>Tue, 28 Nov 2023 19:11:55 +0800</lastBuildDate><atom:link href="https://florae006.github.io/posts/tech/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

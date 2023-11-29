@@ -2,46 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://florae006.github.io/posts/life/</loc>
+    <lastmod>2023-11-29T21:06:04+08:00</lastmod>
+  </url><url>
+    <loc>https://florae006.github.io/posts/beauty/</loc>
+    <lastmod>2023-11-29T21:06:04+08:00</lastmod>
+  </url><url>
+    <loc>https://florae006.github.io/</loc>
+    <lastmod>2023-11-29T21:06:04+08:00</lastmod>
+  </url><url>
+    <loc>https://florae006.github.io/posts/startsite/build_hugo/</loc>
+    <lastmod>2023-11-29T19:11:55+08:00</lastmod>
+  </url><url>
+    <loc>https://florae006.github.io/posts/startsite/</loc>
+    <lastmod>2023-11-29T19:11:55+08:00</lastmod>
+  </url><url>
     <loc>https://florae006.github.io/search/</loc>
     <lastmod>2023-11-29T13:39:10+08:00</lastmod>
   </url><url>
-    <loc>https://florae006.github.io/posts/startsite/</loc>
-    <lastmod>2023-11-29T12:24:21+08:00</lastmod>
-  </url><url>
-    <loc>https://florae006.github.io/</loc>
-    <lastmod>2023-11-29T12:24:21+08:00</lastmod>
-  </url><url>
-    <loc>https://florae006.github.io/tags/hugo/</loc>
-    <lastmod>2023-11-29T12:24:21+08:00</lastmod>
-  </url><url>
-    <loc>https://florae006.github.io/series/papermod-site-building/</loc>
-    <lastmod>2023-11-29T12:24:21+08:00</lastmod>
-  </url><url>
-    <loc>https://florae006.github.io/series/</loc>
-    <lastmod>2023-11-29T12:24:21+08:00</lastmod>
-  </url><url>
-    <loc>https://florae006.github.io/posts/startsite/start/</loc>
-    <lastmod>2023-11-29T12:24:21+08:00</lastmod>
-  </url><url>
-    <loc>https://florae006.github.io/tags/</loc>
-    <lastmod>2023-11-29T12:24:21+08:00</lastmod>
-  </url><url>
     <loc>https://florae006.github.io/posts/tech/</loc>
-    <lastmod>2023-11-29T12:21:00+08:00</lastmod>
-  </url><url>
-    <loc>https://florae006.github.io/posts/tech/first-tech-blog/</loc>
-    <lastmod>2023-11-29T12:21:00+08:00</lastmod>
-  </url><url>
-    <loc>https://florae006.github.io/posts/</loc>
     <lastmod>2023-11-28T19:11:55+08:00</lastmod>
   </url><url>
     <loc>https://florae006.github.io/about/</loc>
     <lastmod>2023-11-28T19:11:55+08:00</lastmod>
   </url><url>
-    <loc>https://florae006.github.io/posts/beauty/</loc>
+    <loc>https://florae006.github.io/posts/</loc>
+    <lastmod>2023-11-28T19:11:55+08:00</lastmod>
   </url><url>
-    <loc>https://florae006.github.io/posts/life/</loc>
+    <loc>https://florae006.github.io/archives/</loc>
+  </url><url>
+    <loc>https://florae006.github.io/links/</loc>
   </url><url>
     <loc>https://florae006.github.io/categories/</loc>
+  </url><url>
+    <loc>https://florae006.github.io/series/</loc>
+  </url><url>
+    <loc>https://florae006.github.io/tags/</loc>
   </url>
 </urlset>
