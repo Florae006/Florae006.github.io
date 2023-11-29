@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://florae006.github.io/fa/facategories/</loc>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/fa/facategories/</loc>
   </url><url>
-    <loc>https://florae006.github.io/fa/faseries/</loc>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/fa/faseries/</loc>
   </url><url>
-    <loc>https://florae006.github.io/fa/fatags/</loc>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/fa/fatags/</loc>
   </url><url>
-    <loc>https://florae006.github.io/fa/</loc>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/fa/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://florae006.github.io/"
+                href="https://adityatelange.github.io/hugo-PaperMod/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://florae006.github.io/fr/"
+                href="https://adityatelange.github.io/hugo-PaperMod/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://florae006.github.io/fa/"
+                href="https://adityatelange.github.io/hugo-PaperMod/fa/"
                 />
   </url>
 </urlset>

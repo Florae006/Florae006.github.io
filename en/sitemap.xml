@@ -2,30 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://florae006.github.io/about/</loc>
-    <lastmod>2023-11-28T19:11:55+08:00</lastmod>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/post/my-first-post/</loc>
+    <lastmod>2023-11-29T10:42:03+08:00</lastmod>
   </url><url>
-    <loc>https://florae006.github.io/categories/</loc>
-  </url><url>
-    <loc>https://florae006.github.io/</loc>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/</loc>
+    <lastmod>2023-11-29T10:42:03+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://florae006.github.io/fr/"
+                href="https://adityatelange.github.io/hugo-PaperMod/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://florae006.github.io/fa/"
+                href="https://adityatelange.github.io/hugo-PaperMod/fa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://florae006.github.io/"
+                href="https://adityatelange.github.io/hugo-PaperMod/"
                 />
   </url><url>
-    <loc>https://florae006.github.io/series/</loc>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/post/</loc>
+    <lastmod>2023-11-29T10:42:03+08:00</lastmod>
   </url><url>
-    <loc>https://florae006.github.io/tags/</loc>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/post/first/</loc>
+    <lastmod>2023-11-28T20:43:11+08:00</lastmod>
+  </url><url>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/about/</loc>
+    <lastmod>2023-11-28T19:11:55+08:00</lastmod>
+  </url><url>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/categories/</loc>
+  </url><url>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/series/</loc>
+  </url><url>
+    <loc>https://adityatelange.github.io/hugo-PaperMod/tags/</loc>
   </url>
 </urlset>
