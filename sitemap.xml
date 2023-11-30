@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://florae006.github.io/</loc>
+    <lastmod>2023-11-30T21:53:02+08:00</lastmod>
+  </url><url>
+    <loc>https://florae006.github.io/posts/startsite/basic_setting/</loc>
+    <lastmod>2023-11-30T21:53:02+08:00</lastmod>
+  </url><url>
+    <loc>https://florae006.github.io/links/</loc>
+    <lastmod>2023-11-30T14:20:16+08:00</lastmod>
+  </url><url>
     <loc>https://florae006.github.io/posts/life/</loc>
     <lastmod>2023-11-29T21:06:04+08:00</lastmod>
   </url><url>
     <loc>https://florae006.github.io/posts/beauty/</loc>
-    <lastmod>2023-11-29T21:06:04+08:00</lastmod>
-  </url><url>
-    <loc>https://florae006.github.io/</loc>
     <lastmod>2023-11-29T21:06:04+08:00</lastmod>
   </url><url>
     <loc>https://florae006.github.io/posts/startsite/build_hugo/</loc>
@@ -30,8 +36,6 @@
     <lastmod>2023-11-28T19:11:55+08:00</lastmod>
   </url><url>
     <loc>https://florae006.github.io/archives/</loc>
-  </url><url>
-    <loc>https://florae006.github.io/links/</loc>
   </url><url>
     <loc>https://florae006.github.io/categories/</loc>
   </url><url>
