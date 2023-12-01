@@ -1,29 +1,333 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>DODOLA&#39;s WareHouse</title>
-    <link>https://florae006.github.io/</link>
-    <description>Recent content on DODOLA&#39;s WareHouse</description>
-    <image>
-      <title>DODOLA&#39;s WareHouse</title>
-      <url>https://florae006.github.io/papermod-cover.png</url>
-      <link>https://florae006.github.io/papermod-cover.png</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 01 Dec 2023 13:10:27 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>JQuery</title>
-      <link>https://florae006.github.io/posts/tech/front_end/js_notes/jquery/</link>
-      <pubDate>Fri, 01 Dec 2023 13:10:27 +0800</pubDate>
-      
-      <guid>https://florae006.github.io/posts/tech/front_end/js_notes/jquery/</guid>
-      <description>哆哆啦のjQuery学习笔记（超细）（23.07.28） [TOC] 1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码： 1 2</description>
-      <content:encoded><![CDATA[<h1 id="哆哆啦のjquery学习笔记超细230728">哆哆啦のjQuery学习笔记（超细）（23.07.28）</h1>
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>JQuery | DODOLA&#39;s WareHouse</title>
+<meta name="keywords" content="">
+<meta name="description" content="哆哆啦のjQuery学习笔记（超细）（23.07.28） [TOC] 1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码： 1 2">
+<meta name="author" content="DODOLA">
+<link rel="canonical" href="https://florae006.github.io/posts/tech/front_end/js_notes/jquery/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.38fd232e45f78b7fda1674bd73e72497e2667eaa3df8faf01e57fd0a3507c98f.css" integrity="" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://florae006.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://florae006.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://florae006.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://florae006.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://florae006.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="JQuery" />
+<meta property="og:description" content="哆哆啦のjQuery学习笔记（超细）（23.07.28） [TOC] 1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码： 1 2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://florae006.github.io/posts/tech/front_end/js_notes/jquery/" /><meta property="og:image" content="https://florae006.github.io/papermod-cover.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-01T13:10:27+08:00" />
+<meta property="article:modified_time" content="2023-12-01T13:10:27+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://florae006.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="JQuery"/>
+<meta name="twitter:description" content="哆哆啦のjQuery学习笔记（超细）（23.07.28） [TOC] 1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码： 1 2"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "发布",
+      "item": "https://florae006.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "📔技术",
+      "item": "https://florae006.github.io/posts/tech/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "前端部分",
+      "item": "https://florae006.github.io/posts/tech/front_end/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  4 ,
+      "name": "JavaSript部分",
+      "item": "https://florae006.github.io/posts/tech/front_end/js_notes/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  5 ,
+      "name": "JQuery",
+      "item": "https://florae006.github.io/posts/tech/front_end/js_notes/jquery/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "JQuery",
+  "name": "JQuery",
+  "description": "哆哆啦のjQuery学习笔记（超细）（23.07.28） [TOC] 1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码： 1 2",
+  "keywords": [
+    
+  ],
+  "articleBody": "哆哆啦のjQuery学习笔记（超细）（23.07.28） [TOC]\n1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"src/assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面\u003c/title\u003e \u003c/head\u003e \u003cbody\u003e \u003cdiv id=\"mydiv\"\u003e文本\u003c/div\u003e \u003c/body\u003e \u003cscript type=\"text/javascript\"\u003e // Dom对象 // 单个的Dom对象 var divDom = document.getElementById(\"mydiv\"); console.log(divDom); // Dom对象数组 var divsDom = document.getElementsByTagName(\"div\") console.log(divsDom) // 会返回[]数组 // js获取不存在的元素时： var spanDom = document.getElementsByTagName(\"span\") console.log(spanDom) // 会返回空数组 var spanDom2 = document.getElementById(\"myspan\") console.log(spanDom2) console.log(\"============分割线============\") // jQuery对象 // 通过id选择获取元素对象 $(\"#id属性值\") var divJquery = $(\"#mydiv\"); console.log(divJquery) // jQuery获取不存在的元素时： var spanJquery = $(\"#myspan\") console.log(spanJquery) // 会返回空集合{} // Dom对象转为jQuery对象 // 利用$()方法进行包装即可 var divDomToJquery = $(divDom) console.log(divDomToJquery) // jQuery转Dom对象 // 因为jQuery对象是个对象的包装集，所以欲将jQuery对象转换为Dom对象，可以通过： // 1.获取包装集对象中指定下标的元素； var divJqueryToDom = divJquery[0] console.log(divJqueryToDom) // 2.通过遍历 $('#mydiv').each(function(){ var divJqueryToDom1 = this console.log(divJqueryToDom1) var divJqueryToDom2 = $(this) console.log(divJqueryToDom2) // 通过遍历jQuery对象数组得到的对象是Dom对象，可以通过$()转为jQuery对象 // 这里的this是Dom对象(divJqueryToDom1)，我们用$()方法将它转回jQuery对象(divJqueryToDom2)了 }) \u003c/script\u003e \u003c/html\u003e 2. jQuery选择器 2.1 基础选择器 学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-02\u003c/title\u003e \u003c/head\u003e \u003cbody\u003e \u003cdiv id=\"mydiv1\"\u003eid选择器\u003cspan\u003espan中的内容\u003c/span\u003e\u003c/div\u003e \u003cdiv id=\"mydiv1\" class=\"blue\"\u003e元素选择器\u003c/div\u003e \u003cspan class=\"blue\"\u003e样式选择器\u003c/span\u003e \u003c/body\u003e \u003cscript type=\"text/javascript\"\u003e // id选择器 #id属性值 var mydiv = $(\"#mydiv1\") console.log(mydiv) // 1个 // 类选择器 .class属性值 var clas = $(\".blue\") console.log(clas) // 2个 // 元素选择器 标签名/元素名 var spans = $(\"span\") console.log(spans) // 2个 // 通用选择器 * var all = $(\"*\") console.log(all) // 12个 // 组合选择器 选择器1,选择器2,... var group = $(\"#mydiv1,div,.blue\") console.log(group) // 3个 \u003c/script\u003e \u003c/html\u003e 2.2 层次选择器 选择器 名称 举例 后代选择器 ancestor descendant $(\"#parent div\")选择id为parent的元素的所有div元素 子代选择器 parent\u003echild $(\"#parent\u003ediv\")选择id为parent的直接div子元素 相邻选择器 prev+next $(\"#.blue + img\")选择css类为blue的下一个img元素 同辈选择器 prev~sibling $(\"#.blue ~ img\")选择css类为blue的之后的img元素 学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-03\u003c/title\u003e \u003cstyle\u003e .testColor{ background: green; } .gray{ background: gray; } \u003c/style\u003e \u003c/head\u003e \u003cbody\u003e \u003cdiv id=\"parent\"\u003e 层次选择 \u003cdiv class=\"testColor\" id=\"child\"\u003e 父选择器 \u003cdiv class=\"gray\"\u003e子选择器\u003c/div\u003e \u003cimg src=\"../assets/img/16.webp\" alt=\"\" width=\"370px\" height=\"229px\"\u003e \u003cimg src=\"../assets/img/17.webp\" alt=\"\" width=\"370px\" height=\"229px\"\u003e \u003c/div\u003e \u003cdiv\u003e 选择器2\u003cdiv\u003e选择器2中的div\u003c/div\u003e \u003c/div\u003e \u003cp\u003ep元素\u003c/p\u003e \u003c/div\u003e \u003c/body\u003e \u003cscript type=\"text/javascript\"\u003e // 后代选择器 var hd = $(\"#parent div\") console.log(hd) // 4个 // 子代选择器 var zd = $(\"#parent \u003e div\") console.log(zd) // 2个 // 相邻选择器 var xl = $(\"#child + div\") console.log(xl) // 1个 // 假如相邻的不是指定元素，则返回的jQuery集是空的 var xl2 = $(\"child + p\") console.log(xl2) // 0个 // 同辈选择器 var tb = $(\".gray ~ img\") console.log(tb) // 2个 \u003c/script\u003e \u003c/html\u003e 2.3 表单选择器 Forms 名称 举例 表单选择器 :input 查找所有的input元素：$(\":input\")\n注意：会匹配所有的input、textarea和button元素。 文本框选择器 :text 查找所有文本框：$(\":text\") 密码框选择器 :password 查找所有密码框：$(\":password\") 单选按钮选择器 :radio 查找所有单选按钮：$(\":radio\") 复选框按钮选择器 :checkbox 查找所有复选框：$(\":checkbox\") 提交按钮选择器 :submit 查找所有提交按钮：$(\":submit\") 图像域选择器 :image 查找所有图像域：$(\":image\") 重置按钮选择器 :reset 查找所有重置按钮：$(\":reset\") 按钮选择器 :button 查找所有按钮：$(\":button\") 文件阈选择器 :file 查找所有文件阈：$(\":file\") 学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-04\u003c/title\u003e \u003c/head\u003e \u003cbody style=\"text-align: center;\"\u003e \u003ch1\u003e表单选择器\u003c/h1\u003e \u003cform action=\"\" id=\"myform\" name=\"myform\" method=\"psot\"\u003e \u003cinput type=\"hidden\" name=\"uno\" id=\"\" value=\"9999\" disabled=\"disabled\"\u003e 姓名：\u003cinput type=\"text\" id=\"uname\" name=\"uname\" \u003e \u003cbr\u003e 密码：\u003cinput type=\"password\" id=\"upwd\" name=\"upwd\" value=\"123456\"\u003e \u003cbr\u003e 年龄：\u003cinput type=\"radio\" name=\"uage\" value=\"0\" checked=\"checked\"\u003e未成年嗷 \u003cinput type=\"radio\" name=\"uage\" value=\"1\"\u003e成年嗷 \u003cbr\u003e 爱好：\u003cinput type=\"checkbox\" name=\"ufav\" value=\"唱\"\u003e唱 \u003cinput type=\"checkbox\" name=\"ufav\" value=\"跳\"\u003e跳 \u003cinput type=\"checkbox\" name=\"ufav\" value=\"rap\"\u003erap \u003cinput type=\"checkbox\" name=\"ufav\" value=\"篮球\"\u003e篮球 \u003cbr\u003e 来自：\u003cselect name=\"ufrom\" id=\"ufrom\"\u003e \u003coption value=\"Gryffindor\"\u003eGryffindor\u003c/option\u003e \u003coption value=\"Hufflepuff\"\u003eHufflepuff\u003c/option\u003e \u003coption value=\"Ravenclaw\"\u003eRavenclaw\u003c/option\u003e \u003coption value=\"Slytherin\"\u003e\u003c/option\u003e \u003c/select\u003e \u003cbr\u003e 简介：\u003ctextarea name=\"uintro\" id=\"\" cols=\"30\" rows=\"10\"\u003e\u003c/textarea\u003e \u003cbr\u003e 头像：\u003cinput type=\"file\" name=\"\" id=\"\"\u003e \u003cbr\u003e \u003cinput type=\"image\" src=\"../assets/img/16.webp\" width=\"600px\" height=\"400px\"\u003e \u003cbr\u003e \u003cbutton type=\"submit\" onclick=\"return checkForm();\"\u003e提交\u003c/button\u003e \u003cbutton type=\"reset\"\u003e重置\u003c/button\u003e \u003c/form\u003e \u003c/body\u003e \u003cscript\u003e // 表单选择器 var inputs = $(\":input\") console.log(inputs) // 15个（input家族：input*11 + select*1 + textarea*1 + button*2） // 如果不加冒号(:)，就会是元素选择器 // 元素选择器 var inputs2 = $(\"input\") console.log(inputs2) // 11个（input元素*11） // 文本框选择器 var texts = $(\":text\") console.log(texts) // 1个 // 密码框选择器 var passwords = $(\":password\") console.log(passwords) // 1个 // 单选框选择器 var radioes = $(\":radio\") console.log(radioes) // 2个 // 复选框按钮选择器 var checkboxes = $(\":checkbox\") console.log(checkboxes) // 4个 // 提交按钮选择器 var submits = $(\":submit\") console.log(submits) // 1个 // 图像域按钮选择器 var images = $(\":image\") console.log(images) // 1个 // 重置按钮选择器 var resets = $(\":reset\") console.log(resets) // 1个 // 按钮选择器 var buttons = $(\":button\") console.log(buttons) // 2个 // 文件域选择器 var files = $(\":file\") console.log(files) // 1个 \u003c/script\u003e \u003c/html\u003e 3. jQuery Dom操作 jQuery也提供了对HTML节点的操作，而且在原生JS的基础上进行了优化，使用起来更加方便。\n常用的从几个方面来操作：\n查找元素（选择器已实现）；\n创建节点元素；\n访问和设置节点元素的值以及属性；\n添加节点；\n删除节点；\n删除、添加、修改、设定节点的CSS样式；\n注意：以下的操作只适用于jQuery对象\n3.1 操作元素的属性 方法 说明 举例 attr(属性名称) 获取指定的属性值\n操作checkbox时，选中时返回checked，没有选择返回undefined。 attr('checked')\nattr('name') prop(属性名称) 获取具有true和false两个属性的属性值 prop('checked') 3.1.1 获取属性 attr(\"属性名\") prop(\"属性名\")\n3.1.2 设置属性 attr(\"属性名\", \"属性值\") prop(\"属性名\", \"属性值\")\n3.1.3 移除属性 removeAttr(\"属性名\")\n学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-05\u003c/title\u003e \u003c/head\u003e \u003cbody\u003e \u003cform action=\"\" id=\"myform\"\u003e \u003cinput type=\"checkbox\" name=\"ch\" id=\"aa\" sentence=\"first\" checked=\"checked\"\u003e悟已往之不谏 \u003cinput type=\"checkbox\" name=\"ch\" id=\"bb\" sentence=\"second\"\u003e知来者之可追 \u003c/form\u003e \u003c/body\u003e \u003cscript\u003e // 获取name属性 // 固有属性：使用attr()和prop()都可以得到固有属性 var name = $(\"#aa\").attr(\"name\"); console.log(name) // ch var name2 = $(\"#aa\").prop(\"name\"); console.log(name2) // ch // 返回值是Boolean类型的属性： // 1. 元素设置了属性的：attr()返回具体的值，prop()返回true var ck1 = $(\"#aa\").attr(\"checked\") console.log(ck1) // checked var ck2 = $(\"#aa\").prop(\"checked\") console.log(ck2) // true // 2. 元素没有设置属性的：attr()返回undefined，prop()返回false var ck3 = $(\"#bb\").attr(\"checked\") console.log(ck3) // undefined var ck4 = $(\"#bb\").prop(\"checked\") console.log(ck4) // false // 自定义属性：attr()可获取，prop()不可获取 var sentence1 = $(\"#aa\").attr(\"sentence\") console.log(sentence1) // first var sentence2 = $(\"#aa\").prop(\"sentence\") console.log(sentence2) // undefined console.log(\"=======分割线=======\") // 设置属性 // 固有属性 $(\"#aa\").attr(\"value\", \"1\") $(\"#bb\").prop(\"value\", \"2\") // 返回值是Boolean类型的属性 $(\"#bb\").attr(\"checked\", \"checked\") $(\"#bb\").prop(\"checked\", false) // 自定义属性 $(\"#aa\").attr(\"writer\", \"陶渊明\") $(\"#aa\").prop(\"dynasty\", \"Jin\") // 这部分的运行结果可以通过Elements查看（属性操作结果1） // 只有attr()操作的writer被成功设置，prop()失败 // 移除属性 $(\"#aa\").removeAttr(\"checked\") // 结果就是\"悟已往之不谏\"显示不再被选中（属性操作结果2） \u003c/script\u003e \u003c/html\u003e 属性操作结果1：\n属性操作结果2：\n3.2 操作元素的样式 元素的样式也是一种属性，由于样式用的特别多，所以对于样式除了当做属性处理外还可以有专门的方法进行处理。\n方法 说明 attr(\"class\") 获取class属性的值，即样式名称 attr(\"class\", \"样式名\") 修改class属性的值，修改样式 addClass(\"样式名\") 添加样式的名称 css() 添加具体的样式 removeClass(class) 移除样式名称 增加元素的具体样式的格式：\n1 2 3 4 5 1) css({'样式名1':'样式值1', '样式名2':'样式值2', '样式名3':'样式值3',...}) 例：css({\"background-color\": \"red\", \"color\": \"#fff\"}) 2) css(\"样式名\", \"样式值\") 例：css('color', 'black') 学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-06\u003c/title\u003e \u003cstyle\u003e div{ padding: 8px; width: 180px; } .blue{ background: blue; } .larger{ font-size: 30px; } .green{ background: green; } /* .pink { background: pink; } */ \u003c/style\u003e \u003c/head\u003e \u003cbody style=\"text-align: center;\"\u003e \u003ch3\u003ecss()方法设置元素样式\u003c/h3\u003e \u003cdiv id=\"conBlue\" class=\"blue larger\"\u003eSo, get away.\u003c/div\u003e \u003cdiv id=\"conRed\"\u003eAnother way to feell what you didn't want yourself to know.\u003c/div\u003e \u003cdiv id=\"remove\" class=\"blue larger\"\u003eAnd let yourself go.\u003c/div\u003e \u003c/body\u003e \u003cscript\u003e // attr(\"class\") 获取元素的样式名 var cla = $(\"#conBlue\").attr(\"class\") console.log(cla) // attr(\"class\", \"样式名\") 设置元素的样式 $(\"#conBlue\").attr(\"class\", \"green\") // 原本的样式会被全部覆盖 // addClass(\"样式名\") 添加样式 $(\"#conBlue\").addClass(\"larger\") $(\"#conBlue\").addClass(\"pink\") // 注意！.pink在style中的顺序会影响效果（CSS的默认显示顺序是后来居上），谁后定义显示谁（可见操作结果1） // css() 添加具体的样式（添加行内样式） $(\"#conRed\").css(\"font-size\", \"40px\") $(\"#conRed\").css({\"font-family\": \"Impact\", \"color\": \"orange\"}) // 可见操作结果2 // removeClass(\"样式名\") 移除样式 $(\"#remove\").removeClass(\"larger\") // 操作结果3 \u003c/script\u003e \u003c/html\u003e 操作结果1：\n操作结果2：\n操作结果3：\n3.3 操作元素的内容 对于元素还可以操作其中的内容，例如文本、值、甚至是html…\n方法 说明 html() 获取元素的html内容 html(\"html, 内容\") 设定元素的html内容 text() 获取元素的文本内容，不包括html text(\"text 内容\") 设置元素的文本内容，不包括html val() 获取元素的value值 val('值') 设定元素的value值 学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-07\u003c/title\u003e \u003c/head\u003e \u003cbody\u003e \u003ch3\u003e\u003cspan\u003ehtml()和text()方法设置元素内容\u003c/span\u003e\u003c/h3\u003e \u003cdiv id=\"html\"\u003e\u003c/div\u003e \u003cdiv id=\"html2\"\u003e\u003c/div\u003e \u003cdiv id=\"html3\"\u003e\u003ch3\u003e============\u003c/h3\u003e\u003c/div\u003e \u003cdiv id=\"text\"\u003e\u003c/div\u003e \u003cdiv id=\"text2\"\u003e\u003c/div\u003e \u003cdiv id=\"text3\"\u003e\u003ch2\u003e《贺新郎》\u003c/h2\u003e\u003c/div\u003e \u003cinput type=\"text\" name=\"uname\" value=\"oops\" id=\"op\"\u003e \u003c/body\u003e \u003cscript\u003e // html(\"内容\") 设置元素的内容，包括html标签（非表单元素） $(\"#html\").html(\"我见青山多妩媚\") $(\"#html2\").html(\"料青山见我应如是\") // html() 获取元素的内容，包含html标签（非表单元素） var html = $(\"#html\").html() console.log(html) // 纯文本式的：我见青山多妩媚 var html2 = $(\"#html2\").html() console.log(html2) // 料青山见我应如是 var html3 = $(\"#html3\").html() console.log(html3) // ============ // 注意.html()方法将其中的html标签读出来了 // text(\"内容\") 设置元素的纯文本内容，不识别HTML标签（所有的标签都会被当做字符串）（非表单元素） $(\"#text\").text(\"情与貌\") // 显示并没有识别html标签（见操作结果1） $(\"#text2\").text(\"略相似\") // text() 获取元素的纯文本内容，不识别HTML标签（所有的标签都会被当做字符串）（非表单元素） var text = $(\"#text\").text() console.log(text) // 情与貌 var text2 = $(\"#text2\").text() console.log(text2) // 略相似 var text3 = $(\"#text3\").text() console.log(text3) // 《贺新郎》 // 注意，原本写在#text3中是有一个标签的，但是使用text()方法时并不会将该标签读成\"《贺新郎》\" // val() 获取元素的值（表单元素） var val = $(\"#op\").val() console.log(val) // val(\"值\") 设置元素的value值（表单元素） $(\"#op\").val(\"星如雨\") \u003c/script\u003e \u003c/html\u003e 操作结果1：\n3.4 创建元素 在jQuery中创建元素很简单，直接使用核心函数即可\n1 2 3 4 格式： $(\"元素内容\") 举例： $(\"鹏北海，凤朝阳，又携书剑路茫茫。\n\") 代码操作示例\n3.5 添加元素 方法 说明 prepend(content) 在被选元素内部的开头插入元素或内容，被追加的content参数，可以是字符、HTML元素标记。 $(content).prependTo(selector) 把content元素或内容加入selector元素开头。 append(content) 在被选元素内部的结尾插入元素或内容，被追加的content参数，可以是字符、HTML元素标记。 $(content).appendTo(selector) 把content元素或内容插入selector元素内，默认是在尾部 before() 在元素前插入指定的元素或内容：$(selector).before(content)（兄弟级别） after() 在元素后插入指定的元素或内容：$(selector).after(content)（兄弟级别） 学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-08\u003c/title\u003e \u003cstyle\u003e div{ margin: 10px 0px; } span{ color: white; padding: 8px; } .red{ background-color: red; } .blue{ background-color: blue; } .green{ background-color: green; } .pink{ background-color: pink; } .gray{ background-color: gray; } \u003c/style\u003e \u003c/head\u003e \u003cbody\u003e \u003ch3\u003e.prepend()方法前追加内容\u003c/h3\u003e \u003ch3\u003e.prependTo()方法前追加内容\u003c/h3\u003e \u003ch3\u003e.append()方法后追加内容\u003c/h3\u003e \u003ch3\u003e.appendTo()方后前追加内容\u003c/h3\u003e \u003cspan class=\"red\"\u003e江畔何人初见月？江月何年初照人？\u003c/span\u003e \u003cspan class=\"blue\"\u003e藕丝秋色浅，人胜参差剪。\u003c/span\u003e \u003cdiv class=\"green\"\u003e \u003cspan\u003e江流宛转绕芳甸，月照花林皆似霰。\u003c/span\u003e \u003c/div\u003e \u003c/body\u003e \u003cscript\u003e // 创建元素 var p = \"这是一个p标签\n\" console.log(p) // 是黑色字体的：这是一个p标签\n，说明是字符串 console.log($(p)) // 是jQuery对象 // 添加元素 // 添加元素前要创建元素 // 1. 创建元素 var span = \"涟涟随波千万里，何处春江无月明。\" var span2 = \"春江潮水连海平，海上明月共潮生。\" // 得到指定元素，并在元素的内部最前面追加内容 $(\".green\").prepend(span) $(span2).prependTo($(\".green\")) var span3 = \"空里流霜不觉飞，汀上白沙看不见。\" var span4 = \"江天一色无纤尘，皎皎空中孤月轮。\" // 得到指定元素，并在元素的内部最后面追加内容 $(\".green\").append(span3) $(span4).appendTo($(\".green\")) // 将已存在内容追加到元素中 $(\".red\").appendTo($(\".green\")) // 同级追加 var sp1 = '江上柳如烟，雁飞残月天。' var sp2 = '双鬓隔香红，玉钗头上风。' $(\".blue\").before(sp1) $(\".blue\").after(sp2) \u003c/script\u003e \u003c/html\u003e 操作结果：\n3.6 删除元素 学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-09\u003c/title\u003e \u003cstyle\u003e span{ color: white; padding: 8px; margin: 5px; float: left; } .green{ background-color: green; } .blue{ background-color: blue; } \u003c/style\u003e \u003c/head\u003e \u003cbody\u003e \u003ch3\u003e删除元素\u003c/h3\u003e \u003cspan class=\"green\"\u003eGryffindor\u003c/span\u003e \u003cspan class=\"blue\"\u003eHufflepuff\u003c/span\u003e \u003cspan class=\"green\"\u003eRavenclaw\u003c/span\u003e \u003cspan class=\"blue\"\u003eSlytherin\u003c/span\u003e \u003c/body\u003e \u003cscript\u003e // 删除元素 $(\".green\").remove() // 操作效果1 // 清空元素 $(\".blue\").empty() // 操作效果1 \u003c/script\u003e \u003c/html\u003e 操作效果1：\n初始状态: $(\".green\").remove()操作后： $(\".blue\").empty()操作后： 3.7 遍历元素 each()\n$(selector).each(function(index,element){})：遍历元素\n参数function为遍历时的回调函数\nindex为遍历元素的序列号，从0开始\nelement是当前的元素，此时是dom元素\n学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-10\u003c/title\u003e \u003cstyle\u003e span { color: white; padding: 8px; margin: 5px; float: left; } .green { background-color: green; } .blue { background-color: blue; } \u003c/style\u003e \u003c/head\u003e \u003cbody\u003e \u003ch3\u003e遍历元素 each()\u003c/h3\u003e \u003cspan class=\"green\"\u003eGryffindor\u003c/span\u003e \u003cspan class=\"green\"\u003eHufflepuff\u003c/span\u003e \u003cspan class=\"green\"\u003eRavenclaw\u003c/span\u003e \u003cspan class=\"green\"\u003eSlytherin\u003c/span\u003e \u003c/body\u003e \u003cscript\u003e // 获取指定元素并遍历 $(\".green\").each(function(index, element){ console.log(index) console.log(element) console.log(this) console.log($(this)) //转成jQuery对象 }) // 操作结果1 \u003c/script\u003e \u003c/html\u003e 操作结果1：\n4. jQuery事件 4.1 ready加载事件 ready()类似于onLoad()事件\nready()可以写多个，按顺序执行\n$(document).ready(function(){})\n1 2 3 4 5 6 7 8 语法： $(document).ready(function(){ xxxx }) 简写： $(function(){ xxxx }) 体会加载：\n为了避免这种情况的发生，我们要将代码写到ready加载事件中\n学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-11\u003c/title\u003e \u003cscript\u003e // 获取元素 console.log($(\"#p1\")) // 发现是空的 // 代码从上往下执行，当这部分js代码写在开头时，网页的dom对象并没有加载完，所以是空的 // 预加载处理后： $(document).ready(function(){ console.log($(\"#p1\")) // 不是空的 }) // 另一种简写法： $(function(){ console.log($(\"#p1\")) }) \u003c/script\u003e \u003c/head\u003e \u003cbody\u003e \u003cp id=\"p1\"\u003e文本\u003c/p\u003e \u003c/body\u003e \u003cscript\u003e // 获取元素 console.log($(\"#p1\")) // 发现不是空的 \u003c/script\u003e \u003c/html\u003e 操作结果1：\n4.2 绑定事件 为被选元素添加一个或多个事件处理程序，并规定事件发生时运行的函数。\n1 2 语法： $(selector.bind(eventType [, eventData], handler(eventObject))); eventType：是一个字符串类型的事件类型，就是你所需要绑定的事件。\n​\t这类型可以包括如下：\n​\tblur，focus，focusout，load，resize，scroll，unload，click，dblclick\n​\tmousedown，mouseup，mousemove，mouseover，mouseout，mouseenter\n​\tmouseleave，change，select，submit，keydown，keypress，keyup，error\n[, eventData]：传递的参数，格式：{名1: 值1, 名2: 值2}\nhandler(eventObject)：该事件触发执行的函数。\n4.2.1 简单的bind()事件 4.2.2 绑定多个事件 学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-12\u003c/title\u003e \u003c/head\u003e \u003cbody\u003e \u003ch3\u003ebind()方法简单的绑定事件\u003c/h3\u003e \u003cdiv id=\"test\" style=\"cursor: pointer;\"\u003e点击查看名言\u003c/div\u003e \u003cinput type=\"button\" name=\"\" id=\"btntest\" value=\"点击就会变得不可用了\"\u003e \u003chr\u003e \u003cbutton type=\"button\" id=\"btn1\"\u003e按钮1\u003c/button\u003e \u003cbutton type=\"button\" id=\"btn2\"\u003e按钮2\u003c/button\u003e \u003cbutton type=\"button\" id=\"btn3\"\u003e按钮3\u003c/button\u003e \u003cbutton type=\"button\" id=\"btn4\"\u003e按钮4\u003c/button\u003e \u003c/body\u003e \u003cscript\u003e /* 1.确定为哪些元素绑定事件 获取元素 2.绑定什么事件（事件类型） 第一个参数：事件的类型 3.相应事件触发的（执行的操作） 第二个参数：函数 */ // 绑定单个事件 $(\"#test\").bind('click', function(){ // 主要不用写成onclick，\"on\"就是绑定的意思，也就是bind() console.log(\"救一人，便救全世界。\") }) // 原生js绑定事件 document.getElementById(\"test\").onclick = function(){ console.log(\"大海才是他的琴键。\") } // 直接绑定 $(\"#btntest\").click(function(){ // 禁用按钮 console.log(this) // this是绑定的按钮对象 $(this).prop('disabled', true); // 点击一次后按钮变灰，按钮被禁用 }) // 绑定多个事件 // 1. 同时为多个事件绑定同一个函数 $(\"#btn1\").bind('click mouseout',function () { console.log(\"按钮1的事件\") }) // 2. 为元素绑定多个事件，并设置对应函数 $(\"#btn2\").bind(\"click\", function(){ console.log(\"按钮2被点击了\") }).bind(\"mouseout\", function () { console.log(\"鼠标移开按钮2了\") }) // 3. 为元素绑定多个事件，并设置对应的函数 $(\"#btn3\").bind({ \"click\": function () { console.log(\"按钮3被点击了\") }, \"mouseout\":function(){ console.log(\"鼠标移开按钮3了\") } }) // 4. 直接绑定 $(\"#btn4\").click(function () { console.log(\"按钮4被点击了\") }).mouseout(function(){ console.log(\"鼠标移开按钮4了\") }) \u003c/script\u003e \u003c/html\u003e 5. jQuery Ajax 异步无刷新！\n5.1 $.ajax() jQuery调用Ajax的方法：\n1 2 格式： $.ajax({}); 参数 说明 type 请求方式GET/POST url 请求地址url async 是否同步，默认是true表示异步 data 发送到服务器的数据 dataType 预期服务器返回的数据类型（默认是字符串型） contentType 设置请求头 success 请求成功时调用此函数 error 请求失败时调用此函数 这里推荐一个vscode中的插件：Live Server\n它可以实时地反应网页的变化，安装后在html文件中右键选择open with live server即可使用\n注意：要开服务器操作，否则会报跨域问题。\n学习代码：\nJSON：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 [ { \"userId\": 1, \"userName\": \"Harry James Potter\", \"userSchool\": \"Gryffindor\", \"userAge\": 13 }, { \"userId\": 2, \"userName\": \"Hermione Jean Granger\", \"userSchool\": \"Gryffindor\", \"userAge\": 14 }, { \"userId\": 3, \"userName\": \"Ronald Bilius Weasley\", \"userSchool\": \"Gryffindor\", \"userAge\": 13 }, { \"userId\": 4, \"userName\": \"Percy Ignatius Weasley\", \"userSchool\": \"Gryffindor\", \"userAge\": 17 }, { \"userId\": 5, \"userName\": \"Remus Lupin\", \"userSchool\": \"Gryffindor\", \"userAge\": 33 }, { \"userId\": 6, \"userName\": \"Albus Percival Wulfric Brian Dumbledore\", \"userSchool\": \"Gryffindor\", \"userAge\": 112 } ] TXT:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 [ { \"userId\": 1, \"userName\": \"Harry James Potter\", \"userSchool\": \"Gryffindor\", \"userAge\": 13 }, { \"userId\": 2, \"userName\": \"Hermione Jean Granger\", \"userSchool\": \"Gryffindor\", \"userAge\": 14 }, { \"userId\": 3, \"userName\": \"Ronald Bilius Weasley\", \"userSchool\": \"Gryffindor\", \"userAge\": 13 }, { \"userId\": 4, \"userName\": \"Percy Ignatius Weasley\", \"userSchool\": \"Gryffindor\", \"userAge\": 17 }, { \"userId\": 5, \"userName\": \"Remus Lupin\", \"userSchool\": \"Gryffindor\", \"userAge\": 33 }, { \"userId\": 6, \"userName\": \"Albus Percival Wulfric Brian Dumbledore\", \"userSchool\": \"Gryffindor\", \"userAge\": 112 } ] HTML：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-13\u003c/title\u003e \u003c/head\u003e \u003cbody\u003e \u003cbutton id=\"btn\"\u003e查询数据\u003c/button\u003e \u003c/body\u003e \u003cscript\u003e // 请求.txt数据 $.ajax({ type: \"GET\", //请求方式 url: \"../assets/source/data.txt\", data:{ // 请求数据，json对象 uname: \"Hermione Jean Granger\" // 如果没有参数，则不需要设置 }, // 请求成功时调用的函数 success: function (data) { // 这里的data只是个形参 console.log(data) // 字符串 操作结果1 // 将字符串转换成json对象 var obj = JSON.parse(data); console.log(obj) // json对象（一个js数组） 操作结果2 // 这样可以直接使用数组下标去取值操作 } }) // 请求.json数据 $.ajax({ type: \"GET\", //请求方式 url: \"../assets/source/data.json\", data: { // 请求数据，json对象 // uname: \"Hermione Jean Granger\" // 如果没有参数，则不需要设置 }, dataType: \"json\", // 预期返回的数据类型，如果是json格式，我们接收到返回值时，会自动封装成json对象 // 请求成功时调用的函数 success: function (data) { // 这里的data只是个形参 console.log(data) // json对象（是一个js数组） 操作结果3 // 如果又使用JSON.parse()转换，会报错 /* var obj = JSON.parse(data); console.log(obj) */ // 所以使用dataType来规定后台返回的数据类型 // Dom操作 // 创建ul var ul = $(\"\") console.log(ul) // 遍历返回的数据数组 for (var i = 0; i \u003c data.length; i++){ // 得到数组中的每一个元素 var user = data[i] // 创建li元素 var li = \"\"+user.userName+\"\" // 将li元素设置到ul元素中 ul.append(li) } console.log(ul) // 将ul设置到body标签中 $(\"body\").append(ul) // 操作结果4 } }) // 尝试来个点击事件~（点击显示学院） // 点击按钮，发送Ajax请求，将数据显示到页面中 // $(\"#btn\").click(function () { 这里面可以写下面的Ajax请求 }) $(\"#btn\").click(function () { $.ajax({ type: \"GET\", //请求方式 url: \"../assets/source/data.json\", data: {}, dataType: \"json\", // 请求成功时调用的函数 success: function (data) { console.log(data) // Dom操作 // 创建ul var ul = $(\"\") console.log(ul) // 遍历返回的数据数组 for (var i = 0; i \u003c data.length; i++) { // 得到数组中的每一个元素 var user = data[i] // 创建li元素 var li = \"\" + user.userSchool + \"\" // 将li元素设置到ul元素中 ul.append(li) } console.log(ul) // 将ul设置到body标签中 $(\"body\").append(ul) // 操作结果5 } }) }) \u003c/script\u003e \u003c/html\u003e 操作结果1：\n操作结果2：\n操作结果3：\n操作结果4： 操作结果5：\n5.2 $.get()和$.post() 这是一个简单的GET请求功能以取代复杂的$.ajax()\n请求成功时可调用回调函数。如果需要在出错时执行函数，请使用$.ajax()\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // 1.请求json文件，忽略返回值 $.get('url') // 2.请求json文件，传递参数，忽略返回值 $.get('url', {参数名1:参数值1, 参数名2:参数值2}) // 3.请求json文件，拿到返回值，请求成功后可拿到返回值 $.get('url',function(data){ xxxx }) // 4.请求json文件，传递参数，拿到返回值 $.get('url',{参数名1:参数值1, 参数名2:参数值2},function(data){ xxxx }) $.post()和$.get()语法一模一样\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // 1.请求json文件，忽略返回值 $.get('url') // 2.请求json文件，传递参数，忽略返回值 $.get('url', {参数名1:参数值1, 参数名2:参数值2}) // 3.请求json文件，拿到返回值，请求成功后可拿到返回值 $.get('url',function(data){ xxxx }) // 4.请求json文件，传递参数，拿到返回值 $.get('url',{参数名1:参数值1, 参数名2:参数值2},function(data){ xxxx }) 学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-14/title\u003e \u003c/head\u003e \u003cbody\u003e \u003c/body\u003e \u003cscript\u003e // $.get() $.get(\"../assets/source/data.json\",{},function (data) { console.log(data) // 返回数组，和$.ajax()一样 }) // $.post() $.post(\"../assets/source/data.json\", {}, function (data) { console.log(data) // 返回数组，和$.ajax()一样 }) // 现在没有服务器，所以post请求会是404（Not Found） \u003c/script\u003e \u003c/html\u003e 5.3 $.getJSON() 表示请求返回的数据类型是json格式的Ajax请求。\n1 2 3 $.getJSON('url',{参数名1:参数值1, 参数名2:参数值2},function(形参){ xxxx }) 学习代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 \u003c!DOCTYPE html\u003e \u003chtml lang=\"en\"\u003e \u003chead\u003e \u003cmeta charset=\"UTF-8\"\u003e \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003e \u003cscript src=\"../assets/js/code.jquery.com_jquery-3.7.0.js\"\u003e\u003c/script\u003e \u003ctitle\u003e哆哆啦のJQuery学习笔记页面-14/title\u003e \u003c/head\u003e \u003cbody\u003e \u003c/body\u003e \u003cscript\u003e $.getJSON(\"../assets/source/data.json\",{},function(data){ console.log(data) }) // 如果返回的数据不是json格式，则无法获取 \u003c/script\u003e \u003c/html\u003e jQuery自定义函数 怎样用jQuery自定义函数方法，用$可调用_jquery怎么自定义方法_weixin_43798882的博客-CSDN博客\n",
+  "wordCount" : "15689",
+  "inLanguage": "en",
+  "datePublished": "2023-12-01T13:10:27+08:00",
+  "dateModified": "2023-12-01T13:10:27+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "DODOLA"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://florae006.github.io/posts/tech/front_end/js_notes/jquery/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DODOLA's WareHouse",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://florae006.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://florae006.github.io/" accesskey="h" title="DODOLA&#39;s WareHouse (Alt + H)">
+                <img src="https://florae006.github.io/" alt="" aria-label="logo"
+                    height="35">DODOLA&#39;s WareHouse</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://florae006.github.io/search" title="🔍搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/" title="🏡主页">
+                    <span>🏡主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/posts" title="🐙文章">
+                    <span>🐙文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/archives/" title="📜时间轴">
+                    <span>📜时间轴</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/tags" title="🏷️标签">
+                    <span>🏷️标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/tags" title="🍅关于">
+                    <span>🍅关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/links" title="🍻友链">
+                    <span>🍻友链</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://florae006.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://florae006.github.io/posts/">发布</a>&nbsp;»&nbsp;<a href="https://florae006.github.io/posts/tech/">📔技术</a>&nbsp;»&nbsp;<a href="https://florae006.github.io/posts/tech/front_end/">前端部分</a>&nbsp;»&nbsp;<a href="https://florae006.github.io/posts/tech/front_end/js_notes/">JavaSript部分</a></div>
+    <h1 class="post-title">
+      JQuery
+    </h1>
+    <div class="post-meta"><span title='2023-12-01 13:10:27 +0800 CST'>2023-12-01</span>&nbsp;·&nbsp;32 min&nbsp;·&nbsp;DODOLA
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e5%93%86%e5%93%86%e5%95%a6%e3%81%aejquery%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%e8%b6%85%e7%bb%86230728" aria-label="哆哆啦のjQuery学习笔记（超细）（23.07.28）">哆哆啦のjQuery学习笔记（超细）（23.07.28）</a><ul>
+                        
+                <li>
+                    <a href="#1-jquery%e5%af%b9%e8%b1%a1" aria-label="1. jQuery对象">1. jQuery对象</a><ul>
+                        
+                <li>
+                    <a href="#jquery%e4%bd%bf%e7%94%a8" aria-label="jQuery使用">jQuery使用</a></li>
+                <li>
+                    <a href="#dom%e5%af%b9%e8%b1%a1%e5%92%8cjquery%e5%8c%85%e8%a3%85%e9%9b%86%e5%af%b9%e8%b1%a1" aria-label="Dom对象和jQuery包装集对象">Dom对象和jQuery包装集对象</a></li></ul>
+                </li>
+                <li>
+                    <a href="#2-jquery%e9%80%89%e6%8b%a9%e5%99%a8" aria-label="2. jQuery选择器">2. jQuery选择器</a><ul>
+                        
+                <li>
+                    <a href="#21-%e5%9f%ba%e7%a1%80%e9%80%89%e6%8b%a9%e5%99%a8" aria-label="2.1 基础选择器">2.1 基础选择器</a></li>
+                <li>
+                    <a href="#22-%e5%b1%82%e6%ac%a1%e9%80%89%e6%8b%a9%e5%99%a8" aria-label="2.2 层次选择器">2.2 层次选择器</a></li>
+                <li>
+                    <a href="#23-%e8%a1%a8%e5%8d%95%e9%80%89%e6%8b%a9%e5%99%a8" aria-label="2.3 表单选择器">2.3 表单选择器</a></li></ul>
+                </li>
+                <li>
+                    <a href="#3-jquery-dom%e6%93%8d%e4%bd%9c" aria-label="3. jQuery Dom操作">3. jQuery Dom操作</a><ul>
+                        
+                <li>
+                    <a href="#31-%e6%93%8d%e4%bd%9c%e5%85%83%e7%b4%a0%e7%9a%84%e5%b1%9e%e6%80%a7" aria-label="3.1 操作元素的属性">3.1 操作元素的属性</a><ul>
+                        
+                <li>
+                    <a href="#311-%e8%8e%b7%e5%8f%96%e5%b1%9e%e6%80%a7" aria-label="3.1.1 获取属性">3.1.1 获取属性</a></li>
+                <li>
+                    <a href="#312-%e8%ae%be%e7%bd%ae%e5%b1%9e%e6%80%a7" aria-label="3.1.2 设置属性">3.1.2 设置属性</a></li>
+                <li>
+                    <a href="#313-%e7%a7%bb%e9%99%a4%e5%b1%9e%e6%80%a7" aria-label="3.1.3 移除属性">3.1.3 移除属性</a></li></ul>
+                </li>
+                <li>
+                    <a href="#32-%e6%93%8d%e4%bd%9c%e5%85%83%e7%b4%a0%e7%9a%84%e6%a0%b7%e5%bc%8f" aria-label="3.2 操作元素的样式">3.2 操作元素的样式</a></li>
+                <li>
+                    <a href="#33-%e6%93%8d%e4%bd%9c%e5%85%83%e7%b4%a0%e7%9a%84%e5%86%85%e5%ae%b9" aria-label="3.3 操作元素的内容">3.3 操作元素的内容</a></li>
+                <li>
+                    <a href="#34-%e5%88%9b%e5%bb%ba%e5%85%83%e7%b4%a0" aria-label="3.4 创建元素">3.4 创建元素</a></li>
+                <li>
+                    <a href="#35-%e6%b7%bb%e5%8a%a0%e5%85%83%e7%b4%a0" aria-label="3.5 添加元素">3.5 添加元素</a></li>
+                <li>
+                    <a href="#36-%e5%88%a0%e9%99%a4%e5%85%83%e7%b4%a0" aria-label="3.6 删除元素">3.6 删除元素</a></li>
+                <li>
+                    <a href="#37-%e9%81%8d%e5%8e%86%e5%85%83%e7%b4%a0" aria-label="3.7 遍历元素">3.7 遍历元素</a></li></ul>
+                </li>
+                <li>
+                    <a href="#4-jquery%e4%ba%8b%e4%bb%b6" aria-label="4. jQuery事件">4. jQuery事件</a><ul>
+                        
+                <li>
+                    <a href="#41-ready%e5%8a%a0%e8%bd%bd%e4%ba%8b%e4%bb%b6" aria-label="4.1 ready加载事件">4.1 ready加载事件</a></li>
+                <li>
+                    <a href="#42-%e7%bb%91%e5%ae%9a%e4%ba%8b%e4%bb%b6" aria-label="4.2 绑定事件">4.2 绑定事件</a><ul>
+                        
+                <li>
+                    <a href="#421-%e7%ae%80%e5%8d%95%e7%9a%84bind%e4%ba%8b%e4%bb%b6" aria-label="4.2.1 简单的bind()事件">4.2.1 简单的bind()事件</a></li>
+                <li>
+                    <a href="#422-%e7%bb%91%e5%ae%9a%e5%a4%9a%e4%b8%aa%e4%ba%8b%e4%bb%b6" aria-label="4.2.2 绑定多个事件">4.2.2 绑定多个事件</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#5-jquery-ajax" aria-label="5. jQuery Ajax">5. jQuery Ajax</a><ul>
+                        
+                <li>
+                    <a href="#51-ajax" aria-label="5.1 $.ajax()">5.1 $.ajax()</a></li>
+                <li>
+                    <a href="#52-get%e5%92%8cpost" aria-label="5.2 $.get()和$.post()">5.2 $.get()和$.post()</a></li>
+                <li>
+                    <a href="#53-getjson" aria-label="5.3 $.getJSON()">5.3 $.getJSON()</a></li></ul>
+                </li>
+                <li>
+                    <a href="#jquery%e8%87%aa%e5%ae%9a%e4%b9%89%e5%87%bd%e6%95%b0" aria-label="jQuery自定义函数">jQuery自定义函数</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="哆哆啦のjquery学习笔记超细230728">哆哆啦のjQuery学习笔记（超细）（23.07.28）<a hidden class="anchor" aria-hidden="true" href="#哆哆啦のjquery学习笔记超细230728">#</a></h1>
 <p>[TOC]</p>
-<h2 id="1-jquery对象">1. jQuery对象</h2>
-<h3 id="jquery使用">jQuery使用</h3>
-<h3 id="dom对象和jquery包装集对象">Dom对象和jQuery包装集对象</h3>
+<h2 id="1-jquery对象">1. jQuery对象<a hidden class="anchor" aria-hidden="true" href="#1-jquery对象">#</a></h2>
+<h3 id="jquery使用">jQuery使用<a hidden class="anchor" aria-hidden="true" href="#jquery使用">#</a></h3>
+<h3 id="dom对象和jquery包装集对象">Dom对象和jQuery包装集对象<a hidden class="anchor" aria-hidden="true" href="#dom对象和jquery包装集对象">#</a></h3>
 <p>学习代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -167,8 +471,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="2-jquery选择器">2. jQuery选择器</h2>
-<h3 id="21-基础选择器">2.1 基础选择器</h3>
+</div><h2 id="2-jquery选择器">2. jQuery选择器<a hidden class="anchor" aria-hidden="true" href="#2-jquery选择器">#</a></h2>
+<h3 id="21-基础选择器">2.1 基础选择器<a hidden class="anchor" aria-hidden="true" href="#21-基础选择器">#</a></h3>
 <p>学习代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -268,7 +572,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="22-层次选择器">2.2 层次选择器</h3>
+</div><h3 id="22-层次选择器">2.2 层次选择器<a hidden class="anchor" aria-hidden="true" href="#22-层次选择器">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -453,7 +757,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="23-表单选择器">2.3 表单选择器</h3>
+</div><h3 id="23-表单选择器">2.3 表单选择器<a hidden class="anchor" aria-hidden="true" href="#23-表单选择器">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -726,7 +1030,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="3-jquery-dom操作">3. jQuery Dom操作</h2>
+</div><h2 id="3-jquery-dom操作">3. jQuery Dom操作<a hidden class="anchor" aria-hidden="true" href="#3-jquery-dom操作">#</a></h2>
 <p>jQuery也提供了对HTML节点的操作，而且在原生JS的基础上进行了优化，使用起来更加方便。</p>
 <p>常用的从几个方面来操作：</p>
 <ul>
@@ -750,7 +1054,7 @@
 <p><strong>注意：以下的操作只适用于jQuery对象</strong></p>
 </li>
 </ul>
-<h3 id="31-操作元素的属性">3.1 操作元素的属性</h3>
+<h3 id="31-操作元素的属性">3.1 操作元素的属性<a hidden class="anchor" aria-hidden="true" href="#31-操作元素的属性">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -772,13 +1076,13 @@
 </tr>
 </tbody>
 </table>
-<h4 id="311-获取属性">3.1.1 获取属性</h4>
+<h4 id="311-获取属性">3.1.1 获取属性<a hidden class="anchor" aria-hidden="true" href="#311-获取属性">#</a></h4>
 <p><code>attr(&quot;属性名&quot;)</code>
 <code>prop(&quot;属性名&quot;)</code></p>
-<h4 id="312-设置属性">3.1.2 设置属性</h4>
+<h4 id="312-设置属性">3.1.2 设置属性<a hidden class="anchor" aria-hidden="true" href="#312-设置属性">#</a></h4>
 <p><code>attr(&quot;属性名&quot;, &quot;属性值&quot;)</code>
 <code>prop(&quot;属性名&quot;, &quot;属性值&quot;)</code></p>
-<h4 id="313-移除属性">3.1.3 移除属性</h4>
+<h4 id="313-移除属性">3.1.3 移除属性<a hidden class="anchor" aria-hidden="true" href="#313-移除属性">#</a></h4>
 <p><code>removeAttr(&quot;属性名&quot;)</code></p>
 <p>学习代码：</p>
 <div class="highlight"><div class="chroma">
@@ -973,7 +1277,7 @@
 <p>属性操作结果2：</p>
 <p><img loading="lazy" src="./result2.png" alt="属性操作结果2"  />
 </p>
-<h3 id="32-操作元素的样式">3.2 操作元素的样式</h3>
+<h3 id="32-操作元素的样式">3.2 操作元素的样式<a hidden class="anchor" aria-hidden="true" href="#32-操作元素的样式">#</a></h3>
 <p>元素的样式也是一种属性，由于样式用的特别多，所以对于样式除了当做属性处理外还可以有专门的方法进行处理。</p>
 <table>
 <thead>
@@ -1176,7 +1480,7 @@
 <p>操作结果3：</p>
 <p><img loading="lazy" src="./result6.png" alt="操作结果3"  />
 </p>
-<h3 id="33-操作元素的内容">3.3 操作元素的内容</h3>
+<h3 id="33-操作元素的内容">3.3 操作元素的内容<a hidden class="anchor" aria-hidden="true" href="#33-操作元素的内容">#</a></h3>
 <p>对于元素还可以操作其中的内容，例如文本、值、甚至是html&hellip;</p>
 <table>
 <thead>
@@ -1358,7 +1662,7 @@
 </div><p>操作结果1：</p>
 <p><img loading="lazy" src="./result7.png" alt="操作结果1"  />
 </p>
-<h3 id="34-创建元素">3.4 创建元素</h3>
+<h3 id="34-创建元素">3.4 创建元素<a hidden class="anchor" aria-hidden="true" href="#34-创建元素">#</a></h3>
 <p>在jQuery中创建元素很简单，直接使用核心函数即可</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1377,7 +1681,7 @@
 </div><p>代码操作示例</p>
 <p><img loading="lazy" src="./result8.png" alt="代码操作示例"  />
 </p>
-<h3 id="35-添加元素">3.5 添加元素</h3>
+<h3 id="35-添加元素">3.5 添加元素<a hidden class="anchor" aria-hidden="true" href="#35-添加元素">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1616,7 +1920,7 @@
 </div><p>操作结果：</p>
 <p><img loading="lazy" src="./result9.png" alt="操作结果"  />
 </p>
-<h3 id="36-删除元素">3.6 删除元素</h3>
+<h3 id="36-删除元素">3.6 删除元素<a hidden class="anchor" aria-hidden="true" href="#36-删除元素">#</a></h3>
 <p>学习代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1753,7 +2057,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="37-遍历元素">3.7 遍历元素</h3>
+<h3 id="37-遍历元素">3.7 遍历元素<a hidden class="anchor" aria-hidden="true" href="#37-遍历元素">#</a></h3>
 <p><strong><code>each()</code></strong></p>
 <p><code>$(selector).each(function(index,element){})</code>：遍历元素</p>
 <p>参数<code>function</code>为遍历时的回调函数</p>
@@ -1883,8 +2187,8 @@
 </div><p>操作结果1：</p>
 <p><img loading="lazy" src="./result13.png" alt="操作结果1"  />
 </p>
-<h2 id="4-jquery事件">4. jQuery事件</h2>
-<h3 id="41-ready加载事件">4.1 ready加载事件</h3>
+<h2 id="4-jquery事件">4. jQuery事件<a hidden class="anchor" aria-hidden="true" href="#4-jquery事件">#</a></h2>
+<h3 id="41-ready加载事件">4.1 ready加载事件<a hidden class="anchor" aria-hidden="true" href="#41-ready加载事件">#</a></h3>
 <p><code>ready()</code>类似于<code>onLoad()</code>事件</p>
 <p><code>ready()</code>可以写多个，按顺序执行</p>
 <p><code>$(document).ready(function(){})</code></p>
@@ -2016,7 +2320,7 @@
 </div><p>操作结果1：</p>
 <p><img loading="lazy" src="./result15.png" alt="操作结果1"  />
 </p>
-<h3 id="42-绑定事件">4.2 绑定事件</h3>
+<h3 id="42-绑定事件">4.2 绑定事件<a hidden class="anchor" aria-hidden="true" href="#42-绑定事件">#</a></h3>
 <p>为被选元素添加一个或多个事件处理程序，并规定事件发生时运行的函数。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2035,8 +2339,8 @@
 <p>​		<strong><code>mouseleave</code>，<code>change</code>，<code>select</code>，<code>submit</code>，<code>keydown</code>，<code>keypress</code>，<code>keyup</code>，<code>error</code></strong></p>
 <p><code>[, eventData]</code>：传递的参数，<strong>格式：{名1: 值1, 名2: 值2}</strong></p>
 <p><code>handler(eventObject)</code>：该事件触发执行的函数。</p>
-<h4 id="421-简单的bind事件">4.2.1 简单的bind()事件</h4>
-<h4 id="422-绑定多个事件">4.2.2 绑定多个事件</h4>
+<h4 id="421-简单的bind事件">4.2.1 简单的bind()事件<a hidden class="anchor" aria-hidden="true" href="#421-简单的bind事件">#</a></h4>
+<h4 id="422-绑定多个事件">4.2.2 绑定多个事件<a hidden class="anchor" aria-hidden="true" href="#422-绑定多个事件">#</a></h4>
 <p>学习代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2288,9 +2592,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="5-jquery-ajax">5. jQuery Ajax</h2>
+</div><h2 id="5-jquery-ajax">5. jQuery Ajax<a hidden class="anchor" aria-hidden="true" href="#5-jquery-ajax">#</a></h2>
 <p><strong>异步无刷新！</strong></p>
-<h3 id="51-ajax">5.1 $.ajax()</h3>
+<h3 id="51-ajax">5.1 $.ajax()<a hidden class="anchor" aria-hidden="true" href="#51-ajax">#</a></h3>
 <p>jQuery调用Ajax的方法：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2772,7 +3076,7 @@
 <p>操作结果5：</p>
 <p><img loading="lazy" src="./result22.png" alt="操作结果5"  />
 </p>
-<h3 id="52-get和post">5.2 $.get()和$.post()</h3>
+<h3 id="52-get和post">5.2 $.get()和$.post()<a hidden class="anchor" aria-hidden="true" href="#52-get和post">#</a></h3>
 <p>这是一个简单的GET请求功能以取代复杂的$.ajax()</p>
 <p>请求成功时可调用回调函数。如果需要在出错时执行函数，请使用$.ajax()</p>
 <div class="highlight"><div class="chroma">
@@ -2929,7 +3233,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="53-getjson">5.3 $.getJSON()</h3>
+</div><h3 id="53-getjson">5.3 $.getJSON()<a hidden class="anchor" aria-hidden="true" href="#53-getjson">#</a></h3>
 <p>表示请求返回的数据类型是json格式的Ajax请求。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -3004,1565 +3308,196 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="jquery自定义函数">jQuery自定义函数</h2>
+</div><h2 id="jquery自定义函数">jQuery自定义函数<a hidden class="anchor" aria-hidden="true" href="#jquery自定义函数">#</a></h2>
 <p><a href="https://blog.csdn.net/weixin_43798882/article/details/112618241">怎样用jQuery自定义函数方法，用$可调用_jquery怎么自定义方法_weixin_43798882的博客-CSDN博客</a></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>第壹话|基本样式</title>
-      <link>https://florae006.github.io/posts/startsite/basic_setting/</link>
-      <pubDate>Thu, 30 Nov 2023 21:53:02 +0800</pubDate>
-      
-      <guid>https://florae006.github.io/posts/startsite/basic_setting/</guid>
-      <description>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链 基础设置 我的初步设置一览： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24</description>
-      <content:encoded><![CDATA[<p>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链</p>
-<h3 id="基础设置">基础设置</h3>
-<p>我的初步设置一览：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span><span class="lnt">108
-</span><span class="lnt">109
-</span><span class="lnt">110
-</span><span class="lnt">111
-</span><span class="lnt">112
-</span><span class="lnt">113
-</span><span class="lnt">114
-</span><span class="lnt">115
-</span><span class="lnt">116
-</span><span class="lnt">117
-</span><span class="lnt">118
-</span><span class="lnt">119
-</span><span class="lnt">120
-</span><span class="lnt">121
-</span><span class="lnt">122
-</span><span class="lnt">123
-</span><span class="lnt">124
-</span><span class="lnt">125
-</span><span class="lnt">126
-</span><span class="lnt">127
-</span><span class="lnt">128
-</span><span class="lnt">129
-</span><span class="lnt">130
-</span><span class="lnt">131
-</span><span class="lnt">132
-</span><span class="lnt">133
-</span><span class="lnt">134
-</span><span class="lnt">135
-</span><span class="lnt">136
-</span><span class="lnt">137
-</span><span class="lnt">138
-</span><span class="lnt">139
-</span><span class="lnt">140
-</span><span class="lnt">141
-</span><span class="lnt">142
-</span><span class="lnt">143
-</span><span class="lnt">144
-</span><span class="lnt">145
-</span><span class="lnt">146
-</span><span class="lnt">147
-</span><span class="lnt">148
-</span><span class="lnt">149
-</span><span class="lnt">150
-</span><span class="lnt">151
-</span><span class="lnt">152
-</span><span class="lnt">153
-</span><span class="lnt">154
-</span><span class="lnt">155
-</span><span class="lnt">156
-</span><span class="lnt">157
-</span><span class="lnt">158
-</span><span class="lnt">159
-</span><span class="lnt">160
-</span><span class="lnt">161
-</span><span class="lnt">162
-</span><span class="lnt">163
-</span><span class="lnt">164
-</span><span class="lnt">165
-</span><span class="lnt">166
-</span><span class="lnt">167
-</span><span class="lnt">168
-</span><span class="lnt">169
-</span><span class="lnt">170
-</span><span class="lnt">171
-</span><span class="lnt">172
-</span><span class="lnt">173
-</span><span class="lnt">174
-</span><span class="lnt">175
-</span><span class="lnt">176
-</span><span class="lnt">177
-</span><span class="lnt">178
-</span><span class="lnt">179
-</span><span class="lnt">180
-</span><span class="lnt">181
-</span><span class="lnt">182
-</span><span class="lnt">183
-</span><span class="lnt">184
-</span><span class="lnt">185
-</span><span class="lnt">186
-</span><span class="lnt">187
-</span><span class="lnt">188
-</span><span class="lnt">189
-</span><span class="lnt">190
-</span><span class="lnt">191
-</span><span class="lnt">192
-</span><span class="lnt">193
-</span><span class="lnt">194
-</span><span class="lnt">195
-</span><span class="lnt">196
-</span><span class="lnt">197
-</span><span class="lnt">198
-</span><span class="lnt">199
-</span><span class="lnt">200
-</span><span class="lnt">201
-</span><span class="lnt">202
-</span><span class="lnt">203
-</span><span class="lnt">204
-</span><span class="lnt">205
-</span><span class="lnt">206
-</span><span class="lnt">207
-</span><span class="lnt">208
-</span><span class="lnt">209
-</span><span class="lnt">210
-</span><span class="lnt">211
-</span><span class="lnt">212
-</span><span class="lnt">213
-</span><span class="lnt">214
-</span><span class="lnt">215
-</span><span class="lnt">216
-</span><span class="lnt">217
-</span><span class="lnt">218
-</span><span class="lnt">219
-</span><span class="lnt">220
-</span><span class="lnt">221
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># 参考：https://www.sulvblog.cn/posts/blog/build_hugo/</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># hugo.toml</span>
-</span></span><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://florae006.github.io/&#34;</span> <span class="c"># 绑定的域名</span>
-</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;DODOLA&#39;s WareHouse&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">paginate</span> <span class="p">=</span> <span class="mi">5</span>
-</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;hugo-PaperMod&#34;</span> <span class="c"># 主题名字</span>
-</span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span> <span class="c"># en-us</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">enableInlineShortcodes</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 允许内联短码</span>
-</span></span><span class="line"><span class="cl"><span class="nx">enableRobotsTXT</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 允许爬虫抓取到搜索引擎</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">buildDrafts</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="nx">buildFuture</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="nx">buildExpired</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">enableEmoji</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 允许抓取emoji表情</span>
-</span></span><span class="line"><span class="cl"><span class="nx">pygmentsUseClasses</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 自动检测是否包含 中文日文韩文 如果文中使用较多中文引号可以开启</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># googleAnalytics = &#34;&#34; # 谷歌统计</span>
-</span></span><span class="line"><span class="cl"><span class="c"># copyright = &#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">minify</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">disableXML</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">post</span><span class="p">=</span><span class="s2">&#34;/:title/&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">language</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">languageName</span><span class="p">=</span><span class="s2">&#34;English&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">weight</span><span class="p">=</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">profileMode</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">enabled</span><span class="p">=</span><span class="kc">true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">title</span><span class="p">=</span><span class="s2">&#34;✧*｡ (ˊᗜˋ*) ✧*｡&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">subtitle</span><span class="p">=</span><span class="s2">&#34;ᓚᘏᗢ&lt;br/&gt;Wit beyond measure is man&#39;s greatest treasure.&lt;br/&gt;👋欢迎光临哆哆啦(DODOLA)的小仓库&lt;br/&gt;联系方式👇&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">imageUrl</span><span class="p">=</span><span class="s2">&#34;img/dodola.jpg&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">imageTitle</span><span class="p">=</span><span class="s2">&#34;DODOLA&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">imageWidth</span><span class="p">=</span><span class="mi">150</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">imageHeight</span><span class="p">=</span><span class="mi">150</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">profileMode</span><span class="p">.</span><span class="nx">buttons</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="p">=</span><span class="s2">&#34;🧱建站&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span><span class="p">=</span><span class="s2">&#34;posts/startsite&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">profileMode</span><span class="p">.</span><span class="nx">buttons</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="p">=</span><span class="s2">&#34;👩🏻‍💻技术&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span><span class="p">=</span><span class="s2">&#34;posts/tech&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">profileMode</span><span class="p">.</span><span class="nx">buttons</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="p">=</span><span class="s2">&#34;📚阅读&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span><span class="p">=</span><span class="s2">&#34;posts/beauty&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">profileMode</span><span class="p">.</span><span class="nx">buttons</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="p">=</span><span class="s2">&#34;🌇生活&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span><span class="p">=</span><span class="s2">&#34;posts/life&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;🔍搜索&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;search&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;🏡主页&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;🐙文章&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">3</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">identifier</span><span class="p">=</span><span class="s2">&#34;archives&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;时间轴&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;archives/&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">20</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">identifier</span><span class="p">=</span><span class="s2">&#34;tags&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;标签&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">40</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">identifier</span><span class="p">=</span><span class="s2">&#34;about&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;关于&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">50</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">identifier</span><span class="p">=</span><span class="s2">&#34;links&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;友链&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;links&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">60</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JSON&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">env</span> <span class="p">=</span> <span class="s2">&#34;production&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">author</span> <span class="p">=</span> <span class="s2">&#34;DODOLA&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">defaultTheme</span> <span class="p">=</span> <span class="s2">&#34;auto&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">disableThemeToggle</span><span class="p">=</span><span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="c"># DateFormat=&#34;2006-01-02&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ShowShareButtons</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ShowReadingTime</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">displayFullLangName</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ShowPostNavLinks</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ShowBreadCrumbs</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ShowCodeCopyButtons</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">hideFooter</span><span class="p">=</span><span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ShowWordCounts</span><span class="p">=</span><span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">visitCount</span><span class="p">=</span><span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ShowLastMod</span><span class="p">=</span><span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ShowRssButtonInSectionTermList</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ShowToc</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">TocOpen</span><span class="p">=</span><span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">comments</span><span class="p">=</span><span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">images</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;papermod-cover.png&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">socialIcons</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;github&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://github.com/Florae006&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># [[params.socialIcons]]</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># name = &#34;twitter&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># url = &#34;img/twitter.png&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># [[params.socialIcons]]</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># name = &#34;facebook&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># url = &#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># [[params.socialIcons]]</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># name = &#34;instagram&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># url = &#34;img/instagram.png&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">socialIcons</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;QQ&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;img/qq.png&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c"># [[params.socialIcons]]</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># name = &#34;WeChat&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="c"># url = &#34;img/wechat.png&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">socialIcons</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;email&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;mailto:flora_chen2021@163.com&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">socialIcons</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;RSS&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;index.xml&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">label</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">text</span> <span class="p">=</span> <span class="s2">&#34;DODOLA&#39;s WareHouse&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">icon</span> <span class="p">=</span> <span class="s2">&#34;#&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">iconHeight</span> <span class="p">=</span> <span class="mi">35</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">asset</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">favicon</span> <span class="p">=</span> <span class="s2">&#34;img/dodola.jpg&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">favicon16x16</span> <span class="p">=</span> <span class="s2">&#34;img/dodola.jpg&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">favicon32x32</span> <span class="p">=</span> <span class="s2">&#34;img/dodola.jpg&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">apple_touch_icon</span> <span class="p">=</span> <span class="s2">&#34;dodola.jpg&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">safari_pinned_tab</span> <span class="p">=</span> <span class="s2">&#34;dodola.jpg&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">fuseOpts</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">isCaseSensitive</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">shouldSort</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">location</span> <span class="p">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">distance</span> <span class="p">=</span> <span class="mi">1_000</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">threshold</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">minMatchCharLength</span> <span class="p">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">keys</span> <span class="p">=</span> <span class="p">[</span> <span class="s2">&#34;title&#34;</span><span class="p">,</span> <span class="s2">&#34;permalink&#34;</span><span class="p">,</span> <span class="s2">&#34;summary&#34;</span> <span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">twikoo</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">version</span> <span class="p">=</span> <span class="s2">&#34;1.4.11&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">series</span> <span class="p">=</span> <span class="s2">&#34;series&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">codeFences</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">guessSyntax</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">lineNos</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">privacy</span><span class="p">.</span><span class="nx">vimeo</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">disabled</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="nx">simple</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">privacy</span><span class="p">.</span><span class="nx">twitter</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">disabled</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="nx">enableDNT</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">simple</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">privacy</span><span class="p">.</span><span class="nx">instagram</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">disabled</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="nx">simple</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">privacy</span><span class="p">.</span><span class="nx">youtube</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">disabled</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="nx">privacyEnhanced</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">services</span><span class="p">.</span><span class="nx">instagram</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">disableInlineCSS</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">services</span><span class="p">.</span><span class="nx">twitter</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">disableInlineCSS</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>呈现效果：</p>
-<p><img loading="lazy" src="./siteshow.png" alt="效果"  />
-</p>
-<h3 id="搜索功能实现">搜索功能实现</h3>
-<p>PaperMod已集成 Fuse.js 实现搜索功能，相关<a href="https://www.fusejs.io/api/options.html#iscasesensitive">Fuse.js的API</a></p>
-<h4 id="新建页面">新建页面</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new search.md
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>修改内容</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">+++
-</span></span><span class="line"><span class="cl">title = &#39;Search&#39;
-</span></span><span class="line"><span class="cl">date = ...
-</span></span><span class="line"><span class="cl">draft = false
-</span></span><span class="line"><span class="cl">layout = &#39;search&#39;
-</span></span><span class="line"><span class="cl">+++
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在hugo.toml中</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># 设置identifier</span>
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">identifier</span><span class="p">=</span><span class="s2">&#34;Search&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;🔍搜索&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;search&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c"># 添加搜索参数</span>
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">fuseOpt</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">isCaseSensitive</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">includeMatches</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">shouldSort</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">location</span> <span class="p">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">distance</span> <span class="p">=</span> <span class="mi">1000</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">threshold</span> <span class="p">=</span> <span class="mf">0.4</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">minMatchCharLength</span> <span class="p">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">keys</span><span class="p">=[</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;permalink&#39;</span><span class="p">,</span> <span class="s1">&#39;summary&#39;</span><span class="p">,</span> <span class="s1">&#39;content&#39;</span><span class="p">]</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="搜索页展示标签列表">搜索页展示标签列表</h4>
-<p>在<code>./layouts/_default/search.html</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- if not (.Param &#34;hideSeries&#34;)}}
-</span></span><span class="line"><span class="cl">{{- $taxonomies := .Site.Taxonomies.series }}
-</span></span><span class="line"><span class="cl">{{- if gt (len $taxonomies) 0 }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;margin-top: 32px&#34;</span><span class="p">&gt;</span>{{- (.Param &#34;seriesTitle&#34;) | default &#34;series&#34; }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;terms-tags&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    {{- range $name, $value := $taxonomies }}
-</span></span><span class="line"><span class="cl">    {{- $count := .Count }}
-</span></span><span class="line"><span class="cl">    {{- with site.GetPage (printf &#34;/series/%s&#34; $name) }}
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ .Permalink }}&#34;</span><span class="p">&gt;</span>{{ .Name }} <span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">sup</span><span class="p">&gt;</span>{{ $count }}<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    {{- end }}
-</span></span><span class="line"><span class="cl">    {{- end }}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{- end }}
-</span></span><span class="line"><span class="cl">{{- end }}
-</span></span><span class="line"><span class="cl">{{- end }}{{/* end main */}}  <span class="c">&lt;!-- 在最后一行前加入上面的代码 --&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在<code>hugo.toml</code>中检查是否有这项</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">series</span> <span class="p">=</span> <span class="s2">&#34;series&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>效果：</p>
-<p><img loading="lazy" src="./searchshow.png" alt="搜索效果展示"  />
-</p>
-<h3 id="添加图标">添加图标</h3>
-<p>PaperMod原有的图标一览：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">https://github.com/adityatelange/hugo-PaperMod/wiki/Icons
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="添加自定义图标">添加自定义图标</h4>
-<p>找到这个文件：<code>./layouts/partials/svg.html</code>，在里面插入这样一段（插在哪里看原来的上下文应该能看出来，这是长长的if else&hellip;）：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 这里的icon_name填自定义的检索name --&gt;</span>
-</span></span><span class="line"><span class="cl">{{- else if (eq $icon_name &#34;xxx&#34;) -}}
-</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 这里粘贴想要的svg --&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">svg</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- 注意，要是想要图标的颜色根据主题进行变化，要在svg标签内写上 fill=&#34;currentColor&#34; --&gt;</span>
-</span></span><span class="line"><span class="cl">    ...
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>找想要的图标可以在这，复制svg就行：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 阿里巴巴矢量图标库</span>
-</span></span><span class="line"><span class="cl"><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">iconfont</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>之后在<code>hugo.toml</code>中这样使用（和原生的用法一模一样）：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">socialIcons</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;douban&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="设置友链">设置友链</h3>
-<p>在根目录下<code>.\assets\css\extended\blank.css</code>中添加样式内容，<code>\extended\blank.css</code>是可以覆盖已有的样式的地方，同理，我们也可以在其中添加我们想要的样式，这是设置的友链的样式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend-url</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">myfriend</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">56</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">56</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">padding</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend-div</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">49</span><span class="kt">%</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="kp">-webkit-</span><span class="k">transition</span><span class="p">:</span> <span class="kc">all</span> <span class="kc">ease-out</span> <span class="mf">0.3</span><span class="kt">s</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-moz-</span><span class="k">transition</span><span class="p">:</span> <span class="kc">all</span> <span class="kc">ease-out</span> <span class="mf">0.3</span><span class="kt">s</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-o-</span><span class="k">transition</span><span class="p">:</span> <span class="kc">all</span> <span class="kc">ease-out</span> <span class="mf">0.3</span><span class="kt">s</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">transition</span><span class="p">:</span> <span class="kc">all</span> <span class="kc">ease-out</span> <span class="mf">0.3</span><span class="kt">s</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">dark</span> <span class="p">.</span><span class="nc">friend-div</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">code</span><span class="o">-</span><span class="n">bg</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend-div</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c">/* background: var(--theme); */</span>
-</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="mh">#e4e4e4</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="c">/* 我设置了随机背景色彩，后面有提到捏 */</span>
-</span></span><span class="line"><span class="cl">    <span class="k">transition</span><span class="p">:</span> <span class="k">transform</span> <span class="mi">1</span><span class="kt">s</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-webkit-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-moz-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-ms-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-o-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend-div</span><span class="p">:</span><span class="nd">hover</span> <span class="p">.</span><span class="nc">friend-div-left</span> <span class="nt">img</span> <span class="p">{</span> 
-</span></span><span class="line"><span class="cl">    <span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-webkit-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-moz-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-o-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-ms-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-webkit-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-moz-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-o-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kp">-ms-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend-div-left</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">92</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">-5</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend-div-right</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend-name</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">text-overflow</span><span class="p">:</span> <span class="kc">ellipsis</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">font-size</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend-info</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">text-overflow</span><span class="p">:</span> <span class="kc">ellipsis</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">font-size</span><span class="p">:</span> <span class="mi">70</span><span class="kt">%</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">600px</span><span class="o">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">friend-info</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">friend-div-left</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">84</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">friend-div-right</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">justify-content</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">friend-name</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">font-size</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在<code>.\layouts\shortcodes\</code>下新建一个<code>friend.html</code>填入以下内容：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- if .IsNamedParams -}}
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">link</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">title</span><span class="o">=</span><span class="s">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">name</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend-url&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend-div&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend-div-left&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;myfriend&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">avatar</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend-div-right&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend-name&#34;</span><span class="p">&gt;</span>{{- .Get &#34;name&#34; -}}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend-info&#34;</span><span class="p">&gt;</span>{{- .Get &#34;description&#34; -}}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">{{- end }}
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>之后在<code>.\content\</code>下的<code>links.md</code>写下这样的内容：</p>
-<p><img loading="lazy" src="./friendlinks.png" alt="友链写法"  />
-</p>
-<p>这样就能展现友链啦，像这样：</p>
-<p><img loading="lazy" src="./friendshow.png" alt="展示友链"  />
-</p>
-<h4 id="实现随机背景色">实现随机背景色</h4>
-<p>如果想要每次都获得不同的背景，可以试试在<code>friend.html</code>下添加这样的js代码：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span><span class="o">=</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">randomHex</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="sb">`rgba(</span><span class="si">${</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">255</span><span class="p">)</span><span class="si">}</span><span class="sb">, </span><span class="si">${</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">255</span><span class="p">)</span><span class="si">}</span><span class="sb">, </span><span class="si">${</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">255</span><span class="p">)</span><span class="si">}</span><span class="sb">, 0.5)`</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">friendArr</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&#34;friend-div&#34;</span><span class="p">),</span><span class="nx">temp</span><span class="o">=</span><span class="p">[];</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">friendArr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">friendArr</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span><span class="o">=</span><span class="nx">randomHex</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>这段代码的意思就是在加载完毕之后给名片的卡片背景添加不同的色彩</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>好诶，是好朋友！</title>
-      <link>https://florae006.github.io/links/</link>
-      <pubDate>Thu, 30 Nov 2023 14:20:16 +0800</pubDate>
-      
-      <guid>https://florae006.github.io/links/</guid>
-      <description>友链 挂挂🤩🤩</description>
-      <content:encoded><![CDATA[<!-- <a target="_blank" href=https://florae006.github.io/ title=DODOLA class="friend-url">
-  <div class="friend-div">
-    <div class="friend-div-left">
-      <img class="myfriend" src=../img/avatar/dodola.jpg />
-    </div>
-    <div class="friend-div-right">
-      <div class="friend-name">DODOLA</div>
-      <div class="friend-info">一个友链</div>
-    </div>
+
+
   </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://florae006.github.io/posts/startsite/basic_setting/">
+    <span class="title">Next »</span>
+    <br>
+    <span>第壹话|基本样式</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share JQuery on x"
+        href="https://x.com/intent/tweet/?text=JQuery&amp;url=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2ffront_end%2fjs_notes%2fjquery%2f&amp;hashtags=">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z"/>
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share JQuery on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2ffront_end%2fjs_notes%2fjquery%2f&amp;title=JQuery&amp;summary=JQuery&amp;source=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2ffront_end%2fjs_notes%2fjquery%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share JQuery on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2ffront_end%2fjs_notes%2fjquery%2f&title=JQuery">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share JQuery on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2ffront_end%2fjs_notes%2fjquery%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share JQuery on whatsapp"
+        href="https://api.whatsapp.com/send?text=JQuery%20-%20https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2ffront_end%2fjs_notes%2fjquery%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share JQuery on telegram"
+        href="https://telegram.me/share/url?text=JQuery&amp;url=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2ffront_end%2fjs_notes%2fjquery%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share JQuery on ycombinator"
+        href="https://news.ycombinator.com/submitlink?t=JQuery&u=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2ffront_end%2fjs_notes%2fjquery%2f">
+        <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+            <path
+                d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://florae006.github.io/">DODOLA&#39;s WareHouse</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
 </a>
 
 <script>
-  window.onload=function () {
-    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
-    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
-    for(var i=0;i<friendArr.length;i++){
-        friendArr[i].style.background=randomHex();
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
     }
-  }
-</script>
- -->
-<p><a target="_blank" href=https://www.cclmsy.cc/ title=CCLMSY💫 class="friend-url">
-  <div class="friend-div">
-    <div class="friend-div-left">
-      <img class="myfriend" src=https://www.cclmsy.cc/assets/Avatars/Avatar.jpg />
-    </div>
-    <div class="friend-div-right">
-      <div class="friend-name">CCLMSY💫</div>
-      <div class="friend-info">Never forget nor regret.⭐️</div>
-    </div>
-  </div>
-</a>
 
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
 <script>
-  window.onload=function () {
-    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
-    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
-    for(var i=0;i<friendArr.length;i++){
-        friendArr[i].style.background=randomHex();
-    }
-  }
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
 </script>
-
-<a target="_blank" href=https://wyy.ink/ title=YorkWu&#39;s&#32;Blog class="friend-url">
-  <div class="friend-div">
-    <div class="friend-div-left">
-      <img class="myfriend" src=../img/avatar/wyy.jpg />
-    </div>
-    <div class="friend-div-right">
-      <div class="friend-name">YorkWu&#39;s Blog</div>
-      <div class="friend-info">ddl:一个很强的学长QwQ！！</div>
-    </div>
-  </div>
-</a>
-
 <script>
-  window.onload=function () {
-    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
-    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
-    for(var i=0;i<friendArr.length;i++){
-        friendArr[i].style.background=randomHex();
-    }
-  }
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
 </script>
-
-<a target="_blank" href=https://lucy23.blog/ title=Lucy class="friend-url">
-  <div class="friend-div">
-    <div class="friend-div-left">
-      <img class="myfriend" src=../img/avatar/Lucy.png />
-    </div>
-    <div class="friend-div-right">
-      <div class="friend-name">Lucy</div>
-      <div class="friend-info">我写我 不论主谓宾 可以反复错。</div>
-    </div>
-  </div>
-</a>
-
 <script>
-  window.onload=function () {
-    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
-    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
-    for(var i=0;i<friendArr.length;i++){
-        friendArr[i].style.background=randomHex();
-    }
-  }
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
-</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>第零话|Hugo建站</title>
-      <link>https://florae006.github.io/posts/startsite/build_hugo/</link>
-      <pubDate>Wed, 29 Nov 2023 19:11:55 +0800</pubDate>
-      
-      <guid>https://florae006.github.io/posts/startsite/build_hugo/</guid>
-      <description>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程 使用环境 开发环境：Windows 11 Hugo版本：Hugo v0.114.0 Git</description>
-      <content:encoded><![CDATA[<p>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程</p>
-<blockquote>
-<p>使用环境</p>
-<p>开发环境：Windows 11</p>
-<p>Hugo版本：Hugo v0.114.0</p>
-<p>Git版本： 2.43.0.windows.1</p>
-<p>Theme：PaperMod</p>
-<p>时间：2023/11/29</p>
-</blockquote>
-<h2 id="github配合git的基础使用">Github配合Git的基础使用</h2>
-<p>这部分我在网上找到一篇非常细致的文章，贴在这里：</p>
-<p><a href="https://zhuanlan.zhihu.com/p/193140870">手把手教你用git上传项目到GitHub（图文并茂，这一篇就够了），相信你一定能成功！！ - 知乎 (zhihu.com)</a></p>
-<p>这篇文章虽是2020年的，但是步骤细致，跟着走下来不会有什么问题，有几个注意点如下：</p>
-<ol>
-<li>由于一些原因，GitHub创建仓库后的默认分支从原来的Master更名为Main，但是许多其他教程还是习惯上使用Master做默认分支，同时，Git的默认分支似乎并没有同时更新成为Main，所以我们在进行push/pull等命令的时候要注意当期的branch是否合适，<a href="#git%E7%9A%84%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86">这里介绍了如何在Git中增加/切换/删除/合并分支等操作</a></li>
-<li>有一些Github界面有更新，与教程中不太一致，但是只是位置不太一样，找的时候按照图中的名字寻找就行。</li>
-</ol>
-<h3 id="git常用操作命令记录">Git常用操作命令记录</h3>
-<h4 id="git的分支管理">git的分支管理</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><em>返回当前操作在哪个分支下，同时也可以得到当前项目下的其他分支的信息，该信息在git bash界面窗口也可以在最右侧小括号中得到</em></p>
-<p><img loading="lazy" src="./branch.png" alt="branch展示"  />
-</p>
-<hr>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch &lt;branchname&gt;
-</span></span><span class="line"><span class="cl">git checkout -b &lt;branchname&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>创建分支</p>
-<hr>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout &lt;aimbranchname&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>切换分支到aimbranch</p>
-<h4 id="提交代码">提交代码</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;提交描述&#34;</span>
-</span></span><span class="line"><span class="cl">git push origin &lt;远程分支名&gt;
-</span></span><span class="line"><span class="cl"><span class="c1"># 使用git push -u origin &lt;远程分支名&gt;之后，以后每次上传只需要git push就够了(少写两个单词的意义)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>远程分支名按照之前构建的关联填</p>
-<h2 id="选择静态博客框架hugo">选择静态博客框架hugo</h2>
-<p>Hugo的特点：</p>
-<p>Hugo 是一个基于Go 语言的框架，可但中文文档和博客少，而且旧模板和新Hugo的兼容性也不好，它可以快速方便的创建自己的博客。</p>
-<p>Hugo 支持Markdown 语法，我们可以将自己的文章写成Markdown 的格式，放在我们用Hugo 创建的博客系统中，从而展示给他人。</p>
-<p>==HUGO中文文档==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.gohugo.org/doc/commands/hugo/
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="hugo安装">Hugo安装</h3>
-<p>在Windows中安装：</p>
-<p>1.首先安装choco包管理，需要在==管理员权限==下运行cmd，执行如下命令：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># step 1:</span>
-</span></span><span class="line"><span class="cl">powershell -NoProfile -ExecutionPolicy unrestricted -Command <span class="s2">&#34;iex ((new-object net.webclient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># step 2:</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 设置环境变量</span>
-</span></span><span class="line"><span class="cl">SET <span class="nv">PATH</span><span class="o">=</span>%PATH%<span class="p">;</span>%ALLUSERSPROFILE%<span class="se">\c</span>hocolatey<span class="se">\b</span>in
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>2.choco安装成功之后，我们就可以使用choco安装hugo：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 非科学上网可能安装比较慢，但是也不是不行</span>
-</span></span><span class="line"><span class="cl">choco install hugo -confirm
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>3.检查是否安装成功：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo version <span class="c1"># 如果可以显示版本号等信息，则为安装成功</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>4.MacOs和Linux中安装</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># MacOs</span>
-</span></span><span class="line"><span class="cl">brew install hugo
-</span></span><span class="line"><span class="cl"><span class="c1"># Linux</span>
-</span></span><span class="line"><span class="cl">snap install hugo
-</span></span><span class="line"><span class="cl"><span class="c1"># 如果是Ubuntu版本，也可以使用apt安装，不过apt中的hugo可能不是最新版本，会限制一些主题，这种情况下也可以到hugo的github仓库中用如下命令安装：</span>
-</span></span><span class="line"><span class="cl">dpkg -i &lt;package.deb&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="创建站点">创建站点</h3>
-<p>在想要设置站点的路径下，在命令行输入：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site blogsitename
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>就可以创建一个名为blogsitename的站点</p>
-<p>目录结构：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ tree /f
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">F:.
-</span></span><span class="line"><span class="cl">│   .hugo_build.lock
-</span></span><span class="line"><span class="cl">│   hugo.toml	<span class="c1"># 博客站点的配置文件</span>
-</span></span><span class="line"><span class="cl">│
-</span></span><span class="line"><span class="cl">├───archetypes
-</span></span><span class="line"><span class="cl">│       default.md
-</span></span><span class="line"><span class="cl">├───assets
-</span></span><span class="line"><span class="cl">├───content		<span class="c1"># 博客文章所在目录</span>
-</span></span><span class="line"><span class="cl">├───data
-</span></span><span class="line"><span class="cl">├───i18n
-</span></span><span class="line"><span class="cl">├───layouts		<span class="c1"># 网站布局</span>
-</span></span><span class="line"><span class="cl">├───resources
-</span></span><span class="line"><span class="cl">├───static		<span class="c1"># 静态内容存放</span>
-</span></span><span class="line"><span class="cl">└───themes		<span class="c1"># 博客的主题</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="新建页面和文章">新建页面和文章</h3>
-<p>新建页面：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new about.md
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>该文件会出现在<code>./content/about.md</code></p>
-<p>创建文章：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new posts/myfirst.md
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>改文件会出现在<code>./content/posts/myfirst.md</code></p>
-<p>放在<code>posts</code>是为了方便聚合页面</p>
-<p>这两个md文件中，要把draft一行去掉或者写成<code>draft = false</code>，draft的意思是草稿，在生成时不会出现。</p>
-<p>三行线之间的内容会被hugo 解析，作为当前文章的一些属性。</p>
-<p>更多关于文章的初始设置如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
-</span></span><span class="line"><span class="cl">title: &#34;文章标题&#34;          	# 文章标题
-</span></span><span class="line"><span class="cl">author: &#34;作者&#34;              # 文章作者
-</span></span><span class="line"><span class="cl">description : &#34;描述信息&#34;	 # 文章描述信息
-</span></span><span class="line"><span class="cl">date: 2015-09-28		  	# 文章编写日期
-</span></span><span class="line"><span class="cl">lastmod: 2015-04-06          # 文章修改日期
-</span></span><span class="line"><span class="cl">draft: false
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">tags = [                     # 文章所属标签
-</span></span><span class="line"><span class="cl">    &#34;文章标签1&#34;,
-</span></span><span class="line"><span class="cl">    &#34;文章标签2&#34;
-</span></span><span class="line"><span class="cl">]
-</span></span><span class="line"><span class="cl">categories = [               # 文章所属标签
-</span></span><span class="line"><span class="cl">    &#34;文章分类1&#34;,
-</span></span><span class="line"><span class="cl">    &#34;文章分类2&#34;,
-</span></span><span class="line"><span class="cl">]
-</span></span><span class="line"><span class="cl">keywords = [                 # 文章关键词
-</span></span><span class="line"><span class="cl">    &#34;Hugo&#34;,
-</span></span><span class="line"><span class="cl">    &#34;static&#34;,
-</span></span><span class="line"><span class="cl">    &#34;generator&#34;,
-</span></span><span class="line"><span class="cl">]
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">next: /tutorials/github-pages-blog      # 下一篇博客地址
-</span></span><span class="line"><span class="cl">prev: /tutorials/automated-deployments  # 上一篇博客地址
-</span></span><span class="line"><span class="cl">---
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">这里是Markdown 正文
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>有的可能和我一样是这样的结构：<code>title = &quot;Myfirst&quot;</code></p>
-<h3 id="下载主题">下载主题</h3>
-<p>hugo特意没有给我们预设主题，所以我们去官网挑选一个主题吧</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://themes.gohugo.io/
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>把终端的路径调整到博客文件夹的themes目录下，比如我选择的主题是PaperMod，我们在命令行输入如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/adityatelange/hugo-PaperMod.git
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然后在themes文件夹下会出现如下文件目录：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">└───hugo-PaperMod
-</span></span><span class="line"><span class="cl">    ├───.github
-</span></span><span class="line"><span class="cl">    │   ├───ISSUE_TEMPLATE
-</span></span><span class="line"><span class="cl">    │   └───workflows
-</span></span><span class="line"><span class="cl">    ├───assets
-</span></span><span class="line"><span class="cl">    │   ├───css
-</span></span><span class="line"><span class="cl">    │   │   ├───common
-</span></span><span class="line"><span class="cl">    │   │   ├───core
-</span></span><span class="line"><span class="cl">    │   │   ├───extended
-</span></span><span class="line"><span class="cl">    │   │   ├───hljs
-</span></span><span class="line"><span class="cl">    │   │   └───includes
-</span></span><span class="line"><span class="cl">    │   └───js
-</span></span><span class="line"><span class="cl">    ├───i18n
-</span></span><span class="line"><span class="cl">    ├───images
-</span></span><span class="line"><span class="cl">    └───layouts
-</span></span><span class="line"><span class="cl">        ├───partials
-</span></span><span class="line"><span class="cl">        │   └───templates
-</span></span><span class="line"><span class="cl">        ├───shortcodes
-</span></span><span class="line"><span class="cl">        └───_default
-</span></span><span class="line"><span class="cl">            └───_markup
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>使用主题的方法：</p>
-<p>先转到根目录下，再使用命令：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ..
-</span></span><span class="line"><span class="cl">hugo -t &lt;themename&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>themename要和themes文件夹下的目标主题名字一致（如果是从git上下载再移动到themes目录下，可能会带有-master这样的后缀，因为一些奇怪的原因可能会对什么地方有影响，假如出现了这种情况把名字后的-master去掉就行）</p>
-<p>之后在<code>hugo.toml</code>中修改：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># hugo.toml</span>
-</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;hugo-PaperMod&#34;</span> <span class="c"># 主题名字</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="预览主题">预览主题</h3>
-<p>在根目录下使用命令：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>此时生成的是静态文件，生成很快（这就是GO！），只要server不关就会一直监控文件变化，自动生成静态文件~~（不过要是由于编辑内容时因为自己过于抽象的代码行为而导致无法排错，重新开一次就行，不必管他~~</p>
-<p>按照命令的反馈结果打开<code>http://localhost:1313/</code>就能看到本地预览啦</p>
-<h3 id="一些小工具">一些小工具</h3>
-<p>好用的yaml转toml工具</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">https</span><span class="o">://</span><span class="nt">tooltt</span><span class="p">.</span><span class="nc">com</span><span class="o">/</span><span class="nt">yaml2toml</span><span class="o">/</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="本地hugo项目部署到github-page">本地Hugo项目部署到Github Page</h2>
-<h3 id="启动博客">启动博客</h3>
-<p>前面预览主题的时候已经尝试过hugo了，这里（稍微）正式一点的提一下它吧。</p>
-<p>在终端命令行直接输入下方内容就能在本地预览了，本地预览地址是：<code>localhost:1313</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server -D
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>输入hugo可以生成public文件夹，这个文件夹可以部署到云服务器或者托管到github上。</p>
-<p>注意：输入hugo的生成方式只会往public文件夹里添加内容，但是不会删除外部已经不存在而public里面还存在的文件，所以一般还可以用下方第二条命令，这个命令可以保证每次生成的public都是全新的，会覆盖原来的。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
-</span></span><span class="line"><span class="cl">hugo -F --cleanDestinationDir
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="新建仓库">新建仓库</h3>
-<ol>
-<li>
-<p>在github上创建一个与 <code>username</code> 同名的空仓库，命名格式必须是：<code>username.github.io</code> ，不包含任何内容（readme.md也不要）</p>
-</li>
-<li>
-<p>在Hugo项目的public目录下（hugo后生成）中依次执行以下命令：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init <span class="c1"># 初始化仓库</span>
-</span></span><span class="line"><span class="cl">git remote add origin https://github.com/自己的/自己的.github.io.git
-</span></span><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;first commit&#34;</span>
-</span></span><span class="line"><span class="cl">git push -u origin main
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>之后的更新：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git status
-</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;new post xxx&#34;</span>
-</span></span><span class="line"><span class="cl">git push
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
-<h3 id="使用github-action自动发布文章">使用GitHub Action自动发布文章</h3>
-<p>使用 <code>main</code> 分支发布文章，使用一个新的 <code>source</code> 分支进行写作，写作完成后上传 <code>source</code> ，GitHub Action 自动将 <code>source</code> 分支的 <code>publish</code> 文件夹拷贝到 <code>main</code> 分支，从而完成文章的发布。</p>
-<blockquote>
-<p>这部分后补吧（嗯我想想&hellip;</p>
-<p>参考：<a href="https://zhuanlan.zhihu.com/p/417259374">使用 Hugo 搭建个人网站（博客、个人主页）并发布到 Github 上 - 知乎 (zhihu.com)</a></p>
-</blockquote>
-<h3 id="印象深刻的bug">印象深刻的bug</h3>
-<p>无法显示样式QAQ</p>
-<p>控制台报错信息：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> Failed to find a valid digest in the <span class="s1">&#39;integrity&#39;</span> attribute <span class="k">for</span> resource <span class="s1">&#39;xxxxxx.css&#39;</span> ,The resource has been blocked.
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>首先这一看就是链接路径报错，但是我寻思我也没改什么路径哇，只增减不查改的，所以这个可能是PaperMod当前版本中的一个问题，废话不多说，我们定位到这个bug：</p>
-<p>路径：<code>.\themes\hugo-PaperMod\layouts\partials\header.html</code></p>
-<p>这个位置：</p>
-<p><img loading="lazy" src="./bughere.png" alt="bug在这里"  />
-</p>
-<p>然后把<code>integrity=&quot;{{ $stylesheet.Data.Integrity }}&quot;</code>改为<code>integrity=&quot;&quot;</code>。</p>
-<p>同时也可以在<code>hugo.toml</code>中加这一句：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nx">env</span> <span class="p">=</span> <span class="s2">&#34;production&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">...</span>
-</span></span><span class="line"><span class="cl"><span class="nx">disableFingerprinting</span> <span class="p">=</span> <span class="kc">true</span> <span class="c">#### 这一句</span>
-</span></span><span class="line"><span class="cl"><span class="p">...</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>报错消失，本地运行正常，挂载部署到github Page也是正常显示样式了。</p>
-<p>参考：<a href="https://smc.im/post/resolve-integrity-error-in-hugo/">解决 hugo 中关于 integrity 的错误 | Choi&rsquo;s Notes (smc.im)</a></p>
-]]></content:encoded>
-    </item>
-    
-    
-    <item>
-      <title>About</title>
-      <link>https://florae006.github.io/about/</link>
-      <pubDate>Tue, 28 Nov 2023 19:11:55 +0800</pubDate>
-      
-      <guid>https://florae006.github.io/about/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://florae006.github.io/archives/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://florae006.github.io/archives/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-  </channel>
-</rss>
+</body>
+
+</html>
