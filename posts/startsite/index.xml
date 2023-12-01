@@ -1200,7 +1200,7 @@
 </span></span><span class="line"><span class="cl">date: 2015-09-28		  	# 文章编写日期
 </span></span><span class="line"><span class="cl">lastmod: 2015-04-06          # 文章修改日期
 </span></span><span class="line"><span class="cl">draft: false
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">showtoc = false             # 单独设置本篇博客是否显示目录
 </span></span><span class="line"><span class="cl">tags = [                     # 文章所属标签
 </span></span><span class="line"><span class="cl">    &#34;文章标签1&#34;,
 </span></span><span class="line"><span class="cl">    &#34;文章标签2&#34;
