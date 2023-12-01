@@ -11,17 +11,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Dec 2023 13:10:27 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Dec 2023 15:49:39 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>JQuery</title>
+      <title>哆哆啦のjQuery学习笔记（超细）（23.07.28）</title>
       <link>https://florae006.github.io/posts/tech/front_end/js_notes/jquery/</link>
       <pubDate>Fri, 01 Dec 2023 13:10:27 +0800</pubDate>
       
       <guid>https://florae006.github.io/posts/tech/front_end/js_notes/jquery/</guid>
-      <description>哆哆啦のjQuery学习笔记（超细）（23.07.28） [TOC] 1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码： 1 2</description>
-      <content:encoded><![CDATA[<h1 id="哆哆啦のjquery学习笔记超细230728">哆哆啦のjQuery学习笔记（超细）（23.07.28）</h1>
-<p>[TOC]</p>
-<h2 id="1-jquery对象">1. jQuery对象</h2>
+      <description>1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</description>
+      <content:encoded><![CDATA[<h2 id="1-jquery对象">1. jQuery对象</h2>
 <h3 id="jquery使用">jQuery使用</h3>
 <h3 id="dom对象和jquery包装集对象">Dom对象和jQuery包装集对象</h3>
 <p>学习代码：</p>
