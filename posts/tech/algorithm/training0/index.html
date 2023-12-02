@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>队内拉题|23.11.29 | DODOLA&#39;s WareHouse</title>
+<meta name="keywords" content="">
+<meta name="description" content="前言点评：本次题目难度不高 A 跳石头 [NOIP2015 提高组] 跳石头 题目背景 NOIP2015 Day2T1 题目描述 一年一度的“跳石头”比赛又要开始了！ 这项比赛将在一条笔直的河道中进行，">
+<meta name="author" content="DODOLA">
+<link rel="canonical" href="https://florae006.github.io/posts/tech/algorithm/training0/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.38fd232e45f78b7fda1674bd73e72497e2667eaa3df8faf01e57fd0a3507c98f.css" integrity="" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://florae006.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://florae006.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://florae006.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://florae006.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://florae006.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="队内拉题|23.11.29" />
+<meta property="og:description" content="前言点评：本次题目难度不高 A 跳石头 [NOIP2015 提高组] 跳石头 题目背景 NOIP2015 Day2T1 题目描述 一年一度的“跳石头”比赛又要开始了！ 这项比赛将在一条笔直的河道中进行，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://florae006.github.io/posts/tech/algorithm/training0/" /><meta property="og:image" content="https://florae006.github.io/papermod-cover.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-02T16:47:17+08:00" />
+<meta property="article:modified_time" content="2023-12-02T16:47:17+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://florae006.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="队内拉题|23.11.29"/>
+<meta name="twitter:description" content="前言点评：本次题目难度不高 A 跳石头 [NOIP2015 提高组] 跳石头 题目背景 NOIP2015 Day2T1 题目描述 一年一度的“跳石头”比赛又要开始了！ 这项比赛将在一条笔直的河道中进行，"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "发布",
+      "item": "https://florae006.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "📔技术",
+      "item": "https://florae006.github.io/posts/tech/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "算法",
+      "item": "https://florae006.github.io/posts/tech/algorithm/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  4 ,
+      "name": "队内拉题|23.11.29",
+      "item": "https://florae006.github.io/posts/tech/algorithm/training0/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "队内拉题|23.11.29",
+  "name": "队内拉题|23.11.29",
+  "description": "前言点评：本次题目难度不高 A 跳石头 [NOIP2015 提高组] 跳石头 题目背景 NOIP2015 Day2T1 题目描述 一年一度的“跳石头”比赛又要开始了！ 这项比赛将在一条笔直的河道中进行，",
+  "keywords": [
+    
+  ],
+  "articleBody": "前言点评：本次题目难度不高\nA 跳石头 [NOIP2015 提高组] 跳石头 题目背景 NOIP2015 Day2T1\n题目描述 一年一度的“跳石头”比赛又要开始了！\n这项比赛将在一条笔直的河道中进行，河道中分布着一些巨大岩石。组委会已经选择好了两块岩石作为比赛起点和终点。在起点和终点之间，有 $N$ 块岩石（不含起点和终点的岩石）。在比赛过程中，选手们将从起点出发，每一步跳向相邻的岩石，直至到达终点。\n为了提高比赛难度，组委会计划移走一些岩石，使得选手们在比赛过程中的最短跳跃距离尽可能长。由于预算限制，组委会至多从起点和终点之间移走 $M$ 块岩石（不能移走起点和终点的岩石）。\n输入格式 第一行包含三个整数 $L,N,M$，分别表示起点到终点的距离，起点和终点之间的岩石数，以及组委会至多移走的岩石数。保证 $L \\geq 1$ 且 $N \\geq M \\geq 0$。\n接下来 $N$ 行，每行一个整数，第 $i$ 行的整数 $D_i,( 0 \u003c D_i \u003c L)$， 表示第 $i$ 块岩石与起点的距离。这些岩石按与起点距离从小到大的顺序给出，且不会有两个岩石出现在同一个位置。\n输出格式 一个整数，即最短跳跃距离的最大值。\n样例 #1 样例输入 #1 1 2 3 4 5 6 25 5 2 2 11 14 17 21 样例输出 #1 1 4 提示 输入输出样例 1 说明 将与起点距离为 $2$ 和 $14$ 的两个岩石移走后，最短的跳跃距离为 $4$（从与起点距离 $17$ 的岩石跳到距离 $21$ 的岩石，或者从距离 $21$ 的岩石跳到终点）。\n数据规模与约定 对于 $20%$的数据，$0 \\le M \\le N \\le 10$。 对于 $50%$ 的数据，$0 \\le M \\le N \\le 100$。\n对于 $100%$ 的数据，$0 \\le M \\le N \\le 50000,1 \\le L \\le 10^9$。\n分析 参考代码 B Secret Sport Secret Sport 题面翻译 题目大意 A,B两人玩游戏，游戏规则如下： 整场游戏有多轮，每轮游戏先胜 $X$ 局的人获胜，每场游戏先胜 $Y$ 局的人获胜。\n你在场边观看了比赛，但是你忘记了 $X$ 和 $Y$ ，只记得总共比了 $1 \\le n \\le 20$ 局，和每局获胜的人，请判断谁获胜了。如果A获胜，输出 A ，如果B获胜，输出 B ，如果都有可能，输出 ? 。\n题目描述 Let’s consider a game in which two players, A and B, participate. This game is characterized by two positive integers, $ X $ and $ Y $ .\nThe game consists of sets, and each set consists of plays. In each play, exactly one of the players, either A or B, wins. A set ends exactly when one of the players reaches $ X $ wins in the plays of that set. This player is declared the winner of the set. The players play sets until one of them reaches $ Y $ wins in the sets. After that, the game ends, and this player is declared the winner of the entire game.\nYou have just watched a game but didn’t notice who was declared the winner. You remember that during the game, $ n $ plays were played, and you know which player won each play. However, you do not know the values of $ X $ and $ Y $ . Based on the available information, determine who won the entire game — A or B. If there is not enough information to determine the winner, you should also report it.\n输入格式 Each test contains multiple test cases. The first line contains a single integer $ t $ $ (1 \\leq t \\leq 10^4) $ - the number of test cases. The description of the test cases follows.\nThe first line of each test case contains an integer $ n $ $ (1 \\leq n \\leq 20) $ - the number of plays played during the game.\nThe second line of each test case contains a string $ s $ of length $ n $ , consisting of characters $ \\texttt{A} $ and $ \\texttt{B} $ . If $ s_i = \\texttt{A} $ , it means that player A won the $ i $ -th play. If $ s_i = \\texttt{B} $ , it means that player B won the $ i $ -th play.\nIt is guaranteed that the given sequence of plays corresponds to at least one valid game scenario, for some values of $ X $ and $ Y $ .\n输出格式 For each test case, output:\n$ \\texttt{A} $ — if player A is guaranteed to be the winner of the game. $ \\texttt{B} $ — if player B is guaranteed to be the winner of the game. $ \\texttt{?} $ — if it is impossible to determine the winner of the game. 样例 #1 样例输入 #1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 7 5 ABBAA 3 BBB 7 BBAAABA 20 AAAAAAAABBBAABBBBBAB 1 A 13 AAAABABBABBAB 7 BBBAAAA 样例输出 #1 1 2 3 4 5 6 7 A B A B A B A 提示 In the first test case, the game could have been played with parameters $ X = 3 $ , $ Y = 1 $ . The game consisted of $ 1 $ set, in which player A won, as they won the first $ 3 $ plays. In this scenario, player A is the winner. The game could also have been played with parameters $ X = 1 $ , $ Y = 3 $ . It can be shown that there are no such $ X $ and $ Y $ values for which player B would be the winner.\nIn the second test case, player B won all the plays. It can be easily shown that in this case, player B is guaranteed to be the winner of the game.\nIn the fourth test case, the game could have been played with parameters $ X = 3 $ , $ Y = 3 $ :\nIn the first set, $ 3 $ plays were played: AAA. Player A is declared the winner of the set. In the second set, $ 3 $ plays were played: AAA. Player A is declared the winner of the set. In the third set, $ 5 $ plays were played: AABBB. Player B is declared the winner of the set. In the fourth set, $ 5 $ plays were played: AABBB. Player B is declared the winner of the set. In the fifth set, $ 4 $ plays were played: BBAB. Player B is declared the winner of the set. In total, player B was the first player to win $ 3 $ sets. They are declared the winner of the game.\n分析 参考代码 C 众数 [THUPC 2023 初赛] 众数 题目描述 你有若干个 $[1,n]$ 内的正整数：对于 $1 \\le i \\le n$，你有 $a_i$ 个整数 $i$。设 $S = \\sum_{i=1}^n a_i$。\n对于一个序列 $p_1,p_2,\\cdots,p_l$，定义其众数 $\\text{maj}(p_1,p_2,\\cdots,p_l)$ 为出现次数最多的数。若有多个数出现次数最多，则其中最大的数为其众数。\n现在你需要把这 $S$ 个数排成一个序列 $b_1,b_2,\\cdots,b_S$，使得 $\\sum_{i=1}^S \\text{maj}(b_1,b_2,\\cdots,b_i)$ 最大。输出该最大值。\n输入格式 第一行一个整数 $n$，表示值域。\n接下来一行 $n$ 个正整数 $a_1,a_2,\\cdots,a_n$，表示每种数的个数。\n输出格式 输出一行一个正整数表示 $\\sum_{i=1}^S \\text{maj}(b_1,b_2,\\cdots,b_i)$ 的最大值。\n样例 #1 样例输入 #1 1 2 3 1 3 2 样例输出 #1 1 17 提示 样例解释 1 一个达到最大值的序列为 $(3,2,3,1,2,2)$。\n数据范围 对于所有测试数据，$1 \\le n \\leq 10^5$，$1 \\le a_1,a_2,\\cdots,a_n \\le 10^5$。\n题目来源 来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）初赛。\n题解等资源可在 https://github.com/THUSAAC/THUPC2023-Pre 查看。\n分析 贪心，要让较大的数作为众数的次数最多。\n构造排列时按照n~1的顺序排下去，每次先排列尽量满足上述想法的数。\n参考代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 #include using namespace std; typedef long long ll; const int maxn = 1e5 + 20; ll a[maxn], prea[maxn]; int main() { int n;cin \u003e\u003e n; for (int i = 1;i \u003c= n;i++) { cin \u003e\u003e a[i]; } ll num = 1; ll ans = 0; // prea[a[i]]:众数数量为a[i]时，当前众数i作为众数对结果的贡献 for (int i = n;i \u003e 0;i--) { while (num \u003c= a[i]) { prea[num] = prea[num - 1] + i; num++; } ans += prea[a[i]]; } cout \u003c\u003c ans \u003c\u003c endl; return 0; } D 大纲 [THUPC 2023 决赛] 大纲 题目描述 小 I、小 O 和小 N 是 ION 大纲的编写者，小 I 负责给每个知识点定难度。\nION 大纲计划列入 $n$ 个知识点，其中小 I 按照自己的认识给其中部分知识点定好了难度，还有部分知识点没有定难度。\n知识点之间有依赖关系，这个依赖关系恰好构成了一棵以 $1$ 为根的外向树，知识点 $x$ 指向知识点 $y$ 表示 $x$ 依赖 $y$。依赖关系不具有传递性。\n你需要告诉小 I 目前确定下来的难度是否合理。我们认为确定下来的难度是合理的当且仅当存在一个给所有未确定难度的知识点确定难度的方式，使得以下所有条件成立：\n每个知识点的难度都是非负整数； 对于每个依赖其他知识点的知识点 $x$，设 $\\max_x$ 为 $x$ 依赖的知识点中难度的最大值，则如果 $x$ 恰依赖一个难度为 $\\max_x$ 的知识点，那么知识点 $x$ 的难度为 $\\max_x$，否则为 $\\max_x+1$。对于不依赖其他知识点的知识点，没有其他限制。 输入格式 本题有多组测试数据。第一行一个整数 $T$ 表示测试数据组数，接下来依次读入每组测试数据。\n对于每组测试数据，\n第一行一个整数 $n$ 表示知识点数量。 第二行 $n$ 个整数 $a_1,a_2,\\cdots,a_n$，描述每个知识点的难度。若 $a_i = -1$ 表示知识点 $i$ 未确定难度，否则知识点 $i$ 的难度确定为 $a_i$。 接下来 $n-1$ 行每行两个整数 $u,v$，表示依赖关系构成的外向树中的一条有向边。 输出格式 对于每组测试数据输出一行：若难度是合理的，输出 Reasonable，否则输出 Unreasonable。\n样例 #1 样例输入 #1 1 2 3 4 5 6 7 8 9 2 3 0 -1 0 1 2 2 3 3 0 -1 0 1 2 1 3 样例输出 #1 1 2 Reasonable Unreasonable 提示 样例 1 解释 对于第一组测试数据，将知识点 $2$ 的难度定为 $0$ 即满足条件。\n对于第二组测试数据，无论如何指定知识点 $2$ 的难度，知识点 $1$ 的难度会产生矛盾。\n数据规模与约定 对于所有测试数据，$1 \\le T \\le 10^5$，$2 \\le n \\le 10^5$，$-1 \\le a_i \\le 10^9$，$1 \\le u,v \\le n$。\n保证单个测试点中所有测试数据的 $n$ 的和不超过 $2 \\times 10^5$，每组测试数据输入的所有边构成一棵以 $1$ 为根的外向树。\n后记 大纲发表了。若干天后，小 I 给 ION 比赛投题，却发现有人偷偷改了一笔难度表，导致他的题目超纲。于是小 I 只能把题投给 CPUHT。\n题目来源 来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）决赛。\n题解等资源可在 https://github.com/THUSAAC/THUPC2023 查看。\n分析 参考代码 E Chip and Ribbon Chip and Ribbon 题面翻译 每次可以在一段长度为 $n$，初始值都为 $0$ 的序列中选取一段连续区间，并将区间内所有元素加 $1$，求最少操作数使得该序列与题目所给的序列所有元素相同，输出最少操作数减 $1$。\n题目描述 There is a ribbon divided into $ n $ cells, numbered from $ 1 $ to $ n $ from left to right. Initially, an integer $ 0 $ is written in each cell.\nMonocarp plays a game with a chip. The game consists of several turns. During the first turn, Monocarp places the chip in the $ 1 $ -st cell of the ribbon. During each turn except for the first turn, Monocarp does exactly one of the two following actions:\nmove the chip to the next cell (i. e. if the chip is in the cell $ i $ , it is moved to the cell $ i+1 $ ). This action is impossible if the chip is in the last cell; choose any cell $ x $ and teleport the chip into that cell. It is possible to choose the cell where the chip is currently located. At the end of each turn, the integer written in the cell with the chip is increased by $ 1 $ .\nMonocarp’s goal is to make some turns so that the $ 1 $ -st cell contains the integer $ c_1 $ , the $ 2 $ -nd cell contains the integer $ c_2 $ , …, the $ n $ -th cell contains the integer $ c_n $ . He wants to teleport the chip as few times as possible.\nHelp Monocarp calculate the minimum number of times he has to teleport the chip.\n输入格式 The first line contains one integer $ t $ ( $ 1 \\le t \\le 10^4 $ ) — the number of test cases.\nEach test case consists of two lines:\nthe first line contains one integer $ n $ ( $ 1 \\le n \\le 2 \\cdot 10^5 $ ); the second line contains $ n $ integers $ c_1, c_2, \\dots, c_n $ ( $ 0 \\le c_i \\le 10^9 $ ; $ c_1 \\ge 1 $ ). It can be shown that under these constraints, it is always possible to make a finite amount of turns so that the integers in the cells match the sequence $ c_1, c_2, \\dots, c_n $ .\nAdditional constraint on the input: the sum of values of $ n $ over all test cases does not exceed $ 2 \\cdot 10^5 $ .\n输出格式 For each test case, print one integer — the minimum number of times Monocarp has to teleport the chip.\n样例 #1 样例输入 #1 1 2 3 4 5 6 7 8 9 4 4 1 2 2 1 5 1 0 1 0 1 5 5 4 3 2 1 1 12 样例输出 #1 1 2 3 4 1 2 4 11 提示 In the first test case of the example, Monocarp can perform the turns as follows:\nplace the chip in the $ 1 $ -st cell; the numbers in the cells are $ [1, 0, 0, 0] $ ; move the chip to the next ( $ 2 $ -nd) cell; the numbers in the cells are $ [1, 1, 0, 0] $ ; move the chip to the next ( $ 3 $ -rd) cell; the numbers in the cells are $ [1, 1, 1, 0] $ ; teleport the chip to the $ 2 $ -nd cell; the numbers in the cells are $ [1, 2, 1, 0] $ ; move the chip to the next ( $ 3 $ -rd) cell; the numbers in the cells are $ [1, 2, 2, 0] $ ; move the chip to the next ( $ 4 $ -th) cell; the numbers in the cells are $ [1, 2, 2, 1] $ . 分析 令连续的下一cell内数字加一的操作数是不限的，那么我们的目的就变成了画多少条这样的连续的“线”，能达到最终的目的，示意图如下：\n在代码实现的时候，只要后一位的高度高于前一位，那么就需要增加：后一位高度-前一位高度 这么多的线，参考代码如下：\n参考代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 #include using namespace std; typedef long long ll; const int maxn = 2e5 + 20; ll a[maxn]; int main() { int t;cin \u003e\u003e t; while (t--) { int n;cin \u003e\u003e n; ll ans = 0; for (int i = 1;i \u003c= n;i++) { cin \u003e\u003e a[i]; if (a[i] \u003e a[i - 1]) ans += a[i] - a[i - 1]; } cout \u003c\u003c ans - 1 \u003c\u003c endl; } return 0; } F 着色 [THUPC 2023 决赛] 着色 题目背景 远古的笔迹，远古的乐音，远古的历史，远古的 $K_{1000}$，若无人问津，便悄然褪色……\n题目描述 给出一个 $n$ 个节点的无向完全图，你需要给每条边标上一个 $0 \\sim 9$ 的数字，使得图上不存在一个三元环或五元环满足：其上所有边的数字相同。\n输入格式 输入仅一行一个整数 $n$ 表示图的节点数。\n输出格式 如果不存在方案，输出一行一个整数 -1。否则输出 $(n-1)$ 行，第 $i$ 行 $(n-i)$ 个字符，第 $i$ 行的第 $j$ 个字符表示 $(i,i+j)$ 的标号。若有多个方案，输出任意一个即可。\n样例 #1 样例输入 #1 1 4 样例输出 #1 1 2 3 012 34 5 提示 数据规模与约定 对于所有测试数据，$2 \\le n \\le 1000$。\n题目来源 来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）决赛。\n题解等资源可在 https://github.com/THUSAAC/THUPC2023 查看。\n分析 参考代码 G Treasure Chest Treasure Chest 题面翻译 题目描述 给你一个数轴，一开始你的位置为 $0$，箱子在 $x$ 处，钥匙在 $y$ 处，$x\\neq y$。你需要通过一些操作打开宝箱。\n当位置为 $i$ 时，你能执行以下操作：\n花费 $1$ 秒，走向 $i+1$ 或 $i-1$； 花费 $0$ 秒，拿起 $i$ 处的钥匙或箱子，如果此处有的话； 花费 $0$ 秒，在 $i$ 处放下箱子； 花费 $0$ 秒，打开宝箱，如果箱子在 $i$ 处且你拿着钥匙的话。 另外给出限制：因为箱子很重，所以在整个过程中，扛着箱子的时间不得超过 $k$ 秒（放下再拿起箱子不会使其重置）。\n现在给定 $x,y,k$，请问你打开箱子的最短用时为多少？ 每个测试点采用多组数据测试。\n输入格式 第一行一个整数 $t\\space(1\\le t\\le 100)$，表示数据组数。\n对于每组数据：唯一一行三个整数 $x,y,k\\space(1\\le x,y\\le 100,x\\neq y,0\\le k\\le 100)$，分别表示初始时箱子的位置，钥匙的位置和你扛着箱子的最大时长。\n输出格式 共 $t$ 行，第 $i$ 行一个整数表示第 $i$ 组数据的答案。\n说明/提示 数据范围与约定 $1\\le t\\le 100;\\1\\le x,y\\le 100,x\\neq y;\\1\\le k\\le 100.$\n样例解释 对于样例的第 $1$ 组数据，可以通过以下一系列动作在第 $7$ 秒打开箱子。\n花费 $5$ 秒走到 $5$, 花费 $0$ 秒拿起箱子， 花费 $2$ 秒走到 $7$， 拿起钥匙、放下箱子并打开箱子，共花费 $0$ 秒。 全过程共花费 $7$ 秒，拿着箱子的时间仅有 $2$ 秒，不超过给定的限制 $k=2$。可以证明不存在更优解。\n对于样例的第 $2$ 组数据，你可以花费 $5$ 秒走到 $5$ 并捡起钥匙，再花费 $5$ 秒走到 $10$ 并打开箱子。共花费 $10$ 秒，其中没有扛过箱子，不超过给定的限制 $k=0$。可以证明不存在更优解。\n对于样例的第 $3$ 组数据，你无法像数据 $1$ 那样将箱子直接搬到钥匙处，而必须：\n花费 $5$ 秒走到 $5$ 并扛起箱子； 花费 $2$ 秒走到 $7$； 此时你已经力竭，达到了限制 $k=2$，所以必须花费 $0$ 秒在 $7$ 处放下箱子； 花费 $1$ 秒走到 $8$ 并捡起钥匙； 花费 $1$ 秒再走到 $7$ 并打开箱子。 全过程共花费 $9$ 秒且刚好没有超过限制。可以证明不存在更优解。\n题目描述 Monocarp has found a treasure map. The map represents the treasure location as an OX axis. Monocarp is at $ 0 $ , the treasure chest is at $ x $ , the key to the chest is at $ y $ .\nObviously, Monocarp wants to open the chest. He can perform the following actions:\ngo $ 1 $ to the left or $ 1 $ to the right (spending $ 1 $ second); pick the key or the chest up if he is in the same point as that object (spending $ 0 $ seconds); put the chest down in his current point (spending $ 0 $ seconds); open the chest if he’s in the same point as the chest and has picked the key up (spending $ 0 $ seconds). Monocarp can carry the chest, but the chest is pretty heavy. He knows that he can carry it for at most $ k $ seconds in total (putting it down and picking it back up doesn’t reset his stamina).\nWhat’s the smallest time required for Monocarp to open the chest?\n输入格式 The first line contains a single integer $ t $ ( $ 1 \\le t \\le 100 $ ) — the number of testcases.\nThe only line of each testcase contains three integers $ x, y $ and $ k $ ( $ 1 \\le x, y \\le 100 $ ; $ x \\neq y $ ; $ 0 \\le k \\le 100 $ ) — the initial point of the chest, the point where the key is located, and the maximum time Monocarp can carry the chest for.\n输出格式 For each testcase, print a single integer — the smallest time required for Monocarp to open the chest.\n样例 #1 样例输入 #1 1 2 3 4 3 5 7 2 10 5 0 5 8 2 样例输出 #1 1 2 3 7 10 9 提示 In the first testcase, Monocarp can open the chest in $ 7 $ seconds with the following sequence of moves:\ngo $ 5 $ times to the right ( $ 5 $ seconds); pick up the chest ( $ 0 $ seconds); go $ 2 $ times to the right ( $ 2 $ seconds); pick up the key ( $ 0 $ seconds); put the chest down ( $ 0 $ seconds); open the chest ( $ 0 $ seconds). He only carries the chest for $ 2 $ seconds, which he has the stamina for.\nIn the second testcase, Monocarp can pick up the key on his way to the chest.\nIn the third testcase, Monocarp can’t use the strategy from the first testcase because he would have to carry the chest for $ 3 $ seconds, while he only has the stamina for $ 2 $ seconds. Thus, he carries the chest to $ 7 $ , puts it down, moves $ 1 $ to the right to pick up the key and returns $ 1 $ left to open the chest.\n分析 分类讨论，要么在向右移动的时候就能把key带到chest的位置或者把chest带到key的位置，要么就把chest向右移动k个位置(离key最近)，然后拿key再折返回到chest位置。\n参考代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 #include using namespace std; typedef long long ll; const int maxn = 120; int main() { int t;cin \u003e\u003e t; while (t--) { int x, y, k;cin \u003e\u003e x \u003e\u003e y \u003e\u003e k; int ans; if (y \u003c= x)ans = x; else { if (y \u003c= x + k)ans = y; else { x += k; ans = y + (y - x); } } cout \u003c\u003c ans \u003c\u003c endl; } return 0; } H 烂柯杯 [THUPC 2023 决赛] 烂柯杯 题目背景 却说庞统迤逦前进，抬头见两山逼窄，树木丛杂；又值夏末秋初，枝叶茂盛。庞统心下甚疑，勒住马问：“此处是何地？”数内有新降军士，指道：“此处地名落凤坡。”庞统惊曰：“吾道号凤雏，此处名落凤坡，不利于吾。”令后军疾退。只听山坡前一声炮响，箭如飞蝗，只望骑白马者射来。可怜庞统竟死于乱箭之下。时年止三十六岁。后人有诗叹曰：“古岘相连紫翠堆，士元有宅傍山隈。儿童惯识呼鸠曲，闾巷曾闻展骥才。预计三分平刻削，长驱万里独徘徊。谁知天狗流星坠，不使将军衣锦回。”先是东南有童谣云：“一凤并一龙，相将到蜀中。才到半路里，凤死落坡东。风送雨，雨随风，隆汉兴时蜀道通，蜀道通时只有龙。”\n——《三国演义》第六十三回：诸葛亮痛哭庞统 张翼德义释严颜\n题目描述 $2023$ 年 $5$ 月 $4$ 日 $ \\sim 9$ 日，第一届“衢州烂柯杯”世界围棋公开赛本赛第一阶段的赛程在衢州顺利进行。作为疫情后第一场全程线下进行的世界围棋大赛，也是目前中国主办的唯一一项每年一届的世界围棋大赛，无疑引起了国内外广大围棋爱好者的广泛关注。\n“羽客一枰无复见，青山留得烂柯名。”衢州是围棋圣地，流传着“王质遇仙”的故事，境内的烂柯山也因此闻名于天下。正因为此，“烂柯”也是围棋的别称之一，从古至今的许多围棋故事、书籍、弈谱等，也有不少化用了“烂柯”的典故，或以“烂柯”定名。\n此次“烂柯杯”世界围棋大赛，是在保留原有的“烂柯杯”中国围棋冠军赛的基础上，创办的一项崭新的世界性围棋赛事，吸引了全世界围棋高手前来参加。其中，中国队派出了柯洁、辜梓豪、王星昊、丁浩、李钦诚等 $15$ 员大将参赛，韩国队 $8$ 人，日本队 $5$ 人，还有 $2$ 位棋手来自中国台湾、 $2$ 位棋手来自欧美地区。可以说，全世界最顶尖的围棋高手悉数相聚于此。\n随着科技的发展，人工智能的巨大技术进步和网络传媒的全面普及，围棋这项来自中国的传统运动正在焕发出新的活力。在网络上，人们随时可以看到最新的赛事直播，以及人工智能的精准分析和各大围棋高手的细致解读。资源获取的便捷性使得人们对围棋的关注度空前上升，围棋不再是只有少部分懂棋的爱好者才能欣赏的“小众游戏”；围棋高手也不再只是一个神秘的身份，越来越多的围棋高手开始在网络上与棋迷近距离互动，普及围棋知识，讲解最新对局，赢得了一致好评。正如这次参赛的选手中，有一位棋手同时也是粉丝数达 $150$ 多万的网红主播，甚至还有一位棋手是一家网红餐厅的老板。\n我们今天故事的主角正是这样一位有着传奇色彩的人物。作为一名清华大学本科在读的学生，同时也是一名顶尖围棋高手，他的一举一动无疑都会引起巨大的关注。此次他参加“烂柯杯”比赛，众人无一例外看好他的比赛前景，尤其是现在韩国围棋”第一人“申真谞九段的巅峰时期，他也被无数中国棋迷寄托以”狙击‘小申’“的重任。$5$ 月 $4$ 日抽签过后，没有任何人会怀疑他能不能赢下 $5$ 日的第一轮比赛，一些围棋高手更是直接放出了”大胜，不可能失败“的预言。\n然而，$5$ 月 $5$ 日的比赛还是爆出了惊天大冷门。他在已经胜券在握，AI 胜率达到 $99%$ 的关头，接连选择了“弹幕最多的下法”，最终因为几招致命的失误葬送好局，落败于中国台湾棋手赖均辅八段。赛后，人们在震惊的同时，纷纷猜测本局失利的原因。有人说，他的状态低迷在前些年早已有所体现，“当你在 XX 的时候，小申在下棋”成了调侃他与申真谞战绩差距的一句名言；有人说，他在比赛之前的 $12$ 连胜战绩反而使他心态紧张，从而犯了优势下容易大意的老毛病；也有人拿出了“落凤坡”的典故，以证明他或许命中注定与“烂柯杯”八字不合……但或许，这样的变幻莫测和不可预料性，正是围棋的魅力所在。\n请你根据以上所有信息，猜测本文的主角是谁。\n输入格式 无输入。\n输出格式 输出一个由小写字母组成的字符串，表示上文中提到的主角的名字全拼。如若答案是马云，应当输出 mayun。\n提示 提示 主角的名字在题面中已经有所提及。\n题面中一些看似无厘头的信息实际上是有价值的。\n题目来源 来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）决赛。\n题解等资源可在 https://github.com/THUSAAC/THUPC2023 查看。\n分析 是签到题，输出\"kejie\"即可。\n参考代码 1 2 3 4 5 6 7 8 9 10 #include using namespace std; typedef long long ll; const int maxn = 120; int main() { cout \u003c\u003c \"kejie\"; return 0; } I 总投票数 [THUPC 2023 决赛] 总投票数 题目背景 各位亲爱的《La Lumière: Scarlet Intense Flame - Adventurous Scarlet -》玩家：\n非常荣幸能与您携手度过了这四年的美好时光，衷心感谢大家的支持与陪伴！\n现在，我们非常遗憾的宣布，《La Lumière: Scarlet Intense Flame - Adventurous Scarlet -》将于 2023 年 5 月 28 日 15:00 停止运营服务。\n停止运营相关时间表如下：\n……\n题目描述 在关服前，运营发起了一系列投票，调查哪些游戏内容给玩家带来了更深的印象。\n作为系列的忠实玩家，你想知道有多少人参加了关服前的投票，但是运营只公开了最终的投票结果：对于一项包含 $N$ 个选项的投票，选择第 $i$ 个选项的玩家比例为 $P_i$（$1\\le i\\le N$）。运营在公布结果时进行了四舍五入，所有的 $P_i$ 仅保留到小数点后第 $L$ 位。假设实际有 $K$ 位玩家参加了投票，其中有 $D_i$ 位玩家选择了第 $i$ 个选项，则应该有\n$$ P_i-\\frac{1}{2}\\times 10^{-L}\\le\\frac{D_i}{K}\u003c P_i+\\frac{1}{2}\\times 10^{-L} $$\n显然，所有的 $D_i$ 必须是非负整数，而 $K=\\sum_{i=1}^N D_i$ 则必须是正整数。现在，给定 $N$ 和 $P_i$，请你求出满足 $D_i$ 有非负整数解的最小的总投票数 $K$。\n输入格式 输入的第一行包含一个正整数 $N$，表示投票的选项总数。保证 $1\\le N\\le 100$。\n接下来 $N$ 行，每行包括一个 $[0, 1]$ 中的实数 $P_i$，表示选择第 $i$ 个选项的玩家比例。保证 $\\sum_{i=1}^N P_i =1$，所有 $P_i$ 均保留到小数点后第 $L$ 位，且 $1\\le L\\le 6$。\n输出格式 输出一个正整数，表示满足要求的最小总投票数 $K$。\n样例 #1 样例输入 #1 1 2 3 4 3 0.166667 0.333333 0.500000 样例输出 #1 1 6 样例 #2 样例输入 #2 1 2 3 4 5 6 7 8 7 0.041096 0.109589 0.109589 0.164384 0.301370 0.068493 0.205479 样例输出 #2 1 73 样例 #3 样例输入 #3 1 2 3 4 5 6 7 8 9 10 11 12 13 14 13 0.00155 0.03876 0.01584 0.05189 0.08099 0.06825 0.15658 0.10404 0.02640 0.14332 0.12941 0.15529 0.02768 样例输出 #3 1 7766 提示 【样例解释 #1】\n最小的总投票数为 $6$，对应每个选项的投票数为 $1, 2, 3$。\n【样例解释 #2】\n最小的总投票数为 $73$，对应每个选项的投票数为 $3, 8, 8, 12, 22, 5, 15$。\n【样例解释 #3】\n最小的总投票数为 $7766$，对应每个选项的投票数为 $12, 301, 123, 403, 629, 530, 1216, 808, 205, 1113, 1005, 1206, 215$。\n【数据范围】\n对于所有测试数据，$1\\le N\\le 100$，$0\\le P_i\\le 1$，$\\sum_{i=1}^N P_i=1$，且 $P_i$ 最多统一保留到小数点后 $6$ 位。\n【题目来源】\n来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）决赛。\n题解等资源可在 https://github.com/THUSAAC/THUPC2023 查看。\n分析 参考代码 J Points and Minimum Distance Points and Minimum Distance 题面翻译 给定长度为 $2n$ 的序列 $a$，你需要把这些数分为 $n$ 对，得到 $n$ 个坐标轴上的点。$a$ 中的每个数都要是某一个点的 $x$ 或 $y$ 坐标。注意有些点可能会重合。\n之后，你可以选择从一个点出发，选择一条路径走过所有 $n$ 个点至少一次，在某个点处停下。\n你需要求出路径总长度的最小值。本题中两点间距离为曼哈顿距离，即 $(x_1,y_1)$ 和 $(x_2,y_2)$ 间距离为 $|x_1-x_2|+|y_1-y_2|$。\n题目描述 You are given a sequence of integers $ a $ of length $ 2n $ . You have to split these $ 2n $ integers into $ n $ pairs; each pair will represent the coordinates of a point on a plane. Each number from the sequence $ a $ should become the $ x $ or $ y $ coordinate of exactly one point. Note that some points can be equal.\nAfter the points are formed, you have to choose a path $ s $ that starts from one of these points, ends at one of these points, and visits all $ n $ points at least once.\nThe length of path $ s $ is the sum of distances between all adjacent points on the path. In this problem, the distance between two points $ (x_1, y_1) $ and $ (x_2, y_2) $ is defined as $ |x_1-x_2| + |y_1-y_2| $ .\nYour task is to form $ n $ points and choose a path $ s $ in such a way that the length of path $ s $ is minimized.\n输入格式 The first line contains a single integer $ t $ ( $ 1 \\le t \\le 100 $ ) — the number of testcases.\nThe first line of each testcase contains a single integer $ n $ ( $ 2 \\le n \\le 100 $ ) — the number of points to be formed.\nThe next line contains $ 2n $ integers $ a_1, a_2, \\dots, a_{2n} $ ( $ 0 \\le a_i \\le 1,000 $ ) — the description of the sequence $ a $ .\n输出格式 For each testcase, print the minimum possible length of path $ s $ in the first line.\nIn the $ i $ -th of the following $ n $ lines, print two integers $ x_i $ and $ y_i $ — the coordinates of the point that needs to be visited at the $ i $ -th position.\nIf there are multiple answers, print any of them.\n样例 #1 样例输入 #1 1 2 3 4 5 2 2 15 1 10 5 3 10 30 20 20 30 10 样例输出 #1 1 2 3 4 5 6 7 9 10 1 15 5 20 20 20 10 30 10 30 提示 In the first testcase, for instance, you can form points $ (10, 1) $ and $ (15, 5) $ and start the path $ s $ from the first point and end it at the second point. Then the length of the path will be $ |10 - 15| + |1 - 5| = 5 + 4 = 9 $ .\nIn the second testcase, you can form points $ (20, 20) $ , $ (10, 30) $ , and $ (10, 30) $ , and visit them in that exact order. Then the length of the path will be $ |20 - 10| + |20 - 30| + |10 - 10| + |30 - 30| = 10 + 10 + 0 + 0 = 20 $ .\n分析 构造题，根据题意可以推断，ans只分别与x集合的差值和、y集合差值和有关。显然，（大数-小数）+（大数-小数）的结果劣于（大数-大数）+（小数-小数）。\n故此题，在进行排列后按序先分配x再分配y，直接统计x有序集合与y有序集合的差值即可（注意结果除去x，y交界的一对差）。\n参考代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 #include using namespace std; typedef long long ll; const int maxn = 120; int a[maxn]; int main() { int t;cin \u003e\u003e t; while (t--) { int n;cin \u003e\u003e n; for (int i = 1;i \u003c= 2 * n;i++) cin \u003e\u003e a[i]; sort(a + 1, a + 2 * n + 1); int ans = 0; for (int i = 2;i \u003c= 2 * n;i++) { ans += a[i] - a[i - 1]; } ans -= a[n + 1] - a[n]; cout \u003c\u003c ans \u003c\u003c endl; for (int i = 1;i \u003c= n;i++) cout \u003c\u003c a[i] \u003c\u003c \" \" \u003c\u003c a[2 * n + 1 - i] \u003c\u003c endl; } return 0; } K 速战速决 [THUPC 2023 初赛] 速战速决 题目描述 小 I 与小 J 正在玩一个叫做“开火车”，又称作“拖板车”和“小猫钓鱼”的扑克游戏。游戏规则如下，注意其与一般玩法可能有不同：\n有 $2n$ 张牌，其中对于整数 $1 \\le i \\le n$，牌面为 $i$ 的牌恰好有 $2$ 张。 游戏开始时，小 I 和小 J 各拿其中 $n$ 张牌组成双方的初始手牌。 维护一个公共牌堆（可以将其看作一个栈），初始没有牌。小 I 与小 J 依次行动，小 I 先手。一次行动时，行动方依次进行以下操作： 将手牌中的一张牌放在公共牌堆顶； 若此时公共牌堆中有两张相同的牌，则这两张相同的牌以及在这两张牌之间的所有牌从公共牌堆移到当前行动方手牌中； 若此时当前行动方没有手牌，则当前行动方失败，另一方胜利。 小 J 是扑克萌新，所以会按照以下策略行动：\n维护一个队列，初始将 $n$ 张手牌按照一定顺序放入队列中； 每次行动时，将队列开头的牌放在公共牌堆顶； 若小 J 放入某张牌后公共牌堆中有两张相同的牌，则按照在公共牌堆中自顶到底的顺序将获得的牌放入队列尾。 小 I 通过偷看得到了小 J 的策略以及队列中牌的顺序。现在小 I 不仅想获胜，还想速战速决，用最少的行动次数获胜，但他也是扑克萌新。所以给定小 J 队列中的 $n$ 张牌以及它们的顺序，你需要给出小 I 的策略，使得小 I 能够获胜，同时行动次数最少，或者告诉他这是不可能的。\n输入格式 每组数据的第一行一个整数 $n$ 表示牌面的种数。\n第二行 $n$ 个整数 $a_1,a_2,\\cdots,a_n$，从队头到队尾的顺序依次描述小 J 队列中的牌。\n得到小 J 的 $n$ 张手牌也就得到了小 I 的 $n$ 张手牌，因此不会输入小 I 的手牌。\n输出格式 如果小 I 不可能获胜，只需要输出一个整数 -1；否则第一行输出一个整数 $s$，表示你给出的策略中小 I 的行动次数。接下来一行 $s$ 个整数，依次描述每次行动时小 I 从手牌中放入公共牌堆的牌的牌面，两个数之间以一个空格分隔。注意你给出的策略要满足 $s$ 最小。\n样例 #1 样例输入 #1 1 2 3 1 3 3 样例输出 #1 1 2 3 2 1 2 样例 #2 样例输入 #2 1 2 1 1 样例输出 #2 1 -1 提示 样例解释 1 子任务 对于所有测试数据，$1 \\le n \\le 3 \\times 10^5$，$1 \\le a_1,a_2,\\cdots, a_n \\le n$，且每个整数在序列 $a$ 中至多出现两次。\n题目来源 来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）初赛。\n题解等资源可在 https://github.com/THUSAAC/THUPC2023-Pre 查看。\n分析 参考代码 L 滑雪 [SHOI2002] 滑雪 题目描述 Michael 喜欢滑雪。这并不奇怪，因为滑雪的确很刺激。可是为了获得速度，滑的区域必须向下倾斜，而且当你滑到坡底，你不得不再次走上坡或者等待升降机来载你。Michael 想知道在一个区域中最长的滑坡。区域由一个二维数组给出。数组的每个数字代表点的高度。下面是一个例子：\n1 2 3 4 5 1 2 3 4 5 16 17 18 19 6 15 24 25 20 7 14 23 22 21 8 13 12 11 10 9 一个人可以从某个点滑向上下左右相邻四个点之一，当且仅当高度会减小。在上面的例子中，一条可行的滑坡为 $24-17-16-1$（从 $24$ 开始，在 $1$ 结束）。当然 $25$－$24$－$23$－$\\ldots$－$3$－$2$－$1$ 更长。事实上，这是最长的一条。\n输入格式 输入的第一行为表示区域的二维数组的行数 $R$ 和列数 $C$。下面是 $R$ 行，每行有 $C$ 个数，代表高度(两个数字之间用 $1$ 个空格间隔)。\n输出格式 输出区域中最长滑坡的长度。\n样例 #1 样例输入 #1 1 2 3 4 5 6 5 5 1 2 3 4 5 16 17 18 19 6 15 24 25 20 7 14 23 22 21 8 13 12 11 10 9 样例输出 #1 1 25 提示 对于 $100%$ 的数据，$1\\leq R,C\\leq 100$。\n分析 优先队列+线性dp\n优先队列内排序按照高度从小到大，依次取出队首的点（高度最低的点），记为pos，更新从低处到pos的最长路径。\n状态转移： $$ dp[xi][yi]=max(dp[xi][yi],dp[xi+1][yi]+1)\\ 其他三个点同理 $$ 同时记录最长的路径即可。\n参考代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 #include using namespace std; typedef long long ll; const int maxn = 120; ll rec[maxn][maxn]; ll dp[maxn][maxn]; struct POS { ll height; int x, y; POS(int hi, int xi, int yi) :height(hi), x(xi), y(yi) {} bool operator\u003c(const POS\u0026 P)const { return P.height \u003c height; } }; int main() { int r, c;cin \u003e\u003e r \u003e\u003e c; priority_queue\u003cPOS\u003epos; for (int i = 1;i \u003c= r;i++) { for (int j = 1;j \u003c= c;j++) { ll h;cin \u003e\u003e h; rec[i][j] = h; pos.push(POS(h, i, j)); dp[i][j] = 1; } } ll ans = 1; while (!pos.empty()) { auto tp = pos.top(); int xi = tp.x, yi = tp.y;ll hi = tp.height;pos.pop(); if (rec[xi + 1][yi] \u003c hi) { dp[xi][yi] = max(dp[xi + 1][yi] + 1, dp[xi][yi]); } if (rec[xi - 1][yi] \u003c hi) { dp[xi][yi] = max(dp[xi - 1][yi] + 1, dp[xi][yi]); } if (rec[xi][yi + 1] \u003c hi) { dp[xi][yi] = max(dp[xi][yi + 1] + 1, dp[xi][yi]); } if (rec[xi][yi - 1] \u003c hi) { dp[xi][yi] = max(dp[xi][yi - 1] + 1, dp[xi][yi]); } ans = max(ans, dp[xi][yi]); } cout \u003c\u003c ans \u003c\u003c endl; return 0; } M Two Out of Three Two Out of Three 题面翻译 题目描述 给定一个数组 $a_1, a_2, …, a_n$。你需要找到一个数组 $b_1$, $b_2$, …, $b_n$，其中包含数字 $1, 2, 3$，使得以下三个条件中恰好有两个条件被满足：\n存在 $1\\le i, j\\le n$，使得 $a_i=a_j,b_i=1,b_j=2$。 存在 $1\\le i, j\\le n$，使得 $a_i=a_j,b_i=1,b_j=3$。 存在 $1\\le i, j\\le n$，使得 $a_i=a_j,b_i=2,b_j=3$。 如果不存在这样的数组 $b$，请报告不可以。\n输入格式 每个测试点多测。第一行输入一个整数 $t$，表示数据组数。对于每一组数据：\n第一行输入一个整数 $n$ $(1\\le n\\le 100)$，表示数组 $a$ 的长度。\n第二行读入 $n$ 个整数 $a_1,a_2,…,a_n$ $(1\\le a_i\\le 100)$，代表数组 $a$。\n输出格式 对于每组数据输出一行。若无解，则输出 -1。否则输出一个由 $1,2,3$ 组成的数组 $b$，恰好满足两条性质。如果有多个合法数组，输出任一即可。\n说明/提示 第一个数组 $a$，合法数组可以是 $b=[1,2,3,1,1,1]$。当 $i = 4,j = 2$ 时，满足性质一。当$i = 6,j = 3$ 时满足性质二。数组 $b$ 无法满足性质三，所以恰好满足两条，合法。\n题目描述 You are given an array $ a_1, a_2, \\ldots, a_n $ . You need to find an array $ b_1, b_2, \\ldots, b_n $ consisting of numbers $ 1 $ , $ 2 $ , $ 3 $ such that exactly two out of the following three conditions are satisfied:\nThere exist indices $ 1 \\leq i, j \\leq n $ such that $ a_i = a_j $ , $ b_i = 1 $ , $ b_j = 2 $ . There exist indices $ 1 \\leq i, j \\leq n $ such that $ a_i = a_j $ , $ b_i = 1 $ , $ b_j = 3 $ . There exist indices $ 1 \\leq i, j \\leq n $ such that $ a_i = a_j $ , $ b_i = 2 $ , $ b_j = 3 $ . If such an array does not exist, you should report it.\n输入格式 Each test contains multiple test cases. The first line contains a single integer $ t $ $ (1 \\leq t \\leq 500) $ — the number of test cases. Each test case is described as follows.\nThe first line of each test case contains an integer $ n $ $ (1 \\leq n \\leq 100) $ — the length of the array $ a $ .\nThe second line of each test case contains $ n $ integers $ a_1, a_2, \\ldots, a_n $ $ (1 \\leq a_i \\leq 100) $ — the elements of the array $ a $ .\n输出格式 For each test case, print -1 if there is no solution. Otherwise, print $ b_1, b_2, \\ldots, b_n $ — an array consisting of numbers $ 1 $ , $ 2 $ , $ 3 $ that satisfies exactly two out of three conditions. If there are multiple possible answers, you can print any of them.\n样例 #1 样例输入 #1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 9 6 1 2 3 2 2 3 7 7 7 7 7 7 7 7 4 1 1 2 2 7 1 2 3 4 5 6 7 5 2 3 3 3 2 3 1 2 1 9 1 1 1 7 7 7 9 9 9 1 1 18 93 84 50 21 88 52 16 50 63 1 30 85 29 67 63 58 37 69 样例输出 #1 1 2 3 4 5 6 7 8 9 1 2 3 1 1 1 -1 3 2 2 1 -1 2 1 2 1 3 -1 1 1 2 2 1 2 2 3 3 -1 3 2 1 3 3 3 3 2 2 1 1 2 3 1 3 1 1 2 提示 In the first test case, $ b = [1, 2, 3, 1, 1, 1] $ satisfies condition $ 1 $ because for $ i = 4 $ , $ j = 2 $ : $ a_i = a_j $ , $ b_i = 1 $ , and $ b_j = 2 $ . It also satisfies condition $ 2 $ because for $ i = 6 $ , $ j = 3 $ : $ a_i = a_j $ , $ b_i = 1 $ , and $ b_j = 3 $ . However, it does not satisfy condition $ 3 $ . In total, exactly two out of three conditions are satisfied.\n分析 参考代码 ",
+  "wordCount" : "12112",
+  "inLanguage": "en",
+  "datePublished": "2023-12-02T16:47:17+08:00",
+  "dateModified": "2023-12-02T16:47:17+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "DODOLA"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://florae006.github.io/posts/tech/algorithm/training0/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DODOLA's WareHouse",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://florae006.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://florae006.github.io/" accesskey="h" title="DODOLA&#39;s WareHouse (Alt + H)">
+                <img src="https://florae006.github.io/" alt="" aria-label="logo"
+                    height="35">DODOLA&#39;s WareHouse</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://florae006.github.io/search" title="🔍搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/" title="🏡主页">
+                    <span>🏡主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/posts" title="🐙文章">
+                    <span>🐙文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/archives/" title="📜时间轴">
+                    <span>📜时间轴</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/tags" title="🏷️标签">
+                    <span>🏷️标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/about" title="🍅关于">
+                    <span>🍅关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://florae006.github.io/links" title="🍻友链">
+                    <span>🍻友链</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://florae006.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://florae006.github.io/posts/">发布</a>&nbsp;»&nbsp;<a href="https://florae006.github.io/posts/tech/">📔技术</a>&nbsp;»&nbsp;<a href="https://florae006.github.io/posts/tech/algorithm/">算法</a></div>
+    <h1 class="post-title">
+      队内拉题|23.11.29
+    </h1>
+    <div class="post-meta"><span title='2023-12-02 16:47:17 +0800 CST'>2023-12-02</span>&nbsp;·&nbsp;25 min&nbsp;·&nbsp;DODOLA
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul><ul>
+                <li>
+                    <a href="#a-%e8%b7%b3%e7%9f%b3%e5%a4%b4" aria-label="A 跳石头">A 跳石头</a></li></ul>
+                    
+                <li>
+                    <a href="#noip2015-%e6%8f%90%e9%ab%98%e7%bb%84-%e8%b7%b3%e7%9f%b3%e5%a4%b4" aria-label="[NOIP2015 提高组] 跳石头">[NOIP2015 提高组] 跳石头</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af" aria-label="题目背景">题目背景</a></li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba" aria-label="提示">提示</a><ul>
+                        
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba%e6%a0%b7%e4%be%8b-1-%e8%af%b4%e6%98%8e" aria-label="输入输出样例 1 说明">输入输出样例 1 说明</a></li>
+                <li>
+                    <a href="#%e6%95%b0%e6%8d%ae%e8%a7%84%e6%a8%a1%e4%b8%8e%e7%ba%a6%e5%ae%9a" aria-label="数据规模与约定">数据规模与约定</a></li>
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#b-secret-sport" aria-label="B Secret Sport">B Secret Sport</a></li></ul>
+                </li>
+                <li>
+                    <a href="#secret-sport" aria-label="Secret Sport">Secret Sport</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91" aria-label="题面翻译">题面翻译</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f" aria-label="题目大意">题目大意</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-1" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-1" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-1" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-1" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-1" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-1" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-1" aria-label="提示">提示</a><ul>
+                        
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-1" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#c-%e4%bc%97%e6%95%b0" aria-label="C 众数">C 众数</a></li></ul>
+                </li>
+                <li>
+                    <a href="#thupc-2023-%e5%88%9d%e8%b5%9b-%e4%bc%97%e6%95%b0" aria-label="[THUPC 2023 初赛] 众数">[THUPC 2023 初赛] 众数</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-2" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-2" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-2" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-2" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-2" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-2" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-2" aria-label="提示">提示</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%a7%a3%e9%87%8a-1" aria-label="样例解释 1">样例解释 1</a></li>
+                <li>
+                    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" aria-label="数据范围">数据范围</a></li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90" aria-label="题目来源">题目来源</a></li></ul>
+                    
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-2" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-2" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#d-%e5%a4%a7%e7%ba%b2" aria-label="D 大纲">D 大纲</a></li></ul>
+                </li>
+                <li>
+                    <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e5%a4%a7%e7%ba%b2" aria-label="[THUPC 2023 决赛] 大纲">[THUPC 2023 决赛] 大纲</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-3" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-3" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-3" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-3" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-3" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-3" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-3" aria-label="提示">提示</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-%e8%a7%a3%e9%87%8a" aria-label="样例 1 解释">样例 1 解释</a></li>
+                <li>
+                    <a href="#%e6%95%b0%e6%8d%ae%e8%a7%84%e6%a8%a1%e4%b8%8e%e7%ba%a6%e5%ae%9a-1" aria-label="数据规模与约定">数据规模与约定</a></li>
+                <li>
+                    <a href="#%e5%90%8e%e8%ae%b0" aria-label="后记">后记</a></li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-1" aria-label="题目来源">题目来源</a></li>
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-3" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-3" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#e-chip-and-ribbon" aria-label="E Chip and Ribbon">E Chip and Ribbon</a></li></ul>
+                </li>
+                <li>
+                    <a href="#chip-and-ribbon" aria-label="Chip and Ribbon">Chip and Ribbon</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-1" aria-label="题面翻译">题面翻译</a></li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-4" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-4" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-4" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-4" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-4" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-4" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-4" aria-label="提示">提示</a><ul>
+                        
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-4" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-4" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#f-%e7%9d%80%e8%89%b2" aria-label="F 着色">F 着色</a></li></ul>
+                </li>
+                <li>
+                    <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e7%9d%80%e8%89%b2" aria-label="[THUPC 2023 决赛] 着色">[THUPC 2023 决赛] 着色</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af-1" aria-label="题目背景">题目背景</a></li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-5" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-5" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-5" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-5" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-5" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-5" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-5" aria-label="提示">提示</a><ul>
+                        
+                <li>
+                    <a href="#%e6%95%b0%e6%8d%ae%e8%a7%84%e6%a8%a1%e4%b8%8e%e7%ba%a6%e5%ae%9a-2" aria-label="数据规模与约定">数据规模与约定</a></li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-2" aria-label="题目来源">题目来源</a></li>
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-5" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-5" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#g-treasure-chest" aria-label="G Treasure Chest">G Treasure Chest</a></li></ul>
+                </li>
+                <li>
+                    <a href="#treasure-chest" aria-label="Treasure Chest">Treasure Chest</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-2" aria-label="题面翻译">题面翻译</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-6" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-6" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-6" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e8%af%b4%e6%98%8e%e6%8f%90%e7%a4%ba" aria-label="说明/提示">说明/提示</a><ul>
+                        
+                <li>
+                    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4%e4%b8%8e%e7%ba%a6%e5%ae%9a" aria-label="数据范围与约定">数据范围与约定</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%a7%a3%e9%87%8a" aria-label="样例解释">样例解释</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-7" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-7" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-7" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-6" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-6" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-6" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-6" aria-label="提示">提示</a><ul>
+                        
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-6" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-6" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#h-%e7%83%82%e6%9f%af%e6%9d%af" aria-label="H 烂柯杯">H 烂柯杯</a></li></ul>
+                </li>
+                <li>
+                    <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e7%83%82%e6%9f%af%e6%9d%af" aria-label="[THUPC 2023 决赛] 烂柯杯">[THUPC 2023 决赛] 烂柯杯</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af-2" aria-label="题目背景">题目背景</a></li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-8" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-8" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-8" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-7" aria-label="提示">提示</a><ul>
+                        
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-8" aria-label="提示">提示</a></li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-3" aria-label="题目来源">题目来源</a></li>
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-7" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-7" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#i-%e6%80%bb%e6%8a%95%e7%a5%a8%e6%95%b0" aria-label="I 总投票数">I 总投票数</a></li></ul>
+                </li>
+                <li>
+                    <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e6%80%bb%e6%8a%95%e7%a5%a8%e6%95%b0" aria-label="[THUPC 2023 决赛] 总投票数">[THUPC 2023 决赛] 总投票数</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af-3" aria-label="题目背景">题目背景</a></li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-9" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-9" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-9" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-7" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-7" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-7" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-2" aria-label="样例 #2">样例 #2</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-2" aria-label="样例输入 #2">样例输入 #2</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-2" aria-label="样例输出 #2">样例输出 #2</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-3" aria-label="样例 #3">样例 #3</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-3" aria-label="样例输入 #3">样例输入 #3</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-3" aria-label="样例输出 #3">样例输出 #3</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-9" aria-label="提示">提示</a><ul>
+                        
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-8" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-8" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#j-points-and-minimum-distance" aria-label="J Points and Minimum Distance">J Points and Minimum Distance</a></li></ul>
+                </li>
+                <li>
+                    <a href="#points-and-minimum-distance" aria-label="Points and Minimum Distance">Points and Minimum Distance</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-3" aria-label="题面翻译">题面翻译</a></li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-10" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-10" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-10" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-8" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-8" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-8" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-10" aria-label="提示">提示</a><ul>
+                        
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-9" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-9" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#k-%e9%80%9f%e6%88%98%e9%80%9f%e5%86%b3" aria-label="K 速战速决">K 速战速决</a></li></ul>
+                </li>
+                <li>
+                    <a href="#thupc-2023-%e5%88%9d%e8%b5%9b-%e9%80%9f%e6%88%98%e9%80%9f%e5%86%b3" aria-label="[THUPC 2023 初赛] 速战速决">[THUPC 2023 初赛] 速战速决</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-11" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-11" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-11" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-9" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-9" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-9" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-2-1" aria-label="样例 #2">样例 #2</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-2-1" aria-label="样例输入 #2">样例输入 #2</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-2-1" aria-label="样例输出 #2">样例输出 #2</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-11" aria-label="提示">提示</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%a7%a3%e9%87%8a-1-1" aria-label="样例解释 1">样例解释 1</a></li>
+                <li>
+                    <a href="#%e5%ad%90%e4%bb%bb%e5%8a%a1" aria-label="子任务">子任务</a></li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-4" aria-label="题目来源">题目来源</a></li></ul>
+                    
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-10" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-10" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#l-%e6%bb%91%e9%9b%aa" aria-label="L 滑雪">L 滑雪</a></li></ul>
+                </li>
+                <li>
+                    <a href="#shoi2002-%e6%bb%91%e9%9b%aa" aria-label="[SHOI2002] 滑雪">[SHOI2002] 滑雪</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-12" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-12" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-12" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-10" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-10" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-10" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-12" aria-label="提示">提示</a><ul>
+                        
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-11" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-11" aria-label="参考代码">参考代码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#m-two-out-of-three" aria-label="M Two Out of Three">M Two Out of Three</a></li></ul>
+                </li>
+                <li>
+                    <a href="#two-out-of-three" aria-label="Two Out of Three">Two Out of Three</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-4" aria-label="题面翻译">题面翻译</a><ul>
+                        
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-13" aria-label="题目描述"><strong>题目描述</strong></a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-13" aria-label="输入格式"><strong>输入格式</strong></a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-13" aria-label="输出格式"><strong>输出格式</strong></a></li>
+                <li>
+                    <a href="#%e8%af%b4%e6%98%8e%e6%8f%90%e7%a4%ba-1" aria-label="说明/提示"><strong>说明/提示</strong></a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-14" aria-label="题目描述">题目描述</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-14" aria-label="输入格式">输入格式</a></li>
+                <li>
+                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-14" aria-label="输出格式">输出格式</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b-1-11" aria-label="样例 #1">样例 #1</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-11" aria-label="样例输入 #1">样例输入 #1</a></li>
+                <li>
+                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-11" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba-13" aria-label="提示">提示</a><ul>
+                        
+                <li>
+                    <a href="#%e5%88%86%e6%9e%90-12" aria-label="分析">分析</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-12" aria-label="参考代码">参考代码</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>前言点评：本次题目难度不高</p>
+<h2 id="a-跳石头">A 跳石头<a hidden class="anchor" aria-hidden="true" href="#a-跳石头">#</a></h2>
+<blockquote>
+<h1 id="noip2015-提高组-跳石头">[NOIP2015 提高组] 跳石头<a hidden class="anchor" aria-hidden="true" href="#noip2015-提高组-跳石头">#</a></h1>
+<h2 id="题目背景">题目背景<a hidden class="anchor" aria-hidden="true" href="#题目背景">#</a></h2>
+<p>NOIP2015 Day2T1</p>
+<h2 id="题目描述">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述">#</a></h2>
+<p>一年一度的“跳石头”比赛又要开始了！</p>
+<p>这项比赛将在一条笔直的河道中进行，河道中分布着一些巨大岩石。组委会已经选择好了两块岩石作为比赛起点和终点。在起点和终点之间，有 $N$ 块岩石（不含起点和终点的岩石）。在比赛过程中，选手们将从起点出发，每一步跳向相邻的岩石，直至到达终点。</p>
+<p>为了提高比赛难度，组委会计划移走一些岩石，使得选手们在比赛过程中的最短跳跃距离尽可能长。由于预算限制，组委会至多从起点和终点之间移走 $M$ 块岩石（不能移走起点和终点的岩石）。</p>
+<h2 id="输入格式">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式">#</a></h2>
+<p>第一行包含三个整数 $L,N,M$，分别表示起点到终点的距离，起点和终点之间的岩石数，以及组委会至多移走的岩石数。保证 $L \geq 1$ 且 $N \geq M \geq 0$。</p>
+<p>接下来 $N$ 行，每行一个整数，第 $i$ 行的整数 $D_i,( 0 &lt; D_i &lt; L)$， 表示第 $i$ 块岩石与起点的距离。这些岩石按与起点距离从小到大的顺序给出，且不会有两个岩石出现在同一个位置。</p>
+<h2 id="输出格式">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式">#</a></h2>
+<p>一个整数，即最短跳跃距离的最大值。</p>
+<h2 id="样例-1">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1">#</a></h2>
+<h3 id="样例输入-1">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">25 5 2 
+</span></span><span class="line"><span class="cl">2
+</span></span><span class="line"><span class="cl">11
+</span></span><span class="line"><span class="cl">14
+</span></span><span class="line"><span class="cl">17 
+</span></span><span class="line"><span class="cl">21
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示">提示<a hidden class="anchor" aria-hidden="true" href="#提示">#</a></h2>
+<h3 id="输入输出样例-1-说明">输入输出样例 1 说明<a hidden class="anchor" aria-hidden="true" href="#输入输出样例-1-说明">#</a></h3>
+<p>将与起点距离为 $2$ 和 $14$ 的两个岩石移走后，最短的跳跃距离为 $4$（从与起点距离 $17$ 的岩石跳到距离 $21$ 的岩石，或者从距离 $21$ 的岩石跳到终点）。</p>
+<h3 id="数据规模与约定">数据规模与约定<a hidden class="anchor" aria-hidden="true" href="#数据规模与约定">#</a></h3>
+<p>对于 $20%$的数据，$0 \le M \le N \le 10$。 <br>
+对于 $50%$ 的数据，$0 \le M \le N \le 100$。<br>
+对于 $100%$ 的数据，$0 \le M \le N \le 50000,1 \le L
+\le 10^9$。</p>
+</blockquote>
+<h3 id="分析">分析<a hidden class="anchor" aria-hidden="true" href="#分析">#</a></h3>
+<h3 id="参考代码">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"></code></pre></td></tr></table>
+</div>
+</div><h2 id="b-secret-sport">B Secret Sport<a hidden class="anchor" aria-hidden="true" href="#b-secret-sport">#</a></h2>
+<blockquote>
+<h1 id="secret-sport">Secret Sport<a hidden class="anchor" aria-hidden="true" href="#secret-sport">#</a></h1>
+<h2 id="题面翻译">题面翻译<a hidden class="anchor" aria-hidden="true" href="#题面翻译">#</a></h2>
+<h3 id="题目大意">题目大意<a hidden class="anchor" aria-hidden="true" href="#题目大意">#</a></h3>
+<p>A,B两人玩游戏，游戏规则如下：
+整场游戏有多轮，每轮游戏先胜 $X$ 局的人获胜，每场游戏先胜 $Y$ 局的人获胜。</p>
+<p>你在场边观看了比赛，但是你忘记了 $X$ 和 $Y$ ，只记得总共比了 $1 \le n \le 20$ 局，和每局获胜的人，请判断谁获胜了。如果A获胜，输出 <code>A</code> ，如果B获胜，输出 <code>B</code> ，如果都有可能，输出 <code>?</code> 。</p>
+<h2 id="题目描述-1">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-1">#</a></h2>
+<p>Let&rsquo;s consider a game in which two players, A and B, participate. This game is characterized by two positive integers, $ X $ and $ Y $ .</p>
+<p>The game consists of sets, and each set consists of plays. In each play, exactly one of the players, either A or B, wins. A set ends exactly when one of the players reaches $ X $ wins in the plays of that set. This player is declared the winner of the set. The players play sets until one of them reaches $ Y $ wins in the sets. After that, the game ends, and this player is declared the winner of the entire game.</p>
+<p>You have just watched a game but didn&rsquo;t notice who was declared the winner. You remember that during the game, $ n $ plays were played, and you know which player won each play. However, you do not know the values of $ X $ and $ Y $ . Based on the available information, determine who won the entire game — A or B. If there is not enough information to determine the winner, you should also report it.</p>
+<h2 id="输入格式-1">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-1">#</a></h2>
+<p>Each test contains multiple test cases. The first line contains a single integer $ t $ $ (1 \leq t \leq 10^4) $ - the number of test cases. The description of the test cases follows.</p>
+<p>The first line of each test case contains an integer $ n $ $ (1 \leq n \leq 20) $ - the number of plays played during the game.</p>
+<p>The second line of each test case contains a string $ s $ of length $ n $ , consisting of characters $ \texttt{A} $ and $ \texttt{B} $ . If $ s_i = \texttt{A} $ , it means that player A won the $ i $ -th play. If $ s_i = \texttt{B} $ , it means that player B won the $ i $ -th play.</p>
+<p>It is guaranteed that the given sequence of plays corresponds to at least one valid game scenario, for some values of $ X $ and $ Y $ .</p>
+<h2 id="输出格式-1">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-1">#</a></h2>
+<p>For each test case, output:</p>
+<ul>
+<li>$ \texttt{A} $ — if player A is guaranteed to be the winner of the game.</li>
+<li>$ \texttt{B} $ — if player B is guaranteed to be the winner of the game.</li>
+<li>$ \texttt{?} $ — if it is impossible to determine the winner of the game.</li>
+</ul>
+<h2 id="样例-1-1">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1-1">#</a></h2>
+<h3 id="样例输入-1-1">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1-1">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7
+</span></span><span class="line"><span class="cl">5
+</span></span><span class="line"><span class="cl">ABBAA
+</span></span><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">BBB
+</span></span><span class="line"><span class="cl">7
+</span></span><span class="line"><span class="cl">BBAAABA
+</span></span><span class="line"><span class="cl">20
+</span></span><span class="line"><span class="cl">AAAAAAAABBBAABBBBBAB
+</span></span><span class="line"><span class="cl">1
+</span></span><span class="line"><span class="cl">A
+</span></span><span class="line"><span class="cl">13
+</span></span><span class="line"><span class="cl">AAAABABBABBAB
+</span></span><span class="line"><span class="cl">7
+</span></span><span class="line"><span class="cl">BBBAAAA
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1-1">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1-1">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">A
+</span></span><span class="line"><span class="cl">B
+</span></span><span class="line"><span class="cl">A
+</span></span><span class="line"><span class="cl">B
+</span></span><span class="line"><span class="cl">A
+</span></span><span class="line"><span class="cl">B
+</span></span><span class="line"><span class="cl">A
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-1">提示<a hidden class="anchor" aria-hidden="true" href="#提示-1">#</a></h2>
+<p>In the first test case, the game could have been played with parameters $ X = 3 $ , $ Y = 1 $ . The game consisted of $ 1 $ set, in which player A won, as they won the first $ 3 $ plays. In this scenario, player A is the winner. The game could also have been played with parameters $ X = 1 $ , $ Y = 3 $ . It can be shown that there are no such $ X $ and $ Y $ values for which player B would be the winner.</p>
+<p>In the second test case, player B won all the plays. It can be easily shown that in this case, player B is guaranteed to be the winner of the game.</p>
+<p>In the fourth test case, the game could have been played with parameters $ X = 3 $ , $ Y = 3 $ :</p>
+<ul>
+<li>In the first set, $ 3 $ plays were played: AAA. Player A is declared the winner of the set.</li>
+<li>In the second set, $ 3 $ plays were played: AAA. Player A is declared the winner of the set.</li>
+<li>In the third set, $ 5 $ plays were played: AABBB. Player B is declared the winner of the set.</li>
+<li>In the fourth set, $ 5 $ plays were played: AABBB. Player B is declared the winner of the set.</li>
+<li>In the fifth set, $ 4 $ plays were played: BBAB. Player B is declared the winner of the set.</li>
+</ul>
+<p>In total, player B was the first player to win $ 3 $ sets. They are declared the winner of the game.</p>
+</blockquote>
+<h3 id="分析-1">分析<a hidden class="anchor" aria-hidden="true" href="#分析-1">#</a></h3>
+<h3 id="参考代码-1">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-1">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"></code></pre></td></tr></table>
+</div>
+</div><h2 id="c-众数">C 众数<a hidden class="anchor" aria-hidden="true" href="#c-众数">#</a></h2>
+<blockquote>
+<h1 id="thupc-2023-初赛-众数">[THUPC 2023 初赛] 众数<a hidden class="anchor" aria-hidden="true" href="#thupc-2023-初赛-众数">#</a></h1>
+<h2 id="题目描述-2">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-2">#</a></h2>
+<p>你有若干个 $[1,n]$ 内的正整数：对于 $1 \le i \le n$，你有 $a_i$ 个整数 $i$。设 $S = \sum_{i=1}^n a_i$。</p>
+<p>对于一个序列 $p_1,p_2,\cdots,p_l$，定义其众数 $\text{maj}(p_1,p_2,\cdots,p_l)$ 为出现次数最多的数。若有多个数出现次数最多，则其中最大的数为其众数。</p>
+<p>现在你需要把这 $S$ 个数排成一个序列 $b_1,b_2,\cdots,b_S$，使得 $\sum_{i=1}^S \text{maj}(b_1,b_2,\cdots,b_i)$ 最大。输出该最大值。</p>
+<h2 id="输入格式-2">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-2">#</a></h2>
+<p>第一行一个整数 $n$，表示值域。</p>
+<p>接下来一行 $n$ 个正整数 $a_1,a_2,\cdots,a_n$，表示每种数的个数。</p>
+<h2 id="输出格式-2">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-2">#</a></h2>
+<p>输出一行一个正整数表示 $\sum_{i=1}^S \text{maj}(b_1,b_2,\cdots,b_i)$ 的最大值。</p>
+<h2 id="样例-1-2">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1-2">#</a></h2>
+<h3 id="样例输入-1-2">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1-2">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">1 3 2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1-2">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1-2">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">17
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-2">提示<a hidden class="anchor" aria-hidden="true" href="#提示-2">#</a></h2>
+<h4 id="样例解释-1">样例解释 1<a hidden class="anchor" aria-hidden="true" href="#样例解释-1">#</a></h4>
+<p>一个达到最大值的序列为 $(3,2,3,1,2,2)$。</p>
+<h4 id="数据范围">数据范围<a hidden class="anchor" aria-hidden="true" href="#数据范围">#</a></h4>
+<p>对于所有测试数据，$1 \le n \leq 10^5$，$1 \le a_1,a_2,\cdots,a_n \le 10^5$。</p>
+<h4 id="题目来源">题目来源<a hidden class="anchor" aria-hidden="true" href="#题目来源">#</a></h4>
+<p>来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）初赛。</p>
+<p>题解等资源可在 <a href="https://github.com/THUSAAC/THUPC2023-Pre">https://github.com/THUSAAC/THUPC2023-Pre</a> 查看。</p>
+</blockquote>
+<h3 id="分析-2">分析<a hidden class="anchor" aria-hidden="true" href="#分析-2">#</a></h3>
+<p>贪心，要让较大的数作为众数的次数最多。</p>
+<p>构造排列时按照n~1的顺序排下去，每次先排列尽量满足上述想法的数。</p>
+<h3 id="参考代码-2">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-2">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="n">a</span><span class="p">[</span><span class="n">maxn</span><span class="p">],</span> <span class="n">prea</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// prea[a[i]]:众数数量为a[i]时，当前众数i作为众数对结果的贡献
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">prea</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">prea</span><span class="p">[</span><span class="n">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">num</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ans</span> <span class="o">+=</span> <span class="n">prea</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="d-大纲">D 大纲<a hidden class="anchor" aria-hidden="true" href="#d-大纲">#</a></h2>
+<blockquote>
+<h1 id="thupc-2023-决赛-大纲">[THUPC 2023 决赛] 大纲<a hidden class="anchor" aria-hidden="true" href="#thupc-2023-决赛-大纲">#</a></h1>
+<h2 id="题目描述-3">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-3">#</a></h2>
+<p>小 I、小 O 和小 N 是 ION 大纲的编写者，小 I 负责给每个知识点定难度。</p>
+<p>ION 大纲计划列入 $n$ 个知识点，其中小 I 按照自己的认识给其中部分知识点定好了难度，还有部分知识点没有定难度。</p>
+<p>知识点之间有依赖关系，这个依赖关系恰好构成了一棵以 $1$ 为根的外向树，知识点 $x$ 指向知识点 $y$ 表示 $x$ 依赖 $y$。<strong>依赖关系不具有传递性。</strong></p>
+<p>你需要告诉小 I 目前确定下来的难度是否合理。我们认为确定下来的难度是合理的当且仅当存在一个给所有未确定难度的知识点确定难度的方式，使得以下所有条件成立：</p>
+<ul>
+<li>每个知识点的难度都是非负整数；</li>
+<li>对于每个依赖其他知识点的知识点 $x$，设 $\max_x$ 为 $x$ 依赖的知识点中难度的最大值，则如果 $x$ 恰依赖一个难度为 $\max_x$ 的知识点，那么知识点 $x$ 的难度为 $\max_x$，否则为 $\max_x+1$。<strong>对于不依赖其他知识点的知识点，没有其他限制。</strong></li>
+</ul>
+<h2 id="输入格式-3">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-3">#</a></h2>
+<p><strong>本题有多组测试数据</strong>。第一行一个整数 $T$ 表示测试数据组数，接下来依次读入每组测试数据。</p>
+<p>对于每组测试数据，</p>
+<ul>
+<li>第一行一个整数 $n$ 表示知识点数量。</li>
+<li>第二行 $n$ 个整数 $a_1,a_2,\cdots,a_n$，描述每个知识点的难度。若 $a_i = -1$ 表示知识点 $i$ 未确定难度，否则知识点 $i$ 的难度确定为 $a_i$。</li>
+<li>接下来 $n-1$ 行每行两个整数 $u,v$，表示依赖关系构成的外向树中的一条有向边。</li>
+</ul>
+<h2 id="输出格式-3">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-3">#</a></h2>
+<p>对于每组测试数据输出一行：若难度是合理的，输出 <code>Reasonable</code>，否则输出 <code>Unreasonable</code>。</p>
+<h2 id="样例-1-3">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1-3">#</a></h2>
+<h3 id="样例输入-1-3">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1-3">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2
+</span></span><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">0 -1 0
+</span></span><span class="line"><span class="cl">1 2
+</span></span><span class="line"><span class="cl">2 3
+</span></span><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">0 -1 0
+</span></span><span class="line"><span class="cl">1 2
+</span></span><span class="line"><span class="cl">1 3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1-3">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1-3">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Reasonable
+</span></span><span class="line"><span class="cl">Unreasonable
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-3">提示<a hidden class="anchor" aria-hidden="true" href="#提示-3">#</a></h2>
+<h3 id="样例-1-解释">样例 1 解释<a hidden class="anchor" aria-hidden="true" href="#样例-1-解释">#</a></h3>
+<p>对于第一组测试数据，将知识点 $2$ 的难度定为 $0$ 即满足条件。</p>
+<p>对于第二组测试数据，无论如何指定知识点 $2$ 的难度，知识点 $1$ 的难度会产生矛盾。</p>
+<h3 id="数据规模与约定-1">数据规模与约定<a hidden class="anchor" aria-hidden="true" href="#数据规模与约定-1">#</a></h3>
+<p>对于所有测试数据，$1 \le T \le 10^5$，$2 \le n \le 10^5$，$-1 \le a_i \le 10^9$，$1 \le u,v \le n$。<br>
+保证单个测试点中所有测试数据的 $n$ 的和不超过 $2 \times 10^5$，每组测试数据输入的所有边构成一棵以 $1$ 为根的外向树。</p>
+<h3 id="后记">后记<a hidden class="anchor" aria-hidden="true" href="#后记">#</a></h3>
+<p>大纲发表了。若干天后，小 I 给 ION 比赛投题，却发现有人偷偷改了一笔难度表，导致他的题目超纲。于是小 I 只能把题投给 CPUHT。</p>
+<h3 id="题目来源-1">题目来源<a hidden class="anchor" aria-hidden="true" href="#题目来源-1">#</a></h3>
+<p>来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）决赛。</p>
+<p>题解等资源可在 <a href="https://github.com/THUSAAC/THUPC2023">https://github.com/THUSAAC/THUPC2023</a> 查看。</p>
+</blockquote>
+<h3 id="分析-3">分析<a hidden class="anchor" aria-hidden="true" href="#分析-3">#</a></h3>
+<h3 id="参考代码-3">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-3">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"></code></pre></td></tr></table>
+</div>
+</div><h2 id="e-chip-and-ribbon">E Chip and Ribbon<a hidden class="anchor" aria-hidden="true" href="#e-chip-and-ribbon">#</a></h2>
+<blockquote>
+<h1 id="chip-and-ribbon">Chip and Ribbon<a hidden class="anchor" aria-hidden="true" href="#chip-and-ribbon">#</a></h1>
+<h2 id="题面翻译-1">题面翻译<a hidden class="anchor" aria-hidden="true" href="#题面翻译-1">#</a></h2>
+<p>每次可以在一段长度为 $n$，初始值都为 $0$ 的序列中选取一段连续区间，并将区间内所有元素加 $1$，求最少操作数使得该序列与题目所给的序列所有元素相同，输出最少操作数减 $1$。</p>
+<h2 id="题目描述-4">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-4">#</a></h2>
+<p>There is a ribbon divided into $ n $ cells, numbered from $ 1 $ to $ n $ from left to right. Initially, an integer $ 0 $ is written in each cell.</p>
+<p>Monocarp plays a game with a chip. The game consists of several turns. During the first turn, Monocarp places the chip in the $ 1 $ -st cell of the ribbon. During each turn except for the first turn, Monocarp does exactly one of the two following actions:</p>
+<ul>
+<li>move the chip to the next cell (i. e. if the chip is in the cell $ i $ , it is moved to the cell $ i+1 $ ). This action is impossible if the chip is in the last cell;</li>
+<li>choose any cell $ x $ and teleport the chip into that cell. It is possible to choose the cell where the chip is currently located.</li>
+</ul>
+<p>At the end of each turn, the integer written in the cell with the chip is increased by $ 1 $ .</p>
+<p>Monocarp&rsquo;s goal is to make some turns so that the $ 1 $ -st cell contains the integer $ c_1 $ , the $ 2 $ -nd cell contains the integer $ c_2 $ , &hellip;, the $ n $ -th cell contains the integer $ c_n $ . He wants to teleport the chip as few times as possible.</p>
+<p>Help Monocarp calculate the minimum number of times he has to teleport the chip.</p>
+<h2 id="输入格式-4">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-4">#</a></h2>
+<p>The first line contains one integer $ t $ ( $ 1 \le t \le 10^4 $ ) — the number of test cases.</p>
+<p>Each test case consists of two lines:</p>
+<ul>
+<li>the first line contains one integer $ n $ ( $ 1 \le n \le 2 \cdot 10^5 $ );</li>
+<li>the second line contains $ n $ integers $ c_1, c_2, \dots, c_n $ ( $ 0 \le c_i \le 10^9 $ ; $ c_1 \ge 1 $ ).</li>
+</ul>
+<p>It can be shown that under these constraints, it is always possible to make a finite amount of turns so that the integers in the cells match the sequence $ c_1, c_2, \dots, c_n $ .</p>
+<p>Additional constraint on the input: the sum of values of $ n $ over all test cases does not exceed $ 2 \cdot 10^5 $ .</p>
+<h2 id="输出格式-4">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-4">#</a></h2>
+<p>For each test case, print one integer — the minimum number of times Monocarp has to teleport the chip.</p>
+<h2 id="样例-1-4">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1-4">#</a></h2>
+<h3 id="样例输入-1-4">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1-4">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
+</span></span><span class="line"><span class="cl">4
+</span></span><span class="line"><span class="cl">1 2 2 1
+</span></span><span class="line"><span class="cl">5
+</span></span><span class="line"><span class="cl">1 0 1 0 1
+</span></span><span class="line"><span class="cl">5
+</span></span><span class="line"><span class="cl">5 4 3 2 1
+</span></span><span class="line"><span class="cl">1
+</span></span><span class="line"><span class="cl">12
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1-4">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1-4">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1
+</span></span><span class="line"><span class="cl">2
+</span></span><span class="line"><span class="cl">4
+</span></span><span class="line"><span class="cl">11
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-4">提示<a hidden class="anchor" aria-hidden="true" href="#提示-4">#</a></h2>
+<p>In the first test case of the example, Monocarp can perform the turns as follows:</p>
+<ul>
+<li>place the chip in the $ 1 $ -st cell; the numbers in the cells are $ [1, 0, 0, 0] $ ;</li>
+<li>move the chip to the next ( $ 2 $ -nd) cell; the numbers in the cells are $ [1, 1, 0, 0] $ ;</li>
+<li>move the chip to the next ( $ 3 $ -rd) cell; the numbers in the cells are $ [1, 1, 1, 0] $ ;</li>
+<li>teleport the chip to the $ 2 $ -nd cell; the numbers in the cells are $ [1, 2, 1, 0] $ ;</li>
+<li>move the chip to the next ( $ 3 $ -rd) cell; the numbers in the cells are $ [1, 2, 2, 0] $ ;</li>
+<li>move the chip to the next ( $ 4 $ -th) cell; the numbers in the cells are $ [1, 2, 2, 1] $ .</li>
+</ul>
+</blockquote>
+<h3 id="分析-4">分析<a hidden class="anchor" aria-hidden="true" href="#分析-4">#</a></h3>
+<p>令连续的下一cell内数字加一的操作数是不限的，那么我们的目的就变成了画多少条这样的连续的“线”，能达到最终的目的，示意图如下：</p>
+<p><img loading="lazy" src="./te.jpg" alt="E题理解"  />
+</p>
+<p>在代码实现的时候，只要后一位的高度高于前一位，那么就需要增加：后一位高度-前一位高度 这么多的线，参考代码如下：</p>
+<h3 id="参考代码-4">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-4">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">2e5</span> <span class="o">+</span> <span class="mi">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="n">a</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">n</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ll</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ans</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="f-着色">F 着色<a hidden class="anchor" aria-hidden="true" href="#f-着色">#</a></h2>
+<blockquote>
+<h1 id="thupc-2023-决赛-着色">[THUPC 2023 决赛] 着色<a hidden class="anchor" aria-hidden="true" href="#thupc-2023-决赛-着色">#</a></h1>
+<h2 id="题目背景-1">题目背景<a hidden class="anchor" aria-hidden="true" href="#题目背景-1">#</a></h2>
+<p>远古的笔迹，远古的乐音，远古的历史，远古的 $K_{1000}$，若无人问津，便悄然褪色……</p>
+<h2 id="题目描述-5">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-5">#</a></h2>
+<p>给出一个 $n$ 个节点的无向完全图，你需要给每条边标上一个 $0 \sim 9$ 的数字，使得图上不存在一个三元环或五元环满足：其上所有边的数字相同。</p>
+<h2 id="输入格式-5">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-5">#</a></h2>
+<p>输入仅一行一个整数 $n$ 表示图的节点数。</p>
+<h2 id="输出格式-5">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-5">#</a></h2>
+<p>如果不存在方案，输出一行一个整数 <code>-1</code>。否则输出 $(n-1)$ 行，第 $i$ 行 $(n-i)$ 个字符，第 $i$ 行的第 $j$ 个字符表示 $(i,i+j)$ 的标号。若有多个方案，输出任意一个即可。</p>
+<h2 id="样例-1-5">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1-5">#</a></h2>
+<h3 id="样例输入-1-5">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1-5">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1-5">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1-5">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">012
+</span></span><span class="line"><span class="cl">34
+</span></span><span class="line"><span class="cl">5
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-5">提示<a hidden class="anchor" aria-hidden="true" href="#提示-5">#</a></h2>
+<h3 id="数据规模与约定-2">数据规模与约定<a hidden class="anchor" aria-hidden="true" href="#数据规模与约定-2">#</a></h3>
+<p>对于所有测试数据，$2 \le n \le 1000$。</p>
+<h3 id="题目来源-2">题目来源<a hidden class="anchor" aria-hidden="true" href="#题目来源-2">#</a></h3>
+<p>来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）决赛。</p>
+<p>题解等资源可在 <a href="https://github.com/THUSAAC/THUPC2023">https://github.com/THUSAAC/THUPC2023</a> 查看。</p>
+</blockquote>
+<h3 id="分析-5">分析<a hidden class="anchor" aria-hidden="true" href="#分析-5">#</a></h3>
+<h3 id="参考代码-5">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-5">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"></code></pre></td></tr></table>
+</div>
+</div><h2 id="g-treasure-chest">G Treasure Chest<a hidden class="anchor" aria-hidden="true" href="#g-treasure-chest">#</a></h2>
+<blockquote>
+<h1 id="treasure-chest">Treasure Chest<a hidden class="anchor" aria-hidden="true" href="#treasure-chest">#</a></h1>
+<h2 id="题面翻译-2">题面翻译<a hidden class="anchor" aria-hidden="true" href="#题面翻译-2">#</a></h2>
+<h3 id="题目描述-6">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-6">#</a></h3>
+<p>给你一个数轴，一开始你的位置为 $0$，箱子在 $x$ 处，钥匙在 $y$ 处，$x\neq y$。你需要通过一些操作打开宝箱。</p>
+<p>当位置为 $i$ 时，你能执行以下操作：</p>
+<ul>
+<li>花费 $1$ 秒，走向 $i+1$ 或 $i-1$；</li>
+<li>花费 $0$ 秒，拿起 $i$ 处的钥匙或箱子，如果此处有的话；</li>
+<li>花费 $0$ 秒，在 $i$ 处放下箱子；</li>
+<li>花费 $0$ 秒，打开宝箱，如果箱子在 $i$ 处且你拿着钥匙的话。</li>
+</ul>
+<p>另外给出限制：因为箱子很重，所以在整个过程中，扛着箱子的时间不得超过 $k$ 秒（放下再拿起箱子不会使其重置）。</p>
+<p>现在给定 $x,y,k$，请问你打开箱子的最短用时为多少？
+每个测试点采用多组数据测试。</p>
+<h3 id="输入格式-6">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-6">#</a></h3>
+<p>第一行一个整数 $t\space(1\le t\le 100)$，表示数据组数。</p>
+<p>对于每组数据：唯一一行三个整数 $x,y,k\space(1\le x,y\le 100,x\neq y,0\le k\le 100)$，分别表示初始时箱子的位置，钥匙的位置和你扛着箱子的最大时长。</p>
+<h3 id="输出格式-6">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-6">#</a></h3>
+<p>共 $t$ 行，第 $i$ 行一个整数表示第 $i$ 组数据的答案。</p>
+<h3 id="说明提示">说明/提示<a hidden class="anchor" aria-hidden="true" href="#说明提示">#</a></h3>
+<h4 id="数据范围与约定">数据范围与约定<a hidden class="anchor" aria-hidden="true" href="#数据范围与约定">#</a></h4>
+<p>$1\le t\le 100;\1\le x,y\le 100,x\neq y;\1\le k\le 100.$</p>
+<h4 id="样例解释">样例解释<a hidden class="anchor" aria-hidden="true" href="#样例解释">#</a></h4>
+<p>对于样例的第 $1$ 组数据，可以通过以下一系列动作在第 $7$ 秒打开箱子。</p>
+<ul>
+<li>花费 $5$ 秒走到 $5$,</li>
+<li>花费 $0$ 秒拿起箱子，</li>
+<li>花费 $2$ 秒走到 $7$，</li>
+<li>拿起钥匙、放下箱子并打开箱子，共花费 $0$ 秒。</li>
+</ul>
+<p>全过程共花费 $7$ 秒，拿着箱子的时间仅有 $2$ 秒，不超过给定的限制 $k=2$。可以证明不存在更优解。</p>
+<p>对于样例的第 $2$ 组数据，你可以花费 $5$ 秒走到 $5$ 并捡起钥匙，再花费 $5$ 秒走到 $10$ 并打开箱子。共花费 $10$ 秒，其中没有扛过箱子，不超过给定的限制 $k=0$。可以证明不存在更优解。</p>
+<p>对于样例的第 $3$ 组数据，你无法像数据 $1$ 那样将箱子直接搬到钥匙处，而必须：</p>
+<ul>
+<li>花费 $5$ 秒走到 $5$ 并扛起箱子；</li>
+<li>花费 $2$ 秒走到 $7$；</li>
+<li>此时你已经力竭，达到了限制 $k=2$，所以必须花费 $0$ 秒在 $7$ 处放下箱子；</li>
+<li>花费 $1$ 秒走到 $8$ 并捡起钥匙；</li>
+<li>花费 $1$ 秒再走到 $7$ 并打开箱子。</li>
+</ul>
+<p>全过程共花费 $9$ 秒且刚好没有超过限制。可以证明不存在更优解。</p>
+<h2 id="题目描述-7">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-7">#</a></h2>
+<p>Monocarp has found a treasure map. The map represents the treasure location as an OX axis. Monocarp is at $ 0 $ , the treasure chest is at $ x $ , the key to the chest is at $ y $ .</p>
+<p>Obviously, Monocarp wants to open the chest. He can perform the following actions:</p>
+<ul>
+<li>go $ 1 $ to the left or $ 1 $ to the right (spending $ 1 $ second);</li>
+<li>pick the key or the chest up if he is in the same point as that object (spending $ 0 $ seconds);</li>
+<li>put the chest down in his current point (spending $ 0 $ seconds);</li>
+<li>open the chest if he&rsquo;s in the same point as the chest and has picked the key up (spending $ 0 $ seconds).</li>
+</ul>
+<p>Monocarp can carry the chest, but the chest is pretty heavy. He knows that he can carry it for at most $ k $ seconds in total (putting it down and picking it back up doesn&rsquo;t reset his stamina).</p>
+<p>What&rsquo;s the smallest time required for Monocarp to open the chest?</p>
+<h2 id="输入格式-7">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-7">#</a></h2>
+<p>The first line contains a single integer $ t $ ( $ 1 \le t \le 100 $ ) — the number of testcases.</p>
+<p>The only line of each testcase contains three integers $ x, y $ and $ k $ ( $ 1 \le x, y \le 100 $ ; $ x \neq y $ ; $ 0 \le k \le 100 $ ) — the initial point of the chest, the point where the key is located, and the maximum time Monocarp can carry the chest for.</p>
+<h2 id="输出格式-7">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-7">#</a></h2>
+<p>For each testcase, print a single integer — the smallest time required for Monocarp to open the chest.</p>
+<h2 id="样例-1-6">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1-6">#</a></h2>
+<h3 id="样例输入-1-6">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1-6">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">5 7 2
+</span></span><span class="line"><span class="cl">10 5 0
+</span></span><span class="line"><span class="cl">5 8 2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1-6">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1-6">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7
+</span></span><span class="line"><span class="cl">10
+</span></span><span class="line"><span class="cl">9
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-6">提示<a hidden class="anchor" aria-hidden="true" href="#提示-6">#</a></h2>
+<p>In the first testcase, Monocarp can open the chest in $ 7 $ seconds with the following sequence of moves:</p>
+<ul>
+<li>go $ 5 $ times to the right ( $ 5 $ seconds);</li>
+<li>pick up the chest ( $ 0 $ seconds);</li>
+<li>go $ 2 $ times to the right ( $ 2 $ seconds);</li>
+<li>pick up the key ( $ 0 $ seconds);</li>
+<li>put the chest down ( $ 0 $ seconds);</li>
+<li>open the chest ( $ 0 $ seconds).</li>
+</ul>
+<p>He only carries the chest for $ 2 $ seconds, which he has the stamina for.</p>
+<p>In the second testcase, Monocarp can pick up the key on his way to the chest.</p>
+<p>In the third testcase, Monocarp can&rsquo;t use the strategy from the first testcase because he would have to carry the chest for $ 3 $ seconds, while he only has the stamina for $ 2 $ seconds. Thus, he carries the chest to $ 7 $ , puts it down, moves $ 1 $ to the right to pick up the key and returns $ 1 $ left to open the chest.</p>
+</blockquote>
+<h3 id="分析-6">分析<a hidden class="anchor" aria-hidden="true" href="#分析-6">#</a></h3>
+<p>分类讨论，要么在向右移动的时候就能把key带到chest的位置或者把chest带到key的位置，要么就把chest向右移动k个位置(离key最近)，然后拿key再折返回到chest位置。</p>
+<h3 id="参考代码-6">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-6">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">k</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span> <span class="o">&gt;&gt;</span> <span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">ans</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">)</span><span class="n">ans</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">k</span><span class="p">)</span><span class="n">ans</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">x</span> <span class="o">+=</span> <span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ans</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="h-烂柯杯">H 烂柯杯<a hidden class="anchor" aria-hidden="true" href="#h-烂柯杯">#</a></h2>
+<blockquote>
+<h1 id="thupc-2023-决赛-烂柯杯">[THUPC 2023 决赛] 烂柯杯<a hidden class="anchor" aria-hidden="true" href="#thupc-2023-决赛-烂柯杯">#</a></h1>
+<h2 id="题目背景-2">题目背景<a hidden class="anchor" aria-hidden="true" href="#题目背景-2">#</a></h2>
+<p>却说庞统迤逦前进，抬头见两山逼窄，树木丛杂；又值夏末秋初，枝叶茂盛。庞统心下甚疑，勒住马问：“此处是何地？”数内有新降军士，指道：“此处地名落凤坡。”庞统惊曰：“吾道号凤雏，此处名落凤坡，不利于吾。”令后军疾退。只听山坡前一声炮响，箭如飞蝗，只望骑白马者射来。可怜庞统竟死于乱箭之下。时年止三十六岁。后人有诗叹曰：“古岘相连紫翠堆，士元有宅傍山隈。儿童惯识呼鸠曲，闾巷曾闻展骥才。预计三分平刻削，长驱万里独徘徊。谁知天狗流星坠，不使将军衣锦回。”先是东南有童谣云：“一凤并一龙，相将到蜀中。才到半路里，凤死落坡东。风送雨，雨随风，隆汉兴时蜀道通，蜀道通时只有龙。”</p>
+<p>——《三国演义》第六十三回：诸葛亮痛哭庞统 张翼德义释严颜</p>
+<h2 id="题目描述-8">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-8">#</a></h2>
+<p>$2023$ 年 $5$ 月 $4$ 日 $ \sim 9$ 日，第一届“衢州烂柯杯”世界围棋公开赛本赛第一阶段的赛程在衢州顺利进行。作为疫情后第一场全程线下进行的世界围棋大赛，也是目前中国主办的唯一一项每年一届的世界围棋大赛，无疑引起了国内外广大围棋爱好者的广泛关注。</p>
+<p>“羽客一枰无复见，青山留得烂柯名。”衢州是围棋圣地，流传着“王质遇仙”的故事，境内的烂柯山也因此闻名于天下。正因为此，“烂柯”也是围棋的别称之一，从古至今的许多围棋故事、书籍、弈谱等，也有不少化用了“烂柯”的典故，或以“烂柯”定名。</p>
+<p>此次“烂柯杯”世界围棋大赛，是在保留原有的“烂柯杯”中国围棋冠军赛的基础上，创办的一项崭新的世界性围棋赛事，吸引了全世界围棋高手前来参加。其中，中国队派出了柯洁、辜梓豪、王星昊、丁浩、李钦诚等 $15$ 员大将参赛，韩国队 $8$ 人，日本队 $5$ 人，还有 $2$ 位棋手来自中国台湾、 $2$ 位棋手来自欧美地区。可以说，全世界最顶尖的围棋高手悉数相聚于此。</p>
+<p>随着科技的发展，人工智能的巨大技术进步和网络传媒的全面普及，围棋这项来自中国的传统运动正在焕发出新的活力。在网络上，人们随时可以看到最新的赛事直播，以及人工智能的精准分析和各大围棋高手的细致解读。资源获取的便捷性使得人们对围棋的关注度空前上升，围棋不再是只有少部分懂棋的爱好者才能欣赏的“小众游戏”；围棋高手也不再只是一个神秘的身份，越来越多的围棋高手开始在网络上与棋迷近距离互动，普及围棋知识，讲解最新对局，赢得了一致好评。正如这次参赛的选手中，有一位棋手同时也是粉丝数达 $150$ 多万的网红主播，甚至还有一位棋手是一家网红餐厅的老板。</p>
+<p>我们今天故事的主角正是这样一位有着传奇色彩的人物。作为一名清华大学本科在读的学生，同时也是一名顶尖围棋高手，他的一举一动无疑都会引起巨大的关注。此次他参加“烂柯杯”比赛，众人无一例外看好他的比赛前景，尤其是现在韩国围棋”第一人“申真谞九段的巅峰时期，他也被无数中国棋迷寄托以”狙击‘小申’“的重任。$5$ 月 $4$ 日抽签过后，没有任何人会怀疑他能不能赢下 $5$ 日的第一轮比赛，一些围棋高手更是直接放出了”大胜，不可能失败“的预言。</p>
+<p>然而，$5$ 月 $5$ 日的比赛还是爆出了惊天大冷门。他在已经胜券在握，AI 胜率达到 $99%$ 的关头，接连选择了“弹幕最多的下法”，最终因为几招致命的失误葬送好局，落败于中国台湾棋手赖均辅八段。赛后，人们在震惊的同时，纷纷猜测本局失利的原因。有人说，他的状态低迷在前些年早已有所体现，“当你在 XX 的时候，小申在下棋”成了调侃他与申真谞战绩差距的一句名言；有人说，他在比赛之前的 $12$ 连胜战绩反而使他心态紧张，从而犯了优势下容易大意的老毛病；也有人拿出了“落凤坡”的典故，以证明他或许命中注定与“烂柯杯”八字不合……但或许，这样的变幻莫测和不可预料性，正是围棋的魅力所在。</p>
+<p>请你根据以上所有信息，猜测本文的主角是谁。</p>
+<h2 id="输入格式-8">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-8">#</a></h2>
+<p>无输入。</p>
+<h2 id="输出格式-8">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-8">#</a></h2>
+<p>输出一个由小写字母组成的字符串，表示上文中提到的主角的名字全拼。如若答案是马云，应当输出 <code>mayun</code>。</p>
+<h2 id="提示-7">提示<a hidden class="anchor" aria-hidden="true" href="#提示-7">#</a></h2>
+<h3 id="提示-8">提示<a hidden class="anchor" aria-hidden="true" href="#提示-8">#</a></h3>
+<p>主角的名字在题面中已经有所提及。</p>
+<p>题面中一些看似无厘头的信息实际上是有价值的。</p>
+<h3 id="题目来源-3">题目来源<a hidden class="anchor" aria-hidden="true" href="#题目来源-3">#</a></h3>
+<p>来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）决赛。</p>
+<p>题解等资源可在 <a href="https://github.com/THUSAAC/THUPC2023">https://github.com/THUSAAC/THUPC2023</a> 查看。</p>
+</blockquote>
+<h3 id="分析-7">分析<a hidden class="anchor" aria-hidden="true" href="#分析-7">#</a></h3>
+<p>是签到题，输出&quot;kejie&quot;即可。</p>
+<h3 id="参考代码-7">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-7">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;kejie&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="i-总投票数">I 总投票数<a hidden class="anchor" aria-hidden="true" href="#i-总投票数">#</a></h2>
+<blockquote>
+<h1 id="thupc-2023-决赛-总投票数">[THUPC 2023 决赛] 总投票数<a hidden class="anchor" aria-hidden="true" href="#thupc-2023-决赛-总投票数">#</a></h1>
+<h2 id="题目背景-3">题目背景<a hidden class="anchor" aria-hidden="true" href="#题目背景-3">#</a></h2>
+<p>各位亲爱的《La Lumière: Scarlet Intense Flame - Adventurous Scarlet -》玩家：</p>
+<p>非常荣幸能与您携手度过了这四年的美好时光，衷心感谢大家的支持与陪伴！</p>
+<p>现在，我们非常遗憾的宣布，《La Lumière: Scarlet Intense Flame - Adventurous Scarlet -》将于 2023 年 5 月 28 日 15:00 停止运营服务。</p>
+<p>停止运营相关时间表如下：</p>
+<p>……</p>
+<h2 id="题目描述-9">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-9">#</a></h2>
+<p>在关服前，运营发起了一系列投票，调查哪些游戏内容给玩家带来了更深的印象。</p>
+<p>作为系列的忠实玩家，你想知道有多少人参加了关服前的投票，但是运营只公开了最终的投票结果：对于一项包含 $N$ 个选项的投票，选择第 $i$ 个选项的玩家比例为 $P_i$（$1\le i\le N$）。运营在公布结果时进行了四舍五入，所有的 $P_i$ 仅保留到小数点后第 $L$ 位。假设实际有 $K$ 位玩家参加了投票，其中有 $D_i$ 位玩家选择了第 $i$ 个选项，则应该有</p>
+<p>$$
+P_i-\frac{1}{2}\times 10^{-L}\le\frac{D_i}{K}&lt; P_i+\frac{1}{2}\times 10^{-L}
+$$</p>
+<p>显然，所有的 $D_i$ 必须是非负整数，而 $K=\sum_{i=1}^N D_i$ 则必须是正整数。现在，给定 $N$ 和 $P_i$，请你求出满足 $D_i$ 有非负整数解的最小的总投票数 $K$。</p>
+<h2 id="输入格式-9">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-9">#</a></h2>
+<p>输入的第一行包含一个正整数 $N$，表示投票的选项总数。保证 $1\le N\le 100$。</p>
+<p>接下来 $N$ 行，每行包括一个 $[0, 1]$ 中的实数 $P_i$，表示选择第 $i$ 个选项的玩家比例。保证 $\sum_{i=1}^N P_i =1$，所有 $P_i$ 均保留到小数点后第 $L$ 位，且 $1\le L\le 6$。</p>
+<h2 id="输出格式-9">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-9">#</a></h2>
+<p>输出一个正整数，表示满足要求的最小总投票数 $K$。</p>
+<h2 id="样例-1-7">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1-7">#</a></h2>
+<h3 id="样例输入-1-7">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1-7">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">0.166667
+</span></span><span class="line"><span class="cl">0.333333
+</span></span><span class="line"><span class="cl">0.500000
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1-7">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1-7">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">6
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例-2">样例 #2<a hidden class="anchor" aria-hidden="true" href="#样例-2">#</a></h2>
+<h3 id="样例输入-2">样例输入 #2<a hidden class="anchor" aria-hidden="true" href="#样例输入-2">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7
+</span></span><span class="line"><span class="cl">0.041096
+</span></span><span class="line"><span class="cl">0.109589
+</span></span><span class="line"><span class="cl">0.109589
+</span></span><span class="line"><span class="cl">0.164384
+</span></span><span class="line"><span class="cl">0.301370
+</span></span><span class="line"><span class="cl">0.068493
+</span></span><span class="line"><span class="cl">0.205479
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-2">样例输出 #2<a hidden class="anchor" aria-hidden="true" href="#样例输出-2">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">73
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例-3">样例 #3<a hidden class="anchor" aria-hidden="true" href="#样例-3">#</a></h2>
+<h3 id="样例输入-3">样例输入 #3<a hidden class="anchor" aria-hidden="true" href="#样例输入-3">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">13
+</span></span><span class="line"><span class="cl">0.00155
+</span></span><span class="line"><span class="cl">0.03876
+</span></span><span class="line"><span class="cl">0.01584
+</span></span><span class="line"><span class="cl">0.05189
+</span></span><span class="line"><span class="cl">0.08099
+</span></span><span class="line"><span class="cl">0.06825
+</span></span><span class="line"><span class="cl">0.15658
+</span></span><span class="line"><span class="cl">0.10404
+</span></span><span class="line"><span class="cl">0.02640
+</span></span><span class="line"><span class="cl">0.14332
+</span></span><span class="line"><span class="cl">0.12941
+</span></span><span class="line"><span class="cl">0.15529
+</span></span><span class="line"><span class="cl">0.02768
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-3">样例输出 #3<a hidden class="anchor" aria-hidden="true" href="#样例输出-3">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7766
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-9">提示<a hidden class="anchor" aria-hidden="true" href="#提示-9">#</a></h2>
+<p><strong>【样例解释 #1】</strong></p>
+<p>最小的总投票数为 $6$，对应每个选项的投票数为 $1, 2, 3$。</p>
+<p><strong>【样例解释 #2】</strong></p>
+<p>最小的总投票数为 $73$，对应每个选项的投票数为 $3, 8, 8, 12, 22, 5, 15$。</p>
+<p><strong>【样例解释 #3】</strong></p>
+<p>最小的总投票数为 $7766$，对应每个选项的投票数为 $12, 301, 123, 403, 629, 530, 1216, 808, 205, 1113, 1005, 1206, 215$。</p>
+<p><strong>【数据范围】</strong></p>
+<p>对于所有测试数据，$1\le N\le 100$，$0\le P_i\le 1$，$\sum_{i=1}^N P_i=1$，且 $P_i$ 最多统一保留到小数点后 $6$ 位。</p>
+<p><strong>【题目来源】</strong></p>
+<p>来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）决赛。</p>
+<p>题解等资源可在 <a href="https://github.com/THUSAAC/THUPC2023">https://github.com/THUSAAC/THUPC2023</a> 查看。</p>
+</blockquote>
+<h3 id="分析-8">分析<a hidden class="anchor" aria-hidden="true" href="#分析-8">#</a></h3>
+<h3 id="参考代码-8">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-8">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"></code></pre></td></tr></table>
+</div>
+</div><h2 id="j-points-and-minimum-distance">J Points and Minimum Distance<a hidden class="anchor" aria-hidden="true" href="#j-points-and-minimum-distance">#</a></h2>
+<blockquote>
+<h1 id="points-and-minimum-distance">Points and Minimum Distance<a hidden class="anchor" aria-hidden="true" href="#points-and-minimum-distance">#</a></h1>
+<h2 id="题面翻译-3">题面翻译<a hidden class="anchor" aria-hidden="true" href="#题面翻译-3">#</a></h2>
+<p>给定长度为 $2n$ 的序列 $a$，你需要把这些数分为 $n$ 对，得到 $n$ 个坐标轴上的点。$a$ 中的每个数都要是某一个点的 $x$ 或 $y$ 坐标。注意有些点可能会重合。</p>
+<p>之后，你可以选择从一个点出发，选择一条路径走过所有 $n$ 个点至少一次，在某个点处停下。</p>
+<p>你需要求出路径总长度的最小值。本题中两点间距离为曼哈顿距离，即 $(x_1,y_1)$ 和 $(x_2,y_2)$ 间距离为 $|x_1-x_2|+|y_1-y_2|$。</p>
+<h2 id="题目描述-10">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-10">#</a></h2>
+<p>You are given a sequence of integers $ a $ of length $ 2n $ . You have to split these $ 2n $ integers into $ n $ pairs; each pair will represent the coordinates of a point on a plane. Each number from the sequence $ a $ should become the $ x $ or $ y $ coordinate of exactly one point. Note that some points can be equal.</p>
+<p>After the points are formed, you have to choose a path $ s $ that starts from one of these points, ends at one of these points, and visits all $ n $ points at least once.</p>
+<p>The length of path $ s $ is the sum of distances between all adjacent points on the path. In this problem, the distance between two points $ (x_1, y_1) $ and $ (x_2, y_2) $ is defined as $ |x_1-x_2| + |y_1-y_2| $ .</p>
+<p>Your task is to form $ n $ points and choose a path $ s $ in such a way that the length of path $ s $ is minimized.</p>
+<h2 id="输入格式-10">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-10">#</a></h2>
+<p>The first line contains a single integer $ t $ ( $ 1 \le t \le 100 $ ) — the number of testcases.</p>
+<p>The first line of each testcase contains a single integer $ n $ ( $ 2 \le n \le 100 $ ) — the number of points to be formed.</p>
+<p>The next line contains $ 2n $ integers $ a_1, a_2, \dots, a_{2n} $ ( $ 0 \le a_i \le 1,000 $ ) — the description of the sequence $ a $ .</p>
+<h2 id="输出格式-10">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-10">#</a></h2>
+<p>For each testcase, print the minimum possible length of path $ s $ in the first line.</p>
+<p>In the $ i $ -th of the following $ n $ lines, print two integers $ x_i $ and $ y_i $ — the coordinates of the point that needs to be visited at the $ i $ -th position.</p>
+<p>If there are multiple answers, print any of them.</p>
+<h2 id="样例-1-8">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1-8">#</a></h2>
+<h3 id="样例输入-1-8">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1-8">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2
+</span></span><span class="line"><span class="cl">2
+</span></span><span class="line"><span class="cl">15 1 10 5
+</span></span><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">10 30 20 20 30 10
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1-8">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1-8">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">9
+</span></span><span class="line"><span class="cl">10 1
+</span></span><span class="line"><span class="cl">15 5
+</span></span><span class="line"><span class="cl">20
+</span></span><span class="line"><span class="cl">20 20
+</span></span><span class="line"><span class="cl">10 30
+</span></span><span class="line"><span class="cl">10 30
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-10">提示<a hidden class="anchor" aria-hidden="true" href="#提示-10">#</a></h2>
+<p>In the first testcase, for instance, you can form points $ (10, 1) $ and $ (15, 5) $ and start the path $ s $ from the first point and end it at the second point. Then the length of the path will be $ |10 - 15| + |1 - 5| = 5 + 4 = 9 $ .</p>
+<p>In the second testcase, you can form points $ (20, 20) $ , $ (10, 30) $ , and $ (10, 30) $ , and visit them in that exact order. Then the length of the path will be $ |20 - 10| + |20 - 30| + |10 - 10| + |30 - 30| = 10 + 10 + 0 + 0 = 20 $ .</p>
+</blockquote>
+<h3 id="分析-9">分析<a hidden class="anchor" aria-hidden="true" href="#分析-9">#</a></h3>
+<p>构造题，根据题意可以推断，ans只分别与x集合的差值和、y集合差值和有关。显然，（大数-小数）+（大数-小数）的结果劣于（大数-大数）+（小数-小数）。</p>
+<p>故此题，在进行排列后按序先分配x再分配y，直接统计x有序集合与y有序集合的差值即可（注意结果除去x，y交界的一对差）。</p>
+<h3 id="参考代码-9">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-9">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">n</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sort</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ans</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ans</span> <span class="o">-=</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="k-速战速决">K 速战速决<a hidden class="anchor" aria-hidden="true" href="#k-速战速决">#</a></h2>
+<blockquote>
+<h1 id="thupc-2023-初赛-速战速决">[THUPC 2023 初赛] 速战速决<a hidden class="anchor" aria-hidden="true" href="#thupc-2023-初赛-速战速决">#</a></h1>
+<h2 id="题目描述-11">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-11">#</a></h2>
+<p>小 I 与小 J 正在玩一个叫做“开火车”，又称作“拖板车”和“小猫钓鱼”的扑克游戏。游戏规则如下，注意其与一般玩法可能有不同：</p>
+<ul>
+<li>有 $2n$ 张牌，其中对于整数 $1 \le i \le n$，牌面为 $i$ 的牌恰好有 $2$ 张。</li>
+<li>游戏开始时，小 I 和小 J 各拿其中 $n$ 张牌组成双方的初始手牌。</li>
+<li>维护一个公共牌堆（可以将其看作一个栈），初始没有牌。小 I 与小 J 依次行动，小 I 先手。一次行动时，行动方依次进行以下操作：
+<ol>
+<li>将手牌中的一张牌放在公共牌堆顶；</li>
+<li>若此时公共牌堆中有两张相同的牌，则这两张相同的牌以及在这两张牌之间的所有牌从公共牌堆移到当前行动方手牌中；</li>
+<li>若此时当前行动方没有手牌，则当前行动方失败，另一方胜利。</li>
+</ol>
+</li>
+</ul>
+<p>小 J 是扑克萌新，所以会按照以下策略行动：</p>
+<ul>
+<li>维护一个队列，初始将 $n$ 张手牌按照一定顺序放入队列中；</li>
+<li>每次行动时，将队列开头的牌放在公共牌堆顶；</li>
+<li>若小 J 放入某张牌后公共牌堆中有两张相同的牌，则按照在公共牌堆中自顶到底的顺序将获得的牌放入队列尾。</li>
+</ul>
+<p>小 I 通过偷看得到了小 J 的策略以及队列中牌的顺序。现在小 I 不仅想获胜，还想速战速决，用<strong>最少</strong>的行动次数获胜，但他也是扑克萌新。所以给定小 J 队列中的 $n$ 张牌以及它们的顺序，你需要给出小 I 的策略，使得小 I 能够获胜，同时行动次数最少，或者告诉他这是不可能的。</p>
+<h2 id="输入格式-11">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-11">#</a></h2>
+<p>每组数据的第一行一个整数 $n$ 表示牌面的种数。</p>
+<p>第二行 $n$ 个整数 $a_1,a_2,\cdots,a_n$，从队头到队尾的顺序依次描述小 J 队列中的牌。</p>
+<p>得到小 J 的 $n$ 张手牌也就得到了小 I 的 $n$ 张手牌，因此不会输入小 I 的手牌。</p>
+<h2 id="输出格式-11">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-11">#</a></h2>
+<p>如果小 I 不可能获胜，只需要输出一个整数 <code>-1</code>；否则第一行输出一个整数 $s$，表示你给出的策略中小 I 的行动次数。接下来一行 $s$ 个整数，依次描述每次行动时小 I 从手牌中放入公共牌堆的牌的牌面，两个数之间以一个空格分隔。<strong>注意你给出的策略要满足 $s$ 最小。</strong></p>
+<h2 id="样例-1-9">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1-9">#</a></h2>
+<h3 id="样例输入-1-9">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1-9">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">1 3 3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1-9">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1-9">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">2 1 2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="样例-2-1">样例 #2<a hidden class="anchor" aria-hidden="true" href="#样例-2-1">#</a></h2>
+<h3 id="样例输入-2-1">样例输入 #2<a hidden class="anchor" aria-hidden="true" href="#样例输入-2-1">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1
+</span></span><span class="line"><span class="cl">1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-2-1">样例输出 #2<a hidden class="anchor" aria-hidden="true" href="#样例输出-2-1">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-11">提示<a hidden class="anchor" aria-hidden="true" href="#提示-11">#</a></h2>
+<h4 id="样例解释-1-1">样例解释 1<a hidden class="anchor" aria-hidden="true" href="#样例解释-1-1">#</a></h4>
+<p><img loading="lazy" src="https://cdn.luogu.com.cn/upload/image_hosting/m1asrjdd.png" alt=""  />
+</p>
+<p><img loading="lazy" src="https://cdn.luogu.com.cn/upload/image_hosting/x5w65xlc.png" alt=""  />
+</p>
+<h4 id="子任务">子任务<a hidden class="anchor" aria-hidden="true" href="#子任务">#</a></h4>
+<p>对于所有测试数据，$1 \le n \le 3 \times 10^5$，$1 \le a_1,a_2,\cdots, a_n \le n$，且每个整数在序列 $a$ 中至多出现两次。</p>
+<h4 id="题目来源-4">题目来源<a hidden class="anchor" aria-hidden="true" href="#题目来源-4">#</a></h4>
+<p>来自 2023 清华大学学生程序设计竞赛暨高校邀请赛（THUPC2023）初赛。</p>
+<p>题解等资源可在 <a href="https://github.com/THUSAAC/THUPC2023-Pre">https://github.com/THUSAAC/THUPC2023-Pre</a> 查看。</p>
+</blockquote>
+<h3 id="分析-10">分析<a hidden class="anchor" aria-hidden="true" href="#分析-10">#</a></h3>
+<h3 id="参考代码-10">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-10">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"></code></pre></td></tr></table>
+</div>
+</div><h2 id="l-滑雪">L 滑雪<a hidden class="anchor" aria-hidden="true" href="#l-滑雪">#</a></h2>
+<blockquote>
+<h1 id="shoi2002-滑雪">[SHOI2002] 滑雪<a hidden class="anchor" aria-hidden="true" href="#shoi2002-滑雪">#</a></h1>
+<h2 id="题目描述-12">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-12">#</a></h2>
+<p>Michael 喜欢滑雪。这并不奇怪，因为滑雪的确很刺激。可是为了获得速度，滑的区域必须向下倾斜，而且当你滑到坡底，你不得不再次走上坡或者等待升降机来载你。Michael 想知道在一个区域中最长的滑坡。区域由一个二维数组给出。数组的每个数字代表点的高度。下面是一个例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">1   2   3   4   5
+</span></span><span class="line"><span class="cl">16  17  18  19  6
+</span></span><span class="line"><span class="cl">15  24  25  20  7
+</span></span><span class="line"><span class="cl">14  23  22  21  8
+</span></span><span class="line"><span class="cl">13  12  11  10  9
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>一个人可以从某个点滑向上下左右相邻四个点之一，当且仅当高度会减小。在上面的例子中，一条可行的滑坡为 $24-17-16-1$（从 $24$ 开始，在 $1$ 结束）。当然    $25$－$24$－$23$－$\ldots$－$3$－$2$－$1$ 更长。事实上，这是最长的一条。</p>
+<h2 id="输入格式-12">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-12">#</a></h2>
+<p>输入的第一行为表示区域的二维数组的行数 $R$ 和列数 $C$。下面是 $R$ 行，每行有 $C$ 个数，代表高度(两个数字之间用 $1$ 个空格间隔)。</p>
+<h2 id="输出格式-12">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-12">#</a></h2>
+<p>输出区域中最长滑坡的长度。</p>
+<h2 id="样例-1-10">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1-10">#</a></h2>
+<h3 id="样例输入-1-10">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1-10">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">5 5
+</span></span><span class="line"><span class="cl">1 2 3 4 5
+</span></span><span class="line"><span class="cl">16 17 18 19 6
+</span></span><span class="line"><span class="cl">15 24 25 20 7
+</span></span><span class="line"><span class="cl">14 23 22 21 8
+</span></span><span class="line"><span class="cl">13 12 11 10 9
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1-10">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1-10">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">25
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-12">提示<a hidden class="anchor" aria-hidden="true" href="#提示-12">#</a></h2>
+<p>对于 $100%$ 的数据，$1\leq R,C\leq 100$。</p>
+</blockquote>
+<h3 id="分析-11">分析<a hidden class="anchor" aria-hidden="true" href="#分析-11">#</a></h3>
+<p>优先队列+线性dp</p>
+<p>优先队列内排序按照高度从小到大，依次取出队首的点（高度最低的点），记为pos，更新从低处到pos的最长路径。</p>
+<p>状态转移：
+$$
+dp[xi][yi]=max(dp[xi][yi],dp[xi+1][yi]+1)\
+其他三个点同理
+$$
+同时记录最长的路径即可。</p>
+<h3 id="参考代码-11">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-11">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="n">rec</span><span class="p">[</span><span class="n">maxn</span><span class="p">][</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="n">dp</span><span class="p">[</span><span class="n">maxn</span><span class="p">][</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">POS</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">height</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">POS</span><span class="p">(</span><span class="kt">int</span> <span class="n">hi</span><span class="p">,</span> <span class="kt">int</span> <span class="n">xi</span><span class="p">,</span> <span class="kt">int</span> <span class="n">yi</span><span class="p">)</span> <span class="o">:</span><span class="n">height</span><span class="p">(</span><span class="n">hi</span><span class="p">),</span> <span class="n">x</span><span class="p">(</span><span class="n">xi</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">yi</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">POS</span><span class="o">&amp;</span> <span class="n">P</span><span class="p">)</span><span class="k">const</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">P</span><span class="p">.</span><span class="n">height</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">r</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">POS</span><span class="o">&gt;</span><span class="n">pos</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">j</span> <span class="o">&lt;=</span> <span class="n">c</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ll</span> <span class="n">h</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">h</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rec</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">h</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pos</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">POS</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">pos</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">auto</span> <span class="n">tp</span> <span class="o">=</span> <span class="n">pos</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">xi</span> <span class="o">=</span> <span class="n">tp</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">yi</span> <span class="o">=</span> <span class="n">tp</span><span class="p">.</span><span class="n">y</span><span class="p">;</span><span class="n">ll</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">tp</span><span class="p">.</span><span class="n">height</span><span class="p">;</span><span class="n">pos</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">rec</span><span class="p">[</span><span class="n">xi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">yi</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">xi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">yi</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dp</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">rec</span><span class="p">[</span><span class="n">xi</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">yi</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">xi</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">yi</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dp</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">rec</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dp</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">rec</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dp</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ans</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">dp</span><span class="p">[</span><span class="n">xi</span><span class="p">][</span><span class="n">yi</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="m-two-out-of-three">M Two Out of Three<a hidden class="anchor" aria-hidden="true" href="#m-two-out-of-three">#</a></h2>
+<blockquote>
+<h1 id="two-out-of-three">Two Out of Three<a hidden class="anchor" aria-hidden="true" href="#two-out-of-three">#</a></h1>
+<h2 id="题面翻译-4">题面翻译<a hidden class="anchor" aria-hidden="true" href="#题面翻译-4">#</a></h2>
+<h3 id="题目描述-13"><strong>题目描述</strong><a hidden class="anchor" aria-hidden="true" href="#题目描述-13">#</a></h3>
+<p>给定一个数组 $a_1, a_2, &hellip;, a_n$。你需要找到一个数组 $b_1$, $b_2$, &hellip;, $b_n$，其中包含数字 $1, 2, 3$，使得以下三个条件中恰好有两个条件被满足：</p>
+<ul>
+<li>存在 $1\le i, j\le n$，使得 $a_i=a_j,b_i=1,b_j=2$。</li>
+<li>存在 $1\le i, j\le n$，使得 $a_i=a_j,b_i=1,b_j=3$。</li>
+<li>存在 $1\le i, j\le n$，使得 $a_i=a_j,b_i=2,b_j=3$。</li>
+</ul>
+<p>如果不存在这样的数组 $b$，请报告不可以。</p>
+<h3 id="输入格式-13"><strong>输入格式</strong><a hidden class="anchor" aria-hidden="true" href="#输入格式-13">#</a></h3>
+<p>每个测试点多测。第一行输入一个整数 $t$，表示数据组数。对于每一组数据：</p>
+<p>第一行输入一个整数 $n$ $(1\le n\le 100)$，表示数组 $a$ 的长度。</p>
+<p>第二行读入 $n$ 个整数 $a_1,a_2,&hellip;,a_n$ $(1\le a_i\le 100)$，代表数组 $a$。</p>
+<h3 id="输出格式-13"><strong>输出格式</strong><a hidden class="anchor" aria-hidden="true" href="#输出格式-13">#</a></h3>
+<p>对于每组数据输出一行。若无解，则输出 <code>-1</code>。否则输出一个由 $1,2,3$ 组成的数组 $b$，恰好满足两条性质。如果有多个合法数组，输出任一即可。</p>
+<h3 id="说明提示-1"><strong>说明/提示</strong><a hidden class="anchor" aria-hidden="true" href="#说明提示-1">#</a></h3>
+<p>第一个数组 $a$，合法数组可以是 $b=[1,2,3,1,1,1]$。当 $i = 4,j = 2$ 时，满足性质一。当$i = 6,j = 3$ 时满足性质二。数组 $b$ 无法满足性质三，所以恰好满足两条，合法。</p>
+<h2 id="题目描述-14">题目描述<a hidden class="anchor" aria-hidden="true" href="#题目描述-14">#</a></h2>
+<p>You are given an array $ a_1, a_2, \ldots, a_n $ . You need to find an array $ b_1, b_2, \ldots, b_n $ consisting of numbers $ 1 $ , $ 2 $ , $ 3 $ such that exactly two out of the following three conditions are satisfied:</p>
+<ol>
+<li>There exist indices $ 1 \leq i, j \leq n $ such that $ a_i = a_j $ , $ b_i = 1 $ , $ b_j = 2 $ .</li>
+<li>There exist indices $ 1 \leq i, j \leq n $ such that $ a_i = a_j $ , $ b_i = 1 $ , $ b_j = 3 $ .</li>
+<li>There exist indices $ 1 \leq i, j \leq n $ such that $ a_i = a_j $ , $ b_i = 2 $ , $ b_j = 3 $ .</li>
+</ol>
+<p>If such an array does not exist, you should report it.</p>
+<h2 id="输入格式-14">输入格式<a hidden class="anchor" aria-hidden="true" href="#输入格式-14">#</a></h2>
+<p>Each test contains multiple test cases. The first line contains a single integer $ t $ $ (1 \leq t \leq 500) $ — the number of test cases. Each test case is described as follows.</p>
+<p>The first line of each test case contains an integer $ n $ $ (1 \leq n \leq 100) $ — the length of the array $ a $ .</p>
+<p>The second line of each test case contains $ n $ integers $ a_1, a_2, \ldots, a_n $ $ (1 \leq a_i \leq 100) $ — the elements of the array $ a $ .</p>
+<h2 id="输出格式-14">输出格式<a hidden class="anchor" aria-hidden="true" href="#输出格式-14">#</a></h2>
+<p>For each test case, print -1 if there is no solution. Otherwise, print $ b_1, b_2, \ldots, b_n $ — an array consisting of numbers $ 1 $ , $ 2 $ , $ 3 $ that satisfies exactly two out of three conditions. If there are multiple possible answers, you can print any of them.</p>
+<h2 id="样例-1-11">样例 #1<a hidden class="anchor" aria-hidden="true" href="#样例-1-11">#</a></h2>
+<h3 id="样例输入-1-11">样例输入 #1<a hidden class="anchor" aria-hidden="true" href="#样例输入-1-11">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">9
+</span></span><span class="line"><span class="cl">6
+</span></span><span class="line"><span class="cl">1 2 3 2 2 3
+</span></span><span class="line"><span class="cl">7
+</span></span><span class="line"><span class="cl">7 7 7 7 7 7 7
+</span></span><span class="line"><span class="cl">4
+</span></span><span class="line"><span class="cl">1 1 2 2
+</span></span><span class="line"><span class="cl">7
+</span></span><span class="line"><span class="cl">1 2 3 4 5 6 7
+</span></span><span class="line"><span class="cl">5
+</span></span><span class="line"><span class="cl">2 3 3 3 2
+</span></span><span class="line"><span class="cl">3
+</span></span><span class="line"><span class="cl">1 2 1
+</span></span><span class="line"><span class="cl">9
+</span></span><span class="line"><span class="cl">1 1 1 7 7 7 9 9 9
+</span></span><span class="line"><span class="cl">1
+</span></span><span class="line"><span class="cl">1
+</span></span><span class="line"><span class="cl">18
+</span></span><span class="line"><span class="cl">93 84 50 21 88 52 16 50 63 1 30 85 29 67 63 58 37 69
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="样例输出-1-11">样例输出 #1<a hidden class="anchor" aria-hidden="true" href="#样例输出-1-11">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 2 3 1 1 1 
+</span></span><span class="line"><span class="cl">-1
+</span></span><span class="line"><span class="cl">3 2 2 1 
+</span></span><span class="line"><span class="cl">-1
+</span></span><span class="line"><span class="cl">2 1 2 1 3 
+</span></span><span class="line"><span class="cl">-1
+</span></span><span class="line"><span class="cl">1 1 2 2 1 2 2 3 3
+</span></span><span class="line"><span class="cl">-1
+</span></span><span class="line"><span class="cl">3 2 1 3 3 3 3 2 2 1 1 2 3 1 3 1 1 2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="提示-13">提示<a hidden class="anchor" aria-hidden="true" href="#提示-13">#</a></h2>
+<p>In the first test case, $ b = [1, 2, 3, 1, 1, 1] $ satisfies condition $ 1 $ because for $ i = 4 $ , $ j = 2 $ : $ a_i = a_j $ , $ b_i = 1 $ , and $ b_j = 2 $ . It also satisfies condition $ 2 $ because for $ i = 6 $ , $ j = 3 $ : $ a_i = a_j $ , $ b_i = 1 $ , and $ b_j = 3 $ . However, it does not satisfy condition $ 3 $ . In total, exactly two out of three conditions are satisfied.</p>
+</blockquote>
+<h3 id="分析-12">分析<a hidden class="anchor" aria-hidden="true" href="#分析-12">#</a></h3>
+<h3 id="参考代码-12">参考代码<a hidden class="anchor" aria-hidden="true" href="#参考代码-12">#</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"></code></pre></td></tr></table>
+</div>
+</div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://florae006.github.io/posts/tech/front_end/jquery_notes/">
+    <span class="title">Next »</span>
+    <br>
+    <span>哆哆啦のjQuery学习笔记（超细）（23.07.28）</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 队内拉题|23.11.29 on x"
+        href="https://x.com/intent/tweet/?text=%e9%98%9f%e5%86%85%e6%8b%89%e9%a2%98%7c23.11.29&amp;url=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2falgorithm%2ftraining0%2f&amp;hashtags=">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z"/>
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 队内拉题|23.11.29 on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2falgorithm%2ftraining0%2f&amp;title=%e9%98%9f%e5%86%85%e6%8b%89%e9%a2%98%7c23.11.29&amp;summary=%e9%98%9f%e5%86%85%e6%8b%89%e9%a2%98%7c23.11.29&amp;source=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2falgorithm%2ftraining0%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 队内拉题|23.11.29 on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2falgorithm%2ftraining0%2f&title=%e9%98%9f%e5%86%85%e6%8b%89%e9%a2%98%7c23.11.29">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 队内拉题|23.11.29 on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2falgorithm%2ftraining0%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 队内拉题|23.11.29 on whatsapp"
+        href="https://api.whatsapp.com/send?text=%e9%98%9f%e5%86%85%e6%8b%89%e9%a2%98%7c23.11.29%20-%20https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2falgorithm%2ftraining0%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 队内拉题|23.11.29 on telegram"
+        href="https://telegram.me/share/url?text=%e9%98%9f%e5%86%85%e6%8b%89%e9%a2%98%7c23.11.29&amp;url=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2falgorithm%2ftraining0%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 队内拉题|23.11.29 on ycombinator"
+        href="https://news.ycombinator.com/submitlink?t=%e9%98%9f%e5%86%85%e6%8b%89%e9%a2%98%7c23.11.29&u=https%3a%2f%2fflorae006.github.io%2fposts%2ftech%2falgorithm%2ftraining0%2f">
+        <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+            <path
+                d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://florae006.github.io/">DODOLA&#39;s WareHouse</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
