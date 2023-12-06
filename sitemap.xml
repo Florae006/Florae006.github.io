@@ -2,11 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://florae006.github.io/</loc>
+    <lastmod>2023-12-06T14:21:23+08:00</lastmod>
+  </url><url>
+    <loc>https://florae006.github.io/posts/tech/toys/cq_bot/</loc>
+    <lastmod>2023-12-06T14:21:23+08:00</lastmod>
+  </url><url>
+    <loc>https://florae006.github.io/posts/tech/toys/</loc>
+    <lastmod>2023-12-06T14:20:02+08:00</lastmod>
+  </url><url>
     <loc>https://florae006.github.io/comments/</loc>
     <lastmod>2023-12-02T17:55:47+08:00</lastmod>
-  </url><url>
-    <loc>https://florae006.github.io/</loc>
-    <lastmod>2023-12-02T16:47:17+08:00</lastmod>
   </url><url>
     <loc>https://florae006.github.io/posts/tech/algorithm/training0/</loc>
     <lastmod>2023-12-02T16:47:17+08:00</lastmod>
