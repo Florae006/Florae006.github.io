@@ -13,6 +13,17 @@
     <language>en</language>
     <lastBuildDate>Wed, 29 Nov 2023 19:11:55 +0800</lastBuildDate><atom:link href="https://florae006.github.io/posts/startsite/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>第贰话|部署到云服务器</title>
+      <link>https://florae006.github.io/posts/startsite/deploy_site/</link>
+      <pubDate>Wed, 06 Dec 2023 14:24:00 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/posts/startsite/deploy_site/</guid>
+      <description>这是2023/12/06为止，将本博客成功部署到服务器之后三天写下的记录博客。</description>
+      <content:encoded><![CDATA[<p>这是2023/12/06为止，将本博客成功部署到服务器之后三天写下的记录博客。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
       <title>第壹话|基本样式</title>
       <link>https://florae006.github.io/posts/startsite/basic_setting/</link>
       <pubDate>Thu, 30 Nov 2023 21:53:02 +0800</pubDate>

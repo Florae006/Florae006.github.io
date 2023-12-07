@@ -11,7 +11,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Dec 2023 14:21:23 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Dec 2023 14:24:00 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第贰话|部署到云服务器</title>
+      <link>https://florae006.github.io/posts/startsite/deploy_site/</link>
+      <pubDate>Wed, 06 Dec 2023 14:24:00 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/posts/startsite/deploy_site/</guid>
+      <description>这是2023/12/06为止，将本博客成功部署到服务器之后三天写下的记录博客。</description>
+      <content:encoded><![CDATA[<p>这是2023/12/06为止，将本博客成功部署到服务器之后三天写下的记录博客。</p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>小机器人dodola，启动！</title>
       <link>https://florae006.github.io/posts/tech/toys/cq_bot/</link>
@@ -5841,6 +5852,28 @@ $$
   }
 </script>
 
+<a target="_blank" href=https://blog.wushuang233.com/ title=无双 class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=https://blog.wushuang233.com/usr/themes/handsome/assets/img/avatar.jpg />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">无双</div>
+      <div class="friend-info">ddl:是很强的陈老师！</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
 <a target="_blank" href=https://lucy23.blog/ title=Lucy class="friend-url">
   <div class="friend-div">
     <div class="friend-div-left">
@@ -6375,6 +6408,26 @@ $$
 ]]></content:encoded>
     </item>
     
+    
+    <item>
+      <title>First Cydiary</title>
+      <link>https://florae006.github.io/posts/life/first-cydiary/</link>
+      <pubDate>Wed, 29 Nov 2023 12:30:59 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/posts/life/first-cydiary/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>First Book</title>
+      <link>https://florae006.github.io/posts/beauty/first-book/</link>
+      <pubDate>Wed, 29 Nov 2023 12:29:15 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/posts/beauty/first-book/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
     
     <item>
       <title>🍅关于</title>
