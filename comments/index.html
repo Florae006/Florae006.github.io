@@ -10,7 +10,7 @@
 <meta name="description" content="🗃留言板 - DODOLA&#39;s WareHouse">
 <meta name="author" content="DODOLA">
 <link rel="canonical" href="https://florae006.github.io/comments/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.4aa447e1771a6b589b02088a5cc23cb101b54ed1c94ad820fcbcdff050dba01b.css" integrity="" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a7a76e8f54433502f327cc537a94c782599a8a0aa3357c762d16f99db81b67ff.css" integrity="" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.5a233da223aee880ead09315e5214f9e2809beb7757fc073c49ad012e57c05d1.js" integrity="sha256-WiM9oiOu6IDq0JMV5SFPnigJvrd1f8BzxJrQEuV8BdE="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://florae006.github.io/favicon.ico">
@@ -219,7 +219,6 @@
 </div>
   </header> 
 
-
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
@@ -282,18 +281,28 @@
 <div id="tcomment"></div>
 <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.27/dist/twikoo.all.min.js"></script>
 <script>
-twikoo.init({
-  envId: 'https://dodolalorc-twikoo.hf.space', 
-  el: '#tcomment', 
-  
-  path: window.TWIKOO_MAGIC_PATH || window.location.pathname, 
-  lang: 'zh-CN', 
-})
+  twikoo.init({
+    envId: 'https://dodolalorc-twikoo.hf.space', 
+    el: '#tcomment', 
+    region: 'ap-jilin', 
+    path: window.TWIKOO_MAGIC_PATH || window.location.pathname, 
+    lang: 'zh-CN', 
+    pageSize: 10,
+    includeReply: true,
+
+    onCommentLoaded: function () {
+      console.log('评论加载完成');
+    }
+  }).then(function () {
+    console.log('Twikoo 加载完成')
+  })
 </script>
 </article>
     </main>
     
 <footer class="footer">
+    <div>
+    </div>
     <span>&copy; 2023 <a href="https://florae006.github.io/">DODOLA&#39;s WareHouse</a></span>
     <span>
         Powered by
@@ -408,7 +417,6 @@ twikoo.init({
             codeblock.parentNode.appendChild(copybutton);
         }
     });
-</script>
-</body>
+</script></body>
 
 </html>

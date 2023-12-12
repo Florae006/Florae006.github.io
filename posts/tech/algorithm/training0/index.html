@@ -10,7 +10,7 @@
 <meta name="description" content="前言点评：本次题目难度不高 A 跳石头 [NOIP2015 提高组] 跳石头 题目背景 NOIP2015 Day2T1 题目描述 一年一度的“跳石头”比赛又要开始了！ 这项比赛将在一条笔直的河道中进行，">
 <meta name="author" content="DODOLA">
 <link rel="canonical" href="https://florae006.github.io/posts/tech/algorithm/training0/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.4aa447e1771a6b589b02088a5cc23cb101b54ed1c94ad820fcbcdff050dba01b.css" integrity="" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a7a76e8f54433502f327cc537a94c782599a8a0aa3357c762d16f99db81b67ff.css" integrity="" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.5a233da223aee880ead09315e5214f9e2809beb7757fc073c49ad012e57c05d1.js" integrity="sha256-WiM9oiOu6IDq0JMV5SFPnigJvrd1f8BzxJrQEuV8BdE="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://florae006.github.io/favicon.ico">
@@ -235,486 +235,546 @@
 <span title='2023-12-02 16:47:17 +0800 CST'>2023-12-02</span>&nbsp;·&nbsp;25 min&nbsp;·&nbsp;DODOLA
 
 </div>
-  </header> <div class="toc">
+  </header> <aside  id="toc-container" class="toc-container wide">
+  <div class="toc">
     <details  open>
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details">Table of Contents</span>
+      </summary>
 
-        <div class="inner"><ul><ul>
-                <li>
-                    <a href="#a-%e8%b7%b3%e7%9f%b3%e5%a4%b4" aria-label="A 跳石头">A 跳石头</a></li></ul>
-                    
-                <li>
-                    <a href="#noip2015-%e6%8f%90%e9%ab%98%e7%bb%84-%e8%b7%b3%e7%9f%b3%e5%a4%b4" aria-label="[NOIP2015 提高组] 跳石头">[NOIP2015 提高组] 跳石头</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af" aria-label="题目背景">题目背景</a></li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba" aria-label="提示">提示</a><ul>
-                        
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba%e6%a0%b7%e4%be%8b-1-%e8%af%b4%e6%98%8e" aria-label="输入输出样例 1 说明">输入输出样例 1 说明</a></li>
-                <li>
-                    <a href="#%e6%95%b0%e6%8d%ae%e8%a7%84%e6%a8%a1%e4%b8%8e%e7%ba%a6%e5%ae%9a" aria-label="数据规模与约定">数据规模与约定</a></li>
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#b-secret-sport" aria-label="B Secret Sport">B Secret Sport</a></li></ul>
-                </li>
-                <li>
-                    <a href="#secret-sport" aria-label="Secret Sport">Secret Sport</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91" aria-label="题面翻译">题面翻译</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f" aria-label="题目大意">题目大意</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-1" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-1" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-1" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-1" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-1" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-1" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-1" aria-label="提示">提示</a><ul>
-                        
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-1" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#c-%e4%bc%97%e6%95%b0" aria-label="C 众数">C 众数</a></li></ul>
-                </li>
-                <li>
-                    <a href="#thupc-2023-%e5%88%9d%e8%b5%9b-%e4%bc%97%e6%95%b0" aria-label="[THUPC 2023 初赛] 众数">[THUPC 2023 初赛] 众数</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-2" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-2" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-2" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-2" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-2" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-2" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-2" aria-label="提示">提示</a><ul>
-                        <ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%a7%a3%e9%87%8a-1" aria-label="样例解释 1">样例解释 1</a></li>
-                <li>
-                    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" aria-label="数据范围">数据范围</a></li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90" aria-label="题目来源">题目来源</a></li></ul>
-                    
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-2" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-2" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#d-%e5%a4%a7%e7%ba%b2" aria-label="D 大纲">D 大纲</a></li></ul>
-                </li>
-                <li>
-                    <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e5%a4%a7%e7%ba%b2" aria-label="[THUPC 2023 决赛] 大纲">[THUPC 2023 决赛] 大纲</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-3" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-3" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-3" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-3" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-3" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-3" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-3" aria-label="提示">提示</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-%e8%a7%a3%e9%87%8a" aria-label="样例 1 解释">样例 1 解释</a></li>
-                <li>
-                    <a href="#%e6%95%b0%e6%8d%ae%e8%a7%84%e6%a8%a1%e4%b8%8e%e7%ba%a6%e5%ae%9a-1" aria-label="数据规模与约定">数据规模与约定</a></li>
-                <li>
-                    <a href="#%e5%90%8e%e8%ae%b0" aria-label="后记">后记</a></li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-1" aria-label="题目来源">题目来源</a></li>
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-3" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-3" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#e-chip-and-ribbon" aria-label="E Chip and Ribbon">E Chip and Ribbon</a></li></ul>
-                </li>
-                <li>
-                    <a href="#chip-and-ribbon" aria-label="Chip and Ribbon">Chip and Ribbon</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-1" aria-label="题面翻译">题面翻译</a></li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-4" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-4" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-4" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-4" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-4" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-4" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-4" aria-label="提示">提示</a><ul>
-                        
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-4" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-4" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#f-%e7%9d%80%e8%89%b2" aria-label="F 着色">F 着色</a></li></ul>
-                </li>
-                <li>
-                    <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e7%9d%80%e8%89%b2" aria-label="[THUPC 2023 决赛] 着色">[THUPC 2023 决赛] 着色</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af-1" aria-label="题目背景">题目背景</a></li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-5" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-5" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-5" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-5" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-5" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-5" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-5" aria-label="提示">提示</a><ul>
-                        
-                <li>
-                    <a href="#%e6%95%b0%e6%8d%ae%e8%a7%84%e6%a8%a1%e4%b8%8e%e7%ba%a6%e5%ae%9a-2" aria-label="数据规模与约定">数据规模与约定</a></li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-2" aria-label="题目来源">题目来源</a></li>
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-5" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-5" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#g-treasure-chest" aria-label="G Treasure Chest">G Treasure Chest</a></li></ul>
-                </li>
-                <li>
-                    <a href="#treasure-chest" aria-label="Treasure Chest">Treasure Chest</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-2" aria-label="题面翻译">题面翻译</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-6" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-6" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-6" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e8%af%b4%e6%98%8e%e6%8f%90%e7%a4%ba" aria-label="说明/提示">说明/提示</a><ul>
-                        
-                <li>
-                    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4%e4%b8%8e%e7%ba%a6%e5%ae%9a" aria-label="数据范围与约定">数据范围与约定</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%a7%a3%e9%87%8a" aria-label="样例解释">样例解释</a></li></ul>
-                </li></ul>
-                </li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-7" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-7" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-7" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-6" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-6" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-6" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-6" aria-label="提示">提示</a><ul>
-                        
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-6" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-6" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#h-%e7%83%82%e6%9f%af%e6%9d%af" aria-label="H 烂柯杯">H 烂柯杯</a></li></ul>
-                </li>
-                <li>
-                    <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e7%83%82%e6%9f%af%e6%9d%af" aria-label="[THUPC 2023 决赛] 烂柯杯">[THUPC 2023 决赛] 烂柯杯</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af-2" aria-label="题目背景">题目背景</a></li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-8" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-8" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-8" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-7" aria-label="提示">提示</a><ul>
-                        
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-8" aria-label="提示">提示</a></li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-3" aria-label="题目来源">题目来源</a></li>
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-7" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-7" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#i-%e6%80%bb%e6%8a%95%e7%a5%a8%e6%95%b0" aria-label="I 总投票数">I 总投票数</a></li></ul>
-                </li>
-                <li>
-                    <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e6%80%bb%e6%8a%95%e7%a5%a8%e6%95%b0" aria-label="[THUPC 2023 决赛] 总投票数">[THUPC 2023 决赛] 总投票数</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af-3" aria-label="题目背景">题目背景</a></li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-9" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-9" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-9" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-7" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-7" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-7" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-2" aria-label="样例 #2">样例 #2</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-2" aria-label="样例输入 #2">样例输入 #2</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-2" aria-label="样例输出 #2">样例输出 #2</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-3" aria-label="样例 #3">样例 #3</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-3" aria-label="样例输入 #3">样例输入 #3</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-3" aria-label="样例输出 #3">样例输出 #3</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-9" aria-label="提示">提示</a><ul>
-                        
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-8" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-8" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#j-points-and-minimum-distance" aria-label="J Points and Minimum Distance">J Points and Minimum Distance</a></li></ul>
-                </li>
-                <li>
-                    <a href="#points-and-minimum-distance" aria-label="Points and Minimum Distance">Points and Minimum Distance</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-3" aria-label="题面翻译">题面翻译</a></li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-10" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-10" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-10" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-8" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-8" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-8" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-10" aria-label="提示">提示</a><ul>
-                        
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-9" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-9" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#k-%e9%80%9f%e6%88%98%e9%80%9f%e5%86%b3" aria-label="K 速战速决">K 速战速决</a></li></ul>
-                </li>
-                <li>
-                    <a href="#thupc-2023-%e5%88%9d%e8%b5%9b-%e9%80%9f%e6%88%98%e9%80%9f%e5%86%b3" aria-label="[THUPC 2023 初赛] 速战速决">[THUPC 2023 初赛] 速战速决</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-11" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-11" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-11" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-9" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-9" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-9" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-2-1" aria-label="样例 #2">样例 #2</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-2-1" aria-label="样例输入 #2">样例输入 #2</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-2-1" aria-label="样例输出 #2">样例输出 #2</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-11" aria-label="提示">提示</a><ul>
-                        <ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%a7%a3%e9%87%8a-1-1" aria-label="样例解释 1">样例解释 1</a></li>
-                <li>
-                    <a href="#%e5%ad%90%e4%bb%bb%e5%8a%a1" aria-label="子任务">子任务</a></li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-4" aria-label="题目来源">题目来源</a></li></ul>
-                    
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-10" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-10" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#l-%e6%bb%91%e9%9b%aa" aria-label="L 滑雪">L 滑雪</a></li></ul>
-                </li>
-                <li>
-                    <a href="#shoi2002-%e6%bb%91%e9%9b%aa" aria-label="[SHOI2002] 滑雪">[SHOI2002] 滑雪</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-12" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-12" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-12" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-10" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-10" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-10" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-12" aria-label="提示">提示</a><ul>
-                        
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-11" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-11" aria-label="参考代码">参考代码</a></li></ul>
-                </li>
-                <li>
-                    <a href="#m-two-out-of-three" aria-label="M Two Out of Three">M Two Out of Three</a></li></ul>
-                </li>
-                <li>
-                    <a href="#two-out-of-three" aria-label="Two Out of Three">Two Out of Three</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-4" aria-label="题面翻译">题面翻译</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-13" aria-label="题目描述"><strong>题目描述</strong></a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-13" aria-label="输入格式"><strong>输入格式</strong></a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-13" aria-label="输出格式"><strong>输出格式</strong></a></li>
-                <li>
-                    <a href="#%e8%af%b4%e6%98%8e%e6%8f%90%e7%a4%ba-1" aria-label="说明/提示"><strong>说明/提示</strong></a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-14" aria-label="题目描述">题目描述</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-14" aria-label="输入格式">输入格式</a></li>
-                <li>
-                    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-14" aria-label="输出格式">输出格式</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b-1-11" aria-label="样例 #1">样例 #1</a><ul>
-                        
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-11" aria-label="样例输入 #1">样例输入 #1</a></li>
-                <li>
-                    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-11" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
-                </li>
-                <li>
-                    <a href="#%e6%8f%90%e7%a4%ba-13" aria-label="提示">提示</a><ul>
-                        
-                <li>
-                    <a href="#%e5%88%86%e6%9e%90-12" aria-label="分析">分析</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-12" aria-label="参考代码">参考代码</a>
-                </li>
-            </ul>
-            </li>
-            </ul>
-            </li>
-            </ul>
-        </div>
+      <div class="inner"><ul><ul>
+          <li>
+            <a href="#a-%e8%b7%b3%e7%9f%b3%e5%a4%b4" aria-label="A 跳石头">A 跳石头</a></li></ul>
+              
+          <li>
+            <a href="#noip2015-%e6%8f%90%e9%ab%98%e7%bb%84-%e8%b7%b3%e7%9f%b3%e5%a4%b4" aria-label="[NOIP2015 提高组] 跳石头">[NOIP2015 提高组] 跳石头</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af" aria-label="题目背景">题目背景</a></li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba" aria-label="提示">提示</a><ul>
+                
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba%e6%a0%b7%e4%be%8b-1-%e8%af%b4%e6%98%8e" aria-label="输入输出样例 1 说明">输入输出样例 1 说明</a></li>
+          <li>
+            <a href="#%e6%95%b0%e6%8d%ae%e8%a7%84%e6%a8%a1%e4%b8%8e%e7%ba%a6%e5%ae%9a" aria-label="数据规模与约定">数据规模与约定</a></li>
+          <li>
+            <a href="#%e5%88%86%e6%9e%90" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#b-secret-sport" aria-label="B Secret Sport">B Secret Sport</a></li></ul>
+          </li>
+          <li>
+            <a href="#secret-sport" aria-label="Secret Sport">Secret Sport</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91" aria-label="题面翻译">题面翻译</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e5%a4%a7%e6%84%8f" aria-label="题目大意">题目大意</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-1" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-1" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-1" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-1" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-1" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-1" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-1" aria-label="提示">提示</a><ul>
+                
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-1" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#c-%e4%bc%97%e6%95%b0" aria-label="C 众数">C 众数</a></li></ul>
+          </li>
+          <li>
+            <a href="#thupc-2023-%e5%88%9d%e8%b5%9b-%e4%bc%97%e6%95%b0" aria-label="[THUPC 2023 初赛] 众数">[THUPC 2023 初赛] 众数</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-2" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-2" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-2" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-2" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-2" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-2" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-2" aria-label="提示">提示</a><ul>
+                <ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%a7%a3%e9%87%8a-1" aria-label="样例解释 1">样例解释 1</a></li>
+          <li>
+            <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" aria-label="数据范围">数据范围</a></li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90" aria-label="题目来源">题目来源</a></li></ul>
+              
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-2" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-2" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#d-%e5%a4%a7%e7%ba%b2" aria-label="D 大纲">D 大纲</a></li></ul>
+          </li>
+          <li>
+            <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e5%a4%a7%e7%ba%b2" aria-label="[THUPC 2023 决赛] 大纲">[THUPC 2023 决赛] 大纲</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-3" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-3" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-3" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-3" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-3" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-3" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-3" aria-label="提示">提示</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-%e8%a7%a3%e9%87%8a" aria-label="样例 1 解释">样例 1 解释</a></li>
+          <li>
+            <a href="#%e6%95%b0%e6%8d%ae%e8%a7%84%e6%a8%a1%e4%b8%8e%e7%ba%a6%e5%ae%9a-1" aria-label="数据规模与约定">数据规模与约定</a></li>
+          <li>
+            <a href="#%e5%90%8e%e8%ae%b0" aria-label="后记">后记</a></li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-1" aria-label="题目来源">题目来源</a></li>
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-3" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-3" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#e-chip-and-ribbon" aria-label="E Chip and Ribbon">E Chip and Ribbon</a></li></ul>
+          </li>
+          <li>
+            <a href="#chip-and-ribbon" aria-label="Chip and Ribbon">Chip and Ribbon</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-1" aria-label="题面翻译">题面翻译</a></li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-4" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-4" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-4" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-4" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-4" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-4" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-4" aria-label="提示">提示</a><ul>
+                
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-4" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-4" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#f-%e7%9d%80%e8%89%b2" aria-label="F 着色">F 着色</a></li></ul>
+          </li>
+          <li>
+            <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e7%9d%80%e8%89%b2" aria-label="[THUPC 2023 决赛] 着色">[THUPC 2023 决赛] 着色</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af-1" aria-label="题目背景">题目背景</a></li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-5" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-5" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-5" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-5" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-5" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-5" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-5" aria-label="提示">提示</a><ul>
+                
+          <li>
+            <a href="#%e6%95%b0%e6%8d%ae%e8%a7%84%e6%a8%a1%e4%b8%8e%e7%ba%a6%e5%ae%9a-2" aria-label="数据规模与约定">数据规模与约定</a></li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-2" aria-label="题目来源">题目来源</a></li>
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-5" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-5" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#g-treasure-chest" aria-label="G Treasure Chest">G Treasure Chest</a></li></ul>
+          </li>
+          <li>
+            <a href="#treasure-chest" aria-label="Treasure Chest">Treasure Chest</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-2" aria-label="题面翻译">题面翻译</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-6" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-6" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-6" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e8%af%b4%e6%98%8e%e6%8f%90%e7%a4%ba" aria-label="说明/提示">说明/提示</a><ul>
+                
+          <li>
+            <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4%e4%b8%8e%e7%ba%a6%e5%ae%9a" aria-label="数据范围与约定">数据范围与约定</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%a7%a3%e9%87%8a" aria-label="样例解释">样例解释</a></li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-7" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-7" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-7" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-6" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-6" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-6" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-6" aria-label="提示">提示</a><ul>
+                
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-6" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-6" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#h-%e7%83%82%e6%9f%af%e6%9d%af" aria-label="H 烂柯杯">H 烂柯杯</a></li></ul>
+          </li>
+          <li>
+            <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e7%83%82%e6%9f%af%e6%9d%af" aria-label="[THUPC 2023 决赛] 烂柯杯">[THUPC 2023 决赛] 烂柯杯</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af-2" aria-label="题目背景">题目背景</a></li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-8" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-8" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-8" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-7" aria-label="提示">提示</a><ul>
+                
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-8" aria-label="提示">提示</a></li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-3" aria-label="题目来源">题目来源</a></li>
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-7" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-7" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#i-%e6%80%bb%e6%8a%95%e7%a5%a8%e6%95%b0" aria-label="I 总投票数">I 总投票数</a></li></ul>
+          </li>
+          <li>
+            <a href="#thupc-2023-%e5%86%b3%e8%b5%9b-%e6%80%bb%e6%8a%95%e7%a5%a8%e6%95%b0" aria-label="[THUPC 2023 决赛] 总投票数">[THUPC 2023 决赛] 总投票数</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af-3" aria-label="题目背景">题目背景</a></li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-9" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-9" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-9" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-7" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-7" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-7" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-2" aria-label="样例 #2">样例 #2</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-2" aria-label="样例输入 #2">样例输入 #2</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-2" aria-label="样例输出 #2">样例输出 #2</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-3" aria-label="样例 #3">样例 #3</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-3" aria-label="样例输入 #3">样例输入 #3</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-3" aria-label="样例输出 #3">样例输出 #3</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-9" aria-label="提示">提示</a><ul>
+                
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-8" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-8" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#j-points-and-minimum-distance" aria-label="J Points and Minimum Distance">J Points and Minimum Distance</a></li></ul>
+          </li>
+          <li>
+            <a href="#points-and-minimum-distance" aria-label="Points and Minimum Distance">Points and Minimum Distance</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-3" aria-label="题面翻译">题面翻译</a></li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-10" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-10" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-10" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-8" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-8" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-8" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-10" aria-label="提示">提示</a><ul>
+                
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-9" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-9" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#k-%e9%80%9f%e6%88%98%e9%80%9f%e5%86%b3" aria-label="K 速战速决">K 速战速决</a></li></ul>
+          </li>
+          <li>
+            <a href="#thupc-2023-%e5%88%9d%e8%b5%9b-%e9%80%9f%e6%88%98%e9%80%9f%e5%86%b3" aria-label="[THUPC 2023 初赛] 速战速决">[THUPC 2023 初赛] 速战速决</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-11" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-11" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-11" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-9" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-9" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-9" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-2-1" aria-label="样例 #2">样例 #2</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-2-1" aria-label="样例输入 #2">样例输入 #2</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-2-1" aria-label="样例输出 #2">样例输出 #2</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-11" aria-label="提示">提示</a><ul>
+                <ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%a7%a3%e9%87%8a-1-1" aria-label="样例解释 1">样例解释 1</a></li>
+          <li>
+            <a href="#%e5%ad%90%e4%bb%bb%e5%8a%a1" aria-label="子任务">子任务</a></li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90-4" aria-label="题目来源">题目来源</a></li></ul>
+              
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-10" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-10" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#l-%e6%bb%91%e9%9b%aa" aria-label="L 滑雪">L 滑雪</a></li></ul>
+          </li>
+          <li>
+            <a href="#shoi2002-%e6%bb%91%e9%9b%aa" aria-label="[SHOI2002] 滑雪">[SHOI2002] 滑雪</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-12" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-12" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-12" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-10" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-10" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-10" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-12" aria-label="提示">提示</a><ul>
+                
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-11" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-11" aria-label="参考代码">参考代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#m-two-out-of-three" aria-label="M Two Out of Three">M Two Out of Three</a></li></ul>
+          </li>
+          <li>
+            <a href="#two-out-of-three" aria-label="Two Out of Three">Two Out of Three</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91-4" aria-label="题面翻译">题面翻译</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-13" aria-label="题目描述"><strong>题目描述</strong></a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-13" aria-label="输入格式"><strong>输入格式</strong></a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-13" aria-label="输出格式"><strong>输出格式</strong></a></li>
+          <li>
+            <a href="#%e8%af%b4%e6%98%8e%e6%8f%90%e7%a4%ba-1" aria-label="说明/提示"><strong>说明/提示</strong></a></li></ul>
+          </li>
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-14" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-14" aria-label="输入格式">输入格式</a></li>
+          <li>
+            <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-14" aria-label="输出格式">输出格式</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b-1-11" aria-label="样例 #1">样例 #1</a><ul>
+                
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-11" aria-label="样例输入 #1">样例输入 #1</a></li>
+          <li>
+            <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-11" aria-label="样例输出 #1">样例输出 #1</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%8f%90%e7%a4%ba-13" aria-label="提示">提示</a><ul>
+                
+          <li>
+            <a href="#%e5%88%86%e6%9e%90-12" aria-label="分析">分析</a></li>
+          <li>
+            <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-12" aria-label="参考代码">参考代码</a>
+          </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        </ul>
+      </div>
     </details>
-</div>
+  </div>
+  </aside>
+  <script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
 
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+         
+         activeElement = elements[0];
+         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+     }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+             const id = encodeURI(element.getAttribute('id')).toLowerCase();
+             if (element === activeElement){
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+             } else {
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+             }
+         })
+     }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;   
+    }
+</script>
   <div class="post-content"><p>前言点评：本次题目难度不高</p>
 <h2 id="a-跳石头">A 跳石头<a hidden class="anchor" aria-hidden="true" href="#a-跳石头">#</a></h2>
 <blockquote>
@@ -2174,18 +2234,28 @@ $$
 <div id="tcomment"></div>
 <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.27/dist/twikoo.all.min.js"></script>
 <script>
-twikoo.init({
-  envId: 'https://dodolalorc-twikoo.hf.space', 
-  el: '#tcomment', 
-  
-  path: window.TWIKOO_MAGIC_PATH || window.location.pathname, 
-  lang: 'zh-CN', 
-})
+  twikoo.init({
+    envId: 'https://dodolalorc-twikoo.hf.space', 
+    el: '#tcomment', 
+    region: 'ap-jilin', 
+    path: window.TWIKOO_MAGIC_PATH || window.location.pathname, 
+    lang: 'zh-CN', 
+    pageSize: 10,
+    includeReply: true,
+
+    onCommentLoaded: function () {
+      console.log('评论加载完成');
+    }
+  }).then(function () {
+    console.log('Twikoo 加载完成')
+  })
 </script>
 </article>
     </main>
     
 <footer class="footer">
+    <div>
+    </div>
     <span>&copy; 2023 <a href="https://florae006.github.io/">DODOLA&#39;s WareHouse</a></span>
     <span>
         Powered by
@@ -2300,7 +2370,6 @@ twikoo.init({
             codeblock.parentNode.appendChild(copybutton);
         }
     });
-</script>
-</body>
+</script></body>
 
 </html>
