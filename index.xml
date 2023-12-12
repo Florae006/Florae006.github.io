@@ -11,18 +11,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Dec 2023 14:24:00 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>第贰话|部署到云服务器</title>
-      <link>https://florae006.github.io/posts/startsite/deploy_site/</link>
-      <pubDate>Wed, 06 Dec 2023 14:24:00 +0800</pubDate>
-      
-      <guid>https://florae006.github.io/posts/startsite/deploy_site/</guid>
-      <description>这是2023/12/06为止，将本博客成功部署到服务器之后三天写下的记录博客。</description>
-      <content:encoded><![CDATA[<p>这是2023/12/06为止，将本博客成功部署到服务器之后三天写下的记录博客。</p>
-]]></content:encoded>
-    </item>
-    
+    <lastBuildDate>Wed, 06 Dec 2023 14:21:23 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>小机器人dodola，启动！</title>
       <link>https://florae006.github.io/posts/tech/toys/cq_bot/</link>
@@ -5808,6 +5797,7 @@ $$
   }
 </script>
  -->
+<h2 id="友人">友人</h2>
 <p><a target="_blank" href=https://www.cclmsy.cc/ title=CCLMSY💫 class="friend-url">
   <div class="friend-div">
     <div class="friend-div-left">
@@ -5896,6 +5886,29 @@ $$
   }
 </script>
 </p>
+<h2 id="传送">传送</h2>
+<a target="_blank" href=#ZgotmplZ title=Sulv’s&#32;Blog class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=https://www.sulvblog.cn/img/Q.gif />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">Sulv’s Blog</div>
+      <div class="friend-info">一个记录技术、阅读、生活的博客。</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
 ]]></content:encoded>
     </item>
     
@@ -6410,32 +6423,12 @@ $$
     
     
     <item>
-      <title>First Cydiary</title>
-      <link>https://florae006.github.io/posts/life/first-cydiary/</link>
-      <pubDate>Wed, 29 Nov 2023 12:30:59 +0800</pubDate>
-      
-      <guid>https://florae006.github.io/posts/life/first-cydiary/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>First Book</title>
-      <link>https://florae006.github.io/posts/beauty/first-book/</link>
-      <pubDate>Wed, 29 Nov 2023 12:29:15 +0800</pubDate>
-      
-      <guid>https://florae006.github.io/posts/beauty/first-book/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>🍅关于</title>
       <link>https://florae006.github.io/about/</link>
       <pubDate>Tue, 28 Nov 2023 19:11:55 +0800</pubDate>
       
       <guid>https://florae006.github.io/about/</guid>
-      <description>你好哇， 很高兴认识你，这里是DODOLA&amp;rsquo;s WareHouse 🎐站长信息： 昵称：哆哆啦(DODOLA) 英文名：Flora 刷新地点：杭州/长春 职业</description>
+      <description>你好哇， 很高兴认识你，这里是DODOLA&amp;rsquo;s WareHouse 🎐站长信息： 昵称：哆哆啦(DODOLA) 刷新地点：杭州/长春 职业：学生，NENU2</description>
       <content:encoded><![CDATA[<blockquote>
 <h1 id="你好哇">你好哇，</h1>
 <p>很高兴认识你，这里是DODOLA&rsquo;s WareHouse</p>
@@ -6443,7 +6436,6 @@ $$
 <p>🎐<u>站长信息</u>：</p>
 <blockquote>
 <p><strong>昵称</strong>：哆哆啦(DODOLA)</p>
-<p><strong>英文名</strong>：Flora</p>
 <p><strong>刷新地点</strong>：杭州/长春</p>
 <p><strong>职业</strong>：学生，NENU2022级本科在读</p>
 <p><strong>爱好</strong>：阅读/电影/音乐/音乐剧/Coding/小提琴/旅游/逛展/单机游戏/麻将/云二次元</p>

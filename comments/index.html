@@ -10,8 +10,8 @@
 <meta name="description" content="🗃留言板 - DODOLA&#39;s WareHouse">
 <meta name="author" content="DODOLA">
 <link rel="canonical" href="https://florae006.github.io/comments/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.38fd232e45f78b7fda1674bd73e72497e2667eaa3df8faf01e57fd0a3507c98f.css" integrity="" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4aa447e1771a6b589b02088a5cc23cb101b54ed1c94ad820fcbcdff050dba01b.css" integrity="" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.5a233da223aee880ead09315e5214f9e2809beb7757fc073c49ad012e57c05d1.js" integrity="sha256-WiM9oiOu6IDq0JMV5SFPnigJvrd1f8BzxJrQEuV8BdE="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://florae006.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://florae006.github.io/favicon-16x16.png">
@@ -213,7 +213,8 @@
     <h1 class="post-title">
       🗃留言板
     </h1>
-    <div class="post-meta"><span title='2023-12-02 17:55:47 +0800 CST'>2023-12-02</span>&nbsp;·&nbsp;0 min&nbsp;·&nbsp;DODOLA
+    <div class="post-meta">
+<span title='2023-12-02 17:55:47 +0800 CST'>2023-12-02</span>&nbsp;·&nbsp;0 min&nbsp;·&nbsp;DODOLA
 
 </div>
   </header> 
@@ -278,6 +279,24 @@
 </div>
 
   </footer>
+<div>
+  <div class="pagination__title">
+    <span class="pagination__title-h" style="font-size: 20px;">💬评论</span>
+    <hr />
+  </div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.27/dist/twikoo.all.min.js"></script>
+
+  <script>
+    twikoo.init({
+      envId: "https://dodolalorc-twikoo.hf.space",  
+      el: "#tcomment",
+      lang: 'zh-CN',
+      region: 'ap-jilin',
+      path: window.TWIKOO_MAGIC_PATH || window.location.pathname,
+    });
+  </script>
+</div>
 </article>
     </main>
     
@@ -287,6 +306,7 @@
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">

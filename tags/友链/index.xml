@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>友链 on DODOLA&#39;s WareHouse</title>
+    <link>https://florae006.github.io/tags/%E5%8F%8B%E9%93%BE/</link>
+    <description>Recent content in 友链 on DODOLA&#39;s WareHouse</description>
+    <image>
+      <title>DODOLA&#39;s WareHouse</title>
+      <url>https://florae006.github.io/papermod-cover.png</url>
+      <link>https://florae006.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Nov 2023 14:20:16 +0800</lastBuildDate><atom:link href="https://florae006.github.io/tags/%E5%8F%8B%E9%93%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>好诶，是好朋友！</title>
+      <link>https://florae006.github.io/links/</link>
+      <pubDate>Thu, 30 Nov 2023 14:20:16 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/links/</guid>
+      <description>友链 挂挂🤩🤩</description>
+      <content:encoded><![CDATA[<!-- <a target="_blank" href=https://florae006.github.io/ title=DODOLA class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=../img/avatar/dodola.jpg />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">DODOLA</div>
+      <div class="friend-info">一个友链</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+ -->
+<h2 id="友人">友人</h2>
+<p><a target="_blank" href=https://www.cclmsy.cc/ title=CCLMSY💫 class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=https://www.cclmsy.cc/assets/Avatars/Avatar.jpg />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">CCLMSY💫</div>
+      <div class="friend-info">Never forget nor regret.⭐️</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
+<a target="_blank" href=https://wyy.ink/ title=YorkWu&#39;s&#32;Blog class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=../img/avatar/wyy.jpg />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">YorkWu&#39;s Blog</div>
+      <div class="friend-info">ddl:一个很强的学长QwQ！！</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
+<a target="_blank" href=https://blog.wushuang233.com/ title=无双 class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=https://blog.wushuang233.com/usr/themes/handsome/assets/img/avatar.jpg />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">无双</div>
+      <div class="friend-info">ddl:是很强的陈老师！</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
+<a target="_blank" href=https://lucy23.blog/ title=Lucy class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=../img/avatar/Lucy.png />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">Lucy</div>
+      <div class="friend-info">我写我 不论主谓宾 可以反复错。</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+</p>
+<h2 id="传送">传送</h2>
+<a target="_blank" href=#ZgotmplZ title=Sulv’s&#32;Blog class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=https://www.sulvblog.cn/img/Q.gif />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">Sulv’s Blog</div>
+      <div class="friend-info">一个记录技术、阅读、生活的博客。</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
