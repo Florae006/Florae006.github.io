@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>TOML on DODOLA&#39;s WareHouse</title>
-    <link>https://florae006.github.io/tags/toml/</link>
+    <link>https://dodolalorc.cn/tags/toml/</link>
     <description>Recent content in TOML on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://florae006.github.io/papermod-cover.png</url>
-      <link>https://florae006.github.io/papermod-cover.png</link>
+      <url>https://dodolalorc.cn/papermod-cover.png</url>
+      <link>https://dodolalorc.cn/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Nov 2023 19:11:55 +0800</lastBuildDate><atom:link href="https://florae006.github.io/tags/toml/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Nov 2023 19:11:55 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/toml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>第零话|Hugo建站</title>
-      <link>https://florae006.github.io/posts/startsite/build_hugo/</link>
+      <link>https://dodolalorc.cn/posts/startsite/build_hugo/</link>
       <pubDate>Wed, 29 Nov 2023 19:11:55 +0800</pubDate>
       
-      <guid>https://florae006.github.io/posts/startsite/build_hugo/</guid>
+      <guid>https://dodolalorc.cn/posts/startsite/build_hugo/</guid>
       <description>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程 使用环境 开发环境：Windows 11 Hugo版本：Hugo v0.114.0 Git</description>
       <content:encoded><![CDATA[<p>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程</p>
 <blockquote>

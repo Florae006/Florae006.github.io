@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>DODOLA&#39;s WareHouse</title>
-    <link>https://florae006.github.io/</link>
+    <link>https://dodolalorc.cn/</link>
     <description>Recent content on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://florae006.github.io/papermod-cover.png</url>
-      <link>https://florae006.github.io/papermod-cover.png</link>
+      <url>https://dodolalorc.cn/papermod-cover.png</url>
+      <link>https://dodolalorc.cn/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Dec 2023 14:21:23 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Dec 2023 14:21:23 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>小机器人dodola，启动！</title>
-      <link>https://florae006.github.io/posts/tech/toys/cq_bot/</link>
+      <link>https://dodolalorc.cn/posts/tech/toys/cq_bot/</link>
       <pubDate>Wed, 06 Dec 2023 14:21:23 +0800</pubDate>
       
-      <guid>https://florae006.github.io/posts/tech/toys/cq_bot/</guid>
+      <guid>https://dodolalorc.cn/posts/tech/toys/cq_bot/</guid>
       <description>拥有一个自己的小机器人不是超酷的么😎 本部分将从0开始介绍一个qq机器人的制作以及部署到服务器。 0.环境一览 开发环境：Windows11 pyt</description>
       <content:encoded><![CDATA[<blockquote>
 <p>拥有一个自己的小机器人不是超酷的么😎</p>
@@ -432,20 +432,20 @@
     
     <item>
       <title>🗃留言板</title>
-      <link>https://florae006.github.io/comments/</link>
+      <link>https://dodolalorc.cn/comments/</link>
       <pubDate>Sat, 02 Dec 2023 17:55:47 +0800</pubDate>
       
-      <guid>https://florae006.github.io/comments/</guid>
+      <guid>https://dodolalorc.cn/comments/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>队内拉题|23.11.29</title>
-      <link>https://florae006.github.io/posts/tech/algorithm/training0/</link>
+      <link>https://dodolalorc.cn/posts/tech/algorithm/training0/</link>
       <pubDate>Sat, 02 Dec 2023 16:47:17 +0800</pubDate>
       
-      <guid>https://florae006.github.io/posts/tech/algorithm/training0/</guid>
+      <guid>https://dodolalorc.cn/posts/tech/algorithm/training0/</guid>
       <description>前言点评：本次题目难度不高 A 跳石头 [NOIP2015 提高组] 跳石头 题目背景 NOIP2015 Day2T1 题目描述 一年一度的“跳石头”比赛又要开始了！ 这项比赛将在一条笔直的河道中进行，</description>
       <content:encoded><![CDATA[<p>前言点评：本次题目难度不高</p>
 <h2 id="a-跳石头">A 跳石头</h2>
@@ -1832,10 +1832,10 @@ $$
     
     <item>
       <title>哆哆啦のjQuery学习笔记（超细）（23.07.28）</title>
-      <link>https://florae006.github.io/posts/tech/front_end/jquery_notes/</link>
+      <link>https://dodolalorc.cn/posts/tech/front_end/jquery_notes/</link>
       <pubDate>Fri, 01 Dec 2023 13:10:27 +0800</pubDate>
       
-      <guid>https://florae006.github.io/posts/tech/front_end/jquery_notes/</guid>
+      <guid>https://dodolalorc.cn/posts/tech/front_end/jquery_notes/</guid>
       <description>1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</description>
       <content:encoded><![CDATA[<h2 id="1-jquery对象">1. jQuery对象</h2>
 <h3 id="jquery使用">jQuery使用</h3>
@@ -4827,10 +4827,10 @@ $$
     
     <item>
       <title>第壹话|基本样式</title>
-      <link>https://florae006.github.io/posts/startsite/basic_setting/</link>
+      <link>https://dodolalorc.cn/posts/startsite/basic_setting/</link>
       <pubDate>Thu, 30 Nov 2023 21:53:02 +0800</pubDate>
       
-      <guid>https://florae006.github.io/posts/startsite/basic_setting/</guid>
+      <guid>https://dodolalorc.cn/posts/startsite/basic_setting/</guid>
       <description>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链 基础设置 参考：Features · adityatelange/hugo-PaperMod Wiki (github.com) 我的初步设置一览： 1 2 3 4 5 6 7 8 9</description>
       <content:encoded><![CDATA[<p>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链</p>
 <h3 id="基础设置">基础设置</h3>
@@ -5770,10 +5770,10 @@ $$
     
     <item>
       <title>好诶，是好朋友！</title>
-      <link>https://florae006.github.io/links/</link>
+      <link>https://dodolalorc.cn/links/</link>
       <pubDate>Thu, 30 Nov 2023 14:20:16 +0800</pubDate>
       
-      <guid>https://florae006.github.io/links/</guid>
+      <guid>https://dodolalorc.cn/links/</guid>
       <description>友链 挂挂🤩🤩</description>
       <content:encoded><![CDATA[<!-- <a target="_blank" href=https://florae006.github.io/ title=DODOLA class="friend-url">
   <div class="friend-div">
@@ -5887,7 +5887,7 @@ $$
 </script>
 </p>
 <h2 id="传送">传送</h2>
-<a target="_blank" href=#ZgotmplZ title=Sulv’s&#32;Blog class="friend-url">
+<a target="_blank" href=https://www.sulvblog.cn title=Sulv’s&#32;Blog class="friend-url">
   <div class="friend-div">
     <div class="friend-div-left">
       <img class="myfriend" src=https://www.sulvblog.cn/img/Q.gif />
@@ -5914,10 +5914,10 @@ $$
     
     <item>
       <title>第零话|Hugo建站</title>
-      <link>https://florae006.github.io/posts/startsite/build_hugo/</link>
+      <link>https://dodolalorc.cn/posts/startsite/build_hugo/</link>
       <pubDate>Wed, 29 Nov 2023 19:11:55 +0800</pubDate>
       
-      <guid>https://florae006.github.io/posts/startsite/build_hugo/</guid>
+      <guid>https://dodolalorc.cn/posts/startsite/build_hugo/</guid>
       <description>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程 使用环境 开发环境：Windows 11 Hugo版本：Hugo v0.114.0 Git</description>
       <content:encoded><![CDATA[<p>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程</p>
 <blockquote>
@@ -6424,10 +6424,10 @@ $$
     
     <item>
       <title>🍅关于</title>
-      <link>https://florae006.github.io/about/</link>
+      <link>https://dodolalorc.cn/about/</link>
       <pubDate>Tue, 28 Nov 2023 19:11:55 +0800</pubDate>
       
-      <guid>https://florae006.github.io/about/</guid>
+      <guid>https://dodolalorc.cn/about/</guid>
       <description>你好哇， 很高兴认识你，这里是DODOLA&amp;rsquo;s WareHouse 🎐站长信息： 昵称：哆哆啦(DODOLA) 刷新地点：杭州/长春 职业：学生，NENU2</description>
       <content:encoded><![CDATA[<blockquote>
 <h1 id="你好哇">你好哇，</h1>

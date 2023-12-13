@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>算法 on DODOLA&#39;s WareHouse</title>
-    <link>https://florae006.github.io/posts/tech/algorithm/</link>
+    <link>https://dodolalorc.cn/posts/tech/algorithm/</link>
     <description>Recent content in 算法 on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://florae006.github.io/papermod-cover.png</url>
-      <link>https://florae006.github.io/papermod-cover.png</link>
+      <url>https://dodolalorc.cn/papermod-cover.png</url>
+      <link>https://dodolalorc.cn/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 Dec 2023 16:45:27 +0800</lastBuildDate><atom:link href="https://florae006.github.io/posts/tech/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Dec 2023 16:45:27 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/posts/tech/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>队内拉题|23.11.29</title>
-      <link>https://florae006.github.io/posts/tech/algorithm/training0/</link>
+      <link>https://dodolalorc.cn/posts/tech/algorithm/training0/</link>
       <pubDate>Sat, 02 Dec 2023 16:47:17 +0800</pubDate>
       
-      <guid>https://florae006.github.io/posts/tech/algorithm/training0/</guid>
+      <guid>https://dodolalorc.cn/posts/tech/algorithm/training0/</guid>
       <description>前言点评：本次题目难度不高 A 跳石头 [NOIP2015 提高组] 跳石头 题目背景 NOIP2015 Day2T1 题目描述 一年一度的“跳石头”比赛又要开始了！ 这项比赛将在一条笔直的河道中进行，</description>
       <content:encoded><![CDATA[<p>前言点评：本次题目难度不高</p>
 <h2 id="a-跳石头">A 跳石头</h2>

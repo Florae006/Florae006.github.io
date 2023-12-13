@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>前端 on DODOLA&#39;s WareHouse</title>
-    <link>https://florae006.github.io/tags/%E5%89%8D%E7%AB%AF/</link>
+    <link>https://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/</link>
     <description>Recent content in 前端 on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://florae006.github.io/papermod-cover.png</url>
-      <link>https://florae006.github.io/papermod-cover.png</link>
+      <url>https://dodolalorc.cn/papermod-cover.png</url>
+      <link>https://dodolalorc.cn/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Dec 2023 13:10:27 +0800</lastBuildDate><atom:link href="https://florae006.github.io/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Dec 2023 13:10:27 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>哆哆啦のjQuery学习笔记（超细）（23.07.28）</title>
-      <link>https://florae006.github.io/posts/tech/front_end/jquery_notes/</link>
+      <link>https://dodolalorc.cn/posts/tech/front_end/jquery_notes/</link>
       <pubDate>Fri, 01 Dec 2023 13:10:27 +0800</pubDate>
       
-      <guid>https://florae006.github.io/posts/tech/front_end/jquery_notes/</guid>
+      <guid>https://dodolalorc.cn/posts/tech/front_end/jquery_notes/</guid>
       <description>1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</description>
       <content:encoded><![CDATA[<h2 id="1-jquery对象">1. jQuery对象</h2>
 <h3 id="jquery使用">jQuery使用</h3>

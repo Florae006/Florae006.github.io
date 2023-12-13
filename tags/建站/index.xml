@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>建站 on DODOLA&#39;s WareHouse</title>
-    <link>https://florae006.github.io/tags/%E5%BB%BA%E7%AB%99/</link>
+    <link>https://dodolalorc.cn/tags/%E5%BB%BA%E7%AB%99/</link>
     <description>Recent content in 建站 on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://florae006.github.io/papermod-cover.png</url>
-      <link>https://florae006.github.io/papermod-cover.png</link>
+      <url>https://dodolalorc.cn/papermod-cover.png</url>
+      <link>https://dodolalorc.cn/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Nov 2023 21:53:02 +0800</lastBuildDate><atom:link href="https://florae006.github.io/tags/%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Nov 2023 21:53:02 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>第壹话|基本样式</title>
-      <link>https://florae006.github.io/posts/startsite/basic_setting/</link>
+      <link>https://dodolalorc.cn/posts/startsite/basic_setting/</link>
       <pubDate>Thu, 30 Nov 2023 21:53:02 +0800</pubDate>
       
-      <guid>https://florae006.github.io/posts/startsite/basic_setting/</guid>
+      <guid>https://dodolalorc.cn/posts/startsite/basic_setting/</guid>
       <description>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链 基础设置 参考：Features · adityatelange/hugo-PaperMod Wiki (github.com) 我的初步设置一览： 1 2 3 4 5 6 7 8 9</description>
       <content:encoded><![CDATA[<p>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链</p>
 <h3 id="基础设置">基础设置</h3>
