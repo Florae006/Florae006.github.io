@@ -862,7 +862,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="设置友链">设置友链</h3>
-<p>在根目录下<code>.\assets\css\extended\blank.css</code>中添加样式内容，<code>\extended\blank.css</code>是可以覆盖已有的样式的地方，同理，我们也可以在其中添加我们想要的样式，这是设置的友链的样式：</p>
+<p>在根目录下<code>.\assets\css\extended\blank.css</code>中添加样式内容，<code>\extended\blank.css</code>是可以覆盖已有的样式的地方，同理，我们也可以在其中添加我们想要的样式，另外，我们也可以在<code>\extended\</code>下新建一个<code>fiendlink.css</code>来写入友链卡片的样式，这是设置的友链的样式：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">  1
