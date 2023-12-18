@@ -10,7 +10,7 @@
 <meta name="description" content="search">
 <meta name="author" content="DODOLA">
 <link rel="canonical" href="https://dodolalorc.cn/search/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.46feef024f5b9272ca59123e1c876d87d484772accbe183258b0a679710f6d70.css" integrity="" rel="preload stylesheet" as="style"><link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a53ed4492c0d988b44aecf9061c565a54189eb97dca779ae4eaa4d7d3fd68a68.css" integrity="" rel="preload stylesheet" as="style"><link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
 <script defer crossorigin="anonymous" src="/assets/js/search.7c8659ed14dd4fab979afbc6e52634c46d9fe143008e8dac8f731c684e0671c7.js" integrity="sha256-fIZZ7RTdT6uXmvvG5SY0xG2f4UMAjo2sj3McaE4Gccc="></script>
 <link rel="icon" href="https://dodolalorc.cn/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://dodolalorc.cn/favicon-16x16.png">
@@ -55,7 +55,22 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Search" />
+</noscript><style type="text/css">
+.fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    widows: 100%;
+    height: 100%;
+    z-index:99999999;
+    pointer-events:none;  
+     
+}
+</style>
+<canvas class="fireworks"> </canvas>
+<script src="/js/anime.min.js" ></script>
+<script src="/js/fireworks.js" ></script>
+<meta property="og:title" content="Search" />
 <meta property="og:description" content="search" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dodolalorc.cn/search/" /><meta property="og:image" content="https://dodolalorc.cn/papermod-cover.png"/><meta property="article:section" content="" />
@@ -236,12 +251,13 @@
         <path d="M12 6H0l6-6z" />
     </svg>
 </a><p class="beian">
-    
-    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?">浙公安备 123456789号</a>
+    <img class="beian-icon" src="/img/icons/govbeian.png">
+    <a class="gov" href="https://beian.mps.gov.cn/#/query/webSearch?code=33010902003733" rel="noreferrer" title="浙公网安备33010902003733"target="_blank">浙公网安备33010902003733</a>
     <a class="icp" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" title="浙ICP备2023048052号-1">
         浙ICP备2023048052号-1
     </a>
 </p>
+
 
 <script>
     let menu = document.getElementById('menu')

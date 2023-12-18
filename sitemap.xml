@@ -2,16 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dodolalorc.cn/posts/startsite/beautify_site_click/</loc>
+    <lastmod>2023-12-18T14:12:39+08:00</lastmod>
+  </url><url>
+    <loc>https://dodolalorc.cn/</loc>
+    <lastmod>2023-12-18T14:12:39+08:00</lastmod>
+  </url><url>
+    <loc>https://dodolalorc.cn/tags/hugo/</loc>
+    <lastmod>2023-12-18T14:12:39+08:00</lastmod>
+  </url><url>
+    <loc>https://dodolalorc.cn/tags/javascript/</loc>
+    <lastmod>2023-12-18T14:12:39+08:00</lastmod>
+  </url><url>
+    <loc>https://dodolalorc.cn/tags/</loc>
+    <lastmod>2023-12-18T14:12:39+08:00</lastmod>
+  </url><url>
+    <loc>https://dodolalorc.cn/tags/%E7%BE%8E%E5%8C%96/</loc>
+    <lastmod>2023-12-18T14:12:39+08:00</lastmod>
+  </url><url>
     <loc>https://dodolalorc.cn/posts/startsite/beautify_site_tags/</loc>
     <lastmod>2023-12-13T23:00:09+08:00</lastmod>
   </url><url>
     <loc>https://dodolalorc.cn/tags/css/</loc>
-    <lastmod>2023-12-13T23:00:09+08:00</lastmod>
-  </url><url>
-    <loc>https://dodolalorc.cn/</loc>
-    <lastmod>2023-12-13T23:00:09+08:00</lastmod>
-  </url><url>
-    <loc>https://dodolalorc.cn/tags/</loc>
     <lastmod>2023-12-13T23:00:09+08:00</lastmod>
   </url><url>
     <loc>https://dodolalorc.cn/tags/linux%E6%93%8D%E4%BD%9C/</loc>
@@ -50,9 +62,6 @@
     <loc>https://dodolalorc.cn/archives/</loc>
     <lastmod>2023-12-02T14:20:16+08:00</lastmod>
   </url><url>
-    <loc>https://dodolalorc.cn/tags/javascript/</loc>
-    <lastmod>2023-12-01T13:10:27+08:00</lastmod>
-  </url><url>
     <loc>https://dodolalorc.cn/tags/jquery/</loc>
     <lastmod>2023-12-01T13:10:27+08:00</lastmod>
   </url><url>
@@ -61,9 +70,6 @@
   </url><url>
     <loc>https://dodolalorc.cn/posts/tech/front_end/jquery_notes/</loc>
     <lastmod>2023-12-01T13:10:27+08:00</lastmod>
-  </url><url>
-    <loc>https://dodolalorc.cn/tags/%E5%BB%BA%E7%AB%99/</loc>
-    <lastmod>2023-11-30T21:53:02+08:00</lastmod>
   </url><url>
     <loc>https://dodolalorc.cn/posts/startsite/basic_setting/</loc>
     <lastmod>2023-11-30T21:53:02+08:00</lastmod>
@@ -104,10 +110,10 @@
     <loc>https://dodolalorc.cn/tags/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2023-11-28T19:11:55+08:00</lastmod>
   </url><url>
-    <loc>https://dodolalorc.cn/posts/tech/front_end/</loc>
+    <loc>https://dodolalorc.cn/posts/</loc>
     <lastmod>2023-11-28T19:11:55+08:00</lastmod>
   </url><url>
-    <loc>https://dodolalorc.cn/posts/</loc>
+    <loc>https://dodolalorc.cn/posts/tech/front_end/</loc>
     <lastmod>2023-11-28T19:11:55+08:00</lastmod>
   </url><url>
     <loc>https://dodolalorc.cn/categories/</loc>

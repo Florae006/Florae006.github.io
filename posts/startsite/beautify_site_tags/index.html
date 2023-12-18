@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>【网站美化】标签美化 | DODOLA&#39;s WareHouse</title>
-<meta name="keywords" content="CSS">
+<meta name="keywords" content="CSS, 美化">
 <meta name="description" content="简单设计 assets/css/common/terms.css添加： 1 2 3 4 5 6 7 .terms-tags{ padding-left: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; } 添加权重 在./layouts/_d">
 <meta name="author" content="DODOLA">
 <link rel="canonical" href="https://dodolalorc.cn/posts/startsite/beautify_site_tags/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.46feef024f5b9272ca59123e1c876d87d484772accbe183258b0a679710f6d70.css" integrity="" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a53ed4492c0d988b44aecf9061c565a54189eb97dca779ae4eaa4d7d3fd68a68.css" integrity="" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.5a233da223aee880ead09315e5214f9e2809beb7757fc073c49ad012e57c05d1.js" integrity="sha256-WiM9oiOu6IDq0JMV5SFPnigJvrd1f8BzxJrQEuV8BdE="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://dodolalorc.cn/favicon.ico">
@@ -56,7 +56,22 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="【网站美化】标签美化" />
+</noscript><style type="text/css">
+.fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    widows: 100%;
+    height: 100%;
+    z-index:99999999;
+    pointer-events:none;  
+     
+}
+</style>
+<canvas class="fireworks"> </canvas>
+<script src="/js/anime.min.js" ></script>
+<script src="/js/fireworks.js" ></script>
+<meta property="og:title" content="【网站美化】标签美化" />
 <meta property="og:description" content="简单设计 assets/css/common/terms.css添加： 1 2 3 4 5 6 7 .terms-tags{ padding-left: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; } 添加权重 在./layouts/_d" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dodolalorc.cn/posts/startsite/beautify_site_tags/" /><meta property="og:image" content="https://dodolalorc.cn/papermod-cover.png"/><meta property="article:section" content="posts" />
@@ -104,7 +119,7 @@
   "name": "【网站美化】标签美化",
   "description": "简单设计 assets/css/common/terms.css添加： 1 2 3 4 5 6 7 .terms-tags{ padding-left: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; } 添加权重 在./layouts/_d",
   "keywords": [
-    "CSS"
+    "CSS", "美化"
   ],
   "articleBody": "简单设计 assets/css/common/terms.css添加：\n1 2 3 4 5 6 7 .terms-tags{ padding-left: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; } 添加权重 在./layouts/_default/terms.html中，找到这段代码并在a标签插入data-weight属性\n1 2 3 4 5 6 7 8 9 10 11 12 \u003cul class=\"terms-tags\"\u003e {{- $type := .Type }} {{- range $key, $value := .Data.Terms.Alphabetical }} {{- $name := .Name }} {{- $count := .Count }} {{- with site.GetPage (printf \"/%s/%s\" $type $name) }} \u003cli\u003e \u003ca data-weight=\"{{$count}}\" href=\"{{ .Permalink }}\"\u003e{{ .Name }} \u003csup\u003e\u003cstrong\u003e\u003csup\u003e{{ $count }}\u003c/sup\u003e\u003c/strong\u003e\u003c/sup\u003e \u003c/a\u003e \u003c/li\u003e {{- end }} {{- end }} \u003c/ul\u003e 字体大小按权重显示 assets/css/common/terms.css中设计：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 .terms-tags a[data-weight=\"1\"] { --size: 1; } .terms-tags a[data-weight=\"2\"] { --size: 2; } .terms-tags a[data-weight=\"3\"] { --size: 3; } .terms-tags a[data-weight=\"4\"] { --size: 4; } .terms-tags a[data-weight=\"5\"] { --size: 5; } .terms-tags a[data-weight=\"6\"] { --size: 6; } .terms-tags a[data-weight=\"7\"] { --size: 7; } .terms-tags a[data-weight=\"8\"] { --size: 8; } .terms-tags a[data-weight=\"9\"] { --size: 9; } .terms-tags a { --size: 4; font-size: calc(var(--size) * 0.25rem + 1rem); /* font-size: 1.4rem; */ display: block; padding: 3px 10px; background: var(--tertiary); border-radius: 6px; transition: transform 0.1s; } css伪随机字体色彩 assets/css/common/terms.css中\n1 2 3 4 5 .terms-tags li:nth-child(2n+1) a {color:#f7a400;} .terms-tags li:nth-child(3n+1) a {color:#3a9efd;} .terms-tags li:nth-child(4n+1) a {color:#3e4491;} .terms-tags li:nth-child(5n+1) a {color:#3e4491;} .terms-tags li:nth-child(6n+1) a {color:#3e4491;} 当然了也可以在js里搓qwq，可以参考这篇\n",
   "wordCount" : "406",
@@ -440,8 +455,14 @@
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://dodolalorc.cn/tags/css/">CSS</a></li>
+      <li><a href="https://dodolalorc.cn/tags/%E7%BE%8E%E5%8C%96/">美化</a></li>
     </ul>
 <nav class="paginav">
+  <a class="prev" href="https://dodolalorc.cn/posts/startsite/beautify_site_click/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>【网站美化】点击特效</span>
+  </a>
   <a class="next" href="https://dodolalorc.cn/posts/tech/toys/cq_bot/">
     <span class="title">Next »</span>
     <br>
@@ -452,7 +473,7 @@
 
 <div class="share-buttons">
     <a target="_blank" rel="noopener noreferrer" aria-label="share 【网站美化】标签美化 on x"
-        href="https://x.com/intent/tweet/?text=%e3%80%90%e7%bd%91%e7%ab%99%e7%be%8e%e5%8c%96%e3%80%91%e6%a0%87%e7%ad%be%e7%be%8e%e5%8c%96&amp;url=https%3a%2f%2fdodolalorc.cn%2fposts%2fstartsite%2fbeautify_site_tags%2f&amp;hashtags=CSS">
+        href="https://x.com/intent/tweet/?text=%e3%80%90%e7%bd%91%e7%ab%99%e7%be%8e%e5%8c%96%e3%80%91%e6%a0%87%e7%ad%be%e7%be%8e%e5%8c%96&amp;url=https%3a%2f%2fdodolalorc.cn%2fposts%2fstartsite%2fbeautify_site_tags%2f&amp;hashtags=CSS%2c%e7%be%8e%e5%8c%96">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
             <path
                 d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z"/>
@@ -539,12 +560,13 @@
         <path d="M12 6H0l6-6z" />
     </svg>
 </a><p class="beian">
-    
-    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?">浙公安备 123456789号</a>
+    <img class="beian-icon" src="/img/icons/govbeian.png">
+    <a class="gov" href="https://beian.mps.gov.cn/#/query/webSearch?code=33010902003733" rel="noreferrer" title="浙公网安备33010902003733"target="_blank">浙公网安备33010902003733</a>
     <a class="icp" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" title="浙ICP备2023048052号-1">
         浙ICP备2023048052号-1
     </a>
 </p>
+
 
 <script>
     let menu = document.getElementById('menu')

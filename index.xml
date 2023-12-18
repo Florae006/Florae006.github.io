@@ -11,7 +11,59 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 13 Dec 2023 23:00:09 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Dec 2023 14:12:39 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【网站美化】点击特效</title>
+      <link>https://dodolalorc.cn/posts/startsite/beautify_site_click/</link>
+      <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
+      
+      <guid>https://dodolalorc.cn/posts/startsite/beautify_site_click/</guid>
+      <description>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码 添加js文件 这</description>
+      <content:encoded><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
+<h1 id="添加js文件">添加js文件</h1>
+<p>这次用到的两个js文件在这里：</p>
+<p><a href="/js/anime.min.js">anime.min.js</a></p>
+<p><a href="/js/fireworks.js">fireworks.js</a></p>
+<p>在<code>./static/</code>下新建一个<code>js</code>文件夹，文件夹下新建两个<code>js</code>文件，命名为<code>anime.min.js</code>和<code>fireworks.js</code>，然后将上面两个文件的内容粘贴进去。</p>
+<h1 id="引入js文件">引入js文件</h1>
+<p>在<code>./layouts/partials/extend_head.html</code>中添加如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">fireworks</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">widows</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">z-index</span><span class="p">:</span><span class="mi">99999999</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pointer-events</span><span class="p">:</span><span class="kc">none</span><span class="p">;</span>  <span class="c">/*这个样式可以解决正常点击事件不响应的问题*/</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fireworks&#34;</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/js/anime.min.js&#34;</span> <span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/js/fireworks.js&#34;</span> <span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded>
+    </item>
+    
     <item>
       <title>【网站美化】标签美化</title>
       <link>https://dodolalorc.cn/posts/startsite/beautify_site_tags/</link>
@@ -6061,7 +6113,7 @@ $$
       <content:encoded><![CDATA[<!-- <a target="_blank" href=https://florae006.github.io/ title=DODOLA class="friend-url">
   <div class="friend-div">
     <div class="friend-div-left">
-      <img class="myfriend" src=../img/avatar/dodola.jpg />
+      <img class="myfriend" src=ZgotmplZ />
     </div>
     <div class="friend-div-right">
       <div class="friend-name">DODOLA</div>
@@ -6192,6 +6244,27 @@ $$
   }
 </script>
 
+<p>✨️✨️本站友链信息：</p>
+<blockquote>
+<p>name: DODOLA</p>
+<p>link: <a href="https://dodolalorc.cn/">https://dodolalorc.cn/</a></p>
+<p>avatar: <a href="https://dodolalorc.cn/img/dodola.png">https://dodolalorc.cn/img/dodola.png</a></p>
+<p>description: Wit beyond measure is man’s greatest treasure.</p>
+</blockquote>
+<p>✨️✨️申请友链信息格式：</p>
+<blockquote>
+<p>name: #名称</p>
+<p>link: #链接</p>
+<p>avatar: #头像</p>
+<p>description: #站点描述</p>
+</blockquote>
+<h3 id="友链申请要求qwq">🎇🎇友链申请要求QwQ</h3>
+<p>🎉本站支持交换友链，在您提出申请之前，请将本站添加至友链</p>
+<p>🏵️为了保障本站用户，本站仅支持个人网站的友链申请</p>
+<p>🍧申请本站友链需要拥有独立域名（非免费域名），建议开启全站HTTPS</p>
+<p>💐友链中的链接信息需要保证可以正常访问哦</p>
+<p>🍖站内文章能持续更新，没有太多广告</p>
+<p>🎴感谢您对本站的支持，如果您已经满足上述要求，请在下方评论区提交友链申请~~~</p>
 ]]></content:encoded>
     </item>
     
