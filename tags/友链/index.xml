@@ -108,6 +108,28 @@
   }
 </script>
 
+<a target="_blank" href=https://rossqaq.github.io/ title=Roses class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=../img/avatar/Roses.png />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">Roses</div>
+      <div class="friend-info">你随便写写</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
 <a target="_blank" href=https://lucy23.blog/ title=Lucy class="friend-url">
   <div class="friend-div">
     <div class="friend-div-left">
