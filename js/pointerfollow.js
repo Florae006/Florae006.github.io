@@ -14,7 +14,10 @@ const config = {
     minimumDistanceBetweenStars: 75,
     glowDuration: 75,
     maximumGlowPointSpacing: 10,
-    colors: ["249 146 253", "252 254 255"],
+    // 增加了几种颜色
+    colors: ["249 146 253", "252 254 255", "66 185 131", "250 173 20", "35 120 4", "54 207 201", "0 62 179", "57 16 133", "158 16 104", "0 0 0"],
+    // 整点有意思的内容
+    innerhtmls: ["3.14", "1024", "₍ᐢ..ᐢ₎♡", "๑ᵒᯅᵒ๑", "•ࡇ•", "ddl", "✿", "☼", "加训!", "ᕱ⑅ᕱ", "✨", "º· ☾˚‧º·", " ኈ", "ዽ", " ኈ", "Ⅰ", "Ⅱ", "Ⅲ", "❤", "{}", "int", "long", "const", "seg-tree", "return", "vue", "run", "void", "violin", "喵喵", "汪！", "91.8", "peace", "love", "嘿嘿", "find", "糟糕", "miao", "あ", "ゆ", "つ", "🌹", "bool", "flag"],
     sizes: ["1.4rem", "1rem", "0.6rem"],
     animations: ["fall-1", "fall-2", "fall-3"]
 }
@@ -40,12 +43,14 @@ const calcElapsedTime = (start, end) => end - start;
 const appendElement = element => document.body.appendChild(element),
     removeElement = (element, delay) => setTimeout(() => document.body.removeChild(element), delay);
 
+
 const createStar = position => {
     const star = document.createElement("span"),
         color = selectRandom(config.colors);
 
     star.className = "star";
-    star.innerHTML = "3.14"
+    // 这是我删掉星星图标写的内容，设置了随机展示一些字符
+    star.innerHTML = selectRandom(config.innerhtmls);
 
     star.style.left = px(position.x);
     star.style.top = px(position.y);
@@ -64,6 +69,8 @@ const determinePointQuantity = distance => Math.max(
     Math.floor(distance / config.maximumGlowPointSpacing),
     1
 );
+
+// 这一段是原作者的话
 
 /* --  
 
@@ -84,21 +91,6 @@ The "quantity" of points is based on the config property "maximumGlowPointSpacin
 My best explanation for why this is happening is due to the mousemove event only firing every so often. I also don't think this fix was totally necessary, but it annoyed me that it was happening so I took on the challenge of trying to fix it.
 
 -- */
-const createGlow = (last, current) => {
-    const distance = calcDistance(last, current),
-        quantity = determinePointQuantity(distance);
-
-    const dx = (current.x - last.x) / quantity,
-        dy = (current.y - last.y) / quantity;
-
-    Array.from(Array(quantity)).forEach((_, index) => {
-        const x = last.x + dx * index,
-            y = last.y + dy * index;
-
-        createGlowPoint({ x, y });
-    });
-}
-
 const updateLastStar = position => {
     last.starTimestamp = new Date().getTime();
 
@@ -127,8 +119,6 @@ const handleOnMove = e => {
 
         updateLastStar(mousePosition);
     }
-
-    createGlow(last.mousePosition, mousePosition);
 
     updateLastMousePosition(mousePosition);
 }

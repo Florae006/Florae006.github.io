@@ -11,13 +11,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 Dec 2023 14:12:39 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Dec 2023 20:57:26 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo</title>
-      <link>https://dodolalorc.cn/tags/hugo/</link>
-      <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
+      <title>CSS</title>
+      <link>https://dodolalorc.cn/tags/css/</link>
+      <pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/hugo/</guid>
+      <guid>https://dodolalorc.cn/tags/css/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -25,7 +25,7 @@
     <item>
       <title>JavaScript</title>
       <link>https://dodolalorc.cn/tags/javascript/</link>
-      <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
+      <pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate>
       
       <guid>https://dodolalorc.cn/tags/javascript/</guid>
       <description></description>
@@ -33,9 +33,19 @@
     </item>
     
     <item>
+      <title>光标</title>
+      <link>https://dodolalorc.cn/tags/%E5%85%89%E6%A0%87/</link>
+      <pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate>
+      
+      <guid>https://dodolalorc.cn/tags/%E5%85%89%E6%A0%87/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
       <title>美化</title>
       <link>https://dodolalorc.cn/tags/%E7%BE%8E%E5%8C%96/</link>
-      <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
+      <pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate>
       
       <guid>https://dodolalorc.cn/tags/%E7%BE%8E%E5%8C%96/</guid>
       <description></description>
@@ -43,11 +53,21 @@
     </item>
     
     <item>
-      <title>CSS</title>
-      <link>https://dodolalorc.cn/tags/css/</link>
-      <pubDate>Wed, 13 Dec 2023 23:00:09 +0800</pubDate>
+      <title>Canva</title>
+      <link>https://dodolalorc.cn/tags/canva/</link>
+      <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/css/</guid>
+      <guid>https://dodolalorc.cn/tags/canva/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://dodolalorc.cn/tags/hugo/</link>
+      <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
+      
+      <guid>https://dodolalorc.cn/tags/hugo/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
