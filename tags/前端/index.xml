@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>前端 on DODOLA&#39;s WareHouse</title>
-    <link>https://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/</link>
+    <link>https://florae006.github.io/tags/%E5%89%8D%E7%AB%AF/</link>
     <description>Recent content in 前端 on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://dodolalorc.cn/papermod-cover.png</url>
-      <link>https://dodolalorc.cn/papermod-cover.png</link>
+      <url>https://florae006.github.io/papermod-cover.png</url>
+      <link>https://florae006.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Dec 2023 13:10:27 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Dec 2023 13:10:27 +0800</lastBuildDate><atom:link href="https://florae006.github.io/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>哆哆啦のjQuery学习笔记（超细）（23.07.28）</title>
-      <link>https://dodolalorc.cn/posts/tech/front_end/jquery_notes/</link>
+      <link>https://florae006.github.io/posts/knowledge/front_end/jquery_notes/</link>
       <pubDate>Fri, 01 Dec 2023 13:10:27 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/tech/front_end/jquery_notes/</guid>
+      <guid>https://florae006.github.io/posts/knowledge/front_end/jquery_notes/</guid>
       <description>1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</description>
       <content:encoded><![CDATA[<h2 id="1-jquery对象">1. jQuery对象</h2>
 <h3 id="jquery使用">jQuery使用</h3>
@@ -1004,23 +1004,12 @@
 </tbody>
 </table>
 <p><strong>增加元素的具体样式的格式：</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1) css({&#39;样式名1&#39;:&#39;样式值1&#39;, &#39;样式名2&#39;:&#39;样式值2&#39;, &#39;样式名3&#39;:&#39;样式值3&#39;,...})
-</span></span><span class="line"><span class="cl">例：css({&#34;background-color&#34;: &#34;red&#34;, &#34;color&#34;: &#34;#fff&#34;})
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">2) css(&#34;样式名&#34;, &#34;样式值&#34;)
-</span></span><span class="line"><span class="cl">例：css(&#39;color&#39;, &#39;black&#39;)
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>学习代码：</p>
+<pre tabindex="0"><code>1) css({&#39;样式名1&#39;:&#39;样式值1&#39;, &#39;样式名2&#39;:&#39;样式值2&#39;, &#39;样式名3&#39;:&#39;样式值3&#39;,...})
+例：css({&#34;background-color&#34;: &#34;red&#34;, &#34;color&#34;: &#34;#fff&#34;})
+
+2) css(&#34;样式名&#34;, &#34;样式值&#34;)
+例：css(&#39;color&#39;, &#39;black&#39;)
+</code></pre><p>学习代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1886,29 +1875,15 @@
 <p><code>ready()</code>类似于<code>onLoad()</code>事件</p>
 <p><code>ready()</code>可以写多个，按顺序执行</p>
 <p><code>$(document).ready(function(){})</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">语法：
-</span></span><span class="line"><span class="cl">    $(document).ready(function(){
-</span></span><span class="line"><span class="cl">        xxxx
-</span></span><span class="line"><span class="cl">    })
-</span></span><span class="line"><span class="cl">简写：
-</span></span><span class="line"><span class="cl">    $(function(){
-</span></span><span class="line"><span class="cl">        xxxx
-</span></span><span class="line"><span class="cl">    })
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>体会加载：</p>
+<pre tabindex="0"><code>语法：
+    $(document).ready(function(){
+        xxxx
+    })
+简写：
+    $(function(){
+        xxxx
+    })
+</code></pre><p>体会加载：</p>
 <p><img loading="lazy" src="./result14.png" alt="体会加载"  />
 </p>
 <p>为了避免这种情况的发生，我们要将代码写到ready加载事件中</p>
@@ -2016,17 +1991,9 @@
 </p>
 <h3 id="42-绑定事件">4.2 绑定事件</h3>
 <p>为被选元素添加一个或多个事件处理程序，并规定事件发生时运行的函数。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">语法：
-</span></span><span class="line"><span class="cl">	$(selector.bind(eventType [, eventData], handler(eventObject)));
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>eventType</code>：是一个字符串类型的事件类型，就是你所需要绑定的事件。</p>
+<pre tabindex="0"><code>语法：
+	$(selector.bind(eventType [, eventData], handler(eventObject)));
+</code></pre><p><code>eventType</code>：是一个字符串类型的事件类型，就是你所需要绑定的事件。</p>
 <p>​	这类型可以包括如下：</p>
 <p>​		<strong><code>blur</code>，<code>focus</code>，<code>focusout</code>，<code>load</code>，<code>resize</code>，<code>scroll</code>，<code>unload</code>，<code>click</code>，<code>dblclick</code></strong></p>
 <p>​		<strong><code>mousedown</code>，<code>mouseup</code>，<code>mousemove</code>，<code>mouseover</code>，<code>mouseout</code>，<code>mouseenter</code></strong></p>
@@ -2290,17 +2257,9 @@
 <p><strong>异步无刷新！</strong></p>
 <h3 id="51-ajax">5.1 $.ajax()</h3>
 <p>jQuery调用Ajax的方法：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">格式：
-</span></span><span class="line"><span class="cl">	$.ajax({});
-</span></span></code></pre></td></tr></table>
-</div>
-</div><table>
+<pre tabindex="0"><code>格式：
+	$.ajax({});
+</code></pre><table>
 <thead>
 <tr>
 <th>参数</th>

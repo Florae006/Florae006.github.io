@@ -2,22 +2,1898 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>DODOLA&#39;s WareHouse</title>
-    <link>https://dodolalorc.cn/</link>
+    <link>https://florae006.github.io/</link>
     <description>Recent content on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://dodolalorc.cn/papermod-cover.png</url>
-      <link>https://dodolalorc.cn/papermod-cover.png</link>
+      <url>https://florae006.github.io/papermod-cover.png</url>
+      <link>https://florae006.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Dec 2023 22:02:50 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Dec 2023 20:00:25 +0800</lastBuildDate><atom:link href="https://florae006.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【拓展Markdown】为hugo渲染Mermaid绘图</title>
+      <link>https://florae006.github.io/posts/startsite/mermaid_js/</link>
+      <pubDate>Sat, 23 Dec 2023 20:00:25 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/posts/startsite/mermaid_js/</guid>
+      <description>今天打算转帖原来发过的一篇博文时，遇到了Markdown中嵌入的Mermaid无法正常显示的问题，Mermaid可以内嵌于Markdown中</description>
+      <content:encoded><![CDATA[<p>今天打算转帖原来发过的一篇博文时，遇到了Markdown中嵌入的Mermaid无法正常显示的问题，Mermaid可以内嵌于Markdown中通过代码显示svg绘图，但是显然hugo本身不含，这篇记录如何调整hugo达到如下效果转换：</p>
+<h3 id="效果">效果</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img loading="lazy" src="before.png" alt="调整之前"  />
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">调整之前</td>
+</tr>
+<tr>
+<td style="text-align:center"><img loading="lazy" src="after.png" alt="调整之后"  />
+</td>
+</tr>
+<tr>
+<td style="text-align:center">调整之后</td>
+</tr>
+</tbody>
+</table>
+<h3 id="配置方法">配置方法</h3>
+<p>这里涉及到hugo中设置代码高亮的配置，我们检查<code>hugo.toml</code></p>
+<p>写入/修改：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">codeFences</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">guessSyntax</span> <span class="p">=</span> <span class="kc">false</span>  <span class="c"># 注意这一项</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># hl_Lines = &#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">lineAnchors</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">lineNoStart</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">lineNos</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">lineNumbersInTable</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">noClasses</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">style</span> <span class="p">=</span> <span class="s2">&#34;monokai&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tabWidth</span> <span class="p">=</span> <span class="mi">4</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在<code>./layouts/partials/</code>下新建一个<code>mermaid.html</code></p>
+<p>写入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if .Params.mermaid }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span>
+</span></span><span class="line"><span class="cl">  <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/mermaid@8.8.2/dist/mermaid.min.js&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha256-KqisLh8jVMBRjpNkOhH5W9VWs+F6x6vQksLqxs7+x9A=&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Replace mermaid pre.code to div
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&#34;language-mermaid&#34;</span><span class="p">)).</span><span class="nx">forEach</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">el</span><span class="p">.</span><span class="nx">parentElement</span><span class="p">.</span><span class="nx">outerHTML</span> <span class="o">=</span> <span class="sb">`&lt;div class=&#34;mermaid&#34;&gt;</span><span class="si">${</span><span class="nx">el</span><span class="p">.</span><span class="nx">innerText</span><span class="si">}</span><span class="sb">&lt;/div&gt;`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">/* Set svg to center */</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">mermaid</span> <span class="nt">svg</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后在<code>./layouts/_default/baseof.html</code>引入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
+</span></span><span class="line"><span class="cl">    {{ partial &#34;mermaid.html&#34; .}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>【拓展Markdown】为hugo渲染数学公式</title>
+      <link>https://florae006.github.io/posts/startsite/mathjax_js/</link>
+      <pubDate>Sat, 23 Dec 2023 19:16:50 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/posts/startsite/mathjax_js/</guid>
+      <description>效果 解决了之前一直没有解决的一个小bug——我的hugo没有办法渲染Markdown里数学公式捏qwq 现在成功从图1到图2了！ 调整之前 调整之</description>
+      <content:encoded><![CDATA[<h3 id="效果">效果</h3>
+<p>解决了之前一直没有解决的一个小bug——我的hugo没有办法渲染Markdown里数学公式捏qwq
+现在成功从图1到图2了！</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img loading="lazy" src="before.png" alt="调整之前"  />
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">调整之前</td>
+</tr>
+<tr>
+<td style="text-align:center"><img loading="lazy" src="after.png" alt="调整之后"  />
+</td>
+</tr>
+<tr>
+<td style="text-align:center">调整之后</td>
+</tr>
+</tbody>
+</table>
+<p>这里记录一下干了什么吧qwq</p>
+<p>数学公式与代码高亮不同，hugo本身不支持渲染数学公式，所以我们在前端新加一个html页面去处理这个渲染问题。</p>
+<p>MathJax官方介绍了3中引入mathjax的方法，考虑到我们的页面还需要渲染到行内公式，我们选择全局引入。</p>
+<p>官方提供：<a href="https://docs.mathjax.org/en/latest/server/overview.html">Three Ways to Use MathJax in Node — MathJax 3.2 documentation</a></p>
+<h3 id="方法">方法</h3>
+<p>在<code>./layouts/partials/</code>下新建一个<code>mathjax.html</code></p>
+<p>在<code>./layouts/partials/extend_head.html</code>引入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{partial &#34;mathjax.html&#34; .}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在<code>mathjax.html</code>写入下方代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if .Params.math }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">MathJax</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tex</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[[</span><span class="s2">&#34;$&#34;</span><span class="p">,</span> <span class="s2">&#34;$&#34;</span><span class="p">]],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayMath</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="s2">&#34;$$&#34;</span><span class="p">,</span> <span class="s2">&#34;$$&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="s2">&#34;\[\[&#34;</span><span class="p">,</span> <span class="s2">&#34;\]\]&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">svg</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">fontCache</span><span class="o">:</span> <span class="s2">&#34;global&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span>
+</span></span><span class="line"><span class="cl">  <span class="na">id</span><span class="o">=</span><span class="s">&#34;MathJax-script&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">async</span>
+</span></span><span class="line"><span class="cl">  <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后在需要显示数学公式的markdown文档中添加如下参数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+++
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">math = true
+</span></span><span class="line"><span class="cl">+++
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>基础日语1复习</title>
+      <link>https://florae006.github.io/posts/knowledge/langslearning/nihonngo/</link>
+      <pubDate>Sat, 23 Dec 2023 16:20:57 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/posts/knowledge/langslearning/nihonngo/</guid>
+      <description>题型： 1.写假名2.写汉字3.形容词的反义词4.选择题（句型、语法）5.日译汉6.汉译日7.阅读题 五十音图： a i u e o a あア いイ うウ えエ おオ</description>
+      <content:encoded><![CDATA[<blockquote>
+<p>题型：</p>
+<p>1.写假名2.写汉字3.形容词的反义词4.选择题（句型、语法）5.日译汉6.汉译日7.阅读题</p>
+</blockquote>
+<h3 id="五十音图">五十音图：</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"><code>a</code></th>
+<th style="text-align:center"><code>i</code></th>
+<th style="text-align:center"><code>u</code></th>
+<th style="text-align:center"><code>e</code></th>
+<th style="text-align:center"><code>o</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>a</code></td>
+<td style="text-align:center">あア</td>
+<td style="text-align:center">いイ</td>
+<td style="text-align:center">うウ</td>
+<td style="text-align:center">えエ</td>
+<td style="text-align:center">おオ</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ka</code></td>
+<td style="text-align:center">かカ</td>
+<td style="text-align:center">きキ</td>
+<td style="text-align:center">くク</td>
+<td style="text-align:center">けケ</td>
+<td style="text-align:center">こコ</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>sa</code></td>
+<td style="text-align:center">さサ</td>
+<td style="text-align:center">しシ</td>
+<td style="text-align:center">すス</td>
+<td style="text-align:center">せセ</td>
+<td style="text-align:center">そソ</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ta</code></td>
+<td style="text-align:center">たタ</td>
+<td style="text-align:center">ちチ</td>
+<td style="text-align:center">つツ</td>
+<td style="text-align:center">てテ</td>
+<td style="text-align:center">とト</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>na</code></td>
+<td style="text-align:center">なナ</td>
+<td style="text-align:center">にニ</td>
+<td style="text-align:center">ぬヌ</td>
+<td style="text-align:center">ねネ</td>
+<td style="text-align:center">のノ</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ha</code></td>
+<td style="text-align:center">はハ</td>
+<td style="text-align:center">ひヒ</td>
+<td style="text-align:center">ふフ</td>
+<td style="text-align:center">へヘ</td>
+<td style="text-align:center">ほホ</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ma</code></td>
+<td style="text-align:center">まマ</td>
+<td style="text-align:center">みミ</td>
+<td style="text-align:center">むム</td>
+<td style="text-align:center">めメ</td>
+<td style="text-align:center">もモ</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ya</code></td>
+<td style="text-align:center">やヤ</td>
+<td style="text-align:center">(いイ)</td>
+<td style="text-align:center">ゆユ</td>
+<td style="text-align:center">(えエ)</td>
+<td style="text-align:center">よヨ</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ra</code></td>
+<td style="text-align:center">らラ</td>
+<td style="text-align:center">りリ</td>
+<td style="text-align:center">るル</td>
+<td style="text-align:center">れレ</td>
+<td style="text-align:center">ろロ</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>wa</code></td>
+<td style="text-align:center">わワ</td>
+<td style="text-align:center">(いイ)</td>
+<td style="text-align:center">(うウ)</td>
+<td style="text-align:center">(えエ)</td>
+<td style="text-align:center">をヲ</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>n</code></td>
+<td style="text-align:center">んン</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>助词：</p>
+<p>は：在判断句中提示主语的作用，用作助词时候读<code>wa</code></p>
+<h2 id="针对性训练">针对性训练</h2>
+<h3 id="单词">单词</h3>
+<p>（表一）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">日语汉字</th>
+<th style="text-align:center">日语假名</th>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">日语汉字</th>
+<th style="text-align:center">日语假名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">韓国</td>
+<td style="text-align:center">かんこく</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">速達</td>
+<td style="text-align:center">そくたつ</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">新聞</td>
+<td style="text-align:center">しんぶんし</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">動物園</td>
+<td style="text-align:center">どうぶつえん</td>
+</tr>
+<tr>
+<td style="text-align:center">３</td>
+<td style="text-align:center">喫茶店</td>
+<td style="text-align:center">きっさてん</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">四川料理</td>
+<td style="text-align:center">しせんりょうり</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">美術館</td>
+<td style="text-align:center">びじゅつかん</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">歌舞伎</td>
+<td style="text-align:center">かぶき</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">地下鉄</td>
+<td style="text-align:center">ちかてつ</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">親子丼</td>
+<td style="text-align:center">おやくどん</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">飛行機</td>
+<td style="text-align:center">ひこうき</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">宿題</td>
+<td style="text-align:center">しゅくだい</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">温泉</td>
+<td style="text-align:center">おんせん</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">気持</td>
+<td style="text-align:center">きもち</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">銀座</td>
+<td style="text-align:center">ぎんざ</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">記念品</td>
+<td style="text-align:center">きねんひん</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">映画</td>
+<td style="text-align:center">えいが</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">遅刻</td>
+<td style="text-align:center">ちこく</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">観光客</td>
+<td style="text-align:center">かんこうきゃく</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">出張</td>
+<td style="text-align:center">しゅっちょう</td>
+</tr>
+</tbody>
+</table>
+<p>（表二）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">日文</th>
+<th style="text-align:center">中文</th>
+<th style="text-align:center">日文</th>
+<th style="text-align:center">中文</th>
+<th style="text-align:center">日文</th>
+<th style="text-align:center">中文</th>
+<th style="text-align:center">日文</th>
+<th style="text-align:center">中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">新(あたら)しい</td>
+<td style="text-align:center">新</td>
+<td style="text-align:center">古(ふる)い</td>
+<td style="text-align:center">旧</td>
+<td style="text-align:center">熱(あつ)い</td>
+<td style="text-align:center">热，烫</td>
+<td style="text-align:center">冷(つめ)たい</td>
+<td style="text-align:center">凉</td>
+</tr>
+<tr>
+<td style="text-align:center">高(たか)い</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">低(ひく)い</td>
+<td style="text-align:center">矮，低</td>
+<td style="text-align:center">暑(あつ)い</td>
+<td style="text-align:center">热</td>
+<td style="text-align:center">寒(さむ)い</td>
+<td style="text-align:center">冷</td>
+</tr>
+<tr>
+<td style="text-align:center">高(たか)い</td>
+<td style="text-align:center">贵</td>
+<td style="text-align:center">安(やす)い</td>
+<td style="text-align:center">便宜</td>
+<td style="text-align:center">多(おお)い</td>
+<td style="text-align:center">多</td>
+<td style="text-align:center">少(すく)ない</td>
+<td style="text-align:center">少</td>
+</tr>
+<tr>
+<td style="text-align:center">難(もずか)しい</td>
+<td style="text-align:center">难</td>
+<td style="text-align:center">易(やさ)しい</td>
+<td style="text-align:center">容易</td>
+<td style="text-align:center">広(ひろ)い</td>
+<td style="text-align:center">宽广</td>
+<td style="text-align:center">狭(せま)い</td>
+<td style="text-align:center">窄</td>
+</tr>
+<tr>
+<td style="text-align:center">大(おお)きい</td>
+<td style="text-align:center">大</td>
+<td style="text-align:center">小(ちい)さい</td>
+<td style="text-align:center">小</td>
+<td style="text-align:center">遠(とお)い</td>
+<td style="text-align:center">远</td>
+<td style="text-align:center">近(ちか)い</td>
+<td style="text-align:center">近</td>
+</tr>
+<tr>
+<td style="text-align:center">いい</td>
+<td style="text-align:center">好</td>
+<td style="text-align:center">悪(わる)い</td>
+<td style="text-align:center">不好，坏</td>
+<td style="text-align:center">楽(たの)しい</td>
+<td style="text-align:center">愉快</td>
+<td style="text-align:center">つまらない</td>
+<td style="text-align:center">无聊</td>
+</tr>
+</tbody>
+</table>
+<h3 id="语法">语法</h3>
+<ul>
+<li>
+<p><u>名[场所] + で + 动：表示动作进行的场所</u></p>
+<p>公園で遊ぶ        在公园玩</p>
+</li>
+<li>
+<p><u>[名] + で + 动：1.手段方法；2.原材料</u></p>
+<p>速達で送ります        用快递送过去</p>
+<p>なんで名前を書きますか        用什么（工具）写名字</p>
+</li>
+<li>
+<p><u>名[交通工具] + で + 动词：表示交通手段</u></p>
+<p>バスで行きます        乘公交车去</p>
+</li>
+<li>
+<p><u>具体的时间 + に：动作发生的时间点</u></p>
+<p>11時に        在11点</p>
+</li>
+<li>
+<p><u>名1[人]に        名2[人]に        名[物]を        あげます</u></p>
+<p>给某人某物</p>
+<p>だれにあげます        给谁</p>
+<p>に会います        与某人见面</p>
+</li>
+<li>
+<p><u>名[人] + と + 动词：&ldquo;和&hellip;..共同做某事&rdquo;</u></p>
+<p>友達とテニスをします        与朋友一起打网球</p>
+</li>
+<li>
+<p><u>名[时间]から        名[时间]まで</u></p>
+<p>​              起点                      终点</p>
+<p>わだしは　9時から　5時まで　働きます        我的工作时间为上午9点到下午5点</p>
+</li>
+<li>
+<p><u>名[场所] + へ + （移动行为的）动词：表示移动行为的目的地/方向</u></p>
+<p>から：起点</p>
+<p>もで：终点</p>
+</li>
+<li>
+<p><u>から可以单独使用</u></p>
+<p>【从哪里，表示方位】</p>
+<p>どこから来ましたか？　　从哪儿来？</p>
+<p>【从谁那里得到】</p>
+<p>あねからもらいました　　从姐姐那儿得到</p>
+<p>【时间起点】</p>
+<p>何日から始まりますか？　　从几号开始？</p>
+<p>【时间范围】</p>
+<p>5時から7時まで　　从5点到7点</p>
+</li>
+<li>
+<p><u>おもしろい（这很有趣）　　あまりおもしろくないです（这不是很有趣）（否定）</u></p>
+<p>とても忙しいです        今天店里客人很多，非常忙碌</p>
+<p>さつう　　刚刚</p>
+<p>あのう　　询问前　　あのう、すみませんが</p>
+<p>もう帰りました已经回去了</p>
+<p>どのぐらいかかりますか　　需要多少时间　　北京まで、～</p>
+<p>何時間（なんじかん）　　多少时间，几小时</p>
+</li>
+<li>
+<p>名1[人]は　名2[人]に　名[物]を　あげます</p>
+<p>名1[人]は　名2[人]に　名[物]を　もらいます</p>
+<p>田中先生は鈴木さんからチヨコレートをもらいます。　田中先生从铃木先生那里收到了千代子。</p>
+<p>私は妹に誕生日のプレゼントをあげました　　我送给姐姐一份生日礼物</p>
+</li>
+<li>
+<p>ます形：表示肯定的一般、现在或未来</p>
+<p>（肯定地叙述现在的习惯性动作、状态及未来的动作、状态）</p>
+<p>太陽は　毎日　東（ひがし）からのぽります　　太阳每天都从东方照耀</p>
+<p>毎日、夜の10時に寝ます</p>
+<p>李さんは、会議室にいます</p>
+<p>英語の試験は来過から始まります</p>
+<p>今、起きます</p>
+</li>
+<li>
+<p>ました：过去式</p>
+<p>先過は休みませんでまた（过去否定）</p>
+</li>
+</ul>
+<blockquote>
+<p>第1课</p>
+<p>1、名は 名です</p>
+<p>相当于汉语的“～是～”。“～は”是主语部分，“～です”是谓语部分。助词“は”用于提示主题，读做“わ”。</p>
+<p>▲李さんは中国人です。（小李是中国人。）</p>
+<p>▲わたしは日本人です。（我是日本人。）</p>
+<p>▲わたしは王です。（我姓王。）</p>
+<p>2、名は 名ではありません</p>
+<p>相当于汉语“～不是～”。“では ありません”的“では”在口语中有时会发成“じゃ”。</p>
+<p>▲森さんは学生ではありません。（森先生不是学生。）</p>
+<p>▲わたしは日本人ではありません。（我不是日本人。）</p>
+<p>▲わたしは田中じゃありません。（我不是田中。）</p>
+<p>3、名は 名ですか</p>
+<p>相当于汉语的“～是～吗？”。助词“か”接在句尾表示疑问。日语问句不使用“？”。回答时：“はい”或“いいえ”，也可以“はい、そうです”，“いいえ、ちがいます”或“そうではありません”。不知道时用“分か りません（不知道）”。</p>
+<p>▲あなたは小野さんですか。（您是小野女士吗?）</p>
+<p>&ndash;はい，小野です。(是的，我是小野。)</p>
+<p>▲キムさんは中国人ですか。（金女士是中国人吗？）</p>
+<p>&ndash;いいえ，中国人ではありません。（不，不是中国人。）</p>
+<p>4、名の名[从属机构、国家] [属性]</p>
+<p>相当于汉语“的”的意思。助词“の”连接名词和名词，表示前面的名词是后面名词从属的机构、国家或属性。</p>
+<p>▲李さんはJC企画の社員です。（李是JC策划公司的职员）</p>
+<p>▲北京旅行社は中国の企業です。（北京旅行社是中国企业）</p>
+<p>▲デュボンさんは大学の先生です。（迪蓬先生是大学老师）</p>
+<hr>
+<p>第2课</p>
+<p>1、 これ／それ／あれは 名です</p>
+<p>“これ” “それ” “あれ”是指示事物的词。相当于汉语的“这（个）”“那（个）”。日语里“これ” “それ” “あれ”三种说法。其用法如下：</p>
+<p>（1）说话人和听话人相隔一段距离，面对面时</p>
+<p>■これ：距说话人较近的事物[说话人的范围、领域内的事物] ▲これは本です。（这是书）</p>
+<p>■それ：距听话人较近的事物[听话人的范围、领域内的事物] ▲それはかばんです。（那是包）</p>
+<p>■あれ：距说话人和听话人都比较远的事物[不属于任何一方范围、领域内的事物] ▲あれはテレビです。</p>
+<p>（2）说话人和听话人位于同一位置，面向同一方向时</p>
+<p>■これ：距说话人、听话人较近的事物</p>
+<p>■それ：距说话人、听话人较远的事物</p>
+<p>■あれ：距说话人、听话人更远的事物</p>
+<p>2、だれですか／何ですか</p>
+<p>不知道是什么人时用“だれ”，不知道什么事物时用“何”询问，意为“谁” 和“什么”。句尾后续助词“か”，读升调。</p>
+<p>▲それは何ですか。（那是什么）</p>
+<p>▲あの人はだれですか。（那个人是谁）</p>
+<p>Ps：日语里，句子里即便有“だ れ”“何”句尾仍然要用“か”。参考：“だれ”的比较礼貌说法是“どなた”。“だれ”通常用于对方与自己地位相当或比自己低时。对尊长或比自己地位高的人用“どなた”。</p>
+<p>▲スミスさんはどなたですか。（史密斯先生是哪一位？）</p>
+<p>3、名の名[所属]</p>
+<p>助词“の”连接名词和名词，表示所属。</p>
+<p>▲わたしのかぎ（我的钥匙）</p>
+<p>▲田中さんの車（田中先生的车）</p>
+<p>4、この／その／あの 名は 名です</p>
+<p>修饰名词时，要用“この”“その”“あの”。其表示的位置关系与“これ”“それ”“あれ”相同。“この”“その”“ あの”与“これ”“それ”“あれ”。</p>
+<p>▲このカメラはスミスさんのです。（这个相机是史密斯先生的）</p>
+<p>▲その自転車は森さんのです。（那辆自行车是森先生的）</p>
+<p>▲あのノートはだれのですか。（那个笔记本是谁的?）</p>
+<p>5、どれ／どの  名</p>
+<p>“どれ” “どの”是在三个以上的事物中，不能确定是哪一个时所用的疑问词。单独使用时，用“どれ”，修饰名词时用“どの”。</p>
+<p>▲森さんのかばんはどれですか。（森先生的包是哪个？）</p>
+<p>▲長島さんの傘はどれですか。（长岛先生的伞是哪一把？）</p>
+<p>▲小野さんの机はどの机ですか。（小野的桌子是哪一张？）</p>
+<hr>
+<p>第3课</p>
+<p>1、ここ／そこ／あそこは 名です</p>
+<p>指示场时，用“ここ”“そこ”“あそこ”。相当于汉语的“这儿是……”“那儿是……”和“那儿是……”的意思。所表示的位置关系与“これ”“それ”“あれ”相同。</p>
+<p>▲ここはデパートです。（这里是百货商店）</p>
+<p>▲そこは図書館です。（那里是图书馆）</p>
+<p>▲あそこはいり口です。（那儿是入口）</p>
+<p>2、名は 名[场所] です</p>
+<p>表示“名词”存在于“ 名词[场所]”。</p>
+<p>▲食堂はデパートの七階です。（食堂在百货商店的7层）</p>
+<p>▲トイレはここです。（厕所在这儿）</p>
+<p>▲小野さんは事務所です。（小野女士在事务所）</p>
+<p>3、名は どこですか</p>
+<p>用于询问存在场所。</p>
+<p>▲トイレはどこですか。（厕所在哪儿？）</p>
+<p>&ndash;あちらです。（在那儿）</p>
+<p>▲あなたのかばんはどこですか。（你的包在哪儿？）</p>
+<p>&ndash;わたしのかばんはここです。（我的包在这儿）</p>
+<p>4、名も 名です</p>
+<p>提示助词“も”基本相当于汉语的“也”。</p>
+<p>▲ここはJC企画のビルです。あそこもJC企画のビルです。（这里是JC策划公司的大楼。那里也是JC策划公司的大楼）</p>
+<p>▲李さんは中国人です。張さんも中国人です。（小李是中国人。小张也是中国人）</p>
+<p>▲あなたも中国人ですか。（你也是中国人吗？）</p>
+<p>5、名は 名ですか，名ですか</p>
+<p>答案有多种可能，而询问其中的一种时，可以重复使用谓语“～ですか”。相当于汉语的“……是……”，“还是……（呢）”的意思。因为这里询问的是哪一种，不能用“はい”“いいえ”来回答。</p>
+<p>▲かばん売り場は一階ですか,二階ですか。（卖包的柜台在1层还是2层？）</p>
+<p>▲今日は水曜日ですか，木曜日ですか。（今天是星期三还是星期四？）</p>
+<p>▲林さんは韓国人ですか，日本人ですか，中国人ですか。（林先生是韩国人？日本人？还是中国人？）</p>
+<p>&ndash;日本人です。（是日本人）</p>
+<p>6、名は いくらですか</p>
+<p>询问价钱时，用“いくら”相当于汉语“多少钱”</p>
+<p>▲これはいくらですか。（这个多少钱？）</p>
+<p>▲その服はいくらですか。（那件衣服多少钱？）</p>
+<p>▲その車はいくらですか。（那辆车多少钱？）</p>
+<p>&ndash;198000円です。（198万日元）</p>
+<hr>
+<p>第4课</p>
+<p>1、“あります”和“います”</p>
+<p>表示事物的存在时，最常用的谓语是“あります”和“います”。“あります”用于花、草、桌子等不具意志的事物。“います”用于具有意志的人、动物或昆虫。使用“あります” 和“います”的句型有以下两种。</p>
+<p>⑴ 名词[场所] に名词[物/人] があります／います</p>
+<p>表示存在，相当于汉语的“～有～”。</p>
+<p>▲部屋に机があります。（房间里有桌子）</p>
+<p>▲ここに本があります。（这里有书）</p>
+<p>▲庭に何がありまうか。（院子里有什么？）</p>
+<p>▲部屋に猫がいます。（房间里有一只猫）</p>
+<p>▲公園に子供がいます。（公园里有孩子）</p>
+<p>▲あそこにだれがいますか。（那里有谁？）</p>
+<p>⑵ 名词[物／人] は名词[场所] にあります／います</p>
+<p>表示位置，相当于汉语的“～在～”。</p>
+<p>▲いすは部屋にあります。（椅子在房间里）</p>
+<p>▲本はここにあります。（书在这儿）</p>
+<p>▲図書館はどこにありますか。（图书馆在哪儿？）</p>
+<p>▲吉田さんは庭にいます。（吉田先生在院子里）</p>
+<p>▲子供は公園にいます。（孩子在公园）</p>
+<p>▲犬はどこにいますか。（狗在哪儿？）</p>
+<p>第3课学了“～は どこですか”，这句型也能用“～は どこに あります／います”：</p>
+<p>▲小野さんの家はどこですか。（小野女士的家在哪里？）</p>
+<p>&ndash;小野さんの家はどこにありますか。（小野女士的家在哪里？）</p>
+<p>▲林さんはどこですか。（林先生在哪里？）</p>
+<p>&ndash;林さんはどこにいますか。（林先生在哪里？）</p>
+<p>2、名と 名[并列]</p>
+<p>助词“と”加在两个名词之间表示并列，相当于汉语的“和”。</p>
+<p>▲時計と眼鏡（表和眼镜）</p>
+<p>▲ビールとウイスキー（啤酒和威士忌）</p>
+<p>▲居間にテレビとビデオがあります。（起居室里有电视机和录像机）</p>
+<p>**3、**上／下／前／後ろ／隣／中／外</p>
+<p>表示具体位置时，用“名词＋の＋方位。汉语说“椅子上” “桌子下”，而日语说“いすの上”“机の下”，“の”不能省略。</p>
+<p>▲机の上に猫がいます。（桌子上有一只猫）</p>
+<p>▲会社の隣に花屋があります。（公司旁边有花店）</p>
+<p>▲猫は箱の中にいます。（猫在箱子里）</p>
+<p>▲売店は駅の外にあります。（小卖部在车站的外边）</p>
+<p>4、ね [确认]</p>
+<p>当说话人就某事征求听话人的同意时，句尾用助词“ね”，读升调。相当于汉语的“…… 吧”。</p>
+<p>▲あそこに犬がいますね。（那儿有一只狗啊）</p>
+<p>▲この新聞は林さんのですね。（这报纸是林先生的吧）</p>
+<p>▲駅の前に銀行がありますね。（车站前面有家银行吧）</p>
+<p>5、疑问词＋も＋动词（否定）</p>
+<p>表示全面否定。相当于汉语的“都不（没）……” “什么也（都、没）……”的意思。</p>
+<p>▲教室にだれもいません。（教师里谁也没有）</p>
+<p>▲冷蔵庫に何もありません。（冰箱里什么也没有）</p>
+<hr>
+<p>第5课</p>
+<p>1、今 ～時 ～分です</p>
+<p>表示现在的时间时，常用“今 いま ～時 じ ～ 分 ぶん です”。意为“…点…分”。双方都明确的时间时，“今 いま ”可以省略。询问具体时间时用“何 なん 時 じ ”。</p>
+<p>▲今4時です。（现在是4点）</p>
+<p>▲今何時ですか。（现在几点？）</p>
+<p>&ndash;8時30分です。（8点30分）</p>
+<p>“ 30（さんじゅっ）分（ぷん）”可以用“半（はん）”代替，有时表示具体时间的词前还可以加上“*午 ご 前 ぜん ”或“*午 ご 後 ご ”。</p>
+<p>▲今午前8時半です。（现在是上午8点半）</p>
+<p>2、动ます／动ません （现在）</p>
+<p>动ました／动ませんでした （过去）</p>
+<p>肯定地叙述现在的习惯性动作、状态以及未来的动作、状态时，用“～ます”，其否定形式是“～ません”。肯定地叙述过去的动作时“ます”要变成“ました”，其否定形式是“～ ませんでした”。</p>
+<p>▲森さんは毎日働きます。（森先生每天工作）</p>
+<p>▲田中さんは明日休みです。（田中先生明天休息）</p>
+<p>▲田中さんは今日働きません。（田中先生今天不工作）</p>
+<p>▲森さんは明日休みません。（森先生明天不休息）</p>
+<p>▲森さんは先週休みました。（森先生上周休息）</p>
+<p>▲わたしは昨日働きませんでした。（我昨天没上班）</p>
+<p>疑问句要在句尾加“か”。在许多情况下汉语只用“昨天”即可表示过去， 但日语在任何情况下都必须把句尾变成“ました”或“ませんだした”。</p>
+<p>▲田中さんは明日働きますか。（田中先生明天上班吗？）</p>
+<p>▲李さんは先週休みましたか。（小李上周休息了吗？）</p>
+<p>3、名词[时间]に 动</p>
+<p>表示动作发生的时间时,要在具体时间词语后面加上助词“に”,如“3時 じ に”“9時 じ に”。</p>
+<p>▲森さは7時に起きます。（森先生7点起床）</p>
+<p>▲学校は8時半に始まります。（学校8点半开始上课）</p>
+<p>叙述包含数字的时间时后续助词“に”，要说成“3月14日に”“2008年に”，但“今”“昨日 きのう”“今日 きょう”“明日 あした”“去年”“来年”等词后不能加“に”。星期后一般加“に”，如“日曜日 にちようび に”，但也可不加。</p>
+<p>▲わたしは明日休みます。（我明天休息）</p>
+<p>4、名词[时间]から 名词[时间]まで 动</p>
+<p>表示动作发生在某个期间时，用“～から～まで”。相当于汉语“……从开始到……结束”的意思。</p>
+<p>▲わたしは9時から5時まで働きます。（我9点到5点工作）</p>
+<p>▲森さんは月曜日から水曜日まで休みました。（森先生星期一到星期三休息了）</p>
+<p>“～から”和“～まで”也可以分别单独使用。</p>
+<p>▲わたしは9時から働きます。（我从9点开始工作）</p>
+<p>▲森さんは2時まで勉強します。（森先生学习到2点）</p>
+<p>5、いつ 动ますか</p>
+<p>询问某动作或事态进行的时间用“いつ”，询问的时间很具体时，在表示时间的词语后加“に”，如“何時 に”“何曜日 に”“何日 に”，句尾加“か”，变成“ますか”的形式。</p>
+<p>▲試験はいつ始まりますか。（什么时候开始考试？）</p>
+<p>▲仕事は何時に終わりますか。（工作几点结束？）</p>
+<p>询问持续性动作或事态的起点或终点时，用“いつから”“何曜日まで”等。</p>
+<p>▲展覧会はいつから始まりますか。（展览会什么时候开始？）</p>
+<p>▲張さんは何曜日まで休みますか。（小张休息到星期几？）</p>
+<p>&ndash;火曜日までです。（休息到星期二）</p>
+<p>6、は [对比]</p>
+<p>第1课学习了提示主题的助词“は”。“は”还可以表示对比。对比时“は”要略微发重 一些。</p>
+<p>▲小野さんは今日は休みます。（小野女士今天休息）</p>
+<p>▲森さんは毎朝何時に起きますか。（森先生，你每天早晨几点起床？）</p>
+<p>&ndash;いつもは7時ごろです。（我一般是7点左右起床）</p>
+<hr>
+<p>第6课</p>
+<p>1、 名词[场所] へ 动</p>
+<p>使用“行きます”“帰ります”等表示移动的动词时，移动行为的目的地用助词“へ”表示，这时的“へ”读做“え”</p>
+<p>▲吉田さんは中国へ行きます。（吉田先生去中国）</p>
+<p>▲森さんは日本へ帰ります。（森先生回日本）</p>
+<p>▲李さんはどこへ行きましたか。（小李去哪儿了？）</p>
+<p>2、 名词[场所]から 动</p>
+<p>使用移动动词时，移动的起点用助词“から”表示。相当于汉语的“从…（地方）来（去）（回）”等。这里的“から”与第5课表示时间起点的“から”是同一助词。</p>
+<p>▲李さんは先月北京から来ました。（小李上个月从北京来）</p>
+<p>▲あの方はどこから来ましたか。（那个人是从哪儿来的？）</p>
+<p>3、名[人]と 动</p>
+<p>共同做某事的对象用助词“と”表示。</p>
+<p>▲小野さんは友達と帰りました。（小野女士和朋友一块儿回去了）</p>
+<p>▲李さんはだれと日本へ来ましたか。（小李和谁一块儿来日本的？）</p>
+<p>4、 名词[交通工具]で 动</p>
+<p>交通手段用助词“で”表示。相当于汉语“坐……”的意思。不使用交通工具而步行时用“歩 いて”。</p>
+<p>▲上海まで飛行機で行きます。（到上海坐飞机去）</p>
+<p>▲わたしはバスで家へ帰ります。（我乘公汽车回家）</p>
+<p>▲李さんは歩いてアパートへ帰りました。（小李步行回到公寓）</p>
+<p>▲京都へ何で来ましたか。（你怎么来京都的？）</p>
+<p>5、 名词[场所]から 名词[场所]まで 动</p>
+<p>表示移动范围时，范围的起点用“から”范围的终点用“まで”。</p>
+<p>▲森さんは東京から広島まで新幹線で行きます。（森先生从东京乘新干线去广岛）</p>
+<p>▲李さんは駅からアパートまで歩いて帰りました。（小李从车站走回公寓）</p>
+<p>6、“に／で／へ／から／まで／と”＋は</p>
+<p>“は”既可以单独使用也可以加在“に” “で” “へ” “から”“まで” “と”的后面 构成一种复合形式。▲わたしの部屋には電話がありません。（我的房间没有电话）</p>
+<p>▲韓国へは行きました。中国へは行きませんでした。（我去了韩国。没有去中国）</p>
+<hr>
+<p>第7课</p>
+<p>1、名を 名</p>
+<p>动作的对象用助词“を”表示，这里的“を”读做“お”。</p>
+<p>▲李さんは毎日コーヒーを飲みます。（小李每天喝咖啡）</p>
+<p>▲わたしは毎日ジョギングをします。（我每天慢跑）</p>
+<p>▲わたしは新聞を読みません。（我不看报）</p>
+<p>▲李さんは毎朝何を食べますか。（小李每天早晨吃什么）</p>
+<p>2、 名词[场所]で 动</p>
+<p>动作的场所用助词“で”表示。意为“在…做…”。存在的场所和动作进行的场所在汉语里都用“在”来表示，但在日语里前者为“に”，后者为“で”。</p>
+<p>▲李さんは図書館で勉強します。（小李在图书馆学习）</p>
+<p>▲わたしはコンビニでお弁当を買います。</p>
+<p>▲今日どこで新聞を読みましたか。</p>
+<p>3、 名か 名</p>
+<p>对若干名词进行选择时，名词和名词之间加“か”，意为“或者”。</p>
+<p>▲わたしは毎朝パンかお粥を食べます。（我每天早晨吃面包或稀饭）</p>
+<p>▲休みは何曜日ですか。（你星期几休息？）</p>
+<p>&ndash;休みは月曜日か火曜日です。（我星期一或星期二休息）</p>
+<p>4、名を ください</p>
+<p>买东西或者在餐厅点菜时，用“～をください”的形式。此形式可用于花钱购物或不花钱的索取。</p>
+<p>▲コーラとケーキをください。（请给我可乐和蛋糕）</p>
+<p>▲申込書をください。（请给我一张申请表）</p>
+<p>▲この本をください。（我买这本书）</p>
+<hr>
+<p>第8课</p>
+<p>1、 名词[工具] で 动</p>
+<p>“で”还可以用来表示其他手段以及原材料。</p>
+<p>▲李さんは日本語で手紙を書きます。（小李用日语写信）</p>
+<p>▲手紙を速達で送りました。（用速递寄了信）</p>
+<p>▲新聞紙で紙飛行機を作りました。（用报纸折了纸飞机）</p>
+<p>▲何でうどんを作りますか。（用什么做了面条）</p>
+<p>2、名1[人]は 名2[人]に 名3[物]を あげます</p>
+<p>“あげます”相当于汉语“给”，通常在物品以“第一人称→第二人称→第三人称”或“第三人称→第三人称”的形式移动时使用。物品用助词“を”表示，接受者用助词“に”表示。</p>
+<p>▲わたしは小野さんにお土産をあげます。（我送给小野女士礼物）</p>
+<p>▲小野さんは森さんにチョコレートをあげました。（小野女士给了森先生巧克力）</p>
+<p>另外，当第三人称的其中之一是说话人亲戚时，按说话人的立场处理。</p>
+<p>▲弟は小野さんに花をあげました。（弟弟送花给小野女士）</p>
+<p>▲母は長島さんにワインをあげました。（母亲送葡萄酒给长岛先生）</p>
+<p>3、名1[人]は 名2[人]に 名3[物]を もらいます</p>
+<p>“もらいます”与“あげます”相反，表示物品以“第三人称→第二人称→第一人称”或“第三人称→第三人称”的形式移动，意为“得到”“接受”等。物品用“を”表示，赠送者用助词“に”表示。赠送者也可以看成是物品移动的起点，用助词“から”来表示。</p>
+<p>▲わたしは小野さんに辞書をもらいました。（我从小野女士那儿得到一本词典。/小野女士给了我一本词典。）</p>
+<p>▲わたしは長島さんから写真をまらいました。（我从长岛先生那儿得到了照片）</p>
+<p>▲森さんは長島さんにパンフレットをもらいました。（森先生从长岛先生那儿得到了小册子）</p>
+<p>另外，当第三人称的其中之一是说话人的亲戚时，按说话人的立场处理。</p>
+<p>▲母は小野さんにハンカチをもらいました。（小野女士送给母亲手绢）</p>
+<p>▲弟は長島さんから本をもらいました。（弟弟从长岛先生那儿得到一本书）</p>
+<p>4、 名[人]に 会います</p>
+<p>“あいます”相当于汉语的“见”。所见到的对象用助词“に”表示。</p>
+<p>▲李さんは明日長島さんに会います。</p>
+<p>▲わたしは駅で森さんに会いました。</p>
+<p>5、よ [提醒]</p>
+<p>助词“よ”用于提醒对方注意不知道、不了解的事情，读升调。根据使用场景不同分别表示告知、提醒、轻微的警告等。</p>
+<p>▲すみません，李さんはいますか。（请问，小李在吗？）</p>
+<p>&ndash;もう帰りましたよ。（已经回去了）</p>
+<p>▲わたしは毎日アイスクリームを食べます。（我每天都吃冰激凌）</p>
+<p>&ndash;太りますよ。（那你要发胖的）</p>
+<p>6、もう①</p>
+<p>表示完了。意思基本相当于汉语的“已经”。</p>
+<p>▲昼ご飯を食べましたか。（你吃过午饭了吗？）</p>
+<p>&ndash;ええ，もう食べました。（是的，我已经吃过了。）</p>
+<hr>
+<p>第9课</p>
+<p>1、 名は 一类形です</p>
+<p>日语的形容词分两类。其中一类形容词以“い”结尾。做谓语时要在后面加“です”。</p>
+<p>▲四川料理は辛いです。（四川菜很辣）</p>
+<p>▲あのスープは冷たいです。（那个汤是凉的）</p>
+<p>▲このお茶は熱いです。（这茶很烫）</p>
+<p>2、 一类形做谓语时的否定形式</p>
+<p>一类形容词做谓语时的否定形式是将词尾的“い”变成“く”再加上“ないです”或“ありません”。“いいです”的否定是“よく ないです”或“よくありません”</p>
+<p>▲このスープは熱くないです。（这个汤不热）</p>
+<p>▲今日は寒くないです。（今天不冷）</p>
+<p>▲この本は高くありません。（这本书不贵）</p>
+<p>3、 一类形做谓语时的过去形式</p>
+<p>一类形容词做谓语时的过去形式是将词尾的“い”变成“かった”再加“です”。其过去形式的否定形式则是把词尾“い”变成“くなかったです”或者“くありあませでした”。</p>
+<p>▲旅行は楽しかったです。（旅行很愉快）</p>
+<p>▲昨日は寒くなかったです。（昨天不冷）</p>
+<p>▲昨日は寒くありませんでした。（昨天不冷）</p>
+<p>描述过去体验过的事物的性质时,日语必须使用过去式。“いいです”的过去形式是“よかったです”，过去否定形式是“よくありませんでした”。</p>
+<p>▲おいしいです。（好吃。）[正在吃的时候]</p>
+<p>▲おいしかったです。（好吃。）[吃完以后]</p>
+<p>4、 一类形＋名</p>
+<p>一类形容词可直接修饰名词。形容词和名词之间不能加“の”。“×おいしいの料 理”。</p>
+<p>▲広い国（幅员辽阔的国家）</p>
+<p>▲青い海（蓝色的大海）</p>
+<p>▲おいしい料理（可口的饭菜）</p>
+<p>▲白い紙（白纸）</p>
+<p>5、“を”→“は”</p>
+<p>“コーヒーを 飲みます”中的“を”前面的名词作话题或者进行对比时， 使用第5课、第6课学过的助词“は”，构成“コーヒーは飲みます”“コーヒーは飲みますか”“コーヒーは飲みません”的形式。这时候原来的“を”必须去掉，不能变成“×をは”的形式。</p>
+<p>▲この本は李さんにもらいました。（这本书是从小李那儿得到的）[话题]</p>
+<p>▲わたしはコーヒーは飲みません。（我不喝咖啡）[对比]</p>
+<p>6、あまり 一类形／动（否定）</p>
+<p>“あまり”与后面的否定形式呼应，表示程度不高。</p>
+<p>▲このスープはあまり熱くないです。（这个汤不太热）</p>
+<p>▲試験はあまり難しくありませんでした。（考试不太难）</p>
+<p>7、表示程度的副词①</p>
+<p>“とても”“たいへん”“少し”“ちょっと”“あまり”“全 然”等都是表示程度的副词。“あまり”“全 然”要与后面的否定形式呼应使用。他们之间的轻重程度如下：</p>
+<p>とても／たいへん（很，非常）＞少し／ちょっと（一点儿）＞あまり～ません（不太～）＞全然～ません（根本不～）</p>
+<p>▲この料理はとてもおいしいです。（这个菜非常好吃）</p>
+<p>▲このスープは少し辛いです。（这个汤有点辣）</p>
+<p>▲試験は全然難しくありませんでした。（考试一点儿也不难）</p>
+<p>汉语中形容词前面的“很”有时并不表示程度很重，而日语中如使用“とても”等,则强调程度非常重。</p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>最短路问题（Dijkstra &#43; SPFA &#43; Floyd）</title>
+      <link>https://florae006.github.io/posts/knowledge/algorithm/shortest_path/</link>
+      <pubDate>Sat, 23 Dec 2023 16:08:47 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/posts/knowledge/algorithm/shortest_path/</guid>
+      <description>思维先行 我们要找某点到某点的最短路径(记为点u到点v)，这样的路径只能从两种路径中选择—— u和v之间有边连接时，存在边(u, v)，不存在的话</description>
+      <content:encoded><![CDATA[<h3 id="思维先行">思维先行</h3>
+<p>我们要找某点到某点的最短路径(记为点u到点v)，这样的路径只能从两种路径中选择——</p>
+<ol>
+<li>u和v之间有边连接时，存在边(u, v)，不存在的话可以视作这两点的距离无限大</li>
+<li>u和v可以通过某些点中转相连，这个(最短的)中转路径</li>
+</ol>
+<p>很明显，我们选最短路径肯定是在这两种路径当中选最短的来作为u和v的最短距离，而路径选择2又可以不断拆分，比如我们有<code>u -&gt; P -&gt; v</code>我们再去寻找这条路径的最短时，可以分为<code>u -&gt; P</code>最短+<code>P -&gt; v</code>最短，再去寻找中转点&hellip;而且每次取最小值最小的+最小的肯定得最小的（有一点贪心的感觉）。</p>
+<p>那么思维布置到这，我们来看看这个寻找最短路径的几种算法：</p>
+<h3 id="floyd算法bellman-ford算法">Floyd算法&amp;Bellman-Ford算法</h3>
+<ul>
+<li>==Floyd算法==</li>
+</ul>
+<p>这个算法就是刚刚思维里的算法的朴素实现了，动态规划思维，不断去尝试增加节点来找最小值。伪代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#define INF 0x3f3f3f3f
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="n">dist</span><span class="p">[</span><span class="n">maxn</span><span class="p">][</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// dist[u][v]记录从点u到点v的距离
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 初始化时dist[n][n]=0, 两点有边则记录为w&lt;u, v&gt;，其他的就是INF
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">Floyd</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 一共有n个点，我们遍历填充dist[][]数组来计算所有的距离
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span> <span class="p">;</span><span class="n">p</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">p</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 点p是中转点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">u</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">u</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">			<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">v</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">v</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">v</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">				<span class="n">dist</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">v</span><span class="p">],</span> <span class="n">dist</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">p</span><span class="p">]</span><span class="o">+</span><span class="n">dist</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="n">v</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>很明显，这个算法有<code>O(n^3)</code>的复杂度，并不好，而且开的<code>dist[maxn][maxn]</code>数组空间也大，和之前学习存储图时一样，如果图比较稀疏，浪费的空间也大。</p>
+<p>如何优化呢？</p>
+<p>先看算法上，我们在选择中间点p的时候，我们很容易想到——并不是所有的点1~点n和u都有边，所以假如我们按边存储成为邻接表(前向星/链式前向星)，我们在搜索边的时候就能直接在已有的<code>&lt;u, p&gt;</code>边上进行选择。</p>
+<p><code>TIP</code>：Floyd算法可以获得所有点之间的最短距离，所以在需要处理多源最短路且数据规模比较小的时候会选择它。</p>
+<p>我们更关心<strong>单源最短路</strong>问题，接下来我们的问题就假定为：找到以点v~1~为起点的最短路。</p>
+<p>由于是确定起点的单源最短路，我们接下来记录距离的数组只用开一维就行。</p>
+<p>初始化：<code>dist[1]=0, dist[v]=distance[1][v], 其他的置INF</code>。</p>
+<p>在Bellman-Ford算法中，我们假设不存在<strong>负权环</strong>（有负权环我们就会发现每绕一次dist都在变小，而我们取<code>min（dist[v],weight(p-&gt;v)+dist[v]）</code>肯定会把路径上的这个负权环走超过n遍），那么从v~1~到任何点的路径上点的个数都不会大于总点数n，所以Bellman-Ford算法就直接暴力搜n次来找最短路,到这里我们先代码实现一下这样的思路：</p>
+<p>给出一个图例like this：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
+v1((v1))-.4.-&gt;v2((v2))
+v1((v1))-.3.-&gt;v3((v3))
+v1((v1))-.8.-&gt;v4((v4))
+v2((v2))-.2.-&gt;v6((v6))
+v7((v7))-.5.-&gt;v6((v6))
+v7((v7))-.1.-&gt;v4((v4))
+v3((v3))-.1.-&gt;v7((v7))
+v4((v4))-.5.-&gt;v3((v3))
+v4((v4))-.5.-&gt;v5((v5))
+</code></pre><p>样例：</p>
+<pre tabindex="0"><code>7 9
+1 2 4
+1 3 3
+1 4 8
+2 6 2
+3 7 1
+4 3 5
+4 5 5
+7 6 5
+7 4 1
+</code></pre><p>参考代码like this：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#define INF 0x3f3f3f3f
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">from</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">next</span><span class="p">;</span>	<span class="c1">// 下一位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">EdgeNode</span> <span class="n">Edge</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">dist</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">BellmanFord</span><span class="p">(</span><span class="kt">int</span> <span class="n">vn</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化dist[]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">fill</span><span class="p">(</span><span class="n">dist</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dist</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">INF</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">dist</span><span class="p">[</span><span class="n">vn</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">turn</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="n">turn</span><span class="o">--</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 下方的遍历重复n-1遍，保证可以更新全部的dist[]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">ei</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">ei</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">ei</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">dist</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">to</span><span class="p">],</span> <span class="n">dist</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">from</span><span class="p">]</span> <span class="o">+</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">w</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 这里为了方便获得查看的边的起点，可以在储存边的起点的时候加一个from的信息(否则就要先去找起点是谁)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化head
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">memset</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">head</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">fi</span><span class="p">,</span> <span class="n">ti</span><span class="p">,</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fi</span> <span class="o">&gt;&gt;</span> <span class="n">ti</span> <span class="o">&gt;&gt;</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span> <span class="o">=</span> <span class="n">ti</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">w</span> <span class="o">=</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">from</span> <span class="o">=</span> <span class="n">fi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">BellmanFord</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// -&gt;0 4 3 5 10 6 4 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>IDEA</code>：我们在这个算法中可以发现，我们选边的时候对于它终点于何处并不关心，相反，我们会关心它的起点的信息（我们要算的源起点到该边的起点的距离），所以直接在存边的时候添加起点(from)的记录会方便我们确定起点。</p>
+<p>虽然上文提到我们不考虑负权环的存在，但是我们可以想象，如果存在负权环，该图进入Bellman-Ford算法之后会有神奇的数据产生，我们试试看：</p>
+<p>给我们的测试数据添加一个负权边：</p>
+<pre tabindex="0"><code>7 10
+1 2 4
+1 3 3
+1 4 8
+2 6 2
+3 7 1
+4 3 5
+4 5 5
+7 7 -9
+7 6 5
+7 4 1
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
+v1((v1))-.4.-&gt;v2((v2))
+v1((v1))-.3.-&gt;v3((v3))
+v1((v1))-.8.-&gt;v4((v4))
+v2((v2))-.2.-&gt;v6((v6))
+v7((v7))-.5.-&gt;v6((v6))
+v7((v7))-.1.-&gt;v4((v4))
+v3((v3))-.1.-&gt;v7((v7))
+v4((v4))-.5.-&gt;v3((v3))
+v4((v4))-.5.-&gt;v5((v5))
+v7((v7))-. -9 .-&gt;v7((v7))
+</code></pre><pre tabindex="0"><code>同样的程序跑出来的结果是：
+0 4 -35 -49 -35 -45 -50
+原来的结果：
+0 4 3 5 10 6 4 
+</code></pre><p>思考：不管有没有负权环，我们得到的其实都是合理的最短路径，但是存在负权环会使得到某些点的最短距离一定会减少（加上一个负数肯定变小，而我们选择的是较小的那个路径），所以有负权环时，最短路径(假设路径上的点的数量没有限制)其实可以无限短，我们先前用暴力循环所有的点来保证所有的dist数组能够更新到最佳，那么假如有负权环在其中，dist数组没有最佳状态，所以我们简单的多循环一边，假如没有负权环，再多循环一边并不会改变dist数组里的值，如果有负权环，dist数组里一定有值改变。我们试试看：</p>
+<pre tabindex="0"><code>原来保证得到最佳只需要暴力循环n-1遍，得结果：
+0 4 -35 -49 -35 -45 -50
+暴力n次的结果：
+0 4 -44 -58 -44 -54 -59
+</code></pre><p>符合我们的想法。</p>
+<p>不过啊这个算法还是有暴力的成分，我们先前提到的只要遍历那些起点可直接到达的点等等想法还没实现，Bellman-Ford算法的时间复杂度有<code>O(nm)</code>，我们讨论算法的对于这样的复杂度肯定还是不满意的。</p>
+<p>我们再回忆一下整个搜索过程：其实我们关系的只是可以拓展的可能当中最小的是哪个，为了找到最小的那个，我们上面用了搜索全部的边、点的方法。那么我们的目的还是还是：有没有一种可以维护数据结构的方式，让我们更容易找到最小的那个可能？</p>
+<p>于是<strong>队列优化</strong>进入思维</p>
+<h3 id="spfa算法">SPFA算法</h3>
+<p>我们找<code>u -&gt; p -&gt; v</code>路径时，p点的选择方法会实际影响我们的复杂度。我们的目的肯定是去更新u可以直接到达的点，而下一次就是p可以直接到达的点&hellip;</p>
+<p>SPFA算法使用一个队列去记录这些可以直接到达的点(也就是答案可能在的路径上)。</p>
+<p>伪代码如下：</p>
+<pre tabindex="0"><code>we have a point u, and an empty queue q now
+初始化：u点是可能路径上的点，加入队列
+while(!q.empty()){
+	get all points that connected with point u
+	add the points(p1, p2, p3,...) that are not in the queue yet into queue q
+	out point u
+	update the distance of the points that are new in the queue now dist[p1], dist[p2], dist[p3],...
+}
+当所有可能的点都被遍历(q为空)了，dist数组也更新到最佳状态了
+</code></pre><p>SPFA是如何做到“只更新可能更新的点”的？</p>
+<ol>
+<li>只让当前点能到达的点入队</li>
+<li>如果一个点已经在队列里，便不重复入队</li>
+<li>如果一条边的起点还没被更新，那么它的终点不入队</li>
+</ol>
+<p>也就是说：当一个点入队了，代表它还在等待更新，当一个点出队了，那么它一定在当前经过最好的更新了。</p>
+<p>会有一个点入队了更新之后再次入队的情况吗？会有这种可能。</p>
+<p>来看看代码实现吧：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// 因为queue其实没有查找操作，所以简单用个bool型数组记录点p在队列中?inqueue[p]=true:inque[p]=false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="n">inqueue</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">SPFA</span><span class="p">(</span><span class="kt">int</span> <span class="n">vn</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 寻找vn到各个点的最短路径，记录在dist[]数组中。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化dist[]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">fill</span><span class="p">(</span><span class="n">dist</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dist</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">INF</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">dist</span><span class="p">[</span><span class="n">vn</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">updates</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">updates</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">vn</span><span class="p">);</span>	<span class="c1">// 将vn点加入待更新队列
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">updates</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 获得队首点，并把它移除待更新队列
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">int</span> <span class="n">firstp</span> <span class="o">=</span> <span class="n">updates</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="n">updates</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">inqueue</span><span class="p">[</span><span class="n">firstp</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>	<span class="c1">// 标记firstp已经不在队列中
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">firstp</span><span class="p">],</span> <span class="n">to</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">;</span><span class="n">k</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">k</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">next</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 遍历k可以直接到达的点to
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span> <span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">firstp</span><span class="p">]</span> <span class="o">+</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">w</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="n">firstp</span><span class="p">]</span> <span class="o">+</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">inqueue</span><span class="p">[</span><span class="n">to</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="n">updates</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">to</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">					<span class="n">inqueue</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>SFPA算法的时间复杂度并不稳定，可以预想，在极端的情况下，SFPA算法的复杂度可以和Bellman-Ford算法一样是<code>O(nm)</code>（不过随机数据模拟的算法复杂度大概是<code>O(m + nlogn)</code>）</p>
+<p>SFPA算法也可以判断负权环的存在：若一个点入队次数超过n次，接下来无论怎么更新队列都不会为空，可以据此判断是否有负权环。</p>
+<p><del>emmm优化了一点的BellmanFord算法？(思考)</del></p>
+<p>接下来介绍复杂度稳定的贪心算法：==Dijstra算法==</p>
+<h3 id="dijstra算法">☆☆☆Dijstra算法</h3>
+<p>Dij假设<u>没有负边</u></p>
+<p>因为没有负边，我们可以确定，离起点<strong>最近</strong>的那个顶点的dist一定是那个顶点的最终结果。</p>
+<p>思路：起点u可以<u>直接到达</u>的点中，最近的点p对应的e&lt;u, p&gt;一定是dist[p]的最佳值。假如它已经是最佳值了，我们在后面就可以把它当做起点u一样的点。由此我们只需要不断取出待更新队列里dist最小的点，并向后更新一层，直到没有需要再更新的点为止。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#define INF 0x3f3f3f3f
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">from</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">next</span><span class="p">;</span>	<span class="c1">// 下一位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">EdgeNode</span> <span class="n">Edge</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">dist</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">path</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>	<span class="c1">// 储存路径(存边)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">struct</span> <span class="nc">Polar</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 注意每个dist其实是一对一的绑定了它的索引的，直接写什么return dist[a]&gt;dist[b]会破坏堆的结构，可能会让dist[a]和dist[b]的索引变化。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">id</span><span class="p">,</span> <span class="n">dist</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">Polar</span><span class="p">(</span><span class="kt">int</span> <span class="n">dist</span><span class="p">,</span> <span class="kt">int</span> <span class="n">id</span><span class="p">)</span> <span class="o">:</span><span class="n">dist</span><span class="p">(</span><span class="n">dist</span><span class="p">),</span> <span class="n">id</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 对结构体中传数据，和下面这种写法作用一样：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// Polar(int d, int d_id) {
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 	dist = d;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 	id = d_id;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// }
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 重载运算符&lt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">Polar</span><span class="o">&amp;</span> <span class="n">P</span><span class="p">)</span><span class="k">const</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">dist</span> <span class="o">&lt;</span> <span class="n">P</span><span class="p">.</span><span class="n">dist</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">cmp</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// // 重写仿函数法：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">bool</span> <span class="nf">operator</span> <span class="p">()(</span><span class="n">Polar</span> <span class="n">a</span><span class="p">,</span> <span class="n">Polar</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 重载()运算符，使其成为一个仿函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">dist</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">.</span><span class="n">dist</span><span class="p">;</span>	
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// priority_queue&lt;Polar, vector&lt;Polar&gt;, cmp&gt; q;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">Polar</span><span class="o">&gt;</span> <span class="n">q</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">visited</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Dij</span><span class="p">(</span><span class="kt">int</span> <span class="n">vn</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">fill</span><span class="p">(</span><span class="n">dist</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dist</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">INF</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">dist</span><span class="p">[</span><span class="n">vn</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">Polar</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">vn</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">id</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">pid</span><span class="p">])</span> 
+</span></span><span class="line"><span class="cl">			<span class="c1">// 若已经在队列中
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="n">visited</span><span class="p">[</span><span class="n">pid</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">ei</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">pid</span><span class="p">],</span> <span class="n">to</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">to</span><span class="p">;</span><span class="n">ei</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">ei</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">next</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">to</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">pid</span><span class="p">]</span> <span class="o">+</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">w</span> <span class="o">&lt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">				<span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="n">pid</span><span class="p">]</span> <span class="o">+</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="n">path</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">from</span><span class="p">;</span>	<span class="c1">// 记录路径的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>               	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="n">to</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">				<span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">Polar</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">],</span> <span class="n">to</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化head
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">memset</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">head</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">	<span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">fi</span><span class="p">,</span> <span class="n">ti</span><span class="p">,</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fi</span> <span class="o">&gt;&gt;</span> <span class="n">ti</span> <span class="o">&gt;&gt;</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span> <span class="o">=</span> <span class="n">ti</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">w</span> <span class="o">=</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">from</span> <span class="o">=</span> <span class="n">fi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Dij</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// -&gt;0 4 3 5 10 6 4
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="n">t</span> <span class="o">!=</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">t</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;&lt;-&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">t</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="n">t</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// -&gt;5&lt;-4&lt;-7&lt;-3&lt;-1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>当然了用pair也行，反正只有id和dist两个数据，<del>多个其实也没关系你也可以pair套pair</del></p>
+<p>(另外两种简单的写法在STL.md里面写了，这里不写了)</p>
+<h4 id="-如何记录路径">-如何记录路径？</h4>
+<p>把在更新点更新path数组就行。也就是dist[pos]&gt;dist[u]+w(u-&gt;pos)的时候把这个更新的来源放在path数组里就行（记录到达某点的最好的路径的上一个来源点）。像这样：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">pid</span><span class="p">]</span> <span class="o">+</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">w</span> <span class="o">&lt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">]){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="n">pid</span><span class="p">]</span> <span class="o">+</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">path</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">from</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="模板题">模板题</h3>
+<blockquote>
+<p>模板题指路：</p>
+<p><a href="https://www.luogu.com.cn/problem/P3371">P3371 【模板】单源最短路径（弱化版） - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
+<p><a href="https://www.luogu.com.cn/problem/P4779">P4779 【模板】单源最短路径（标准版） - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
+<p>P3371【模板】单源最短路径（弱化版）</p>
+<p>==题目背景==</p>
+<p>本题测试数据为随机数据，在考试中可能会出现构造数据让SPFA不通过，如有需要请移步 <a href="https://www.luogu.org/problemnew/show/P4779">P4779</a>。</p>
+<p>题目描述</p>
+<p>如题，给出一个有向图，请输出从某一点出发到所有点的最短路径长度。</p>
+<p>==输入格式==</p>
+<p>第一行包含三个整数 $n,m,s$，分别表示点的个数、有向边的个数、出发点的编号。</p>
+<p>接下来 $m$ 行每行包含三个整数 $u,v,w$，表示一条 $u \to v$ 的，长度为 $w$ 的边。</p>
+<p>==输出格式==</p>
+<p>输出一行 $n$ 个整数，第 $i$ 个表示 $s$ 到第 $i$ 个点的最短路径，若不能到达则输出 $2^{31}-1$。</p>
+<p>==样例==</p>
+<p>样例输入 #1</p>
+<pre tabindex="0"><code>4 6 1
+1 2 2
+2 3 2
+2 4 1
+1 3 5
+3 4 3
+1 4 4
+</code></pre><p>样例输出 #1</p>
+<pre tabindex="0"><code>0 2 4 3
+</code></pre><p>==提示==</p>
+<p>【数据范围】 <br>
+对于 $20%$ 的数据：$1\le n \le 5$，$1\le m \le 15$；<br>
+对于 $40%$ 的数据：$1\le n \le 100$，$1\le m \le 10^4$；<br>
+对于 $70%$ 的数据：$1\le n \le 1000$，$1\le m \le 10^5$；<br>
+对于 $100%$ 的数据：$1 \le n \le 10^4$，$1\le m \le 5\times 10^5$，$1\le u,v\le n$，$w\ge 0$，$\sum w&lt; 2^{31}$，保证数据随机。</p>
+<p><strong>Update 2022/07/29：两个点之间可能有多条边，敬请注意。</strong></p>
+<p>对于真正 $100%$ 的数据，请移步 <a href="https://www.luogu.org/problemnew/show/P4779">P4779</a>。请注意，该题与本题数据范围略有不同。</p>
+<p>样例说明：</p>
+<p><img loading="lazy" src="https://cdn.luogu.com.cn/upload/pic/7641.png" alt=""  />
+</p>
+<p>图片1到3和1到4的文字位置调换</p>
+</blockquote>
+<p>AC代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#define INF 2147483647
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">from</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">ll</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">next</span><span class="p">;</span>	<span class="c1">// 下一位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">EdgeNode</span> <span class="n">Edge</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="n">dist</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">inqueue</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">SFPA</span><span class="p">(</span><span class="kt">int</span> <span class="n">vn</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">fill</span><span class="p">(</span><span class="n">dist</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dist</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">INF</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">dist</span><span class="p">[</span><span class="n">vn</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">updates</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">updates</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">vn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">updates</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">firstp</span> <span class="o">=</span> <span class="n">updates</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="n">updates</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">inqueue</span><span class="p">[</span><span class="n">firstp</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">firstp</span><span class="p">],</span> <span class="n">to</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">;</span><span class="n">k</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">k</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">next</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 遍历k可以直接到达的点to
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span> <span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">firstp</span><span class="p">]</span> <span class="o">+</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">w</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="n">firstp</span><span class="p">]</span> <span class="o">+</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">inqueue</span><span class="p">[</span><span class="n">to</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="n">updates</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">to</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">					<span class="n">inqueue</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span> <span class="o">&gt;&gt;</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化head
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">memset</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">head</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">ll</span> <span class="n">fi</span><span class="p">,</span> <span class="n">ti</span><span class="p">,</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fi</span> <span class="o">&gt;&gt;</span> <span class="n">ti</span> <span class="o">&gt;&gt;</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span> <span class="o">=</span> <span class="n">ti</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">w</span> <span class="o">=</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">from</span> <span class="o">=</span> <span class="n">fi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">SFPA</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这个&hellip;没有卡SFPA。看另一个卡SFPA的题：</p>
+<blockquote>
+<p>P4779【模板】单源最短路径（标准版）</p>
+<p>==题目背景==</p>
+<p>2018 年 7 月 19 日，某位同学在 <a href="https://www.luogu.org/problemnew/show/P4768">NOI Day 1 T1 归程</a> 一题里非常熟练地使用了一个广为人知的算法求最短路。</p>
+<p>然后呢？</p>
+<p>$100 \rightarrow 60$；</p>
+<p>$\text{Ag} \rightarrow \text{Cu}$；</p>
+<p>最终，他因此没能与理想的大学达成契约。</p>
+<p>小 F 衷心祝愿大家不再重蹈覆辙。</p>
+<p>==题目描述==</p>
+<p>给定一个 $n$ 个点，$m$ 条有向边的带非负权图，请你计算从 $s$ 出发，到每个点的距离。</p>
+<p>数据保证你能从 $s$ 出发到任意点。</p>
+<p>==输入格式==</p>
+<p>第一行为三个正整数 $n, m, s$。
+第二行起 $m$ 行，每行三个非负整数 $u_i, v_i, w_i$，表示从 $u_i$ 到 $v_i$ 有一条权值为 $w_i$ 的有向边。</p>
+<p>==输出格式==</p>
+<p>输出一行 $n$ 个空格分隔的非负整数，表示 $s$ 到每个点的距离。</p>
+<p>==样例==</p>
+<p>样例输入 #1</p>
+<pre tabindex="0"><code>4 6 1
+1 2 2
+2 3 2
+2 4 1
+1 3 5
+3 4 3
+1 4 4
+</code></pre><p>样例输出 #1</p>
+<pre tabindex="0"><code>0 2 4 3
+</code></pre><p>==提示==</p>
+<p>样例解释请参考 <a href="https://www.luogu.org/problemnew/show/P3371">数据随机的模板题</a>。</p>
+<p>$1 \leq n \leq 10^5$；</p>
+<p>$1 \leq m \leq 2\times 10^5$；</p>
+<p>$s = 1$；</p>
+<p>$1 \leq u_i, v_i\leq n$；</p>
+<p>$0 \leq w_i \leq 10 ^ 9$,</p>
+<p>$0 \leq \sum w_i \leq 10 ^ 9$。</p>
+<p>本题数据可能会持续更新，但不会重测，望周知。</p>
+<p>2018.09.04 数据更新 from @zzq</p>
+</blockquote>
+<p>AC代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#define INF 2147483647
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">from</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">next</span><span class="p">;</span>	<span class="c1">// 下一位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">EdgeNode</span> <span class="n">Edge</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">dist</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// priority_queue&lt;pair&lt;ll, int&gt;&gt; q;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">,</span> <span class="n">greater</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&gt;</span> <span class="n">q</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">visited</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>	<span class="c1">// 记录已经获得最短路的点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Dij</span><span class="p">(</span><span class="kt">int</span> <span class="n">vn</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">dist</span><span class="p">[</span><span class="n">vn</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">vn</span><span class="p">],</span> <span class="n">vn</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 取队首元素(最小的)将它移出队列并标记移出
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">int</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">pid</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">			<span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">visited</span><span class="p">[</span><span class="n">pid</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">ei</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">pid</span><span class="p">],</span> <span class="n">to</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">to</span><span class="p">;</span><span class="n">ei</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">ei</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">next</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">to</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 找和pid(被移出的已最佳点)相连的边，更新dist
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span> <span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">pid</span><span class="p">]</span> <span class="o">+</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">w</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="n">pid</span><span class="p">]</span> <span class="o">+</span> <span class="n">Edge</span><span class="p">[</span><span class="n">ei</span><span class="p">].</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="n">to</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">					<span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">make_pair</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">to</span><span class="p">],</span> <span class="n">to</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span> <span class="o">&gt;&gt;</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化head
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">memset</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">head</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">	<span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">fi</span><span class="p">,</span> <span class="n">ti</span><span class="p">,</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fi</span> <span class="o">&gt;&gt;</span> <span class="n">ti</span> <span class="o">&gt;&gt;</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span> <span class="o">=</span> <span class="n">ti</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">w</span> <span class="o">=</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">from</span> <span class="o">=</span> <span class="n">fi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">fill</span><span class="p">(</span><span class="n">dist</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dist</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">INF</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Dij</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><del>啊总算绕完最短路这几个算法了，时候想通了感觉还挺明白的，不过由于某人的码力好差，老是达不到想要的效果[可恶]，还得多写代码而不是只注重想法。写出来了才算是初步会了！</del></p>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>NENU2023学年算法2例题</title>
-      <link>https://dodolalorc.cn/posts/tech/algorithm/nenuoj/</link>
+      <link>https://florae006.github.io/posts/knowledge/algorithm/nenuoj/</link>
       <pubDate>Tue, 19 Dec 2023 22:02:50 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/tech/algorithm/nenuoj/</guid>
+      <guid>https://florae006.github.io/posts/knowledge/algorithm/nenuoj/</guid>
       <description>有的题还没写完）咕咕咕）） NENU OJ算法2例题 这学期写算法2并不想写详细思路(出于ddl再也不用关心小组啦的自由)，不过如果有想交流的也可以评论</description>
       <content:encoded><![CDATA[<p>有的题还没写完）咕咕咕））</p>
 <h1 id="nenu-oj算法2例题">NENU OJ算法2例题</h1>
@@ -1640,50 +3516,23 @@ X</p>
 <p>==输出==</p>
 <p>对每组赌注，输出胜利者下的赌注，如果没有解，则输出“no solution”。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">2 
-</span></span><span class="line"><span class="cl">3 
-</span></span><span class="line"><span class="cl">5 
-</span></span><span class="line"><span class="cl">7 
-</span></span><span class="line"><span class="cl">12
-</span></span><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">2 
-</span></span><span class="line"><span class="cl">16 
-</span></span><span class="line"><span class="cl">64 
-</span></span><span class="line"><span class="cl">256 
-</span></span><span class="line"><span class="cl">1024
-</span></span><span class="line"><span class="cl">0
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">12
-</span></span><span class="line"><span class="cl">no solution
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-17">AC代码</h4>
+<pre tabindex="0"><code>5
+2 
+3 
+5 
+7 
+12
+5
+2 
+16 
+64 
+256 
+1024
+0
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>12
+no solution
+</code></pre><h4 id="ac代码-17">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1774,36 +3623,16 @@ X</p>
 <p>==输出==</p>
 <p>对每个测试数据，如果N是半素数，则输出YES，否则输出NO。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">6
-</span></span><span class="line"><span class="cl">12
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">NO
-</span></span><span class="line"><span class="cl">YES
-</span></span><span class="line"><span class="cl">YES
-</span></span><span class="line"><span class="cl">NO
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-18">AC代码</h4>
+<pre tabindex="0"><code>3
+4
+6
+12
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>NO
+YES
+YES
+NO
+</code></pre><h4 id="ac代码-18">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1888,34 +3717,15 @@ X</p>
 <p>==输出==</p>
 <p>对每个测试数据，输出金属棍子中心加热后偏离的距离，单位为毫米，保留小数点后3位有效数字。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1000 100 0.0001
-</span></span><span class="line"><span class="cl">15000 10 0.00006
-</span></span><span class="line"><span class="cl">10 0 0.001
-</span></span><span class="line"><span class="cl">-1 -1 -1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">61.329
-</span></span><span class="line"><span class="cl">225.020
-</span></span><span class="line"><span class="cl">0.000
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-19">AC代码</h4>
+<pre tabindex="0"><code>1000 100 0.0001
+15000 10 0.00006
+10 0 0.001
+-1 -1 -1
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>61.329
+225.020
+0.000
+</code></pre><h4 id="ac代码-19">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1987,32 +3797,14 @@ X</p>
 <p>==输出==</p>
 <p>所需的电缆一条最长有多少米（精确到厘米，即保留小数点两位）。如果不能提供K条大于等于1厘米的等长电缆就输出“0.00”。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4 11
-</span></span><span class="line"><span class="cl">8.02
-</span></span><span class="line"><span class="cl">7.43
-</span></span><span class="line"><span class="cl">4.57
-</span></span><span class="line"><span class="cl">5.39
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2.00
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-20">AC代码</h4>
+<pre tabindex="0"><code>4 11
+8.02
+7.43
+4.57
+5.39
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>2.00
+</code></pre><h4 id="ac代码-20">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2105,44 +3897,20 @@ X</p>
 <p>==输出==</p>
 <p>将消息的外文词翻译成英语，一个词一行。查不到的词应该翻译成“eh”。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dog ogday
-</span></span><span class="line"><span class="cl">cat atcay
-</span></span><span class="line"><span class="cl">pig igpay
-</span></span><span class="line"><span class="cl">froot ootfray
-</span></span><span class="line"><span class="cl">loops oopslay
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">atcay
-</span></span><span class="line"><span class="cl">ittenkay
-</span></span><span class="line"><span class="cl">oopslay
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cat
-</span></span><span class="line"><span class="cl">eh
-</span></span><span class="line"><span class="cl">loops
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-21">AC代码</h4>
+<pre tabindex="0"><code>dog ogday
+cat atcay
+pig igpay
+froot ootfray
+loops oopslay
+
+atcay
+ittenkay
+oopslay
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>cat
+eh
+loops
+</code></pre><h4 id="ac代码-21">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2209,34 +3977,15 @@ X</p>
 <p>==输出==</p>
 <p>对于每组数据输出形成正方形的个数。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">1 0
-</span></span><span class="line"><span class="cl">0 1
-</span></span><span class="line"><span class="cl">1 1
-</span></span><span class="line"><span class="cl">0 0
-</span></span><span class="line"><span class="cl">0
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-22">AC代码</h4>
+<pre tabindex="0"><code>4
+1 0
+0 1
+1 1
+0 0
+0
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>1
+</code></pre><h4 id="ac代码-22">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code></code></pre></td>
@@ -5289,10 +7038,10 @@ A：
     
     <item>
       <title>【网站美化】点击特效2</title>
-      <link>https://dodolalorc.cn/posts/startsite/beautify_site_clickfollow/</link>
+      <link>https://florae006.github.io/posts/startsite/beautify_site_clickfollow/</link>
       <pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/beautify_site_clickfollow/</guid>
+      <guid>https://florae006.github.io/posts/startsite/beautify_site_clickfollow/</guid>
       <description>增加了一个鼠标追尾的效果 QwQ 添加文件的方式参考上一篇~指路这篇 js文件： pointerfollow.js js 原文件来源：Canva&amp;rsquo;s Magic Mouse Effect (codepen.io) （我有稍微改了一些样</description>
       <content:encoded><![CDATA[<p>增加了一个鼠标追尾的效果 QwQ</p>
 <p>添加文件的方式参考上一篇~指路<a href="/posts/startsite/beautify_site_click/">这篇</a></p>
@@ -5454,10 +7203,10 @@ A：
     
     <item>
       <title>【网站美化】点击特效</title>
-      <link>https://dodolalorc.cn/posts/startsite/beautify_site_click/</link>
+      <link>https://florae006.github.io/posts/startsite/beautify_site_click/</link>
       <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/beautify_site_click/</guid>
+      <guid>https://florae006.github.io/posts/startsite/beautify_site_click/</guid>
       <description>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码 添加js文件 这</description>
       <content:encoded><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
 <h1 id="添加js文件">添加js文件</h1>
@@ -5506,10 +7255,10 @@ A：
     
     <item>
       <title>【网站美化】标签美化</title>
-      <link>https://dodolalorc.cn/posts/startsite/beautify_site_tags/</link>
+      <link>https://florae006.github.io/posts/startsite/beautify_site_tags/</link>
       <pubDate>Wed, 13 Dec 2023 23:00:09 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/beautify_site_tags/</guid>
+      <guid>https://florae006.github.io/posts/startsite/beautify_site_tags/</guid>
       <description>简单设计 assets/css/common/terms.css添加： 1 2 3 4 5 6 7 .terms-tags{ padding-left: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; } 添加权重 在./layouts/_d</description>
       <content:encoded><![CDATA[<h2 id="简单设计">简单设计</h2>
 <p><code>assets/css/common/terms.css</code>添加：</p>
@@ -5639,10 +7388,10 @@ A：
     
     <item>
       <title>小机器人dodola，启动！</title>
-      <link>https://dodolalorc.cn/posts/tech/toys/cq_bot/</link>
+      <link>https://florae006.github.io/posts/knowledge/toys/cq_bot/</link>
       <pubDate>Wed, 06 Dec 2023 14:21:23 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/tech/toys/cq_bot/</guid>
+      <guid>https://florae006.github.io/posts/knowledge/toys/cq_bot/</guid>
       <description>拥有一个自己的小机器人不是超酷的么😎 本部分将从0开始介绍一个qq机器人的制作以及部署到服务器。 0.环境一览 开发环境：Windows11 pyt</description>
       <content:encoded><![CDATA[<blockquote>
 <p>拥有一个自己的小机器人不是超酷的么😎</p>
@@ -6057,20 +7806,20 @@ A：
     
     <item>
       <title>🗃留言板</title>
-      <link>https://dodolalorc.cn/comments/</link>
+      <link>https://florae006.github.io/comments/</link>
       <pubDate>Sat, 02 Dec 2023 17:55:47 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/comments/</guid>
+      <guid>https://florae006.github.io/comments/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>队内拉题|23.11.29</title>
-      <link>https://dodolalorc.cn/posts/tech/algorithm/training0/</link>
+      <link>https://florae006.github.io/posts/knowledge/algorithm/training0/</link>
       <pubDate>Sat, 02 Dec 2023 16:47:17 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/tech/algorithm/training0/</guid>
+      <guid>https://florae006.github.io/posts/knowledge/algorithm/training0/</guid>
       <description>前言点评：本次题目难度不高 A 跳石头 [NOIP2015 提高组] 跳石头 题目背景 NOIP2015 Day2T1 题目描述 一年一度的“跳石头”比赛又要开始了！ 这项比赛将在一条笔直的河道中进行，</description>
       <content:encoded><![CDATA[<p>前言点评：本次题目难度不高</p>
 <h2 id="a-跳石头">A 跳石头</h2>
@@ -6089,34 +7838,15 @@ A：
 <p>一个整数，即最短跳跃距离的最大值。</p>
 <h2 id="样例-1">样例 #1</h2>
 <h3 id="样例输入-1">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">25 5 2 
-</span></span><span class="line"><span class="cl">2
-</span></span><span class="line"><span class="cl">11
-</span></span><span class="line"><span class="cl">14
-</span></span><span class="line"><span class="cl">17 
-</span></span><span class="line"><span class="cl">21
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示">提示</h2>
+<pre tabindex="0"><code>25 5 2 
+2
+11
+14
+17 
+21
+</code></pre><h3 id="样例输出-1">样例输出 #1</h3>
+<pre tabindex="0"><code>4
+</code></pre><h2 id="提示">提示</h2>
 <h3 id="输入输出样例-1-说明">输入输出样例 1 说明</h3>
 <p>将与起点距离为 $2$ 和 $14$ 的两个岩石移走后，最短的跳跃距离为 $4$（从与起点距离 $17$ 的岩石跳到距离 $21$ 的岩石，或者从距离 $21$ 的岩石跳到终点）。</p>
 <h3 id="数据规模与约定">数据规模与约定</h3>
@@ -6159,64 +7889,30 @@ A：
 </ul>
 <h2 id="样例-1-1">样例 #1</h2>
 <h3 id="样例输入-1-1">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">ABBAA
-</span></span><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">BBB
-</span></span><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">BBAAABA
-</span></span><span class="line"><span class="cl">20
-</span></span><span class="line"><span class="cl">AAAAAAAABBBAABBBBBAB
-</span></span><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">A
-</span></span><span class="line"><span class="cl">13
-</span></span><span class="line"><span class="cl">AAAABABBABBAB
-</span></span><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">BBBAAAA
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-1">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">A
-</span></span><span class="line"><span class="cl">B
-</span></span><span class="line"><span class="cl">A
-</span></span><span class="line"><span class="cl">B
-</span></span><span class="line"><span class="cl">A
-</span></span><span class="line"><span class="cl">B
-</span></span><span class="line"><span class="cl">A
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-1">提示</h2>
+<pre tabindex="0"><code>7
+5
+ABBAA
+3
+BBB
+7
+BBAAABA
+20
+AAAAAAAABBBAABBBBBAB
+1
+A
+13
+AAAABABBABBAB
+7
+BBBAAAA
+</code></pre><h3 id="样例输出-1-1">样例输出 #1</h3>
+<pre tabindex="0"><code>A
+B
+A
+B
+A
+B
+A
+</code></pre><h2 id="提示-1">提示</h2>
 <p>In the first test case, the game could have been played with parameters $ X = 3 $ , $ Y = 1 $ . The game consisted of $ 1 $ set, in which player A won, as they won the first $ 3 $ plays. In this scenario, player A is the winner. The game could also have been played with parameters $ X = 1 $ , $ Y = 3 $ . It can be shown that there are no such $ X $ and $ Y $ values for which player B would be the winner.</p>
 <p>In the second test case, player B won all the plays. It can be easily shown that in this case, player B is guaranteed to be the winner of the game.</p>
 <p>In the fourth test case, the game could have been played with parameters $ X = 3 $ , $ Y = 3 $ :</p>
@@ -6292,26 +7988,11 @@ A：
 <p>输出一行一个正整数表示 $\sum_{i=1}^S \text{maj}(b_1,b_2,\cdots,b_i)$ 的最大值。</p>
 <h2 id="样例-1-2">样例 #1</h2>
 <h3 id="样例输入-1-2">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">1 3 2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-2">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">17
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-2">提示</h2>
+<pre tabindex="0"><code>3
+1 3 2
+</code></pre><h3 id="样例输出-1-2">样例输出 #1</h3>
+<pre tabindex="0"><code>17
+</code></pre><h2 id="提示-2">提示</h2>
 <h4 id="样例解释-1">样例解释 1</h4>
 <p>一个达到最大值的序列为 $(3,2,3,1,2,2)$。</p>
 <h4 id="数据范围">数据范围</h4>
@@ -6402,42 +8083,19 @@ A：
 <p>对于每组测试数据输出一行：若难度是合理的，输出 <code>Reasonable</code>，否则输出 <code>Unreasonable</code>。</p>
 <h2 id="样例-1-3">样例 #1</h2>
 <h3 id="样例输入-1-3">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2
-</span></span><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">0 -1 0
-</span></span><span class="line"><span class="cl">1 2
-</span></span><span class="line"><span class="cl">2 3
-</span></span><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">0 -1 0
-</span></span><span class="line"><span class="cl">1 2
-</span></span><span class="line"><span class="cl">1 3
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-3">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Reasonable
-</span></span><span class="line"><span class="cl">Unreasonable
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-3">提示</h2>
+<pre tabindex="0"><code>2
+3
+0 -1 0
+1 2
+2 3
+3
+0 -1 0
+1 2
+1 3
+</code></pre><h3 id="样例输出-1-3">样例输出 #1</h3>
+<pre tabindex="0"><code>Reasonable
+Unreasonable
+</code></pre><h2 id="提示-3">提示</h2>
 <h3 id="样例-1-解释">样例 1 解释</h3>
 <p>对于第一组测试数据，将知识点 $2$ 的难度定为 $0$ 即满足条件。</p>
 <p>对于第二组测试数据，无论如何指定知识点 $2$ 的难度，知识点 $1$ 的难度会产生矛盾。</p>
@@ -6486,46 +8144,21 @@ A：
 <p>For each test case, print one integer — the minimum number of times Monocarp has to teleport the chip.</p>
 <h2 id="样例-1-4">样例 #1</h2>
 <h3 id="样例输入-1-4">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">1 2 2 1
-</span></span><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">1 0 1 0 1
-</span></span><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">5 4 3 2 1
-</span></span><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">12
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-4">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">2
-</span></span><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">11
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-4">提示</h2>
+<pre tabindex="0"><code>4
+4
+1 2 2 1
+5
+1 0 1 0 1
+5
+5 4 3 2 1
+1
+12
+</code></pre><h3 id="样例输出-1-4">样例输出 #1</h3>
+<pre tabindex="0"><code>1
+2
+4
+11
+</code></pre><h2 id="提示-4">提示</h2>
 <p>In the first test case of the example, Monocarp can perform the turns as follows:</p>
 <ul>
 <li>place the chip in the $ 1 $ -st cell; the numbers in the cells are $ [1, 0, 0, 0] $ ;</li>
@@ -6601,28 +8234,12 @@ A：
 <p>如果不存在方案，输出一行一个整数 <code>-1</code>。否则输出 $(n-1)$ 行，第 $i$ 行 $(n-i)$ 个字符，第 $i$ 行的第 $j$ 个字符表示 $(i,i+j)$ 的标号。若有多个方案，输出任意一个即可。</p>
 <h2 id="样例-1-5">样例 #1</h2>
 <h3 id="样例输入-1-5">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-5">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">012
-</span></span><span class="line"><span class="cl">34
-</span></span><span class="line"><span class="cl">5
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-5">提示</h2>
+<pre tabindex="0"><code>4
+</code></pre><h3 id="样例输出-1-5">样例输出 #1</h3>
+<pre tabindex="0"><code>012
+34
+5
+</code></pre><h2 id="提示-5">提示</h2>
 <h3 id="数据规模与约定-2">数据规模与约定</h3>
 <p>对于所有测试数据，$2 \le n \le 1000$。</p>
 <h3 id="题目来源-2">题目来源</h3>
@@ -6698,34 +8315,15 @@ A：
 <p>For each testcase, print a single integer — the smallest time required for Monocarp to open the chest.</p>
 <h2 id="样例-1-6">样例 #1</h2>
 <h3 id="样例输入-1-6">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">5 7 2
-</span></span><span class="line"><span class="cl">10 5 0
-</span></span><span class="line"><span class="cl">5 8 2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-6">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">10
-</span></span><span class="line"><span class="cl">9
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-6">提示</h2>
+<pre tabindex="0"><code>3
+5 7 2
+10 5 0
+5 8 2
+</code></pre><h3 id="样例输出-1-6">样例输出 #1</h3>
+<pre tabindex="0"><code>7
+10
+9
+</code></pre><h2 id="提示-6">提示</h2>
 <p>In the first testcase, Monocarp can open the chest in $ 7 $ seconds with the following sequence of moves:</p>
 <ul>
 <li>go $ 5 $ times to the right ( $ 5 $ seconds);</li>
@@ -6872,108 +8470,43 @@ $$</p>
 <p>输出一个正整数，表示满足要求的最小总投票数 $K$。</p>
 <h2 id="样例-1-7">样例 #1</h2>
 <h3 id="样例输入-1-7">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">0.166667
-</span></span><span class="line"><span class="cl">0.333333
-</span></span><span class="line"><span class="cl">0.500000
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-7">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">6
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="样例-2">样例 #2</h2>
+<pre tabindex="0"><code>3
+0.166667
+0.333333
+0.500000
+</code></pre><h3 id="样例输出-1-7">样例输出 #1</h3>
+<pre tabindex="0"><code>6
+</code></pre><h2 id="样例-2">样例 #2</h2>
 <h3 id="样例输入-2">样例输入 #2</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">0.041096
-</span></span><span class="line"><span class="cl">0.109589
-</span></span><span class="line"><span class="cl">0.109589
-</span></span><span class="line"><span class="cl">0.164384
-</span></span><span class="line"><span class="cl">0.301370
-</span></span><span class="line"><span class="cl">0.068493
-</span></span><span class="line"><span class="cl">0.205479
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-2">样例输出 #2</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">73
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="样例-3">样例 #3</h2>
+<pre tabindex="0"><code>7
+0.041096
+0.109589
+0.109589
+0.164384
+0.301370
+0.068493
+0.205479
+</code></pre><h3 id="样例输出-2">样例输出 #2</h3>
+<pre tabindex="0"><code>73
+</code></pre><h2 id="样例-3">样例 #3</h2>
 <h3 id="样例输入-3">样例输入 #3</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">13
-</span></span><span class="line"><span class="cl">0.00155
-</span></span><span class="line"><span class="cl">0.03876
-</span></span><span class="line"><span class="cl">0.01584
-</span></span><span class="line"><span class="cl">0.05189
-</span></span><span class="line"><span class="cl">0.08099
-</span></span><span class="line"><span class="cl">0.06825
-</span></span><span class="line"><span class="cl">0.15658
-</span></span><span class="line"><span class="cl">0.10404
-</span></span><span class="line"><span class="cl">0.02640
-</span></span><span class="line"><span class="cl">0.14332
-</span></span><span class="line"><span class="cl">0.12941
-</span></span><span class="line"><span class="cl">0.15529
-</span></span><span class="line"><span class="cl">0.02768
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-3">样例输出 #3</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7766
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-9">提示</h2>
+<pre tabindex="0"><code>13
+0.00155
+0.03876
+0.01584
+0.05189
+0.08099
+0.06825
+0.15658
+0.10404
+0.02640
+0.14332
+0.12941
+0.15529
+0.02768
+</code></pre><h3 id="样例输出-3">样例输出 #3</h3>
+<pre tabindex="0"><code>7766
+</code></pre><h2 id="提示-9">提示</h2>
 <p><strong>【样例解释 #1】</strong></p>
 <p>最小的总投票数为 $6$，对应每个选项的投票数为 $1, 2, 3$。</p>
 <p><strong>【样例解释 #2】</strong></p>
@@ -7016,44 +8549,20 @@ $$</p>
 <p>If there are multiple answers, print any of them.</p>
 <h2 id="样例-1-8">样例 #1</h2>
 <h3 id="样例输入-1-8">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2
-</span></span><span class="line"><span class="cl">2
-</span></span><span class="line"><span class="cl">15 1 10 5
-</span></span><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">10 30 20 20 30 10
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-8">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">9
-</span></span><span class="line"><span class="cl">10 1
-</span></span><span class="line"><span class="cl">15 5
-</span></span><span class="line"><span class="cl">20
-</span></span><span class="line"><span class="cl">20 20
-</span></span><span class="line"><span class="cl">10 30
-</span></span><span class="line"><span class="cl">10 30
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-10">提示</h2>
+<pre tabindex="0"><code>2
+2
+15 1 10 5
+3
+10 30 20 20 30 10
+</code></pre><h3 id="样例输出-1-8">样例输出 #1</h3>
+<pre tabindex="0"><code>9
+10 1
+15 5
+20
+20 20
+10 30
+10 30
+</code></pre><h2 id="提示-10">提示</h2>
 <p>In the first testcase, for instance, you can form points $ (10, 1) $ and $ (15, 5) $ and start the path $ s $ from the first point and end it at the second point. Then the length of the path will be $ |10 - 15| + |1 - 5| = 5 + 4 = 9 $ .</p>
 <p>In the second testcase, you can form points $ (20, 20) $ , $ (10, 30) $ , and $ (10, 30) $ , and visit them in that exact order. Then the length of the path will be $ |20 - 10| + |20 - 30| + |10 - 10| + |30 - 30| = 10 + 10 + 0 + 0 = 20 $ .</p>
 </blockquote>
@@ -7146,49 +8655,18 @@ $$</p>
 <p>如果小 I 不可能获胜，只需要输出一个整数 <code>-1</code>；否则第一行输出一个整数 $s$，表示你给出的策略中小 I 的行动次数。接下来一行 $s$ 个整数，依次描述每次行动时小 I 从手牌中放入公共牌堆的牌的牌面，两个数之间以一个空格分隔。<strong>注意你给出的策略要满足 $s$ 最小。</strong></p>
 <h2 id="样例-1-9">样例 #1</h2>
 <h3 id="样例输入-1-9">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">1 3 3
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-9">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">2 1 2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="样例-2-1">样例 #2</h2>
+<pre tabindex="0"><code>3
+1 3 3
+</code></pre><h3 id="样例输出-1-9">样例输出 #1</h3>
+<pre tabindex="0"><code>3
+2 1 2
+</code></pre><h2 id="样例-2-1">样例 #2</h2>
 <h3 id="样例输入-2-1">样例输入 #2</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-2-1">样例输出 #2</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-11">提示</h2>
+<pre tabindex="0"><code>1
+1
+</code></pre><h3 id="样例输出-2-1">样例输出 #2</h3>
+<pre tabindex="0"><code>-1
+</code></pre><h2 id="提示-11">提示</h2>
 <h4 id="样例解释-1-1">样例解释 1</h4>
 <p><img loading="lazy" src="https://cdn.luogu.com.cn/upload/image_hosting/m1asrjdd.png" alt=""  />
 </p>
@@ -7236,34 +8714,15 @@ $$</p>
 <p>输出区域中最长滑坡的长度。</p>
 <h2 id="样例-1-10">样例 #1</h2>
 <h3 id="样例输入-1-10">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">5 5
-</span></span><span class="line"><span class="cl">1 2 3 4 5
-</span></span><span class="line"><span class="cl">16 17 18 19 6
-</span></span><span class="line"><span class="cl">15 24 25 20 7
-</span></span><span class="line"><span class="cl">14 23 22 21 8
-</span></span><span class="line"><span class="cl">13 12 11 10 9
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-10">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">25
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-12">提示</h2>
+<pre tabindex="0"><code>5 5
+1 2 3 4 5
+16 17 18 19 6
+15 24 25 20 7
+14 23 22 21 8
+13 12 11 10 9
+</code></pre><h3 id="样例输出-1-10">样例输出 #1</h3>
+<pre tabindex="0"><code>25
+</code></pre><h2 id="提示-12">提示</h2>
 <p>对于 $100%$ 的数据，$1\leq R,C\leq 100$。</p>
 </blockquote>
 <h3 id="分析-11">分析</h3>
@@ -7412,76 +8871,36 @@ $$
 <p>For each test case, print -1 if there is no solution. Otherwise, print $ b_1, b_2, \ldots, b_n $ — an array consisting of numbers $ 1 $ , $ 2 $ , $ 3 $ that satisfies exactly two out of three conditions. If there are multiple possible answers, you can print any of them.</p>
 <h2 id="样例-1-11">样例 #1</h2>
 <h3 id="样例输入-1-11">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">9
-</span></span><span class="line"><span class="cl">6
-</span></span><span class="line"><span class="cl">1 2 3 2 2 3
-</span></span><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">7 7 7 7 7 7 7
-</span></span><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">1 1 2 2
-</span></span><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">1 2 3 4 5 6 7
-</span></span><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">2 3 3 3 2
-</span></span><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">1 2 1
-</span></span><span class="line"><span class="cl">9
-</span></span><span class="line"><span class="cl">1 1 1 7 7 7 9 9 9
-</span></span><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">18
-</span></span><span class="line"><span class="cl">93 84 50 21 88 52 16 50 63 1 30 85 29 67 63 58 37 69
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-11">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 2 3 1 1 1 
-</span></span><span class="line"><span class="cl">-1
-</span></span><span class="line"><span class="cl">3 2 2 1 
-</span></span><span class="line"><span class="cl">-1
-</span></span><span class="line"><span class="cl">2 1 2 1 3 
-</span></span><span class="line"><span class="cl">-1
-</span></span><span class="line"><span class="cl">1 1 2 2 1 2 2 3 3
-</span></span><span class="line"><span class="cl">-1
-</span></span><span class="line"><span class="cl">3 2 1 3 3 3 3 2 2 1 1 2 3 1 3 1 1 2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-13">提示</h2>
+<pre tabindex="0"><code>9
+6
+1 2 3 2 2 3
+7
+7 7 7 7 7 7 7
+4
+1 1 2 2
+7
+1 2 3 4 5 6 7
+5
+2 3 3 3 2
+3
+1 2 1
+9
+1 1 1 7 7 7 9 9 9
+1
+1
+18
+93 84 50 21 88 52 16 50 63 1 30 85 29 67 63 58 37 69
+</code></pre><h3 id="样例输出-1-11">样例输出 #1</h3>
+<pre tabindex="0"><code>1 2 3 1 1 1 
+-1
+3 2 2 1 
+-1
+2 1 2 1 3 
+-1
+1 1 2 2 1 2 2 3 3
+-1
+3 2 1 3 3 3 3 2 2 1 1 2 3 1 3 1 1 2
+</code></pre><h2 id="提示-13">提示</h2>
 <p>In the first test case, $ b = [1, 2, 3, 1, 1, 1] $ satisfies condition $ 1 $ because for $ i = 4 $ , $ j = 2 $ : $ a_i = a_j $ , $ b_i = 1 $ , and $ b_j = 2 $ . It also satisfies condition $ 2 $ because for $ i = 6 $ , $ j = 3 $ : $ a_i = a_j $ , $ b_i = 1 $ , and $ b_j = 3 $ . However, it does not satisfy condition $ 3 $ . In total, exactly two out of three conditions are satisfied.</p>
 </blockquote>
 <h3 id="分析-12">分析</h3>
@@ -7607,10 +9026,10 @@ $$
     
     <item>
       <title>哆哆啦のjQuery学习笔记（超细）（23.07.28）</title>
-      <link>https://dodolalorc.cn/posts/tech/front_end/jquery_notes/</link>
+      <link>https://florae006.github.io/posts/knowledge/front_end/jquery_notes/</link>
       <pubDate>Fri, 01 Dec 2023 13:10:27 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/tech/front_end/jquery_notes/</guid>
+      <guid>https://florae006.github.io/posts/knowledge/front_end/jquery_notes/</guid>
       <description>1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象 学习代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</description>
       <content:encoded><![CDATA[<h2 id="1-jquery对象">1. jQuery对象</h2>
 <h3 id="jquery使用">jQuery使用</h3>
@@ -8597,23 +10016,12 @@ $$
 </tbody>
 </table>
 <p><strong>增加元素的具体样式的格式：</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1) css({&#39;样式名1&#39;:&#39;样式值1&#39;, &#39;样式名2&#39;:&#39;样式值2&#39;, &#39;样式名3&#39;:&#39;样式值3&#39;,...})
-</span></span><span class="line"><span class="cl">例：css({&#34;background-color&#34;: &#34;red&#34;, &#34;color&#34;: &#34;#fff&#34;})
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">2) css(&#34;样式名&#34;, &#34;样式值&#34;)
-</span></span><span class="line"><span class="cl">例：css(&#39;color&#39;, &#39;black&#39;)
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>学习代码：</p>
+<pre tabindex="0"><code>1) css({&#39;样式名1&#39;:&#39;样式值1&#39;, &#39;样式名2&#39;:&#39;样式值2&#39;, &#39;样式名3&#39;:&#39;样式值3&#39;,...})
+例：css({&#34;background-color&#34;: &#34;red&#34;, &#34;color&#34;: &#34;#fff&#34;})
+
+2) css(&#34;样式名&#34;, &#34;样式值&#34;)
+例：css(&#39;color&#39;, &#39;black&#39;)
+</code></pre><p>学习代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -9479,29 +10887,15 @@ $$
 <p><code>ready()</code>类似于<code>onLoad()</code>事件</p>
 <p><code>ready()</code>可以写多个，按顺序执行</p>
 <p><code>$(document).ready(function(){})</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">语法：
-</span></span><span class="line"><span class="cl">    $(document).ready(function(){
-</span></span><span class="line"><span class="cl">        xxxx
-</span></span><span class="line"><span class="cl">    })
-</span></span><span class="line"><span class="cl">简写：
-</span></span><span class="line"><span class="cl">    $(function(){
-</span></span><span class="line"><span class="cl">        xxxx
-</span></span><span class="line"><span class="cl">    })
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>体会加载：</p>
+<pre tabindex="0"><code>语法：
+    $(document).ready(function(){
+        xxxx
+    })
+简写：
+    $(function(){
+        xxxx
+    })
+</code></pre><p>体会加载：</p>
 <p><img loading="lazy" src="./result14.png" alt="体会加载"  />
 </p>
 <p>为了避免这种情况的发生，我们要将代码写到ready加载事件中</p>
@@ -9609,17 +11003,9 @@ $$
 </p>
 <h3 id="42-绑定事件">4.2 绑定事件</h3>
 <p>为被选元素添加一个或多个事件处理程序，并规定事件发生时运行的函数。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">语法：
-</span></span><span class="line"><span class="cl">	$(selector.bind(eventType [, eventData], handler(eventObject)));
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>eventType</code>：是一个字符串类型的事件类型，就是你所需要绑定的事件。</p>
+<pre tabindex="0"><code>语法：
+	$(selector.bind(eventType [, eventData], handler(eventObject)));
+</code></pre><p><code>eventType</code>：是一个字符串类型的事件类型，就是你所需要绑定的事件。</p>
 <p>​	这类型可以包括如下：</p>
 <p>​		<strong><code>blur</code>，<code>focus</code>，<code>focusout</code>，<code>load</code>，<code>resize</code>，<code>scroll</code>，<code>unload</code>，<code>click</code>，<code>dblclick</code></strong></p>
 <p>​		<strong><code>mousedown</code>，<code>mouseup</code>，<code>mousemove</code>，<code>mouseover</code>，<code>mouseout</code>，<code>mouseenter</code></strong></p>
@@ -9883,17 +11269,9 @@ $$
 <p><strong>异步无刷新！</strong></p>
 <h3 id="51-ajax">5.1 $.ajax()</h3>
 <p>jQuery调用Ajax的方法：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">格式：
-</span></span><span class="line"><span class="cl">	$.ajax({});
-</span></span></code></pre></td></tr></table>
-</div>
-</div><table>
+<pre tabindex="0"><code>格式：
+	$.ajax({});
+</code></pre><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -10602,10 +11980,10 @@ $$
     
     <item>
       <title>第壹话|基本样式</title>
-      <link>https://dodolalorc.cn/posts/startsite/basic_setting/</link>
+      <link>https://florae006.github.io/posts/startsite/basic_setting/</link>
       <pubDate>Thu, 30 Nov 2023 21:53:02 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/basic_setting/</guid>
+      <guid>https://florae006.github.io/posts/startsite/basic_setting/</guid>
       <description>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链 基础设置 参考：Features · adityatelange/hugo-PaperMod Wiki (github.com) 我的初步设置一览： 1 2 3 4 5 6 7 8 9</description>
       <content:encoded><![CDATA[<p>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链</p>
 <h3 id="基础设置">基础设置</h3>
@@ -11099,15 +12477,8 @@ $$
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果想隐藏搜索关联框，可以设置这个参数：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">searchHidden = true
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在hugo.toml中</p>
+<pre tabindex="0"><code>searchHidden = true
+</code></pre><p>在hugo.toml中</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -11545,10 +12916,10 @@ $$
     
     <item>
       <title>好诶，是好朋友！</title>
-      <link>https://dodolalorc.cn/links/</link>
+      <link>https://florae006.github.io/links/</link>
       <pubDate>Thu, 30 Nov 2023 14:20:16 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/links/</guid>
+      <guid>https://florae006.github.io/links/</guid>
       <description>友链 挂挂🤩🤩</description>
       <content:encoded><![CDATA[<!-- <a target="_blank" href=https://florae006.github.io/ title=DODOLA class="friend-url">
   <div class="friend-div">
@@ -11661,6 +13032,50 @@ $$
   }
 </script>
 
+<a target="_blank" href=https://www.liveout.cn/ title=Echo&#32;的小窝 class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=https://yy.liveout.cn/photo/photo2.jpg />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">Echo 的小窝</div>
+      <div class="friend-info">漂泊于互联网中的小窝</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
+<a target="_blank" href=https://kamiasuka.top/index.html title=KAMIASUKA’s&#32;Blog class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=https://foruda.gitee.com/avatar/1699007508663606881/13417927_kamiasuka_1699007508.png!avatar200 />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">KAMIASUKA’s Blog</div>
+      <div class="friend-info">Patience is key in life</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
 <a target="_blank" href=https://lucy23.blog/ title=Lucy class="friend-url">
   <div class="friend-div">
     <div class="friend-div-left">
@@ -11727,50 +13142,6 @@ $$
     }
   }
 </script>
-
-<a target="_blank" href=https://www.liveout.cn/ title=Echo&#32;的小窝 class="friend-url">
-  <div class="friend-div">
-    <div class="friend-div-left">
-      <img class="myfriend" src=https://yy.liveout.cn/photo/photo2.jpg />
-    </div>
-    <div class="friend-div-right">
-      <div class="friend-name">Echo 的小窝</div>
-      <div class="friend-info">漂泊于互联网中的小窝</div>
-    </div>
-  </div>
-</a>
-
-<script>
-  window.onload=function () {
-    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
-    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
-    for(var i=0;i<friendArr.length;i++){
-        friendArr[i].style.background=randomHex();
-    }
-  }
-</script>
-
-<a target="_blank" href=https://kamiasuka.top/index.html title=KAMIASUKA’s&#32;Blog class="friend-url">
-  <div class="friend-div">
-    <div class="friend-div-left">
-      <img class="myfriend" src=https://foruda.gitee.com/avatar/1699007508663606881/13417927_kamiasuka_1699007508.png!avatar200 />
-    </div>
-    <div class="friend-div-right">
-      <div class="friend-name">KAMIASUKA’s Blog</div>
-      <div class="friend-info">Patience is key in life</div>
-    </div>
-  </div>
-</a>
-
-<script>
-  window.onload=function () {
-    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
-    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
-    for(var i=0;i<friendArr.length;i++){
-        friendArr[i].style.background=randomHex();
-    }
-  }
-</script>
 </p>
 <p>✨️✨️ 本站友链信息：</p>
 <blockquote>
@@ -11798,10 +13169,10 @@ $$
     
     <item>
       <title>第零话|Hugo建站</title>
-      <link>https://dodolalorc.cn/posts/startsite/build_hugo/</link>
+      <link>https://florae006.github.io/posts/startsite/build_hugo/</link>
       <pubDate>Wed, 29 Nov 2023 19:11:55 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/build_hugo/</guid>
+      <guid>https://florae006.github.io/posts/startsite/build_hugo/</guid>
       <description>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程 使用环境 开发环境：Windows 11 Hugo版本：Hugo v0.114.0 Git</description>
       <content:encoded><![CDATA[<p>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程</p>
 <blockquote>
@@ -11876,15 +13247,8 @@ $$
 <p>Hugo 是一个基于Go 语言的框架，可但中文文档和博客少，而且旧模板和新Hugo的兼容性也不好，它可以快速方便的创建自己的博客。</p>
 <p>Hugo 支持Markdown 语法，我们可以将自己的文章写成Markdown 的格式，放在我们用Hugo 创建的博客系统中，从而展示给他人。</p>
 <p>==HUGO中文文档==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.gohugo.org/doc/commands/hugo/
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="hugo安装">Hugo安装</h3>
+<pre tabindex="0"><code>https://www.gohugo.org/doc/commands/hugo/
+</code></pre><h3 id="hugo安装">Hugo安装</h3>
 <p>在Windows中安装：</p>
 <p>1.首先安装choco包管理，需要在==管理员权限==下运行cmd，执行如下命令：</p>
 <div class="highlight"><div class="chroma">
@@ -12082,15 +13446,8 @@ $$
 </div><p>有的可能和我一样是这样的结构：<code>title = &quot;Myfirst&quot;</code></p>
 <h3 id="下载主题">下载主题</h3>
 <p>hugo特意没有给我们预设主题，所以我们去官网挑选一个主题吧</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://themes.gohugo.io/
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>把终端的路径调整到博客文件夹的themes目录下，比如我选择的主题是PaperMod，我们在命令行输入如下：</p>
+<pre tabindex="0"><code>https://themes.gohugo.io/
+</code></pre><p>把终端的路径调整到博客文件夹的themes目录下，比如我选择的主题是PaperMod，我们在命令行输入如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -12308,10 +13665,10 @@ $$
     
     <item>
       <title>🍅关于</title>
-      <link>https://dodolalorc.cn/about/</link>
+      <link>https://florae006.github.io/about/</link>
       <pubDate>Tue, 28 Nov 2023 19:11:55 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/about/</guid>
+      <guid>https://florae006.github.io/about/</guid>
       <description>你好哇， 很高兴认识你，这里是DODOLA&amp;rsquo;s WareHouse 🎐站长信息： 昵称：哆哆啦(DODOLA) 刷新地点：杭州/长春 职业：学生，NENU2</description>
       <content:encoded><![CDATA[<blockquote>
 <h1 id="你好哇">你好哇，</h1>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>TOML on DODOLA&#39;s WareHouse</title>
-    <link>https://dodolalorc.cn/tags/toml/</link>
+    <link>https://florae006.github.io/tags/toml/</link>
     <description>Recent content in TOML on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://dodolalorc.cn/papermod-cover.png</url>
-      <link>https://dodolalorc.cn/papermod-cover.png</link>
+      <url>https://florae006.github.io/papermod-cover.png</url>
+      <link>https://florae006.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Nov 2023 19:11:55 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/toml/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Nov 2023 19:11:55 +0800</lastBuildDate><atom:link href="https://florae006.github.io/tags/toml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>第零话|Hugo建站</title>
-      <link>https://dodolalorc.cn/posts/startsite/build_hugo/</link>
+      <link>https://florae006.github.io/posts/startsite/build_hugo/</link>
       <pubDate>Wed, 29 Nov 2023 19:11:55 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/build_hugo/</guid>
+      <guid>https://florae006.github.io/posts/startsite/build_hugo/</guid>
       <description>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程 使用环境 开发环境：Windows 11 Hugo版本：Hugo v0.114.0 Git</description>
       <content:encoded><![CDATA[<p>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程</p>
 <blockquote>
@@ -92,15 +92,8 @@
 <p>Hugo 是一个基于Go 语言的框架，可但中文文档和博客少，而且旧模板和新Hugo的兼容性也不好，它可以快速方便的创建自己的博客。</p>
 <p>Hugo 支持Markdown 语法，我们可以将自己的文章写成Markdown 的格式，放在我们用Hugo 创建的博客系统中，从而展示给他人。</p>
 <p>==HUGO中文文档==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.gohugo.org/doc/commands/hugo/
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="hugo安装">Hugo安装</h3>
+<pre tabindex="0"><code>https://www.gohugo.org/doc/commands/hugo/
+</code></pre><h3 id="hugo安装">Hugo安装</h3>
 <p>在Windows中安装：</p>
 <p>1.首先安装choco包管理，需要在==管理员权限==下运行cmd，执行如下命令：</p>
 <div class="highlight"><div class="chroma">
@@ -298,15 +291,8 @@
 </div><p>有的可能和我一样是这样的结构：<code>title = &quot;Myfirst&quot;</code></p>
 <h3 id="下载主题">下载主题</h3>
 <p>hugo特意没有给我们预设主题，所以我们去官网挑选一个主题吧</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://themes.gohugo.io/
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>把终端的路径调整到博客文件夹的themes目录下，比如我选择的主题是PaperMod，我们在命令行输入如下：</p>
+<pre tabindex="0"><code>https://themes.gohugo.io/
+</code></pre><p>把终端的路径调整到博客文件夹的themes目录下，比如我选择的主题是PaperMod，我们在命令行输入如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>友链 on DODOLA&#39;s WareHouse</title>
-    <link>https://dodolalorc.cn/tags/%E5%8F%8B%E9%93%BE/</link>
+    <link>https://florae006.github.io/tags/%E5%8F%8B%E9%93%BE/</link>
     <description>Recent content in 友链 on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://dodolalorc.cn/papermod-cover.png</url>
-      <link>https://dodolalorc.cn/papermod-cover.png</link>
+      <url>https://florae006.github.io/papermod-cover.png</url>
+      <link>https://florae006.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Nov 2023 14:20:16 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/%E5%8F%8B%E9%93%BE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Nov 2023 14:20:16 +0800</lastBuildDate><atom:link href="https://florae006.github.io/tags/%E5%8F%8B%E9%93%BE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>好诶，是好朋友！</title>
-      <link>https://dodolalorc.cn/links/</link>
+      <link>https://florae006.github.io/links/</link>
       <pubDate>Thu, 30 Nov 2023 14:20:16 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/links/</guid>
+      <guid>https://florae006.github.io/links/</guid>
       <description>友链 挂挂🤩🤩</description>
       <content:encoded><![CDATA[<!-- <a target="_blank" href=https://florae006.github.io/ title=DODOLA class="friend-url">
   <div class="friend-div">
@@ -130,6 +130,50 @@
   }
 </script>
 
+<a target="_blank" href=https://www.liveout.cn/ title=Echo&#32;的小窝 class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=https://yy.liveout.cn/photo/photo2.jpg />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">Echo 的小窝</div>
+      <div class="friend-info">漂泊于互联网中的小窝</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
+<a target="_blank" href=https://kamiasuka.top/index.html title=KAMIASUKA’s&#32;Blog class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=https://foruda.gitee.com/avatar/1699007508663606881/13417927_kamiasuka_1699007508.png!avatar200 />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">KAMIASUKA’s Blog</div>
+      <div class="friend-info">Patience is key in life</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
 <a target="_blank" href=https://lucy23.blog/ title=Lucy class="friend-url">
   <div class="friend-div">
     <div class="friend-div-left">
@@ -183,50 +227,6 @@
     <div class="friend-div-right">
       <div class="friend-name">幻雪的博客</div>
       <div class="friend-info">腐烂于花海，致死于所爱</div>
-    </div>
-  </div>
-</a>
-
-<script>
-  window.onload=function () {
-    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
-    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
-    for(var i=0;i<friendArr.length;i++){
-        friendArr[i].style.background=randomHex();
-    }
-  }
-</script>
-
-<a target="_blank" href=https://www.liveout.cn/ title=Echo&#32;的小窝 class="friend-url">
-  <div class="friend-div">
-    <div class="friend-div-left">
-      <img class="myfriend" src=https://yy.liveout.cn/photo/photo2.jpg />
-    </div>
-    <div class="friend-div-right">
-      <div class="friend-name">Echo 的小窝</div>
-      <div class="friend-info">漂泊于互联网中的小窝</div>
-    </div>
-  </div>
-</a>
-
-<script>
-  window.onload=function () {
-    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
-    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
-    for(var i=0;i<friendArr.length;i++){
-        friendArr[i].style.background=randomHex();
-    }
-  }
-</script>
-
-<a target="_blank" href=https://kamiasuka.top/index.html title=KAMIASUKA’s&#32;Blog class="friend-url">
-  <div class="friend-div">
-    <div class="friend-div-left">
-      <img class="myfriend" src=https://foruda.gitee.com/avatar/1699007508663606881/13417927_kamiasuka_1699007508.png!avatar200 />
-    </div>
-    <div class="friend-div-right">
-      <div class="friend-name">KAMIASUKA’s Blog</div>
-      <div class="friend-info">Patience is key in life</div>
     </div>
   </div>
 </a>

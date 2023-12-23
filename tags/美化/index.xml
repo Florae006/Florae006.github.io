@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>美化 on DODOLA&#39;s WareHouse</title>
-    <link>https://dodolalorc.cn/tags/%E7%BE%8E%E5%8C%96/</link>
+    <link>https://florae006.github.io/tags/%E7%BE%8E%E5%8C%96/</link>
     <description>Recent content in 美化 on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://dodolalorc.cn/papermod-cover.png</url>
-      <link>https://dodolalorc.cn/papermod-cover.png</link>
+      <url>https://florae006.github.io/papermod-cover.png</url>
+      <link>https://florae006.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Dec 2023 20:57:26 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/%E7%BE%8E%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Dec 2023 20:57:26 +0800</lastBuildDate><atom:link href="https://florae006.github.io/tags/%E7%BE%8E%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【网站美化】点击特效2</title>
-      <link>https://dodolalorc.cn/posts/startsite/beautify_site_clickfollow/</link>
+      <link>https://florae006.github.io/posts/startsite/beautify_site_clickfollow/</link>
       <pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/beautify_site_clickfollow/</guid>
+      <guid>https://florae006.github.io/posts/startsite/beautify_site_clickfollow/</guid>
       <description>增加了一个鼠标追尾的效果 QwQ 添加文件的方式参考上一篇~指路这篇 js文件： pointerfollow.js js 原文件来源：Canva&amp;rsquo;s Magic Mouse Effect (codepen.io) （我有稍微改了一些样</description>
       <content:encoded><![CDATA[<p>增加了一个鼠标追尾的效果 QwQ</p>
 <p>添加文件的方式参考上一篇~指路<a href="/posts/startsite/beautify_site_click/">这篇</a></p>
@@ -179,10 +179,10 @@
     
     <item>
       <title>【网站美化】点击特效</title>
-      <link>https://dodolalorc.cn/posts/startsite/beautify_site_click/</link>
+      <link>https://florae006.github.io/posts/startsite/beautify_site_click/</link>
       <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/beautify_site_click/</guid>
+      <guid>https://florae006.github.io/posts/startsite/beautify_site_click/</guid>
       <description>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码 添加js文件 这</description>
       <content:encoded><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
 <h1 id="添加js文件">添加js文件</h1>
@@ -231,10 +231,10 @@
     
     <item>
       <title>【网站美化】标签美化</title>
-      <link>https://dodolalorc.cn/posts/startsite/beautify_site_tags/</link>
+      <link>https://florae006.github.io/posts/startsite/beautify_site_tags/</link>
       <pubDate>Wed, 13 Dec 2023 23:00:09 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/beautify_site_tags/</guid>
+      <guid>https://florae006.github.io/posts/startsite/beautify_site_tags/</guid>
       <description>简单设计 assets/css/common/terms.css添加： 1 2 3 4 5 6 7 .terms-tags{ padding-left: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; } 添加权重 在./layouts/_d</description>
       <content:encoded><![CDATA[<h2 id="简单设计">简单设计</h2>
 <p><code>assets/css/common/terms.css</code>添加：</p>

@@ -2,22 +2,266 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>🧱建站 on DODOLA&#39;s WareHouse</title>
-    <link>https://dodolalorc.cn/posts/startsite/</link>
+    <link>https://florae006.github.io/posts/startsite/</link>
     <description>Recent content in 🧱建站 on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://dodolalorc.cn/papermod-cover.png</url>
-      <link>https://dodolalorc.cn/papermod-cover.png</link>
+      <url>https://florae006.github.io/papermod-cover.png</url>
+      <link>https://florae006.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Nov 2023 19:11:55 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/posts/startsite/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Nov 2023 19:11:55 +0800</lastBuildDate><atom:link href="https://florae006.github.io/posts/startsite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【拓展Markdown】为hugo渲染Mermaid绘图</title>
+      <link>https://florae006.github.io/posts/startsite/mermaid_js/</link>
+      <pubDate>Sat, 23 Dec 2023 20:00:25 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/posts/startsite/mermaid_js/</guid>
+      <description>今天打算转帖原来发过的一篇博文时，遇到了Markdown中嵌入的Mermaid无法正常显示的问题，Mermaid可以内嵌于Markdown中</description>
+      <content:encoded><![CDATA[<p>今天打算转帖原来发过的一篇博文时，遇到了Markdown中嵌入的Mermaid无法正常显示的问题，Mermaid可以内嵌于Markdown中通过代码显示svg绘图，但是显然hugo本身不含，这篇记录如何调整hugo达到如下效果转换：</p>
+<h3 id="效果">效果</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img loading="lazy" src="before.png" alt="调整之前"  />
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">调整之前</td>
+</tr>
+<tr>
+<td style="text-align:center"><img loading="lazy" src="after.png" alt="调整之后"  />
+</td>
+</tr>
+<tr>
+<td style="text-align:center">调整之后</td>
+</tr>
+</tbody>
+</table>
+<h3 id="配置方法">配置方法</h3>
+<p>这里涉及到hugo中设置代码高亮的配置，我们检查<code>hugo.toml</code></p>
+<p>写入/修改：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">codeFences</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">guessSyntax</span> <span class="p">=</span> <span class="kc">false</span>  <span class="c"># 注意这一项</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># hl_Lines = &#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">lineAnchors</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">lineNoStart</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">lineNos</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">lineNumbersInTable</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">noClasses</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">style</span> <span class="p">=</span> <span class="s2">&#34;monokai&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tabWidth</span> <span class="p">=</span> <span class="mi">4</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在<code>./layouts/partials/</code>下新建一个<code>mermaid.html</code></p>
+<p>写入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if .Params.mermaid }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span>
+</span></span><span class="line"><span class="cl">  <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/mermaid@8.8.2/dist/mermaid.min.js&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha256-KqisLh8jVMBRjpNkOhH5W9VWs+F6x6vQksLqxs7+x9A=&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Replace mermaid pre.code to div
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&#34;language-mermaid&#34;</span><span class="p">)).</span><span class="nx">forEach</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">el</span><span class="p">.</span><span class="nx">parentElement</span><span class="p">.</span><span class="nx">outerHTML</span> <span class="o">=</span> <span class="sb">`&lt;div class=&#34;mermaid&#34;&gt;</span><span class="si">${</span><span class="nx">el</span><span class="p">.</span><span class="nx">innerText</span><span class="si">}</span><span class="sb">&lt;/div&gt;`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">/* Set svg to center */</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">mermaid</span> <span class="nt">svg</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后在<code>./layouts/_default/baseof.html</code>引入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
+</span></span><span class="line"><span class="cl">    {{ partial &#34;mermaid.html&#34; .}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>【拓展Markdown】为hugo渲染数学公式</title>
+      <link>https://florae006.github.io/posts/startsite/mathjax_js/</link>
+      <pubDate>Sat, 23 Dec 2023 19:16:50 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/posts/startsite/mathjax_js/</guid>
+      <description>效果 解决了之前一直没有解决的一个小bug——我的hugo没有办法渲染Markdown里数学公式捏qwq 现在成功从图1到图2了！ 调整之前 调整之</description>
+      <content:encoded><![CDATA[<h3 id="效果">效果</h3>
+<p>解决了之前一直没有解决的一个小bug——我的hugo没有办法渲染Markdown里数学公式捏qwq
+现在成功从图1到图2了！</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img loading="lazy" src="before.png" alt="调整之前"  />
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">调整之前</td>
+</tr>
+<tr>
+<td style="text-align:center"><img loading="lazy" src="after.png" alt="调整之后"  />
+</td>
+</tr>
+<tr>
+<td style="text-align:center">调整之后</td>
+</tr>
+</tbody>
+</table>
+<p>这里记录一下干了什么吧qwq</p>
+<p>数学公式与代码高亮不同，hugo本身不支持渲染数学公式，所以我们在前端新加一个html页面去处理这个渲染问题。</p>
+<p>MathJax官方介绍了3中引入mathjax的方法，考虑到我们的页面还需要渲染到行内公式，我们选择全局引入。</p>
+<p>官方提供：<a href="https://docs.mathjax.org/en/latest/server/overview.html">Three Ways to Use MathJax in Node — MathJax 3.2 documentation</a></p>
+<h3 id="方法">方法</h3>
+<p>在<code>./layouts/partials/</code>下新建一个<code>mathjax.html</code></p>
+<p>在<code>./layouts/partials/extend_head.html</code>引入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{partial &#34;mathjax.html&#34; .}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在<code>mathjax.html</code>写入下方代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if .Params.math }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">MathJax</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tex</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[[</span><span class="s2">&#34;$&#34;</span><span class="p">,</span> <span class="s2">&#34;$&#34;</span><span class="p">]],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayMath</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="s2">&#34;$$&#34;</span><span class="p">,</span> <span class="s2">&#34;$$&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="s2">&#34;\[\[&#34;</span><span class="p">,</span> <span class="s2">&#34;\]\]&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">svg</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">fontCache</span><span class="o">:</span> <span class="s2">&#34;global&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span>
+</span></span><span class="line"><span class="cl">  <span class="na">id</span><span class="o">=</span><span class="s">&#34;MathJax-script&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">async</span>
+</span></span><span class="line"><span class="cl">  <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后在需要显示数学公式的markdown文档中添加如下参数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+++
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">math = true
+</span></span><span class="line"><span class="cl">+++
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded>
+    </item>
+    
     <item>
       <title>【网站美化】点击特效2</title>
-      <link>https://dodolalorc.cn/posts/startsite/beautify_site_clickfollow/</link>
+      <link>https://florae006.github.io/posts/startsite/beautify_site_clickfollow/</link>
       <pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/beautify_site_clickfollow/</guid>
+      <guid>https://florae006.github.io/posts/startsite/beautify_site_clickfollow/</guid>
       <description>增加了一个鼠标追尾的效果 QwQ 添加文件的方式参考上一篇~指路这篇 js文件： pointerfollow.js js 原文件来源：Canva&amp;rsquo;s Magic Mouse Effect (codepen.io) （我有稍微改了一些样</description>
       <content:encoded><![CDATA[<p>增加了一个鼠标追尾的效果 QwQ</p>
 <p>添加文件的方式参考上一篇~指路<a href="/posts/startsite/beautify_site_click/">这篇</a></p>
@@ -179,10 +423,10 @@
     
     <item>
       <title>【网站美化】点击特效</title>
-      <link>https://dodolalorc.cn/posts/startsite/beautify_site_click/</link>
+      <link>https://florae006.github.io/posts/startsite/beautify_site_click/</link>
       <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/beautify_site_click/</guid>
+      <guid>https://florae006.github.io/posts/startsite/beautify_site_click/</guid>
       <description>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码 添加js文件 这</description>
       <content:encoded><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
 <h1 id="添加js文件">添加js文件</h1>
@@ -231,10 +475,10 @@
     
     <item>
       <title>【网站美化】标签美化</title>
-      <link>https://dodolalorc.cn/posts/startsite/beautify_site_tags/</link>
+      <link>https://florae006.github.io/posts/startsite/beautify_site_tags/</link>
       <pubDate>Wed, 13 Dec 2023 23:00:09 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/beautify_site_tags/</guid>
+      <guid>https://florae006.github.io/posts/startsite/beautify_site_tags/</guid>
       <description>简单设计 assets/css/common/terms.css添加： 1 2 3 4 5 6 7 .terms-tags{ padding-left: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; } 添加权重 在./layouts/_d</description>
       <content:encoded><![CDATA[<h2 id="简单设计">简单设计</h2>
 <p><code>assets/css/common/terms.css</code>添加：</p>
@@ -364,10 +608,10 @@
     
     <item>
       <title>第壹话|基本样式</title>
-      <link>https://dodolalorc.cn/posts/startsite/basic_setting/</link>
+      <link>https://florae006.github.io/posts/startsite/basic_setting/</link>
       <pubDate>Thu, 30 Nov 2023 21:53:02 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/basic_setting/</guid>
+      <guid>https://florae006.github.io/posts/startsite/basic_setting/</guid>
       <description>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链 基础设置 参考：Features · adityatelange/hugo-PaperMod Wiki (github.com) 我的初步设置一览： 1 2 3 4 5 6 7 8 9</description>
       <content:encoded><![CDATA[<p>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链</p>
 <h3 id="基础设置">基础设置</h3>
@@ -861,15 +1105,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果想隐藏搜索关联框，可以设置这个参数：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">searchHidden = true
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在hugo.toml中</p>
+<pre tabindex="0"><code>searchHidden = true
+</code></pre><p>在hugo.toml中</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1307,10 +1544,10 @@
     
     <item>
       <title>第零话|Hugo建站</title>
-      <link>https://dodolalorc.cn/posts/startsite/build_hugo/</link>
+      <link>https://florae006.github.io/posts/startsite/build_hugo/</link>
       <pubDate>Wed, 29 Nov 2023 19:11:55 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/startsite/build_hugo/</guid>
+      <guid>https://florae006.github.io/posts/startsite/build_hugo/</guid>
       <description>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程 使用环境 开发环境：Windows 11 Hugo版本：Hugo v0.114.0 Git</description>
       <content:encoded><![CDATA[<p>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程</p>
 <blockquote>
@@ -1385,15 +1622,8 @@
 <p>Hugo 是一个基于Go 语言的框架，可但中文文档和博客少，而且旧模板和新Hugo的兼容性也不好，它可以快速方便的创建自己的博客。</p>
 <p>Hugo 支持Markdown 语法，我们可以将自己的文章写成Markdown 的格式，放在我们用Hugo 创建的博客系统中，从而展示给他人。</p>
 <p>==HUGO中文文档==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.gohugo.org/doc/commands/hugo/
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="hugo安装">Hugo安装</h3>
+<pre tabindex="0"><code>https://www.gohugo.org/doc/commands/hugo/
+</code></pre><h3 id="hugo安装">Hugo安装</h3>
 <p>在Windows中安装：</p>
 <p>1.首先安装choco包管理，需要在==管理员权限==下运行cmd，执行如下命令：</p>
 <div class="highlight"><div class="chroma">
@@ -1591,15 +1821,8 @@
 </div><p>有的可能和我一样是这样的结构：<code>title = &quot;Myfirst&quot;</code></p>
 <h3 id="下载主题">下载主题</h3>
 <p>hugo特意没有给我们预设主题，所以我们去官网挑选一个主题吧</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://themes.gohugo.io/
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>把终端的路径调整到博客文件夹的themes目录下，比如我选择的主题是PaperMod，我们在命令行输入如下：</p>
+<pre tabindex="0"><code>https://themes.gohugo.io/
+</code></pre><p>把终端的路径调整到博客文件夹的themes目录下，比如我选择的主题是PaperMod，我们在命令行输入如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1

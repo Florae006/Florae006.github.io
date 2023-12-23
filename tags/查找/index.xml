@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>查找 on DODOLA&#39;s WareHouse</title>
-    <link>https://dodolalorc.cn/tags/%E6%9F%A5%E6%89%BE/</link>
+    <link>https://florae006.github.io/tags/%E6%9F%A5%E6%89%BE/</link>
     <description>Recent content in 查找 on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://dodolalorc.cn/papermod-cover.png</url>
-      <link>https://dodolalorc.cn/papermod-cover.png</link>
+      <url>https://florae006.github.io/papermod-cover.png</url>
+      <link>https://florae006.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Dec 2023 22:02:50 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/%E6%9F%A5%E6%89%BE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Dec 2023 22:02:50 +0800</lastBuildDate><atom:link href="https://florae006.github.io/tags/%E6%9F%A5%E6%89%BE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NENU2023学年算法2例题</title>
-      <link>https://dodolalorc.cn/posts/tech/algorithm/nenuoj/</link>
+      <link>https://florae006.github.io/posts/knowledge/algorithm/nenuoj/</link>
       <pubDate>Tue, 19 Dec 2023 22:02:50 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/tech/algorithm/nenuoj/</guid>
+      <guid>https://florae006.github.io/posts/knowledge/algorithm/nenuoj/</guid>
       <description>有的题还没写完）咕咕咕）） NENU OJ算法2例题 这学期写算法2并不想写详细思路(出于ddl再也不用关心小组啦的自由)，不过如果有想交流的也可以评论</description>
       <content:encoded><![CDATA[<p>有的题还没写完）咕咕咕））</p>
 <h1 id="nenu-oj算法2例题">NENU OJ算法2例题</h1>
@@ -1640,50 +1640,23 @@ X</p>
 <p>==输出==</p>
 <p>对每组赌注，输出胜利者下的赌注，如果没有解，则输出“no solution”。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">2 
-</span></span><span class="line"><span class="cl">3 
-</span></span><span class="line"><span class="cl">5 
-</span></span><span class="line"><span class="cl">7 
-</span></span><span class="line"><span class="cl">12
-</span></span><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">2 
-</span></span><span class="line"><span class="cl">16 
-</span></span><span class="line"><span class="cl">64 
-</span></span><span class="line"><span class="cl">256 
-</span></span><span class="line"><span class="cl">1024
-</span></span><span class="line"><span class="cl">0
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">12
-</span></span><span class="line"><span class="cl">no solution
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-17">AC代码</h4>
+<pre tabindex="0"><code>5
+2 
+3 
+5 
+7 
+12
+5
+2 
+16 
+64 
+256 
+1024
+0
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>12
+no solution
+</code></pre><h4 id="ac代码-17">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1774,36 +1747,16 @@ X</p>
 <p>==输出==</p>
 <p>对每个测试数据，如果N是半素数，则输出YES，否则输出NO。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">6
-</span></span><span class="line"><span class="cl">12
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">NO
-</span></span><span class="line"><span class="cl">YES
-</span></span><span class="line"><span class="cl">YES
-</span></span><span class="line"><span class="cl">NO
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-18">AC代码</h4>
+<pre tabindex="0"><code>3
+4
+6
+12
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>NO
+YES
+YES
+NO
+</code></pre><h4 id="ac代码-18">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1888,34 +1841,15 @@ X</p>
 <p>==输出==</p>
 <p>对每个测试数据，输出金属棍子中心加热后偏离的距离，单位为毫米，保留小数点后3位有效数字。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1000 100 0.0001
-</span></span><span class="line"><span class="cl">15000 10 0.00006
-</span></span><span class="line"><span class="cl">10 0 0.001
-</span></span><span class="line"><span class="cl">-1 -1 -1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">61.329
-</span></span><span class="line"><span class="cl">225.020
-</span></span><span class="line"><span class="cl">0.000
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-19">AC代码</h4>
+<pre tabindex="0"><code>1000 100 0.0001
+15000 10 0.00006
+10 0 0.001
+-1 -1 -1
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>61.329
+225.020
+0.000
+</code></pre><h4 id="ac代码-19">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1987,32 +1921,14 @@ X</p>
 <p>==输出==</p>
 <p>所需的电缆一条最长有多少米（精确到厘米，即保留小数点两位）。如果不能提供K条大于等于1厘米的等长电缆就输出“0.00”。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4 11
-</span></span><span class="line"><span class="cl">8.02
-</span></span><span class="line"><span class="cl">7.43
-</span></span><span class="line"><span class="cl">4.57
-</span></span><span class="line"><span class="cl">5.39
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2.00
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-20">AC代码</h4>
+<pre tabindex="0"><code>4 11
+8.02
+7.43
+4.57
+5.39
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>2.00
+</code></pre><h4 id="ac代码-20">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2105,44 +2021,20 @@ X</p>
 <p>==输出==</p>
 <p>将消息的外文词翻译成英语，一个词一行。查不到的词应该翻译成“eh”。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dog ogday
-</span></span><span class="line"><span class="cl">cat atcay
-</span></span><span class="line"><span class="cl">pig igpay
-</span></span><span class="line"><span class="cl">froot ootfray
-</span></span><span class="line"><span class="cl">loops oopslay
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">atcay
-</span></span><span class="line"><span class="cl">ittenkay
-</span></span><span class="line"><span class="cl">oopslay
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cat
-</span></span><span class="line"><span class="cl">eh
-</span></span><span class="line"><span class="cl">loops
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-21">AC代码</h4>
+<pre tabindex="0"><code>dog ogday
+cat atcay
+pig igpay
+froot ootfray
+loops oopslay
+
+atcay
+ittenkay
+oopslay
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>cat
+eh
+loops
+</code></pre><h4 id="ac代码-21">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2209,34 +2101,15 @@ X</p>
 <p>==输出==</p>
 <p>对于每组数据输出形成正方形的个数。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">1 0
-</span></span><span class="line"><span class="cl">0 1
-</span></span><span class="line"><span class="cl">1 1
-</span></span><span class="line"><span class="cl">0 0
-</span></span><span class="line"><span class="cl">0
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-22">AC代码</h4>
+<pre tabindex="0"><code>4
+1 0
+0 1
+1 1
+0 0
+0
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>1
+</code></pre><h4 id="ac代码-22">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code></code></pre></td>

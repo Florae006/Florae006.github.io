@@ -2,252 +2,272 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on DODOLA&#39;s WareHouse</title>
-    <link>https://dodolalorc.cn/tags/</link>
+    <link>https://florae006.github.io/tags/</link>
     <description>Recent content in Tags on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://dodolalorc.cn/papermod-cover.png</url>
-      <link>https://dodolalorc.cn/papermod-cover.png</link>
+      <url>https://florae006.github.io/papermod-cover.png</url>
+      <link>https://florae006.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Dec 2023 22:02:50 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Dec 2023 20:00:25 +0800</lastBuildDate><atom:link href="https://florae006.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://florae006.github.io/tags/hugo/</link>
+      <pubDate>Sat, 23 Dec 2023 20:00:25 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/tags/hugo/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://florae006.github.io/tags/markdown/</link>
+      <pubDate>Sat, 23 Dec 2023 20:00:25 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/tags/markdown/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Mermarid</title>
+      <link>https://florae006.github.io/tags/mermarid/</link>
+      <pubDate>Sat, 23 Dec 2023 20:00:25 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/tags/mermarid/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>MathJax</title>
+      <link>https://florae006.github.io/tags/mathjax/</link>
+      <pubDate>Sat, 23 Dec 2023 19:16:50 +0800</pubDate>
+      
+      <guid>https://florae006.github.io/tags/mathjax/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>NENUOJ</title>
-      <link>https://dodolalorc.cn/tags/nenuoj/</link>
+      <link>https://florae006.github.io/tags/nenuoj/</link>
       <pubDate>Tue, 19 Dec 2023 22:02:50 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/nenuoj/</guid>
+      <guid>https://florae006.github.io/tags/nenuoj/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>动态规划</title>
-      <link>https://dodolalorc.cn/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+      <link>https://florae006.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
       <pubDate>Tue, 19 Dec 2023 22:02:50 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <guid>https://florae006.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>排序</title>
-      <link>https://dodolalorc.cn/tags/%E6%8E%92%E5%BA%8F/</link>
+      <link>https://florae006.github.io/tags/%E6%8E%92%E5%BA%8F/</link>
       <pubDate>Tue, 19 Dec 2023 22:02:50 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://florae006.github.io/tags/%E6%8E%92%E5%BA%8F/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>搜索</title>
-      <link>https://dodolalorc.cn/tags/%E6%90%9C%E7%B4%A2/</link>
+      <link>https://florae006.github.io/tags/%E6%90%9C%E7%B4%A2/</link>
       <pubDate>Tue, 19 Dec 2023 22:02:50 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E6%90%9C%E7%B4%A2/</guid>
+      <guid>https://florae006.github.io/tags/%E6%90%9C%E7%B4%A2/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>查找</title>
-      <link>https://dodolalorc.cn/tags/%E6%9F%A5%E6%89%BE/</link>
+      <link>https://florae006.github.io/tags/%E6%9F%A5%E6%89%BE/</link>
       <pubDate>Tue, 19 Dec 2023 22:02:50 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E6%9F%A5%E6%89%BE/</guid>
+      <guid>https://florae006.github.io/tags/%E6%9F%A5%E6%89%BE/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>算法</title>
-      <link>https://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</link>
+      <link>https://florae006.github.io/tags/%E7%AE%97%E6%B3%95/</link>
       <pubDate>Tue, 19 Dec 2023 22:02:50 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://florae006.github.io/tags/%E7%AE%97%E6%B3%95/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>贪心</title>
-      <link>https://dodolalorc.cn/tags/%E8%B4%AA%E5%BF%83/</link>
+      <link>https://florae006.github.io/tags/%E8%B4%AA%E5%BF%83/</link>
       <pubDate>Tue, 19 Dec 2023 22:02:50 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E8%B4%AA%E5%BF%83/</guid>
+      <guid>https://florae006.github.io/tags/%E8%B4%AA%E5%BF%83/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>递归</title>
-      <link>https://dodolalorc.cn/tags/%E9%80%92%E5%BD%92/</link>
+      <link>https://florae006.github.io/tags/%E9%80%92%E5%BD%92/</link>
       <pubDate>Tue, 19 Dec 2023 22:02:50 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E9%80%92%E5%BD%92/</guid>
+      <guid>https://florae006.github.io/tags/%E9%80%92%E5%BD%92/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>CSS</title>
-      <link>https://dodolalorc.cn/tags/css/</link>
+      <link>https://florae006.github.io/tags/css/</link>
       <pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/css/</guid>
+      <guid>https://florae006.github.io/tags/css/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>JavaScript</title>
-      <link>https://dodolalorc.cn/tags/javascript/</link>
+      <link>https://florae006.github.io/tags/javascript/</link>
       <pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/javascript/</guid>
+      <guid>https://florae006.github.io/tags/javascript/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>光标</title>
-      <link>https://dodolalorc.cn/tags/%E5%85%89%E6%A0%87/</link>
+      <link>https://florae006.github.io/tags/%E5%85%89%E6%A0%87/</link>
       <pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E5%85%89%E6%A0%87/</guid>
+      <guid>https://florae006.github.io/tags/%E5%85%89%E6%A0%87/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>美化</title>
-      <link>https://dodolalorc.cn/tags/%E7%BE%8E%E5%8C%96/</link>
+      <link>https://florae006.github.io/tags/%E7%BE%8E%E5%8C%96/</link>
       <pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E7%BE%8E%E5%8C%96/</guid>
+      <guid>https://florae006.github.io/tags/%E7%BE%8E%E5%8C%96/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Canva</title>
-      <link>https://dodolalorc.cn/tags/canva/</link>
+      <link>https://florae006.github.io/tags/canva/</link>
       <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/canva/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://dodolalorc.cn/tags/hugo/</link>
-      <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
-      
-      <guid>https://dodolalorc.cn/tags/hugo/</guid>
+      <guid>https://florae006.github.io/tags/canva/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>Linux操作</title>
-      <link>https://dodolalorc.cn/tags/linux%E6%93%8D%E4%BD%9C/</link>
+      <link>https://florae006.github.io/tags/linux%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Wed, 06 Dec 2023 14:21:23 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/linux%E6%93%8D%E4%BD%9C/</guid>
+      <guid>https://florae006.github.io/tags/linux%E6%93%8D%E4%BD%9C/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>QQ机器人</title>
-      <link>https://dodolalorc.cn/tags/qq%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
+      <link>https://florae006.github.io/tags/qq%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
       <pubDate>Wed, 06 Dec 2023 14:21:23 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/qq%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
+      <guid>https://florae006.github.io/tags/qq%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>服务器</title>
-      <link>https://dodolalorc.cn/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <link>https://florae006.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Wed, 06 Dec 2023 14:21:23 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>练习</title>
-      <link>https://dodolalorc.cn/tags/%E7%BB%83%E4%B9%A0/</link>
-      <pubDate>Sat, 02 Dec 2023 16:47:17 +0800</pubDate>
-      
-      <guid>https://dodolalorc.cn/tags/%E7%BB%83%E4%B9%A0/</guid>
+      <guid>https://florae006.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>时间轴</title>
-      <link>https://dodolalorc.cn/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/</link>
+      <link>https://florae006.github.io/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/</link>
       <pubDate>Sat, 02 Dec 2023 14:20:16 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/</guid>
+      <guid>https://florae006.github.io/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>jQuery</title>
-      <link>https://dodolalorc.cn/tags/jquery/</link>
+      <link>https://florae006.github.io/tags/jquery/</link>
       <pubDate>Fri, 01 Dec 2023 13:10:27 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/jquery/</guid>
+      <guid>https://florae006.github.io/tags/jquery/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>前端</title>
-      <link>https://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/</link>
+      <link>https://florae006.github.io/tags/%E5%89%8D%E7%AB%AF/</link>
       <pubDate>Fri, 01 Dec 2023 13:10:27 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/</guid>
+      <guid>https://florae006.github.io/tags/%E5%89%8D%E7%AB%AF/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>友链</title>
-      <link>https://dodolalorc.cn/tags/%E5%8F%8B%E9%93%BE/</link>
+      <link>https://florae006.github.io/tags/%E5%8F%8B%E9%93%BE/</link>
       <pubDate>Thu, 30 Nov 2023 14:20:16 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E5%8F%8B%E9%93%BE/</guid>
+      <guid>https://florae006.github.io/tags/%E5%8F%8B%E9%93%BE/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>TOML</title>
-      <link>https://dodolalorc.cn/tags/toml/</link>
+      <link>https://florae006.github.io/tags/toml/</link>
       <pubDate>Wed, 29 Nov 2023 19:11:55 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/toml/</guid>
+      <guid>https://florae006.github.io/tags/toml/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
       <title>关于</title>
-      <link>https://dodolalorc.cn/tags/%E5%85%B3%E4%BA%8E/</link>
+      <link>https://florae006.github.io/tags/%E5%85%B3%E4%BA%8E/</link>
       <pubDate>Tue, 28 Nov 2023 19:11:55 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E5%85%B3%E4%BA%8E/</guid>
+      <guid>https://florae006.github.io/tags/%E5%85%B3%E4%BA%8E/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>算法 on DODOLA&#39;s WareHouse</title>
-    <link>https://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</link>
+    <link>https://florae006.github.io/tags/%E7%AE%97%E6%B3%95/</link>
     <description>Recent content in 算法 on DODOLA&#39;s WareHouse</description>
     <image>
       <title>DODOLA&#39;s WareHouse</title>
-      <url>https://dodolalorc.cn/papermod-cover.png</url>
-      <link>https://dodolalorc.cn/papermod-cover.png</link>
+      <url>https://florae006.github.io/papermod-cover.png</url>
+      <link>https://florae006.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Dec 2023 22:02:50 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Dec 2023 22:02:50 +0800</lastBuildDate><atom:link href="https://florae006.github.io/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NENU2023学年算法2例题</title>
-      <link>https://dodolalorc.cn/posts/tech/algorithm/nenuoj/</link>
+      <link>https://florae006.github.io/posts/knowledge/algorithm/nenuoj/</link>
       <pubDate>Tue, 19 Dec 2023 22:02:50 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/tech/algorithm/nenuoj/</guid>
+      <guid>https://florae006.github.io/posts/knowledge/algorithm/nenuoj/</guid>
       <description>有的题还没写完）咕咕咕）） NENU OJ算法2例题 这学期写算法2并不想写详细思路(出于ddl再也不用关心小组啦的自由)，不过如果有想交流的也可以评论</description>
       <content:encoded><![CDATA[<p>有的题还没写完）咕咕咕））</p>
 <h1 id="nenu-oj算法2例题">NENU OJ算法2例题</h1>
@@ -1640,50 +1640,23 @@ X</p>
 <p>==输出==</p>
 <p>对每组赌注，输出胜利者下的赌注，如果没有解，则输出“no solution”。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">2 
-</span></span><span class="line"><span class="cl">3 
-</span></span><span class="line"><span class="cl">5 
-</span></span><span class="line"><span class="cl">7 
-</span></span><span class="line"><span class="cl">12
-</span></span><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">2 
-</span></span><span class="line"><span class="cl">16 
-</span></span><span class="line"><span class="cl">64 
-</span></span><span class="line"><span class="cl">256 
-</span></span><span class="line"><span class="cl">1024
-</span></span><span class="line"><span class="cl">0
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">12
-</span></span><span class="line"><span class="cl">no solution
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-17">AC代码</h4>
+<pre tabindex="0"><code>5
+2 
+3 
+5 
+7 
+12
+5
+2 
+16 
+64 
+256 
+1024
+0
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>12
+no solution
+</code></pre><h4 id="ac代码-17">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1774,36 +1747,16 @@ X</p>
 <p>==输出==</p>
 <p>对每个测试数据，如果N是半素数，则输出YES，否则输出NO。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">6
-</span></span><span class="line"><span class="cl">12
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">NO
-</span></span><span class="line"><span class="cl">YES
-</span></span><span class="line"><span class="cl">YES
-</span></span><span class="line"><span class="cl">NO
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-18">AC代码</h4>
+<pre tabindex="0"><code>3
+4
+6
+12
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>NO
+YES
+YES
+NO
+</code></pre><h4 id="ac代码-18">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1888,34 +1841,15 @@ X</p>
 <p>==输出==</p>
 <p>对每个测试数据，输出金属棍子中心加热后偏离的距离，单位为毫米，保留小数点后3位有效数字。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1000 100 0.0001
-</span></span><span class="line"><span class="cl">15000 10 0.00006
-</span></span><span class="line"><span class="cl">10 0 0.001
-</span></span><span class="line"><span class="cl">-1 -1 -1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">61.329
-</span></span><span class="line"><span class="cl">225.020
-</span></span><span class="line"><span class="cl">0.000
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-19">AC代码</h4>
+<pre tabindex="0"><code>1000 100 0.0001
+15000 10 0.00006
+10 0 0.001
+-1 -1 -1
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>61.329
+225.020
+0.000
+</code></pre><h4 id="ac代码-19">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1987,32 +1921,14 @@ X</p>
 <p>==输出==</p>
 <p>所需的电缆一条最长有多少米（精确到厘米，即保留小数点两位）。如果不能提供K条大于等于1厘米的等长电缆就输出“0.00”。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4 11
-</span></span><span class="line"><span class="cl">8.02
-</span></span><span class="line"><span class="cl">7.43
-</span></span><span class="line"><span class="cl">4.57
-</span></span><span class="line"><span class="cl">5.39
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2.00
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-20">AC代码</h4>
+<pre tabindex="0"><code>4 11
+8.02
+7.43
+4.57
+5.39
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>2.00
+</code></pre><h4 id="ac代码-20">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2105,44 +2021,20 @@ X</p>
 <p>==输出==</p>
 <p>将消息的外文词翻译成英语，一个词一行。查不到的词应该翻译成“eh”。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dog ogday
-</span></span><span class="line"><span class="cl">cat atcay
-</span></span><span class="line"><span class="cl">pig igpay
-</span></span><span class="line"><span class="cl">froot ootfray
-</span></span><span class="line"><span class="cl">loops oopslay
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">atcay
-</span></span><span class="line"><span class="cl">ittenkay
-</span></span><span class="line"><span class="cl">oopslay
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cat
-</span></span><span class="line"><span class="cl">eh
-</span></span><span class="line"><span class="cl">loops
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-21">AC代码</h4>
+<pre tabindex="0"><code>dog ogday
+cat atcay
+pig igpay
+froot ootfray
+loops oopslay
+
+atcay
+ittenkay
+oopslay
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>cat
+eh
+loops
+</code></pre><h4 id="ac代码-21">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2209,34 +2101,15 @@ X</p>
 <p>==输出==</p>
 <p>对于每组数据输出形成正方形的个数。</p>
 <p>==样例输入==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">1 0
-</span></span><span class="line"><span class="cl">0 1
-</span></span><span class="line"><span class="cl">1 1
-</span></span><span class="line"><span class="cl">0 0
-</span></span><span class="line"><span class="cl">0
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>==样例输出==</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="ac代码-22">AC代码</h4>
+<pre tabindex="0"><code>4
+1 0
+0 1
+1 1
+0 0
+0
+</code></pre><p>==样例输出==</p>
+<pre tabindex="0"><code>1
+</code></pre><h4 id="ac代码-22">AC代码</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code></code></pre></td>
@@ -5289,10 +5162,10 @@ A：
     
     <item>
       <title>队内拉题|23.11.29</title>
-      <link>https://dodolalorc.cn/posts/tech/algorithm/training0/</link>
+      <link>https://florae006.github.io/posts/knowledge/algorithm/training0/</link>
       <pubDate>Sat, 02 Dec 2023 16:47:17 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/posts/tech/algorithm/training0/</guid>
+      <guid>https://florae006.github.io/posts/knowledge/algorithm/training0/</guid>
       <description>前言点评：本次题目难度不高 A 跳石头 [NOIP2015 提高组] 跳石头 题目背景 NOIP2015 Day2T1 题目描述 一年一度的“跳石头”比赛又要开始了！ 这项比赛将在一条笔直的河道中进行，</description>
       <content:encoded><![CDATA[<p>前言点评：本次题目难度不高</p>
 <h2 id="a-跳石头">A 跳石头</h2>
@@ -5311,34 +5184,15 @@ A：
 <p>一个整数，即最短跳跃距离的最大值。</p>
 <h2 id="样例-1">样例 #1</h2>
 <h3 id="样例输入-1">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">25 5 2 
-</span></span><span class="line"><span class="cl">2
-</span></span><span class="line"><span class="cl">11
-</span></span><span class="line"><span class="cl">14
-</span></span><span class="line"><span class="cl">17 
-</span></span><span class="line"><span class="cl">21
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示">提示</h2>
+<pre tabindex="0"><code>25 5 2 
+2
+11
+14
+17 
+21
+</code></pre><h3 id="样例输出-1">样例输出 #1</h3>
+<pre tabindex="0"><code>4
+</code></pre><h2 id="提示">提示</h2>
 <h3 id="输入输出样例-1-说明">输入输出样例 1 说明</h3>
 <p>将与起点距离为 $2$ 和 $14$ 的两个岩石移走后，最短的跳跃距离为 $4$（从与起点距离 $17$ 的岩石跳到距离 $21$ 的岩石，或者从距离 $21$ 的岩石跳到终点）。</p>
 <h3 id="数据规模与约定">数据规模与约定</h3>
@@ -5381,64 +5235,30 @@ A：
 </ul>
 <h2 id="样例-1-1">样例 #1</h2>
 <h3 id="样例输入-1-1">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">ABBAA
-</span></span><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">BBB
-</span></span><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">BBAAABA
-</span></span><span class="line"><span class="cl">20
-</span></span><span class="line"><span class="cl">AAAAAAAABBBAABBBBBAB
-</span></span><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">A
-</span></span><span class="line"><span class="cl">13
-</span></span><span class="line"><span class="cl">AAAABABBABBAB
-</span></span><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">BBBAAAA
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-1">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">A
-</span></span><span class="line"><span class="cl">B
-</span></span><span class="line"><span class="cl">A
-</span></span><span class="line"><span class="cl">B
-</span></span><span class="line"><span class="cl">A
-</span></span><span class="line"><span class="cl">B
-</span></span><span class="line"><span class="cl">A
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-1">提示</h2>
+<pre tabindex="0"><code>7
+5
+ABBAA
+3
+BBB
+7
+BBAAABA
+20
+AAAAAAAABBBAABBBBBAB
+1
+A
+13
+AAAABABBABBAB
+7
+BBBAAAA
+</code></pre><h3 id="样例输出-1-1">样例输出 #1</h3>
+<pre tabindex="0"><code>A
+B
+A
+B
+A
+B
+A
+</code></pre><h2 id="提示-1">提示</h2>
 <p>In the first test case, the game could have been played with parameters $ X = 3 $ , $ Y = 1 $ . The game consisted of $ 1 $ set, in which player A won, as they won the first $ 3 $ plays. In this scenario, player A is the winner. The game could also have been played with parameters $ X = 1 $ , $ Y = 3 $ . It can be shown that there are no such $ X $ and $ Y $ values for which player B would be the winner.</p>
 <p>In the second test case, player B won all the plays. It can be easily shown that in this case, player B is guaranteed to be the winner of the game.</p>
 <p>In the fourth test case, the game could have been played with parameters $ X = 3 $ , $ Y = 3 $ :</p>
@@ -5514,26 +5334,11 @@ A：
 <p>输出一行一个正整数表示 $\sum_{i=1}^S \text{maj}(b_1,b_2,\cdots,b_i)$ 的最大值。</p>
 <h2 id="样例-1-2">样例 #1</h2>
 <h3 id="样例输入-1-2">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">1 3 2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-2">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">17
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-2">提示</h2>
+<pre tabindex="0"><code>3
+1 3 2
+</code></pre><h3 id="样例输出-1-2">样例输出 #1</h3>
+<pre tabindex="0"><code>17
+</code></pre><h2 id="提示-2">提示</h2>
 <h4 id="样例解释-1">样例解释 1</h4>
 <p>一个达到最大值的序列为 $(3,2,3,1,2,2)$。</p>
 <h4 id="数据范围">数据范围</h4>
@@ -5624,42 +5429,19 @@ A：
 <p>对于每组测试数据输出一行：若难度是合理的，输出 <code>Reasonable</code>，否则输出 <code>Unreasonable</code>。</p>
 <h2 id="样例-1-3">样例 #1</h2>
 <h3 id="样例输入-1-3">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2
-</span></span><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">0 -1 0
-</span></span><span class="line"><span class="cl">1 2
-</span></span><span class="line"><span class="cl">2 3
-</span></span><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">0 -1 0
-</span></span><span class="line"><span class="cl">1 2
-</span></span><span class="line"><span class="cl">1 3
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-3">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Reasonable
-</span></span><span class="line"><span class="cl">Unreasonable
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-3">提示</h2>
+<pre tabindex="0"><code>2
+3
+0 -1 0
+1 2
+2 3
+3
+0 -1 0
+1 2
+1 3
+</code></pre><h3 id="样例输出-1-3">样例输出 #1</h3>
+<pre tabindex="0"><code>Reasonable
+Unreasonable
+</code></pre><h2 id="提示-3">提示</h2>
 <h3 id="样例-1-解释">样例 1 解释</h3>
 <p>对于第一组测试数据，将知识点 $2$ 的难度定为 $0$ 即满足条件。</p>
 <p>对于第二组测试数据，无论如何指定知识点 $2$ 的难度，知识点 $1$ 的难度会产生矛盾。</p>
@@ -5708,46 +5490,21 @@ A：
 <p>For each test case, print one integer — the minimum number of times Monocarp has to teleport the chip.</p>
 <h2 id="样例-1-4">样例 #1</h2>
 <h3 id="样例输入-1-4">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">1 2 2 1
-</span></span><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">1 0 1 0 1
-</span></span><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">5 4 3 2 1
-</span></span><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">12
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-4">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">2
-</span></span><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">11
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-4">提示</h2>
+<pre tabindex="0"><code>4
+4
+1 2 2 1
+5
+1 0 1 0 1
+5
+5 4 3 2 1
+1
+12
+</code></pre><h3 id="样例输出-1-4">样例输出 #1</h3>
+<pre tabindex="0"><code>1
+2
+4
+11
+</code></pre><h2 id="提示-4">提示</h2>
 <p>In the first test case of the example, Monocarp can perform the turns as follows:</p>
 <ul>
 <li>place the chip in the $ 1 $ -st cell; the numbers in the cells are $ [1, 0, 0, 0] $ ;</li>
@@ -5823,28 +5580,12 @@ A：
 <p>如果不存在方案，输出一行一个整数 <code>-1</code>。否则输出 $(n-1)$ 行，第 $i$ 行 $(n-i)$ 个字符，第 $i$ 行的第 $j$ 个字符表示 $(i,i+j)$ 的标号。若有多个方案，输出任意一个即可。</p>
 <h2 id="样例-1-5">样例 #1</h2>
 <h3 id="样例输入-1-5">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">4
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-5">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">012
-</span></span><span class="line"><span class="cl">34
-</span></span><span class="line"><span class="cl">5
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-5">提示</h2>
+<pre tabindex="0"><code>4
+</code></pre><h3 id="样例输出-1-5">样例输出 #1</h3>
+<pre tabindex="0"><code>012
+34
+5
+</code></pre><h2 id="提示-5">提示</h2>
 <h3 id="数据规模与约定-2">数据规模与约定</h3>
 <p>对于所有测试数据，$2 \le n \le 1000$。</p>
 <h3 id="题目来源-2">题目来源</h3>
@@ -5920,34 +5661,15 @@ A：
 <p>For each testcase, print a single integer — the smallest time required for Monocarp to open the chest.</p>
 <h2 id="样例-1-6">样例 #1</h2>
 <h3 id="样例输入-1-6">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">5 7 2
-</span></span><span class="line"><span class="cl">10 5 0
-</span></span><span class="line"><span class="cl">5 8 2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-6">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">10
-</span></span><span class="line"><span class="cl">9
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-6">提示</h2>
+<pre tabindex="0"><code>3
+5 7 2
+10 5 0
+5 8 2
+</code></pre><h3 id="样例输出-1-6">样例输出 #1</h3>
+<pre tabindex="0"><code>7
+10
+9
+</code></pre><h2 id="提示-6">提示</h2>
 <p>In the first testcase, Monocarp can open the chest in $ 7 $ seconds with the following sequence of moves:</p>
 <ul>
 <li>go $ 5 $ times to the right ( $ 5 $ seconds);</li>
@@ -6094,108 +5816,43 @@ $$</p>
 <p>输出一个正整数，表示满足要求的最小总投票数 $K$。</p>
 <h2 id="样例-1-7">样例 #1</h2>
 <h3 id="样例输入-1-7">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">0.166667
-</span></span><span class="line"><span class="cl">0.333333
-</span></span><span class="line"><span class="cl">0.500000
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-7">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">6
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="样例-2">样例 #2</h2>
+<pre tabindex="0"><code>3
+0.166667
+0.333333
+0.500000
+</code></pre><h3 id="样例输出-1-7">样例输出 #1</h3>
+<pre tabindex="0"><code>6
+</code></pre><h2 id="样例-2">样例 #2</h2>
 <h3 id="样例输入-2">样例输入 #2</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">0.041096
-</span></span><span class="line"><span class="cl">0.109589
-</span></span><span class="line"><span class="cl">0.109589
-</span></span><span class="line"><span class="cl">0.164384
-</span></span><span class="line"><span class="cl">0.301370
-</span></span><span class="line"><span class="cl">0.068493
-</span></span><span class="line"><span class="cl">0.205479
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-2">样例输出 #2</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">73
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="样例-3">样例 #3</h2>
+<pre tabindex="0"><code>7
+0.041096
+0.109589
+0.109589
+0.164384
+0.301370
+0.068493
+0.205479
+</code></pre><h3 id="样例输出-2">样例输出 #2</h3>
+<pre tabindex="0"><code>73
+</code></pre><h2 id="样例-3">样例 #3</h2>
 <h3 id="样例输入-3">样例输入 #3</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">13
-</span></span><span class="line"><span class="cl">0.00155
-</span></span><span class="line"><span class="cl">0.03876
-</span></span><span class="line"><span class="cl">0.01584
-</span></span><span class="line"><span class="cl">0.05189
-</span></span><span class="line"><span class="cl">0.08099
-</span></span><span class="line"><span class="cl">0.06825
-</span></span><span class="line"><span class="cl">0.15658
-</span></span><span class="line"><span class="cl">0.10404
-</span></span><span class="line"><span class="cl">0.02640
-</span></span><span class="line"><span class="cl">0.14332
-</span></span><span class="line"><span class="cl">0.12941
-</span></span><span class="line"><span class="cl">0.15529
-</span></span><span class="line"><span class="cl">0.02768
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-3">样例输出 #3</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">7766
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-9">提示</h2>
+<pre tabindex="0"><code>13
+0.00155
+0.03876
+0.01584
+0.05189
+0.08099
+0.06825
+0.15658
+0.10404
+0.02640
+0.14332
+0.12941
+0.15529
+0.02768
+</code></pre><h3 id="样例输出-3">样例输出 #3</h3>
+<pre tabindex="0"><code>7766
+</code></pre><h2 id="提示-9">提示</h2>
 <p><strong>【样例解释 #1】</strong></p>
 <p>最小的总投票数为 $6$，对应每个选项的投票数为 $1, 2, 3$。</p>
 <p><strong>【样例解释 #2】</strong></p>
@@ -6238,44 +5895,20 @@ $$</p>
 <p>If there are multiple answers, print any of them.</p>
 <h2 id="样例-1-8">样例 #1</h2>
 <h3 id="样例输入-1-8">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2
-</span></span><span class="line"><span class="cl">2
-</span></span><span class="line"><span class="cl">15 1 10 5
-</span></span><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">10 30 20 20 30 10
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-8">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">9
-</span></span><span class="line"><span class="cl">10 1
-</span></span><span class="line"><span class="cl">15 5
-</span></span><span class="line"><span class="cl">20
-</span></span><span class="line"><span class="cl">20 20
-</span></span><span class="line"><span class="cl">10 30
-</span></span><span class="line"><span class="cl">10 30
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-10">提示</h2>
+<pre tabindex="0"><code>2
+2
+15 1 10 5
+3
+10 30 20 20 30 10
+</code></pre><h3 id="样例输出-1-8">样例输出 #1</h3>
+<pre tabindex="0"><code>9
+10 1
+15 5
+20
+20 20
+10 30
+10 30
+</code></pre><h2 id="提示-10">提示</h2>
 <p>In the first testcase, for instance, you can form points $ (10, 1) $ and $ (15, 5) $ and start the path $ s $ from the first point and end it at the second point. Then the length of the path will be $ |10 - 15| + |1 - 5| = 5 + 4 = 9 $ .</p>
 <p>In the second testcase, you can form points $ (20, 20) $ , $ (10, 30) $ , and $ (10, 30) $ , and visit them in that exact order. Then the length of the path will be $ |20 - 10| + |20 - 30| + |10 - 10| + |30 - 30| = 10 + 10 + 0 + 0 = 20 $ .</p>
 </blockquote>
@@ -6368,49 +6001,18 @@ $$</p>
 <p>如果小 I 不可能获胜，只需要输出一个整数 <code>-1</code>；否则第一行输出一个整数 $s$，表示你给出的策略中小 I 的行动次数。接下来一行 $s$ 个整数，依次描述每次行动时小 I 从手牌中放入公共牌堆的牌的牌面，两个数之间以一个空格分隔。<strong>注意你给出的策略要满足 $s$ 最小。</strong></p>
 <h2 id="样例-1-9">样例 #1</h2>
 <h3 id="样例输入-1-9">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">1 3 3
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-9">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">2 1 2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="样例-2-1">样例 #2</h2>
+<pre tabindex="0"><code>3
+1 3 3
+</code></pre><h3 id="样例输出-1-9">样例输出 #1</h3>
+<pre tabindex="0"><code>3
+2 1 2
+</code></pre><h2 id="样例-2-1">样例 #2</h2>
 <h3 id="样例输入-2-1">样例输入 #2</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-2-1">样例输出 #2</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-11">提示</h2>
+<pre tabindex="0"><code>1
+1
+</code></pre><h3 id="样例输出-2-1">样例输出 #2</h3>
+<pre tabindex="0"><code>-1
+</code></pre><h2 id="提示-11">提示</h2>
 <h4 id="样例解释-1-1">样例解释 1</h4>
 <p><img loading="lazy" src="https://cdn.luogu.com.cn/upload/image_hosting/m1asrjdd.png" alt=""  />
 </p>
@@ -6458,34 +6060,15 @@ $$</p>
 <p>输出区域中最长滑坡的长度。</p>
 <h2 id="样例-1-10">样例 #1</h2>
 <h3 id="样例输入-1-10">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">5 5
-</span></span><span class="line"><span class="cl">1 2 3 4 5
-</span></span><span class="line"><span class="cl">16 17 18 19 6
-</span></span><span class="line"><span class="cl">15 24 25 20 7
-</span></span><span class="line"><span class="cl">14 23 22 21 8
-</span></span><span class="line"><span class="cl">13 12 11 10 9
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-10">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">25
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-12">提示</h2>
+<pre tabindex="0"><code>5 5
+1 2 3 4 5
+16 17 18 19 6
+15 24 25 20 7
+14 23 22 21 8
+13 12 11 10 9
+</code></pre><h3 id="样例输出-1-10">样例输出 #1</h3>
+<pre tabindex="0"><code>25
+</code></pre><h2 id="提示-12">提示</h2>
 <p>对于 $100%$ 的数据，$1\leq R,C\leq 100$。</p>
 </blockquote>
 <h3 id="分析-11">分析</h3>
@@ -6634,76 +6217,36 @@ $$
 <p>For each test case, print -1 if there is no solution. Otherwise, print $ b_1, b_2, \ldots, b_n $ — an array consisting of numbers $ 1 $ , $ 2 $ , $ 3 $ that satisfies exactly two out of three conditions. If there are multiple possible answers, you can print any of them.</p>
 <h2 id="样例-1-11">样例 #1</h2>
 <h3 id="样例输入-1-11">样例输入 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">9
-</span></span><span class="line"><span class="cl">6
-</span></span><span class="line"><span class="cl">1 2 3 2 2 3
-</span></span><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">7 7 7 7 7 7 7
-</span></span><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">1 1 2 2
-</span></span><span class="line"><span class="cl">7
-</span></span><span class="line"><span class="cl">1 2 3 4 5 6 7
-</span></span><span class="line"><span class="cl">5
-</span></span><span class="line"><span class="cl">2 3 3 3 2
-</span></span><span class="line"><span class="cl">3
-</span></span><span class="line"><span class="cl">1 2 1
-</span></span><span class="line"><span class="cl">9
-</span></span><span class="line"><span class="cl">1 1 1 7 7 7 9 9 9
-</span></span><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">18
-</span></span><span class="line"><span class="cl">93 84 50 21 88 52 16 50 63 1 30 85 29 67 63 58 37 69
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-11">样例输出 #1</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1 2 3 1 1 1 
-</span></span><span class="line"><span class="cl">-1
-</span></span><span class="line"><span class="cl">3 2 2 1 
-</span></span><span class="line"><span class="cl">-1
-</span></span><span class="line"><span class="cl">2 1 2 1 3 
-</span></span><span class="line"><span class="cl">-1
-</span></span><span class="line"><span class="cl">1 1 2 2 1 2 2 3 3
-</span></span><span class="line"><span class="cl">-1
-</span></span><span class="line"><span class="cl">3 2 1 3 3 3 3 2 2 1 1 2 3 1 3 1 1 2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-13">提示</h2>
+<pre tabindex="0"><code>9
+6
+1 2 3 2 2 3
+7
+7 7 7 7 7 7 7
+4
+1 1 2 2
+7
+1 2 3 4 5 6 7
+5
+2 3 3 3 2
+3
+1 2 1
+9
+1 1 1 7 7 7 9 9 9
+1
+1
+18
+93 84 50 21 88 52 16 50 63 1 30 85 29 67 63 58 37 69
+</code></pre><h3 id="样例输出-1-11">样例输出 #1</h3>
+<pre tabindex="0"><code>1 2 3 1 1 1 
+-1
+3 2 2 1 
+-1
+2 1 2 1 3 
+-1
+1 1 2 2 1 2 2 3 3
+-1
+3 2 1 3 3 3 3 2 2 1 1 2 3 1 3 1 1 2
+</code></pre><h2 id="提示-13">提示</h2>
 <p>In the first test case, $ b = [1, 2, 3, 1, 1, 1] $ satisfies condition $ 1 $ because for $ i = 4 $ , $ j = 2 $ : $ a_i = a_j $ , $ b_i = 1 $ , and $ b_j = 2 $ . It also satisfies condition $ 2 $ because for $ i = 6 $ , $ j = 3 $ : $ a_i = a_j $ , $ b_i = 1 $ , and $ b_j = 3 $ . However, it does not satisfy condition $ 3 $ . In total, exactly two out of three conditions are satisfied.</p>
 </blockquote>
 <h3 id="分析-12">分析</h3>
