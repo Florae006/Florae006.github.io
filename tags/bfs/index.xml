@@ -1,0 +1,1347 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>BFS on DODOLA&#39;s WareHouse</title>
+    <link>https://dodolalorc.cn/tags/bfs/</link>
+    <description>Recent content in BFS on DODOLA&#39;s WareHouse</description>
+    <image>
+      <title>DODOLA&#39;s WareHouse</title>
+      <url>https://dodolalorc.cn/papermod-cover.png</url>
+      <link>https://dodolalorc.cn/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 06 Jan 2024 14:15:17 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/bfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>图论基础||存储图||DFS、BFS(图论)</title>
+      <link>https://dodolalorc.cn/posts/knowledge/algorithm/graph_basic/</link>
+      <pubDate>Sat, 06 Jan 2024 14:15:17 +0800</pubDate>
+      
+      <guid>https://dodolalorc.cn/posts/knowledge/algorithm/graph_basic/</guid>
+      <description>1.1图的定义 上课讲过一大堆这里不再赘述，直接学习代码实现。 1.2图的存储 例图展示： graph LR v1((v1))--4--&amp;gt;v2((v2)) v1((v1))--9--&amp;gt;v6((v6)) v3((v3))--19--&amp;gt;v2((v2)) v3((v3))--22--&amp;gt;v1((v1)) v4((v4))--17--&amp;gt;v3((v3)) v5((v5))--29--&amp;gt;v8((v8)) v6((v6))--12--&amp;gt;v1((v1)) v6((v6))--9--&amp;gt;v5((v5)) v6((v6))--4--&amp;gt;v7((v7)) v7((v7))--25--&amp;gt;v4((v4)) v8((v8))--7--&amp;gt;v7((v7)) v8((v8))--11--&amp;gt;v3((v3)) 设n个点，m条边 上图的数据（</description>
+      <content:encoded><![CDATA[<h3 id="11图的定义">1.1图的定义</h3>
+<p>上课讲过一大堆这里不再赘述，直接学习代码实现。</p>
+<h3 id="12图的存储">1.2图的存储</h3>
+<p>例图展示：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
+v1((v1))--4--&gt;v2((v2))
+v1((v1))--9--&gt;v6((v6))
+v3((v3))--19--&gt;v2((v2))
+v3((v3))--22--&gt;v1((v1))
+v4((v4))--17--&gt;v3((v3))
+v5((v5))--29--&gt;v8((v8))
+v6((v6))--12--&gt;v1((v1))
+v6((v6))--9--&gt;v5((v5))
+v6((v6))--4--&gt;v7((v7))
+v7((v7))--25--&gt;v4((v4))
+v8((v8))--7--&gt;v7((v7))
+v8((v8))--11--&gt;v3((v3))
+</code></pre><p><code>设n个点，m条边</code></p>
+<p>上图的数据（按照 起点-终点-权值）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">8 12
+</span></span><span class="line"><span class="cl">5 8 29
+</span></span><span class="line"><span class="cl">6 1 12
+</span></span><span class="line"><span class="cl">8 3 11
+</span></span><span class="line"><span class="cl">1 2 4
+</span></span><span class="line"><span class="cl">3 1 22
+</span></span><span class="line"><span class="cl">4 3 17
+</span></span><span class="line"><span class="cl">7 4 25
+</span></span><span class="line"><span class="cl">6 5 9
+</span></span><span class="line"><span class="cl">8 7 7
+</span></span><span class="line"><span class="cl">1 6 9
+</span></span><span class="line"><span class="cl">3 2 19
+</span></span><span class="line"><span class="cl">6 7 4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="邻接矩阵">邻接矩阵</h4>
+<ul>
+<li>遍历效率低、不能存重边、初始化效率低<code>初始化O(n^2)时间，建图O(m)时间</code>、空间开销大<code>O(n^2)</code></li>
+<li>对于稀疏图来说大部分是INF，空间利用效率也不高</li>
+</ul>
+<h4 id="前向星">前向星</h4>
+<p>前向星涉及排序，所以其时间复杂度和排序算法有关，一般情况下时间复杂度为<code>O(mlog m)</code>，空间上需要两个数组（记录边的边数组、记录各点在边数组中起始位置的head数组），空间复杂度为<code>O(m+n)</code></p>
+<p><u>优点：在点特别多时可以存储重边</u></p>
+<p><u>缺点：不能直接判断任意两个点之间是否有边。排序和初始化数组费时间。</u></p>
+<p>需要的数据结构如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">NODE</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">from</span><span class="p">;</span>	<span class="c1">// 起点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">NODE</span> <span class="n">edge</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>NODE用来存储每条边的信息，边按照输入读取后再排序，排序之后使用<code>head[maxn]</code>来储存各个点的在<code>edge[maxm]</code>里的起始位置。</p>
+<p>排序方式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">cmp</span><span class="p">(</span><span class="n">NODE</span> <span class="n">a</span><span class="p">,</span> <span class="n">NODE</span> <span class="n">b</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">from</span><span class="o">==</span><span class="n">b</span><span class="p">.</span><span class="n">from</span><span class="o">&amp;&amp;</span><span class="n">a</span><span class="p">.</span><span class="n">to</span><span class="o">==</span><span class="n">b</span><span class="p">.</span><span class="n">to</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">w</span><span class="o">&lt;</span><span class="n">b</span><span class="p">.</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">from</span><span class="o">==</span><span class="n">b</span><span class="p">.</span><span class="n">from</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">to</span><span class="o">&lt;</span><span class="n">b</span><span class="p">.</span><span class="n">to</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">from</span><span class="o">&lt;</span><span class="n">b</span><span class="p">.</span><span class="n">from</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完整代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">NODE</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">from</span><span class="p">,</span> <span class="n">to</span><span class="p">,</span> <span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">edge</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">cmp</span><span class="p">(</span><span class="n">NODE</span> <span class="n">a</span><span class="p">,</span> <span class="n">NODE</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">from</span> <span class="o">==</span> <span class="n">b</span><span class="p">.</span><span class="n">from</span> <span class="o">&amp;&amp;</span> <span class="n">a</span><span class="p">.</span><span class="n">to</span> <span class="o">==</span> <span class="n">b</span><span class="p">.</span><span class="n">to</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">w</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">from</span> <span class="o">==</span> <span class="n">b</span><span class="p">.</span><span class="n">from</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">to</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">to</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">from</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">.</span><span class="n">from</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">from</span> <span class="o">&gt;&gt;</span> <span class="n">edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span> <span class="o">&gt;&gt;</span> <span class="n">edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="c1">// 排序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">sort</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">edge</span> <span class="o">+</span> <span class="n">m</span><span class="p">,</span> <span class="n">cmp</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化head
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">memset</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">head</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 制成点位数组
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">head</span><span class="p">[</span><span class="n">edge</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">from</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>	<span class="c1">// 初始化
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// edge数组中起点为点i的在数组里的第一条边在下标head[i]处
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">from</span> <span class="o">!=</span> <span class="n">edge</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="n">from</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 表明是新的起始点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">head</span><span class="p">[</span><span class="n">edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">from</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 遍历输出各边信息（按点位输出）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;以点v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;为起点的边：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="o">&amp;&amp;</span> <span class="n">edge</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">from</span> <span class="o">==</span> <span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">edge</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">from</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;--&gt;v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">edge</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">to</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 权值为：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">edge</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">w</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 该边在数组edge中的序号为&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">j</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Output：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">以点v1为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v1--&gt;v2 权值为：4 该边在数组edge中的序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">v1--&gt;v6 权值为：9 该边在数组edge中的序号为1
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">以点v2为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">以点v3为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v3--&gt;v1 权值为：22 该边在数组edge中的序号为2
+</span></span></span><span class="line"><span class="cl"><span class="cm">v3--&gt;v2 权值为：19 该边在数组edge中的序号为3
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">以点v4为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v4--&gt;v3 权值为：17 该边在数组edge中的序号为4
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">以点v5为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v5--&gt;v8 权值为：29 该边在数组edge中的序号为5
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">以点v6为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6--&gt;v1 权值为：12 该边在数组edge中的序号为6
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6--&gt;v5 权值为：9 该边在数组edge中的序号为7
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6--&gt;v7 权值为：4 该边在数组edge中的序号为8
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">以点v7为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v7--&gt;v4 权值为：25 该边在数组edge中的序号为9
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">以点v8为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v8--&gt;v3 权值为：11 该边在数组edge中的序号为10
+</span></span></span><span class="line"><span class="cl"><span class="cm">v8--&gt;v7 权值为：7 该边在数组edge中的序号为11
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="邻接表">邻接表</h4>
+<p>图的一种链式存储结构，把图G中所有邻接于v~i~的顶点链接成为一个v~i~的单链表。</p>
+<p>三种实现方法：</p>
+<h5 id="1-动态建表">1. 动态建表</h5>
+<p>动态建表的时间效率是<code>O(m)</code>，空间效率是<code>O(m)</code>，主要的时间损耗在于不断地申请新空间，且判断任意两个点之间是否有边相连的效率也低（需要搜索各个点的单链表）(感觉还好？)。</p>
+<p>数据结构：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">EdgeNode</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>		<span class="c1">// 下一边的指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">VNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">from</span><span class="p">;</span>	<span class="c1">// 起点（这个数据结构中from没有传值，我们以遍历Adjlist时的遍历时序用于指定起点）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">EdgeNode</span><span class="o">*</span> <span class="n">first</span><span class="p">;</span>	<span class="c1">// 邻接表的头指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完整代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span><span class="lnt">94
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">EdgeNode</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>		<span class="c1">// 下一边的指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">VNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">from</span><span class="p">;</span>	<span class="c1">// 起点（这个数据结构中from没有传值，我们以遍历Adjlist时的遍历时序用于指定起点）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">EdgeNode</span><span class="o">*</span> <span class="n">first</span><span class="p">;</span>	<span class="c1">// 邻接表的头指针
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">VNode</span> <span class="n">Adjlist</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>	<span class="c1">// 全图
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">fi</span><span class="p">,</span> <span class="n">ti</span><span class="p">,</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fi</span> <span class="o">&gt;&gt;</span> <span class="n">ti</span> <span class="o">&gt;&gt;</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 创建一个新的边结构数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">EdgeNode</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EdgeNode</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 给该数据传值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">p</span><span class="o">-&gt;</span><span class="n">to</span> <span class="o">=</span> <span class="n">ti</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">p</span><span class="o">-&gt;</span><span class="n">w</span> <span class="o">=</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">		<span class="c1">// 该新边的next指针指向上一个链接到起点为fi的单链表中的起点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">        （相当于在前面插入，这点可以观察遍历输出部分发现，比如先读入的v1--&gt;v2后读入的v1--&gt;v6，但在储存时我们将后来的v1--&gt;v6插入在了v1--&gt;v2前面）
+</span></span></span><span class="line"><span class="cl"><span class="cm">        */</span>
+</span></span><span class="line"><span class="cl">		<span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">Adjlist</span><span class="p">[</span><span class="n">fi</span><span class="p">].</span><span class="n">first</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="c1">// 将起点为fi的单链表的指针更新为这个新传入边的地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">Adjlist</span><span class="p">[</span><span class="n">fi</span><span class="p">].</span><span class="n">first</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 遍历
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;点v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;为起点的边：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">ind</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="n">EdgeNode</span><span class="o">*</span> <span class="n">k</span> <span class="o">=</span> <span class="n">Adjlist</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">first</span><span class="p">;</span><span class="n">k</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">;</span><span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 指针遍历该链表至结束
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; --&gt;v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">k</span><span class="o">-&gt;</span><span class="n">to</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 权值为：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">k</span><span class="o">-&gt;</span><span class="n">w</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 该边记录在点v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;的单链表的第&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">ind</span><span class="o">++</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;个&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;点v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;为的度数为：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">ind</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Output:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v1为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v1 --&gt;v6 权值为：9 该边记录在点v1的单链表的第0个
+</span></span></span><span class="line"><span class="cl"><span class="cm">v1 --&gt;v2 权值为：4 该边记录在点v1的单链表的第1个
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v1为的度数为：2
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v2为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v2为的度数为：0
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v3为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v3 --&gt;v2 权值为：19 该边记录在点v3的单链表的第0个
+</span></span></span><span class="line"><span class="cl"><span class="cm">v3 --&gt;v1 权值为：22 该边记录在点v3的单链表的第1个
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v3为的度数为：2
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v4为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v4 --&gt;v3 权值为：17 该边记录在点v4的单链表的第0个
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v4为的度数为：1
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v5为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v5 --&gt;v8 权值为：29 该边记录在点v5的单链表的第0个
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v5为的度数为：1
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v6为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6 --&gt;v7 权值为：4 该边记录在点v6的单链表的第0个
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6 --&gt;v5 权值为：9 该边记录在点v6的单链表的第1个
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6 --&gt;v1 权值为：12 该边记录在点v6的单链表的第2个
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v6为的度数为：3
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v7为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v7 --&gt;v4 权值为：25 该边记录在点v7的单链表的第0个
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v7为的度数为：1
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v8为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v8 --&gt;v7 权值为：7 该边记录在点v8的单链表的第0个
+</span></span></span><span class="line"><span class="cl"><span class="cm">v8 --&gt;v3 权值为：11 该边记录在点v8的单链表的第1个
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v8为的度数为：2
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意到，无向图中各点的度正好是各点的单链表中链节的个数，也就是上述代码中<code>ind</code>最后的结果值，而之余有向图，<code>ind</code>就是对应顶点的出度。</p>
+<p>若要求得入度则必须遍历整个邻接表或者建立一个逆链接表（以v~i~边为终边的链接表）。</p>
+<p>注意：一个图 的邻接表不是唯一的，其具体的邻接次序与边的输入次序有关。</p>
+<h5 id="2-vector模拟链表实现">2. vector模拟链表实现</h5>
+<p>vector模拟链表的实现方式与前一种区别不大（前插入和后插入的区别？反正基本没有质变）</p>
+<p>不过这种方式代码量少，不容易出错，也不用指针指来指去。也不需要我们来考虑内存的申请和释放。比较友好（qwq）</p>
+<p>需要数据结构：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">EdgeNode</span><span class="o">&gt;</span><span class="n">mp</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完整代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">EdgeNode</span><span class="o">&gt;</span><span class="n">mp</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">EdgeNode</span> <span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">fi</span><span class="p">,</span> <span class="n">ti</span><span class="p">,</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fi</span> <span class="o">&gt;&gt;</span> <span class="n">ti</span> <span class="o">&gt;&gt;</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="n">e</span><span class="p">.</span><span class="n">to</span> <span class="o">=</span> <span class="n">ti</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">e</span><span class="p">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">mp</span><span class="p">[</span><span class="n">fi</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 遍历
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;点v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;为起点的边：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="n">vector</span><span class="o">&lt;</span><span class="n">EdgeNode</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">mp</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">begin</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">ind</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(;</span><span class="n">it</span> <span class="o">!=</span> <span class="n">mp</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">end</span><span class="p">();</span><span class="n">it</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;--&gt;v&#34;</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="o">*</span><span class="n">it</span><span class="p">).</span><span class="n">to</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 权值为：&#34;</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="o">*</span><span class="n">it</span><span class="p">).</span><span class="n">w</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 该边在所有以点v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;为起点的边中序号为&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">ind</span><span class="o">++</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;点v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;的度数为：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">ind</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Output:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v1为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v1--&gt;v2 权值为：4 该边在所有以点v1为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">v1--&gt;v6 权值为：9 该边在所有以点v1为起点的边中序号为1
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v1的度数为：2
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v2为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v2的度数为：0
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v3为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v3--&gt;v1 权值为：22 该边在所有以点v3为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">v3--&gt;v2 权值为：19 该边在所有以点v3为起点的边中序号为1
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v3的度数为：2
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v4为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v4--&gt;v3 权值为：17 该边在所有以点v4为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v4的度数为：1
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v5为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v5--&gt;v8 权值为：29 该边在所有以点v5为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v5的度数为：1
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v6为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6--&gt;v1 权值为：12 该边在所有以点v6为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6--&gt;v5 权值为：9 该边在所有以点v6为起点的边中序号为1
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6--&gt;v7 权值为：4 该边在所有以点v6为起点的边中序号为2
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v6的度数为：3
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v7为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v7--&gt;v4 权值为：25 该边在所有以点v7为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v7的度数为：1
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v8为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v8--&gt;v3 权值为：11 该边在所有以点v8为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">v8--&gt;v7 权值为：7 该边在所有以点v8为起点的边中序号为1
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v8的度数为：2
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="3-静态建表链式前向星">3. ★★★静态建表（链式前向星）</h5>
+<p>邻接表的静态建表存储图的方式也称链式前向星，基于前向星，以提高构造效率为目的设计的存储方式，最终形成的数据是一个变形的邻接表。</p>
+<p>链式前向星采用数组模拟链表的方式实现邻接表的功能，使用很少的额外空间，<u>是目前建图和遍历效率最高的存储方式。</u></p>
+<p>数据结构：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">next</span><span class="p">;</span>	<span class="c1">// 下一位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">EdgeNode</span> <span class="n">Edge</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>数组模拟链表的主要方式是记录下一节点的位置在整个数组的位置坐标，并将这个标志坐标存在一个head数组中，遍历时根据输入的边的信息更新head对应的更新位置，并将原来的节点信息存在此时读入的边的next数据中。</p>
+<p>存值方式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">fi</span><span class="p">,</span> <span class="n">ti</span><span class="p">,</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fi</span> <span class="o">&gt;&gt;</span> <span class="n">ti</span> <span class="o">&gt;&gt;</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span> <span class="o">=</span> <span class="n">ti</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">w</span> <span class="o">=</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完整代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">next</span><span class="p">;</span>	<span class="c1">// 下一位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">EdgeNode</span> <span class="n">Edge</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化head
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">memset</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">head</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">fi</span><span class="p">,</span> <span class="n">ti</span><span class="p">,</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fi</span> <span class="o">&gt;&gt;</span> <span class="n">ti</span> <span class="o">&gt;&gt;</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span> <span class="o">=</span> <span class="n">ti</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">w</span> <span class="o">=</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="c1">// 遍历
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;点v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;为起点的边：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">ind</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="n">j</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;--&gt;v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">Edge</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">to</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 权值为：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">Edge</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">w</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 该边在所有以点v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;为起点的边中序号为&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">ind</span><span class="o">++</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;点v&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;的度数为：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">ind</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 展示一下head数组里的内容：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;----------head数组里的内容----------&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;head[&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;]=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">head</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Output:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v1为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v1--&gt;v6 权值为：9 该边在所有以点v1为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">v1--&gt;v2 权值为：4 该边在所有以点v1为起点的边中序号为1
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v1的度数为：2
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v2为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v2的度数为：0
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v3为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v3--&gt;v2 权值为：19 该边在所有以点v3为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">v3--&gt;v1 权值为：22 该边在所有以点v3为起点的边中序号为1
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v3的度数为：2
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v4为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v4--&gt;v3 权值为：17 该边在所有以点v4为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v4的度数为：1
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v5为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v5--&gt;v8 权值为：29 该边在所有以点v5为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v5的度数为：1
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v6为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6--&gt;v7 权值为：4 该边在所有以点v6为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6--&gt;v5 权值为：9 该边在所有以点v6为起点的边中序号为1
+</span></span></span><span class="line"><span class="cl"><span class="cm">v6--&gt;v1 权值为：12 该边在所有以点v6为起点的边中序号为2
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v6的度数为：3
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v7为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v7--&gt;v4 权值为：25 该边在所有以点v7为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v7的度数为：1
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v8为起点的边：
+</span></span></span><span class="line"><span class="cl"><span class="cm">v8--&gt;v7 权值为：7 该边在所有以点v8为起点的边中序号为0
+</span></span></span><span class="line"><span class="cl"><span class="cm">v8--&gt;v3 权值为：11 该边在所有以点v8为起点的边中序号为1
+</span></span></span><span class="line"><span class="cl"><span class="cm">点v8的度数为：2
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">----------head数组里的内容----------
+</span></span></span><span class="line"><span class="cl"><span class="cm">head[1]=9
+</span></span></span><span class="line"><span class="cl"><span class="cm">head[2]=-1
+</span></span></span><span class="line"><span class="cl"><span class="cm">head[3]=10
+</span></span></span><span class="line"><span class="cl"><span class="cm">head[4]=5
+</span></span></span><span class="line"><span class="cl"><span class="cm">head[5]=0
+</span></span></span><span class="line"><span class="cl"><span class="cm">head[6]=11
+</span></span></span><span class="line"><span class="cl"><span class="cm">head[7]=6
+</span></span></span><span class="line"><span class="cl"><span class="cm">head[8]=8
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>除了不能直接用起点终点确定是否有边外，链式前向星几乎是完美的。</p>
+<h3 id="13图的遍历">1.3图的遍历</h3>
+<p>从v~0~出发系统的访问图G中所有的顶点，每个顶点访问一次，称为图的遍历。</p>
+<h4 id="深度优先遍历">深度优先遍历</h4>
+<p>从一个节点开始，按照连接，访问到最后一个没有被访问的顶点，然后再从顺序上没有被访问的分路继续访问到最深处，如此循环至全部被访问。</p>
+<p>深度优先样例代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// 用一个布尔型数组来标记是否被遍历到
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="n">s</span><span class="p">[</span><span class="n">maxn</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 传入节点名x
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>	<span class="c1">// 标记被访问
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">x</span><span class="p">];</span><span class="n">i</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 找到该节点为起点的头位置，然后按顺序去遍历下一个和节点x相连的节点位置，并标记访问
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">s</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 如果当前边的终点未被访问，我们就去访问它
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">dfs</span><span class="p">(</span><span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="c1">// 当前边的终点如果已被访问，我们就访问和节点x的下一条边，即给i赋值为Edge[i].next
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完整代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">next</span><span class="p">;</span>	<span class="c1">// 下一位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">EdgeNode</span> <span class="n">Edge</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 用一个布尔型数组来标记是否被遍历到
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="n">s</span><span class="p">[</span><span class="n">maxn</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 传入节点名x
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>	<span class="c1">// 标记被访问
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>	<span class="c1">// 输出被标记的点（观察顺序）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">x</span><span class="p">];</span><span class="n">i</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 找到该节点为起点的头位置，然后按顺序去遍历下一个和节点x相连的节点位置，并标记访问
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">s</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 如果当前边的终点未被访问，我们就去访问它
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">dfs</span><span class="p">(</span><span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="c1">// 当前边的终点如果已被访问，我们就访问和节点x的下一条边，即给i赋值为Edge[i].next
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化head
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">memset</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">head</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">fi</span><span class="p">,</span> <span class="n">ti</span><span class="p">,</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fi</span> <span class="o">&gt;&gt;</span> <span class="n">ti</span> <span class="o">&gt;&gt;</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span> <span class="o">=</span> <span class="n">ti</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">w</span> <span class="o">=</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 深度优先访问，从顶点1开始（没有点0啦）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">dfs</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// Output:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">		1 6 7 4 3 2 5 8
+</span></span></span><span class="line"><span class="cl"><span class="cm">	*/</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 可以结合图去观察这个顺序，便于理解深度优先搜索
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意：这里还是使用强推的<u>链式前向星</u>数据结构来储存图，因为边在读入的时候是前插入，所以后读入的边会先被遍历。</p>
+<h4 id="广度优先遍历">广度优先遍历</h4>
+<p>广度优先就是先访问顶点v~0~的所有边的终点，然后再访问第一条边往下延续的未被访问的顶点（第一条边往下没有就第二条边&hellip;如此搜索）</p>
+<p>广度优先用到了队列来记录遍历某顶点广度时，遍历的这个终点的下一点(next)是否被遍历，如果未被遍历则标记入队，等待当前顶点按照广度优先被遍历完终点后从该队列中获得下一轮被遍历的点。</p>
+<p>广度优先样例代码：</p>
+<p>（啊啊啊突然发现拼错单词了，其实队列的单词是queue，不过在c++里引用了stl容器还用queue命名不太好吧(虽然没影响)&hellip;不管了！算了，还是改过来吧QAQ）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// 用一个布尔型数组来标记是否被遍历到
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="n">s</span><span class="p">[</span><span class="n">maxn</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">bfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">queue</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">iq</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>		<span class="c1">// 遍历以x为顶点的起始状态时，队列是空的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">queue</span><span class="p">[</span><span class="n">iq</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>	<span class="c1">// 给当前队列添加被访问的这个顶点x
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">iq</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="c1">// 这个队列按序输出可以反应搜索顺序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">queue</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="c1">// 按照广度优先构造顺序队列(入队的都算作被访问了，下次执行当前循环(i++)将会输出最后入队的该顶点)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">queue</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span><span class="n">k</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">k</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 遍历当前节点x相连的节点，即当前边的终点，如果该点没有被访问过，则入队，标记已访问，队长++
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">s</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">s</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="n">queue</span><span class="p">[</span><span class="n">iq</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完整代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">next</span><span class="p">;</span>	<span class="c1">// 下一位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">EdgeNode</span> <span class="n">Edge</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 用一个布尔型数组来标记是否被遍历到
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="n">s</span><span class="p">[</span><span class="n">maxn</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">bfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">queue</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">iq</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>		<span class="c1">// 遍历以x为顶点的起始状态时，队列是空的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">queue</span><span class="p">[</span><span class="n">iq</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>	<span class="c1">// 给当前队列添加被访问的这个顶点x
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">iq</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="c1">// 这个队列按序输出可以反应搜索顺序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">queue</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="c1">// 按照广度优先构造顺序队列(入队的都算作被访问了，下次执行当前循环(i++)将会输出最后入队的该顶点)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">queue</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span><span class="n">k</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">k</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 遍历当前节点x相连的节点，即当前边的终点，如果该点没有被访问过，则入队，标记已访问，队长++
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">s</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">s</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="n">queue</span><span class="p">[</span><span class="n">iq</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化head
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">memset</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">head</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">fi</span><span class="p">,</span> <span class="n">ti</span><span class="p">,</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fi</span> <span class="o">&gt;&gt;</span> <span class="n">ti</span> <span class="o">&gt;&gt;</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span> <span class="o">=</span> <span class="n">ti</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">w</span> <span class="o">=</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">bfs</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// Output:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">		1 6 2 7 5 1 4 8 3
+</span></span></span><span class="line"><span class="cl"><span class="cm">	*/</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 结合图去观察该顺序，便于理解广度优先搜索
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>深度优先和广度优先都是通过边来搜索检查邻边是否被遍历到，所以时间复杂度相同，不过访问序列不同。</li>
+</ul>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

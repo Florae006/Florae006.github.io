@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>拓扑排序 on DODOLA&#39;s WareHouse</title>
+    <link>https://dodolalorc.cn/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</link>
+    <description>Recent content in 拓扑排序 on DODOLA&#39;s WareHouse</description>
+    <image>
+      <title>DODOLA&#39;s WareHouse</title>
+      <url>https://dodolalorc.cn/papermod-cover.png</url>
+      <link>https://dodolalorc.cn/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 05 Jan 2024 14:20:41 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>拓扑排序</title>
+      <link>https://dodolalorc.cn/posts/knowledge/algorithm/topo/</link>
+      <pubDate>Fri, 05 Jan 2024 14:20:41 +0800</pubDate>
+      
+      <guid>https://dodolalorc.cn/posts/knowledge/algorithm/topo/</guid>
+      <description>拓扑排序 前提：拓扑排序是对有向无环图来说的，无向图、有环图都不存在拓扑排序。 拓扑排序是将图G中的所有顶点排成一个线性序列，使得对于任意一堆有</description>
+      <content:encoded><![CDATA[<h2 id="拓扑排序">拓扑排序</h2>
+<p>前提：拓扑排序是对<u>有向无环图</u>来说的，无向图、有环图都不存在拓扑排序。</p>
+<p>拓扑排序是将图G中的所有顶点排成一个线性序列，使得对于任意一堆有边顶点&lt;u, v&gt;，在线性序列中，u都出现在v之前。</p>
+<p>拓扑排序可以反应某种方案是否是切实可行的。</p>
+<p>一般一个图是否是有向图我们分析题意要求就能知道，但是究竟有没有环存在，就不是瞄一眼就能发现的了，所以，虽然拓扑排序是针对有向无环图而言的一种性质，但是反过来，一个有向图是否有拓扑排序，也可以反过来解决该图是否存在环、以及存在多少环等等问题，也就是某种方案可不可行。</p>
+<p>接下来我们通过代码学习如何获得一个有向图的拓扑排序：</p>
+<h3 id="算法思路">算法思路</h3>
+<p>拓扑排序一定是从入度为0的顶点开始的（假如入度不为0不就是有点要排在它的前面了嘛qwq），所以，我们通过删除点(及由该点出发的所有边)的方法可以不断更新制作拓扑排序时当前图的状态，这样的步骤不断执行，直到图中能删的点(入度为0的点)都删光了，我们的程序就执行到了终点。</p>
+<h3 id="程序实现">程序实现</h3>
+<p><u>我们还是用链式前向星来存储图</u></p>
+<p>使用队列来记录我们的拓扑序列（说是队列不过其实还是个每次只读末尾的数组啦，也没用到queue容器qwq）</p>
+<p>寻找拓扑序列样例代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// 要先用一个数组记录各个顶点最初的入度，这个数组可以在读入边数据的时候进行++记录
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">queue</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">iq</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>	<span class="c1">// 表示当前队列长度，起始当然是0啦(懒得iq++也可以直接懒人向量法)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 先将图里入度为0的顶点加入队列
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 第一层入度为0的点，其顺序就只是存储顺序决定哩，而且不重要(除非想找所有的拓扑排序qwq)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">indegree</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">queue</span><span class="p">[</span><span class="n">iq</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 删点，对队列做更新
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">iq</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 按队列顺序删点删边(终点的入度--就算删掉这条边了)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">queue</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span><span class="n">k</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">;</span><span class="n">k</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">indegree</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">indegree</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">queue</span><span class="p">[</span><span class="n">iq</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这时候我们得到了一个序列，其实这个序列无论如何都能得到（空序列也是序列！），所以接下来需要判断一下是否是拓扑序列，同时也就判断出当前的图是不是有向无环图啦。</p>
+<p>判断样例代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;iq=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">iq</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; n=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">iq</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;有拓扑序列：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="c1">// 输出拓扑排序序列
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">iq</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">queue</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;没有拓扑序列&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>前面的输入样例是个有向有环图，这里添加一组有向无环图的样例用于学习：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
+v1((v1))--5--&gt;v2((v2))
+v1((v1))--6--&gt;v3((v3))
+v2((v2))--9--&gt;v4((v4))
+v3((v3))--10--&gt;v5((v5))
+v3((v3))--4--&gt;v6((v6))
+v4((v4))--12--&gt;v6((v6))
+v5((v5))--6--&gt;v7((v7))
+v6((v6))--9--&gt;v7((v7))
+v7((v7))--24--&gt;v8((v8))
+v6((v6))--3--&gt;v8((v8))
+</code></pre><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">8 10
+</span></span><span class="line"><span class="cl">1 2 5
+</span></span><span class="line"><span class="cl">1 3 6
+</span></span><span class="line"><span class="cl">2 4 9
+</span></span><span class="line"><span class="cl">3 5 10
+</span></span><span class="line"><span class="cl">3 6 4
+</span></span><span class="line"><span class="cl">4 6 12
+</span></span><span class="line"><span class="cl">5 7 6
+</span></span><span class="line"><span class="cl">6 7 9
+</span></span><span class="line"><span class="cl">6 8 3
+</span></span><span class="line"><span class="cl">7 8 24
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完整代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">to</span><span class="p">;</span>		<span class="c1">// 终点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">w</span><span class="p">;</span>		<span class="c1">// 权值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">next</span><span class="p">;</span>	<span class="c1">// 下一位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">EdgeNode</span> <span class="n">Edge</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">head</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">indegree</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 初始化head
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">memset</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">head</span><span class="p">));</span>		<span class="c1">// 初始化为0应该也冇问题，反正只是方便我们判断终点啦，想用向量也行qwq
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 读入数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">fi</span><span class="p">,</span> <span class="n">ti</span><span class="p">,</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">fi</span> <span class="o">&gt;&gt;</span> <span class="n">ti</span> <span class="o">&gt;&gt;</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">to</span> <span class="o">=</span> <span class="n">ti</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">w</span> <span class="o">=</span> <span class="n">wi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="n">Edge</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="c1">// 记录各个顶点的入度(当该点是终点的时候++qwq)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">indegree</span><span class="p">[</span><span class="n">ti</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 要先用一个数组记录各个顶点最初的入度，这个数组可以在读入边数据的时候进行++记录
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">queue</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">iq</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>	<span class="c1">// 表示当前队列长度，起始当然是0啦(懒得iq++也可以直接懒人向量法)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 先将图里入度为0的顶点加入队列
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 第一层入度为0的点，其顺序就只是存储顺序决定哩，而且不重要(除非想找所有的拓扑排序qwq)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="n">indegree</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">queue</span><span class="p">[</span><span class="n">iq</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 删点，对队列做更新
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">iq</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 按队列顺序删点删边(终点的入度--就算删掉这条边了)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">head</span><span class="p">[</span><span class="n">queue</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span><span class="n">k</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">k</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">indegree</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="p">(</span><span class="n">indegree</span><span class="p">[</span><span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="n">queue</span><span class="p">[</span><span class="n">iq</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">Edge</span><span class="p">[</span><span class="n">k</span><span class="p">].</span><span class="n">to</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 这里可以判断是否有环啦，假如此时iq的值小于顶点的数量n，不就是说明接下来没法删边了嘛，也就是说最后剩下了环。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;iq=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">iq</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; n=&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="n">iq</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;有拓扑序列：&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="c1">// 输出拓扑排序序列
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">iq</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">queue</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;没有拓扑序列&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>该算法在<code>O(m)</code>的时间内对indegree数组进行初始化，在<code>O(n)</code>时间内对queue进行初始化，后面的部分虽然看起来是两层循环，但实际上是m条边各遍历一次，所以时间复杂度只有<code>O(m)</code>而已，所以一共也就<code>O(m+n)</code>的复杂度。还是很友好滴。</p>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

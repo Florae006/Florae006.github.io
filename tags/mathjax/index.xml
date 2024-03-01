@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MathJax on DODOLA&#39;s WareHouse</title>
+    <link>https://dodolalorc.cn/tags/mathjax/</link>
+    <description>Recent content in MathJax on DODOLA&#39;s WareHouse</description>
+    <image>
+      <title>DODOLA&#39;s WareHouse</title>
+      <url>https://dodolalorc.cn/papermod-cover.png</url>
+      <link>https://dodolalorc.cn/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Dec 2023 19:16:50 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/mathjax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【拓展Markdown】为hugo渲染数学公式</title>
+      <link>https://dodolalorc.cn/posts/startsite/mathjax_js/</link>
+      <pubDate>Sat, 23 Dec 2023 19:16:50 +0800</pubDate>
+      
+      <guid>https://dodolalorc.cn/posts/startsite/mathjax_js/</guid>
+      <description>效果 解决了之前一直没有解决的一个小bug——我的hugo没有办法渲染Markdown里数学公式捏qwq 现在成功从图1到图2了！ 调整之前 调整之</description>
+      <content:encoded><![CDATA[<h3 id="效果">效果</h3>
+<p>解决了之前一直没有解决的一个小bug——我的hugo没有办法渲染Markdown里数学公式捏qwq
+现在成功从图1到图2了！</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img loading="lazy" src="before.png" alt="调整之前"  />
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">调整之前</td>
+</tr>
+<tr>
+<td style="text-align:center"><img loading="lazy" src="after.png" alt="调整之后"  />
+</td>
+</tr>
+<tr>
+<td style="text-align:center">调整之后</td>
+</tr>
+</tbody>
+</table>
+<p>这里记录一下干了什么吧qwq</p>
+<p>数学公式与代码高亮不同，hugo本身不支持渲染数学公式，所以我们在前端新加一个html页面去处理这个渲染问题。</p>
+<p>MathJax官方介绍了3中引入mathjax的方法，考虑到我们的页面还需要渲染到行内公式，我们选择全局引入。</p>
+<p>官方提供：<a href="https://docs.mathjax.org/en/latest/server/overview.html">Three Ways to Use MathJax in Node — MathJax 3.2 documentation</a></p>
+<h3 id="方法">方法</h3>
+<p>在<code>./layouts/partials/</code>下新建一个<code>mathjax.html</code></p>
+<p>在<code>./layouts/partials/extend_head.html</code>引入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{partial &#34;mathjax.html&#34; .}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在<code>mathjax.html</code>写入下方代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if .Params.math }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">MathJax</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">tex</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[[</span><span class="s2">&#34;$&#34;</span><span class="p">,</span> <span class="s2">&#34;$&#34;</span><span class="p">]],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">displayMath</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="s2">&#34;$$&#34;</span><span class="p">,</span> <span class="s2">&#34;$$&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="p">[</span><span class="s2">&#34;\[\[&#34;</span><span class="p">,</span> <span class="s2">&#34;\]\]&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">svg</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">fontCache</span><span class="o">:</span> <span class="s2">&#34;global&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span>
+</span></span><span class="line"><span class="cl">  <span class="na">id</span><span class="o">=</span><span class="s">&#34;MathJax-script&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">async</span>
+</span></span><span class="line"><span class="cl">  <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后在需要显示数学公式的markdown文档中添加如下参数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">+++
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">math = true
+</span></span><span class="line"><span class="cl">+++
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

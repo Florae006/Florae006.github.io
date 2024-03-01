@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Canva on DODOLA&#39;s WareHouse</title>
+    <link>https://dodolalorc.cn/tags/canva/</link>
+    <description>Recent content in Canva on DODOLA&#39;s WareHouse</description>
+    <image>
+      <title>DODOLA&#39;s WareHouse</title>
+      <url>https://dodolalorc.cn/papermod-cover.png</url>
+      <link>https://dodolalorc.cn/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 18 Dec 2023 14:12:39 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/canva/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【网站美化】点击特效</title>
+      <link>https://dodolalorc.cn/posts/startsite/beautify_site_click/</link>
+      <pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate>
+      
+      <guid>https://dodolalorc.cn/posts/startsite/beautify_site_click/</guid>
+      <description>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码 添加js文件 这</description>
+      <content:encoded><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
+<h1 id="添加js文件">添加js文件</h1>
+<p>这次用到的两个js文件在这里：</p>
+<p><a href="/js/anime.min.js">anime.min.js</a></p>
+<p><a href="/js/fireworks.js">fireworks.js</a></p>
+<p>在<code>./static/</code>下新建一个<code>js</code>文件夹，文件夹下新建两个<code>js</code>文件，命名为<code>anime.min.js</code>和<code>fireworks.js</code>，然后将上面两个文件的内容粘贴进去。</p>
+<h1 id="引入js文件">引入js文件</h1>
+<p>在<code>./layouts/partials/extend_head.html</code>中添加如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">fireworks</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">fixed</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">widows</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">z-index</span><span class="p">:</span><span class="mi">99999999</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pointer-events</span><span class="p">:</span><span class="kc">none</span><span class="p">;</span>  <span class="c">/*这个样式可以解决正常点击事件不响应的问题*/</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fireworks&#34;</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/js/anime.min.js&#34;</span> <span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/js/fireworks.js&#34;</span> <span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
