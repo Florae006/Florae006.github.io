@@ -13,10 +13,10 @@
 <meta name="description" content="思维先行 我们要找某点到某点的最短路径(记为点u到点v)，这样的路径只能从两种路径中选择—— u和v之间有边连接时，存在边(u, v)，不存在的话">
 <meta name="author" content="DODOLA">
 <link rel="canonical" href="https://dodolalorc.cn/posts/knowledge/algorithm/shortest_path/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d2bbe5afe27773cae396f12a5a844ff86517a464746a2d176dad2b79a0be930c.css" integrity="" rel="preload stylesheet" as="style">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3916c4c2c10e9a2b529f316f1f9b7b67e1b939960457ac4b9678ab23fa85b192.css" integrity="" rel="preload stylesheet" as="style">
+
+
+
 
 
 <link rel="icon" href="https://dodolalorc.cn/favicon.ico">
@@ -79,26 +79,23 @@
 <script src="/js/fireworks.js" ></script>
 
 
+
 <script>
   MathJax = {
     tex: {
-      inlineMath: [["$", "$"]],
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
     },
-    displayMath: [
-      ["\$\$", "\$\$"],
-      ["\[\[", "\]\]"],
-    ],
     svg: {
-      fontCache: "global",
-    },
+      fontCache: 'global'
+    }
   };
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-></script>
+  </script>
+  
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  
+
 
 
 
@@ -305,93 +302,7 @@
     <div class="meta-item">&nbsp·&nbsp
       <span id="busuanzi_container_page_pv">本文阅读量<span id="busuanzi_value_page_pv"></span>次</span>
     </div>
-  </header> <aside  id="toc-container" class="toc-container wide">
-  <div class="toc">
-    <details  open>
-      <summary accesskey="c" title="(Alt + C)">
-        <span class="details">Table of Contents</span>
-      </summary>
-
-      <div class="inner"><ul>
-          <li>
-            <a href="#%e6%80%9d%e7%bb%b4%e5%85%88%e8%a1%8c" aria-label="思维先行">思维先行</a></li>
-          <li>
-            <a href="#floyd%e7%ae%97%e6%b3%95bellman-ford%e7%ae%97%e6%b3%95" aria-label="Floyd算法&amp;amp;Bellman-Ford算法">Floyd算法&amp;Bellman-Ford算法</a></li>
-          <li>
-            <a href="#spfa%e7%ae%97%e6%b3%95" aria-label="SPFA算法">SPFA算法</a></li>
-          <li>
-            <a href="#dijstra%e7%ae%97%e6%b3%95" aria-label="☆☆☆Dijstra算法">☆☆☆Dijstra算法</a><ul>
-                
-          <li>
-            <a href="#-%e5%a6%82%e4%bd%95%e8%ae%b0%e5%bd%95%e8%b7%af%e5%be%84" aria-label="-如何记录路径？">-如何记录路径？</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e6%a8%a1%e6%9d%bf%e9%a2%98" aria-label="模板题">模板题</a>
-          </li>
-        </ul>
-      </div>
-    </details>
-  </div>
-  </aside>
-  <script>
-    let activeElement;
-    let elements;
-    window.addEventListener('DOMContentLoaded', function (event) {
-        checkTocPosition();
-
-        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
-         
-         activeElement = elements[0];
-         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
-         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-     }, false);
-
-    window.addEventListener('resize', function(event) {
-        checkTocPosition();
-    }, false);
-
-    window.addEventListener('scroll', () => {
-        
-        activeElement = Array.from(elements).find((element) => {
-            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
-                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
-                return element;
-            }
-        }) || activeElement
-
-        elements.forEach(element => {
-             const id = encodeURI(element.getAttribute('id')).toLowerCase();
-             if (element === activeElement){
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-             } else {
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
-             }
-         })
-     }, false);
-
-    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
-    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
-    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
-
-    function checkTocPosition() {
-        const width = document.body.scrollWidth;
-
-        if (width - main - (toc * 2) - (gap * 4) > 0) {
-            document.getElementById("toc-container").classList.add("wide");
-        } else {
-            document.getElementById("toc-container").classList.remove("wide");
-        }
-    }
-
-    function getOffsetTop(element) {
-        if (!element.getClientRects().length) {
-            return 0;
-        }
-        let rect = element.getBoundingClientRect();
-        let win = element.ownerDocument.defaultView;
-        return rect.top + win.pageYOffset;   
-    }
-</script>
+  </header> 
   <div class="post-content"><h3 id="思维先行">思维先行<a hidden class="anchor" aria-hidden="true" href="#思维先行">#</a></h3>
 <p>我们要找某点到某点的最短路径(记为点u到点v)，这样的路径只能从两种路径中选择——</p>
 <ol>
@@ -1415,7 +1326,97 @@ v7((v7))-. -9 .-&gt;v7((v7))
 </div><p><del>啊总算绕完最短路这几个算法了，时候想通了感觉还挺明白的，不过由于某人的码力好差，老是达不到想要的效果[可恶]，还得多写代码而不是只注重想法。写出来了才算是初步会了！</del></p>
 
 
+  </div><aside  id="toc-container" class="toc-container wide">
+  <div class="toc">
+    <details  open>
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details">Table of Contents</span>
+      </summary>
+
+      <div class="inner"><ul>
+          <li>
+            <a href="#%e6%80%9d%e7%bb%b4%e5%85%88%e8%a1%8c" aria-label="思维先行">思维先行</a></li>
+          <li>
+            <a href="#floyd%e7%ae%97%e6%b3%95bellman-ford%e7%ae%97%e6%b3%95" aria-label="Floyd算法&amp;amp;Bellman-Ford算法">Floyd算法&amp;Bellman-Ford算法</a></li>
+          <li>
+            <a href="#spfa%e7%ae%97%e6%b3%95" aria-label="SPFA算法">SPFA算法</a></li>
+          <li>
+            <a href="#dijstra%e7%ae%97%e6%b3%95" aria-label="☆☆☆Dijstra算法">☆☆☆Dijstra算法</a><ul>
+                
+          <li>
+            <a href="#-%e5%a6%82%e4%bd%95%e8%ae%b0%e5%bd%95%e8%b7%af%e5%be%84" aria-label="-如何记录路径？">-如何记录路径？</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%a8%a1%e6%9d%bf%e9%a2%98" aria-label="模板题">模板题</a>
+          </li>
+        </ul>
+      </div>
+    </details>
   </div>
+  </aside>
+  <script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+         
+         activeElement = elements[0];
+         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+     }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+
+    window.addEventListener('scroll', () => {
+        
+        
+        if(!elements) return;
+
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+             const id = encodeURI(element.getAttribute('id')).toLowerCase();
+             if (element === activeElement){
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+             } else {
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+             }
+         })
+     }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;   
+    }
+</script>
 
   <footer class="post-footer">
     <ul class="post-tags">

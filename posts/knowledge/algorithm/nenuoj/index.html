@@ -13,10 +13,10 @@
 <meta name="description" content="有的题还没写完）咕咕咕）） NENU OJ算法2例题 这学期写算法2并不想写详细思路(出于ddl再也不用关心小组啦的自由)，不过如果有想交流的也可以评论">
 <meta name="author" content="DODOLA">
 <link rel="canonical" href="https://dodolalorc.cn/posts/knowledge/algorithm/nenuoj/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d2bbe5afe27773cae396f12a5a844ff86517a464746a2d176dad2b79a0be930c.css" integrity="" rel="preload stylesheet" as="style">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3916c4c2c10e9a2b529f316f1f9b7b67e1b939960457ac4b9678ab23fa85b192.css" integrity="" rel="preload stylesheet" as="style">
+
+
+
 
 
 <link rel="icon" href="https://dodolalorc.cn/favicon.ico">
@@ -79,26 +79,23 @@
 <script src="/js/fireworks.js" ></script>
 
 
+
 <script>
   MathJax = {
     tex: {
-      inlineMath: [["$", "$"]],
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
     },
-    displayMath: [
-      ["\$\$", "\$\$"],
-      ["\[\[", "\]\]"],
-    ],
     svg: {
-      fontCache: "global",
-    },
+      fontCache: 'global'
+    }
   };
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-></script>
+  </script>
+  
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  
+
 
 
 
@@ -305,510 +302,7 @@
     <div class="meta-item">&nbsp·&nbsp
       <span id="busuanzi_container_page_pv">本文阅读量<span id="busuanzi_value_page_pv"></span>次</span>
     </div>
-  </header> <aside  id="toc-container" class="toc-container wide">
-  <div class="toc">
-    <details  open>
-      <summary accesskey="c" title="(Alt + C)">
-        <span class="details">Table of Contents</span>
-      </summary>
-
-      <div class="inner"><ul>
-          <li>
-            <a href="#nenu-oj%e7%ae%97%e6%b3%952%e4%be%8b%e9%a2%98" aria-label="NENU OJ算法2例题">NENU OJ算法2例题</a><ul>
-                
-          <li>
-            <a href="#%e7%ae%97%e6%b3%952%e9%80%92%e5%bd%92a" aria-label="算法2递归A"><strong>算法2递归A</strong></a><ul>
-                
-          <li>
-            <a href="#1241-a001-%e7%8c%b4%e5%ad%90%e5%90%83%e6%a1%83" aria-label="1241: A001 猴子吃桃">1241: A001 猴子吃桃</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1242-a002-%e6%9c%80%e5%a4%a7%e5%85%ac%e7%ba%a6%e6%95%b0" aria-label="1242: A002 最大公约数">1242: A002 最大公约数</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-1" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-1" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1243-a003-%e7%bb%8f%e5%85%b8%e7%9a%84hanoi%e6%b1%89%e8%af%ba%e5%a1%94%e9%97%ae%e9%a2%98" aria-label="1243: A003 经典的Hanoi(汉诺塔)问题">1243: A003 经典的Hanoi(汉诺塔)问题</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-2" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-2" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1244-a004-%e8%8f%b2%e6%b3%a2%e9%82%a3%e5%a5%91%e6%95%b0%e5%88%97" aria-label="1244: A004 菲波那契数列">1244: A004 菲波那契数列</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-3" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-3" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1245-a005-%e5%8f%a6%e4%b8%80%e4%b8%aafibonacci%e6%95%b0%e5%88%97" aria-label="1245: A005 另一个Fibonacci数列">1245: A005 另一个Fibonacci数列</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-4" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-4" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1246-a006-%e5%88%86%e5%bd%a2fractal" aria-label="1246: A006 分形（Fractal）">1246: A006 分形（Fractal）</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-5" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-5" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1247-a007-%e4%ba%8c%e5%8f%89%e6%a0%91" aria-label="1247: A007 二叉树">1247: A007 二叉树</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-6" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-6" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1248-a008-%e6%b3%a2%e5%85%b0%e8%a1%a8%e8%be%be%e5%bc%8f" aria-label="1248: A008 波兰表达式">1248: A008 波兰表达式</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-7" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-7" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1249-a009-%e6%94%be%e8%8b%b9%e6%9e%9c" aria-label="1249: A009 放苹果">1249: A009 放苹果</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-8" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-8" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1250-a010-%e9%80%92%e5%bd%92%e7%bb%83%e4%b9%a01" aria-label="1250: A010 递归练习1">1250: A010 递归练习1</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-9" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-9" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1251-a011-%e9%80%92%e5%bd%92%e7%bb%83%e4%b9%a02" aria-label="1251: A011 递归练习2">1251: A011 递归练习2</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-10" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-10" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1252-a012-%e9%80%92%e5%bd%92%e7%bb%83%e4%b9%a03" aria-label="1252: A012 递归练习3">1252: A012 递归练习3</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-11" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-11" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1253-a013-%e7%ba%a2%e4%b8%8e%e9%bb%91" aria-label="1253: A013 红与黑">1253: A013 红与黑</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-12" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-12" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1254-a014-%e5%9f%8e%e5%a0%a1%e9%97%ae%e9%a2%98" aria-label="1254: A014 城堡问题">1254: A014 城堡问题</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-13" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-13" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1255-a015-%e5%88%86%e8%a7%a3%e5%9b%a0%e5%bc%8f" aria-label="1255: A015 分解因式">1255: A015 分解因式</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-14" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-14" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1256-a016-%e6%95%b0%e5%ad%97%e6%8b%bc%e5%87%91" aria-label="1256: A016 数字拼凑">1256: A016 数字拼凑</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-15" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-15" aria-label="AC代码">AC代码</a></li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e7%ae%97%e6%b3%952%e6%8e%92%e5%ba%8fb" aria-label="算法2排序B"><strong>算法2排序B</strong></a><ul>
-                
-          <li>
-            <a href="#1257-b001-%e5%bf%ab%e4%b9%90%e7%9a%84%e8%a0%95%e8%99%ab" aria-label="1257: B001 快乐的蠕虫">1257: B001 快乐的蠕虫</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-16" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-16" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1258-b002-%e5%8d%95%e8%af%8d%e9%87%8d%e7%bb%84" aria-label="1258: B002 单词重组">1258: B002 单词重组</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-17" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-17" aria-label="AC代码">AC代码</a></li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e7%ae%97%e6%b3%952%e6%9f%a5%e6%89%bec" aria-label="算法2查找C"><strong>算法2查找C</strong></a><ul>
-                
-          <li>
-            <a href="#1264-c001-%e5%ad%97%e7%ac%a6%e4%b8%b2%e8%ae%a1%e6%95%b0" aria-label="1264: C001 字符串计数">1264: C001 字符串计数</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-18" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-18" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1265-c002-%e8%b5%8c%e5%be%92" aria-label="1265: C002 赌徒">1265: C002 赌徒</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-19" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-19" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1266-c003-%e5%8d%8a%e7%b4%a0%e6%95%b0" aria-label="1266: C003 半素数">1266: C003 半素数</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-20" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-20" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1267-c004-%e6%a3%8d%e5%ad%90%e7%9a%84%e8%86%a8%e8%83%80" aria-label="1267: C004 棍子的膨胀">1267: C004 棍子的膨胀</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-21" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-21" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1268-c005-%e7%94%b5%e7%bc%86%e4%b8%bb" aria-label="1268: C005 电缆主">1268: C005 电缆主</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-22" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-22" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1269-c006-%e5%ae%9d%e8%b4%9d%e9%b1%bc" aria-label="1269: C006 宝贝鱼">1269: C006 宝贝鱼</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-23" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-23" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1270-c007-%e6%98%9f%e7%a9%ba" aria-label="1270: C007 星空">1270: C007 星空</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-24" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-24" aria-label="AC代码">AC代码</a></li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e7%ae%97%e6%b3%952%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92d" aria-label="算法2动态规划D"><strong>算法2动态规划D</strong></a><ul>
-                
-          <li>
-            <a href="#1272-d001-%e6%95%b0%e5%ad%97%e4%b8%89%e8%a7%92%e5%bd%a2" aria-label="1272: D001 数字三角形">1272: D001 数字三角形</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-25" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-25" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1273-d002-%e6%9c%80%e9%95%bf%e4%b8%8a%e5%8d%87%e5%ad%90%e5%ba%8f%e5%88%97" aria-label="1273: D002 最长上升子序列">1273: D002 最长上升子序列</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-26" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-26" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1274-d003-help-jimmy" aria-label="1274: D003 Help Jimmy">1274: D003 Help Jimmy</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-27" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-27" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1275-d004-%e6%9c%80%e9%95%bf%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97" aria-label="1275: D004 最长公共子序列">1275: D004 最长公共子序列</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-28" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-28" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1276-d005-%e9%99%aa%e5%ae%a1%e5%9b%a2%e7%9a%84%e4%ba%ba%e9%80%89" aria-label="1276: D005 陪审团的人选">1276: D005 陪审团的人选</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-29" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-29" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1277-d006-%e6%9c%80%e5%a4%a7%e5%92%8c" aria-label="1277: D006 最大和">1277: D006 最大和</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-30" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-30" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1278-d007-%e6%9c%80%e5%a4%a7%e5%ad%90%e7%9f%a9%e9%98%b5" aria-label="1278: D007 最大子矩阵">1278: D007 最大子矩阵</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-31" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-31" aria-label="AC代码">AC代码</a></li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e7%ae%97%e6%b3%952%e6%90%9c%e7%b4%a2e" aria-label="算法2搜索E"><strong>算法2搜索E</strong></a><ul>
-                
-          <li>
-            <a href="#1281-e001-%e6%95%b0%e7%9a%84%e5%88%92%e5%88%86" aria-label="1281: E001 数的划分">1281: E001 数的划分</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-32" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-32" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1282-e002-%e9%97%aa%e9%81%bf%e6%b9%96%e6%b3%8a" aria-label="1282: E002 闪避湖泊">1282: E002 闪避湖泊</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-33" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-33" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1283-e003-%e4%bf%a1%e9%81%93%e5%88%86%e9%85%8d" aria-label="1283: E003 信道分配">1283: E003 信道分配</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-34" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-34" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1284-e004-%e7%a7%bb%e5%8a%a8%e7%9a%84%e9%aa%91%e5%a3%ab" aria-label="1284: E004 移动的骑士">1284: E004 移动的骑士</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-35" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-35" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1285-e005-%e5%9b%be%e5%83%8f%e5%91%a8%e9%95%bf" aria-label="1285: E005 图像周长">1285: E005 图像周长</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-36" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-36" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1286-e006-%e7%a7%bb%e5%8a%a8%e7%9a%84%e9%aa%91%e5%a3%ab" aria-label="1286: E006 移动的骑士">1286: E006 移动的骑士</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-37" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-37" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1287-e007-%e5%af%bb%e6%89%bem" aria-label="1287: E007 寻找M">1287: E007 寻找M</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-38" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-38" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1288-e008-%e7%ba%a2%e4%b8%8e%e9%bb%91" aria-label="1288: E008 红与黑">1288: E008 红与黑</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-39" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-39" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1289-e009-%e5%b0%8f%e6%9c%a8%e6%a3%92" aria-label="1289: E009 小木棒">1289: E009 小木棒</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-40" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-40" aria-label="AC代码">AC代码</a></li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e7%ae%97%e6%b3%952%e8%b4%aa%e5%bf%83f" aria-label="算法2贪心F"><strong>算法2贪心F</strong></a><ul>
-                
-          <li>
-            <a href="#1290-f001-%e6%9c%a8%e6%a3%92%e5%8a%a0%e5%b7%a5%e9%97%ae%e9%a2%98" aria-label="1290: F001 木棒加工问题">1290: F001 木棒加工问题</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-41" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-41" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1291-f002-%e8%a3%85%e7%ae%b1" aria-label="1291: F002 装箱">1291: F002 装箱</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-42" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-42" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1292-f003-%e7%a7%bb%e5%8a%a8%e6%a1%8c%e5%ad%90" aria-label="1292: F003 移动桌子">1292: F003 移动桌子</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-43" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-43" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1293-f004-%e5%9f%ba%e5%9b%a0%e9%9b%86%e5%90%88" aria-label="1293: F004 基因集合">1293: F004 基因集合</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-44" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-44" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1294-f005-%e4%b8%bb%e6%a1%86%e6%9e%b6" aria-label="1294: F005 主框架">1294: F005 主框架</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-45" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-45" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1295-f006-%e6%95%b4%e6%95%b0%e5%8c%ba%e9%97%b4" aria-label="1295: F006 整数区间">1295: F006 整数区间</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-46" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-46" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1296-f007-%e5%ae%89%e8%a3%85%e9%9b%b7%e8%be%be" aria-label="1296: F007 安装雷达">1296: F007 安装雷达</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-47" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-47" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1297-f008-%e6%8e%92%e9%98%9f%e4%b9%b0%e9%a5%ad" aria-label="1297: F008 排队买饭">1297: F008 排队买饭</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-48" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-48" aria-label="AC代码">AC代码</a></li></ul>
-          </li>
-          <li>
-            <a href="#1298-f009-%e6%94%be%e4%b9%a6" aria-label="1298: F009 放书">1298: F009 放书</a><ul>
-                
-          <li>
-            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-49" aria-label="题目描述">题目描述</a></li>
-          <li>
-            <a href="#ac%e4%bb%a3%e7%a0%81-49" aria-label="AC代码">AC代码</a>
-          </li>
-        </ul>
-        </li>
-        </ul>
-        </li>
-        </ul>
-        </li>
-        </ul>
-      </div>
-    </details>
-  </div>
-  </aside>
-  <script>
-    let activeElement;
-    let elements;
-    window.addEventListener('DOMContentLoaded', function (event) {
-        checkTocPosition();
-
-        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
-         
-         activeElement = elements[0];
-         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
-         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-     }, false);
-
-    window.addEventListener('resize', function(event) {
-        checkTocPosition();
-    }, false);
-
-    window.addEventListener('scroll', () => {
-        
-        activeElement = Array.from(elements).find((element) => {
-            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
-                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
-                return element;
-            }
-        }) || activeElement
-
-        elements.forEach(element => {
-             const id = encodeURI(element.getAttribute('id')).toLowerCase();
-             if (element === activeElement){
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-             } else {
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
-             }
-         })
-     }, false);
-
-    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
-    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
-    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
-
-    function checkTocPosition() {
-        const width = document.body.scrollWidth;
-
-        if (width - main - (toc * 2) - (gap * 4) > 0) {
-            document.getElementById("toc-container").classList.add("wide");
-        } else {
-            document.getElementById("toc-container").classList.remove("wide");
-        }
-    }
-
-    function getOffsetTop(element) {
-        if (!element.getClientRects().length) {
-            return 0;
-        }
-        let rect = element.getBoundingClientRect();
-        let win = element.ownerDocument.defaultView;
-        return rect.top + win.pageYOffset;   
-    }
-</script>
+  </header> 
   <div class="post-content"><p>有的题还没写完）咕咕咕））</p>
 <h1 id="nenu-oj算法2例题">NENU OJ算法2例题<a hidden class="anchor" aria-hidden="true" href="#nenu-oj算法2例题">#</a></h1>
 <p>这学期写算法2并不想写详细思路(出于ddl再也不用关心小组啦的自由)，不过如果有想交流的也可以评论区或者私信，学校oj的题大多比较简单，这里的所有代码或许只保证通过学校的弱测试数据，<del>因为其他地方OJ我还没有试过</del>。</p>
@@ -6623,7 +6117,514 @@ A：
 </div>
 </div>
 
+  </div><aside  id="toc-container" class="toc-container wide">
+  <div class="toc">
+    <details  open>
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details">Table of Contents</span>
+      </summary>
+
+      <div class="inner"><ul>
+          <li>
+            <a href="#nenu-oj%e7%ae%97%e6%b3%952%e4%be%8b%e9%a2%98" aria-label="NENU OJ算法2例题">NENU OJ算法2例题</a><ul>
+                
+          <li>
+            <a href="#%e7%ae%97%e6%b3%952%e9%80%92%e5%bd%92a" aria-label="算法2递归A"><strong>算法2递归A</strong></a><ul>
+                
+          <li>
+            <a href="#1241-a001-%e7%8c%b4%e5%ad%90%e5%90%83%e6%a1%83" aria-label="1241: A001 猴子吃桃">1241: A001 猴子吃桃</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1242-a002-%e6%9c%80%e5%a4%a7%e5%85%ac%e7%ba%a6%e6%95%b0" aria-label="1242: A002 最大公约数">1242: A002 最大公约数</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-1" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-1" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1243-a003-%e7%bb%8f%e5%85%b8%e7%9a%84hanoi%e6%b1%89%e8%af%ba%e5%a1%94%e9%97%ae%e9%a2%98" aria-label="1243: A003 经典的Hanoi(汉诺塔)问题">1243: A003 经典的Hanoi(汉诺塔)问题</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-2" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-2" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1244-a004-%e8%8f%b2%e6%b3%a2%e9%82%a3%e5%a5%91%e6%95%b0%e5%88%97" aria-label="1244: A004 菲波那契数列">1244: A004 菲波那契数列</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-3" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-3" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1245-a005-%e5%8f%a6%e4%b8%80%e4%b8%aafibonacci%e6%95%b0%e5%88%97" aria-label="1245: A005 另一个Fibonacci数列">1245: A005 另一个Fibonacci数列</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-4" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-4" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1246-a006-%e5%88%86%e5%bd%a2fractal" aria-label="1246: A006 分形（Fractal）">1246: A006 分形（Fractal）</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-5" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-5" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1247-a007-%e4%ba%8c%e5%8f%89%e6%a0%91" aria-label="1247: A007 二叉树">1247: A007 二叉树</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-6" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-6" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1248-a008-%e6%b3%a2%e5%85%b0%e8%a1%a8%e8%be%be%e5%bc%8f" aria-label="1248: A008 波兰表达式">1248: A008 波兰表达式</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-7" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-7" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1249-a009-%e6%94%be%e8%8b%b9%e6%9e%9c" aria-label="1249: A009 放苹果">1249: A009 放苹果</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-8" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-8" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1250-a010-%e9%80%92%e5%bd%92%e7%bb%83%e4%b9%a01" aria-label="1250: A010 递归练习1">1250: A010 递归练习1</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-9" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-9" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1251-a011-%e9%80%92%e5%bd%92%e7%bb%83%e4%b9%a02" aria-label="1251: A011 递归练习2">1251: A011 递归练习2</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-10" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-10" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1252-a012-%e9%80%92%e5%bd%92%e7%bb%83%e4%b9%a03" aria-label="1252: A012 递归练习3">1252: A012 递归练习3</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-11" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-11" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1253-a013-%e7%ba%a2%e4%b8%8e%e9%bb%91" aria-label="1253: A013 红与黑">1253: A013 红与黑</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-12" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-12" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1254-a014-%e5%9f%8e%e5%a0%a1%e9%97%ae%e9%a2%98" aria-label="1254: A014 城堡问题">1254: A014 城堡问题</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-13" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-13" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1255-a015-%e5%88%86%e8%a7%a3%e5%9b%a0%e5%bc%8f" aria-label="1255: A015 分解因式">1255: A015 分解因式</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-14" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-14" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1256-a016-%e6%95%b0%e5%ad%97%e6%8b%bc%e5%87%91" aria-label="1256: A016 数字拼凑">1256: A016 数字拼凑</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-15" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-15" aria-label="AC代码">AC代码</a></li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e7%ae%97%e6%b3%952%e6%8e%92%e5%ba%8fb" aria-label="算法2排序B"><strong>算法2排序B</strong></a><ul>
+                
+          <li>
+            <a href="#1257-b001-%e5%bf%ab%e4%b9%90%e7%9a%84%e8%a0%95%e8%99%ab" aria-label="1257: B001 快乐的蠕虫">1257: B001 快乐的蠕虫</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-16" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-16" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1258-b002-%e5%8d%95%e8%af%8d%e9%87%8d%e7%bb%84" aria-label="1258: B002 单词重组">1258: B002 单词重组</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-17" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-17" aria-label="AC代码">AC代码</a></li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e7%ae%97%e6%b3%952%e6%9f%a5%e6%89%bec" aria-label="算法2查找C"><strong>算法2查找C</strong></a><ul>
+                
+          <li>
+            <a href="#1264-c001-%e5%ad%97%e7%ac%a6%e4%b8%b2%e8%ae%a1%e6%95%b0" aria-label="1264: C001 字符串计数">1264: C001 字符串计数</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-18" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-18" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1265-c002-%e8%b5%8c%e5%be%92" aria-label="1265: C002 赌徒">1265: C002 赌徒</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-19" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-19" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1266-c003-%e5%8d%8a%e7%b4%a0%e6%95%b0" aria-label="1266: C003 半素数">1266: C003 半素数</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-20" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-20" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1267-c004-%e6%a3%8d%e5%ad%90%e7%9a%84%e8%86%a8%e8%83%80" aria-label="1267: C004 棍子的膨胀">1267: C004 棍子的膨胀</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-21" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-21" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1268-c005-%e7%94%b5%e7%bc%86%e4%b8%bb" aria-label="1268: C005 电缆主">1268: C005 电缆主</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-22" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-22" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1269-c006-%e5%ae%9d%e8%b4%9d%e9%b1%bc" aria-label="1269: C006 宝贝鱼">1269: C006 宝贝鱼</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-23" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-23" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1270-c007-%e6%98%9f%e7%a9%ba" aria-label="1270: C007 星空">1270: C007 星空</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-24" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-24" aria-label="AC代码">AC代码</a></li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e7%ae%97%e6%b3%952%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92d" aria-label="算法2动态规划D"><strong>算法2动态规划D</strong></a><ul>
+                
+          <li>
+            <a href="#1272-d001-%e6%95%b0%e5%ad%97%e4%b8%89%e8%a7%92%e5%bd%a2" aria-label="1272: D001 数字三角形">1272: D001 数字三角形</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-25" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-25" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1273-d002-%e6%9c%80%e9%95%bf%e4%b8%8a%e5%8d%87%e5%ad%90%e5%ba%8f%e5%88%97" aria-label="1273: D002 最长上升子序列">1273: D002 最长上升子序列</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-26" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-26" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1274-d003-help-jimmy" aria-label="1274: D003 Help Jimmy">1274: D003 Help Jimmy</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-27" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-27" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1275-d004-%e6%9c%80%e9%95%bf%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97" aria-label="1275: D004 最长公共子序列">1275: D004 最长公共子序列</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-28" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-28" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1276-d005-%e9%99%aa%e5%ae%a1%e5%9b%a2%e7%9a%84%e4%ba%ba%e9%80%89" aria-label="1276: D005 陪审团的人选">1276: D005 陪审团的人选</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-29" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-29" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1277-d006-%e6%9c%80%e5%a4%a7%e5%92%8c" aria-label="1277: D006 最大和">1277: D006 最大和</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-30" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-30" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1278-d007-%e6%9c%80%e5%a4%a7%e5%ad%90%e7%9f%a9%e9%98%b5" aria-label="1278: D007 最大子矩阵">1278: D007 最大子矩阵</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-31" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-31" aria-label="AC代码">AC代码</a></li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e7%ae%97%e6%b3%952%e6%90%9c%e7%b4%a2e" aria-label="算法2搜索E"><strong>算法2搜索E</strong></a><ul>
+                
+          <li>
+            <a href="#1281-e001-%e6%95%b0%e7%9a%84%e5%88%92%e5%88%86" aria-label="1281: E001 数的划分">1281: E001 数的划分</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-32" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-32" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1282-e002-%e9%97%aa%e9%81%bf%e6%b9%96%e6%b3%8a" aria-label="1282: E002 闪避湖泊">1282: E002 闪避湖泊</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-33" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-33" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1283-e003-%e4%bf%a1%e9%81%93%e5%88%86%e9%85%8d" aria-label="1283: E003 信道分配">1283: E003 信道分配</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-34" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-34" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1284-e004-%e7%a7%bb%e5%8a%a8%e7%9a%84%e9%aa%91%e5%a3%ab" aria-label="1284: E004 移动的骑士">1284: E004 移动的骑士</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-35" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-35" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1285-e005-%e5%9b%be%e5%83%8f%e5%91%a8%e9%95%bf" aria-label="1285: E005 图像周长">1285: E005 图像周长</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-36" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-36" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1286-e006-%e7%a7%bb%e5%8a%a8%e7%9a%84%e9%aa%91%e5%a3%ab" aria-label="1286: E006 移动的骑士">1286: E006 移动的骑士</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-37" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-37" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1287-e007-%e5%af%bb%e6%89%bem" aria-label="1287: E007 寻找M">1287: E007 寻找M</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-38" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-38" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1288-e008-%e7%ba%a2%e4%b8%8e%e9%bb%91" aria-label="1288: E008 红与黑">1288: E008 红与黑</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-39" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-39" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1289-e009-%e5%b0%8f%e6%9c%a8%e6%a3%92" aria-label="1289: E009 小木棒">1289: E009 小木棒</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-40" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-40" aria-label="AC代码">AC代码</a></li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e7%ae%97%e6%b3%952%e8%b4%aa%e5%bf%83f" aria-label="算法2贪心F"><strong>算法2贪心F</strong></a><ul>
+                
+          <li>
+            <a href="#1290-f001-%e6%9c%a8%e6%a3%92%e5%8a%a0%e5%b7%a5%e9%97%ae%e9%a2%98" aria-label="1290: F001 木棒加工问题">1290: F001 木棒加工问题</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-41" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-41" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1291-f002-%e8%a3%85%e7%ae%b1" aria-label="1291: F002 装箱">1291: F002 装箱</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-42" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-42" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1292-f003-%e7%a7%bb%e5%8a%a8%e6%a1%8c%e5%ad%90" aria-label="1292: F003 移动桌子">1292: F003 移动桌子</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-43" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-43" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1293-f004-%e5%9f%ba%e5%9b%a0%e9%9b%86%e5%90%88" aria-label="1293: F004 基因集合">1293: F004 基因集合</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-44" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-44" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1294-f005-%e4%b8%bb%e6%a1%86%e6%9e%b6" aria-label="1294: F005 主框架">1294: F005 主框架</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-45" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-45" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1295-f006-%e6%95%b4%e6%95%b0%e5%8c%ba%e9%97%b4" aria-label="1295: F006 整数区间">1295: F006 整数区间</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-46" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-46" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1296-f007-%e5%ae%89%e8%a3%85%e9%9b%b7%e8%be%be" aria-label="1296: F007 安装雷达">1296: F007 安装雷达</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-47" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-47" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1297-f008-%e6%8e%92%e9%98%9f%e4%b9%b0%e9%a5%ad" aria-label="1297: F008 排队买饭">1297: F008 排队买饭</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-48" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-48" aria-label="AC代码">AC代码</a></li></ul>
+          </li>
+          <li>
+            <a href="#1298-f009-%e6%94%be%e4%b9%a6" aria-label="1298: F009 放书">1298: F009 放书</a><ul>
+                
+          <li>
+            <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-49" aria-label="题目描述">题目描述</a></li>
+          <li>
+            <a href="#ac%e4%bb%a3%e7%a0%81-49" aria-label="AC代码">AC代码</a>
+          </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </details>
   </div>
+  </aside>
+  <script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+         
+         activeElement = elements[0];
+         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+     }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+
+    window.addEventListener('scroll', () => {
+        
+        
+        if(!elements) return;
+
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+             const id = encodeURI(element.getAttribute('id')).toLowerCase();
+             if (element === activeElement){
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+             } else {
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+             }
+         })
+     }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;   
+    }
+</script>
 
   <footer class="post-footer">
     <ul class="post-tags">

@@ -13,10 +13,10 @@
 <meta name="description" content="线段树(segment tree) 线段树主要用于维护区间信息，与传统的树状数组相比，可以实现O(log n)的区间修改，还可以同时支持多种操作(加、乘)">
 <meta name="author" content="DODOLA">
 <link rel="canonical" href="https://dodolalorc.cn/posts/knowledge/algorithm/seg_tree/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d2bbe5afe27773cae396f12a5a844ff86517a464746a2d176dad2b79a0be930c.css" integrity="" rel="preload stylesheet" as="style">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3916c4c2c10e9a2b529f316f1f9b7b67e1b939960457ac4b9678ab23fa85b192.css" integrity="" rel="preload stylesheet" as="style">
+
+
+
 
 
 <link rel="icon" href="https://dodolalorc.cn/favicon.ico">
@@ -79,26 +79,23 @@
 <script src="/js/fireworks.js" ></script>
 
 
+
 <script>
   MathJax = {
     tex: {
-      inlineMath: [["$", "$"]],
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
     },
-    displayMath: [
-      ["\$\$", "\$\$"],
-      ["\[\[", "\]\]"],
-    ],
     svg: {
-      fontCache: "global",
-    },
+      fontCache: 'global'
+    }
   };
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-></script>
+  </script>
+  
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  
+
 
 
 
@@ -305,96 +302,7 @@
     <div class="meta-item">&nbsp·&nbsp
       <span id="busuanzi_container_page_pv">本文阅读量<span id="busuanzi_value_page_pv"></span>次</span>
     </div>
-  </header> <aside  id="toc-container" class="toc-container wide">
-  <div class="toc">
-    <details  open>
-      <summary accesskey="c" title="(Alt + C)">
-        <span class="details">Table of Contents</span>
-      </summary>
-
-      <div class="inner"><ul>
-          <li>
-            <a href="#%e7%ba%bf%e6%ae%b5%e6%a0%91segment-tree" aria-label="线段树(segment tree)">线段树(segment tree)</a><ul>
-                
-          <li>
-            <a href="#%e6%a8%a1%e6%9d%bf%e7%ba%bf%e6%ae%b5%e6%a0%91" aria-label="【模板】线段树">【模板】线段树</a></li>
-          <li>
-            <a href="#%e7%ba%bf%e6%ae%b5%e6%a0%91%e7%9a%84%e5%bb%ba%e7%ab%8b" aria-label="线段树的建立">线段树的建立</a></li>
-          <li>
-            <a href="#%e5%a6%82%e4%bd%95%e6%9b%b4%e6%96%b0%e6%95%b0%e6%8d%ae" aria-label="如何更新数据？">如何更新数据？</a><ul>
-                
-          <li>
-            <a href="#%e6%87%92%e6%a0%87%e8%ae%b0%e5%bb%b6%e8%bf%9f%e6%a0%87%e8%ae%b0" aria-label="懒标记（延迟标记）">懒标记（延迟标记）</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e6%9f%a5%e8%af%a2%e5%8c%ba%e9%97%b4" aria-label="查询区间">查询区间</a>
-          </li>
-        </ul>
-        </li>
-        </ul>
-      </div>
-    </details>
-  </div>
-  </aside>
-  <script>
-    let activeElement;
-    let elements;
-    window.addEventListener('DOMContentLoaded', function (event) {
-        checkTocPosition();
-
-        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
-         
-         activeElement = elements[0];
-         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
-         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-     }, false);
-
-    window.addEventListener('resize', function(event) {
-        checkTocPosition();
-    }, false);
-
-    window.addEventListener('scroll', () => {
-        
-        activeElement = Array.from(elements).find((element) => {
-            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
-                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
-                return element;
-            }
-        }) || activeElement
-
-        elements.forEach(element => {
-             const id = encodeURI(element.getAttribute('id')).toLowerCase();
-             if (element === activeElement){
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-             } else {
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
-             }
-         })
-     }, false);
-
-    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
-    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
-    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
-
-    function checkTocPosition() {
-        const width = document.body.scrollWidth;
-
-        if (width - main - (toc * 2) - (gap * 4) > 0) {
-            document.getElementById("toc-container").classList.add("wide");
-        } else {
-            document.getElementById("toc-container").classList.remove("wide");
-        }
-    }
-
-    function getOffsetTop(element) {
-        if (!element.getClientRects().length) {
-            return 0;
-        }
-        let rect = element.getBoundingClientRect();
-        let win = element.ownerDocument.defaultView;
-        return rect.top + win.pageYOffset;   
-    }
-</script>
+  </header> 
   <div class="post-content"><h3 id="线段树segment-tree">线段树(segment tree)<a hidden class="anchor" aria-hidden="true" href="#线段树segment-tree">#</a></h3>
 <p>线段树主要用于维护区间信息，与传统的树状数组相比，可以实现<code>O(log n)</code>的区间修改，还可以同时支持多种操作(加、乘)，更具通用性。</p>
 <p>还是一样，为了方便测试，我们引入一个例题中的数据来演示。</p>
@@ -941,7 +849,100 @@
 </div>
 </div>
 
+  </div><aside  id="toc-container" class="toc-container wide">
+  <div class="toc">
+    <details  open>
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details">Table of Contents</span>
+      </summary>
+
+      <div class="inner"><ul>
+          <li>
+            <a href="#%e7%ba%bf%e6%ae%b5%e6%a0%91segment-tree" aria-label="线段树(segment tree)">线段树(segment tree)</a><ul>
+                
+          <li>
+            <a href="#%e6%a8%a1%e6%9d%bf%e7%ba%bf%e6%ae%b5%e6%a0%91" aria-label="【模板】线段树">【模板】线段树</a></li>
+          <li>
+            <a href="#%e7%ba%bf%e6%ae%b5%e6%a0%91%e7%9a%84%e5%bb%ba%e7%ab%8b" aria-label="线段树的建立">线段树的建立</a></li>
+          <li>
+            <a href="#%e5%a6%82%e4%bd%95%e6%9b%b4%e6%96%b0%e6%95%b0%e6%8d%ae" aria-label="如何更新数据？">如何更新数据？</a><ul>
+                
+          <li>
+            <a href="#%e6%87%92%e6%a0%87%e8%ae%b0%e5%bb%b6%e8%bf%9f%e6%a0%87%e8%ae%b0" aria-label="懒标记（延迟标记）">懒标记（延迟标记）</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%9f%a5%e8%af%a2%e5%8c%ba%e9%97%b4" aria-label="查询区间">查询区间</a>
+          </li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </details>
   </div>
+  </aside>
+  <script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+         
+         activeElement = elements[0];
+         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+     }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+
+    window.addEventListener('scroll', () => {
+        
+        
+        if(!elements) return;
+
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+             const id = encodeURI(element.getAttribute('id')).toLowerCase();
+             if (element === activeElement){
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+             } else {
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+             }
+         })
+     }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;   
+    }
+</script>
 
   <footer class="post-footer">
     <ul class="post-tags">

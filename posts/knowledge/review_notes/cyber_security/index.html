@@ -13,10 +13,10 @@
 <meta name="description" content="网络安全复习23 期末复习提纲 – 计算机与网络信息安全23秋中美 题型（暂定）：填空1x10=10分，选择1x20=20分，简答题6x5=30分，">
 <meta name="author" content="DODOLA">
 <link rel="canonical" href="https://dodolalorc.cn/posts/knowledge/review_notes/cyber_security/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d2bbe5afe27773cae396f12a5a844ff86517a464746a2d176dad2b79a0be930c.css" integrity="" rel="preload stylesheet" as="style">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3916c4c2c10e9a2b529f316f1f9b7b67e1b939960457ac4b9678ab23fa85b192.css" integrity="" rel="preload stylesheet" as="style">
+
+
+
 
 
 <link rel="icon" href="https://dodolalorc.cn/favicon.ico">
@@ -79,26 +79,23 @@
 <script src="/js/fireworks.js" ></script>
 
 
+
 <script>
   MathJax = {
     tex: {
-      inlineMath: [["$", "$"]],
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
     },
-    displayMath: [
-      ["\$\$", "\$\$"],
-      ["\[\[", "\]\]"],
-    ],
     svg: {
-      fontCache: "global",
-    },
+      fontCache: 'global'
+    }
   };
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-></script>
+  </script>
+  
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  
+
 
 
 
@@ -305,422 +302,7 @@
     <div class="meta-item">&nbsp·&nbsp
       <span id="busuanzi_container_page_pv">本文阅读量<span id="busuanzi_value_page_pv"></span>次</span>
     </div>
-  </header> <aside  id="toc-container" class="toc-container wide">
-  <div class="toc">
-    <details  open>
-      <summary accesskey="c" title="(Alt + C)">
-        <span class="details">Table of Contents</span>
-      </summary>
-
-      <div class="inner"><ul>
-          <li>
-            <a href="#%e7%bd%91%e7%bb%9c%e5%ae%89%e5%85%a8%e5%a4%8d%e4%b9%a023" aria-label="网络安全复习23">网络安全复习23</a><ul>
-                
-          <li>
-            <a href="#%e4%b8%80%e6%a6%82%e8%bf%b0" aria-label="一、概述">一、概述</a><ul>
-                
-          <li>
-            <a href="#%e5%ae%89%e5%85%a8%e7%9a%84%e4%b8%89%e4%b8%aa%e5%9f%ba%e6%9c%ac%e7%9b%ae%e6%a0%87cia" aria-label="✨安全的三个基本目标CIA">✨安全的三个基本目标CIA</a></li>
-          <li>
-            <a href="#%e5%ae%89%e5%85%a8%e7%9a%84%e5%85%b6%e4%bb%96%e7%9b%ae%e6%a0%87" aria-label="✨安全的其他目标">✨安全的其他目标</a></li>
-          <li>
-            <a href="#osi%e5%ae%89%e5%85%a8%e6%a1%86%e6%9e%b6x880" aria-label="✨OSI安全框架X.880">✨OSI安全框架X.880</a></li>
-          <li>
-            <a href="#osi%e5%ae%89%e5%85%a8%e4%bd%93%e7%b3%bb%e6%a1%86%e6%9e%b6" aria-label="✨OSI安全体系框架">✨OSI安全体系框架</a></li>
-          <li>
-            <a href="#%e5%ae%89%e5%85%a8%e6%94%bb%e5%87%bb" aria-label="✨安全攻击">✨安全攻击</a></li>
-          <li>
-            <a href="#%e5%ae%89%e5%85%a8%e6%9c%8d%e5%8a%a1" aria-label="✨安全服务">✨安全服务</a></li>
-          <li>
-            <a href="#%e5%ae%89%e5%85%a8%e6%9c%ba%e5%88%b6" aria-label="✨安全机制">✨安全机制</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e4%ba%8c%e6%95%b0%e8%ae%ba%e5%9f%ba%e7%a1%80%e4%b8%8d%e5%9c%a8%e8%80%83%e8%af%95%e8%8c%83%e5%9b%b4" aria-label="二、数论基础（不在考试范围）">二、数论基础（不在考试范围）</a><ul>
-                
-          <li>
-            <a href="#%e6%a8%a1%e8%bf%90%e7%ae%97" aria-label="模运算">模运算</a></li>
-          <li>
-            <a href="#%e6%a8%a1%e5%b9%82%e8%bf%90%e7%ae%97" aria-label="模幂运算">模幂运算</a></li>
-          <li>
-            <a href="#%e5%89%a9%e4%bd%99%e9%9b%86" aria-label="剩余集">剩余集</a></li>
-          <li>
-            <a href="#%e6%ac%a7%e6%8b%89%e5%87%bd%e6%95%b0" aria-label="欧拉函数">欧拉函数</a></li>
-          <li>
-            <a href="#%e6%ac%a7%e6%8b%89%e5%ae%9a%e7%90%86" aria-label="欧拉定理">欧拉定理</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e4%b8%89%e4%bc%a0%e7%bb%9f%e5%8a%a0%e5%af%86%e6%8a%80%e6%9c%af" aria-label="三、传统加密技术">三、传统加密技术</a><ul>
-                
-          <li>
-            <a href="#%e5%af%86%e9%92%a5%e7%ae%97%e6%b3%95%e5%88%86%e7%b1%bb" aria-label="密钥算法分类">密钥算法分类</a></li>
-          <li>
-            <a href="#%e5%af%b9%e7%a7%b0%e5%af%86%e7%a0%81%e7%ae%80%e5%8c%96%e6%a8%a1%e5%9e%8b" aria-label="对称密码简化模型">对称密码简化模型</a></li>
-          <li>
-            <a href="#%e5%af%86%e7%a0%81%e5%88%86%e6%9e%90%e5%ad%a6" aria-label="✨密码分析学">✨密码分析学</a></li>
-          <li>
-            <a href="#%e5%af%86%e7%a0%81%e4%bd%93%e7%b3%bb%e7%9a%84%e6%94%bb%e5%87%bb%e6%96%b9%e6%b3%95" aria-label="✨密码体系的攻击方法">✨密码体系的攻击方法</a></li>
-          <li>
-            <a href="#%e4%bb%a3%e6%8d%a2%e5%92%8c%e7%bd%ae%e6%8d%a2%e5%8f%a4%e5%85%b8%e5%af%86%e7%a0%81" aria-label="✨代换和置换（古典密码）">✨代换和置换（古典密码）</a><ul>
-                
-          <li>
-            <a href="#%e5%b8%b8%e8%a7%81%e5%8f%a4%e5%85%b8%e5%af%86%e7%a0%81%e7%ae%97%e6%b3%95" aria-label="常见古典密码算法">常见古典密码算法</a></li>
-          <li>
-            <a href="#%e4%bb%a3%e6%8d%a2%e6%8a%80%e6%9c%af-caesarshift-cipher%e7%a7%bb%e4%bd%8d%e5%af%86%e7%a0%81" aria-label="代换技术： Caesar/Shift Cipher移位密码">代换技术： Caesar/Shift Cipher移位密码</a></li>
-          <li>
-            <a href="#%e5%8a%a0%e6%b3%95%e5%af%86%e7%a0%81caesar%e5%af%86%e7%a0%81%e6%98%af%e4%b8%80%e7%a7%8d%e5%8a%a0%e6%b3%95%e5%af%86%e7%a0%81k3" aria-label="加法密码（Caesar密码是一种加法密码）(k=3)">加法密码（Caesar密码是一种加法密码）(k=3)</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e5%af%86%e7%a0%81" aria-label="✨单表代换密码">✨单表代换密码</a><ul>
-                
-          <li>
-            <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e5%ae%9e%e4%be%8b" aria-label="单表代换实例">单表代换实例</a></li>
-          <li>
-            <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e5%88%86%e6%9e%90" aria-label="单表代换分析">单表代换分析</a></li>
-          <li>
-            <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e6%94%bb%e5%87%bb%e6%ad%a5%e9%aa%a4" aria-label="单表代换攻击步骤">单表代换攻击步骤</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e5%a4%9a%e8%a1%a8%e4%bb%a3%e6%8d%a2vigen%c3%a8re%e5%af%86%e7%a0%81" aria-label="✨多表代换(Vigenère密码)">✨多表代换(Vigenère密码)</a><ul>
-                
-          <li>
-            <a href="#%e5%ad%97%e6%af%8d%e5%87%ba%e7%8e%b0%e7%9a%84%e7%9b%b8%e5%af%b9%e9%a2%91%e7%8e%87" aria-label="字母出现的相对频率">字母出现的相对频率</a></li></ul>
-          </li>
-          <li>
-            <a href="#vernam%e5%af%86%e7%a0%811918" aria-label="Vernam密码（1918）">Vernam密码（1918）</a></li>
-          <li>
-            <a href="#one-time-pad-%e4%b8%80%e6%ac%a1%e4%b8%80%e5%af%86" aria-label="✨One-time Pad 一次一密">✨One-time Pad 一次一密</a><ul>
-                <ul>
-                <ul>
-                
-          <li>
-            <a href="#%e4%b8%80%e6%ac%a1%e4%b8%80%e5%af%86%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7" aria-label="一次一密的安全性">一次一密的安全性</a></li></ul>
-              </ul>
-              
-          <li>
-            <a href="#%e6%97%a0%e6%9d%a1%e4%bb%b6%e5%ae%89%e5%85%a8%e4%b8%8e%e8%ae%a1%e7%ae%97%e4%b8%8a%e5%ae%89%e5%85%a8" aria-label="无条件安全与计算上安全">无条件安全与计算上安全</a></li>
-          <li>
-            <a href="#%e7%bd%ae%e6%8d%a2%e6%8a%80%e6%9c%af" aria-label="置换技术">置换技术</a><ul>
-                
-          <li>
-            <a href="#%e6%9b%b4%e5%a4%8d%e6%9d%82%e7%9a%84%e5%88%97%e7%bd%ae%e6%8d%a2" aria-label="更复杂的列置换">更复杂的列置换</a></li></ul>
-          </li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e5%9b%9b%e5%88%86%e7%bb%84%e5%af%86%e7%a0%81%e5%92%8c%e6%95%b0%e6%8d%ae%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86des" aria-label="四、分组密码和数据加密标准DES">四、分组密码和数据加密标准DES</a><ul>
-                
-          <li>
-            <a href="#%e5%af%b9%e7%a7%b0%e5%af%86%e7%a0%81%e5%88%86%e7%b1%bb%e5%8f%8a%e5%8c%ba%e5%88%ab" aria-label="✨对称密码分类及区别">✨对称密码分类及区别</a></li>
-          <li>
-            <a href="#%e5%88%86%e7%bb%84%e5%af%86%e7%a0%81" aria-label="分组密码">分组密码</a><ul>
-                
-          <li>
-            <a href="#des%e6%95%b0%e6%8d%ae%e5%8a%a0%e5%af%86" aria-label="✨DES数据加密">✨DES数据加密</a></li>
-          <li>
-            <a href="#feisteldes%e5%8a%a0%e5%af%86%e6%a1%86%e6%9e%b6" aria-label="✨Feistel(DES)加密框架">✨Feistel(DES)加密框架</a><ul>
-                
-          <li>
-            <a href="#feistel%e7%bd%91%e7%bb%9c" aria-label="✨Feistel网络">✨Feistel网络</a></li>
-          <li>
-            <a href="#feistelfor-loop" aria-label="Feistel——&amp;lsquo;for&amp;rsquo; Loop">Feistel——&lsquo;for&rsquo; Loop</a></li></ul>
-          </li>
-          <li>
-            <a href="#des%e5%ae%89%e5%85%a8%e5%bc%ba%e5%ba%a6" aria-label="✨DES安全强度">✨DES安全强度</a><ul>
-                
-          <li>
-            <a href="#%e7%a9%b7%e4%b8%be%e5%af%86%e9%92%a5%e6%90%9c%e7%b4%a2%e6%89%80%e9%9c%80%e8%a6%81%e7%9a%84%e6%97%b6%e9%97%b4" aria-label="穷举密钥搜索所需要的时间">穷举密钥搜索所需要的时间</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e5%8f%8c%e9%87%8ddes" aria-label="✨双重DES">✨双重DES</a></li>
-          <li>
-            <a href="#%e4%b8%ad%e9%97%b4%e7%9b%b8%e9%81%87%e6%94%bb%e5%87%bb" aria-label="中间相遇攻击">中间相遇攻击</a></li>
-          <li>
-            <a href="#3des%e4%b8%89%e9%87%8ddestdea" aria-label="✨3DES——三重DES(TDEA)">✨3DES——三重DES(TDEA)</a></li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e4%ba%94%e6%9c%89%e9%99%90%e5%9f%9f%e4%b8%8d%e5%9c%a8%e8%80%83%e8%af%95%e8%8c%83%e5%9b%b4" aria-label="五、有限域（不在考试范围）">五、有限域（不在考试范围）</a></li>
-          <li>
-            <a href="#%e5%85%ad%e9%ab%98%e7%ba%a7%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86aes128" aria-label="六、高级加密标准AES——128">六、高级加密标准AES——128</a><ul>
-                
-          <li>
-            <a href="#%e4%bb%8e3des%e5%88%b0%e9%ab%98%e7%ba%a7%e6%95%b0%e6%8d%ae%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86aes" aria-label="从3DES到高级数据加密标准AES">从3DES到高级数据加密标准AES</a></li>
-          <li>
-            <a href="#%e9%ab%98%e7%ba%a7%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86aes%e5%87%86%e5%88%99" aria-label="高级加密标准AES准则">高级加密标准AES准则</a></li>
-          <li>
-            <a href="#aes%e5%88%86%e7%bb%84%e9%95%bf%e5%ba%a6%e5%af%86%e9%92%a5%e9%95%bf%e5%ba%a6" aria-label="✨AES分组长度、密钥长度">✨AES分组长度、密钥长度</a></li>
-          <li>
-            <a href="#%e8%a1%a861" aria-label="✨表6.1">✨表6.1</a></li>
-          <li>
-            <a href="#aes%e6%af%8f%e8%bd%ae%e4%b8%ad%e7%9a%84%e6%93%8d%e4%bd%9c" aria-label="AES每轮中的操作">AES每轮中的操作</a><ul>
-                
-          <li>
-            <a href="#%e4%bb%a5aes-128%e4%b8%ba%e4%be%8b%e5%8d%b3128%e5%af%86%e9%92%a5" aria-label="以AES-128为例，即128密钥">以AES-128为例，即128密钥</a></li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e4%b8%83%e5%88%86%e7%bb%84%e5%8a%a0%e5%af%86%e7%9a%84%e5%b7%a5%e4%bd%9c%e6%a8%a1%e5%bc%8f" aria-label="七、分组加密的工作模式">七、分组加密的工作模式</a><ul>
-                
-          <li>
-            <a href="#%e5%88%86%e7%bb%84%e5%af%86%e7%a0%81%e7%9a%84%e5%b7%a5%e4%bd%9c%e6%a8%a1%e5%bc%8f%e8%a1%a871" aria-label="分组密码的工作模式(表7.1)">分组密码的工作模式(表7.1)</a></li>
-          <li>
-            <a href="#ecb%e7%94%b5%e8%af%9d%e6%9c%ac%e6%a8%a1%e5%bc%8f" aria-label="✨ECB：电话本模式">✨ECB：电话本模式</a></li>
-          <li>
-            <a href="#cbc%e5%af%86%e6%96%87%e5%88%86%e7%bb%84%e9%93%be%e6%8e%a5%e6%a8%a1%e5%bc%8f" aria-label="✨CBC：密文分组链接模式">✨CBC：密文分组链接模式</a></li>
-          <li>
-            <a href="#cfb%e5%af%86%e6%96%87%e5%8f%8d%e9%a6%88%e6%a8%a1%e5%bc%8f" aria-label="✨CFB：密文反馈模式">✨CFB：密文反馈模式</a></li>
-          <li>
-            <a href="#ofb%e8%be%93%e5%87%ba%e5%8f%8d%e9%a6%88%e6%a8%a1%e5%bc%8f" aria-label="✨OFB：输出反馈模式">✨OFB：输出反馈模式</a></li>
-          <li>
-            <a href="#ctr%e8%ae%a1%e6%95%b0%e5%99%a8%e6%a8%a1%e5%bc%8f" aria-label="✨CTR：计数器模式">✨CTR：计数器模式</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e5%85%ab%e4%bc%aa%e9%9a%8f%e6%9c%ba%e6%95%b0%e7%9a%84%e4%ba%a7%e7%94%9f%e5%92%8c%e6%b5%81%e5%af%86%e7%a0%81" aria-label="八、伪随机数的产生和流密码">八、伪随机数的产生和流密码</a></li>
-          <li>
-            <a href="#%e4%b9%9d%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e5%ad%a6%e4%b8%8ersa" aria-label="九、公钥密码学与RSA">九、公钥密码学与RSA</a><ul>
-                
-          <li>
-            <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e6%9c%af%e8%af%ad%e8%a1%a891" aria-label="公钥密码术语(表9.1)">公钥密码术语(表9.1)</a></li>
-          <li>
-            <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e4%bd%93%e5%88%b6%e5%9b%be91a" aria-label="✨公钥密码体制(✨图9.1(a))">✨公钥密码体制(✨图9.1(a))</a><ul>
-                
-          <li>
-            <a href="#%e7%94%a8%e5%85%ac%e9%92%a5%e5%8a%a0%e5%af%86" aria-label="用公钥加密">用公钥加密</a></li>
-          <li>
-            <a href="#%e7%94%a8%e7%a7%81%e9%92%a5%e5%8a%a0%e5%af%86" aria-label="用私钥加密">用私钥加密</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e4%bd%93%e5%88%b6%e7%9a%84%e5%ba%94%e7%94%a8" aria-label="✨公钥密码体制的应用">✨公钥密码体制的应用</a><ul>
-                
-          <li>
-            <a href="#%e5%85%ac%e9%92%a5%e7%ae%97%e6%b3%95%e7%94%a8%e4%ba%8e%e8%ae%a4%e8%af%81" aria-label="公钥算法用于认证">公钥算法用于认证</a></li>
-          <li>
-            <a href="#%e6%b6%88%e6%81%af%e6%9d%a5%e6%ba%90%e8%ae%a4%e8%af%81%e5%92%8c%e6%95%b0%e5%ad%97%e7%ad%be%e5%90%8d" aria-label="消息来源认证和数字签名">消息来源认证和数字签名</a><ul>
-                
-          <li>
-            <a href="#%e6%b6%88%e6%81%af%e6%9d%a5%e6%ba%90%e8%ae%a4%e8%af%81" aria-label="消息来源认证">消息来源认证</a></li>
-          <li>
-            <a href="#%e8%ae%a4%e8%af%81%e4%bf%9d%e5%af%86" aria-label="认证保密">认证保密</a></li>
-          <li>
-            <a href="#%e7%ad%be%e5%90%8d%e7%9a%84%e5%85%b7%e4%bd%93%e5%ae%9e%e7%8e%b0" aria-label="签名的具体实现">签名的具体实现</a></li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e7%9a%84%e7%89%b9%e7%82%b9" aria-label="✨公钥密码的特点">✨公钥密码的特点</a></li>
-          <li>
-            <a href="#%e5%85%ac%e9%92%a5%e7%ae%97%e6%b3%95%e5%ae%89%e5%85%a8%e6%80%a7%e7%9a%84%e6%95%b0%e5%ad%a6%e5%9f%ba%e7%a1%80" aria-label="公钥算法安全性的数学基础">公钥算法安全性的数学基础</a><ul>
-                
-          <li>
-            <a href="#%e6%a8%a1%e5%b9%82%e8%bf%90%e7%ae%97-1" aria-label="✨模幂运算">✨模幂运算</a></li>
-          <li>
-            <a href="#rsa%e7%ae%97%e6%b3%95%e7%9a%84%e8%ae%a1%e7%ae%97" aria-label="✨✨RSA算法的计算">✨✨RSA算法的计算</a><ul>
-                
-          <li>
-            <a href="#rsa%e7%ae%97%e6%b3%95%e6%8f%8f%e8%bf%b0" aria-label="RSA算法描述">RSA算法描述</a></li>
-          <li>
-            <a href="#%e7%94%9f%e6%88%90%e5%af%86%e9%92%a5%e5%af%b9" aria-label="生成密钥对">生成密钥对</a></li>
-          <li>
-            <a href="#%e4%be%8b%e9%a2%98" aria-label="例题">例题</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e9%92%88%e5%af%b9rsa%e7%9a%84%e6%94%bb%e5%87%bb" aria-label="针对RSA的攻击">针对RSA的攻击</a></li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e5%8d%81%e5%af%86%e9%92%a5%e7%ae%a1%e7%90%86%e5%92%8c%e5%85%b6%e4%bb%96%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e4%bd%93%e5%88%b6" aria-label="十、密钥管理和其他公钥密码体制">十、密钥管理和其他公钥密码体制</a><ul>
-                
-          <li>
-            <a href="#dh%e5%af%86%e9%92%a5%e4%ba%a4%e6%8d%a2%e7%ae%97%e6%b3%95" aria-label="DH密钥交换算法">DH密钥交换算法</a></li>
-          <li>
-            <a href="#%e9%92%88%e5%af%b9dh%e7%ae%97%e6%b3%95%e7%9a%84%e4%b8%ad%e9%97%b4%e4%ba%ba%e6%94%bb%e5%87%bb" aria-label="针对DH算法的中间人攻击">针对DH算法的中间人攻击</a></li>
-          <li>
-            <a href="#%e6%a4%ad%e5%9c%86%e6%9b%b2%e7%ba%bf%e5%af%86%e7%a0%81%e5%ad%a6ecc" aria-label="✨椭圆曲线密码学(ECC)">✨椭圆曲线密码学(ECC)</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e5%8d%81%e4%b8%80%e5%af%86%e7%a0%81%e5%ad%a6hash%e5%87%bd%e6%95%b0" aria-label="十一、密码学hash函数">十一、密码学hash函数</a><ul>
-                
-          <li>
-            <a href="#%e6%95%a3%e5%88%97%e5%87%bd%e6%95%b0%e7%9a%84%e5%ba%94%e7%94%a8" aria-label="散列函数的应用">散列函数的应用</a><ul>
-                
-          <li>
-            <a href="#%e7%94%a8%e4%ba%8e%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81" aria-label="用于消息认证">用于消息认证</a></li>
-          <li>
-            <a href="#%e7%94%a8%e4%ba%8e%e6%95%b0%e5%ad%97%e7%ad%be%e5%90%8d" aria-label="用于数字签名">用于数字签名</a></li>
-          <li>
-            <a href="#%e5%85%b6%e4%bb%96%e5%ba%94%e7%94%a8" aria-label="其他应用">其他应用</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e9%92%88%e5%af%b9hash%e5%87%bd%e6%95%b0%e7%9a%84%e6%94%bb%e5%87%bb" aria-label="针对Hash函数的攻击">针对Hash函数的攻击</a></li>
-          <li>
-            <a href="#sha%e5%8f%82%e6%95%b0%e6%af%94%e8%be%83" aria-label="SHA参数比较">SHA参数比较</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e5%8d%81%e4%ba%8c%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81" aria-label="十二、消息认证码">十二、消息认证码</a><ul>
-                
-          <li>
-            <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81" aria-label="消息认证">消息认证</a><ul>
-                
-          <li>
-            <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%9a%84%e9%9c%80%e6%b1%82" aria-label="消息认证的需求">消息认证的需求</a></li>
-          <li>
-            <a href="#%e5%ae%9e%e7%8e%b0%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81" aria-label="实现消息认证">实现消息认证</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81mac" aria-label="消息认证码MAC">消息认证码MAC</a><ul>
-                
-          <li>
-            <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81%e7%9a%84%e5%ae%9e%e7%8e%b0%e6%96%b9%e5%bc%8f%e7%9a%84%e4%b8%a4%e7%a7%8d%e6%96%b9%e5%bc%8f" aria-label="消息认证码的实现方式的两种方式">消息认证码的实现方式的两种方式</a></li>
-          <li>
-            <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81%e7%9a%84%e5%9f%ba%e6%9c%ac%e7%94%a8%e9%80%94%e5%9b%be124" aria-label="消息认证码的基本用途(图12.4)">消息认证码的基本用途(图12.4)</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e8%ae%a4%e8%af%81%e5%8a%a0%e5%af%86gcm" aria-label="认证加密GCM">认证加密GCM</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e5%8d%81%e4%b8%89%e6%95%b0%e5%ad%97%e7%ad%be%e5%90%8d%e6%8a%80%e6%9c%af" aria-label="十三、数字签名技术">十三、数字签名技术</a></li>
-          <li>
-            <a href="#%e5%8d%81%e5%9b%9b%e8%bd%bb%e9%87%8f%e7%ba%a7%e5%af%86%e7%a0%81%e5%92%8c%e5%90%8e%e9%87%8f%e5%ad%90%e5%af%86%e7%a0%81" aria-label="十四、轻量级密码和后量子密码">十四、轻量级密码和后量子密码</a></li>
-          <li>
-            <a href="#%e5%8d%81%e4%ba%94%e5%af%86%e9%92%a5%e7%ae%a1%e7%90%86%e4%b8%8e%e5%88%86%e5%8f%91" aria-label="十五、密钥管理与分发">十五、密钥管理与分发</a></li>
-          <li>
-            <a href="#%e5%8d%81%e5%85%ad%e7%94%a8%e6%88%b7%e8%ae%a4%e8%af%81" aria-label="十六、用户认证">十六、用户认证</a><ul>
-                
-          <li>
-            <a href="#%e8%b4%a8%e8%af%a2%e5%ba%94%e7%ad%94challengeresponse%e7%9a%84%e5%9f%ba%e6%9c%ac%e9%80%bb%e8%be%91" aria-label="质询/应答challenge/response的基本逻辑">质询/应答challenge/response的基本逻辑</a></li>
-          <li>
-            <a href="#%e8%b4%a8%e8%af%a2%e5%ba%94%e7%ad%94%e7%9a%84%e5%ae%9e%e7%8e%b0%e6%96%b9%e5%bc%8f" aria-label="质询应答的实现方式">质询应答的实现方式</a></li>
-          <li>
-            <a href="#%e5%b8%b8%e8%a7%81%e7%bd%91%e7%bb%9c%e6%94%bb%e5%87%bb" aria-label="常见网络攻击">常见网络攻击</a><ul>
-                
-          <li>
-            <a href="#%e5%97%85%e6%8e%a2%e7%9a%84%e7%9b%ae%e7%9a%84" aria-label="嗅探的目的">嗅探的目的</a></li>
-          <li>
-            <a href="#%e6%ac%ba%e9%aa%97arp%e6%ac%ba%e9%aa%97ip%e6%ac%ba%e9%aa%97" aria-label="欺骗(ARP欺骗、IP欺骗)">欺骗(ARP欺骗、IP欺骗)</a><ul>
-                
-          <li>
-            <a href="#arp%e6%94%bb%e5%87%bb%e7%9a%84%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af" aria-label="ARP攻击的应用场景">ARP攻击的应用场景</a></li>
-          <li>
-            <a href="#arp%e6%ac%ba%e9%aa%97%e6%94%bb%e5%87%bb%e9%98%b2%e8%8c%83%e6%8e%aa%e6%96%bd" aria-label="ARP欺骗攻击防范措施">ARP欺骗攻击防范措施</a></li>
-          <li>
-            <a href="#%e7%bd%91%e7%bb%9c%e5%b1%82----ip%e6%ba%90%e5%9c%b0%e5%9d%80%e6%ac%ba%e9%aa%97" aria-label="网络层 &amp;ndash; IP源地址欺骗">网络层 &ndash; IP源地址欺骗</a></li></ul>
-          </li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e5%8d%81%e4%b8%83%e4%bc%a0%e8%be%93%e5%b1%82%e5%ae%89%e5%85%a8" aria-label="十七、传输层安全">十七、传输层安全</a><ul>
-                
-          <li>
-            <a href="#web%e5%ae%89%e5%85%a8%e6%80%a7%e5%a8%81%e8%83%81%e5%af%b9%e7%85%a7%e8%a1%a8" aria-label="Web安全性威胁对照表">Web安全性威胁对照表</a></li>
-          <li>
-            <a href="#tcpip%e5%8d%8f%e8%ae%ae%e6%a0%88%e4%b8%ad%e5%ae%89%e5%85%a8%e5%8a%9f%e8%83%bd%e7%9a%84%e7%9b%b8%e5%af%b9%e4%bd%8d%e7%bd%ae" aria-label="TCP/IP协议栈中安全功能的相对位置">TCP/IP协议栈中安全功能的相对位置</a></li>
-          <li>
-            <a href="#tls%e4%bd%93%e7%b3%bb%e7%bb%93%e6%9e%84" aria-label="TLS体系结构">TLS体系结构</a></li>
-          <li>
-            <a href="#%e6%8f%a1%e6%89%8b%e5%8d%8f%e8%ae%ae%e8%bf%87%e7%a8%8b" aria-label="✨握手协议过程">✨握手协议过程</a></li>
-          <li>
-            <a href="#wireshark%e6%8a%93%e5%8c%85%e5%ae%9e%e9%aa%8c" aria-label="✨✨wireshark抓包实验">✨✨wireshark抓包实验</a><ul>
-                
-          <li>
-            <a href="#%e5%ae%9e%e9%99%85%e6%8a%93%e5%8c%85%e6%88%aa%e5%9b%be%e5%88%86%e6%9e%90" aria-label="实际抓包截图分析">实际抓包截图分析</a></li></ul>
-          </li></ul>
-          </li>
-          <li>
-            <a href="#%e5%8d%81%e4%b9%9d%e6%97%a0%e7%ba%bf%e7%bd%91%e7%bb%9c%e5%ae%89%e5%85%a8" aria-label="十九、无线网络安全">十九、无线网络安全</a><ul>
-                
-          <li>
-            <a href="#%e9%98%b2%e7%81%ab%e5%a2%99%e7%b1%bb%e5%9e%8b" aria-label="防火墙类型">防火墙类型</a></li></ul>
-          </li>
-          <li>
-            <a href="#%e5%85%b6%e4%bb%96" aria-label="其他：">其他：</a><ul>
-                
-          <li>
-            <a href="#windows%e5%b8%b8%e7%94%a8%e5%9f%ba%e6%9c%ac%e5%91%bd%e4%bb%a4" aria-label="windows常用基本命令">windows常用基本命令</a><ul>
-                
-          <li>
-            <a href="#ping" aria-label="ping">ping</a></li>
-          <li>
-            <a href="#nslookup" aria-label="nslookup">nslookup</a></li>
-          <li>
-            <a href="#ipconfig" aria-label="ipconfig">ipconfig</a></li>
-          <li>
-            <a href="#ifconfig" aria-label="ifconfig">ifconfig</a></li>
-          <li>
-            <a href="#arp" aria-label="arp">arp</a></li>
-          <li>
-            <a href="#chmod" aria-label="✨chmod">✨chmod</a></li>
-          <li>
-            <a href="#ls" aria-label="ls">ls</a>
-          </li>
-        </ul>
-        </li>
-        </ul>
-        </li>
-        </ul>
-        </li>
-        </ul>
-      </div>
-    </details>
-  </div>
-  </aside>
-  <script>
-    let activeElement;
-    let elements;
-    window.addEventListener('DOMContentLoaded', function (event) {
-        checkTocPosition();
-
-        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
-         
-         activeElement = elements[0];
-         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
-         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-     }, false);
-
-    window.addEventListener('resize', function(event) {
-        checkTocPosition();
-    }, false);
-
-    window.addEventListener('scroll', () => {
-        
-        activeElement = Array.from(elements).find((element) => {
-            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
-                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
-                return element;
-            }
-        }) || activeElement
-
-        elements.forEach(element => {
-             const id = encodeURI(element.getAttribute('id')).toLowerCase();
-             if (element === activeElement){
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-             } else {
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
-             }
-         })
-     }, false);
-
-    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
-    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
-    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
-
-    function checkTocPosition() {
-        const width = document.body.scrollWidth;
-
-        if (width - main - (toc * 2) - (gap * 4) > 0) {
-            document.getElementById("toc-container").classList.add("wide");
-        } else {
-            document.getElementById("toc-container").classList.remove("wide");
-        }
-    }
-
-    function getOffsetTop(element) {
-        if (!element.getClientRects().length) {
-            return 0;
-        }
-        let rect = element.getBoundingClientRect();
-        let win = element.ownerDocument.defaultView;
-        return rect.top + win.pageYOffset;   
-    }
-</script>
+  </header> 
   <div class="post-content"><h1 id="网络安全复习23">网络安全复习23<a hidden class="anchor" aria-hidden="true" href="#网络安全复习23">#</a></h1>
 <p>期末复习提纲 – 计算机与网络信息安全23秋中美</p>
 <p>题型（暂定）：填空1x10=10分，选择1x20=20分，简答题6x5=30分，应用题4x10=40分，总分100分，折合60%，平时成绩40%。</p>
@@ -2778,7 +2360,426 @@ ECC太复杂了&hellip;&hellip;直接摘书：</p>
 </blockquote>
 
 
+  </div><aside  id="toc-container" class="toc-container wide">
+  <div class="toc">
+    <details  open>
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details">Table of Contents</span>
+      </summary>
+
+      <div class="inner"><ul>
+          <li>
+            <a href="#%e7%bd%91%e7%bb%9c%e5%ae%89%e5%85%a8%e5%a4%8d%e4%b9%a023" aria-label="网络安全复习23">网络安全复习23</a><ul>
+                
+          <li>
+            <a href="#%e4%b8%80%e6%a6%82%e8%bf%b0" aria-label="一、概述">一、概述</a><ul>
+                
+          <li>
+            <a href="#%e5%ae%89%e5%85%a8%e7%9a%84%e4%b8%89%e4%b8%aa%e5%9f%ba%e6%9c%ac%e7%9b%ae%e6%a0%87cia" aria-label="✨安全的三个基本目标CIA">✨安全的三个基本目标CIA</a></li>
+          <li>
+            <a href="#%e5%ae%89%e5%85%a8%e7%9a%84%e5%85%b6%e4%bb%96%e7%9b%ae%e6%a0%87" aria-label="✨安全的其他目标">✨安全的其他目标</a></li>
+          <li>
+            <a href="#osi%e5%ae%89%e5%85%a8%e6%a1%86%e6%9e%b6x880" aria-label="✨OSI安全框架X.880">✨OSI安全框架X.880</a></li>
+          <li>
+            <a href="#osi%e5%ae%89%e5%85%a8%e4%bd%93%e7%b3%bb%e6%a1%86%e6%9e%b6" aria-label="✨OSI安全体系框架">✨OSI安全体系框架</a></li>
+          <li>
+            <a href="#%e5%ae%89%e5%85%a8%e6%94%bb%e5%87%bb" aria-label="✨安全攻击">✨安全攻击</a></li>
+          <li>
+            <a href="#%e5%ae%89%e5%85%a8%e6%9c%8d%e5%8a%a1" aria-label="✨安全服务">✨安全服务</a></li>
+          <li>
+            <a href="#%e5%ae%89%e5%85%a8%e6%9c%ba%e5%88%b6" aria-label="✨安全机制">✨安全机制</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e4%ba%8c%e6%95%b0%e8%ae%ba%e5%9f%ba%e7%a1%80%e4%b8%8d%e5%9c%a8%e8%80%83%e8%af%95%e8%8c%83%e5%9b%b4" aria-label="二、数论基础（不在考试范围）">二、数论基础（不在考试范围）</a><ul>
+                
+          <li>
+            <a href="#%e6%a8%a1%e8%bf%90%e7%ae%97" aria-label="模运算">模运算</a></li>
+          <li>
+            <a href="#%e6%a8%a1%e5%b9%82%e8%bf%90%e7%ae%97" aria-label="模幂运算">模幂运算</a></li>
+          <li>
+            <a href="#%e5%89%a9%e4%bd%99%e9%9b%86" aria-label="剩余集">剩余集</a></li>
+          <li>
+            <a href="#%e6%ac%a7%e6%8b%89%e5%87%bd%e6%95%b0" aria-label="欧拉函数">欧拉函数</a></li>
+          <li>
+            <a href="#%e6%ac%a7%e6%8b%89%e5%ae%9a%e7%90%86" aria-label="欧拉定理">欧拉定理</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e4%b8%89%e4%bc%a0%e7%bb%9f%e5%8a%a0%e5%af%86%e6%8a%80%e6%9c%af" aria-label="三、传统加密技术">三、传统加密技术</a><ul>
+                
+          <li>
+            <a href="#%e5%af%86%e9%92%a5%e7%ae%97%e6%b3%95%e5%88%86%e7%b1%bb" aria-label="密钥算法分类">密钥算法分类</a></li>
+          <li>
+            <a href="#%e5%af%b9%e7%a7%b0%e5%af%86%e7%a0%81%e7%ae%80%e5%8c%96%e6%a8%a1%e5%9e%8b" aria-label="对称密码简化模型">对称密码简化模型</a></li>
+          <li>
+            <a href="#%e5%af%86%e7%a0%81%e5%88%86%e6%9e%90%e5%ad%a6" aria-label="✨密码分析学">✨密码分析学</a></li>
+          <li>
+            <a href="#%e5%af%86%e7%a0%81%e4%bd%93%e7%b3%bb%e7%9a%84%e6%94%bb%e5%87%bb%e6%96%b9%e6%b3%95" aria-label="✨密码体系的攻击方法">✨密码体系的攻击方法</a></li>
+          <li>
+            <a href="#%e4%bb%a3%e6%8d%a2%e5%92%8c%e7%bd%ae%e6%8d%a2%e5%8f%a4%e5%85%b8%e5%af%86%e7%a0%81" aria-label="✨代换和置换（古典密码）">✨代换和置换（古典密码）</a><ul>
+                
+          <li>
+            <a href="#%e5%b8%b8%e8%a7%81%e5%8f%a4%e5%85%b8%e5%af%86%e7%a0%81%e7%ae%97%e6%b3%95" aria-label="常见古典密码算法">常见古典密码算法</a></li>
+          <li>
+            <a href="#%e4%bb%a3%e6%8d%a2%e6%8a%80%e6%9c%af-caesarshift-cipher%e7%a7%bb%e4%bd%8d%e5%af%86%e7%a0%81" aria-label="代换技术： Caesar/Shift Cipher移位密码">代换技术： Caesar/Shift Cipher移位密码</a></li>
+          <li>
+            <a href="#%e5%8a%a0%e6%b3%95%e5%af%86%e7%a0%81caesar%e5%af%86%e7%a0%81%e6%98%af%e4%b8%80%e7%a7%8d%e5%8a%a0%e6%b3%95%e5%af%86%e7%a0%81k3" aria-label="加法密码（Caesar密码是一种加法密码）(k=3)">加法密码（Caesar密码是一种加法密码）(k=3)</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e5%af%86%e7%a0%81" aria-label="✨单表代换密码">✨单表代换密码</a><ul>
+                
+          <li>
+            <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e5%ae%9e%e4%be%8b" aria-label="单表代换实例">单表代换实例</a></li>
+          <li>
+            <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e5%88%86%e6%9e%90" aria-label="单表代换分析">单表代换分析</a></li>
+          <li>
+            <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e6%94%bb%e5%87%bb%e6%ad%a5%e9%aa%a4" aria-label="单表代换攻击步骤">单表代换攻击步骤</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e5%a4%9a%e8%a1%a8%e4%bb%a3%e6%8d%a2vigen%c3%a8re%e5%af%86%e7%a0%81" aria-label="✨多表代换(Vigenère密码)">✨多表代换(Vigenère密码)</a><ul>
+                
+          <li>
+            <a href="#%e5%ad%97%e6%af%8d%e5%87%ba%e7%8e%b0%e7%9a%84%e7%9b%b8%e5%af%b9%e9%a2%91%e7%8e%87" aria-label="字母出现的相对频率">字母出现的相对频率</a></li></ul>
+          </li>
+          <li>
+            <a href="#vernam%e5%af%86%e7%a0%811918" aria-label="Vernam密码（1918）">Vernam密码（1918）</a></li>
+          <li>
+            <a href="#one-time-pad-%e4%b8%80%e6%ac%a1%e4%b8%80%e5%af%86" aria-label="✨One-time Pad 一次一密">✨One-time Pad 一次一密</a><ul>
+                <ul>
+                <ul>
+                
+          <li>
+            <a href="#%e4%b8%80%e6%ac%a1%e4%b8%80%e5%af%86%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7" aria-label="一次一密的安全性">一次一密的安全性</a></li></ul>
+              </ul>
+              
+          <li>
+            <a href="#%e6%97%a0%e6%9d%a1%e4%bb%b6%e5%ae%89%e5%85%a8%e4%b8%8e%e8%ae%a1%e7%ae%97%e4%b8%8a%e5%ae%89%e5%85%a8" aria-label="无条件安全与计算上安全">无条件安全与计算上安全</a></li>
+          <li>
+            <a href="#%e7%bd%ae%e6%8d%a2%e6%8a%80%e6%9c%af" aria-label="置换技术">置换技术</a><ul>
+                
+          <li>
+            <a href="#%e6%9b%b4%e5%a4%8d%e6%9d%82%e7%9a%84%e5%88%97%e7%bd%ae%e6%8d%a2" aria-label="更复杂的列置换">更复杂的列置换</a></li></ul>
+          </li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e5%9b%9b%e5%88%86%e7%bb%84%e5%af%86%e7%a0%81%e5%92%8c%e6%95%b0%e6%8d%ae%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86des" aria-label="四、分组密码和数据加密标准DES">四、分组密码和数据加密标准DES</a><ul>
+                
+          <li>
+            <a href="#%e5%af%b9%e7%a7%b0%e5%af%86%e7%a0%81%e5%88%86%e7%b1%bb%e5%8f%8a%e5%8c%ba%e5%88%ab" aria-label="✨对称密码分类及区别">✨对称密码分类及区别</a></li>
+          <li>
+            <a href="#%e5%88%86%e7%bb%84%e5%af%86%e7%a0%81" aria-label="分组密码">分组密码</a><ul>
+                
+          <li>
+            <a href="#des%e6%95%b0%e6%8d%ae%e5%8a%a0%e5%af%86" aria-label="✨DES数据加密">✨DES数据加密</a></li>
+          <li>
+            <a href="#feisteldes%e5%8a%a0%e5%af%86%e6%a1%86%e6%9e%b6" aria-label="✨Feistel(DES)加密框架">✨Feistel(DES)加密框架</a><ul>
+                
+          <li>
+            <a href="#feistel%e7%bd%91%e7%bb%9c" aria-label="✨Feistel网络">✨Feistel网络</a></li>
+          <li>
+            <a href="#feistelfor-loop" aria-label="Feistel——&amp;lsquo;for&amp;rsquo; Loop">Feistel——&lsquo;for&rsquo; Loop</a></li></ul>
+          </li>
+          <li>
+            <a href="#des%e5%ae%89%e5%85%a8%e5%bc%ba%e5%ba%a6" aria-label="✨DES安全强度">✨DES安全强度</a><ul>
+                
+          <li>
+            <a href="#%e7%a9%b7%e4%b8%be%e5%af%86%e9%92%a5%e6%90%9c%e7%b4%a2%e6%89%80%e9%9c%80%e8%a6%81%e7%9a%84%e6%97%b6%e9%97%b4" aria-label="穷举密钥搜索所需要的时间">穷举密钥搜索所需要的时间</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e5%8f%8c%e9%87%8ddes" aria-label="✨双重DES">✨双重DES</a></li>
+          <li>
+            <a href="#%e4%b8%ad%e9%97%b4%e7%9b%b8%e9%81%87%e6%94%bb%e5%87%bb" aria-label="中间相遇攻击">中间相遇攻击</a></li>
+          <li>
+            <a href="#3des%e4%b8%89%e9%87%8ddestdea" aria-label="✨3DES——三重DES(TDEA)">✨3DES——三重DES(TDEA)</a></li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e4%ba%94%e6%9c%89%e9%99%90%e5%9f%9f%e4%b8%8d%e5%9c%a8%e8%80%83%e8%af%95%e8%8c%83%e5%9b%b4" aria-label="五、有限域（不在考试范围）">五、有限域（不在考试范围）</a></li>
+          <li>
+            <a href="#%e5%85%ad%e9%ab%98%e7%ba%a7%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86aes128" aria-label="六、高级加密标准AES——128">六、高级加密标准AES——128</a><ul>
+                
+          <li>
+            <a href="#%e4%bb%8e3des%e5%88%b0%e9%ab%98%e7%ba%a7%e6%95%b0%e6%8d%ae%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86aes" aria-label="从3DES到高级数据加密标准AES">从3DES到高级数据加密标准AES</a></li>
+          <li>
+            <a href="#%e9%ab%98%e7%ba%a7%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86aes%e5%87%86%e5%88%99" aria-label="高级加密标准AES准则">高级加密标准AES准则</a></li>
+          <li>
+            <a href="#aes%e5%88%86%e7%bb%84%e9%95%bf%e5%ba%a6%e5%af%86%e9%92%a5%e9%95%bf%e5%ba%a6" aria-label="✨AES分组长度、密钥长度">✨AES分组长度、密钥长度</a></li>
+          <li>
+            <a href="#%e8%a1%a861" aria-label="✨表6.1">✨表6.1</a></li>
+          <li>
+            <a href="#aes%e6%af%8f%e8%bd%ae%e4%b8%ad%e7%9a%84%e6%93%8d%e4%bd%9c" aria-label="AES每轮中的操作">AES每轮中的操作</a><ul>
+                
+          <li>
+            <a href="#%e4%bb%a5aes-128%e4%b8%ba%e4%be%8b%e5%8d%b3128%e5%af%86%e9%92%a5" aria-label="以AES-128为例，即128密钥">以AES-128为例，即128密钥</a></li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e4%b8%83%e5%88%86%e7%bb%84%e5%8a%a0%e5%af%86%e7%9a%84%e5%b7%a5%e4%bd%9c%e6%a8%a1%e5%bc%8f" aria-label="七、分组加密的工作模式">七、分组加密的工作模式</a><ul>
+                
+          <li>
+            <a href="#%e5%88%86%e7%bb%84%e5%af%86%e7%a0%81%e7%9a%84%e5%b7%a5%e4%bd%9c%e6%a8%a1%e5%bc%8f%e8%a1%a871" aria-label="分组密码的工作模式(表7.1)">分组密码的工作模式(表7.1)</a></li>
+          <li>
+            <a href="#ecb%e7%94%b5%e8%af%9d%e6%9c%ac%e6%a8%a1%e5%bc%8f" aria-label="✨ECB：电话本模式">✨ECB：电话本模式</a></li>
+          <li>
+            <a href="#cbc%e5%af%86%e6%96%87%e5%88%86%e7%bb%84%e9%93%be%e6%8e%a5%e6%a8%a1%e5%bc%8f" aria-label="✨CBC：密文分组链接模式">✨CBC：密文分组链接模式</a></li>
+          <li>
+            <a href="#cfb%e5%af%86%e6%96%87%e5%8f%8d%e9%a6%88%e6%a8%a1%e5%bc%8f" aria-label="✨CFB：密文反馈模式">✨CFB：密文反馈模式</a></li>
+          <li>
+            <a href="#ofb%e8%be%93%e5%87%ba%e5%8f%8d%e9%a6%88%e6%a8%a1%e5%bc%8f" aria-label="✨OFB：输出反馈模式">✨OFB：输出反馈模式</a></li>
+          <li>
+            <a href="#ctr%e8%ae%a1%e6%95%b0%e5%99%a8%e6%a8%a1%e5%bc%8f" aria-label="✨CTR：计数器模式">✨CTR：计数器模式</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e5%85%ab%e4%bc%aa%e9%9a%8f%e6%9c%ba%e6%95%b0%e7%9a%84%e4%ba%a7%e7%94%9f%e5%92%8c%e6%b5%81%e5%af%86%e7%a0%81" aria-label="八、伪随机数的产生和流密码">八、伪随机数的产生和流密码</a></li>
+          <li>
+            <a href="#%e4%b9%9d%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e5%ad%a6%e4%b8%8ersa" aria-label="九、公钥密码学与RSA">九、公钥密码学与RSA</a><ul>
+                
+          <li>
+            <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e6%9c%af%e8%af%ad%e8%a1%a891" aria-label="公钥密码术语(表9.1)">公钥密码术语(表9.1)</a></li>
+          <li>
+            <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e4%bd%93%e5%88%b6%e5%9b%be91a" aria-label="✨公钥密码体制(✨图9.1(a))">✨公钥密码体制(✨图9.1(a))</a><ul>
+                
+          <li>
+            <a href="#%e7%94%a8%e5%85%ac%e9%92%a5%e5%8a%a0%e5%af%86" aria-label="用公钥加密">用公钥加密</a></li>
+          <li>
+            <a href="#%e7%94%a8%e7%a7%81%e9%92%a5%e5%8a%a0%e5%af%86" aria-label="用私钥加密">用私钥加密</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e4%bd%93%e5%88%b6%e7%9a%84%e5%ba%94%e7%94%a8" aria-label="✨公钥密码体制的应用">✨公钥密码体制的应用</a><ul>
+                
+          <li>
+            <a href="#%e5%85%ac%e9%92%a5%e7%ae%97%e6%b3%95%e7%94%a8%e4%ba%8e%e8%ae%a4%e8%af%81" aria-label="公钥算法用于认证">公钥算法用于认证</a></li>
+          <li>
+            <a href="#%e6%b6%88%e6%81%af%e6%9d%a5%e6%ba%90%e8%ae%a4%e8%af%81%e5%92%8c%e6%95%b0%e5%ad%97%e7%ad%be%e5%90%8d" aria-label="消息来源认证和数字签名">消息来源认证和数字签名</a><ul>
+                
+          <li>
+            <a href="#%e6%b6%88%e6%81%af%e6%9d%a5%e6%ba%90%e8%ae%a4%e8%af%81" aria-label="消息来源认证">消息来源认证</a></li>
+          <li>
+            <a href="#%e8%ae%a4%e8%af%81%e4%bf%9d%e5%af%86" aria-label="认证保密">认证保密</a></li>
+          <li>
+            <a href="#%e7%ad%be%e5%90%8d%e7%9a%84%e5%85%b7%e4%bd%93%e5%ae%9e%e7%8e%b0" aria-label="签名的具体实现">签名的具体实现</a></li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e7%9a%84%e7%89%b9%e7%82%b9" aria-label="✨公钥密码的特点">✨公钥密码的特点</a></li>
+          <li>
+            <a href="#%e5%85%ac%e9%92%a5%e7%ae%97%e6%b3%95%e5%ae%89%e5%85%a8%e6%80%a7%e7%9a%84%e6%95%b0%e5%ad%a6%e5%9f%ba%e7%a1%80" aria-label="公钥算法安全性的数学基础">公钥算法安全性的数学基础</a><ul>
+                
+          <li>
+            <a href="#%e6%a8%a1%e5%b9%82%e8%bf%90%e7%ae%97-1" aria-label="✨模幂运算">✨模幂运算</a></li>
+          <li>
+            <a href="#rsa%e7%ae%97%e6%b3%95%e7%9a%84%e8%ae%a1%e7%ae%97" aria-label="✨✨RSA算法的计算">✨✨RSA算法的计算</a><ul>
+                
+          <li>
+            <a href="#rsa%e7%ae%97%e6%b3%95%e6%8f%8f%e8%bf%b0" aria-label="RSA算法描述">RSA算法描述</a></li>
+          <li>
+            <a href="#%e7%94%9f%e6%88%90%e5%af%86%e9%92%a5%e5%af%b9" aria-label="生成密钥对">生成密钥对</a></li>
+          <li>
+            <a href="#%e4%be%8b%e9%a2%98" aria-label="例题">例题</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e9%92%88%e5%af%b9rsa%e7%9a%84%e6%94%bb%e5%87%bb" aria-label="针对RSA的攻击">针对RSA的攻击</a></li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e5%8d%81%e5%af%86%e9%92%a5%e7%ae%a1%e7%90%86%e5%92%8c%e5%85%b6%e4%bb%96%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e4%bd%93%e5%88%b6" aria-label="十、密钥管理和其他公钥密码体制">十、密钥管理和其他公钥密码体制</a><ul>
+                
+          <li>
+            <a href="#dh%e5%af%86%e9%92%a5%e4%ba%a4%e6%8d%a2%e7%ae%97%e6%b3%95" aria-label="DH密钥交换算法">DH密钥交换算法</a></li>
+          <li>
+            <a href="#%e9%92%88%e5%af%b9dh%e7%ae%97%e6%b3%95%e7%9a%84%e4%b8%ad%e9%97%b4%e4%ba%ba%e6%94%bb%e5%87%bb" aria-label="针对DH算法的中间人攻击">针对DH算法的中间人攻击</a></li>
+          <li>
+            <a href="#%e6%a4%ad%e5%9c%86%e6%9b%b2%e7%ba%bf%e5%af%86%e7%a0%81%e5%ad%a6ecc" aria-label="✨椭圆曲线密码学(ECC)">✨椭圆曲线密码学(ECC)</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e5%8d%81%e4%b8%80%e5%af%86%e7%a0%81%e5%ad%a6hash%e5%87%bd%e6%95%b0" aria-label="十一、密码学hash函数">十一、密码学hash函数</a><ul>
+                
+          <li>
+            <a href="#%e6%95%a3%e5%88%97%e5%87%bd%e6%95%b0%e7%9a%84%e5%ba%94%e7%94%a8" aria-label="散列函数的应用">散列函数的应用</a><ul>
+                
+          <li>
+            <a href="#%e7%94%a8%e4%ba%8e%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81" aria-label="用于消息认证">用于消息认证</a></li>
+          <li>
+            <a href="#%e7%94%a8%e4%ba%8e%e6%95%b0%e5%ad%97%e7%ad%be%e5%90%8d" aria-label="用于数字签名">用于数字签名</a></li>
+          <li>
+            <a href="#%e5%85%b6%e4%bb%96%e5%ba%94%e7%94%a8" aria-label="其他应用">其他应用</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e9%92%88%e5%af%b9hash%e5%87%bd%e6%95%b0%e7%9a%84%e6%94%bb%e5%87%bb" aria-label="针对Hash函数的攻击">针对Hash函数的攻击</a></li>
+          <li>
+            <a href="#sha%e5%8f%82%e6%95%b0%e6%af%94%e8%be%83" aria-label="SHA参数比较">SHA参数比较</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e5%8d%81%e4%ba%8c%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81" aria-label="十二、消息认证码">十二、消息认证码</a><ul>
+                
+          <li>
+            <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81" aria-label="消息认证">消息认证</a><ul>
+                
+          <li>
+            <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%9a%84%e9%9c%80%e6%b1%82" aria-label="消息认证的需求">消息认证的需求</a></li>
+          <li>
+            <a href="#%e5%ae%9e%e7%8e%b0%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81" aria-label="实现消息认证">实现消息认证</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81mac" aria-label="消息认证码MAC">消息认证码MAC</a><ul>
+                
+          <li>
+            <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81%e7%9a%84%e5%ae%9e%e7%8e%b0%e6%96%b9%e5%bc%8f%e7%9a%84%e4%b8%a4%e7%a7%8d%e6%96%b9%e5%bc%8f" aria-label="消息认证码的实现方式的两种方式">消息认证码的实现方式的两种方式</a></li>
+          <li>
+            <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81%e7%9a%84%e5%9f%ba%e6%9c%ac%e7%94%a8%e9%80%94%e5%9b%be124" aria-label="消息认证码的基本用途(图12.4)">消息认证码的基本用途(图12.4)</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e8%ae%a4%e8%af%81%e5%8a%a0%e5%af%86gcm" aria-label="认证加密GCM">认证加密GCM</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e5%8d%81%e4%b8%89%e6%95%b0%e5%ad%97%e7%ad%be%e5%90%8d%e6%8a%80%e6%9c%af" aria-label="十三、数字签名技术">十三、数字签名技术</a></li>
+          <li>
+            <a href="#%e5%8d%81%e5%9b%9b%e8%bd%bb%e9%87%8f%e7%ba%a7%e5%af%86%e7%a0%81%e5%92%8c%e5%90%8e%e9%87%8f%e5%ad%90%e5%af%86%e7%a0%81" aria-label="十四、轻量级密码和后量子密码">十四、轻量级密码和后量子密码</a></li>
+          <li>
+            <a href="#%e5%8d%81%e4%ba%94%e5%af%86%e9%92%a5%e7%ae%a1%e7%90%86%e4%b8%8e%e5%88%86%e5%8f%91" aria-label="十五、密钥管理与分发">十五、密钥管理与分发</a></li>
+          <li>
+            <a href="#%e5%8d%81%e5%85%ad%e7%94%a8%e6%88%b7%e8%ae%a4%e8%af%81" aria-label="十六、用户认证">十六、用户认证</a><ul>
+                
+          <li>
+            <a href="#%e8%b4%a8%e8%af%a2%e5%ba%94%e7%ad%94challengeresponse%e7%9a%84%e5%9f%ba%e6%9c%ac%e9%80%bb%e8%be%91" aria-label="质询/应答challenge/response的基本逻辑">质询/应答challenge/response的基本逻辑</a></li>
+          <li>
+            <a href="#%e8%b4%a8%e8%af%a2%e5%ba%94%e7%ad%94%e7%9a%84%e5%ae%9e%e7%8e%b0%e6%96%b9%e5%bc%8f" aria-label="质询应答的实现方式">质询应答的实现方式</a></li>
+          <li>
+            <a href="#%e5%b8%b8%e8%a7%81%e7%bd%91%e7%bb%9c%e6%94%bb%e5%87%bb" aria-label="常见网络攻击">常见网络攻击</a><ul>
+                
+          <li>
+            <a href="#%e5%97%85%e6%8e%a2%e7%9a%84%e7%9b%ae%e7%9a%84" aria-label="嗅探的目的">嗅探的目的</a></li>
+          <li>
+            <a href="#%e6%ac%ba%e9%aa%97arp%e6%ac%ba%e9%aa%97ip%e6%ac%ba%e9%aa%97" aria-label="欺骗(ARP欺骗、IP欺骗)">欺骗(ARP欺骗、IP欺骗)</a><ul>
+                
+          <li>
+            <a href="#arp%e6%94%bb%e5%87%bb%e7%9a%84%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af" aria-label="ARP攻击的应用场景">ARP攻击的应用场景</a></li>
+          <li>
+            <a href="#arp%e6%ac%ba%e9%aa%97%e6%94%bb%e5%87%bb%e9%98%b2%e8%8c%83%e6%8e%aa%e6%96%bd" aria-label="ARP欺骗攻击防范措施">ARP欺骗攻击防范措施</a></li>
+          <li>
+            <a href="#%e7%bd%91%e7%bb%9c%e5%b1%82----ip%e6%ba%90%e5%9c%b0%e5%9d%80%e6%ac%ba%e9%aa%97" aria-label="网络层 &amp;ndash; IP源地址欺骗">网络层 &ndash; IP源地址欺骗</a></li></ul>
+          </li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e5%8d%81%e4%b8%83%e4%bc%a0%e8%be%93%e5%b1%82%e5%ae%89%e5%85%a8" aria-label="十七、传输层安全">十七、传输层安全</a><ul>
+                
+          <li>
+            <a href="#web%e5%ae%89%e5%85%a8%e6%80%a7%e5%a8%81%e8%83%81%e5%af%b9%e7%85%a7%e8%a1%a8" aria-label="Web安全性威胁对照表">Web安全性威胁对照表</a></li>
+          <li>
+            <a href="#tcpip%e5%8d%8f%e8%ae%ae%e6%a0%88%e4%b8%ad%e5%ae%89%e5%85%a8%e5%8a%9f%e8%83%bd%e7%9a%84%e7%9b%b8%e5%af%b9%e4%bd%8d%e7%bd%ae" aria-label="TCP/IP协议栈中安全功能的相对位置">TCP/IP协议栈中安全功能的相对位置</a></li>
+          <li>
+            <a href="#tls%e4%bd%93%e7%b3%bb%e7%bb%93%e6%9e%84" aria-label="TLS体系结构">TLS体系结构</a></li>
+          <li>
+            <a href="#%e6%8f%a1%e6%89%8b%e5%8d%8f%e8%ae%ae%e8%bf%87%e7%a8%8b" aria-label="✨握手协议过程">✨握手协议过程</a></li>
+          <li>
+            <a href="#wireshark%e6%8a%93%e5%8c%85%e5%ae%9e%e9%aa%8c" aria-label="✨✨wireshark抓包实验">✨✨wireshark抓包实验</a><ul>
+                
+          <li>
+            <a href="#%e5%ae%9e%e9%99%85%e6%8a%93%e5%8c%85%e6%88%aa%e5%9b%be%e5%88%86%e6%9e%90" aria-label="实际抓包截图分析">实际抓包截图分析</a></li></ul>
+          </li></ul>
+          </li>
+          <li>
+            <a href="#%e5%8d%81%e4%b9%9d%e6%97%a0%e7%ba%bf%e7%bd%91%e7%bb%9c%e5%ae%89%e5%85%a8" aria-label="十九、无线网络安全">十九、无线网络安全</a><ul>
+                
+          <li>
+            <a href="#%e9%98%b2%e7%81%ab%e5%a2%99%e7%b1%bb%e5%9e%8b" aria-label="防火墙类型">防火墙类型</a></li></ul>
+          </li>
+          <li>
+            <a href="#%e5%85%b6%e4%bb%96" aria-label="其他：">其他：</a><ul>
+                
+          <li>
+            <a href="#windows%e5%b8%b8%e7%94%a8%e5%9f%ba%e6%9c%ac%e5%91%bd%e4%bb%a4" aria-label="windows常用基本命令">windows常用基本命令</a><ul>
+                
+          <li>
+            <a href="#ping" aria-label="ping">ping</a></li>
+          <li>
+            <a href="#nslookup" aria-label="nslookup">nslookup</a></li>
+          <li>
+            <a href="#ipconfig" aria-label="ipconfig">ipconfig</a></li>
+          <li>
+            <a href="#ifconfig" aria-label="ifconfig">ifconfig</a></li>
+          <li>
+            <a href="#arp" aria-label="arp">arp</a></li>
+          <li>
+            <a href="#chmod" aria-label="✨chmod">✨chmod</a></li>
+          <li>
+            <a href="#ls" aria-label="ls">ls</a>
+          </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </details>
   </div>
+  </aside>
+  <script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+         
+         activeElement = elements[0];
+         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+     }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+
+    window.addEventListener('scroll', () => {
+        
+        
+        if(!elements) return;
+
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+             const id = encodeURI(element.getAttribute('id')).toLowerCase();
+             if (element === activeElement){
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+             } else {
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+             }
+         })
+     }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;   
+    }
+</script>
 
   <footer class="post-footer">
     <ul class="post-tags">

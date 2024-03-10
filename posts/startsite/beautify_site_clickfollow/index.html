@@ -13,10 +13,10 @@
 <meta name="description" content="增加了一个鼠标追尾的效果 QwQ 添加文件的方式参考上一篇~指路这篇 js文件： pointerfollow.js js 原文件来源：Canva&rsquo;s Magic Mouse Effect (codepen.io) （我有稍微改了一些样">
 <meta name="author" content="DODOLA">
 <link rel="canonical" href="https://dodolalorc.cn/posts/startsite/beautify_site_clickfollow/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d2bbe5afe27773cae396f12a5a844ff86517a464746a2d176dad2b79a0be930c.css" integrity="" rel="preload stylesheet" as="style">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3916c4c2c10e9a2b529f316f1f9b7b67e1b939960457ac4b9678ab23fa85b192.css" integrity="" rel="preload stylesheet" as="style">
+
+
+
 
 
 <link rel="icon" href="https://dodolalorc.cn/favicon.ico">
@@ -77,6 +77,8 @@
 <canvas class="fireworks"> </canvas>
 <script src="/js/anime.min.js" ></script>
 <script src="/js/fireworks.js" ></script>
+
+
 
 
 
@@ -278,83 +280,7 @@
     <div class="meta-item">&nbsp·&nbsp
       <span id="busuanzi_container_page_pv">本文阅读量<span id="busuanzi_value_page_pv"></span>次</span>
     </div>
-  </header> <aside  id="toc-container" class="toc-container wide">
-  <div class="toc">
-    <details  open>
-      <summary accesskey="c" title="(Alt + C)">
-        <span class="details">Table of Contents</span>
-      </summary>
-
-      <div class="inner"><ul>
-          <li>
-            <a href="#js%e6%96%87%e4%bb%b6" aria-label="js文件："><code>js</code>文件：</a></li>
-          <li>
-            <a href="#css%e6%96%87%e4%bb%b6" aria-label="css文件："><code>css</code>文件：</a>
-          </li>
-        </ul>
-      </div>
-    </details>
-  </div>
-  </aside>
-  <script>
-    let activeElement;
-    let elements;
-    window.addEventListener('DOMContentLoaded', function (event) {
-        checkTocPosition();
-
-        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
-         
-         activeElement = elements[0];
-         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
-         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-     }, false);
-
-    window.addEventListener('resize', function(event) {
-        checkTocPosition();
-    }, false);
-
-    window.addEventListener('scroll', () => {
-        
-        activeElement = Array.from(elements).find((element) => {
-            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
-                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
-                return element;
-            }
-        }) || activeElement
-
-        elements.forEach(element => {
-             const id = encodeURI(element.getAttribute('id')).toLowerCase();
-             if (element === activeElement){
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-             } else {
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
-             }
-         })
-     }, false);
-
-    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
-    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
-    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
-
-    function checkTocPosition() {
-        const width = document.body.scrollWidth;
-
-        if (width - main - (toc * 2) - (gap * 4) > 0) {
-            document.getElementById("toc-container").classList.add("wide");
-        } else {
-            document.getElementById("toc-container").classList.remove("wide");
-        }
-    }
-
-    function getOffsetTop(element) {
-        if (!element.getClientRects().length) {
-            return 0;
-        }
-        let rect = element.getBoundingClientRect();
-        let win = element.ownerDocument.defaultView;
-        return rect.top + win.pageYOffset;   
-    }
-</script>
+  </header> 
   <div class="post-content"><p>增加了一个鼠标追尾的效果 QwQ</p>
 <p>添加文件的方式参考上一篇~指路<a href="/posts/startsite/beautify_site_click/">这篇</a></p>
 <h1 id="js文件"><code>js</code>文件：<a hidden class="anchor" aria-hidden="true" href="#js文件">#</a></h1>
@@ -512,7 +438,87 @@
 </div>
 </div>
 
+  </div><aside  id="toc-container" class="toc-container wide">
+  <div class="toc">
+    <details  open>
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details">Table of Contents</span>
+      </summary>
+
+      <div class="inner"><ul>
+          <li>
+            <a href="#js%e6%96%87%e4%bb%b6" aria-label="js文件："><code>js</code>文件：</a></li>
+          <li>
+            <a href="#css%e6%96%87%e4%bb%b6" aria-label="css文件："><code>css</code>文件：</a>
+          </li>
+        </ul>
+      </div>
+    </details>
   </div>
+  </aside>
+  <script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+         
+         activeElement = elements[0];
+         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+     }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+
+    window.addEventListener('scroll', () => {
+        
+        
+        if(!elements) return;
+
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+             const id = encodeURI(element.getAttribute('id')).toLowerCase();
+             if (element === activeElement){
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+             } else {
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+             }
+         })
+     }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;   
+    }
+</script>
 
   <footer class="post-footer">
     <ul class="post-tags">
