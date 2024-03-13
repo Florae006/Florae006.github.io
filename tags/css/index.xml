@@ -1015,7 +1015,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">terms-tags</span> <span class="nt">li</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">6n</span><span class="o">+</span><span class="nt">1</span><span class="o">)</span> <span class="nt">a</span> <span class="p">{</span><span class="k">color</span><span class="p">:</span><span class="mh">#3e4491</span><span class="p">;}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>当然了也可以在js里搓qwq，可以参考<a href="/posts/startsite/basic_setting/#%E5%AE%9E%E7%8E%B0%E9%9A%8F%E6%9C%BA%E8%83%8C%E6%99%AF%E8%89%B2">这篇</a></p>
+</div><p>当然了也可以在js里搓qwq，可以参考<a href="/posts/startsite/basic_setting/#实现随机背景色">这篇</a></p>
 ]]></content:encoded>
     </item>
     

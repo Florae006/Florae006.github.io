@@ -11,7 +11,27 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Mar 2024 17:14:08 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Mar 2024 21:29:25 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://dodolalorc.cn/tags/hugo/</link>
+      <pubDate>Sun, 10 Mar 2024 21:29:25 +0800</pubDate>
+      
+      <guid>https://dodolalorc.cn/tags/hugo/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Mermaid</title>
+      <link>https://dodolalorc.cn/tags/mermaid/</link>
+      <pubDate>Sun, 10 Mar 2024 21:29:25 +0800</pubDate>
+      
+      <guid>https://dodolalorc.cn/tags/mermaid/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>CSS</title>
       <link>https://dodolalorc.cn/tags/css/</link>
@@ -73,21 +93,31 @@
     </item>
     
     <item>
-      <title>动态规划</title>
-      <link>https://dodolalorc.cn/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
-      <pubDate>Sat, 09 Mar 2024 21:47:13 +0800</pubDate>
+      <title>算法</title>
+      <link>https://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sat, 09 Mar 2024 21:54:39 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <guid>https://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
-      <title>算法</title>
-      <link>https://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</link>
+      <title>计算几何</title>
+      <link>https://dodolalorc.cn/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</link>
+      <pubDate>Sat, 09 Mar 2024 21:54:39 +0800</pubDate>
+      
+      <guid>https://dodolalorc.cn/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>动态规划</title>
+      <link>https://dodolalorc.cn/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
       <pubDate>Sat, 09 Mar 2024 21:47:13 +0800</pubDate>
       
-      <guid>https://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://dodolalorc.cn/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -158,16 +188,6 @@
       <pubDate>Fri, 05 Jan 2024 14:20:41 +0800</pubDate>
       
       <guid>https://dodolalorc.cn/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://dodolalorc.cn/tags/hugo/</link>
-      <pubDate>Sat, 23 Dec 2023 20:00:25 +0800</pubDate>
-      
-      <guid>https://dodolalorc.cn/tags/hugo/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>
@@ -343,7 +363,7 @@
     </item>
     
     <item>
-      <title>jQuery</title>
+      <title>JQuery</title>
       <link>https://dodolalorc.cn/tags/jquery/</link>
       <pubDate>Fri, 01 Dec 2023 13:10:27 +0800</pubDate>
       

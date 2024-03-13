@@ -77,17 +77,18 @@
 <p>初始化：<code>dist[1]=0, dist[v]=distance[1][v], 其他的置INF</code>。</p>
 <p>在Bellman-Ford算法中，我们假设不存在<strong>负权环</strong>（有负权环我们就会发现每绕一次dist都在变小，而我们取<code>min（dist[v],weight(p-&gt;v)+dist[v]）</code>肯定会把路径上的这个负权环走超过n遍），那么从v~1~到任何点的路径上点的个数都不会大于总点数n，所以Bellman-Ford算法就直接暴力搜n次来找最短路,到这里我们先代码实现一下这样的思路：</p>
 <p>给出一个图例like this：</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
-v1((v1))-.4.-&gt;v2((v2))
-v1((v1))-.3.-&gt;v3((v3))
-v1((v1))-.8.-&gt;v4((v4))
-v2((v2))-.2.-&gt;v6((v6))
-v7((v7))-.5.-&gt;v6((v6))
-v7((v7))-.1.-&gt;v4((v4))
-v3((v3))-.1.-&gt;v7((v7))
-v4((v4))-.5.-&gt;v3((v3))
-v4((v4))-.5.-&gt;v5((v5))
-</code></pre><p>样例：</p>
+<pre class="mermaid">graph LR
+v1((v1))-.4.->v2((v2))
+v1((v1))-.3.->v3((v3))
+v1((v1))-.8.->v4((v4))
+v2((v2))-.2.->v6((v6))
+v7((v7))-.5.->v6((v6))
+v7((v7))-.1.->v4((v4))
+v3((v3))-.1.->v7((v7))
+v4((v4))-.5.->v3((v3))
+v4((v4))-.5.->v5((v5))
+  </pre>
+<p>样例：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -266,18 +267,19 @@ v4((v4))-.5.-&gt;v5((v5))
 </span></span><span class="line"><span class="cl">7 4 1
 </span></span></code></pre></td></tr></table>
 </div>
-</div><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
-v1((v1))-.4.-&gt;v2((v2))
-v1((v1))-.3.-&gt;v3((v3))
-v1((v1))-.8.-&gt;v4((v4))
-v2((v2))-.2.-&gt;v6((v6))
-v7((v7))-.5.-&gt;v6((v6))
-v7((v7))-.1.-&gt;v4((v4))
-v3((v3))-.1.-&gt;v7((v7))
-v4((v4))-.5.-&gt;v3((v3))
-v4((v4))-.5.-&gt;v5((v5))
-v7((v7))-. -9 .-&gt;v7((v7))
-</code></pre><div class="highlight"><div class="chroma">
+</div><pre class="mermaid">graph LR
+v1((v1))-.4.->v2((v2))
+v1((v1))-.3.->v3((v3))
+v1((v1))-.8.->v4((v4))
+v2((v2))-.2.->v6((v6))
+v7((v7))-.5.->v6((v6))
+v7((v7))-.1.->v4((v4))
+v3((v3))-.1.->v7((v7))
+v4((v4))-.5.->v3((v3))
+v4((v4))-.5.->v5((v5))
+v7((v7))-. -9 .->v7((v7))
+  </pre>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2

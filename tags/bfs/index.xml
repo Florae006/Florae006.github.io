@@ -18,25 +18,26 @@
       <pubDate>Sat, 06 Jan 2024 14:15:17 +0800</pubDate>
       
       <guid>https://dodolalorc.cn/posts/knowledge/algorithm/graph_basic/</guid>
-      <description>1.1图的定义 上课讲过一大堆这里不再赘述，直接学习代码实现。 1.2图的存储 例图展示： graph LR v1((v1))--4--&amp;gt;v2((v2)) v1((v1))--9--&amp;gt;v6((v6)) v3((v3))--19--&amp;gt;v2((v2)) v3((v3))--22--&amp;gt;v1((v1)) v4((v4))--17--&amp;gt;v3((v3)) v5((v5))--29--&amp;gt;v8((v8)) v6((v6))--12--&amp;gt;v1((v1)) v6((v6))--9--&amp;gt;v5((v5)) v6((v6))--4--&amp;gt;v7((v7)) v7((v7))--25--&amp;gt;v4((v4)) v8((v8))--7--&amp;gt;v7((v7)) v8((v8))--11--&amp;gt;v3((v3)) 设n个点，m条边 上图的数据（</description>
+      <description>1.1图的定义 上课讲过一大堆这里不再赘述，直接学习代码实现。 1.2图的存储 例图展示： graph LR v1((v1))--4--&gt;v2((v2)) v1((v1))--9--&gt;v6((v6)) v3((v3))--19--&gt;v2((v2)) v3((v3))--22--&gt;v1((v1)) v4((v4))--17--&gt;v3((v3)) v5((v5))--29--&gt;v8((v8)) v6((v6))--12--&gt;v1((v1)) v6((v6))--9--&gt;v5((v5)) v6((v6))--4--&gt;v7((v7)) v7((v7))--25--&gt;v4((v4)) v8((v8))--7--&gt;v7((v7)) v8((v8))--11--&gt;v3((v3)) 设n个点，m条边 上图的数据（</description>
       <content:encoded><![CDATA[<h3 id="11图的定义">1.1图的定义</h3>
 <p>上课讲过一大堆这里不再赘述，直接学习代码实现。</p>
 <h3 id="12图的存储">1.2图的存储</h3>
 <p>例图展示：</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
-v1((v1))--4--&gt;v2((v2))
-v1((v1))--9--&gt;v6((v6))
-v3((v3))--19--&gt;v2((v2))
-v3((v3))--22--&gt;v1((v1))
-v4((v4))--17--&gt;v3((v3))
-v5((v5))--29--&gt;v8((v8))
-v6((v6))--12--&gt;v1((v1))
-v6((v6))--9--&gt;v5((v5))
-v6((v6))--4--&gt;v7((v7))
-v7((v7))--25--&gt;v4((v4))
-v8((v8))--7--&gt;v7((v7))
-v8((v8))--11--&gt;v3((v3))
-</code></pre><p><code>设n个点，m条边</code></p>
+<pre class="mermaid">graph LR
+v1((v1))--4-->v2((v2))
+v1((v1))--9-->v6((v6))
+v3((v3))--19-->v2((v2))
+v3((v3))--22-->v1((v1))
+v4((v4))--17-->v3((v3))
+v5((v5))--29-->v8((v8))
+v6((v6))--12-->v1((v1))
+v6((v6))--9-->v5((v5))
+v6((v6))--4-->v7((v7))
+v7((v7))--25-->v4((v4))
+v8((v8))--7-->v7((v7))
+v8((v8))--11-->v3((v3))
+  </pre>
+<p><code>设n个点，m条边</code></p>
 <p>上图的数据（按照 起点-终点-权值）：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

@@ -33,7 +33,7 @@
 <p><a href="https://zhuanlan.zhihu.com/p/193140870">手把手教你用git上传项目到GitHub（图文并茂，这一篇就够了），相信你一定能成功！！ - 知乎 (zhihu.com)</a></p>
 <p>这篇文章虽是2020年的，但是步骤细致，跟着走下来不会有什么问题，有几个注意点如下：</p>
 <ol>
-<li>由于一些原因，GitHub创建仓库后的默认分支从原来的Master更名为Main，但是许多其他教程还是习惯上使用Master做默认分支，同时，Git的默认分支似乎并没有同时更新成为Main，所以我们在进行push/pull等命令的时候要注意当期的branch是否合适，<a href="#git%E7%9A%84%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86">这里介绍了如何在Git中增加/切换/删除/合并分支等操作</a></li>
+<li>由于一些原因，GitHub创建仓库后的默认分支从原来的Master更名为Main，但是许多其他教程还是习惯上使用Master做默认分支，同时，Git的默认分支似乎并没有同时更新成为Main，所以我们在进行push/pull等命令的时候要注意当期的branch是否合适，<a href="/posts/startsite/build_hugo/#git的分支管理">这里介绍了如何在Git中增加/切换/删除/合并分支等操作</a></li>
 <li>有一些Github界面有更新，与教程中不太一致，但是只是位置不太一样，找的时候按照图中的名字寻找就行。</li>
 </ol>
 <h3 id="git常用操作命令记录">Git常用操作命令记录</h3>

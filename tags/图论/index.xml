@@ -18,25 +18,26 @@
       <pubDate>Sat, 06 Jan 2024 14:15:17 +0800</pubDate>
       
       <guid>https://dodolalorc.cn/posts/knowledge/algorithm/graph_basic/</guid>
-      <description>1.1图的定义 上课讲过一大堆这里不再赘述，直接学习代码实现。 1.2图的存储 例图展示： graph LR v1((v1))--4--&amp;gt;v2((v2)) v1((v1))--9--&amp;gt;v6((v6)) v3((v3))--19--&amp;gt;v2((v2)) v3((v3))--22--&amp;gt;v1((v1)) v4((v4))--17--&amp;gt;v3((v3)) v5((v5))--29--&amp;gt;v8((v8)) v6((v6))--12--&amp;gt;v1((v1)) v6((v6))--9--&amp;gt;v5((v5)) v6((v6))--4--&amp;gt;v7((v7)) v7((v7))--25--&amp;gt;v4((v4)) v8((v8))--7--&amp;gt;v7((v7)) v8((v8))--11--&amp;gt;v3((v3)) 设n个点，m条边 上图的数据（</description>
+      <description>1.1图的定义 上课讲过一大堆这里不再赘述，直接学习代码实现。 1.2图的存储 例图展示： graph LR v1((v1))--4--&gt;v2((v2)) v1((v1))--9--&gt;v6((v6)) v3((v3))--19--&gt;v2((v2)) v3((v3))--22--&gt;v1((v1)) v4((v4))--17--&gt;v3((v3)) v5((v5))--29--&gt;v8((v8)) v6((v6))--12--&gt;v1((v1)) v6((v6))--9--&gt;v5((v5)) v6((v6))--4--&gt;v7((v7)) v7((v7))--25--&gt;v4((v4)) v8((v8))--7--&gt;v7((v7)) v8((v8))--11--&gt;v3((v3)) 设n个点，m条边 上图的数据（</description>
       <content:encoded><![CDATA[<h3 id="11图的定义">1.1图的定义</h3>
 <p>上课讲过一大堆这里不再赘述，直接学习代码实现。</p>
 <h3 id="12图的存储">1.2图的存储</h3>
 <p>例图展示：</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
-v1((v1))--4--&gt;v2((v2))
-v1((v1))--9--&gt;v6((v6))
-v3((v3))--19--&gt;v2((v2))
-v3((v3))--22--&gt;v1((v1))
-v4((v4))--17--&gt;v3((v3))
-v5((v5))--29--&gt;v8((v8))
-v6((v6))--12--&gt;v1((v1))
-v6((v6))--9--&gt;v5((v5))
-v6((v6))--4--&gt;v7((v7))
-v7((v7))--25--&gt;v4((v4))
-v8((v8))--7--&gt;v7((v7))
-v8((v8))--11--&gt;v3((v3))
-</code></pre><p><code>设n个点，m条边</code></p>
+<pre class="mermaid">graph LR
+v1((v1))--4-->v2((v2))
+v1((v1))--9-->v6((v6))
+v3((v3))--19-->v2((v2))
+v3((v3))--22-->v1((v1))
+v4((v4))--17-->v3((v3))
+v5((v5))--29-->v8((v8))
+v6((v6))--12-->v1((v1))
+v6((v6))--9-->v5((v5))
+v6((v6))--4-->v7((v7))
+v7((v7))--25-->v4((v4))
+v8((v8))--7-->v7((v7))
+v8((v8))--11-->v3((v3))
+  </pre>
+<p><code>设n个点，m条边</code></p>
 <p>上图的数据（按照 起点-终点-权值）：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1441,18 +1442,19 @@ v8((v8))--11--&gt;v3((v3))
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>前面的输入样例是个有向有环图，这里添加一组有向无环图的样例用于学习：</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
-v1((v1))--5--&gt;v2((v2))
-v1((v1))--6--&gt;v3((v3))
-v2((v2))--9--&gt;v4((v4))
-v3((v3))--10--&gt;v5((v5))
-v3((v3))--4--&gt;v6((v6))
-v4((v4))--12--&gt;v6((v6))
-v5((v5))--6--&gt;v7((v7))
-v6((v6))--9--&gt;v7((v7))
-v7((v7))--24--&gt;v8((v8))
-v6((v6))--3--&gt;v8((v8))
-</code></pre><div class="highlight"><div class="chroma">
+<pre class="mermaid">graph LR
+v1((v1))--5-->v2((v2))
+v1((v1))--6-->v3((v3))
+v2((v2))--9-->v4((v4))
+v3((v3))--10-->v5((v5))
+v3((v3))--4-->v6((v6))
+v4((v4))--12-->v6((v6))
+v5((v5))--6-->v7((v7))
+v6((v6))--9-->v7((v7))
+v7((v7))--24-->v8((v8))
+v6((v6))--3-->v8((v8))
+  </pre>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1700,17 +1702,18 @@ v6((v6))--3--&gt;v8((v8))
 <p>初始化：<code>dist[1]=0, dist[v]=distance[1][v], 其他的置INF</code>。</p>
 <p>在Bellman-Ford算法中，我们假设不存在<strong>负权环</strong>（有负权环我们就会发现每绕一次dist都在变小，而我们取<code>min（dist[v],weight(p-&gt;v)+dist[v]）</code>肯定会把路径上的这个负权环走超过n遍），那么从v~1~到任何点的路径上点的个数都不会大于总点数n，所以Bellman-Ford算法就直接暴力搜n次来找最短路,到这里我们先代码实现一下这样的思路：</p>
 <p>给出一个图例like this：</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
-v1((v1))-.4.-&gt;v2((v2))
-v1((v1))-.3.-&gt;v3((v3))
-v1((v1))-.8.-&gt;v4((v4))
-v2((v2))-.2.-&gt;v6((v6))
-v7((v7))-.5.-&gt;v6((v6))
-v7((v7))-.1.-&gt;v4((v4))
-v3((v3))-.1.-&gt;v7((v7))
-v4((v4))-.5.-&gt;v3((v3))
-v4((v4))-.5.-&gt;v5((v5))
-</code></pre><p>样例：</p>
+<pre class="mermaid">graph LR
+v1((v1))-.4.->v2((v2))
+v1((v1))-.3.->v3((v3))
+v1((v1))-.8.->v4((v4))
+v2((v2))-.2.->v6((v6))
+v7((v7))-.5.->v6((v6))
+v7((v7))-.1.->v4((v4))
+v3((v3))-.1.->v7((v7))
+v4((v4))-.5.->v3((v3))
+v4((v4))-.5.->v5((v5))
+  </pre>
+<p>样例：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1889,18 +1892,19 @@ v4((v4))-.5.-&gt;v5((v5))
 </span></span><span class="line"><span class="cl">7 4 1
 </span></span></code></pre></td></tr></table>
 </div>
-</div><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
-v1((v1))-.4.-&gt;v2((v2))
-v1((v1))-.3.-&gt;v3((v3))
-v1((v1))-.8.-&gt;v4((v4))
-v2((v2))-.2.-&gt;v6((v6))
-v7((v7))-.5.-&gt;v6((v6))
-v7((v7))-.1.-&gt;v4((v4))
-v3((v3))-.1.-&gt;v7((v7))
-v4((v4))-.5.-&gt;v3((v3))
-v4((v4))-.5.-&gt;v5((v5))
-v7((v7))-. -9 .-&gt;v7((v7))
-</code></pre><div class="highlight"><div class="chroma">
+</div><pre class="mermaid">graph LR
+v1((v1))-.4.->v2((v2))
+v1((v1))-.3.->v3((v3))
+v1((v1))-.8.->v4((v4))
+v2((v2))-.2.->v6((v6))
+v7((v7))-.5.->v6((v6))
+v7((v7))-.1.->v4((v4))
+v3((v3))-.1.->v7((v7))
+v4((v4))-.5.->v3((v3))
+v4((v4))-.5.->v5((v5))
+v7((v7))-. -9 .->v7((v7))
+  </pre>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2

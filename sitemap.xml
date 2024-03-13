@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dodolalorc.cn/</loc>
+    <lastmod>2024-03-13T12:26:38+08:00</lastmod>
+  </url><url>
+    <loc>https://dodolalorc.cn/tags/hugo/</loc>
+    <lastmod>2024-03-10T21:29:25+08:00</lastmod>
+  </url><url>
+    <loc>https://dodolalorc.cn/tags/mermaid/</loc>
+    <lastmod>2024-03-10T21:29:25+08:00</lastmod>
+  </url><url>
+    <loc>https://dodolalorc.cn/tags/</loc>
+    <lastmod>2024-03-12T18:28:00+08:00</lastmod>
+  </url><url>
+    <loc>https://dodolalorc.cn/posts/startsite/mermaid_js_2/</loc>
+    <lastmod>2024-03-10T21:29:25+08:00</lastmod>
+  </url><url>
     <loc>https://dodolalorc.cn/tags/css/</loc>
     <lastmod>2024-03-10T17:14:08+08:00</lastmod>
   </url><url>
-    <loc>https://dodolalorc.cn/</loc>
-    <lastmod>2024-03-10T17:14:08+08:00</lastmod>
-  </url><url>
     <loc>https://dodolalorc.cn/tags/javascript/</loc>
-    <lastmod>2024-03-10T17:14:08+08:00</lastmod>
-  </url><url>
-    <loc>https://dodolalorc.cn/tags/</loc>
     <lastmod>2024-03-10T17:14:08+08:00</lastmod>
   </url><url>
     <loc>https://dodolalorc.cn/tags/vite/</loc>
@@ -29,13 +38,19 @@
     <loc>https://dodolalorc.cn/tags/%E7%BB%84%E4%BB%B6/</loc>
     <lastmod>2024-03-10T17:14:08+08:00</lastmod>
   </url><url>
+    <loc>https://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2024-03-12T18:28:00+08:00</lastmod>
+  </url><url>
+    <loc>https://dodolalorc.cn/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</loc>
+    <lastmod>2024-03-12T18:28:00+08:00</lastmod>
+  </url><url>
+    <loc>https://dodolalorc.cn/posts/knowledge/algorithm/geometry/</loc>
+    <lastmod>2024-03-12T18:28:00+08:00</lastmod>
+  </url><url>
     <loc>https://dodolalorc.cn/posts/knowledge/algorithm/lineardp/</loc>
     <lastmod>2024-03-09T21:47:13+08:00</lastmod>
   </url><url>
     <loc>https://dodolalorc.cn/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2024-03-09T21:47:13+08:00</lastmod>
-  </url><url>
-    <loc>https://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-03-09T21:47:13+08:00</lastmod>
   </url><url>
     <loc>https://dodolalorc.cn/tags/cf/</loc>
@@ -99,9 +114,6 @@
     <lastmod>2024-01-07T22:10:05+08:00</lastmod>
   </url><url>
     <loc>https://dodolalorc.cn/posts/startsite/mermaid_js/</loc>
-    <lastmod>2023-12-23T20:00:25+08:00</lastmod>
-  </url><url>
-    <loc>https://dodolalorc.cn/tags/hugo/</loc>
     <lastmod>2023-12-23T20:00:25+08:00</lastmod>
   </url><url>
     <loc>https://dodolalorc.cn/tags/markdown/</loc>

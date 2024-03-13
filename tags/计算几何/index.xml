@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>计算几何 on DODOLA&#39;s WareHouse</title>
+    <link>https://dodolalorc.cn/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</link>
+    <description>Recent content in 计算几何 on DODOLA&#39;s WareHouse</description>
+    <image>
+      <title>DODOLA&#39;s WareHouse</title>
+      <url>https://dodolalorc.cn/papermod-cover.png</url>
+      <link>https://dodolalorc.cn/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 09 Mar 2024 21:54:39 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算几何模板||正在编辑喵</title>
+      <link>https://dodolalorc.cn/posts/knowledge/algorithm/geometry/</link>
+      <pubDate>Sat, 09 Mar 2024 21:54:39 +0800</pubDate>
+      
+      <guid>https://dodolalorc.cn/posts/knowledge/algorithm/geometry/</guid>
+      <description>Overview 基础 凸包 凸包上二分 闵可夫斯基之和 半平面交 简单多边形 三分 前置知识 几何基础 平面直角坐标系 极坐标与极坐标系 向量（向量积） 二维计算几何基础 图形的表</description>
+      <content:encoded><![CDATA[<h1 id="overview">Overview</h1>
+<ul>
+<li>基础</li>
+<li>凸包</li>
+<li>凸包上二分</li>
+<li>闵可夫斯基之和</li>
+<li>半平面交</li>
+<li>简单多边形</li>
+<li>三分</li>
+</ul>
+<h1 id="前置知识">前置知识</h1>
+<ul>
+<li>几何基础</li>
+<li>平面直角坐标系</li>
+<li>极坐标与极坐标系</li>
+<li>向量（向量积）</li>
+</ul>
+<h1 id="二维计算几何基础">二维计算几何基础</h1>
+<h2 id="图形的表示">图形的表示</h2>
+<h3 id="点与线的表示">点与线的表示</h3>
+<p>例图：</p>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312195935541.png" alt="image-20240312195935541"  />
+</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">double</span> <span class="n">ld</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">ld</span><span class="p">,</span> <span class="n">ld</span><span class="o">&gt;</span> <span class="n">pld</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span> <span class="n">ll</span><span class="o">&gt;</span> <span class="n">pll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">point</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ld</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">point</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>    <span class="c1">// 加
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="p">{</span> <span class="n">x</span> <span class="o">+</span> <span class="n">p</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">p</span><span class="p">.</span><span class="n">y</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">point</span> <span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>    <span class="c1">// 减
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="p">{</span> <span class="n">x</span> <span class="o">-</span> <span class="n">p</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="n">p</span><span class="p">.</span><span class="n">y</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">point</span> <span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="n">ld</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>    <span class="c1">// 数乘
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="p">{</span> <span class="n">x</span> <span class="o">*</span> <span class="n">p</span><span class="p">,</span> <span class="n">y</span> <span class="o">*</span> <span class="n">p</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">point</span> <span class="k">operator</span><span class="o">/</span><span class="p">(</span><span class="k">const</span> <span class="n">ld</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>    <span class="c1">// 除
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="p">{</span> <span class="n">x</span> <span class="o">/</span> <span class="n">p</span><span class="p">,</span> <span class="n">y</span> <span class="o">/</span> <span class="n">p</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">line</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">point</span> <span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">point</span> <span class="nf">A</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">B</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">delta</span> <span class="o">=</span> <span class="n">B</span> <span class="o">-</span> <span class="n">A</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">line</span> <span class="nf">l</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="距离与旋转">距离与旋转</h3>
+<p>例图：</p>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312195958430.png" alt="image-20240312195958430"  />
+</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ld</span> <span class="nf">sqr</span><span class="p">(</span><span class="n">ld</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">point</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">point</span> <span class="n">rotate</span><span class="p">(</span><span class="n">ld</span> <span class="n">t</span><span class="p">)</span><span class="k">const</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">{</span> <span class="n">x</span> <span class="o">*</span> <span class="nf">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">x</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">point</span> <span class="nf">rot90</span><span class="p">()</span><span class="k">const</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">{</span> <span class="o">-</span><span class="n">y</span><span class="p">,</span><span class="n">x</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">point</span> <span class="nf">unit</span><span class="p">()</span><span class="k">const</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">*</span><span class="k">this</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">sqr</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">sqr</span><span class="p">(</span><span class="n">y</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ld</span> <span class="nf">dis</span><span class="p">(</span><span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">sqr</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">sqr</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">y</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">point</span> <span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="p">(</span><span class="n">B</span> <span class="o">-</span> <span class="n">A</span><span class="p">).</span><span class="n">rot90</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="向量旋转解析">向量旋转解析</h4>
+<p>设$\vec{a}=(x,y)$，倾角为$\theta$，长度为$l=\sqrt{x^2+y^2}$。则$x=l\cos{\theta},y=l\sin{\theta}$，顺时针旋转后得到$\vec{b}=(l\cos{\theta+\alpha},l\sin{\theta+\alpha})$​。</p>
+<img src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200008353.png" alt="image-20240312200008353" style="zoom:80%;" />
+<p>三角恒等变化：
+$$
+\vec{b}&amp;=&amp;(\cos{(\theta+\alpha)}l,\sin{(\theta+\alpha)}l)\\
+&amp;=&amp;(l(\cos{\theta}\cos{\alpha-sin{\theta}sin{\alpha}}),l(\sin{\theta}\cos{\alpha}+\sin{\alpha}\cos{\theta}))\\
+&amp;=&amp;(x \cos{\alpha-y \sin{\alpha},y \cos{\alpha}+x \sin{\alpha}})
+$$</p>
+<h3 id="点积与叉积">点积与叉积</h3>
+<p>例图：</p>
+<img src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200022870.png" alt="image-20240312200022870" style="zoom:50%;" />
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ld</span> <span class="nf">dot</span><span class="p">(</span><span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">b</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">a</span><span class="p">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">b</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">ld</span> <span class="nf">det</span><span class="p">(</span><span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">b</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">a</span><span class="p">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">b</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>点积：也叫数量积、内积。几何意义是一个向量在另一个向量上的投影再乘第二个向量的模长，是一个实数，有交换律。
+<ul>
+<li>若同向($\theta = 0°$)，为模长之积。</li>
+<li>若锐角($\theta \lt 90°$)，数量积为正</li>
+<li>若直角($\theta = 90°$)，数量积为0</li>
+<li>若钝角($\theta \gt 90°$)，数量积为负</li>
+<li>若反向($\theta = 180°$)，为模长之积的相反数</li>
+</ul>
+</li>
+<li>叉积：也叫外积，几何意义是两向量围成的平面四边形的面积。是一个向量，其方向$\vec{a}\times \vec{b}$：用右手从$\vec{a}$沿着不大于平角的方向向$\vec{b}$​旋转，拇指方向是外积的方向。没有交换律。
+<ul>
+<li>若平行，外积为$\vec{0}$</li>
+<li>共起点后，对于$\vec{a}\times \vec{b}$，若$\vec{a}$在$\vec{b}$的右侧，外积为正，否则外积为负</li>
+</ul>
+</li>
+</ul>
+<p>由向量外积可以<strong>判断两向量的旋转关系</strong>、方便求出<strong>点到直线的距离</strong>。适用于凸包和旋转卡壳。</p>
+<p>观察两个式子：
+$$
+dot=|A||B|\cosθ（投影）\\
+det=|A||B|\sinθ（面积）
+$$
+可以发现点积与叉积的正负由角度决定，故根据点积和叉积的正负，可以判断向量夹角的象限。</p>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200034965.png" alt="image-20240312200034965"  />
+</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">ld</span> <span class="n">eps</span> <span class="o">=</span> <span class="mf">1e-8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">sgn</span><span class="p">(</span><span class="n">ld</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">eps</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">turn_left</span><span class="p">(</span><span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">,</span> <span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">sgn</span><span class="p">(</span><span class="n">det</span><span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">,</span> <span class="n">c</span> <span class="o">-</span> <span class="n">a</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">same_dir</span><span class="p">(</span><span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">sgn</span><span class="p">(</span><span class="n">det</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">a</span><span class="p">.</span><span class="n">s</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&amp;&amp;</span> <span class="n">sgn</span><span class="p">(</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">a</span><span class="p">.</span><span class="n">s</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="判等判交求交">判等判交求交</h2>
+<h3 id="浮点数等于零">浮点数等于零</h3>
+<p>注意浮点数的精度误差，一般用<code>sgn()</code>来实现相等判断</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">ld</span> <span class="n">eps</span> <span class="o">=</span> <span class="mf">1e-8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">sgn</span><span class="p">(</span><span class="n">ld</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">fabs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">eps</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="点判等">点判等</h3>
+<p>也是一样要注意精度捏</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">friend</span> <span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nf">sgn</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> 
+</span></span><span class="line"><span class="cl">        <span class="o">&amp;&amp;</span> <span class="n">sgn</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="点在线段上">点在线段上</h3>
+<p>点在线段上有两个要求：</p>
+<ul>
+<li>点在直线上：叉积判断共线</li>
+<li>点在两端点上：点积判断方向</li>
+</ul>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200043778.png" alt="image-20240312200043778"  />
+</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">point_on_segment</span><span class="p">(</span><span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">l</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 叉乘为0，点积小于0;l:BC, a:A   BA?//AC
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="n">sgn</span><span class="p">(</span><span class="n">det</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">l</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">l</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">a</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&amp;&amp;</span> <span class="n">sgn</span><span class="p">(</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">l</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">l</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">a</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>叉乘为0则共线(0°或180°)</li>
+</ul>
+<p>注意：可能需要处理<strong>线段退化</strong>的情况：线段退化时直接调用会返回<code>true</code>。</p>
+<p><u>线段退化情况在调用之前自行判断。</u></p>
+<h3 id="线段判交">线段判交</h3>
+<p>线段有交的两种情况：</p>
+<ul>
+<li>一条线段的端点在另一条线段上。</li>
+<li>互相严格跨立。</li>
+</ul>
+<p>第一种使用<code>point_on_segment()</code>处理；</p>
+<p>第二种用叉积判断角度异号。</p>
+<img src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200051561.png" alt="image-20240312200051561" style="zoom:80%;" />
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// l:AB, c:C, d:D;ABxAC * ACxAD &lt; 0,表明旋转方向不同(两点在线段两侧)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="nf">two_side</span><span class="p">(</span><span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">c</span><span class="p">,</span> <span class="k">const</span> <span class="n">point</span><span class="o">&amp;</span> <span class="n">d</span><span class="p">,</span> <span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">l</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">sgn</span><span class="p">(</span><span class="n">det</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">l</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">c</span> <span class="o">-</span> <span class="n">l</span><span class="p">.</span><span class="n">s</span><span class="p">))</span> <span class="o">*</span> <span class="n">sgn</span><span class="p">(</span><span class="n">det</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">l</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">d</span> <span class="o">-</span> <span class="n">l</span><span class="p">.</span><span class="n">s</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">inter_judge</span><span class="p">(</span><span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">point_on_segment</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="o">||</span> <span class="n">point_on_segment</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">t</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="o">||</span> <span class="n">point_on_segment</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="o">||</span> <span class="n">point_on_segment</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">t</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">two_side</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="n">t</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&amp;&amp;</span> <span class="n">two_side</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">b</span><span class="p">.</span><span class="n">t</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

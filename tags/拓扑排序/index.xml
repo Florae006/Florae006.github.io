@@ -110,18 +110,19 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>前面的输入样例是个有向有环图，这里添加一组有向无环图的样例用于学习：</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
-v1((v1))--5--&gt;v2((v2))
-v1((v1))--6--&gt;v3((v3))
-v2((v2))--9--&gt;v4((v4))
-v3((v3))--10--&gt;v5((v5))
-v3((v3))--4--&gt;v6((v6))
-v4((v4))--12--&gt;v6((v6))
-v5((v5))--6--&gt;v7((v7))
-v6((v6))--9--&gt;v7((v7))
-v7((v7))--24--&gt;v8((v8))
-v6((v6))--3--&gt;v8((v8))
-</code></pre><div class="highlight"><div class="chroma">
+<pre class="mermaid">graph LR
+v1((v1))--5-->v2((v2))
+v1((v1))--6-->v3((v3))
+v2((v2))--9-->v4((v4))
+v3((v3))--10-->v5((v5))
+v3((v3))--4-->v6((v6))
+v4((v4))--12-->v6((v6))
+v5((v5))--6-->v7((v7))
+v6((v6))--9-->v7((v7))
+v7((v7))--24-->v8((v8))
+v6((v6))--3-->v8((v8))
+  </pre>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
