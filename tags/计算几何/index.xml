@@ -13,7 +13,7 @@
     <language>en</language>
     <lastBuildDate>Sat, 09 Mar 2024 21:54:39 +0800</lastBuildDate><atom:link href="https://dodolalorc.cn/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>计算几何模板||正在编辑喵</title>
+      <title>计算几何模板||正在编辑喵...</title>
       <link>https://dodolalorc.cn/posts/knowledge/algorithm/geometry/</link>
       <pubDate>Sat, 09 Mar 2024 21:54:39 +0800</pubDate>
       
@@ -155,9 +155,13 @@
 <img src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200008353.png" alt="image-20240312200008353" style="zoom:80%;" />
 <p>三角恒等变化：
 $$
-\vec{b}&amp;=&amp;(\cos{(\theta+\alpha)}l,\sin{(\theta+\alpha)}l)\\
-&amp;=&amp;(l(\cos{\theta}\cos{\alpha-sin{\theta}sin{\alpha}}),l(\sin{\theta}\cos{\alpha}+\sin{\alpha}\cos{\theta}))\\
-&amp;=&amp;(x \cos{\alpha-y \sin{\alpha},y \cos{\alpha}+x \sin{\alpha}})
+\vec{b}=(\cos{(\theta+\alpha)}l,\sin{(\theta+\alpha)}l)
+$$</p>
+<p>$$
+=(l(\cos{\theta}\cos{\alpha-sin{\theta}sin{\alpha}}),l(\sin{\theta}\cos{\alpha}+\sin{\alpha}\cos{\theta}))
+$$</p>
+<p>$$
+=(x \cos{\alpha-y \sin{\alpha},y \cos{\alpha}+x \sin{\alpha}})
 $$</p>
 <h3 id="点积与叉积">点积与叉积</h3>
 <p>例图：</p>
@@ -198,12 +202,16 @@ $$</p>
 </li>
 </ul>
 <p>由向量外积可以<strong>判断两向量的旋转关系</strong>、方便求出<strong>点到直线的距离</strong>。适用于凸包和旋转卡壳。</p>
-<p>观察两个式子：
-$$
-dot=|A||B|\cosθ（投影）\\
-det=|A||B|\sinθ（面积）
-$$
-可以发现点积与叉积的正负由角度决定，故根据点积和叉积的正负，可以判断向量夹角的象限。</p>
+<p>观察两个式子：</p>
+<ul>
+<li>
+<p>投影：$dot=|A||B|\cosθ$</p>
+</li>
+<li>
+<p>面积：$det=|A||B|\sinθ$</p>
+</li>
+</ul>
+<p>可以发现点积与叉积的正负由角度决定，故根据点积和叉积的正负，可以判断向量夹角的象限。</p>
 <p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200034965.png" alt="image-20240312200034965"  />
 </p>
 <div class="highlight"><div class="chroma">
@@ -312,7 +320,8 @@ $$
 </ul>
 <p>第一种使用<code>point_on_segment()</code>处理；</p>
 <p>第二种用叉积判断角度异号。</p>
-<img src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200051561.png" alt="image-20240312200051561" style="zoom:80%;" />
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200051561.png" alt="image-20240312200051561"  />
+</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -345,7 +354,113 @@ $$
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div>]]></content:encoded>
+</div><h3 id="直线求交">直线求交</h3>
+<p>求两条直线的交点</p>
+<p>直线和直线的位置关系有三种：</p>
+<ol>
+<li>平行</li>
+<li>有一个交点</li>
+<li>重合(共线)</li>
+</ol>
+<h4 id="判断位置关系">判断位置关系</h4>
+<p>思路：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">if(平行) {
+</span></span><span class="line"><span class="cl">    if(过同一个点) {
+</span></span><span class="line"><span class="cl">        return 两只直线重合;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">    else {
+</span></span><span class="line"><span class="cl">        return 两直线平行;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">else {
+</span></span><span class="line"><span class="cl">    return 两直线相交;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>判断平行(包括重合)：叉积是否为0</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">parallel_judge</span><span class="p">(</span><span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">sgn</span><span class="p">(</span><span class="n">det</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">a</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">b</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">s</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>判断共线：平行且交换端点后也平行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">collinear_judge</span><span class="p">(</span><span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">parallel_judge</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&amp;&amp;</span> <span class="n">sgn</span><span class="p">(</span><span class="n">det</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">a</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">b</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">a</span><span class="p">.</span><span class="n">s</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="两直线相交求交点">两直线相交求交点</h4>
+<p>使用面积计算等高三角形底边的比例求交点。</p>
+<p>注意：这里使用了除法，除法会导致精度严重下降(通常epsilon就是为了克服除法的误差而引入的)</p>
+<p><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240313145344069.png" alt="image-20240313145344069"  />
+</p>
+<p>这里$△ABC$与$△ABD$共底，面积之比（叉积之比）即为CK与KD的长度之比。则：</p>
+<p>对$K(k_x,k_y),C(c_x,c_y),D(d_x,d_y)$，有：
+$$
+CK=\frac{u}{u+v}CD
+$$
+so：K是CD的一个定比分点。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">point</span> <span class="nf">line_intersect</span><span class="p">(</span><span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">line</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ld</span> <span class="n">u</span> <span class="o">=</span> <span class="n">det</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">a</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">b</span><span class="p">.</span><span class="n">s</span> <span class="o">-</span> <span class="n">a</span><span class="p">.</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ld</span> <span class="n">v</span> <span class="o">=</span> <span class="n">det</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">a</span><span class="p">.</span><span class="n">s</span><span class="p">,</span> <span class="n">b</span><span class="p">.</span><span class="n">t</span> <span class="o">-</span> <span class="n">a</span><span class="p">.</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">s</span> <span class="o">*</span> <span class="n">v</span> <span class="o">+</span> <span class="n">b</span><span class="p">.</span><span class="n">t</span> <span class="o">*</span> <span class="n">u</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">v</span> <span class="o">+</span> <span class="n">u</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="射线求交留思考">射线求交（留思考</h3>
+<p>两条射线之间的位置关系：</p>
+<ol>
+<li>平行（不重合）</li>
+<li>共线同向（部分重合或完全重合）</li>
+<li>共线反向且不重合</li>
+<li>共线反向且部分重合</li>
+<li>相交</li>
+</ol>
+<h4 id="求交点">求交点</h4>
+<p>两条射线如果有相交交点的话（情况5），这个交点一定是两条射线所在直线的交点，用前文的方法求即可。</p>
+<h4 id="判断相交">判断相交</h4>
+<p>对于射线来说，若有交点，则交点一定在两条射线所在直线上，射线可以看作其所在直线的一部分，那么只要判断这个交点是否同时在两条射线的延长线方向即可。</p>
+]]></content:encoded>
     </item>
     
   </channel>

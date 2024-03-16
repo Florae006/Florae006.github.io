@@ -2,7 +2,12 @@
 
 
 ## 2024
-- 03-09 [计算几何模板||正在编辑喵](content/posts\knowledge\algorithm\geometry.md)
+- 03-13 [线段树讲义||寒假](content/posts\knowledge\algorithm\segtreelecnote.md)
+- 03-13 [Codeforces Round 930(div2)](content/posts\knowledge\algorithm\cfround930div2.md)
+- 03-13 [Codeforces Round 931(div2)](content/posts\knowledge\algorithm\cfround931div2.md)
+- 03-13 [Codeforces Round 932(div2)](content/posts\knowledge\algorithm\cfround932div2.md)
+- 03-13 [Codeforces Round 933(div3)](content/posts\knowledge\algorithm\cfround933div3.md)
+- 03-09 [计算几何模板||正在编辑喵...](content/posts\knowledge\algorithm\geometry.md)
 - 03-09 [刷题记录||线性动态规划](content/posts\knowledge\algorithm\lineardp.md)
 - 02-29 [Educational Codeforces Round 162(div2)](content/posts\knowledge\algorithm\cfedu162div2.md)
 - 02-29 [Codeforces Round 929(div3)](content/posts\knowledge\algorithm\cfround929div3.md)
