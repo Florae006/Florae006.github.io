@@ -103,7 +103,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm i @vitejs/plugin-basic-ssl -D
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm i @vitejs/plugin-basic-ssl -D
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>或者这个：</p>
