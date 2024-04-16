@@ -2017,8 +2017,8 @@ v7((v7))-. -9 .->v7((v7))
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>SFPA算法的时间复杂度并不稳定，可以预想，在极端的情况下，SFPA算法的复杂度可以和Bellman-Ford算法一样是<code>O(nm)</code>（不过随机数据模拟的算法复杂度大概是<code>O(m + nlogn)</code>）</p>
-<p>SFPA算法也可以判断负权环的存在：若一个点入队次数超过n次，接下来无论怎么更新队列都不会为空，可以据此判断是否有负权环。</p>
+</div><p>SPFA算法的时间复杂度并不稳定，可以预想，在极端的情况下，SPFA算法的复杂度可以和Bellman-Ford算法一样是<code>O(nm)</code>（不过随机数据模拟的算法复杂度大概是<code>O(m + nlogn)</code>）</p>
+<p>SPFA算法也可以判断负权环的存在：若一个点入队次数超过n次，接下来无论怎么更新队列都不会为空，可以据此判断是否有负权环。</p>
 <p><del>emmm优化了一点的BellmanFord算法？(思考)</del></p>
 <p>接下来介绍复杂度稳定的贪心算法：==Dijstra算法==</p>
 <h3 id="dijstra算法">☆☆☆Dijstra算法</h3>
@@ -2388,7 +2388,7 @@ v7((v7))-. -9 .->v7((v7))
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="cp">#define INF 2147483647
+</span></span><span class="line"><span class="cl"><span class="cp">#define INF 0x3f3f3f3f
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">EdgeNode</span> <span class="p">{</span>
@@ -2403,7 +2403,7 @@ v7((v7))-. -9 .->v7((v7))
 </span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="n">dist</span><span class="p">[</span><span class="n">maxm</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="n">ll</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">inqueue</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">SFPA</span><span class="p">(</span><span class="kt">int</span> <span class="n">vn</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">SPFA</span><span class="p">(</span><span class="kt">int</span> <span class="n">vn</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="n">fill</span><span class="p">(</span><span class="n">dist</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dist</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">INF</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">dist</span><span class="p">[</span><span class="n">vn</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -2448,7 +2448,7 @@ v7((v7))-. -9 .->v7((v7))
 </span></span><span class="line"><span class="cl">		<span class="n">head</span><span class="p">[</span><span class="n">fi</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="n">SFPA</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">SPFA</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
@@ -2457,7 +2457,7 @@ v7((v7))-. -9 .->v7((v7))
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>这个&hellip;没有卡SFPA。看另一个卡SFPA的题：</p>
+</div><p>这个&hellip;没有卡SPFA。看另一个卡SPFA的题：</p>
 <blockquote>
 <p>P4779【模板】单源最短路径（标准版）</p>
 <p>==题目背景==</p>
@@ -2595,7 +2595,7 @@ v7((v7))-. -9 .->v7((v7))
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="cp">#define INF 2147483647
+</span></span><span class="line"><span class="cl"><span class="cp">#define INF 0x3f3f3f3f
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">maxn</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">maxm</span> <span class="o">=</span> <span class="mf">1e7</span> <span class="o">+</span> <span class="mi">50</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
