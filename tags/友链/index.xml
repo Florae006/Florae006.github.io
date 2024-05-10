@@ -42,6 +42,50 @@
 </script>
  -->
 <h2 id="友人">友人</h2>
+<p><a target="_blank" href=https://topdeoo.github.io/ title=思想犯 class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=https://topdeoo.github.io/img/avatar_hu11d5ca57a8818146df3410060fecfba1_570107_300x0_resize_box_3.png />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">思想犯</div>
+      <div class="friend-info">一个活的相对失败的 CSer</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+
+<a target="_blank" href=https://www.windlinxy.top/ title=Windlinxy class="friend-url">
+  <div class="friend-div">
+    <div class="friend-div-left">
+      <img class="myfriend" src=https://www.windlinxy.top/images/windlinxy.jpg />
+    </div>
+    <div class="friend-div-right">
+      <div class="friend-name">Windlinxy</div>
+      <div class="friend-info">测试岗牛马的失败生活</div>
+    </div>
+  </div>
+</a>
+
+<script>
+  window.onload=function () {
+    const randomHex = () => `rgba(${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, ${Math.round(Math.random()*255)}, 0.5)`;
+    var friendArr=document.getElementsByClassName("friend-div"),temp=[];
+    for(var i=0;i<friendArr.length;i++){
+        friendArr[i].style.background=randomHex();
+    }
+  }
+</script>
+</p>
 <p><a target="_blank" href=https://florae006.github.io/ title=DODOLA-github.io class="friend-url">
   <div class="friend-div">
     <div class="friend-div-left">
