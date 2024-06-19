@@ -7,13 +7,13 @@
 <meta name="robots" content="index, follow">
 
 
-<link rel="icon" href="/img/icons/paopao.ico" type="image/x-ico">
+<link rel="icon" href="../../../img/icons/paopao.ico" type="image/x-ico">
 <title>Twikoo_with_imgs | DODOLA&#39;s WareHouse</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="Twikoo">
 <meta name="description" content="一篇私有配置图床，给twikoo评论插件添加图片功能的文章。 背景 背景：最近回想起来本站的twikoo评论尚未配置过图床，所以此前评论区不能上">
 <meta name="author" content="DODOLA">
 <link rel="canonical" href="https://dodolalorc.cn/posts/startsite/twikoo_with_imgs/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.86f39b1d27a9de218f44a9e2230cf85f209e827cd938a551398d7a624310a57b.css" integrity="" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="../../../assets/css/stylesheet.86f39b1d27a9de218f44a9e2230cf85f209e827cd938a551398d7a624310a57b.css" integrity="" rel="preload stylesheet" as="style">
 
 
 
@@ -76,8 +76,8 @@
 }
 </style>
 <canvas class="fireworks"> </canvas>
-<script src="/js/anime.min.js" ></script>
-<script src="/js/fireworks.js" ></script>
+<script src="../../../js/anime.min.js" ></script>
+<script src="../../../js/fireworks.js" ></script>
 
 
 
@@ -110,7 +110,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dodolalorc.cn/posts/startsite/twikoo_with_imgs/" /><meta property="og:image" content="https://dodolalorc.cn/papermod-cover.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-05-29T15:24:24+08:00" />
-<meta property="article:modified_time" content="2024-06-02T21:29:57+08:00" />
+<meta property="article:modified_time" content="2024-06-19T12:06:29+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://dodolalorc.cn/papermod-cover.png"/>
@@ -153,13 +153,13 @@
   "name": "Twikoo_with_imgs",
   "description": "一篇私有配置图床，给twikoo评论插件添加图片功能的文章。 背景 背景：最近回想起来本站的twikoo评论尚未配置过图床，所以此前评论区不能上",
   "keywords": [
-    
+    "Twikoo"
   ],
   "articleBody": " 一篇私有配置图床，给twikoo评论插件添加图片功能的文章。\n背景 背景：最近回想起来本站的twikoo评论尚未配置过图床，所以此前评论区不能上传图片，这篇就记录一下twikoo官方推荐的lsky-pro私有部署图床。\n选用的图床是兰空图床👉lsky-org/lsky-pro: ☁️兰空图床(Lsky Pro) - Your photo album on the cloud. (github.com)\n文档：Lsky Pro\n服务器环境：\n宝塔面板 8.0.6 PHP 8.0.26 MySQL 5.7.43 Nginx 1.22.1 要注意版本哦(\n添加站点 进入宝塔后，在左侧网站导航页内点击添加站点，新建一个网站，配置如图：\n配置站点 在Releases · lsky-org/lsky-pro (github.com)选择Assets中的第一个.zip下载下来。定位到上述创建的站点的根目录(/www/wwwroot/img.dodolalorc.cn)下，将解压后的文件放在该目录下。\n将程序所在目录的所有文件夹、子文件夹、文件的权限，用户组和所有者改为 www，权限改为 0755\n回到网站导航页，点击刚刚创建的站点，进行如下修改：\n网站目录下，将网站目录中的路径后添加/public，并保存\nNginx需要设置伪静态，点击伪静态，添加如下代码并保存：\n1 2 3 location / { try_files $uri $uri/ /index.php?$query_string; } 在SSL中，申请Let's Encrypt证书，申请成功并安装保存之后，在证书页开启强制HTTPS\nPHP扩展+禁用函数 根据文档所提示的安装要求，我们需要添加两个扩展：Fileinfo PHP 扩展和Imagick 拓展。\n在宝塔软件商店内搜索使用的PHP，点击管理，在安装扩展中选择下载fileinfo和imagemagick扩展。\n在禁用函数页面，删除exec、shell_exec、readlink、symlink、putenv、getenv、chmod、chown、fileperms 函数。\n若由于可用内存小于1G，没有安装上fileinfo，可以在软件商店搜索找到Linux工具箱，在工具箱中的Swap/虚拟内存中添加Swap，设置为1024MB并确定，重试即可。\n安装程序 在完成上述内容后，访问站点，显示符合要求之后，点击下一步，填写配置后进行安装。\n获取token 在站点的仪表盘页，点击接口，复制接口URL。\n在这个网站Getman.cn，按照这个格式填写：\n1 2 3 4 { \"email\": \"管理员邮箱\", \"password\":\"管理员密码\" } 配置Twikoo 获取到token后，在twikoo管理页，IMAGE_CDN 配置图床首页 URL 地址（注意不要加尾随斜杠），IMAGE_CDN_TOKEN填入刚刚获取的token。\n保存后，即可上传图片。\n",
   "wordCount" : "1052",
   "inLanguage": "en",
   "datePublished": "2024-05-29T15:24:24+08:00",
-  "dateModified": "2024-06-02T21:29:57.9658557+08:00",
+  "dateModified": "2024-06-19T12:06:29.5541645+08:00",
   "author":{
     "@type": "Person",
     "name": "DODOLA"
@@ -277,7 +277,7 @@
       Twikoo_with_imgs
     </h1>
     <div class="post-meta">
-<span title='2024-05-29 15:24:24 +0800 CST'>2024-05-29</span>&nbsp;·&nbsp;<span title='2024-06-02 21:29:57.9658557 +0800 CST'>(最近更新：2024-06-02)</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;1052 words&nbsp;·&nbsp;DODOLA
+<span title='2024-05-29 15:24:24 +0800 CST'>2024-05-29</span>&nbsp;·&nbsp;<span title='2024-06-19 12:06:29.5541645 +0800 CST'>(最近更新：2024-06-19)</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;1052 words&nbsp;·&nbsp;DODOLA
 
 </div>
     
@@ -293,7 +293,7 @@
   </header> 
 
   
-      <p>  最后更新于 2024 年 6 月 2 日</p>
+      <p>  最后更新于 2024 年 6 月 19 日</p>
   
   <div class="post-content"><blockquote>
 <p>一篇私有配置图床，给twikoo评论插件添加图片功能的文章。</p>
@@ -466,6 +466,7 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://dodolalorc.cn/tags/twikoo/">Twikoo</a></li>
     </ul>
 <nav class="paginav">
   <a class="next" href="https://dodolalorc.cn/posts/knowledge/front_end/vue_svgicon/">
@@ -478,7 +479,7 @@
 
 <div class="share-buttons">
     <a target="_blank" rel="noopener noreferrer" aria-label="share Twikoo_with_imgs on x"
-        href="https://x.com/intent/tweet/?text=Twikoo_with_imgs&amp;url=https%3a%2f%2fdodolalorc.cn%2fposts%2fstartsite%2ftwikoo_with_imgs%2f&amp;hashtags=">
+        href="https://x.com/intent/tweet/?text=Twikoo_with_imgs&amp;url=https%3a%2f%2fdodolalorc.cn%2fposts%2fstartsite%2ftwikoo_with_imgs%2f&amp;hashtags=Twikoo">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
             <path
                 d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z"/>
@@ -574,7 +575,7 @@
     本站访客数<span id="busuanzi_value_site_uv"></span>人次
   </span>
 </div><p class="beian">
-    <img class="beian-icon" src="/img/icons/govbeian.png">
+    <img class="beian-icon" src="../../../img/icons/govbeian.png">
     <a class="gov" href="https://beian.mps.gov.cn/#/query/webSearch?code=33010902003733" rel="noreferrer"
         title="浙公网安备33010902003733" target="_blank">浙公网安备33010902003733</a>
     <a class="icp" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" title="浙ICP备2023048052号-1">
@@ -582,7 +583,7 @@
     </a>
 </p>
 
-<script src="/js/pointerfollow.js"></script>
+<script src="../../../js/pointerfollow.js"></script>
 
 <script>
     let menu = document.getElementById('menu')
