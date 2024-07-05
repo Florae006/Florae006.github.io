@@ -1,78 +1,78 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>所有文章 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <description>所有文章 | Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>24JilinCCPC</title>
-    <link>http://dodolalorc.cn/posts/24jilinccpc/</link>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>2024吉林省赛补题记录</title>
+    <link>http://localhost:1313/posts/24jilinccpc/</link>
     <pubDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/24jilinccpc/</guid>
-    <description><![CDATA[TODO]]></description>
+    </author><guid>http://localhost:1313/posts/24jilinccpc/</guid>
+    <description><![CDATA[记录]]></description>
 </item><item>
     <title>MutationObserver学习&#43;实践</title>
-    <link>http://dodolalorc.cn/posts/mutationobserver/</link>
+    <link>http://localhost:1313/posts/mutationobserver/</link>
     <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid>
+    </author><guid>http://localhost:1313/posts/mutationobserver/</guid>
     <description><![CDATA[一篇学习 MutationObserver 的文章 背景今天调整新主题的时候，在重新设计友链样式的时候想保留原本的随机背景颜色，之前数量少的时候似乎不太明显，现在本地测试发觉加]]></description>
 </item><item>
     <title>为twikoo添加图片功能</title>
-    <link>http://dodolalorc.cn/posts/twikoo_with_imgs/</link>
+    <link>http://localhost:1313/posts/twikoo_with_imgs/</link>
     <pubDate>Wed, 29 May 2024 15:24:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/twikoo_with_imgs/</guid>
+    </author><guid>http://localhost:1313/posts/twikoo_with_imgs/</guid>
     <description><![CDATA[一篇私有配置图床，给twikoo评论插件添加图片功能的文章。 背景背景：最近回想起来本站的twikoo评论尚未配置过图床，所以此前评论区不能上]]></description>
 </item><item>
     <title>Vue3封装一个SVG组件</title>
-    <link>http://dodolalorc.cn/posts/vue_svgicon/</link>
+    <link>http://localhost:1313/posts/vue_svgicon/</link>
     <pubDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/vue_svgicon/</guid>
+    </author><guid>http://localhost:1313/posts/vue_svgicon/</guid>
     <description><![CDATA[Vue3+Vite+Svg以前使用Svg的时候会图简单直接将内容巨长的Svg代码粘贴在项目中，结果导致需要用Svg图标的部分代码巨长，今天写]]></description>
 </item><item>
     <title>线段树讲义||寒假</title>
-    <link>http://dodolalorc.cn/posts/segtreelecnote/</link>
+    <link>http://localhost:1313/posts/segtreelecnote/</link>
     <pubDate>Wed, 13 Mar 2024 13:29:07 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/segtreelecnote/</guid>
+    </author><guid>http://localhost:1313/posts/segtreelecnote/</guid>
     <description><![CDATA[线段树介绍 线段树是一棵二叉树，每个节点维护一个区间内$[l,r]$的信息 左子树区间维护$[l,\lfloor \frac{l+r}{2} \rfloor]$的信息，右子]]></description>
 </item><item>
     <title>Codeforces Round 930(div2)</title>
-    <link>http://dodolalorc.cn/posts/cfround930div2/</link>
+    <link>http://localhost:1313/posts/cfround930div2/</link>
     <pubDate>Wed, 13 Mar 2024 12:26:38 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/cfround930div2/</guid>
+    </author><guid>http://localhost:1313/posts/cfround930div2/</guid>
     <description><![CDATA[A-Shuffle Party 题意对一个数组，起初是$a_i=i$ 对操作swap(k)： 设$d$是不等于$k$本身的$k$的最大除数，然后交换元素$a_d$和$a_k]]></description>
 </item><item>
     <title>Codeforces Round 931(div2)</title>
-    <link>http://dodolalorc.cn/posts/cfround931div2/</link>
+    <link>http://localhost:1313/posts/cfround931div2/</link>
     <pubDate>Wed, 13 Mar 2024 12:26:22 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/cfround931div2/</guid>
+    </author><guid>http://localhost:1313/posts/cfround931div2/</guid>
     <description><![CDATA[A-Too Min Too Max 题意对一个数组，找到索引$(i,j,k,l)$使得$|a_i-a_j|+|a_j-a_k|+|a_k-a_l|+|a_l-a_i|$]]></description>
 </item><item>
     <title>Codeforces Round 932(div2)</title>
-    <link>http://dodolalorc.cn/posts/cfround932div2/</link>
+    <link>http://localhost:1313/posts/cfround932div2/</link>
     <pubDate>Wed, 13 Mar 2024 12:26:06 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/cfround932div2/</guid>
+    </author><guid>http://localhost:1313/posts/cfround932div2/</guid>
     <description><![CDATA[A-Entertainment in MAC 题意可以对一个字符串进行两种操作： 将字符串反转 将该字符串反转后接在原串的后面。 可以进行任意次上述操作，获得字典序最小的字符串。 数据范围]]></description>
 </item><item>
     <title>Codeforces Round 933(div3)</title>
-    <link>http://dodolalorc.cn/posts/cfround933div3/</link>
+    <link>http://localhost:1313/posts/cfround933div3/</link>
     <pubDate>Wed, 13 Mar 2024 12:25:46 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/cfround933div3/</guid>
+    </author><guid>http://localhost:1313/posts/cfround933div3/</guid>
     <description><![CDATA[A-Rudolf and the Ticket 题意左边口袋有一些面值为$b_1,b_2,b_3,&hellip;,b_n$的硬币，右边有一些面值为$c_1,c_2,c_3,&he]]></description>
 </item><item>
     <title>另一种为hugo渲染Mermaid绘图的方式</title>
-    <link>http://dodolalorc.cn/posts/mermaid_js_2/</link>
+    <link>http://localhost:1313/posts/mermaid_js_2/</link>
     <pubDate>Sun, 10 Mar 2024 21:29:25 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mermaid_js_2/</guid>
+    </author><guid>http://localhost:1313/posts/mermaid_js_2/</guid>
     <description><![CDATA[最近研究英文的官方文档发现了HUGO官方给渲染Mermaid提供了思路（!原来Hugo可以支持这种渲染），此处做笔记记录，算作是另一种方式。]]></description>
 </item></channel>
 </rss>

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Canva - 标签 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/tags/canva/</link>
+        <link>http://localhost:1313/tags/canva/</link>
         <description>Canva - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 18 Dec 2023 14:12:39 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/canva/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 18 Dec 2023 14:12:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/canva/" rel="self" type="application/rss+xml" /><item>
     <title>【网站美化】点击特效</title>
-    <link>http://dodolalorc.cn/posts/beautify_site_click/</link>
+    <link>http://localhost:1313/posts/beautify_site_click/</link>
     <pubDate>Mon, 18 Dec 2023 14:12:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/beautify_site_click/</guid>
+    </author><guid>http://localhost:1313/posts/beautify_site_click/</guid>
     <description><![CDATA[今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码 添加js文件这]]></description>
 </item></channel>
 </rss>
