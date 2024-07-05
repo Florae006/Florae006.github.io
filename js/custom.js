@@ -1,2 +1,2 @@
-import("./_extended/pointerfollow.js");
-import("./_extended/runtime.js");
+import("./extended/pointerfollow.js");
+import("./extended/runtime.js");
