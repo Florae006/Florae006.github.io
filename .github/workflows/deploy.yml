@@ -10,13 +10,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
+      - name: Checkout code
+        uses: actions/checkout@v4
+  
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        
       - name: Deploy to Staging server
         uses: easingthemes/ssh-deploy@main
         with:
