@@ -130,7 +130,62 @@
 <div class="search-dropdown mobile">
   <div id="search-dropdown-mobile"></div>
 </div><main class="main">
-      <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "false")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">哆哆啦のjQuery学习笔记（超细）（23.07.28）</h1><div class="post-meta">
+      <div class="container"><div class="toc" id="toc-auto">
+    <h2 class="toc-title">目录</h2>
+    <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-jquery对象">1. jQuery对象</a>
+      <ul>
+        <li><a href="#jquery使用">jQuery使用</a></li>
+        <li><a href="#dom对象和jquery包装集对象">Dom对象和jQuery包装集对象</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-jquery选择器">2. jQuery选择器</a>
+      <ul>
+        <li><a href="#21-基础选择器">2.1 基础选择器</a></li>
+        <li><a href="#22-层次选择器">2.2 层次选择器</a></li>
+        <li><a href="#23-表单选择器">2.3 表单选择器</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-jquery-dom操作">3. jQuery Dom操作</a>
+      <ul>
+        <li><a href="#31-操作元素的属性">3.1 操作元素的属性</a>
+          <ul>
+            <li><a href="#311-获取属性">3.1.1 获取属性</a></li>
+            <li><a href="#312-设置属性">3.1.2 设置属性</a></li>
+            <li><a href="#313-移除属性">3.1.3 移除属性</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-操作元素的样式">3.2 操作元素的样式</a></li>
+        <li><a href="#33-操作元素的内容">3.3 操作元素的内容</a></li>
+        <li><a href="#34-创建元素">3.4 创建元素</a></li>
+        <li><a href="#35-添加元素">3.5 添加元素</a></li>
+        <li><a href="#36-删除元素">3.6 删除元素</a></li>
+        <li><a href="#37-遍历元素">3.7 遍历元素</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-jquery事件">4. jQuery事件</a>
+      <ul>
+        <li><a href="#41-ready加载事件">4.1 ready加载事件</a></li>
+        <li><a href="#42-绑定事件">4.2 绑定事件</a>
+          <ul>
+            <li><a href="#421-简单的bind事件">4.2.1 简单的bind()事件</a></li>
+            <li><a href="#422-绑定多个事件">4.2.2 绑定多个事件</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#5-jquery-ajax">5. jQuery Ajax</a>
+      <ul>
+        <li><a href="#51-ajax">5.1 $.ajax()</a></li>
+        <li><a href="#52-get和post">5.2 $.get()和$.post()</a></li>
+        <li><a href="#53-getjson">5.3 $.getJSON()</a></li>
+      </ul>
+    </li>
+    <li><a href="#jquery自定义函数">jQuery自定义函数</a></li>
+  </ul>
+</nav></div>
+</div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">哆哆啦のjQuery学习笔记（超细）（23.07.28）</h1><div class="post-meta">
         <div class="post-meta-line">
             <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
             </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在前端搬砖的日子里</a></span></div>
@@ -156,7 +211,7 @@
 
 </div>
 
-    </div><div class="details toc" id="toc-static" kept="true">
+    </div><div class="details toc" id="toc-static" kept="">
         <div class="details-summary toc-title">
             <span>目录</span>
             <span><i class="details-icon fas fa-angle-right"></i></span>

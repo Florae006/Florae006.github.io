@@ -130,7 +130,60 @@
 <div class="search-dropdown mobile">
   <div id="search-dropdown-mobile"></div>
 </div><main class="main">
-      <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "false")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">一个Vue项目的基础模板||PC端&#43;移动端适配</h1><div class="post-meta">
+      <div class="container"><div class="toc" id="toc-auto">
+    <h2 class="toc-title">目录</h2>
+    <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#创建项目">创建项目</a>
+      <ul>
+        <li><a href="#规范目录">规范目录</a></li>
+      </ul>
+    </li>
+    <li><a href="#path模板代理">path模板+代理</a></li>
+    <li><a href="#集成工具">集成工具</a>
+      <ul>
+        <li><a href="#vue-router-4x">Vue Router 4.x</a></li>
+        <li><a href="#集成状态管理工具pinia">集成状态管理工具Pinia</a></li>
+      </ul>
+    </li>
+    <li><a href="#axios">Axios</a>
+      <ul>
+        <li><a href="#css预编译器-stylussassless">CSS预编译器 Stylus/Sass/Less</a></li>
+      </ul>
+    </li>
+    <li><a href="#自动引入插件">自动引入插件</a></li>
+    <li><a href="#移动端适配">移动端适配</a>
+      <ul>
+        <li><a href="#postcss-插件">postcss 插件</a></li>
+      </ul>
+    </li>
+    <li><a href="#桌面端适配">桌面端适配</a></li>
+    <li><a href="#组件库">组件库</a>
+      <ul>
+        <li><a href="#element-plus">Element Plus</a></li>
+        <li><a href="#varlet">varlet</a></li>
+        <li><a href="#arcodesign">Arco.design</a></li>
+        <li><a href="#naive-ui">Naive UI</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置文件示例">配置文件示例</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#tsconfigjson">tsconfig.json</a></li>
+            <li><a href="#tsconfignodejson">tsconfig.node.json</a></li>
+            <li><a href="#viteconfigts">vite.config.ts</a></li>
+            <li><a href="#postcssconfigts">postcss.config.ts</a></li>
+            <li><a href="#packagejson">package.json</a></li>
+            <li><a href="#vite-envdts">vite-env.d.ts</a></li>
+            <li><a href="#maints">main.ts</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">一个Vue项目的基础模板||PC端&#43;移动端适配</h1><div class="post-meta">
         <div class="post-meta-line">
             <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
             </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在前端搬砖的日子里</a></span></div>
@@ -156,7 +209,7 @@
 
 </div>
 
-    </div><div class="details toc" id="toc-static" kept="true">
+    </div><div class="details toc" id="toc-static" kept="">
         <div class="details-summary toc-title">
             <span>目录</span>
             <span><i class="details-icon fas fa-angle-right"></i></span>
