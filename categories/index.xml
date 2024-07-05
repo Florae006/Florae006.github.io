@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - 分类 - Doごみ箱🪄</title>
+        <link>http://dodolalorc.cn/categories/</link>
+        <description>Categories - 分类 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>在学算法的日子里</title>
+    <link>http://dodolalorc.cn/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link>
+    <pubDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>关于Hugo的一些设置</title>
+    <link>http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</link>
+    <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>在前端搬砖的日子里</title>
+    <link>http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link>
+    <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>在摸鱼的日子里</title>
+    <link>http://dodolalorc.cn/categories/%E5%9C%A8%E6%91%B8%E9%B1%BC%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link>
+    <pubDate>Wed, 06 Dec 2023 14:21:23 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/categories/%E5%9C%A8%E6%91%B8%E9%B1%BC%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

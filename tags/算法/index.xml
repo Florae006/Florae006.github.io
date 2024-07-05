@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>算法 - 标签 - Doごみ箱🪄</title>
+        <link>http://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</link>
+        <description>算法 - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>24JilinCCPC</title>
+    <link>http://dodolalorc.cn/posts/24jilinccpc/</link>
+    <pubDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/24jilinccpc/</guid>
+    <description><![CDATA[TODO]]></description>
+</item><item>
+    <title>线段树讲义||寒假</title>
+    <link>http://dodolalorc.cn/posts/segtreelecnote/</link>
+    <pubDate>Wed, 13 Mar 2024 13:29:07 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/segtreelecnote/</guid>
+    <description><![CDATA[线段树介绍 线段树是一棵二叉树，每个节点维护一个区间内$[l,r]$的信息 左子树区间维护$[l,\lfloor \frac{l+r}{2} \rfloor]$的信息，右子]]></description>
+</item><item>
+    <title>Codeforces Round 930(div2)</title>
+    <link>http://dodolalorc.cn/posts/cfround930div2/</link>
+    <pubDate>Wed, 13 Mar 2024 12:26:38 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/cfround930div2/</guid>
+    <description><![CDATA[A-Shuffle Party 题意对一个数组，起初是$a_i=i$ 对操作swap(k)： 设$d$是不等于$k$本身的$k$的最大除数，然后交换元素$a_d$和$a_k]]></description>
+</item><item>
+    <title>Codeforces Round 931(div2)</title>
+    <link>http://dodolalorc.cn/posts/cfround931div2/</link>
+    <pubDate>Wed, 13 Mar 2024 12:26:22 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/cfround931div2/</guid>
+    <description><![CDATA[A-Too Min Too Max 题意对一个数组，找到索引$(i,j,k,l)$使得$|a_i-a_j|+|a_j-a_k|+|a_k-a_l|+|a_l-a_i|$]]></description>
+</item><item>
+    <title>Codeforces Round 932(div2)</title>
+    <link>http://dodolalorc.cn/posts/cfround932div2/</link>
+    <pubDate>Wed, 13 Mar 2024 12:26:06 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/cfround932div2/</guid>
+    <description><![CDATA[A-Entertainment in MAC 题意可以对一个字符串进行两种操作： 将字符串反转 将该字符串反转后接在原串的后面。 可以进行任意次上述操作，获得字典序最小的字符串。 数据范围]]></description>
+</item><item>
+    <title>Codeforces Round 933(div3)</title>
+    <link>http://dodolalorc.cn/posts/cfround933div3/</link>
+    <pubDate>Wed, 13 Mar 2024 12:25:46 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/cfround933div3/</guid>
+    <description><![CDATA[A-Rudolf and the Ticket 题意左边口袋有一些面值为$b_1,b_2,b_3,&hellip;,b_n$的硬币，右边有一些面值为$c_1,c_2,c_3,&he]]></description>
+</item><item>
+    <title>计算几何模板||正在编辑喵...</title>
+    <link>http://dodolalorc.cn/posts/geometry/</link>
+    <pubDate>Sat, 09 Mar 2024 21:54:39 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/geometry/</guid>
+    <description><![CDATA[试着用计算机来解决几何问题吧(●&rsquo;◡&rsquo;●) 前置知识 几何基础 平面直角坐标系 极坐标与极坐标系 向量（向量积） 二维计算几何基]]></description>
+</item><item>
+    <title>刷题记录||线性动态规划</title>
+    <link>http://dodolalorc.cn/posts/lineardp/</link>
+    <pubDate>Sat, 09 Mar 2024 21:47:13 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/lineardp/</guid>
+    <description><![CDATA[👾线性动态规划线性动态规划，即具有线性阶段划分的动态规划。 💭[P1216]数字三角形 [USACO1.5] [IOI1994]数字三角形 Number Triangles 题目描述观察下面的数字]]></description>
+</item><item>
+    <title>Educational Codeforces Round 162(div2)</title>
+    <link>http://dodolalorc.cn/posts/cfedu162div2/</link>
+    <pubDate>Thu, 29 Feb 2024 14:57:07 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/cfedu162div2/</guid>
+    <description><![CDATA[A-Moving Chips 题意每个单元格为空闲或有一个芯片，芯片可以向左移动到最近的空闲处（如果存在空闲格）。 现在有一排单元格，求问进行多少次移动，才能使得所有芯]]></description>
+</item><item>
+    <title>Codeforces Round 929(div3)</title>
+    <link>http://dodolalorc.cn/posts/cfround929div3/</link>
+    <pubDate>Thu, 29 Feb 2024 14:56:16 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/cfround929div3/</guid>
+    <description><![CDATA[A-Turtle Puzzle: Rearrange and Negate 题意对一个数组执行两个操作： 对数组进行重新排序或保持元素顺序不变 选择连续的一段，对该段中的元素取相反数，也可以不选择任何一段，即保]]></description>
+</item></channel>
+</rss>

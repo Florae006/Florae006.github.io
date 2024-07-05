@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>CSS - 标签 - Doごみ箱🪄</title>
+        <link>http://dodolalorc.cn/tags/css/</link>
+        <description>CSS - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sun, 10 Mar 2024 17:14:08 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/css/" rel="self" type="application/rss+xml" /><item>
+    <title>一个Vue项目的基础模板||PC端&#43;移动端适配</title>
+    <link>http://dodolalorc.cn/posts/vuemod/</link>
+    <pubDate>Sun, 10 Mar 2024 17:14:08 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/vuemod/</guid>
+    <description><![CDATA[创建项目 1 2 3 4 npm create vite@latest dodola -- --template vue-ts cd dodola npm install npm run dev 转到根目录下后 规范目录 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 ├── dist/ └── src/ ├── api │ └─]]></description>
+</item><item>
+    <title>【网站美化】点击特效2</title>
+    <link>http://dodolalorc.cn/posts/beautify_site_clickfollow/</link>
+    <pubDate>Tue, 19 Dec 2023 20:57:26 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/beautify_site_clickfollow/</guid>
+    <description><![CDATA[增加了一个鼠标追尾的效果 QwQ 添加文件的方式参考上一篇~指路这篇 js文件：pointerfollow.js js 原文件来源：Canva&rsquo;]]></description>
+</item><item>
+    <title>【网站美化】标签美化</title>
+    <link>http://dodolalorc.cn/posts/beautify_site_tags/</link>
+    <pubDate>Wed, 13 Dec 2023 23:00:09 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/beautify_site_tags/</guid>
+    <description><![CDATA[简单设计assets/css/common/terms.css添加： 1 2 3 4 5 6 7 .terms-tags{ padding-left: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; } 添加权重在./layouts/_d]]></description>
+</item><item>
+    <title>第壹话|基本样式</title>
+    <link>http://dodolalorc.cn/posts/basic_setting/</link>
+    <pubDate>Thu, 30 Nov 2023 21:53:02 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/basic_setting/</guid>
+    <description><![CDATA[这部分是2023/11/30更新的一些基础样式设置，包括到设置友链 基础设置参考：Features · adityatelange/hugo-PaperMod Wiki (github.com) 我的初步设置一览： 1 2 3 4 5 6 7 8 9]]></description>
+</item></channel>
+</rss>

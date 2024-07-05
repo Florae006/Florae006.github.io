@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>最短路 - 标签 - Doごみ箱🪄</title>
+        <link>http://dodolalorc.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/</link>
+        <description>最短路 - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 23 Dec 2023 16:08:47 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>最短路问题（Dijkstra &#43; SPFA &#43; Floyd）</title>
+    <link>http://dodolalorc.cn/posts/shortest_path/</link>
+    <pubDate>Sat, 23 Dec 2023 16:08:47 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/shortest_path/</guid>
+    <description><![CDATA[思维先行我们要找某点到某点的最短路径(记为点u到点v)，这样的路径只能从两种路径中选择—— u和v之间有边连接时，存在边(u, v)，不存在的话]]></description>
+</item></channel>
+</rss>

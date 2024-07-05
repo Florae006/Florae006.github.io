@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有🌇生活 - Doごみ箱</title>
+        <link>http://localhost:1313/posts/life/</link>
+        <description>所有🌇生活 | Doごみ箱</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 29 Nov 2023 21:06:04 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/life/" rel="self" type="application/rss+xml" /></channel>
+</rss>

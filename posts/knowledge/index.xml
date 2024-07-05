@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有📔知识 - Doごみ箱</title>
+        <link>http://localhost:1313/posts/knowledge/</link>
+        <description>所有📔知识 | Doごみ箱</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Tue, 28 Nov 2023 19:11:55 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/knowledge/" rel="self" type="application/rss+xml" /><item>
+    <title>🧙其他笔记</title>
+    <link>http://localhost:1313/posts/knowledge/review_notes/</link>
+    <pubDate>Sat, 23 Dec 2023 16:23:30 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/knowledge/review_notes/</guid>
+    <description><![CDATA[大部分是ddl丢复习笔记的地方((&hellip;在学了在学了QwQ]]></description>
+</item><item>
+    <title>🛩️玩具</title>
+    <link>http://localhost:1313/posts/knowledge/toys/</link>
+    <pubDate>Wed, 06 Dec 2023 14:20:02 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/knowledge/toys/</guid>
+    <description><![CDATA[一些好玩的摸鱼🐟️🐟️]]></description>
+</item><item>
+    <title>🧸算法</title>
+    <link>http://localhost:1313/posts/knowledge/algorithm/</link>
+    <pubDate>Sat, 02 Dec 2023 16:45:27 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/knowledge/algorithm/</guid>
+    <description><![CDATA[🥗🥗蒟蒻acmer的摸鱼记录]]></description>
+</item><item>
+    <title>🪀前端</title>
+    <link>http://localhost:1313/posts/knowledge/front_end/</link>
+    <pubDate>Tue, 28 Nov 2023 19:11:55 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/knowledge/front_end/</guid>
+    <description><![CDATA[一片菜地，小前端的种菜记录🥬🥬]]></description>
+</item></channel>
+</rss>
