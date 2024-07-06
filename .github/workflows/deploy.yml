@@ -18,7 +18,8 @@ jobs:
       with:
         node-version: '20'
     - name: Install npm dependencies
-      run: npm install
+      run: npm update
+           npm install
     - name: Run build task
       run: npm run build --if-present
     - name: Deploy to Server
