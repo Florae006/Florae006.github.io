@@ -25,7 +25,7 @@ jobs:
     - name: ssh deploy
       uses: easingthemes/ssh-deploy@v5.0.3
       with:
-        SSH_PRIVATE_KEY: ${{ secrets.HUGO_DEPLOY_PRI }}
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         ARGS: "-rlgoDzvc -i"
         SOURCE: ""
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
