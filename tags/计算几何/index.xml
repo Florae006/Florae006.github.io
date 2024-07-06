@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>计算几何 - 标签 - Doごみ箱🪄</title>
-        <link>http://localhost:1313/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</link>
+        <link>http://dodolalorc.cn/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</link>
         <description>计算几何 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 09 Mar 2024 21:54:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 09 Mar 2024 21:54:39 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/" rel="self" type="application/rss+xml" /><item>
     <title>计算几何模板||正在编辑喵...</title>
-    <link>http://localhost:1313/posts/geometry/</link>
+    <link>http://dodolalorc.cn/posts/geometry/</link>
     <pubDate>Sat, 09 Mar 2024 21:54:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/geometry/</guid>
+    </author><guid>http://dodolalorc.cn/posts/geometry/</guid>
     <description><![CDATA[试着用计算机来解决几何问题吧(●&rsquo;◡&rsquo;●) 前置知识 几何基础 平面直角坐标系 极坐标与极坐标系 向量（向量积） 二维计算几何基]]></description>
 </item></channel>
 </rss>
