@@ -4,9 +4,23 @@
         <link>http://dodolalorc.cn/</link>
         <description>Doごみ箱2.1</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 05 Jul 2024 23:11:39 &#43;0800</lastBuildDate>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</lastBuildDate>
             <atom:link href="http://dodolalorc.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>购物车页面制作教程（包含分页设计）</title>
+    <link>http://dodolalorc.cn/posts/testcart/</link>
+    <pubDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/testcart/</guid>
+    <description><![CDATA[前言 这篇文章用于2024年蓝旭暑期项目前的培训作业教学，目的是从零开始构建一个购物车页面，以此来熟悉原生前端三件套。o((&gt;ω&lt;]]></description>
+</item><item>
+    <title>Github Action实践</title>
+    <link>http://dodolalorc.cn/posts/github_action/</link>
+    <pubDate>Fri, 05 Jul 2024 23:11:39 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/github_action/</guid>
+    <description><![CDATA[前言本篇记录利用github action实现自动化构建和部署的过程。 本站除了部署在github page上，还部署在本人的服务器上，懒惰的dd]]></description>
+</item><item>
     <title>2024吉林省赛补题记录</title>
     <link>http://dodolalorc.cn/posts/24jilinccpc/</link>
     <pubDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</pubDate><author>
@@ -62,19 +76,5 @@
         <name>DODOLA</name>
     </author><guid>http://dodolalorc.cn/posts/cfround932div2/</guid>
     <description><![CDATA[A-Entertainment in MAC 题意可以对一个字符串进行两种操作： 将字符串反转 将该字符串反转后接在原串的后面。 可以进行任意次上述操作，获得字典序最小的字符串。 数据范围]]></description>
-</item><item>
-    <title>Codeforces Round 933(div3)</title>
-    <link>http://dodolalorc.cn/posts/cfround933div3/</link>
-    <pubDate>Wed, 13 Mar 2024 12:25:46 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/cfround933div3/</guid>
-    <description><![CDATA[A-Rudolf and the Ticket 题意左边口袋有一些面值为$b_1,b_2,b_3,&hellip;,b_n$的硬币，右边有一些面值为$c_1,c_2,c_3,&he]]></description>
-</item><item>
-    <title>另一种为hugo渲染Mermaid绘图的方式</title>
-    <link>http://dodolalorc.cn/posts/mermaid_js_2/</link>
-    <pubDate>Sun, 10 Mar 2024 21:29:25 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mermaid_js_2/</guid>
-    <description><![CDATA[最近研究英文的官方文档发现了HUGO官方给渲染Mermaid提供了思路（!原来Hugo可以支持这种渲染），此处做笔记记录，算作是另一种方式。]]></description>
 </item></channel>
 </rss>

@@ -4,7 +4,14 @@
         <link>http://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/</link>
         <description>前端 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>购物车页面制作教程（包含分页设计）</title>
+    <link>http://dodolalorc.cn/posts/testcart/</link>
+    <pubDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/testcart/</guid>
+    <description><![CDATA[前言 这篇文章用于2024年蓝旭暑期项目前的培训作业教学，目的是从零开始构建一个购物车页面，以此来熟悉原生前端三件套。o((&gt;ω&lt;]]></description>
+</item><item>
     <title>Vue3封装一个SVG组件</title>
     <link>http://dodolalorc.cn/posts/vue_svgicon/</link>
     <pubDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</pubDate><author>
