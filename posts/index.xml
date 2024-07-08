@@ -26,6 +26,13 @@
     </author><guid>http://localhost:1313/posts/24jilinccpc/</guid>
     <description><![CDATA[阿巴阿巴 啊，省赛，怎么两个月过去了才整理题解，这一定是在复习（确信 GYM地址：2024吉林省赛 题目顺序按照从易到难排序。 I. The Easiest Problem 题意数一数 代]]></description>
 </item><item>
+    <title>CS-APP Datalab</title>
+    <link>http://localhost:1313/posts/datalab/</link>
+    <pubDate>Thu, 04 Jul 2024 20:49:31 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/datalab/</guid>
+    <description><![CDATA[TODO]]></description>
+</item><item>
     <title>MutationObserver学习&#43;实践</title>
     <link>http://localhost:1313/posts/mutationobserver/</link>
     <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
@@ -67,12 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/cfround931div2/</guid>
     <description><![CDATA[A-Too Min Too Max 题意对一个数组，找到索引$(i,j,k,l)$使得$|a_i-a_j|+|a_j-a_k|+|a_k-a_l|+|a_l-a_i|$]]></description>
-</item><item>
-    <title>Codeforces Round 932(div2)</title>
-    <link>http://localhost:1313/posts/cfround932div2/</link>
-    <pubDate>Wed, 13 Mar 2024 12:26:06 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfround932div2/</guid>
-    <description><![CDATA[A-Entertainment in MAC 题意可以对一个字符串进行两种操作： 将字符串反转 将该字符串反转后接在原串的后面。 可以进行任意次上述操作，获得字典序最小的字符串。 数据范围]]></description>
 </item></channel>
 </rss>
