@@ -1,22 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Markdown - 标签 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/tags/markdown/</link>
+        <link>http://localhost:1313/tags/markdown/</link>
         <description>Markdown - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 23 Dec 2023 20:00:25 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/markdown/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 23 Dec 2023 20:00:25 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/markdown/" rel="self" type="application/rss+xml" /><item>
     <title>【拓展Markdown】为hugo渲染Mermaid绘图</title>
-    <link>http://dodolalorc.cn/posts/mermaid_js/</link>
+    <link>http://localhost:1313/posts/mermaid_js/</link>
     <pubDate>Sat, 23 Dec 2023 20:00:25 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mermaid_js/</guid>
+    </author><guid>http://localhost:1313/posts/mermaid_js/</guid>
     <description><![CDATA[今天打算转帖原来发过的一篇博文时，遇到了Markdown中嵌入的Mermaid无法正常显示的问题，Mermaid可以内嵌于Markdown中]]></description>
 </item><item>
     <title>【拓展Markdown】为hugo渲染数学公式</title>
-    <link>http://dodolalorc.cn/posts/mathjax_js/</link>
+    <link>http://localhost:1313/posts/mathjax_js/</link>
     <pubDate>Sat, 23 Dec 2023 19:16:50 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mathjax_js/</guid>
+    </author><guid>http://localhost:1313/posts/mathjax_js/</guid>
     <description><![CDATA[效果解决了之前一直没有解决的一个小bug——我的hugo没有办法渲染Markdown里数学公式捏qwq 现在成功从图1到图2了！ 调整之前 调整之]]></description>
 </item></channel>
 </rss>
