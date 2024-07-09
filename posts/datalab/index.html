@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/datalab/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-07-04T20:49:31+08:00" />
-<meta property="article:modified_time" content="2024-07-08T16:27:23+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+<meta property="article:modified_time" content="2024-07-09T19:23:51+08:00" /><meta property="og:site_name" content="Doごみ箱" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="CS-APP Datalab"/>
@@ -31,8 +31,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/posts\/datalab\/"
-        },"genre": "posts","keywords": "CSAPP","wordcount":  1 ,
-        "url": "http:\/\/localhost:1313\/posts\/datalab\/","datePublished": "2024-07-04T20:49:31+08:00","dateModified": "2024-07-08T16:27:23+08:00","license": "dodola","publisher": {
+        },"genre": "posts","keywords": "CSAPP","wordcount":  2517 ,
+        "url": "http:\/\/localhost:1313\/posts\/datalab\/","datePublished": "2024-07-04T20:49:31+08:00","dateModified": "2024-07-09T19:23:51+08:00","license": "dodola","publisher": {
             "@type": "Organization",
             "name": "DODOLA"},"author": {
                 "@type": "Person",
@@ -132,13 +132,74 @@
 </div><main class="main">
       <div class="container"><div class="toc" id="toc-auto">
     <h2 class="toc-title">目录</h2>
-    <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents"></nav></div>
+    <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#0-before-start">0. before start</a>
+      <ul>
+        <li><a href="#测评">测评</a></li>
+      </ul>
+    </li>
+    <li><a href="#1-bitxor">1. bitXor</a>
+      <ul>
+        <li><a href="#代码">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-tmin">2. tmin</a>
+      <ul>
+        <li><a href="#代码-1">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-istmax">3. isTmax</a>
+      <ul>
+        <li><a href="#代码-2">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-alloddbits">4. allOddBits</a>
+      <ul>
+        <li><a href="#代码-3">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-negate">5. negate</a>
+      <ul>
+        <li><a href="#代码-4">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-isascidigit">6. isAsciDigit</a>
+      <ul>
+        <li><a href="#代码-5">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-conditional">7. conditional</a>
+      <ul>
+        <li><a href="#代码-6">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-islessorequal">8. isLessOrEqual</a>
+      <ul>
+        <li><a href="#代码-7">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-logicalneg">9. logicalNeg</a>
+      <ul>
+        <li><a href="#代码-8">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#10-howmanybits">10. howManyBits</a>
+      <ul>
+        <li><a href="#代码-9">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-floatscale2">11. floatScale2</a></li>
+    <li><a href="#12-floatfloat2int">12. floatFloat2Int</a></li>
+    <li><a href="#13-floatpower2">13. floatPower2</a></li>
+  </ul>
+</nav></div>
 </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">CS-APP Datalab</h1><h2 class="single-subtitle">实验记录</h2><div class="post-meta">
         <div class="post-meta-line">
             <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
             </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在学习计算机系统的日子里</a></span></div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-07-04">2024-07-04</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-08">2024-07-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1 字&nbsp;
-            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/datalab/" class="leancloud_visitors" data-flag-title="CS-APP Datalab">
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-07-04">2024-07-04</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-09">2024-07-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2517 字&nbsp;
+            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;<span id="/posts/datalab/" class="leancloud_visitors" data-flag-title="CS-APP Datalab">
                 <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"
                     id=twikoo_visitors></span>&nbsp;次阅读
             </span>&nbsp;<span id="/posts/datalab/" class="comment_count" data-flag-title="CS-APP Datalab">
@@ -164,8 +225,550 @@
             <span>目录</span>
             <span><i class="details-icon fas fa-angle-right"></i></span>
         </div>
-        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-    </div><div class="content" id="content"><p>TODO</p></div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#0-before-start">0. before start</a>
+      <ul>
+        <li><a href="#测评">测评</a></li>
+      </ul>
+    </li>
+    <li><a href="#1-bitxor">1. bitXor</a>
+      <ul>
+        <li><a href="#代码">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-tmin">2. tmin</a>
+      <ul>
+        <li><a href="#代码-1">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-istmax">3. isTmax</a>
+      <ul>
+        <li><a href="#代码-2">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-alloddbits">4. allOddBits</a>
+      <ul>
+        <li><a href="#代码-3">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-negate">5. negate</a>
+      <ul>
+        <li><a href="#代码-4">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-isascidigit">6. isAsciDigit</a>
+      <ul>
+        <li><a href="#代码-5">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-conditional">7. conditional</a>
+      <ul>
+        <li><a href="#代码-6">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-islessorequal">8. isLessOrEqual</a>
+      <ul>
+        <li><a href="#代码-7">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-logicalneg">9. logicalNeg</a>
+      <ul>
+        <li><a href="#代码-8">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#10-howmanybits">10. howManyBits</a>
+      <ul>
+        <li><a href="#代码-9">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-floatscale2">11. floatScale2</a></li>
+    <li><a href="#12-floatfloat2int">12. floatFloat2Int</a></li>
+    <li><a href="#13-floatpower2">13. floatPower2</a></li>
+  </ul>
+</nav></div>
+    </div><div class="content" id="content"><h2 id="0-before-start" class="headerLink">
+    <a href="#0-before-start" class="header-mark"></a>0. before start</h2><p>实验需要的材料在这里：<a href="https://csapp.cs.cmu.edu/3e/labs.html" target="_blank" rel="noopener noreferrer">CSAPP Datalab</a></p>
+<p>将<code>datalab-handout.tar</code>下载复制到计划用来实验的目录下，解压：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">tar xvf datalab-handout.tar
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>解压之后，可以看到文件中包含这些：</p>
+<p><figure><a class="lightgallery" href="/668bd689ecb03_5254209391379123135.png" title="92cca9118602902b63ac1f40d78d5bc0" data-thumbnail="/668bd689ecb03_5254209391379123135.png">
+        <img
+            
+            loading="lazy"
+            src="/668bd689ecb03_5254209391379123135.png"
+            srcset="/668bd689ecb03_5254209391379123135.png, /668bd689ecb03_5254209391379123135.png 1.5x, /668bd689ecb03_5254209391379123135.png 2x"
+            sizes="auto"
+            alt="/668bd689ecb03_5254209391379123135.png" height="160"  width="981" >
+    </a></figure></p>
+<p>其中<code>bit.c</code>是包含13个编程题中每个题的骨架。实验要求是使用没有任何循环或条件语句，以及有限的c算术和逻辑运算符来完成其中每个函数的内容，只能使用如下8个运算符：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="o">!</span> <span class="o">~</span> <span class="o">&amp;</span> <span class="o">^</span> <span class="o">|</span> <span class="o">+</span> <span class="o">&lt;&lt;</span> <span class="o">&gt;&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="测评" class="headerLink">
+    <a href="#%e6%b5%8b%e8%af%84" class="header-mark"></a>测评</h3><p>在<code>btest</code>文件夹中，包含了一个测试程序，可以用来测试我们的实现是否正确。我们可以通过<code>make</code>命令编译<code>btest</code>，然后运行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 编译并运行</span>
+</span></span><span class="line"><span class="cl">make <span class="o">&amp;&amp;</span> ./btest
+</span></span><span class="line"><span class="cl"><span class="c1"># 对某个函数进行单元测试</span>
+</span></span><span class="line"><span class="cl">make <span class="o">&amp;&amp;</span> ./btest -f bitXnor
+</span></span><span class="line"><span class="cl"><span class="c1"># 对某个函数进行单元测试，且指定测试用例，以 -1 指定第一个参数，依次类推</span>
+</span></span><span class="line"><span class="cl">make <span class="o">&amp;&amp;</span> ./btest -f bitXnor -1 <span class="m">7</span> -2 0xf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>dlc</code>：用于检查我们的实现是否符合实验要求：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./dlc bits.c
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>接下来，按照难度从易到难，我们依次完成实验</p>
+<h2 id="1-bitxor" class="headerLink">
+    <a href="#1-bitxor" class="header-mark"></a>1. bitXor</h2><p>异或等价于<strong>不是同0且不是同1</strong>。</p>
+<h3 id="代码" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="c1">//1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cm">/* 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * bitXor - x^y using only ~ and &amp; 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Example: bitXor(4, 5) = 1
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Legal ops: ~ &amp;
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Max ops: 14
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Rating: 1
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">bitXor</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">~</span><span class="p">(</span><span class="o">~</span><span class="n">x</span><span class="o">&amp;~</span><span class="n">y</span><span class="p">)</span><span class="o">&amp;~</span><span class="p">(</span><span class="n">x</span><span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="2-tmin" class="headerLink">
+    <a href="#2-tmin" class="header-mark"></a>2. tmin</h2><p>获得对2补码的最小int值。在C中，<code>int</code>是32位的，所以补码的最小值就是符号位为1，其余位为0的值，对0x1左移31位即可。</p>
+<h3 id="代码-1" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/* 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * tmin - return minimum two&#39;s complement integer 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Max ops: 4
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Rating: 1
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">tmin</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">31</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="3-istmax" class="headerLink">
+    <a href="#3-istmax" class="header-mark"></a>3. isTmax</h2><p>判断$x$是否是<code>int</code>的最大整数。最大整数<code>tmax</code>应该为<code>0x7fffffff</code>。</p>
+<p>题目提示不允许使用移位操作。</p>
+<p>注意到：
+$$
+Tmax=0x7fffffff,Tmin=0x80000000\\
+so,that:Tmax=\sim Tmin,Tmax+1 = Tmin\\
+-Tmin = \sim Tmin + 1 = Tmax + 1 = Tmin\\
+so,that:\\
+-(\sim Tmax) = Tmax + 1 = \sim Tmax\\
+$$
+也就是说，假如<code>~x</code>的相反数与<code>~x</code>相等，则满足<code>x=Tmax</code>。</p>
+<p>注意除了<code>Tmax</code>拥有这个性质，当<code>x=-1</code>时：
+$$
+x=0xffffffff\\
+\sim x=0x00000000\\
+-(\sim x)=\sim (\sim x)+1 = x+1 = 0x00000000
+$$
+也满足这个上述特点，需要排除。</p>
+<h3 id="代码-2" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * isTmax - returns 1 if x is the maximum, two&#39;s complement number,
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *     and 0 otherwise 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Legal ops: ! ~ &amp; ^ | +
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Max ops: 10
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Rating: 1
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">isTmax</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">!!</span><span class="p">(</span><span class="o">~</span><span class="n">x</span><span class="p">)</span><span class="o">&amp;!</span><span class="p">((</span><span class="o">~</span><span class="n">x</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>提示<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">注意返回值是<code>int</code>型的，所以需要使用<code>!!</code>将结果转换为0或1。</div>
+        </div>
+    </div>
+<h2 id="4-alloddbits" class="headerLink">
+    <a href="#4-alloddbits" class="header-mark"></a>4. allOddBits</h2><p>当$x$中所有奇数位都为$1$时返回<code>true</code>。</p>
+<p>奇数位都为$1$的数形如：
+$$
+x=0b1x_{30}1x_{28}1&hellip;1x_{2}1x_{0}
+$$
+思路是构造偶数位都为$1$的掩码<code>0x55555555</code>，再与$x$按位取或，若能构造出<code>0xffffffff</code>则复合要求。</p>
+<p>由于实验要求不允许使用长度超过8位的常量，所以通过移位操作来构造掩码。</p>
+<h3 id="代码-3" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/* 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * allOddBits - return 1 if all odd-numbered bits in word set to 1
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   where bits are numbered from 0 (least significant) to 31 (most significant)
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Examples allOddBits(0xFFFFFFFD) = 0, allOddBits(0xAAAAAAAA) = 1
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Max ops: 12
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Rating: 2
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">allOddBits</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">mask</span> <span class="o">=</span> <span class="mh">0x55</span> <span class="o">+</span> <span class="p">(</span><span class="mh">0x55</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span> <span class="o">+</span> <span class="p">(</span><span class="n">mask</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">!</span><span class="p">(</span><span class="o">~</span><span class="p">(</span><span class="n">mask</span> <span class="o">|</span> <span class="n">x</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="5-negate" class="headerLink">
+    <a href="#5-negate" class="header-mark"></a>5. negate</h2><p>返回$x$的相反数。</p>
+<p>这个操作在第三个实验里其实已经使用过了。
+$$
+-x=\sim x + 1
+$$</p>
+<h3 id="代码-4" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-4" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/* 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * negate - return -x 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Example: negate(1) = -1.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Max ops: 5
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Rating: 2
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">negate</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">~</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="6-isascidigit" class="headerLink">
+    <a href="#6-isascidigit" class="header-mark"></a>6. isAsciDigit</h2><p>判断$x$是否是ASCII码0~9中的某一个，即判断$0x30\leq x\leq 0x39$。</p>
+<p>注意到$0x30\sim 0x39$的低4位从$0000\sim 1001$，低5~8位为$0011$，可以分别判断。</p>
+<p>在满足低5~8位为$0011$的前提下，若倒数第4位为0则符合要求，若倒数第4位为1则需判断是否为$1000$或$1001$，即中间2位是否是0。</p>
+<h3 id="代码-5" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-5" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/* 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * isAsciiDigit - return 1 if 0x30 &lt;= x &lt;= 0x39 (ASCII codes for characters &#39;0&#39; to &#39;9&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Example: isAsciiDigit(0x35) = 1.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *            isAsciiDigit(0x3a) = 0.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *            isAsciiDigit(0x05) = 0.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Max ops: 15
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Rating: 3
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">isAsciiDigit</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">f3</span> <span class="o">=</span> <span class="o">!</span><span class="p">((</span><span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">^</span> <span class="mi">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">f0t9</span> <span class="o">=!!</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">x</span> <span class="o">&amp;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="o">!</span><span class="p">(</span><span class="n">x</span> <span class="o">&amp;</span> <span class="mi">6</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">f3</span> <span class="o">&amp;</span> <span class="n">f0t9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="7-conditional" class="headerLink">
+    <a href="#7-conditional" class="header-mark"></a>7. conditional</h2><p>实现出<code>w =( x ? y : z)</code>的条件判断。</p>
+<p>感觉在上个题就实现了，上题相当于对一个二进制数$x=x_4 x_3 x_2 x_1$，是否满足$(x_4 == 1)?(x &amp; 6 == 0):1$。</p>
+<p>判断$x$通过<code>!!x</code>获得<code>0/1</code>，再通过按位取反+1分别获得<code>0x00000000</code>和<code>0xffffffff</code>，再与$y$和$z$按位或并相加，获得结果。</p>
+<h3 id="代码-6" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-6" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/* 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * conditional - same as x ? y : z 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Example: conditional(2,4,5) = 4
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Max ops: 16
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Rating: 3
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">conditional</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">z</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">f</span> <span class="o">=</span> <span class="o">!!</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">mask</span> <span class="o">=</span> <span class="o">~</span><span class="n">f</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span><span class="n">y</span> <span class="o">&amp;</span> <span class="n">mask</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">z</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">mask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="8-islessorequal" class="headerLink">
+    <a href="#8-islessorequal" class="header-mark"></a>8. isLessOrEqual</h2><p>判断是否符合$x\leq y$的关系。</p>
+<p>首先比较符号位，若符号位相同，则判断$x-y\leq 0$是否成立。减号可以由按位取反+1获得相反数，再相加实现。</p>
+<h3 id="代码-7" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-7" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/* 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * isLessOrEqual - if x &lt;= y  then return 1, else return 0 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Example: isLessOrEqual(4,5) = 1.
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Max ops: 24
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Rating: 3
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">isLessOrEqual</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">fx</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">fy</span> <span class="o">=</span> <span class="n">y</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">f</span> <span class="o">=</span> <span class="n">fx</span> <span class="o">^</span> <span class="n">fy</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="o">~</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">!!</span><span class="p">((</span><span class="n">f</span> <span class="o">&amp;</span> <span class="n">fx</span><span class="p">)</span> <span class="o">|</span> <span class="p">((</span><span class="o">!</span><span class="n">f</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">((</span><span class="o">!</span><span class="n">z</span><span class="p">)</span> <span class="o">|</span> <span class="n">z</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="9-logicalneg" class="headerLink">
+    <a href="#9-logicalneg" class="header-mark"></a>9. logicalNeg</h2><p>实现逻辑取反，$x$非0返回0，$x$为0返回1。</p>
+<p>通过取反+1获得相反数，如果x是0，其相反数与x拥有相同的符号位0，否则在x和其相反数两个数之间一定会有至少一个符号位为1。</p>
+<p>在<code>Tmin = 0x80000000</code>中也一致，<code>-Tmin = ~Tmin + 1 = 0x7fffffff + 1 = 0x80000000</code>。</p>
+<h3 id="代码-8" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-8" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/* 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * logicalNeg - implement the ! operator, using all of 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *              the legal operators except !
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Examples: logicalNeg(3) = 0, logicalNeg(0) = 1
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Legal ops: ~ &amp; ^ | + &lt;&lt; &gt;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Max ops: 12
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *   Rating: 4 
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">logicalNeg</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(((</span><span class="o">~</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="n">x</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="10-howmanybits" class="headerLink">
+    <a href="#10-howmanybits" class="header-mark"></a>10. howManyBits</h2><p>计算出表示$x$​需要的最少补码位数。
+$$
+0=0b0,1bit\\
+1=0b01,2bits\\
+-1=0b1,1bit\\
+2=0b010,3bits\\
+-2=0b10,2bits\\
+3=0b011,3bits\\
+-3=0b101,3bits
+$$
+如果是正数的话<code>x</code>补码形如：<code>0x00001...</code>，所需补码位数是从左向右第一个1的位置在+1（符号位），负数的话<code>x</code>补码形如：<code>0x11110...</code>，取反之后是<code>0x00001...</code>，所需位数是从左向右第一个1的位置+1。</p>
+<p>不能通过循环来从左向右找，尝试二分找第一个1的位置。</p>
+<p><code>int</code>型有32位，逐渐二分为16、8、4、2、1位。
+$$
+\begin{aligned}
+&amp;x = 0b0001,1&hellip;,&hellip;.,&hellip;.,&hellip;.,&hellip;.,&hellip;.,&hellip;.\\
+loop1:&amp; !!(x&raquo;16)=1,b16=16\\
+&amp;\text{高16位存在1，则可以舍去低16位，将x右移16位}\\
+&amp;x = x&raquo;16=0b0001,1&hellip;,&hellip;,&hellip;\\
+loop2:&amp;&hellip;
+\end{aligned}
+$$
+最后统计完毕之后要+1符号位。</p>
+<h3 id="代码-9" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-9" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cm">/* howManyBits - return the minimum number of bits required to represent x in
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *             two&#39;s complement
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *  Examples: howManyBits(12) = 5
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *            howManyBits(298) = 10
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *            howManyBits(-5) = 4
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *            howManyBits(0)  = 1
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *            howManyBits(-1) = 1
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *            howManyBits(0x80000000) = 32
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *  Legal ops: ! ~ &amp; ^ | + &lt;&lt; &gt;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *  Max ops: 90
+</span></span></span><span class="line"><span class="cl"><span class="cm"> *  Rating: 4
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">howManyBits</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">f</span> <span class="o">=</span> <span class="o">!!</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">31</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">f</span> <span class="o">=</span> <span class="o">~</span><span class="n">f</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">f</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="o">~</span><span class="n">x</span> <span class="o">&amp;</span> <span class="n">f</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">b16</span> <span class="o">=</span> <span class="p">(</span><span class="o">!!</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">))</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">b16</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">b8</span> <span class="o">=</span> <span class="p">(</span><span class="o">!!</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">))</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">b8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">b4</span> <span class="o">=</span> <span class="p">(</span><span class="o">!!</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">))</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">b4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">b2</span> <span class="o">=</span> <span class="p">(</span><span class="o">!!</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">))</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">b2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">b1</span> <span class="o">=</span> <span class="o">!!</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">b1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">b16</span> <span class="o">+</span> <span class="n">b8</span> <span class="o">+</span> <span class="n">b4</span> <span class="o">+</span> <span class="n">b2</span> <span class="o">+</span> <span class="n">b1</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="11-floatscale2" class="headerLink">
+    <a href="#11-floatscale2" class="header-mark"></a>11. floatScale2</h2><h2 id="12-floatfloat2int" class="headerLink">
+    <a href="#12-floatfloat2int" class="header-mark"></a>12. floatFloat2Int</h2><h2 id="13-floatpower2" class="headerLink">
+    <a href="#13-floatpower2" class="header-mark"></a>13. floatPower2</h2></div>
 
     
 
@@ -173,7 +776,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-07-08</span>
+                <span>更新于 2024-07-09</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -254,7 +857,8 @@
     </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
       <i class="fas fa-comment fa-fw"></i>
     </a>
-  </div><div class="assets"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.dodolalorc.cn/","lang":"zh-cn","path":"window.TWIKOO_MAGIC_PATH || window.location.pathname","region":"ap-shanghai"}},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true}};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+  </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"twikoo":{"commentCount":true,"el":"#twikoo","envId":"https://twikoo.dodolalorc.cn/","lang":"zh-cn","path":"window.TWIKOO_MAGIC_PATH || window.location.pathname","region":"ap-shanghai"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true}};</script><script type="text/javascript" src="/lib/twikoo/twikoo.all.min.js" defer></script><script type="text/javascript" src="/js/twikoo.min.js" defer></script><script type="text/javascript" src="/lib/tablesort/tablesort.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
 </body>
 
 </html>

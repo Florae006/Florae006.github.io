@@ -31,7 +31,7 @@
     <pubDate>Thu, 04 Jul 2024 20:49:31 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/datalab/</guid>
-    <description><![CDATA[TODO]]></description>
+    <description><![CDATA[0. before start实验需要的材料在这里：CSAPP Datalab 将datalab-handout.tar下载复制到计划用来实验的目录下，解压： 1 tar xvf datalab-handout.tar 解压之]]></description>
 </item><item>
     <title>MutationObserver学习&#43;实践</title>
     <link>http://localhost:1313/posts/mutationobserver/</link>
