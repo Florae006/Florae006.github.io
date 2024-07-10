@@ -5,6 +5,8 @@
 
 实验需要的材料在这里：[CSAPP Datalab](https://csapp.cs.cmu.edu/3e/labs.html)
 
+CSAPP原书[在线阅读](https://reader-service.fcdn.sk/?source=a1a8b38b00a02eca2efb546312b8cf476ebd82a877fb9ae49fb47e3a8953b309&download_location=https%3A%2F%2Fz-lib.gs%2Fdl%2F5644998%2Face0a0)
+
 将`datalab-handout.tar`下载复制到计划用来实验的目录下，解压：
 
 ```shell
@@ -352,16 +354,143 @@ int howManyBits(int x) {
 
 ## 11. floatScale2
 
+求一个float浮点数乘2之后的值。
 
+`float`的各位：
+
+| 符号  |   指数(exp)    |   尾数   |
+| :---: | :------------: | :------: |
+|   1   |       8        |    23    |
+| `0/1` | `0x01111111+e` | 小数部分 |
+
+直接抄一下书上定义规格化、非规格化、无穷大、NaN的定义：
+
+![1720620876764](https://img.dodolalorc.cn/i/2024/07/10/668e975fe9944.png)
+
+因此，通过定义先按指数是否为`0x00000000`或`0x11111111`、`≠0 & ≠255`分类。
+
+* 对规格化数进行指数+1（若+1后为255则返回无穷大）
+
+* 非规格化数保持符号位不变，左移一位（注意：若尾数最左边一位为1时，乘2后恰好是规格化数，故保留符号位整体左移即可）
+* 无穷大保持不变
+* NaN保持不变。
+
+### 代码
+
+```c
+/* 
+ * floatScale2 - Return bit-level equivalent of expression 2*f for
+ *   floating point argument f.
+ *   Both the argument and result are passed as unsigned int's, but
+ *   they are to be interpreted as the bit-level representation of
+ *   single-precision floating point values.
+ *   When argument is NaN, return argument
+ *   Legal ops: Any integer/unsigned operations incl. ||, &&. also if, while
+ *   Max ops: 30
+ *   Rating: 4
+ */
+unsigned floatScale2(unsigned uf) {
+  unsigned s = uf & 0x80000000;
+  unsigned exp = uf & 0x7f800000;
+  unsigned f = uf & 0x007fffff;
+  if(!exp){
+    return s | (uf << 1);
+  }
+  if(!(exp ^ 0x7f800000)){
+    return uf;
+  }
+  exp = exp + 0x00800000;
+  if(exp == 0x7f800000){
+    return 0x7f800000 | s;
+  }
+
+  return s | (exp & 0x7f800000) | f;
+}
+```
 
 ## 12. floatFloat2Int
+
+将`float`浮点数转化为`int`类型。
+
+算出真实的`Exp`：`Exp + 0b0111111 = e`，
+
+再给尾数最左侧补一位1，整体右移`|Exp-23|`位（舍位），再通过正负性取补码。
+
+注意，若溢出或是NaN返回`0x80000000u`
+
+### 代码
+
+```c
+/* 
+ * floatFloat2Int - Return bit-level equivalent of expression (int) f
+ *   for floating point argument f.
+ *   Argument is passed as unsigned int, but
+ *   it is to be interpreted as the bit-level representation of a
+ *   single-precision floating point value.
+ *   Anything out of range (including NaN and infinity) should return
+ *   0x80000000u.
+ *   Legal ops: Any integer/unsigned operations incl. ||, &&. also if, while
+ *   Max ops: 30
+ *   Rating: 4
+ */
+int floatFloat2Int(unsigned uf) {
+  unsigned s = uf & 0x80000000,
+           e = uf & 0x7f800000,
+           f = uf & 0x007fffff;
+  int exp = (e >> 23) - 0x7f;
+  unsigned res = f | 0x00800000;
+  if(exp < 0) return 0;
+  if(exp >= 31) return 0x80000000;
+  if(exp < 23)exp = 23 - exp;
+  else exp = exp - 23;
+  res = res >> exp;
+  if(s)return -res;
+  else return res;
+}
+```
 
 
 
 ## 13. floatPower2
 
+求浮点表示下的$2.0$的$x$次。
 
+emmm其实就是`exp + x`，那就处理好$0b000000$和$0b11111111$的情况就好了。
 
+### 代码
 
+```c
+/* 
+ * floatPower2 - Return bit-level equivalent of the expression 2.0^x
+ *   (2.0 raised to the power x) for any 32-bit integer x.
+ *
+ *   The unsigned value that is returned should have the identical bit
+ *   representation as the single-precision floating-point number 2.0^x.
+ *   If the result is too small to be represented as a denorm, return
+ *   0. If too large, return +INF.
+ * 
+ *   Legal ops: Any integer/unsigned operations incl. ||, &&. Also if, while 
+ *   Max ops: 30 
+ *   Rating: 4
+ */
+unsigned floatPower2(int x) {
+  int exp = 0x7f + x;
+  if(exp < 0x00)return 0;
+  if(exp >= 0xff)return 0x7f800000;
+  if(exp == 0x00)return 1;
+  return exp << 23;
+}
+```
 
+写完哩~最后一个样例似乎跑了好久（。
+
+## 总结碎碎念
+
+做完实验第一次感觉到`!f`和`~f`的区别（迫真。
+
+贴一张AC：
+
+![1720626704187](https://img.dodolalorc.cn/i/2024/07/10/668eae3db6491.png)
+
+下个实验再见(∪.∪ )...zzz
 

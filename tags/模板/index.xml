@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>模板 - 标签 - Doごみ箱🪄</title>
-        <link>http://localhost:1313/tags/%E6%A8%A1%E6%9D%BF/</link>
+        <link>http://dodolalorc.cn/tags/%E6%A8%A1%E6%9D%BF/</link>
         <description>模板 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 13 Mar 2024 13:29:07 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%A8%A1%E6%9D%BF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 13 Mar 2024 13:29:07 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E6%A8%A1%E6%9D%BF/" rel="self" type="application/rss+xml" /><item>
     <title>线段树讲义||寒假</title>
-    <link>http://localhost:1313/posts/segtreelecnote/</link>
+    <link>http://dodolalorc.cn/posts/segtreelecnote/</link>
     <pubDate>Wed, 13 Mar 2024 13:29:07 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/segtreelecnote/</guid>
+    </author><guid>http://dodolalorc.cn/posts/segtreelecnote/</guid>
     <description><![CDATA[线段树介绍 线段树是一棵二叉树，每个节点维护一个区间内$[l,r]$的信息 左子树区间维护$[l,\lfloor \frac{l+r}{2} \rfloor]$的信息，右子]]></description>
 </item></channel>
 </rss>

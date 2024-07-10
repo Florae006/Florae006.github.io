@@ -3,24 +3,24 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noodp" />
   <title>购物车页面制作教程（包含分页设计） - Doごみ箱🪄</title><meta name="Description" content="一篇用于从零开始，基于原生H5C3JS制作的购物车页面"><meta property="og:title" content="购物车页面制作教程（包含分页设计）" />
 <meta property="og:description" content="一篇用于从零开始，基于原生H5C3JS制作的购物车页面" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/testcart/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://dodolalorc.cn/posts/testcart/" /><meta property="og:image" content="http://dodolalorc.cn/img/dodola.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-07-06T19:16:27+08:00" />
 <meta property="article:modified_time" content="2024-07-07T04:55:07+08:00" /><meta property="og:site_name" content="Doごみ箱" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="购物车页面制作教程（包含分页设计）"/>
+<meta name="twitter:image" content="http://dodolalorc.cn/img/dodola.png" /><meta name="twitter:title" content="购物车页面制作教程（包含分页设计）"/>
 <meta name="twitter:description" content="一篇用于从零开始，基于原生H5C3JS制作的购物车页面"/>
 <meta name="application-name" content="Doごみ箱-一只小菜鸡的Blog">
 <meta name="apple-mobile-web-app-title" content="Doごみ箱-一只小菜鸡的Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/testcart/" /><link rel="prev" href="http://localhost:1313/posts/github_action/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://dodolalorc.cn/posts/testcart/" /><link rel="prev" href="http://dodolalorc.cn/posts/github_action/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -30,9 +30,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/testcart\/"
+            "@id": "http:\/\/dodolalorc.cn\/posts\/testcart\/"
         },"genre": "posts","keywords": "前端","wordcount":  7332 ,
-        "url": "http:\/\/localhost:1313\/posts\/testcart\/","datePublished": "2024-07-06T19:16:27+08:00","dateModified": "2024-07-07T04:55:07+08:00","license": "dodola","publisher": {
+        "url": "http:\/\/dodolalorc.cn\/posts\/testcart\/","datePublished": "2024-07-06T19:16:27+08:00","dateModified": "2024-07-07T04:55:07+08:00","license": "dodola","publisher": {
             "@type": "Organization",
             "name": "DODOLA"},"author": {
                 "@type": "Person",
@@ -410,14 +410,14 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>添加完CSS样式后，我们可以得到一个商品卡片的效果：</p>
-<p><figure><a class="lightgallery" href="/668965024147d_451046281859328795.png" title="商品卡片" data-thumbnail="/668965024147d_451046281859328795.png">
+<p><figure><a class="lightgallery" href="https://img.dodolalorc.cn/i/2024/07/06/668965024147d.png" title="商品卡片" data-thumbnail="https://img.dodolalorc.cn/i/2024/07/06/668965024147d.png">
         <img
             
             loading="lazy"
-            src="/668965024147d_451046281859328795.png"
-            srcset="/668965024147d_451046281859328795.png, /668965024147d_451046281859328795.png 1.5x, /668965024147d_451046281859328795.png 2x"
+            src="https://img.dodolalorc.cn/i/2024/07/06/668965024147d.png"
+            srcset="https://img.dodolalorc.cn/i/2024/07/06/668965024147d.png, https://img.dodolalorc.cn/i/2024/07/06/668965024147d.png 1.5x, https://img.dodolalorc.cn/i/2024/07/06/668965024147d.png 2x"
             sizes="auto"
-            alt="/668965024147d_451046281859328795.png" height="285"  width="2152" >
+            alt="https://img.dodolalorc.cn/i/2024/07/06/668965024147d.png">
     </a></figure></p>
 <p>这是我的CSS样式：</p>
 <div class="highlight"><div class="chroma">
@@ -748,14 +748,14 @@
     <a href="#%e5%9c%a8%e7%ba%bf%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90" class="header-mark"></a>在线工具推荐</h4><p>有些同学可能不太擅长调整出好看的盒子，这里我推荐一个好用的前端工具在线网站：<a href="https://lingdaima.com/" target="_blank" rel="noopener noreferrer">https://lingdaima.com/</a> ，可以帮助你快速调整出好看的CSS样式。</p>
 <p>当然了，在线工具只是起到一个辅助作用，调整CSS的时候还是需要自己多尝试，多调整，多看看效果。大家不要过分依赖哦(‾◡◝)</p>
 <p>这里是整体设计完Html结构和CSS之后的效果：</p>
-<p><figure><a class="lightgallery" href="/66897122a1a47_14220427073693658133.png" title="购物车整体页面" data-thumbnail="/66897122a1a47_14220427073693658133.png">
+<p><figure><a class="lightgallery" href="https://img.dodolalorc.cn/i/2024/07/07/66897122a1a47.png" title="购物车整体页面" data-thumbnail="https://img.dodolalorc.cn/i/2024/07/07/66897122a1a47.png">
         <img
             
             loading="lazy"
-            src="/66897122a1a47_14220427073693658133.png"
-            srcset="/66897122a1a47_14220427073693658133.png, /66897122a1a47_14220427073693658133.png 1.5x, /66897122a1a47_14220427073693658133.png 2x"
+            src="https://img.dodolalorc.cn/i/2024/07/07/66897122a1a47.png"
+            srcset="https://img.dodolalorc.cn/i/2024/07/07/66897122a1a47.png, https://img.dodolalorc.cn/i/2024/07/07/66897122a1a47.png 1.5x, https://img.dodolalorc.cn/i/2024/07/07/66897122a1a47.png 2x"
             sizes="auto"
-            alt="/66897122a1a47_14220427073693658133.png" height="1528"  width="2560" >
+            alt="https://img.dodolalorc.cn/i/2024/07/07/66897122a1a47.png">
     </a></figure></p>
 <p>这个页面的效果是我自己设计的，大家可以根据自己的喜好进行调整，这里只是提供一个参考，相应的源码我也会公开放在我的gitee上，大家可以自行下载，仓库的地址在文末。</p>
 <h1 id="javascript逻辑" class="headerLink">
@@ -1636,6 +1636,11 @@
 <div class="related-container">
     <div class="related-item-container">
             <h2 class="related-title">
+                <a href="/posts/mutationobserver/">MutationObserver学习&#43;实践</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <h2 class="related-title">
                 <a href="/posts/vue_svgicon/">Vue3封装一个SVG组件</a>
             </h2>
         </div>
@@ -1665,7 +1670,7 @@
             <div class="post-info-md"><span><a class="link-to-mardown" href=/posts/testcart/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
                     </span></div>
             <div class="post-info-share">
-                <span><a href="#" title="分享到 Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/testcart/" data-title="购物车页面制作教程（包含分页设计）" data-hashtags="前端"><i class="fab fa-twitter fa-fw"></i></a><a href="#" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/testcart/" data-hashtag="前端"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/testcart/" data-title="购物车页面制作教程（包含分页设计）"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/testcart/" data-title="购物车页面制作教程（包含分页设计）"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/testcart/" data-title="购物车页面制作教程（包含分页设计）"><i class="fab fa-weibo fa-fw"></i></a><a href="#" title="分享到 百度" data-sharer="baidu" data-url="http://localhost:1313/posts/testcart/" data-title="购物车页面制作教程（包含分页设计）"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a></span>
+                <span><a href="#" title="分享到 Twitter" data-sharer="twitter" data-url="http://dodolalorc.cn/posts/testcart/" data-title="购物车页面制作教程（包含分页设计）" data-hashtags="前端"><i class="fab fa-twitter fa-fw"></i></a><a href="#" title="分享到 Facebook" data-sharer="facebook" data-url="http://dodolalorc.cn/posts/testcart/" data-hashtag="前端"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://dodolalorc.cn/posts/testcart/" data-title="购物车页面制作教程（包含分页设计）"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" title="分享到 Line" data-sharer="line" data-url="http://dodolalorc.cn/posts/testcart/" data-title="购物车页面制作教程（包含分页设计）"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" title="分享到 微博" data-sharer="weibo" data-url="http://dodolalorc.cn/posts/testcart/" data-title="购物车页面制作教程（包含分页设计）"><i class="fab fa-weibo fa-fw"></i></a><a href="#" title="分享到 百度" data-sharer="baidu" data-url="http://dodolalorc.cn/posts/testcart/" data-title="购物车页面制作教程（包含分页设计）"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a></span>
             </div>
         </div>
     </div>
