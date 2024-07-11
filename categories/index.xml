@@ -1,43 +1,43 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - 分类 - Doごみ箱🪄</title>
-        <link>http://localhost:1313/categories/</link>
+        <link>http://dodolalorc.cn/categories/</link>
         <description>Categories - 分类 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 12 Jul 2024 02:04:49 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/categories/" rel="self" type="application/rss+xml" /><item>
     <title>在前端搬砖的日子里</title>
-    <link>http://localhost:1313/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link>
-    <pubDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</pubDate><author>
+    <link>http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link>
+    <pubDate>Fri, 12 Jul 2024 02:04:49 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</guid>
+    </author><guid>http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>我们需要更多的鱼</title>
-    <link>http://localhost:1313/categories/%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E6%9B%B4%E5%A4%9A%E7%9A%84%E9%B1%BC/</link>
+    <link>http://dodolalorc.cn/categories/%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E6%9B%B4%E5%A4%9A%E7%9A%84%E9%B1%BC/</link>
     <pubDate>Fri, 05 Jul 2024 23:11:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/categories/%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E6%9B%B4%E5%A4%9A%E7%9A%84%E9%B1%BC/</guid>
+    </author><guid>http://dodolalorc.cn/categories/%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E6%9B%B4%E5%A4%9A%E7%9A%84%E9%B1%BC/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>在学算法的日子里</title>
-    <link>http://localhost:1313/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link>
+    <link>http://dodolalorc.cn/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link>
     <pubDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</guid>
+    </author><guid>http://dodolalorc.cn/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>在学习计算机系统的日子里</title>
-    <link>http://localhost:1313/categories/%E5%9C%A8%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link>
+    <link>http://dodolalorc.cn/categories/%E5%9C%A8%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link>
     <pubDate>Thu, 04 Jul 2024 20:49:31 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/categories/%E5%9C%A8%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</guid>
+    </author><guid>http://dodolalorc.cn/categories/%E5%9C%A8%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>关于Hugo的一些设置</title>
-    <link>http://localhost:1313/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</link>
+    <link>http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</link>
     <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</guid>
+    </author><guid>http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

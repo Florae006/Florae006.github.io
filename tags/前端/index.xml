@@ -1,43 +1,50 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>前端 - 标签 - Doごみ箱🪄</title>
-        <link>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</link>
+        <link>http://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/</link>
         <description>前端 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 12 Jul 2024 02:04:49 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>(水)Canacitor构建基于Vue/React的移动端应用</title>
+    <link>http://dodolalorc.cn/posts/canacitor_init/</link>
+    <pubDate>Fri, 12 Jul 2024 02:04:49 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/canacitor_init/</guid>
+    <description><![CDATA[最近工作需要开发一个移动端应用，考虑到我们团队前端已经有Vue/React的开发经验，所以决定使用Canacitor来构建。 Canacito]]></description>
+</item><item>
     <title>购物车页面制作教程（包含分页设计）</title>
-    <link>http://localhost:1313/posts/testcart/</link>
+    <link>http://dodolalorc.cn/posts/cartpage/</link>
     <pubDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/testcart/</guid>
+    </author><guid>http://dodolalorc.cn/posts/cartpage/</guid>
     <description><![CDATA[前言 这篇文章用于2024年蓝旭暑期项目前的培训作业教学，目的是从零开始构建一个购物车页面，以此来熟悉原生前端三件套。o((&gt;ω&lt;]]></description>
 </item><item>
     <title>MutationObserver学习&#43;实践</title>
-    <link>http://localhost:1313/posts/mutationobserver/</link>
+    <link>http://dodolalorc.cn/posts/mutationobserver/</link>
     <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/mutationobserver/</guid>
+    </author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid>
     <description><![CDATA[一篇学习 MutationObserver 的文章 背景今天调整新主题的时候，在重新设计友链样式的时候想保留原本的随机背景颜色，之前数量少的时候似乎不太明显，现在本地测试发觉加]]></description>
 </item><item>
     <title>Vue3封装一个SVG组件</title>
-    <link>http://localhost:1313/posts/vue_svgicon/</link>
+    <link>http://dodolalorc.cn/posts/vue_svgicon/</link>
     <pubDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/vue_svgicon/</guid>
+    </author><guid>http://dodolalorc.cn/posts/vue_svgicon/</guid>
     <description><![CDATA[Vue3+Vite+Svg以前使用Svg的时候会图简单直接将内容巨长的Svg代码粘贴在项目中，结果导致需要用Svg图标的部分代码巨长，今天写]]></description>
 </item><item>
     <title>一个Vue项目的基础模板||PC端&#43;移动端适配</title>
-    <link>http://localhost:1313/posts/vuemod/</link>
+    <link>http://dodolalorc.cn/posts/vuemod/</link>
     <pubDate>Sun, 10 Mar 2024 17:14:08 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/vuemod/</guid>
+    </author><guid>http://dodolalorc.cn/posts/vuemod/</guid>
     <description><![CDATA[创建项目 1 2 3 4 npm create vite@latest dodola -- --template vue-ts cd dodola npm install npm run dev 转到根目录下后 规范目录 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 ├── dist/ └── src/ ├── api │ └─]]></description>
 </item><item>
     <title>哆哆啦のjQuery学习笔记（超细）（23.07.28）</title>
-    <link>http://localhost:1313/posts/jquery_notes/</link>
+    <link>http://dodolalorc.cn/posts/jquery_notes/</link>
     <pubDate>Fri, 01 Dec 2023 13:10:27 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/jquery_notes/</guid>
+    </author><guid>http://dodolalorc.cn/posts/jquery_notes/</guid>
     <description><![CDATA[1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象学习代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31]]></description>
 </item></channel>
 </rss>
