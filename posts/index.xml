@@ -1,78 +1,78 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>所有文章 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <description>所有文章 | Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 12 Jul 2024 02:04:49 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>使用Canacitor构建基于Vue/React的移动端应用</title>
+    <link>http://localhost:1313/posts/canacitor_init/</link>
+    <pubDate>Fri, 12 Jul 2024 02:04:49 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/canacitor_init/</guid>
+    <description><![CDATA[Canacitor简介 Canacitor是一个基于Vue/React的移动端应用开发框架，它提供了一套完整的开发工具和组件库，可以帮助开发者]]></description>
+</item><item>
     <title>购物车页面制作教程（包含分页设计）</title>
-    <link>http://dodolalorc.cn/posts/testcart/</link>
+    <link>http://localhost:1313/posts/testcart/</link>
     <pubDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/testcart/</guid>
+    </author><guid>http://localhost:1313/posts/testcart/</guid>
     <description><![CDATA[前言 这篇文章用于2024年蓝旭暑期项目前的培训作业教学，目的是从零开始构建一个购物车页面，以此来熟悉原生前端三件套。o((&gt;ω&lt;]]></description>
 </item><item>
     <title>Github Action实践</title>
-    <link>http://dodolalorc.cn/posts/github_action/</link>
+    <link>http://localhost:1313/posts/github_action/</link>
     <pubDate>Fri, 05 Jul 2024 23:11:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/github_action/</guid>
+    </author><guid>http://localhost:1313/posts/github_action/</guid>
     <description><![CDATA[前言本篇记录利用github action实现自动化构建和部署的过程。 本站除了部署在github page上，还部署在本人的服务器上，懒惰的dd]]></description>
 </item><item>
     <title>2024吉林省赛补题记录</title>
-    <link>http://dodolalorc.cn/posts/24jilinccpc/</link>
+    <link>http://localhost:1313/posts/24jilinccpc/</link>
     <pubDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/24jilinccpc/</guid>
+    </author><guid>http://localhost:1313/posts/24jilinccpc/</guid>
     <description><![CDATA[阿巴阿巴 啊，省赛，怎么两个月过去了才整理题解，这一定是在复习（确信 GYM地址：2024吉林省赛 题目顺序按照从易到难排序。 I. The Easiest Problem 题意数一数 代]]></description>
 </item><item>
     <title>CS-APP Datalab</title>
-    <link>http://dodolalorc.cn/posts/datalab/</link>
+    <link>http://localhost:1313/posts/datalab/</link>
     <pubDate>Thu, 04 Jul 2024 20:49:31 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/datalab/</guid>
+    </author><guid>http://localhost:1313/posts/datalab/</guid>
     <description><![CDATA[0. before start实验需要的材料在这里：CSAPP Datalab CSAPP原书在线阅读 将datalab-handout.tar下载复制到计划用来实验的目录下]]></description>
 </item><item>
     <title>MutationObserver学习&#43;实践</title>
-    <link>http://dodolalorc.cn/posts/mutationobserver/</link>
+    <link>http://localhost:1313/posts/mutationobserver/</link>
     <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid>
+    </author><guid>http://localhost:1313/posts/mutationobserver/</guid>
     <description><![CDATA[一篇学习 MutationObserver 的文章 背景今天调整新主题的时候，在重新设计友链样式的时候想保留原本的随机背景颜色，之前数量少的时候似乎不太明显，现在本地测试发觉加]]></description>
 </item><item>
     <title>为twikoo添加图片功能</title>
-    <link>http://dodolalorc.cn/posts/twikoo_with_imgs/</link>
+    <link>http://localhost:1313/posts/twikoo_with_imgs/</link>
     <pubDate>Wed, 29 May 2024 15:24:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/twikoo_with_imgs/</guid>
+    </author><guid>http://localhost:1313/posts/twikoo_with_imgs/</guid>
     <description><![CDATA[一篇私有配置图床，给twikoo评论插件添加图片功能的文章。 背景背景：最近回想起来本站的twikoo评论尚未配置过图床，所以此前评论区不能上]]></description>
 </item><item>
     <title>Vue3封装一个SVG组件</title>
-    <link>http://dodolalorc.cn/posts/vue_svgicon/</link>
+    <link>http://localhost:1313/posts/vue_svgicon/</link>
     <pubDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/vue_svgicon/</guid>
+    </author><guid>http://localhost:1313/posts/vue_svgicon/</guid>
     <description><![CDATA[Vue3+Vite+Svg以前使用Svg的时候会图简单直接将内容巨长的Svg代码粘贴在项目中，结果导致需要用Svg图标的部分代码巨长，今天写]]></description>
 </item><item>
     <title>线段树讲义||寒假</title>
-    <link>http://dodolalorc.cn/posts/segtreelecnote/</link>
+    <link>http://localhost:1313/posts/segtreelecnote/</link>
     <pubDate>Wed, 13 Mar 2024 13:29:07 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/segtreelecnote/</guid>
+    </author><guid>http://localhost:1313/posts/segtreelecnote/</guid>
     <description><![CDATA[线段树介绍 线段树是一棵二叉树，每个节点维护一个区间内$[l,r]$的信息 左子树区间维护$[l,\lfloor \frac{l+r}{2} \rfloor]$的信息，右子]]></description>
 </item><item>
     <title>Codeforces Round 930(div2)</title>
-    <link>http://dodolalorc.cn/posts/cfround930div2/</link>
+    <link>http://localhost:1313/posts/cfround930div2/</link>
     <pubDate>Wed, 13 Mar 2024 12:26:38 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/cfround930div2/</guid>
+    </author><guid>http://localhost:1313/posts/cfround930div2/</guid>
     <description><![CDATA[A-Shuffle Party 题意对一个数组，起初是$a_i=i$ 对操作swap(k)： 设$d$是不等于$k$本身的$k$的最大除数，然后交换元素$a_d$和$a_k]]></description>
-</item><item>
-    <title>Codeforces Round 931(div2)</title>
-    <link>http://dodolalorc.cn/posts/cfround931div2/</link>
-    <pubDate>Wed, 13 Mar 2024 12:26:22 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/cfround931div2/</guid>
-    <description><![CDATA[A-Too Min Too Max 题意对一个数组，找到索引$(i,j,k,l)$使得$|a_i-a_j|+|a_j-a_k|+|a_k-a_l|+|a_l-a_i|$]]></description>
 </item></channel>
 </rss>

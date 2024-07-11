@@ -1,78 +1,78 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - 标签 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/tags/</link>
+        <link>http://localhost:1313/tags/</link>
         <description>Tags - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
     <title>前端</title>
-    <link>http://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/</link>
+    <link>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</link>
     <pubDate>Sat, 06 Jul 2024 19:16:27 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/tags/%E5%89%8D%E7%AB%AF/</guid>
+    </author><guid>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>CI/CD</title>
-    <link>http://dodolalorc.cn/tags/ci/cd/</link>
+    <link>http://localhost:1313/tags/ci/cd/</link>
     <pubDate>Fri, 05 Jul 2024 23:11:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/tags/ci/cd/</guid>
+    </author><guid>http://localhost:1313/tags/ci/cd/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Github Action</title>
-    <link>http://dodolalorc.cn/tags/github-action/</link>
+    <link>http://localhost:1313/tags/github-action/</link>
     <pubDate>Fri, 05 Jul 2024 23:11:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/tags/github-action/</guid>
+    </author><guid>http://localhost:1313/tags/github-action/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>算法</title>
-    <link>http://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</link>
+    <link>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</link>
     <pubDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</guid>
+    </author><guid>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>CSAPP</title>
-    <link>http://dodolalorc.cn/tags/csapp/</link>
+    <link>http://localhost:1313/tags/csapp/</link>
     <pubDate>Thu, 04 Jul 2024 20:49:31 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/tags/csapp/</guid>
+    </author><guid>http://localhost:1313/tags/csapp/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>JavaScript</title>
-    <link>http://dodolalorc.cn/tags/javascript/</link>
+    <link>http://localhost:1313/tags/javascript/</link>
     <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/tags/javascript/</guid>
+    </author><guid>http://localhost:1313/tags/javascript/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Twikoo</title>
-    <link>http://dodolalorc.cn/tags/twikoo/</link>
+    <link>http://localhost:1313/tags/twikoo/</link>
     <pubDate>Wed, 29 May 2024 15:24:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/tags/twikoo/</guid>
+    </author><guid>http://localhost:1313/tags/twikoo/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Svg</title>
-    <link>http://dodolalorc.cn/tags/svg/</link>
+    <link>http://localhost:1313/tags/svg/</link>
     <pubDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/tags/svg/</guid>
+    </author><guid>http://localhost:1313/tags/svg/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Vite</title>
-    <link>http://dodolalorc.cn/tags/vite/</link>
+    <link>http://localhost:1313/tags/vite/</link>
     <pubDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/tags/vite/</guid>
+    </author><guid>http://localhost:1313/tags/vite/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Vue</title>
-    <link>http://dodolalorc.cn/tags/vue/</link>
+    <link>http://localhost:1313/tags/vue/</link>
     <pubDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/tags/vue/</guid>
+    </author><guid>http://localhost:1313/tags/vue/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

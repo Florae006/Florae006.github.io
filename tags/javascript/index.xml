@@ -1,43 +1,43 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>JavaScript - 标签 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/tags/javascript/</link>
+        <link>http://localhost:1313/tags/javascript/</link>
         <description>JavaScript - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/javascript/" rel="self" type="application/rss+xml" /><item>
     <title>MutationObserver学习&#43;实践</title>
-    <link>http://dodolalorc.cn/posts/mutationobserver/</link>
+    <link>http://localhost:1313/posts/mutationobserver/</link>
     <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid>
+    </author><guid>http://localhost:1313/posts/mutationobserver/</guid>
     <description><![CDATA[一篇学习 MutationObserver 的文章 背景今天调整新主题的时候，在重新设计友链样式的时候想保留原本的随机背景颜色，之前数量少的时候似乎不太明显，现在本地测试发觉加]]></description>
 </item><item>
     <title>一个Vue项目的基础模板||PC端&#43;移动端适配</title>
-    <link>http://dodolalorc.cn/posts/vuemod/</link>
+    <link>http://localhost:1313/posts/vuemod/</link>
     <pubDate>Sun, 10 Mar 2024 17:14:08 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/vuemod/</guid>
+    </author><guid>http://localhost:1313/posts/vuemod/</guid>
     <description><![CDATA[创建项目 1 2 3 4 npm create vite@latest dodola -- --template vue-ts cd dodola npm install npm run dev 转到根目录下后 规范目录 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 ├── dist/ └── src/ ├── api │ └─]]></description>
 </item><item>
     <title>【网站美化】点击特效2</title>
-    <link>http://dodolalorc.cn/posts/beautify_site_clickfollow/</link>
+    <link>http://localhost:1313/posts/beautify_site_clickfollow/</link>
     <pubDate>Tue, 19 Dec 2023 20:57:26 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/beautify_site_clickfollow/</guid>
+    </author><guid>http://localhost:1313/posts/beautify_site_clickfollow/</guid>
     <description><![CDATA[增加了一个鼠标追尾的效果 QwQ 添加文件的方式参考上一篇~指路这篇 js文件：pointerfollow.js js 原文件来源：Canva&rsquo;]]></description>
 </item><item>
     <title>【网站美化】点击特效</title>
-    <link>http://dodolalorc.cn/posts/beautify_site_click/</link>
+    <link>http://localhost:1313/posts/beautify_site_click/</link>
     <pubDate>Mon, 18 Dec 2023 14:12:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/beautify_site_click/</guid>
+    </author><guid>http://localhost:1313/posts/beautify_site_click/</guid>
     <description><![CDATA[今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码 添加js文件这]]></description>
 </item><item>
     <title>哆哆啦のjQuery学习笔记（超细）（23.07.28）</title>
-    <link>http://dodolalorc.cn/posts/jquery_notes/</link>
+    <link>http://localhost:1313/posts/jquery_notes/</link>
     <pubDate>Fri, 01 Dec 2023 13:10:27 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/jquery_notes/</guid>
+    </author><guid>http://localhost:1313/posts/jquery_notes/</guid>
     <description><![CDATA[1. jQuery对象 jQuery使用 Dom对象和jQuery包装集对象学习代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31]]></description>
 </item></channel>
 </rss>

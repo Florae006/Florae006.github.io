@@ -12,8 +12,8 @@
 {{<friend name="Roses" url="https://rossqaq.github.io/" avatar="https://dorolove.cn/img/avatar_hu57fe4ea25b3b752b8c24bca0d657f08c_427356_300x0_resize_box_3.png" bio="NENU 唯一懂 C++ 的人" siteshot="" >}}
 {{<friend name="Echo 的小窝" url="https://www.liveout.cn/" avatar="https://yy.liveout.cn/photo/photo2.jpg" bio="漂泊于互联网中的小窝" siteshot="" >}}
 {{<friend name="KAMIASUKA’s Blog" url="https://kamiasuka.top/index.html" avatar="https://foruda.gitee.com/avatar/1699007508663606881/13417927_kamiasuka_1699007508.png!avatar200" bio="Patience is key in life" siteshot="" >}}
-{{<friend name="幻雪的博客" url="https://huanxueblog.top/" avatar="https://cdn.jsdelivr.net/gh/huanxueshengmou/picture-host/huanxueblog_avatar.webp" bio="腐烂于花海，致死于所爱" siteshot="https://huanxueblog.top/url/" >}}
-{{<friend name="UTTN" url="/img/avatar.webp" bio="我要当长毛文艺b" siteshot="" >}}
+{{<friend name="幻雪的博客" url="https://huanxueblog.top/" avatar="https://s1.hdslb.com/bfs/static/webssr/article/empty.png" bio="腐烂于花海，致死于所爱" siteshot="https://huanxueblog.top/url/" >}}
+{{<friend name="UTTN" url="https://www.galgalgal.icu/" avatar="https://s1.hdslb.com/bfs/static/webssr/article/empty.png" bio="我要当长毛文艺b" siteshot="" >}}
 
 
 ✨️✨️ 本站友链信息：
