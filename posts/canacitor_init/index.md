@@ -1,4 +1,4 @@
-# (水)Canacitor构建基于Vue/React的移动端应用
+# 【划水】Canacitor构建基于Vue/React的移动端应用
 
 
 最近工作需要开发一个移动端应用，考虑到我们团队前端已经有Vue/React的开发经验，所以决定使用[Canacitor](https://capacitorjs.com/)来构建。

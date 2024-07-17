@@ -1,78 +1,78 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>关于Hugo的一些设置 - 分类 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</link>
+        <link>http://localhost:1313/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</link>
         <description>关于Hugo的一些设置 - 分类 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/" rel="self" type="application/rss+xml" /><item>
     <title>MutationObserver学习&#43;实践</title>
-    <link>http://dodolalorc.cn/posts/mutationobserver/</link>
+    <link>http://localhost:1313/posts/mutationobserver/</link>
     <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid>
+    </author><guid>http://localhost:1313/posts/mutationobserver/</guid>
     <description><![CDATA[一篇学习 MutationObserver 的文章 背景今天调整新主题的时候，在重新设计友链样式的时候想保留原本的随机背景颜色，之前数量少的时候似乎不太明显，现在本地测试发觉加]]></description>
 </item><item>
     <title>为twikoo添加图片功能</title>
-    <link>http://dodolalorc.cn/posts/twikoo_with_imgs/</link>
+    <link>http://localhost:1313/posts/twikoo_with_imgs/</link>
     <pubDate>Wed, 29 May 2024 15:24:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/twikoo_with_imgs/</guid>
+    </author><guid>http://localhost:1313/posts/twikoo_with_imgs/</guid>
     <description><![CDATA[一篇私有配置图床，给twikoo评论插件添加图片功能的文章。 背景背景：最近回想起来本站的twikoo评论尚未配置过图床，所以此前评论区不能上]]></description>
 </item><item>
     <title>另一种为hugo渲染Mermaid绘图的方式</title>
-    <link>http://dodolalorc.cn/posts/mermaid_js_2/</link>
+    <link>http://localhost:1313/posts/mermaid_js_2/</link>
     <pubDate>Sun, 10 Mar 2024 21:29:25 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mermaid_js_2/</guid>
+    </author><guid>http://localhost:1313/posts/mermaid_js_2/</guid>
     <description><![CDATA[最近研究英文的官方文档发现了HUGO官方给渲染Mermaid提供了思路（!原来Hugo可以支持这种渲染），此处做笔记记录，算作是另一种方式。]]></description>
 </item><item>
     <title>【拓展Markdown】为hugo渲染Mermaid绘图</title>
-    <link>http://dodolalorc.cn/posts/mermaid_js/</link>
+    <link>http://localhost:1313/posts/mermaid_js/</link>
     <pubDate>Sat, 23 Dec 2023 20:00:25 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mermaid_js/</guid>
+    </author><guid>http://localhost:1313/posts/mermaid_js/</guid>
     <description><![CDATA[今天打算转帖原来发过的一篇博文时，遇到了Markdown中嵌入的Mermaid无法正常显示的问题，Mermaid可以内嵌于Markdown中]]></description>
 </item><item>
     <title>【拓展Markdown】为hugo渲染数学公式</title>
-    <link>http://dodolalorc.cn/posts/mathjax_js/</link>
+    <link>http://localhost:1313/posts/mathjax_js/</link>
     <pubDate>Sat, 23 Dec 2023 19:16:50 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mathjax_js/</guid>
+    </author><guid>http://localhost:1313/posts/mathjax_js/</guid>
     <description><![CDATA[效果解决了之前一直没有解决的一个小bug——我的hugo没有办法渲染Markdown里数学公式捏qwq 现在成功从图1到图2了！ 调整之前 调整之]]></description>
 </item><item>
     <title>【网站美化】点击特效2</title>
-    <link>http://dodolalorc.cn/posts/beautify_site_clickfollow/</link>
+    <link>http://localhost:1313/posts/beautify_site_clickfollow/</link>
     <pubDate>Tue, 19 Dec 2023 20:57:26 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/beautify_site_clickfollow/</guid>
+    </author><guid>http://localhost:1313/posts/beautify_site_clickfollow/</guid>
     <description><![CDATA[增加了一个鼠标追尾的效果 QwQ 添加文件的方式参考上一篇~指路这篇 js文件：pointerfollow.js js 原文件来源：Canva&rsquo;]]></description>
 </item><item>
     <title>【网站美化】点击特效</title>
-    <link>http://dodolalorc.cn/posts/beautify_site_click/</link>
+    <link>http://localhost:1313/posts/beautify_site_click/</link>
     <pubDate>Mon, 18 Dec 2023 14:12:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/beautify_site_click/</guid>
+    </author><guid>http://localhost:1313/posts/beautify_site_click/</guid>
     <description><![CDATA[今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码 添加js文件这]]></description>
 </item><item>
     <title>【网站美化】标签美化</title>
-    <link>http://dodolalorc.cn/posts/beautify_site_tags/</link>
+    <link>http://localhost:1313/posts/beautify_site_tags/</link>
     <pubDate>Wed, 13 Dec 2023 23:00:09 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/beautify_site_tags/</guid>
+    </author><guid>http://localhost:1313/posts/beautify_site_tags/</guid>
     <description><![CDATA[简单设计assets/css/common/terms.css添加： 1 2 3 4 5 6 7 .terms-tags{ padding-left: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; } 添加权重在./layouts/_d]]></description>
 </item><item>
     <title>第壹话|基本样式</title>
-    <link>http://dodolalorc.cn/posts/basic_setting/</link>
+    <link>http://localhost:1313/posts/basic_setting/</link>
     <pubDate>Thu, 30 Nov 2023 21:53:02 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/basic_setting/</guid>
+    </author><guid>http://localhost:1313/posts/basic_setting/</guid>
     <description><![CDATA[这部分是2023/11/30更新的一些基础样式设置，包括到设置友链 基础设置参考：Features · adityatelange/hugo-PaperMod Wiki (github.com) 我的初步设置一览： 1 2 3 4 5 6 7 8 9]]></description>
 </item><item>
     <title>第零话|Hugo建站</title>
-    <link>http://dodolalorc.cn/posts/build_hugo/</link>
+    <link>http://localhost:1313/posts/build_hugo/</link>
     <pubDate>Wed, 29 Nov 2023 19:11:55 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/build_hugo/</guid>
+    </author><guid>http://localhost:1313/posts/build_hugo/</guid>
     <description><![CDATA[这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程 使用环境 开发环境：Windows 11 Hugo版本：Hugo v0.114.0 Git]]></description>
 </item></channel>
 </rss>
