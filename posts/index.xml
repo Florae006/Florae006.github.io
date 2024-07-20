@@ -4,7 +4,14 @@
         <link>http://localhost:1313/posts/</link>
         <description>所有文章 | Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Tue, 16 Jul 2024 19:36:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 19 Jul 2024 19:08:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>2024牛客暑假多校训练营Day2||补题</title>
+    <link>http://localhost:1313/posts/nc24sd2/</link>
+    <pubDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd2/</guid>
+    <description><![CDATA[E-GCD VS XOR有人卡签到。。。TAT 题意给定正整数$x$，求满足$gcd(x,y)=x\oplus y$的小于$x$的正整数$y$。若无则打印-1]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day1||补题</title>
     <link>http://localhost:1313/posts/nc24sd1/</link>
     <pubDate>Tue, 16 Jul 2024 19:36:00 &#43;0800</pubDate><author>
@@ -67,12 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/vue_svgicon/</guid>
     <description><![CDATA[Vue3+Vite+Svg以前使用Svg的时候会图简单直接将内容巨长的Svg代码粘贴在项目中，结果导致需要用Svg图标的部分代码巨长，今天写]]></description>
-</item><item>
-    <title>线段树讲义||寒假</title>
-    <link>http://localhost:1313/posts/segtreelecnote/</link>
-    <pubDate>Wed, 13 Mar 2024 13:29:07 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/segtreelecnote/</guid>
-    <description><![CDATA[线段树介绍 线段树是一棵二叉树，每个节点维护一个区间内$[l,r]$的信息 左子树区间维护$[l,\lfloor \frac{l+r}{2} \rfloor]$的信息，右子]]></description>
 </item></channel>
 </rss>

@@ -4,7 +4,14 @@
         <link>http://localhost:1313/tags/%E7%89%9B%E5%AE%A2/</link>
         <description>牛客 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Tue, 16 Jul 2024 19:36:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%89%9B%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%89%9B%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+    <title>2024牛客暑假多校训练营Day2||补题</title>
+    <link>http://localhost:1313/posts/nc24sd2/</link>
+    <pubDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd2/</guid>
+    <description><![CDATA[E-GCD VS XOR有人卡签到。。。TAT 题意给定正整数$x$，求满足$gcd(x,y)=x\oplus y$的小于$x$的正整数$y$。若无则打印-1]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day1||补题</title>
     <link>http://localhost:1313/posts/nc24sd1/</link>
     <pubDate>Tue, 16 Jul 2024 19:36:00 &#43;0800</pubDate><author>

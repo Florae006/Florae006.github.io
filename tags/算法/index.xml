@@ -4,7 +4,14 @@
         <link>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</link>
         <description>算法 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Tue, 16 Jul 2024 19:36:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>2024牛客暑假多校训练营Day2||补题</title>
+    <link>http://localhost:1313/posts/nc24sd2/</link>
+    <pubDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd2/</guid>
+    <description><![CDATA[E-GCD VS XOR有人卡签到。。。TAT 题意给定正整数$x$，求满足$gcd(x,y)=x\oplus y$的小于$x$的正整数$y$。若无则打印-1]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day1||补题</title>
     <link>http://localhost:1313/posts/nc24sd1/</link>
     <pubDate>Tue, 16 Jul 2024 19:36:00 &#43;0800</pubDate><author>
@@ -67,12 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/lineardp/</guid>
     <description><![CDATA[👾线性动态规划线性动态规划，即具有线性阶段划分的动态规划。 💭[P1216]数字三角形 [USACO1.5] [IOI1994]数字三角形 Number Triangles 题目描述观察下面的数字]]></description>
-</item><item>
-    <title>Educational Codeforces Round 162(div2)</title>
-    <link>http://localhost:1313/posts/cfedu162div2/</link>
-    <pubDate>Thu, 29 Feb 2024 14:57:07 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfedu162div2/</guid>
-    <description><![CDATA[A-Moving Chips 题意每个单元格为空闲或有一个芯片，芯片可以向左移动到最近的空闲处（如果存在空闲格）。 现在有一排单元格，求问进行多少次移动，才能使得所有芯]]></description>
 </item></channel>
 </rss>

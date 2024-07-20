@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/nc24wd1/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-02-02T20:30:40+08:00" />
-<meta property="article:modified_time" content="2024-07-04T15:38:42+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+<meta property="article:modified_time" content="2024-07-20T17:56:53+08:00" /><meta property="og:site_name" content="Doごみ箱" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="2024牛客寒假营1||补题"/>
@@ -32,7 +32,7 @@
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/posts\/nc24wd1\/"
         },"genre": "posts","keywords": "算法, 牛客","wordcount":  3555 ,
-        "url": "http:\/\/localhost:1313\/posts\/nc24wd1\/","datePublished": "2024-02-02T20:30:40+08:00","dateModified": "2024-07-04T15:38:42+08:00","license": "dodola","publisher": {
+        "url": "http:\/\/localhost:1313\/posts\/nc24wd1\/","datePublished": "2024-02-02T20:30:40+08:00","dateModified": "2024-07-20T17:56:53+08:00","license": "dodola","publisher": {
             "@type": "Organization",
             "name": "DODOLA"},"author": {
                 "@type": "Person",
@@ -134,150 +134,123 @@
     <h2 class="toc-title">目录</h2>
     <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#题意">题意</a>
+    <li><a href="#a-dfs搜索">A-DFS搜索</a>
       <ul>
-        <li>
+        <li><a href="#题意">题意</a>
           <ul>
             <li><a href="#数据范围">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路">思路</a></li>
+        <li><a href="#参考代码">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路">思路</a></li>
-    <li><a href="#参考代码">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-1">题意</a>
+    <li><a href="#b-关鸡">B-关鸡</a>
       <ul>
-        <li>
+        <li><a href="#题意-1">题意</a>
           <ul>
             <li><a href="#数据范围-1">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-1">思路</a></li>
+        <li><a href="#参考代码-1">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-1">思路</a></li>
-    <li><a href="#参考代码-1">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-2">题意</a>
+    <li><a href="#c-按闹分配">C-按闹分配</a>
       <ul>
-        <li>
+        <li><a href="#题意-2">题意</a>
           <ul>
             <li><a href="#数据范围-2">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-2">思路</a></li>
+        <li><a href="#参考代码-2">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-2">思路</a></li>
-    <li><a href="#参考代码-2">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-3">题意</a>
+    <li><a href="#d-本题又主要考察了贪心">D-本题又主要考察了贪心</a>
       <ul>
-        <li>
+        <li><a href="#题意-3">题意</a>
           <ul>
             <li><a href="#数据范围-3">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-3">思路</a></li>
+        <li><a href="#参考代码-3">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-3">思路</a></li>
-    <li><a href="#参考代码-3">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-4">题意</a>
+    <li><a href="#f-鸡数题">F-鸡数题</a>
       <ul>
-        <li>
+        <li><a href="#题意-4">题意</a>
           <ul>
             <li><a href="#数据范围-4">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-4">思路</a></li>
+        <li><a href="#参考代码-4">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-4">思路</a></li>
-    <li><a href="#参考代码-4">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-5">题意</a>
+    <li><a href="#g-why买外卖">G-why买外卖</a>
       <ul>
-        <li>
+        <li><a href="#题意-5">题意</a>
           <ul>
             <li><a href="#数据范围-5">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-5">思路</a></li>
+        <li><a href="#参考代码-5">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-5">思路</a></li>
-    <li><a href="#参考代码-5">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-6">题意</a>
+    <li><a href="#i-its-bertrand-paradox-again">I-It&rsquo;s bertrand paradox. Again!</a>
       <ul>
-        <li>
+        <li><a href="#题意-6">题意</a>
           <ul>
             <li><a href="#数据范围-6">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-6">思路</a></li>
+        <li><a href="#参考代码-6">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-6">思路</a></li>
-    <li><a href="#参考代码-6">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-7">题意</a>
+    <li><a href="#h-01背包但是bit">H-01背包，但是bit</a>
       <ul>
-        <li>
+        <li><a href="#题意-7">题意</a>
           <ul>
             <li><a href="#数据范围-7">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-7">思路</a></li>
+        <li><a href="#参考代码-7">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-7">思路</a></li>
-    <li><a href="#参考代码-7">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-8">题意</a>
+    <li><a href="#l-要有光">L-要有光</a>
       <ul>
-        <li>
+        <li><a href="#题意-8">题意</a>
           <ul>
             <li><a href="#数据范围-8">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-8">思路</a></li>
+        <li><a href="#参考代码-8">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-8">思路</a></li>
-    <li><a href="#参考代码-8">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-9">题意</a>
+    <li><a href="#m-牛客老粉才知道的秘密">M-牛客老粉才知道的秘密</a>
       <ul>
-        <li>
+        <li><a href="#题意-9">题意</a>
           <ul>
             <li><a href="#数据范围-9">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-9">思路</a></li>
+        <li><a href="#参考代码-9">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-9">思路</a></li>
-    <li><a href="#参考代码-9">参考代码</a></li>
   </ul>
 </nav></div>
 </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">2024牛客寒假营1||补题</h1><div class="post-meta">
         <div class="post-meta-line">
             <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
             </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在学算法的日子里</a></span></div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-02-02">2024-02-02</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-04">2024-07-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3555 字&nbsp;
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-02-02">2024-02-02</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-20">2024-07-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3555 字&nbsp;
             <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;<span id="/posts/nc24wd1/" class="leancloud_visitors" data-flag-title="2024牛客寒假营1||补题">
                 <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"
                     id=twikoo_visitors></span>&nbsp;次阅读
@@ -306,155 +279,128 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#题意">题意</a>
+    <li><a href="#a-dfs搜索">A-DFS搜索</a>
       <ul>
-        <li>
+        <li><a href="#题意">题意</a>
           <ul>
             <li><a href="#数据范围">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路">思路</a></li>
+        <li><a href="#参考代码">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路">思路</a></li>
-    <li><a href="#参考代码">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-1">题意</a>
+    <li><a href="#b-关鸡">B-关鸡</a>
       <ul>
-        <li>
+        <li><a href="#题意-1">题意</a>
           <ul>
             <li><a href="#数据范围-1">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-1">思路</a></li>
+        <li><a href="#参考代码-1">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-1">思路</a></li>
-    <li><a href="#参考代码-1">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-2">题意</a>
+    <li><a href="#c-按闹分配">C-按闹分配</a>
       <ul>
-        <li>
+        <li><a href="#题意-2">题意</a>
           <ul>
             <li><a href="#数据范围-2">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-2">思路</a></li>
+        <li><a href="#参考代码-2">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-2">思路</a></li>
-    <li><a href="#参考代码-2">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-3">题意</a>
+    <li><a href="#d-本题又主要考察了贪心">D-本题又主要考察了贪心</a>
       <ul>
-        <li>
+        <li><a href="#题意-3">题意</a>
           <ul>
             <li><a href="#数据范围-3">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-3">思路</a></li>
+        <li><a href="#参考代码-3">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-3">思路</a></li>
-    <li><a href="#参考代码-3">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-4">题意</a>
+    <li><a href="#f-鸡数题">F-鸡数题</a>
       <ul>
-        <li>
+        <li><a href="#题意-4">题意</a>
           <ul>
             <li><a href="#数据范围-4">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-4">思路</a></li>
+        <li><a href="#参考代码-4">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-4">思路</a></li>
-    <li><a href="#参考代码-4">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-5">题意</a>
+    <li><a href="#g-why买外卖">G-why买外卖</a>
       <ul>
-        <li>
+        <li><a href="#题意-5">题意</a>
           <ul>
             <li><a href="#数据范围-5">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-5">思路</a></li>
+        <li><a href="#参考代码-5">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-5">思路</a></li>
-    <li><a href="#参考代码-5">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-6">题意</a>
+    <li><a href="#i-its-bertrand-paradox-again">I-It&rsquo;s bertrand paradox. Again!</a>
       <ul>
-        <li>
+        <li><a href="#题意-6">题意</a>
           <ul>
             <li><a href="#数据范围-6">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-6">思路</a></li>
+        <li><a href="#参考代码-6">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-6">思路</a></li>
-    <li><a href="#参考代码-6">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-7">题意</a>
+    <li><a href="#h-01背包但是bit">H-01背包，但是bit</a>
       <ul>
-        <li>
+        <li><a href="#题意-7">题意</a>
           <ul>
             <li><a href="#数据范围-7">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-7">思路</a></li>
+        <li><a href="#参考代码-7">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-7">思路</a></li>
-    <li><a href="#参考代码-7">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-8">题意</a>
+    <li><a href="#l-要有光">L-要有光</a>
       <ul>
-        <li>
+        <li><a href="#题意-8">题意</a>
           <ul>
             <li><a href="#数据范围-8">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-8">思路</a></li>
+        <li><a href="#参考代码-8">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-8">思路</a></li>
-    <li><a href="#参考代码-8">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-9">题意</a>
+    <li><a href="#m-牛客老粉才知道的秘密">M-牛客老粉才知道的秘密</a>
       <ul>
-        <li>
+        <li><a href="#题意-9">题意</a>
           <ul>
             <li><a href="#数据范围-9">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-9">思路</a></li>
+        <li><a href="#参考代码-9">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-9">思路</a></li>
-    <li><a href="#参考代码-9">参考代码</a></li>
   </ul>
 </nav></div>
-    </div><div class="content" id="content"><h1 id="a-dfs搜索" class="headerLink">
-    <a href="#a-dfs%e6%90%9c%e7%b4%a2" class="header-mark"></a>A-DFS搜索</h1><h2 id="题意" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h2><p>给一个字符串，判断其中是否包含<code>dfs</code>子序列和<code>DFS</code>子序列。</p>
+    </div><div class="content" id="content"><h2 id="a-dfs搜索" class="headerLink">
+    <a href="#a-dfs%e6%90%9c%e7%b4%a2" class="header-mark"></a>A-DFS搜索</h2><h3 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>给一个字符串，判断其中是否包含<code>dfs</code>子序列和<code>DFS</code>子序列。</p>
 <h4 id="数据范围" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><p>$T(1≤T≤100)$</p>
 <p>$n(1≤n≤50)$</p>
-<h2 id="思路" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h2><p>直接搜。</p>
-<h2 id="参考代码" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="思路" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>直接搜。</p>
+<h3 id="参考代码" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -508,9 +454,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="b-关鸡" class="headerLink">
-    <a href="#b-%e5%85%b3%e9%b8%a1" class="header-mark"></a>B-关鸡</h1><h2 id="题意-1" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h2><p><figure><a class="lightgallery" href="https://uploadfiles.nowcoder.com/images/20240121/0_1705849989132/3C73FD698696250B894A2646C4440896" title="img" data-thumbnail="https://uploadfiles.nowcoder.com/images/20240121/0_1705849989132/3C73FD698696250B894A2646C4440896">
+</div><h2 id="b-关鸡" class="headerLink">
+    <a href="#b-%e5%85%b3%e9%b8%a1" class="header-mark"></a>B-关鸡</h2><h3 id="题意-1" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p><figure><a class="lightgallery" href="https://uploadfiles.nowcoder.com/images/20240121/0_1705849989132/3C73FD698696250B894A2646C4440896" title="img" data-thumbnail="https://uploadfiles.nowcoder.com/images/20240121/0_1705849989132/3C73FD698696250B894A2646C4440896">
         <img
             
             loading="lazy"
@@ -525,8 +471,8 @@
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-1" class="header-mark"></a>数据范围</h4><p>$T(1≤T≤1e4)$</p>
 <p>$0≤n≤1e5$</p>
 <p>$r,c(1≤r≤2,−1e9≤c≤1e9)$</p>
-<h2 id="思路-1" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-1" class="header-mark"></a>思路</h2><p>分别堵住两端的管道即可，堵住有三种情况：</p>
+<h3 id="思路-1" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-1" class="header-mark"></a>思路</h3><p>分别堵住两端的管道即可，堵住有三种情况：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -537,8 +483,8 @@
 </span></span><span class="line"><span class="cl"> 1 2 3  或者     x
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="参考代码-1" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+</div><h3 id="参考代码-1" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -592,19 +538,19 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="c-按闹分配" class="headerLink">
-    <a href="#c-%e6%8c%89%e9%97%b9%e5%88%86%e9%85%8d" class="header-mark"></a>C-按闹分配</h1><h2 id="题意-2" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-2" class="header-mark"></a>题意</h2><p>有n个人要排队办理业务，每个人的不满意度<code>Di</code>按照办完本人业务后的那一刻一共花费了多少时间来算，办事人员合理安排排队顺序，使得总不满意度$S_{min}=\sum_{i=1}^{n}D_i$最小，记为$S_{min}$。</p>
+</div><h2 id="c-按闹分配" class="headerLink">
+    <a href="#c-%e6%8c%89%e9%97%b9%e5%88%86%e9%85%8d" class="header-mark"></a>C-按闹分配</h2><h3 id="题意-2" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-2" class="header-mark"></a>题意</h3><p>有n个人要排队办理业务，每个人的不满意度<code>Di</code>按照办完本人业务后的那一刻一共花费了多少时间来算，办事人员合理安排排队顺序，使得总不满意度$S_{min}=\sum_{i=1}^{n}D_i$最小，记为$S_{min}$。</p>
 <p>然后急急鸡带着需要花费tc时间的业务想插队，办事人员对其的容忍度M如果不小于急急鸡插队后的不满意度$S_{c}$与$S_{min}$的差值，则会允许急急鸡插队。</p>
 <p>有q组询问，每组询问给出容忍度M，求出在该容忍度下急急鸡最快能办完业务的时间。</p>
 <h4 id="数据范围-2" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-2" class="header-mark"></a>数据范围</h4><p>$n,Q,t_c(1≤n,Q≤105,1≤t_c≤1e9)$</p>
 <p>$t_i(1≤t_i≤1e6)$</p>
 <p>$M(0≤M≤1e18)$</p>
-<h2 id="思路-2" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-2" class="header-mark"></a>思路</h2><p>初始从小到大排，求每个客户的不满意度Di（做前缀和）</p>
-<h2 id="参考代码-2" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="思路-2" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-2" class="header-mark"></a>思路</h3><p>初始从小到大排，求每个客户的不满意度Di（做前缀和）</p>
+<h3 id="参考代码-2" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -672,9 +618,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="d-本题又主要考察了贪心" class="headerLink">
-    <a href="#d-%e6%9c%ac%e9%a2%98%e5%8f%88%e4%b8%bb%e8%a6%81%e8%80%83%e5%af%9f%e4%ba%86%e8%b4%aa%e5%bf%83" class="header-mark"></a>D-本题又主要考察了贪心</h1><h2 id="题意-3" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-3" class="header-mark"></a>题意</h2><p><del>大骗子！</del></p>
+</div><h2 id="d-本题又主要考察了贪心" class="headerLink">
+    <a href="#d-%e6%9c%ac%e9%a2%98%e5%8f%88%e4%b8%bb%e8%a6%81%e8%80%83%e5%af%9f%e4%ba%86%e8%b4%aa%e5%bf%83" class="header-mark"></a>D-本题又主要考察了贪心</h2><h3 id="题意-3" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-3" class="header-mark"></a>题意</h3><p><del>大骗子！</del></p>
 <p>n个人的比赛，还剩m局，每局的结果有：</p>
 <ol>
 <li>胜方加3分，败方不得分</li>
@@ -686,10 +632,10 @@
 <p>$n,m(2≤n≤10,1\leq m\leq 10)$</p>
 <p>$0\leq a_i\leq 100$</p>
 <p>$u_i,v_i,1\leq u_i,v_i\leq n,u_i≠v_i$</p>
-<h2 id="思路-3" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-3" class="header-mark"></a>思路</h2><p>不会贪，数据范围小可以直接dfs暴力每种情况取最优，$O(3^m)$</p>
-<h2 id="参考代码-3" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="思路-3" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-3" class="header-mark"></a>思路</h3><p>不会贪，数据范围小可以直接dfs暴力每种情况取最优，$O(3^m)$</p>
+<h3 id="参考代码-3" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -769,9 +715,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="f-鸡数题" class="headerLink">
-    <a href="#f-%e9%b8%a1%e6%95%b0%e9%a2%98" class="header-mark"></a>F-鸡数题</h1><h2 id="题意-4" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-4" class="header-mark"></a>题意</h2><p>求有多少个长为m的数组a同时满足以下条件：</p>
+</div><h2 id="f-鸡数题" class="headerLink">
+    <a href="#f-%e9%b8%a1%e6%95%b0%e9%a2%98" class="header-mark"></a>F-鸡数题</h2><h3 id="题意-4" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-4" class="header-mark"></a>题意</h3><p>求有多少个长为m的数组a同时满足以下条件：</p>
 <ol>
 <li>对任意i，都有$a_i&gt;0$</li>
 <li>数组a严格递增</li>
@@ -781,8 +727,8 @@
 <p>答案要对$10^9+7$取模</p>
 <h4 id="数据范围-4" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-4" class="header-mark"></a>数据范围</h4><p>$1\leq n,m\leq 10^5$</p>
-<h2 id="思路-4" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-4" class="header-mark"></a>思路</h2><p>条件3说明，在2进制下的$2^n-1$（也就是数$(\overbrace{11\dots111}^n)_2$）每一位1都至少在$a_1~a_m$中出现一次，数组a的大小为m，联合条件4说明每个数位上的1最多只能出现1次，所以问题转化为，将n个不同位置上1分配给m个数，且每个数至少有1个1。可知$n\geq m$。</p>
+<h3 id="思路-4" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-4" class="header-mark"></a>思路</h3><p>条件3说明，在2进制下的$2^n-1$（也就是数$(\overbrace{11\dots111}^n)_2$）每一位1都至少在$a_1~a_m$中出现一次，数组a的大小为m，联合条件4说明每个数位上的1最多只能出现1次，所以问题转化为，将n个不同位置上1分配给m个数，且每个数至少有1个1。可知$n\geq m$。</p>
 <p>也就是一个第二类斯特林数$n\brace m$。</p>
 <p>递推式：
 $$
@@ -793,8 +739,8 @@ $$
 $$
 {n\brace m}=\sum_{i=0}^m \frac{(-1)^{m-i}\times i^n}{i!\times (m-i)!}
 $$</p>
-<h2 id="参考代码-4" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-4" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="参考代码-4" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-4" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -856,17 +802,17 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="g-why买外卖" class="headerLink">
-    <a href="#g-why%e4%b9%b0%e5%a4%96%e5%8d%96" class="header-mark"></a>G-why买外卖</h1><h2 id="题意-5" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-5" class="header-mark"></a>题意</h2><p>一些可以叠加的满ai减bi的券，现在有m元，提问可以买到食物的原价最大值是多少。</p>
+</div><h2 id="g-why买外卖" class="headerLink">
+    <a href="#g-why%e4%b9%b0%e5%a4%96%e5%8d%96" class="header-mark"></a>G-why买外卖</h2><h3 id="题意-5" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-5" class="header-mark"></a>题意</h3><p>一些可以叠加的满ai减bi的券，现在有m元，提问可以买到食物的原价最大值是多少。</p>
 <h4 id="数据范围-5" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-5" class="header-mark"></a>数据范围</h4><p>$T(1≤T≤1e4)$</p>
 <p>$n,m(1≤n≤1e5,1≤m≤1e9)$</p>
 <p>$a_i,b_i(1≤a_i,b_i≤1e9)$</p>
-<h2 id="思路-5" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-5" class="header-mark"></a>思路</h2><p>前缀和，按照ai升序排列，能用ai的券的食物一定也能使用原价小于等于ai的所有的券，最后枚举原价即可。</p>
-<h2 id="参考代码-5" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-5" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="思路-5" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-5" class="header-mark"></a>思路</h3><p>前缀和，按照ai升序排列，能用ai的券的食物一定也能使用原价小于等于ai的所有的券，最后枚举原价即可。</p>
+<h3 id="参考代码-5" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-5" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -914,9 +860,9 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="i-its-bertrand-paradox-again" class="headerLink">
-    <a href="#i-its-bertrand-paradox-again" class="header-mark"></a>I-It&rsquo;s bertrand paradox. Again!</h1><h2 id="题意-6" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-6" class="header-mark"></a>题意</h2><p>有两种生成平面上的圆的方式，给已生成的数据判断是哪种方式生成的。</p>
+</div><h2 id="i-its-bertrand-paradox-again" class="headerLink">
+    <a href="#i-its-bertrand-paradox-again" class="header-mark"></a>I-It&rsquo;s bertrand paradox. Again!</h2><h3 id="题意-6" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-6" class="header-mark"></a>题意</h3><p>有两种生成平面上的圆的方式，给已生成的数据判断是哪种方式生成的。</p>
 <p>bit-noob的方法：</p>
 <ol>
 <li>随机等概率地从开区间$(−100,100)$生成两个整数$x,y$。</li>
@@ -931,10 +877,10 @@ $$</p>
 <h4 id="数据范围-6" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-6" class="header-mark"></a>数据范围</h4><p>$n=10^5$</p>
 <p>$0&lt; x_i,y_i&lt; 100,0&lt; r_i\leq100$</p>
-<h2 id="思路-6" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-6" class="header-mark"></a>思路</h2><p>两种方法中，第一种的x和y的取值更容易受到r的限制，在r均匀分布在$[1,100]$的情况下，bit-noob的方法相对于buaa-noob的方法，x,y会更偏向集中在原点附近。</p>
-<h2 id="参考代码-6" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-6" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="思路-6" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-6" class="header-mark"></a>思路</h3><p>两种方法中，第一种的x和y的取值更容易受到r的限制，在r均匀分布在$[1,100]$的情况下，bit-noob的方法相对于buaa-noob的方法，x,y会更偏向集中在原点附近。</p>
+<h3 id="参考代码-6" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-6" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -960,18 +906,18 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="h-01背包但是bit" class="headerLink">
-    <a href="#h-01%e8%83%8c%e5%8c%85%e4%bd%86%e6%98%afbit" class="header-mark"></a>H-01背包，但是bit</h1><h2 id="题意-7" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-7" class="header-mark"></a>题意</h2><p>$n$个物品，每个物品有价值$v_i$和重量$w_i$，所选物品的总重量是所选物品重量的<strong>按位或运算</strong>的结果，求总重量不超过$m$的最大价值和</p>
+</div><h2 id="h-01背包但是bit" class="headerLink">
+    <a href="#h-01%e8%83%8c%e5%8c%85%e4%bd%86%e6%98%afbit" class="header-mark"></a>H-01背包，但是bit</h2><h3 id="题意-7" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-7" class="header-mark"></a>题意</h3><p>$n$个物品，每个物品有价值$v_i$和重量$w_i$，所选物品的总重量是所选物品重量的<strong>按位或运算</strong>的结果，求总重量不超过$m$的最大价值和</p>
 <h4 id="数据范围-7" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-7" class="header-mark"></a>数据范围</h4><p>$T(1≤T≤10^4)$</p>
 <p>$n,m(1≤n≤10^5,0\leq m\leq 10^8)$</p>
 <p>$v_i,w_i(0\leq v_i,w_i\leq 10^8)$</p>
-<h2 id="思路-7" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-7" class="header-mark"></a>思路</h2><p>枚举m右移位后的数字，能被这个位数低于m、数位上全是1的新m覆盖的都能拿</p>
+<h3 id="思路-7" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-7" class="header-mark"></a>思路</h3><p>枚举m右移位后的数字，能被这个位数低于m、数位上全是1的新m覆盖的都能拿</p>
 <p>状态转换：拿新筛出来的可选与原来的比较，取价值较大的那个</p>
-<h2 id="参考代码-7" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-7" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="参考代码-7" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-7" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1021,9 +967,9 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="l-要有光" class="headerLink">
-    <a href="#l-%e8%a6%81%e6%9c%89%e5%85%89" class="header-mark"></a>L-要有光</h1><h2 id="题意-8" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-8" class="header-mark"></a>题意</h2><p><figure><a class="lightgallery" href="https://uploadfiles.nowcoder.com/images/20240121/0_1705841503979/D2B5CA33BD970F64A6301FA75AE2EB22" title="img" data-thumbnail="https://uploadfiles.nowcoder.com/images/20240121/0_1705841503979/D2B5CA33BD970F64A6301FA75AE2EB22">
+</div><h2 id="l-要有光" class="headerLink">
+    <a href="#l-%e8%a6%81%e6%9c%89%e5%85%89" class="header-mark"></a>L-要有光</h2><h3 id="题意-8" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-8" class="header-mark"></a>题意</h3><p><figure><a class="lightgallery" href="https://uploadfiles.nowcoder.com/images/20240121/0_1705841503979/D2B5CA33BD970F64A6301FA75AE2EB22" title="img" data-thumbnail="https://uploadfiles.nowcoder.com/images/20240121/0_1705841503979/D2B5CA33BD970F64A6301FA75AE2EB22">
         <img
             
             loading="lazy"
@@ -1038,10 +984,10 @@ $$</p>
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-8" class="header-mark"></a>数据范围</h4><p>$1\leq T\leq 10^4$</p>
 <p>$1\leq c,d,h,w\leq 10^4$</p>
 <p>输出浮点数误差小于$10^{-4}$</p>
-<h2 id="思路-8" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-8" class="header-mark"></a>思路</h2><p>当点光源放在地面上时投影最大(z=0时)，这个投影是一个等腰梯形（大三角形截去一个小三角形）。</p>
-<h2 id="参考代码-8" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-8" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="思路-8" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-8" class="header-mark"></a>思路</h3><p>当点光源放在地面上时投影最大(z=0时)，这个投影是一个等腰梯形（大三角形截去一个小三角形）。</p>
+<h3 id="参考代码-8" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-8" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -1057,9 +1003,9 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="m-牛客老粉才知道的秘密" class="headerLink">
-    <a href="#m-%e7%89%9b%e5%ae%a2%e8%80%81%e7%b2%89%e6%89%8d%e7%9f%a5%e9%81%93%e7%9a%84%e7%a7%98%e5%af%86" class="header-mark"></a>M-牛客老粉才知道的秘密</h1><h2 id="题意-9" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-9" class="header-mark"></a>题意</h2><p><figure><a class="lightgallery" href="https://uploadfiles.nowcoder.com/images/20240128/0_1706427663076/67C4F8301D7C0AE62368329F52B4CF84" title="img" data-thumbnail="https://uploadfiles.nowcoder.com/images/20240128/0_1706427663076/67C4F8301D7C0AE62368329F52B4CF84">
+</div><h2 id="m-牛客老粉才知道的秘密" class="headerLink">
+    <a href="#m-%e7%89%9b%e5%ae%a2%e8%80%81%e7%b2%89%e6%89%8d%e7%9f%a5%e9%81%93%e7%9a%84%e7%a7%98%e5%af%86" class="header-mark"></a>M-牛客老粉才知道的秘密</h2><h3 id="题意-9" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-9" class="header-mark"></a>题意</h3><p><figure><a class="lightgallery" href="https://uploadfiles.nowcoder.com/images/20240128/0_1706427663076/67C4F8301D7C0AE62368329F52B4CF84" title="img" data-thumbnail="https://uploadfiles.nowcoder.com/images/20240128/0_1706427663076/67C4F8301D7C0AE62368329F52B4CF84">
         <img
             
             loading="lazy"
@@ -1073,10 +1019,10 @@ $$</p>
 <h4 id="数据范围-9" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-9" class="header-mark"></a>数据范围</h4><p>$1\leq T\leq 10^5$</p>
 <p>$6\leq n\leq 10^9$</p>
-<h2 id="思路-9" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-9" class="header-mark"></a>思路</h2><p>判断n是否是6的倍数即可，如果正好是6的倍数，那么返回时并不产生新的位置。</p>
-<h2 id="参考代码-9" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-9" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="思路-9" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-9" class="header-mark"></a>思路</h3><p>判断n是否是6的倍数即可，如果正好是6的倍数，那么返回时并不产生新的位置。</p>
+<h3 id="参考代码-9" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-9" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -1101,6 +1047,11 @@ $$</p>
 <div class="related-container">
     <div class="related-item-container">
             <h2 class="related-title">
+                <a href="/posts/nc24sd2/">2024牛客暑假多校训练营Day2||补题</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <h2 class="related-title">
                 <a href="/posts/nc24sd1/">2024牛客暑假多校训练营Day1||补题</a>
             </h2>
         </div>
@@ -1119,11 +1070,6 @@ $$</p>
                 <a href="/posts/cfround930div2/">Codeforces Round 930(div2)</a>
             </h2>
         </div>
-    <div class="related-item-container">
-            <h2 class="related-title">
-                <a href="/posts/cfround931div2/">Codeforces Round 931(div2)</a>
-            </h2>
-        </div>
     
 
 </div>
@@ -1132,7 +1078,7 @@ $$</p>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-07-04</span>
+                <span>更新于 2024-07-20</span>
             </div>
             <div class="post-info-license"></div>
         </div>
