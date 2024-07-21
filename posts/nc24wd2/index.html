@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/nc24wd2/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-02-09T14:46:52+08:00" />
-<meta property="article:modified_time" content="2024-07-04T15:38:45+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+<meta property="article:modified_time" content="2024-07-21T15:43:18+08:00" /><meta property="og:site_name" content="Doごみ箱" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="2024牛客寒假营2||补题"/>
@@ -32,7 +32,7 @@
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/posts\/nc24wd2\/"
         },"genre": "posts","keywords": "算法, 牛客","wordcount":  1615 ,
-        "url": "http:\/\/localhost:1313\/posts\/nc24wd2\/","datePublished": "2024-02-09T14:46:52+08:00","dateModified": "2024-07-04T15:38:45+08:00","license": "dodola","publisher": {
+        "url": "http:\/\/localhost:1313\/posts\/nc24wd2\/","datePublished": "2024-02-09T14:46:52+08:00","dateModified": "2024-07-21T15:43:18+08:00","license": "dodola","publisher": {
             "@type": "Organization",
             "name": "DODOLA"},"author": {
                 "@type": "Person",
@@ -134,80 +134,68 @@
     <h2 class="toc-title">目录</h2>
     <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#题意">题意</a>
+    <li><a href="#a-tokitsukaze-and-bracelet">A-Tokitsukaze and Bracelet</a>
       <ul>
-        <li>
+        <li><a href="#题意">题意</a>
           <ul>
             <li><a href="#数据范围">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路">思路</a></li>
+        <li><a href="#参考代码">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路">思路</a></li>
-    <li><a href="#参考代码">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-1">题意</a>
+    <li><a href="#b-tokitsukaze-and-cats">B-Tokitsukaze and Cats</a>
       <ul>
-        <li>
+        <li><a href="#题意-1">题意</a>
           <ul>
             <li><a href="#数据范围-1">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-1">思路</a></li>
+        <li><a href="#参考代码-1">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-1">思路</a></li>
-    <li><a href="#参考代码-1">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-2">题意</a>
+    <li><a href="#ef-tokitsukaze-and-eliminate">E&amp;F-Tokitsukaze and Eliminate</a>
       <ul>
-        <li>
+        <li><a href="#题意-2">题意</a>
           <ul>
             <li><a href="#数据范围-2">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-2">思路</a></li>
+        <li><a href="#参考代码-2">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-2">思路</a></li>
-    <li><a href="#参考代码-2">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-3">题意</a>
+    <li><a href="#i-tokitsukaze-and-short-path-plus">I-Tokitsukaze and Short Path (plus)</a>
       <ul>
-        <li>
+        <li><a href="#题意-3">题意</a>
           <ul>
             <li><a href="#数据范围-3">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-3">思路</a></li>
+        <li><a href="#参考代码-3">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-3">思路</a></li>
-    <li><a href="#参考代码-3">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-4">题意</a>
+    <li><a href="#j-tokitsukaze-and-short-path-minus">J-Tokitsukaze and Short Path (minus)</a>
       <ul>
-        <li>
+        <li><a href="#题意-4">题意</a>
           <ul>
             <li><a href="#数据范围-4">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-4">思路</a></li>
+        <li><a href="#参考代码-4">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-4">思路</a></li>
-    <li><a href="#参考代码-4">参考代码</a></li>
   </ul>
 </nav></div>
 </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">2024牛客寒假营2||补题</h1><div class="post-meta">
         <div class="post-meta-line">
             <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
             </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在学算法的日子里</a></span></div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-02-09">2024-02-09</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-04">2024-07-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1615 字&nbsp;
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-02-09">2024-02-09</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-21">2024-07-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1615 字&nbsp;
             <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/nc24wd2/" class="leancloud_visitors" data-flag-title="2024牛客寒假营2||补题">
                 <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"
                     id=twikoo_visitors></span>&nbsp;次阅读
@@ -236,78 +224,66 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#题意">题意</a>
+    <li><a href="#a-tokitsukaze-and-bracelet">A-Tokitsukaze and Bracelet</a>
       <ul>
-        <li>
+        <li><a href="#题意">题意</a>
           <ul>
             <li><a href="#数据范围">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路">思路</a></li>
+        <li><a href="#参考代码">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路">思路</a></li>
-    <li><a href="#参考代码">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-1">题意</a>
+    <li><a href="#b-tokitsukaze-and-cats">B-Tokitsukaze and Cats</a>
       <ul>
-        <li>
+        <li><a href="#题意-1">题意</a>
           <ul>
             <li><a href="#数据范围-1">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-1">思路</a></li>
+        <li><a href="#参考代码-1">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-1">思路</a></li>
-    <li><a href="#参考代码-1">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-2">题意</a>
+    <li><a href="#ef-tokitsukaze-and-eliminate">E&amp;F-Tokitsukaze and Eliminate</a>
       <ul>
-        <li>
+        <li><a href="#题意-2">题意</a>
           <ul>
             <li><a href="#数据范围-2">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-2">思路</a></li>
+        <li><a href="#参考代码-2">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-2">思路</a></li>
-    <li><a href="#参考代码-2">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-3">题意</a>
+    <li><a href="#i-tokitsukaze-and-short-path-plus">I-Tokitsukaze and Short Path (plus)</a>
       <ul>
-        <li>
+        <li><a href="#题意-3">题意</a>
           <ul>
             <li><a href="#数据范围-3">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-3">思路</a></li>
+        <li><a href="#参考代码-3">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-3">思路</a></li>
-    <li><a href="#参考代码-3">参考代码</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#题意-4">题意</a>
+    <li><a href="#j-tokitsukaze-and-short-path-minus">J-Tokitsukaze and Short Path (minus)</a>
       <ul>
-        <li>
+        <li><a href="#题意-4">题意</a>
           <ul>
             <li><a href="#数据范围-4">数据范围</a></li>
           </ul>
         </li>
+        <li><a href="#思路-4">思路</a></li>
+        <li><a href="#参考代码-4">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#思路-4">思路</a></li>
-    <li><a href="#参考代码-4">参考代码</a></li>
   </ul>
 </nav></div>
-    </div><div class="content" id="content"><h1 id="a-tokitsukaze-and-bracelet" class="headerLink">
-    <a href="#a-tokitsukaze-and-bracelet" class="header-mark"></a>A-Tokitsukaze and Bracelet</h1><h2 id="题意" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h2><p>根据手环的三个属性值判断手环的等级。</p>
+    </div><div class="content" id="content"><h2 id="a-tokitsukaze-and-bracelet" class="headerLink">
+    <a href="#a-tokitsukaze-and-bracelet" class="header-mark"></a>A-Tokitsukaze and Bracelet</h2><h3 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>根据手环的三个属性值判断手环的等级。</p>
 <ol>
 <li>对攻击百分比来说，+0为100%，+1为150%，+2为200%</li>
 <li>对体力和精神来说，+0在${29,30,31,32}$里选择，+1在${34,36,38,40}$里选择，+2固定为45</li>
@@ -315,10 +291,10 @@
 <h4 id="数据范围" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><p>$n(1≤n≤100)$</p>
 <p>$a_i,b_i,c_i(a_i∈{100,150,200};b_i,ci∈{29,30,31,32,34,36,38,40,45})$</p>
-<h2 id="思路" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h2><p>模拟即可</p>
-<h2 id="参考代码" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="思路" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>模拟即可</p>
+<h3 id="参考代码" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -376,9 +352,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="b-tokitsukaze-and-cats" class="headerLink">
-    <a href="#b-tokitsukaze-and-cats" class="header-mark"></a>B-Tokitsukaze and Cats</h1><h2 id="题意-1" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h2><p>关猫，每个猫被限制在一个单元格内就算被关住了，如图：</p>
+</div><h2 id="b-tokitsukaze-and-cats" class="headerLink">
+    <a href="#b-tokitsukaze-and-cats" class="header-mark"></a>B-Tokitsukaze and Cats</h2><h3 id="题意-1" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>关猫，每个猫被限制在一个单元格内就算被关住了，如图：</p>
 <p><figure><a class="lightgallery" href="https://uploadfiles.nowcoder.com/images/20240125/0_1706174328838/823145AC6726F7B332C8177582B6DA53" title="img" data-thumbnail="https://uploadfiles.nowcoder.com/images/20240125/0_1706174328838/823145AC6726F7B332C8177582B6DA53">
         <img
             
@@ -393,10 +369,10 @@
 <h4 id="数据范围-1" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-1" class="header-mark"></a>数据范围</h4><p>$n, m, k (1≤n,m≤300;1≤k≤n⋅m)$</p>
 <p>$x_i, y_i (1≤xi≤n; 1≤yi≤m)$</p>
-<h2 id="思路-1" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-1" class="header-mark"></a>思路</h2><p>遍历坐标点判断它上下左右是否有隔板，如果没有则补充。</p>
-<h2 id="参考代码-1" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="思路-1" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-1" class="header-mark"></a>思路</h3><p>遍历坐标点判断它上下左右是否有隔板，如果没有则补充。</p>
+<h3 id="参考代码-1" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -436,19 +412,19 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="ef-tokitsukaze-and-eliminate" class="headerLink">
-    <a href="#ef-tokitsukaze-and-eliminate" class="header-mark"></a>E&amp;F-Tokitsukaze and Eliminate</h1><h2 id="题意-2" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-2" class="header-mark"></a>题意</h2><p>有一排n个宝石，第i个的颜色是$col_i$，可以进行如下的操作：</p>
+</div><h2 id="ef-tokitsukaze-and-eliminate" class="headerLink">
+    <a href="#ef-tokitsukaze-and-eliminate" class="header-mark"></a>E&amp;F-Tokitsukaze and Eliminate</h2><h3 id="题意-2" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-2" class="header-mark"></a>题意</h3><p>有一排n个宝石，第i个的颜色是$col_i$，可以进行如下的操作：</p>
 <p>选一种颜色x，将颜色为x的最右边的那颗宝石及其右边的所有宝石全部消除。</p>
 <h4 id="数据范围-2" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-2" class="header-mark"></a>数据范围</h4><p>$T(1\leq T\leq 2 * 10^5)$</p>
 <p>$n(1\leq n\leq 2 * 10^5)$</p>
 <p>easy：$1\leq col_i\leq min(n,2)$</p>
 <p>hard：$1\leq col_i\leq n$</p>
-<h2 id="思路-2" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-2" class="header-mark"></a>思路</h2><p>贪心，从右边枚举，当找到最后一种达到两次出现的颜色后，进行一次对该颜色的操作，直到所有宝石都被消除。</p>
-<h2 id="参考代码-2" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="思路-2" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-2" class="header-mark"></a>思路</h3><p>贪心，从右边枚举，当找到最后一种达到两次出现的颜色后，进行一次对该颜色的操作，直到所有宝石都被消除。</p>
+<h3 id="参考代码-2" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -520,9 +496,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="i-tokitsukaze-and-short-path-plus" class="headerLink">
-    <a href="#i-tokitsukaze-and-short-path-plus" class="header-mark"></a>I-Tokitsukaze and Short Path (plus)</h1><h2 id="题意-3" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-3" class="header-mark"></a>题意</h2><p>有一个$n$个顶点的完全图$G$，顶点编号是$1$到$n$，编号为$i$的顶点值是$a_i$，边权的计算方式如下：
+</div><h2 id="i-tokitsukaze-and-short-path-plus" class="headerLink">
+    <a href="#i-tokitsukaze-and-short-path-plus" class="header-mark"></a>I-Tokitsukaze and Short Path (plus)</h2><h3 id="题意-3" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-3" class="header-mark"></a>题意</h3><p>有一个$n$个顶点的完全图$G$，顶点编号是$1$到$n$，编号为$i$的顶点值是$a_i$，边权的计算方式如下：
 $$
 w_{u,v}=
 \begin{cases}
@@ -539,8 +515,8 @@ $$</p>
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-3" class="header-mark"></a>数据范围</h4><p>$T(1\leq T\leq 2\times 10^5)$</p>
 <p>$n(1\leq n\leq 2\times 10^5)$</p>
 <p>$a_i(1\leq a_i\leq 2\times 10^5)$</p>
-<h2 id="思路-3" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-3" class="header-mark"></a>思路</h2><p>$$
+<h3 id="思路-3" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-3" class="header-mark"></a>思路</h3><p>$$
 |a_i+a_j|+|a_i-a_j|=
 \begin{cases}
 &amp;a_i+a_j+a_i-a_j&amp;=2\times a_i&amp;\quad a_i\ge a_j \\
@@ -548,8 +524,8 @@ $$</p>
 \end{cases}
 $$</p>
 <p>对$a$进行排序，计算每个数对总和的贡献，也就是比某数小的数的个数。</p>
-<h2 id="参考代码-3" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="参考代码-3" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -581,9 +557,9 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="j-tokitsukaze-and-short-path-minus" class="headerLink">
-    <a href="#j-tokitsukaze-and-short-path-minus" class="header-mark"></a>J-Tokitsukaze and Short Path (minus)</h1><h2 id="题意-4" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-4" class="header-mark"></a>题意</h2><p>有一个$n$个顶点的完全图$G$，顶点编号是$1$到$n$，编号为$i$的顶点值是$a_i$，边权的计算方式如下：
+</div><h2 id="j-tokitsukaze-and-short-path-minus" class="headerLink">
+    <a href="#j-tokitsukaze-and-short-path-minus" class="header-mark"></a>J-Tokitsukaze and Short Path (minus)</h2><h3 id="题意-4" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-4" class="header-mark"></a>题意</h3><p>有一个$n$个顶点的完全图$G$，顶点编号是$1$到$n$，编号为$i$的顶点值是$a_i$，边权的计算方式如下：
 $$
 w_{u,v}=
 \begin{cases}
@@ -600,8 +576,8 @@ $$</p>
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-4" class="header-mark"></a>数据范围</h4><p>$T(1\leq T\leq 2\times 10^5)$</p>
 <p>$n(1\leq n\leq 2\times 10^5)$</p>
 <p>$a_i(1\leq a_i\leq 2\times 10^5)$</p>
-<h2 id="思路-4" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-4" class="header-mark"></a>思路</h2><p>$$
+<h3 id="思路-4" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-4" class="header-mark"></a>思路</h3><p>$$
 |a_i+a_j|-|a_i-a_j|=
 \begin{cases}
 &amp;a_i+a_j-a_i+a_j&amp;=2\times a_j&amp;\quad a_i\ge a_j \\
@@ -610,8 +586,8 @@ $$</p>
 $$</p>
 <p>如果$u$到$v$的直接路径的长度大于$dist(u,w)+dist(v,w)$，则取后者，假设$dist(u,v)=2\times a_v$，则有$dist(u,w)+dist(v,w)=2\times a_v+2\times a_v=4\times a_v$，则只有当$2\times a_w$的值小于$a_v$时取后者找到数组中的最小值。</p>
 <p>对$a$​进行排序，计算每个数对总和的贡献次数，也就是比某数或2×最小$a_i$大的数的个数。</p>
-<h2 id="参考代码-4" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-4" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<h3 id="参考代码-4" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-4" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -687,7 +663,7 @@ $$</p>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-07-04</span>
+                <span>更新于 2024-07-21</span>
             </div>
             <div class="post-info-license"></div>
         </div>

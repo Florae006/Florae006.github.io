@@ -3,9 +3,9 @@
 
 
 
-# A-Tokitsukaze and Bracelet
+## A-Tokitsukaze and Bracelet
 
-## 题意
+### 题意
 
 根据手环的三个属性值判断手环的等级。
 
@@ -18,11 +18,11 @@ $n(1≤n≤100)$
 
 $a_i,b_i,c_i(a_i∈\{100,150,200\};b_i,ci∈\{29,30,31,32,34,36,38,40,45\})$
 
-## 思路
+### 思路
 
 模拟即可
 
-## 参考代码
+### 参考代码
 
 ```cpp
 void solve() {
@@ -53,9 +53,9 @@ void solve() {
 }
 ```
 
-# B-Tokitsukaze and Cats
+## B-Tokitsukaze and Cats
 
-## 题意
+### 题意
 
 关猫，每个猫被限制在一个单元格内就算被关住了，如图：
 
@@ -69,11 +69,11 @@ $n, m, k (1≤n,m≤300;1≤k≤n⋅m)$
 
 $x_i, y_i (1≤xi≤n; 1≤yi≤m)$
 
-## 思路
+### 思路
 
 遍历坐标点判断它上下左右是否有隔板，如果没有则补充。
 
-## 参考代码
+### 参考代码
 
 ```cpp
 void solve() {
@@ -97,9 +97,9 @@ void solve() {
 
 
 
-# E&F-Tokitsukaze and Eliminate
+## E&F-Tokitsukaze and Eliminate
 
-## 题意
+### 题意
 
 有一排n个宝石，第i个的颜色是$col_i$，可以进行如下的操作：
 
@@ -115,11 +115,11 @@ easy：$1\leq col_i\leq min(n,2)$
 
 hard：$1\leq col_i\leq n$
 
-## 思路
+### 思路
 
 贪心，从右边枚举，当找到最后一种达到两次出现的颜色后，进行一次对该颜色的操作，直到所有宝石都被消除。
 
-## 参考代码
+### 参考代码
 
 ```cpp
 void solve() {
@@ -157,9 +157,9 @@ void solve() {
 }
 ```
 
-# I-Tokitsukaze and Short Path (plus)
+## I-Tokitsukaze and Short Path (plus)
 
-## 题意
+### 题意
 
 有一个$n$个顶点的完全图$G$，顶点编号是$1$到$n$，编号为$i$的顶点值是$a_i$，边权的计算方式如下：
 $$
@@ -184,7 +184,7 @@ $n(1\leq n\leq 2\times 10^5)$
 
 $a_i(1\leq a_i\leq 2\times 10^5)$
 
-## 思路
+### 思路
 
 $$
 |a_i+a_j|+|a_i-a_j|=
@@ -196,7 +196,7 @@ $$
 
 对$a$进行排序，计算每个数对总和的贡献，也就是比某数小的数的个数。
 
-## 参考代码
+### 参考代码
 
 ```cpp
 void solve() {
@@ -214,9 +214,9 @@ void solve() {
 }
 ```
 
-# J-Tokitsukaze and Short Path (minus)
+## J-Tokitsukaze and Short Path (minus)
 
-## 题意
+### 题意
 
 有一个$n$个顶点的完全图$G$，顶点编号是$1$到$n$，编号为$i$的顶点值是$a_i$，边权的计算方式如下：
 $$
@@ -241,7 +241,7 @@ $n(1\leq n\leq 2\times 10^5)$
 
 $a_i(1\leq a_i\leq 2\times 10^5)$
 
-## 思路
+### 思路
 
 $$
 |a_i+a_j|-|a_i-a_j|=
@@ -255,7 +255,7 @@ $$
 
 对$a$​进行排序，计算每个数对总和的贡献次数，也就是比某数或2×最小$a_i$大的数的个数。
 
-## 参考代码
+### 参考代码
 
 ```cpp
 void solve() {

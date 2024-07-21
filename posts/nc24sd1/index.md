@@ -227,12 +227,6 @@ void solve() {
 }
 ```
 
-
-
-
-
-
-
 ## H-World Finals
 
 签到题。

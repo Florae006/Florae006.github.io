@@ -10,7 +10,7 @@
     <pubDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd2/</guid>
-    <description><![CDATA[E-GCD VS XOR有人卡签到。。。TAT 题意给定正整数$x$，求满足$gcd(x,y)=x\oplus y$的小于$x$的正整数$y$。若无则打印-1]]></description>
+    <description><![CDATA[B-MST 题意给定一个$n$顶点的带权无向图$G$。 每次询问一个点集$S$，求$S$关于$G$的导出子图的最小生成树的质量，若无则输出-1。 数据范围]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day1||补题</title>
     <link>http://localhost:1313/posts/nc24sd1/</link>
