@@ -3,22 +3,23 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noodp" />
   <title>关于Hugo的一些设置 - 分类 - Doごみ箱🪄</title><meta name="Description" content="Doごみ箱2.1"><meta property="og:title" content="关于Hugo的一些设置" />
 <meta property="og:description" content="Doごみ箱2.1" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="og:site_name" content="Doごみ箱" />
+<meta property="og:url" content="http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/" /><meta property="og:image" content="http://dodolalorc.cn/img/dodola.png" /><meta property="og:site_name" content="Doごみ箱" />
+
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="关于Hugo的一些设置"/>
+<meta name="twitter:image" content="http://dodolalorc.cn/img/dodola.png" /><meta name="twitter:title" content="关于Hugo的一些设置"/>
 <meta name="twitter:description" content="Doごみ箱2.1"/>
 <meta name="application-name" content="Doごみ箱-一只小菜鸡的Blog">
 <meta name="apple-mobile-web-app-title" content="Doごみ箱-一只小菜鸡的Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/" /><link rel="alternate" href="/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/index.xml" type="application/rss+xml" title="Doごみ箱🪄">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/" /><link rel="alternate" href="/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/index.xml" type="application/rss+xml" title="Doごみ箱🪄">
     <link rel="feed" href="/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/index.xml" type="application/rss+xml" title="Doごみ箱🪄"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript>
@@ -41,11 +42,12 @@
     <div class="menu">
       <div class="menu-inner"><a class="menu-item"
           href="/posts" >🐙 文章 </a><a class="menu-item"
+          href="/series/" >🌠 系列 </a><a class="menu-item"
           href="/categories/" >📂 分类 </a><a class="menu-item"
           href="/tags/" >🏷︎ 标签 </a><a class="menu-item"
           href="/links/" >🧸 友链 </a><a class="menu-item"
           href="/about/" >🍅 关于 </a><a class="menu-item"
-          href="/comments/" >🪗 留言 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+          href="/comments/" ><i class="fa-solid fa-comment" style="color: #63E6BE;"></i> 留言 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
           <input type="text" placeholder="搜索本站内容( •̀ ω •́ )y"
             id="search-input-desktop">
           <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
@@ -95,7 +97,7 @@
         <a href="#" class="search-cancel" id="search-cancel-mobile">
           取消
         </a>
-      </div><a class="menu-item" href="/posts" title="" >🐙文章</a><a class="menu-item" href="/categories/" title="" >📂分类</a><a class="menu-item" href="/tags/" title="" >🏷︎标签</a><a class="menu-item" href="/links/" title="" >🧸友链</a><a class="menu-item" href="/about/" title="" >🍅关于</a><a class="menu-item" href="/comments/" title="" >🪗留言</a><a href="#" class="menu-item theme-select" title="">
+      </div><a class="menu-item" href="/posts" title="" >🐙文章</a><a class="menu-item" href="/series/" title="" >🌠系列</a><a class="menu-item" href="/categories/" title="" >📂分类</a><a class="menu-item" href="/tags/" title="" >🏷︎标签</a><a class="menu-item" href="/links/" title="" >🧸友链</a><a class="menu-item" href="/about/" title="" >🍅关于</a><a class="menu-item" href="/comments/" title="" ><i class="fa-solid fa-comment" style="color: #63E6BE;"></i>留言</a><a href="#" class="menu-item theme-select" title="">
         <i class="fas fa-adjust fa-fw"></i>
         <select class="color-theme-select" id="theme-select-mobile" title="">
           <option value="light">浅色</option>

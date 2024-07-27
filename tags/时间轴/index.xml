@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>时间轴 - 标签 - Doごみ箱🪄</title>
-        <link>http://localhost:1313/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/</link>
+        <link>http://dodolalorc.cn/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/</link>
         <description>时间轴 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 02 Dec 2023 14:20:16 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 02 Dec 2023 14:20:16 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E6%97%B6%E9%97%B4%E8%BD%B4/" rel="self" type="application/rss+xml" /><item>
     <title>时间轴</title>
-    <link>http://localhost:1313/archives/</link>
+    <link>http://dodolalorc.cn/archives/</link>
     <pubDate>Sat, 02 Dec 2023 14:20:16 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/archives/</guid>
+    </author><guid>http://dodolalorc.cn/archives/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

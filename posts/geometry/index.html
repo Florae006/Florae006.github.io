@@ -3,36 +3,38 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noodp" />
-  <title>计算几何模板||正在编辑喵... - Doごみ箱🪄</title><meta name="Description" content="Doごみ箱2.1"><meta property="og:title" content="计算几何模板||正在编辑喵..." />
+  <title>计算几何模板 - Doごみ箱🪄</title><meta name="Description" content="Doごみ箱2.1"><meta property="og:title" content="计算几何模板" />
 <meta property="og:description" content="试着用计算机来解决几何问题吧(●&rsquo;◡&rsquo;●) 前置知识 几何基础 平面直角坐标系 极坐标与极坐标系 向量（向量积） 二维计算几何基" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/geometry/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://dodolalorc.cn/posts/geometry/" /><meta property="og:image" content="http://dodolalorc.cn/img/dodola.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-03-09T21:54:39+08:00" />
-<meta property="article:modified_time" content="2024-07-04T15:39:55+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+<meta property="article:modified_time" content="2024-07-24T14:33:57+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+
+
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="计算几何模板||正在编辑喵..."/>
+<meta name="twitter:image" content="http://dodolalorc.cn/img/dodola.png" /><meta name="twitter:title" content="计算几何模板"/>
 <meta name="twitter:description" content="试着用计算机来解决几何问题吧(●&rsquo;◡&rsquo;●) 前置知识 几何基础 平面直角坐标系 极坐标与极坐标系 向量（向量积） 二维计算几何基"/>
 <meta name="application-name" content="Doごみ箱-一只小菜鸡的Blog">
 <meta name="apple-mobile-web-app-title" content="Doごみ箱-一只小菜鸡的Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/geometry/" /><link rel="prev" href="http://localhost:1313/posts/lineardp/" /><link rel="next" href="http://localhost:1313/posts/vuemod/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://dodolalorc.cn/posts/geometry/" /><link rel="prev" href="http://dodolalorc.cn/posts/cfedu162div2/" /><link rel="next" href="http://dodolalorc.cn/posts/vuemod/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "计算几何模板||正在编辑喵...",
+        "headline": "计算几何模板",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/geometry\/"
-        },"genre": "posts","keywords": "算法, 计算几何","wordcount":  5376 ,
-        "url": "http:\/\/localhost:1313\/posts\/geometry\/","datePublished": "2024-03-09T21:54:39+08:00","dateModified": "2024-07-04T15:39:55+08:00","license": "dodola","publisher": {
+            "@id": "http:\/\/dodolalorc.cn\/posts\/geometry\/"
+        },"genre": "posts","keywords": "算法, 计算几何, 算法模板","wordcount":  5376 ,
+        "url": "http:\/\/dodolalorc.cn\/posts\/geometry\/","datePublished": "2024-03-09T21:54:39+08:00","dateModified": "2024-07-24T14:33:57+08:00","license": "dodola","publisher": {
             "@type": "Organization",
             "name": "DODOLA"},"author": {
                 "@type": "Person",
@@ -59,11 +61,12 @@
     <div class="menu">
       <div class="menu-inner"><a class="menu-item"
           href="/posts" >🐙 文章 </a><a class="menu-item"
+          href="/series/" >🌠 系列 </a><a class="menu-item"
           href="/categories/" >📂 分类 </a><a class="menu-item"
           href="/tags/" >🏷︎ 标签 </a><a class="menu-item"
           href="/links/" >🧸 友链 </a><a class="menu-item"
           href="/about/" >🍅 关于 </a><a class="menu-item"
-          href="/comments/" >🪗 留言 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+          href="/comments/" ><i class="fa-solid fa-comment" style="color: #63E6BE;"></i> 留言 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
           <input type="text" placeholder="搜索本站内容( •̀ ω •́ )y"
             id="search-input-desktop">
           <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
@@ -113,7 +116,7 @@
         <a href="#" class="search-cancel" id="search-cancel-mobile">
           取消
         </a>
-      </div><a class="menu-item" href="/posts" title="" >🐙文章</a><a class="menu-item" href="/categories/" title="" >📂分类</a><a class="menu-item" href="/tags/" title="" >🏷︎标签</a><a class="menu-item" href="/links/" title="" >🧸友链</a><a class="menu-item" href="/about/" title="" >🍅关于</a><a class="menu-item" href="/comments/" title="" >🪗留言</a><a href="#" class="menu-item theme-select" title="">
+      </div><a class="menu-item" href="/posts" title="" >🐙文章</a><a class="menu-item" href="/series/" title="" >🌠系列</a><a class="menu-item" href="/categories/" title="" >📂分类</a><a class="menu-item" href="/tags/" title="" >🏷︎标签</a><a class="menu-item" href="/links/" title="" >🧸友链</a><a class="menu-item" href="/about/" title="" >🍅关于</a><a class="menu-item" href="/comments/" title="" ><i class="fa-solid fa-comment" style="color: #63E6BE;"></i>留言</a><a href="#" class="menu-item theme-select" title="">
         <i class="fas fa-adjust fa-fw"></i>
         <select class="color-theme-select" id="theme-select-mobile" title="">
           <option value="light">浅色</option>
@@ -195,15 +198,15 @@
     </li>
   </ul>
 </nav></div>
-</div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">计算几何模板||正在编辑喵...</h1><div class="post-meta">
+</div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">计算几何模板</h1><div class="post-meta">
         <div class="post-meta-line">
             <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
-            </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在学算法的日子里</a></span></div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-03-09">2024-03-09</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-04">2024-07-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 5376 字&nbsp;
-            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 11 分钟&nbsp;<span id="/posts/geometry/" class="leancloud_visitors" data-flag-title="计算几何模板||正在编辑喵...">
+            </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在学算法的日子里</a></span>&nbsp;<span class="post-category">和</span>&nbsp;<span class="post-series">系列 <a href="/series/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF%E7%AC%94%E8%AE%B0/"><i class="far fa-list-alt fa-fw"></i>算法模板笔记</a></span></div>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-03-09">2024-03-09</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-24">2024-07-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 5376 字&nbsp;
+            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 11 分钟&nbsp;<span id="/posts/geometry/" class="leancloud_visitors" data-flag-title="计算几何模板">
                 <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"
                     id=twikoo_visitors></span>&nbsp;次阅读
-            </span>&nbsp;<span id="/posts/geometry/" class="comment_count" data-flag-title="计算几何模板||正在编辑喵...">
+            </span>&nbsp;<span id="/posts/geometry/" class="comment_count" data-flag-title="计算几何模板">
                 <i class="far fa-comments fa-fw"></i>&nbsp;<span class="twikoo-comment-count"
                     id="twikoo-comment-count"></span>&nbsp;条评论
             </span>&nbsp;
@@ -221,6 +224,21 @@
 
 </div>
 
+    </div><div class="details series-nav open">
+        <div class="details-summary series-title">
+            <span>系列 - </span>
+            <span><i class="details-icon fas fa-angle-right"></i></span>
+        </div>
+        <div class="details-content series-content">
+            <nav>
+                <ul>
+                    <li><a href="/posts/segtreelecnote/">线段树讲义||寒假</a></li><li><span class="active">计算几何模板</span></li>
+                    <li><a href="/posts/seg_tree/">线段树模板</a></li>
+                    <li><a href="/posts/graph_basic/">图论基础||存储图||DFS、BFS(图论)</a></li>
+                    <li><a href="/posts/string_match/">字符串匹配问题||前缀函数&#43;KMP&#43;字符串哈希</a></li>
+                    <li><a href="/posts/shortest_path/">最短路问题（Dijkstra &#43; SPFA &#43; Floyd）</a></li></ul>
+            </nav>
+        </div>
     </div><div class="details toc" id="toc-static" kept="">
         <div class="details-summary toc-title">
             <span>目录</span>
@@ -1580,6 +1598,11 @@ $$</p>
 <div class="related-container">
     <div class="related-item-container">
             <h2 class="related-title">
+                <a href="/posts/hdu24sd1/">2024杭电钉耙编程联赛Day1||补题</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <h2 class="related-title">
                 <a href="/posts/nc24sd2/">2024牛客暑假多校训练营Day2||补题</a>
             </h2>
         </div>
@@ -1598,11 +1621,6 @@ $$</p>
                 <a href="/posts/segtreelecnote/">线段树讲义||寒假</a>
             </h2>
         </div>
-    <div class="related-item-container">
-            <h2 class="related-title">
-                <a href="/posts/cfround930div2/">Codeforces Round 930(div2)</a>
-            </h2>
-        </div>
     
 
 </div>
@@ -1611,7 +1629,7 @@ $$</p>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-07-04</span>
+                <span>更新于 2024-07-24</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -1619,19 +1637,19 @@ $$</p>
             <div class="post-info-md"><span><a class="link-to-mardown" href=/posts/geometry/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
                     </span></div>
             <div class="post-info-share">
-                <span><a href="#" title="分享到 Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/geometry/" data-title="计算几何模板||正在编辑喵..." data-hashtags="算法,计算几何"><i class="fab fa-twitter fa-fw"></i></a><a href="#" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/geometry/" data-hashtag="算法"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/geometry/" data-title="计算几何模板||正在编辑喵..."><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/geometry/" data-title="计算几何模板||正在编辑喵..."><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/geometry/" data-title="计算几何模板||正在编辑喵..."><i class="fab fa-weibo fa-fw"></i></a><a href="#" title="分享到 百度" data-sharer="baidu" data-url="http://localhost:1313/posts/geometry/" data-title="计算几何模板||正在编辑喵..."><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a></span>
+                <span><a href="#" title="分享到 Twitter" data-sharer="twitter" data-url="http://dodolalorc.cn/posts/geometry/" data-title="计算几何模板" data-hashtags="算法,计算几何,算法模板"><i class="fab fa-twitter fa-fw"></i></a><a href="#" title="分享到 Facebook" data-sharer="facebook" data-url="http://dodolalorc.cn/posts/geometry/" data-hashtag="算法"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://dodolalorc.cn/posts/geometry/" data-title="计算几何模板"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" title="分享到 Line" data-sharer="line" data-url="http://dodolalorc.cn/posts/geometry/" data-title="计算几何模板"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" title="分享到 微博" data-sharer="weibo" data-url="http://dodolalorc.cn/posts/geometry/" data-title="计算几何模板"><i class="fab fa-weibo fa-fw"></i></a><a href="#" title="分享到 百度" data-sharer="baidu" data-url="http://dodolalorc.cn/posts/geometry/" data-title="计算几何模板"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/">计算几何</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/">计算几何</a>,&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/">算法模板</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/lineardp/" class="prev" rel="prev" title="刷题记录||线性动态规划"><i class="fas fa-angle-left fa-fw"></i>刷题记录||线性动态规划</a>
+    <div class="post-nav"><a href="/posts/cfedu162div2/" class="prev" rel="prev" title="Educational Codeforces Round 162(div2)"><i class="fas fa-angle-left fa-fw"></i>Educational Codeforces Round 162(div2)</a>
             <a href="/posts/vuemod/" class="next" rel="next" title="一个Vue项目的基础模板||PC端&#43;移动端适配">一个Vue项目的基础模板||PC端&#43;移动端适配<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="twikoo"></div><noscript>

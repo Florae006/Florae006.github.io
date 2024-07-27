@@ -3,24 +3,26 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noodp" />
   <title>NENU2023学年算法2例题 - Doごみ箱🪄</title><meta name="Description" content="Doごみ箱2.1"><meta property="og:title" content="NENU2023学年算法2例题" />
 <meta property="og:description" content="有的题还没写完）咕咕咕）） NENU OJ算法2例题这学期写算法2并不想写详细思路(出于ddl再也不用关心小组啦的自由)，不过如果有想交流的也可以评论" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/nenuoj/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://dodolalorc.cn/posts/nenuoj/" /><meta property="og:image" content="http://dodolalorc.cn/img/dodola.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-12-19T22:02:50+08:00" />
-<meta property="article:modified_time" content="2024-07-04T15:35:44+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+<meta property="article:modified_time" content="2024-07-23T21:42:51+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+
+
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="NENU2023学年算法2例题"/>
+<meta name="twitter:image" content="http://dodolalorc.cn/img/dodola.png" /><meta name="twitter:title" content="NENU2023学年算法2例题"/>
 <meta name="twitter:description" content="有的题还没写完）咕咕咕）） NENU OJ算法2例题这学期写算法2并不想写详细思路(出于ddl再也不用关心小组啦的自由)，不过如果有想交流的也可以评论"/>
 <meta name="application-name" content="Doごみ箱-一只小菜鸡的Blog">
 <meta name="apple-mobile-web-app-title" content="Doごみ箱-一只小菜鸡的Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/nenuoj/" /><link rel="prev" href="http://localhost:1313/posts/beautify_site_clickfollow/" /><link rel="next" href="http://localhost:1313/posts/shortest_path/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://dodolalorc.cn/posts/nenuoj/" /><link rel="prev" href="http://dodolalorc.cn/posts/beautify_site_clickfollow/" /><link rel="next" href="http://dodolalorc.cn/posts/shortest_path/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -30,9 +32,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/nenuoj\/"
-        },"genre": "posts","keywords": "算法, NENUOJ, 递归, 查找, 动态规划, 搜索, 贪心, 排序","wordcount":  28170 ,
-        "url": "http:\/\/localhost:1313\/posts\/nenuoj\/","datePublished": "2023-12-19T22:02:50+08:00","dateModified": "2024-07-04T15:35:44+08:00","license": "dodola","publisher": {
+            "@id": "http:\/\/dodolalorc.cn\/posts\/nenuoj\/"
+        },"genre": "posts","keywords": "算法, NENUOJ","wordcount":  28170 ,
+        "url": "http:\/\/dodolalorc.cn\/posts\/nenuoj\/","datePublished": "2023-12-19T22:02:50+08:00","dateModified": "2024-07-23T21:42:51+08:00","license": "dodola","publisher": {
             "@type": "Organization",
             "name": "DODOLA"},"author": {
                 "@type": "Person",
@@ -59,11 +61,12 @@
     <div class="menu">
       <div class="menu-inner"><a class="menu-item"
           href="/posts" >🐙 文章 </a><a class="menu-item"
+          href="/series/" >🌠 系列 </a><a class="menu-item"
           href="/categories/" >📂 分类 </a><a class="menu-item"
           href="/tags/" >🏷︎ 标签 </a><a class="menu-item"
           href="/links/" >🧸 友链 </a><a class="menu-item"
           href="/about/" >🍅 关于 </a><a class="menu-item"
-          href="/comments/" >🪗 留言 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+          href="/comments/" ><i class="fa-solid fa-comment" style="color: #63E6BE;"></i> 留言 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
           <input type="text" placeholder="搜索本站内容( •̀ ω •́ )y"
             id="search-input-desktop">
           <a href="#" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
@@ -113,7 +116,7 @@
         <a href="#" class="search-cancel" id="search-cancel-mobile">
           取消
         </a>
-      </div><a class="menu-item" href="/posts" title="" >🐙文章</a><a class="menu-item" href="/categories/" title="" >📂分类</a><a class="menu-item" href="/tags/" title="" >🏷︎标签</a><a class="menu-item" href="/links/" title="" >🧸友链</a><a class="menu-item" href="/about/" title="" >🍅关于</a><a class="menu-item" href="/comments/" title="" >🪗留言</a><a href="#" class="menu-item theme-select" title="">
+      </div><a class="menu-item" href="/posts" title="" >🐙文章</a><a class="menu-item" href="/series/" title="" >🌠系列</a><a class="menu-item" href="/categories/" title="" >📂分类</a><a class="menu-item" href="/tags/" title="" >🏷︎标签</a><a class="menu-item" href="/links/" title="" >🧸友链</a><a class="menu-item" href="/about/" title="" >🍅关于</a><a class="menu-item" href="/comments/" title="" ><i class="fa-solid fa-comment" style="color: #63E6BE;"></i>留言</a><a href="#" class="menu-item theme-select" title="">
         <i class="fas fa-adjust fa-fw"></i>
         <select class="color-theme-select" id="theme-select-mobile" title="">
           <option value="light">浅色</option>
@@ -463,8 +466,8 @@
 </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">NENU2023学年算法2例题</h1><div class="post-meta">
         <div class="post-meta-line">
             <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
-            </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在学算法的日子里</a></span></div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-12-19">2023-12-19</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-04">2024-07-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 28170 字&nbsp;
+            </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在学算法的日子里</a></span>&nbsp;<span class="post-category">和</span>&nbsp;<span class="post-series">系列 <a href="/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/"><i class="far fa-list-alt fa-fw"></i>题解记录</a></span></div>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-12-19">2023-12-19</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-23">2024-07-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 28170 字&nbsp;
             <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 57 分钟&nbsp;<span id="/posts/nenuoj/" class="leancloud_visitors" data-flag-title="NENU2023学年算法2例题">
                 <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"
                     id=twikoo_visitors></span>&nbsp;次阅读
@@ -486,6 +489,33 @@
 
 </div>
 
+    </div><div class="details series-nav open">
+        <div class="details-summary series-title">
+            <span>系列 - </span>
+            <span><i class="details-icon fas fa-angle-right"></i></span>
+        </div>
+        <div class="details-content series-content">
+            <nav>
+                <ul>
+                    <li><a href="/posts/hdu24sd1/">2024杭电钉耙编程联赛Day1||补题</a></li>
+                    <li><a href="/posts/nc24sd2/">2024牛客暑假多校训练营Day2||补题</a></li>
+                    <li><a href="/posts/nc24sd1/">2024牛客暑假多校训练营Day1||补题</a></li>
+                    <li><a href="/posts/24jilinccpc/">2024吉林省赛补题记录</a></li>
+                    <li><a href="/posts/cfround930div2/">Codeforces Round 930(div2)</a></li>
+                    <li><a href="/posts/cfround931div2/">Codeforces Round 931(div2)</a></li>
+                    <li><a href="/posts/cfround932div2/">Codeforces Round 932(div2)</a></li>
+                    <li><a href="/posts/cfround933div3/">Codeforces Round 933(div3)</a></li>
+                    <li><a href="/posts/cfedu162div2/">Educational Codeforces Round 162(div2)</a></li>
+                    <li><a href="/posts/cfround929div3/">Codeforces Round 929(div3)</a></li>
+                    <li><a href="/posts/cfround927div3/">Codeforces Round 927(div3)</a></li>
+                    <li><a href="/posts/nc24wd6/">2024牛客寒假营6||补题</a></li>
+                    <li><a href="/posts/nc24wd4/">2024牛客寒假营4||补题</a></li>
+                    <li><a href="/posts/nc24wd5/">2024牛客寒假营5||补题</a></li>
+                    <li><a href="/posts/nc24wd3/">2024牛客寒假营3||补题</a></li>
+                    <li><a href="/posts/nc24wd2/">2024牛客寒假营2||补题</a></li>
+                    <li><a href="/posts/nc24wd1/">2024牛客寒假营1||补题</a></li><li><span class="active">NENU2023学年算法2例题</span></li></ul>
+            </nav>
+        </div>
     </div><div class="details toc" id="toc-static" kept="">
         <div class="details-summary toc-title">
             <span>目录</span>
@@ -6847,6 +6877,11 @@ A：
 <div class="related-container">
     <div class="related-item-container">
             <h2 class="related-title">
+                <a href="/posts/hdu24sd1/">2024杭电钉耙编程联赛Day1||补题</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <h2 class="related-title">
                 <a href="/posts/nc24sd2/">2024牛客暑假多校训练营Day2||补题</a>
             </h2>
         </div>
@@ -6865,11 +6900,6 @@ A：
                 <a href="/posts/segtreelecnote/">线段树讲义||寒假</a>
             </h2>
         </div>
-    <div class="related-item-container">
-            <h2 class="related-title">
-                <a href="/posts/cfround930div2/">Codeforces Round 930(div2)</a>
-            </h2>
-        </div>
     
 
 </div>
@@ -6878,7 +6908,7 @@ A：
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-07-04</span>
+                <span>更新于 2024-07-23</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -6886,13 +6916,13 @@ A：
             <div class="post-info-md"><span><a class="link-to-mardown" href=/posts/nenuoj/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
                     </span></div>
             <div class="post-info-share">
-                <span><a href="#" title="分享到 Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/nenuoj/" data-title="NENU2023学年算法2例题" data-hashtags="算法,NENUOJ,递归,查找,动态规划,搜索,贪心,排序"><i class="fab fa-twitter fa-fw"></i></a><a href="#" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/nenuoj/" data-hashtag="算法"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/nenuoj/" data-title="NENU2023学年算法2例题"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/nenuoj/" data-title="NENU2023学年算法2例题"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/nenuoj/" data-title="NENU2023学年算法2例题"><i class="fab fa-weibo fa-fw"></i></a><a href="#" title="分享到 百度" data-sharer="baidu" data-url="http://localhost:1313/posts/nenuoj/" data-title="NENU2023学年算法2例题"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a></span>
+                <span><a href="#" title="分享到 Twitter" data-sharer="twitter" data-url="http://dodolalorc.cn/posts/nenuoj/" data-title="NENU2023学年算法2例题" data-hashtags="算法,NENUOJ"><i class="fab fa-twitter fa-fw"></i></a><a href="#" title="分享到 Facebook" data-sharer="facebook" data-url="http://dodolalorc.cn/posts/nenuoj/" data-hashtag="算法"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://dodolalorc.cn/posts/nenuoj/" data-title="NENU2023学年算法2例题"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" title="分享到 Line" data-sharer="line" data-url="http://dodolalorc.cn/posts/nenuoj/" data-title="NENU2023学年算法2例题"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" title="分享到 微博" data-sharer="weibo" data-url="http://dodolalorc.cn/posts/nenuoj/" data-title="NENU2023学年算法2例题"><i class="fab fa-weibo fa-fw"></i></a><a href="#" title="分享到 百度" data-sharer="baidu" data-url="http://dodolalorc.cn/posts/nenuoj/" data-title="NENU2023学年算法2例题"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/nenuoj/">NENUOJ</a>,&nbsp;<a href="/tags/%E9%80%92%E5%BD%92/">递归</a>,&nbsp;<a href="/tags/%E6%9F%A5%E6%89%BE/">查找</a>,&nbsp;<a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>,&nbsp;<a href="/tags/%E6%90%9C%E7%B4%A2/">搜索</a>,&nbsp;<a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>,&nbsp;<a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/nenuoj/">NENUOJ</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
