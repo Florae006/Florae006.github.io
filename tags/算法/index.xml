@@ -1,78 +1,78 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>算法 - 标签 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</link>
+        <link>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</link>
         <description>算法 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 19 Jul 2024 19:08:39 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 19 Jul 2024 19:08:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
     <title>2024杭电钉耙编程联赛Day1||补题</title>
-    <link>http://dodolalorc.cn/posts/hdu24sd1/</link>
+    <link>http://localhost:1313/posts/hdu24sd1/</link>
     <pubDate>Fri, 19 Jul 2024 19:08:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/hdu24sd1/</guid>
+    </author><guid>http://localhost:1313/posts/hdu24sd1/</guid>
     <description><![CDATA[1001-循环位移 题意将字符串$S=S_0+S_1+S_2+&hellip;+S_{n-1}$循环位移$k$次后得到$S(k)=S_{k\b]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day2||补题</title>
-    <link>http://dodolalorc.cn/posts/nc24sd2/</link>
+    <link>http://localhost:1313/posts/nc24sd2/</link>
     <pubDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/nc24sd2/</guid>
+    </author><guid>http://localhost:1313/posts/nc24sd2/</guid>
     <description><![CDATA[B-MST 题意给定一个$n$顶点的带权无向图$G$。 每次询问一个点集$S$，求$S$关于$G$的导出子图的最小生成树的质量，若无则输出-1。 数据范围]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day1||补题</title>
-    <link>http://dodolalorc.cn/posts/nc24sd1/</link>
+    <link>http://localhost:1313/posts/nc24sd1/</link>
     <pubDate>Tue, 16 Jul 2024 19:36:00 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/nc24sd1/</guid>
+    </author><guid>http://localhost:1313/posts/nc24sd1/</guid>
     <description><![CDATA[A-Bit Common 题意计算满足长度为$n$，每个元素小于$2^m$，且存在至少一个子序列满足按位$AND$后是$1$的序列的数量。 答案对正整数$q$取模。]]></description>
 </item><item>
     <title>2024吉林省赛补题记录</title>
-    <link>http://dodolalorc.cn/posts/24jilinccpc/</link>
+    <link>http://localhost:1313/posts/24jilinccpc/</link>
     <pubDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/24jilinccpc/</guid>
+    </author><guid>http://localhost:1313/posts/24jilinccpc/</guid>
     <description><![CDATA[阿巴阿巴 啊，省赛，怎么两个月过去了才整理题解，这一定是在复习（确信 GYM地址：2024吉林省赛 题目顺序按照从易到难排序。 I. The Easiest Problem 题意数一数 代]]></description>
 </item><item>
     <title>线段树讲义||寒假</title>
-    <link>http://dodolalorc.cn/posts/segtreelecnote/</link>
+    <link>http://localhost:1313/posts/segtreelecnote/</link>
     <pubDate>Wed, 13 Mar 2024 13:29:07 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/segtreelecnote/</guid>
+    </author><guid>http://localhost:1313/posts/segtreelecnote/</guid>
     <description><![CDATA[线段树介绍 线段树是一棵二叉树，每个节点维护一个区间内$[l,r]$的信息 左子树区间维护$[l,\lfloor \frac{l+r}{2} \rfloor]$的信息，右子]]></description>
 </item><item>
     <title>Codeforces Round 930(div2)</title>
-    <link>http://dodolalorc.cn/posts/cfround930div2/</link>
+    <link>http://localhost:1313/posts/cfround930div2/</link>
     <pubDate>Wed, 13 Mar 2024 12:26:38 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/cfround930div2/</guid>
+    </author><guid>http://localhost:1313/posts/cfround930div2/</guid>
     <description><![CDATA[A-Shuffle Party 题意对一个数组，起初是$a_i=i$ 对操作swap(k)： 设$d$是不等于$k$本身的$k$的最大除数，然后交换元素$a_d$和$a_k]]></description>
 </item><item>
     <title>Codeforces Round 931(div2)</title>
-    <link>http://dodolalorc.cn/posts/cfround931div2/</link>
+    <link>http://localhost:1313/posts/cfround931div2/</link>
     <pubDate>Wed, 13 Mar 2024 12:26:22 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/cfround931div2/</guid>
+    </author><guid>http://localhost:1313/posts/cfround931div2/</guid>
     <description><![CDATA[A-Too Min Too Max 题意对一个数组，找到索引$(i,j,k,l)$使得$|a_i-a_j|+|a_j-a_k|+|a_k-a_l|+|a_l-a_i|$]]></description>
 </item><item>
     <title>Codeforces Round 932(div2)</title>
-    <link>http://dodolalorc.cn/posts/cfround932div2/</link>
+    <link>http://localhost:1313/posts/cfround932div2/</link>
     <pubDate>Wed, 13 Mar 2024 12:26:06 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/cfround932div2/</guid>
+    </author><guid>http://localhost:1313/posts/cfround932div2/</guid>
     <description><![CDATA[A-Entertainment in MAC 题意可以对一个字符串进行两种操作： 将字符串反转 将该字符串反转后接在原串的后面。 可以进行任意次上述操作，获得字典序最小的字符串。 数据范围]]></description>
 </item><item>
     <title>Codeforces Round 933(div3)</title>
-    <link>http://dodolalorc.cn/posts/cfround933div3/</link>
+    <link>http://localhost:1313/posts/cfround933div3/</link>
     <pubDate>Wed, 13 Mar 2024 12:25:46 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/cfround933div3/</guid>
+    </author><guid>http://localhost:1313/posts/cfround933div3/</guid>
     <description><![CDATA[A-Rudolf and the Ticket 题意左边口袋有一些面值为$b_1,b_2,b_3,&hellip;,b_n$的硬币，右边有一些面值为$c_1,c_2,c_3,&he]]></description>
 </item><item>
     <title>计算几何模板</title>
-    <link>http://dodolalorc.cn/posts/geometry/</link>
+    <link>http://localhost:1313/posts/geometry/</link>
     <pubDate>Sat, 09 Mar 2024 21:54:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/geometry/</guid>
+    </author><guid>http://localhost:1313/posts/geometry/</guid>
     <description><![CDATA[试着用计算机来解决几何问题吧(●&rsquo;◡&rsquo;●) 前置知识 几何基础 平面直角坐标系 极坐标与极坐标系 向量（向量积） 二维计算几何基]]></description>
 </item></channel>
 </rss>
