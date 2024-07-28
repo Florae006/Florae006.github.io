@@ -1,64 +1,71 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>牛客 - 标签 - Doごみ箱🪄</title>
-        <link>http://localhost:1313/tags/%E7%89%9B%E5%AE%A2/</link>
+        <link>http://dodolalorc.cn/tags/%E7%89%9B%E5%AE%A2/</link>
         <description>牛客 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%89%9B%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Tue, 23 Jul 2024 18:37:58 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E7%89%9B%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+    <title>2024牛客暑假多校训练营Day3||补题</title>
+    <link>http://dodolalorc.cn/posts/nc24sd3/</link>
+    <pubDate>Tue, 23 Jul 2024 18:37:58 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/nc24sd3/</guid>
+    <description><![CDATA[B-Crash Test 题意小车有$n$个引擎，第$i$个引擎可以让车前进$h[i]$米。在小车起点正前方距离为$D$处有一反弹墙面，小车如果撞在墙上将会被回弹]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day2||补题</title>
-    <link>http://localhost:1313/posts/nc24sd2/</link>
+    <link>http://dodolalorc.cn/posts/nc24sd2/</link>
     <pubDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/nc24sd2/</guid>
+    </author><guid>http://dodolalorc.cn/posts/nc24sd2/</guid>
     <description><![CDATA[B-MST 题意给定一个$n$顶点的带权无向图$G$。 每次询问一个点集$S$，求$S$关于$G$的导出子图的最小生成树的质量，若无则输出-1。 数据范围]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day1||补题</title>
-    <link>http://localhost:1313/posts/nc24sd1/</link>
+    <link>http://dodolalorc.cn/posts/nc24sd1/</link>
     <pubDate>Tue, 16 Jul 2024 19:36:00 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/nc24sd1/</guid>
+    </author><guid>http://dodolalorc.cn/posts/nc24sd1/</guid>
     <description><![CDATA[A-Bit Common 题意计算满足长度为$n$，每个元素小于$2^m$，且存在至少一个子序列满足按位$AND$后是$1$的序列的数量。 答案对正整数$q$取模。]]></description>
 </item><item>
     <title>2024牛客寒假营6||补题</title>
-    <link>http://localhost:1313/posts/nc24wd6/</link>
+    <link>http://dodolalorc.cn/posts/nc24wd6/</link>
     <pubDate>Mon, 26 Feb 2024 19:54:36 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/nc24wd6/</guid>
+    </author><guid>http://dodolalorc.cn/posts/nc24wd6/</guid>
     <description><![CDATA[A-宇宙的终结 题意在$[l,r]$中寻找某个恰好是三个不同素数的乘积的数，并输出任意一个合法答案即可。 数据范围$1\leq l\leq r \leq 100$ 思路数据小]]></description>
 </item><item>
     <title>2024牛客寒假营4||补题</title>
-    <link>http://localhost:1313/posts/nc24wd4/</link>
+    <link>http://dodolalorc.cn/posts/nc24wd4/</link>
     <pubDate>Mon, 26 Feb 2024 19:54:28 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/nc24wd4/</guid>
+    </author><guid>http://dodolalorc.cn/posts/nc24wd4/</guid>
     <description><![CDATA[A-柠檬可乐 题意输入$a,b,k$，判断$a\ge k\times b$是否成立 数据范围$a,b,k(1\leq a,b,k\leq 100)$ 思路简单判断 参考代码 1 2 3 4 5 void solve() { int a,]]></description>
 </item><item>
     <title>2024牛客寒假营5||补题</title>
-    <link>http://localhost:1313/posts/nc24wd5/</link>
+    <link>http://dodolalorc.cn/posts/nc24wd5/</link>
     <pubDate>Wed, 21 Feb 2024 20:07:25 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/nc24wd5/</guid>
+    </author><guid>http://dodolalorc.cn/posts/nc24wd5/</guid>
     <description><![CDATA[A-mutsumi的质数合数 题意一个由$n$个正整数组成的数组，求其中质数和合数共有几个。 数据范围$n(1\leq n\leq 100)$ $a_i(1\leq a_i\leq 100)$ 思路1不是质数也]]></description>
 </item><item>
     <title>2024牛客寒假营3||补题</title>
-    <link>http://localhost:1313/posts/nc24wd3/</link>
+    <link>http://dodolalorc.cn/posts/nc24wd3/</link>
     <pubDate>Tue, 13 Feb 2024 20:21:21 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/nc24wd3/</guid>
+    </author><guid>http://dodolalorc.cn/posts/nc24wd3/</guid>
     <description><![CDATA[A-智乃与瞩目狸猫、幸运水母、月宫龙虾 题意在不考虑单词词性的前提下，只要求两个单词的首字母忽略大小写相同时就认为它们可能是一组ubuntu代]]></description>
 </item><item>
     <title>2024牛客寒假营2||补题</title>
-    <link>http://localhost:1313/posts/nc24wd2/</link>
+    <link>http://dodolalorc.cn/posts/nc24wd2/</link>
     <pubDate>Fri, 09 Feb 2024 14:46:52 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/nc24wd2/</guid>
+    </author><guid>http://dodolalorc.cn/posts/nc24wd2/</guid>
     <description><![CDATA[A-Tokitsukaze and Bracelet 题意根据手环的三个属性值判断手环的等级。 对攻击百分比来说，+0为100%，+1为150%，+2为200% 对体力和精神来说，+0在${2]]></description>
 </item><item>
     <title>2024牛客寒假营1||补题</title>
-    <link>http://localhost:1313/posts/nc24wd1/</link>
+    <link>http://dodolalorc.cn/posts/nc24wd1/</link>
     <pubDate>Fri, 02 Feb 2024 20:30:40 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/nc24wd1/</guid>
+    </author><guid>http://dodolalorc.cn/posts/nc24wd1/</guid>
     <description><![CDATA[A-DFS搜索 题意给一个字符串，判断其中是否包含dfs子序列和DFS子序列。 数据范围$T(1≤T≤100)$ $n(1≤n≤50)$ 思路直接搜]]></description>
 </item></channel>
 </rss>

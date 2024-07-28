@@ -3,26 +3,26 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noodp" />
   <title>2024杭电钉耙编程联赛Day1||补题 - Doごみ箱🪄</title><meta name="Description" content="Doごみ箱2.1"><meta property="og:title" content="2024杭电钉耙编程联赛Day1||补题" />
 <meta property="og:description" content="1001-循环位移 题意将字符串$S=S_0&#43;S_1&#43;S_2&#43;&hellip;&#43;S_{n-1}$循环位移$k$次后得到$S(k)=S_{k\b" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/hdu24sd1/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://dodolalorc.cn/posts/hdu24sd1/" /><meta property="og:image" content="http://dodolalorc.cn/img/dodola.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-07-19T19:08:39+08:00" />
-<meta property="article:modified_time" content="2024-07-28T13:12:21+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+<meta property="article:modified_time" content="2024-07-28T16:49:51+08:00" /><meta property="og:site_name" content="Doごみ箱" />
 
 
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="2024杭电钉耙编程联赛Day1||补题"/>
+<meta name="twitter:image" content="http://dodolalorc.cn/img/dodola.png" /><meta name="twitter:title" content="2024杭电钉耙编程联赛Day1||补题"/>
 <meta name="twitter:description" content="1001-循环位移 题意将字符串$S=S_0&#43;S_1&#43;S_2&#43;&hellip;&#43;S_{n-1}$循环位移$k$次后得到$S(k)=S_{k\b"/>
 <meta name="application-name" content="Doごみ箱-一只小菜鸡的Blog">
 <meta name="apple-mobile-web-app-title" content="Doごみ箱-一只小菜鸡的Blog">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/hdu24sd1/" /><link rel="prev" href="http://localhost:1313/posts/nc24sd2/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/logo.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://dodolalorc.cn/posts/hdu24sd1/" /><link rel="prev" href="http://dodolalorc.cn/posts/nc24sd2/" /><link rel="next" href="http://dodolalorc.cn/posts/nc24sd3/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -32,9 +32,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/hdu24sd1\/"
-        },"genre": "posts","keywords": "算法, 杭电","wordcount":  1128 ,
-        "url": "http:\/\/localhost:1313\/posts\/hdu24sd1\/","datePublished": "2024-07-19T19:08:39+08:00","dateModified": "2024-07-28T13:12:21+08:00","license": "dodola","publisher": {
+            "@id": "http:\/\/dodolalorc.cn\/posts\/hdu24sd1\/"
+        },"genre": "posts","keywords": "算法, 杭电, 2024暑假集训","wordcount":  1128 ,
+        "url": "http:\/\/dodolalorc.cn\/posts\/hdu24sd1\/","datePublished": "2024-07-19T19:08:39+08:00","dateModified": "2024-07-28T16:49:51+08:00","license": "dodola","publisher": {
             "@type": "Organization",
             "name": "DODOLA"},"author": {
                 "@type": "Person",
@@ -213,7 +213,8 @@
         </div>
         <div class="details-content series-content">
             <nav>
-                <ul><li><span class="active">2024杭电钉耙编程联赛Day1||补题</span></li>
+                <ul>
+                    <li><a href="/posts/nc24sd3/">2024牛客暑假多校训练营Day3||补题</a></li><li><span class="active">2024杭电钉耙编程联赛Day1||补题</span></li>
                     <li><a href="/posts/nc24sd2/">2024牛客暑假多校训练营Day2||补题</a></li>
                     <li><a href="/posts/nc24sd1/">2024牛客暑假多校训练营Day1||补题</a></li>
                     <li><a href="/posts/24jilinccpc/">2024吉林省赛补题记录</a></li>
@@ -511,6 +512,11 @@
 <div class="related-container">
     <div class="related-item-container">
             <h2 class="related-title">
+                <a href="/posts/nc24sd3/">2024牛客暑假多校训练营Day3||补题</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <h2 class="related-title">
                 <a href="/posts/nc24sd2/">2024牛客暑假多校训练营Day2||补题</a>
             </h2>
         </div>
@@ -529,11 +535,6 @@
                 <a href="/posts/segtreelecnote/">线段树讲义||寒假</a>
             </h2>
         </div>
-    <div class="related-item-container">
-            <h2 class="related-title">
-                <a href="/posts/cfround930div2/">Codeforces Round 930(div2)</a>
-            </h2>
-        </div>
     
 
 </div>
@@ -550,19 +551,20 @@
             <div class="post-info-md"><span><a class="link-to-mardown" href=/posts/hdu24sd1/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
                     </span></div>
             <div class="post-info-share">
-                <span><a href="#" title="分享到 Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/hdu24sd1/" data-title="2024杭电钉耙编程联赛Day1||补题" data-hashtags="算法,杭电"><i class="fab fa-twitter fa-fw"></i></a><a href="#" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/hdu24sd1/" data-hashtag="算法"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/hdu24sd1/" data-title="2024杭电钉耙编程联赛Day1||补题"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" title="分享到 Line" data-sharer="line" data-url="http://localhost:1313/posts/hdu24sd1/" data-title="2024杭电钉耙编程联赛Day1||补题"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/hdu24sd1/" data-title="2024杭电钉耙编程联赛Day1||补题"><i class="fab fa-weibo fa-fw"></i></a><a href="#" title="分享到 百度" data-sharer="baidu" data-url="http://localhost:1313/posts/hdu24sd1/" data-title="2024杭电钉耙编程联赛Day1||补题"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a></span>
+                <span><a href="#" title="分享到 Twitter" data-sharer="twitter" data-url="http://dodolalorc.cn/posts/hdu24sd1/" data-title="2024杭电钉耙编程联赛Day1||补题" data-hashtags="算法,杭电,2024暑假集训"><i class="fab fa-twitter fa-fw"></i></a><a href="#" title="分享到 Facebook" data-sharer="facebook" data-url="http://dodolalorc.cn/posts/hdu24sd1/" data-hashtag="算法"><i class="fab fa-facebook-square fa-fw"></i></a><a href="#" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://dodolalorc.cn/posts/hdu24sd1/" data-title="2024杭电钉耙编程联赛Day1||补题"><i class="fab fa-hacker-news fa-fw"></i></a><a href="#" title="分享到 Line" data-sharer="line" data-url="http://dodolalorc.cn/posts/hdu24sd1/" data-title="2024杭电钉耙编程联赛Day1||补题"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="#" title="分享到 微博" data-sharer="weibo" data-url="http://dodolalorc.cn/posts/hdu24sd1/" data-title="2024杭电钉耙编程联赛Day1||补题"><i class="fab fa-weibo fa-fw"></i></a><a href="#" title="分享到 百度" data-sharer="baidu" data-url="http://dodolalorc.cn/posts/hdu24sd1/" data-title="2024杭电钉耙编程联赛Day1||补题"><i data-svg-src="/lib/simple-icons/icons/baidu.min.svg"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/%E6%9D%AD%E7%94%B5/">杭电</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/%E6%9D%AD%E7%94%B5/">杭电</a>,&nbsp;<a href="/tags/2024%E6%9A%91%E5%81%87%E9%9B%86%E8%AE%AD/">2024暑假集训</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/nc24sd2/" class="prev" rel="prev" title="2024牛客暑假多校训练营Day2||补题"><i class="fas fa-angle-left fa-fw"></i>2024牛客暑假多校训练营Day2||补题</a></div>
+    <div class="post-nav"><a href="/posts/nc24sd2/" class="prev" rel="prev" title="2024牛客暑假多校训练营Day2||补题"><i class="fas fa-angle-left fa-fw"></i>2024牛客暑假多校训练营Day2||补题</a>
+            <a href="/posts/nc24sd3/" class="next" rel="next" title="2024牛客暑假多校训练营Day3||补题">2024牛客暑假多校训练营Day3||补题<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="twikoo"></div><noscript>
     Please enable JavaScript to view the comments powered by <a href="https://twikoo.js.org/">Twikoo</a>.

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Svg - 标签 - Doごみ箱🪄</title>
-        <link>http://localhost:1313/tags/svg/</link>
+        <link>http://dodolalorc.cn/tags/svg/</link>
         <description>Svg - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/svg/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/svg/" rel="self" type="application/rss+xml" /><item>
     <title>Vue3封装一个SVG组件</title>
-    <link>http://localhost:1313/posts/vue_svgicon/</link>
+    <link>http://dodolalorc.cn/posts/vue_svgicon/</link>
     <pubDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/vue_svgicon/</guid>
+    </author><guid>http://dodolalorc.cn/posts/vue_svgicon/</guid>
     <description><![CDATA[Vue3+Vite+Svg以前使用Svg的时候会图简单直接将内容巨长的Svg代码粘贴在项目中，结果导致需要用Svg图标的部分代码巨长，今天写]]></description>
 </item></channel>
 </rss>
