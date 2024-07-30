@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>杭电 - 标签 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/tags/%E6%9D%AD%E7%94%B5/</link>
+        <link>http://localhost:1313/tags/%E6%9D%AD%E7%94%B5/</link>
         <description>杭电 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 19 Jul 2024 19:08:39 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E6%9D%AD%E7%94%B5/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 19 Jul 2024 19:08:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%9D%AD%E7%94%B5/" rel="self" type="application/rss+xml" /><item>
     <title>2024杭电钉耙编程联赛Day1||补题</title>
-    <link>http://dodolalorc.cn/posts/hdu24sd1/</link>
+    <link>http://localhost:1313/posts/hdu24sd1/</link>
     <pubDate>Fri, 19 Jul 2024 19:08:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/hdu24sd1/</guid>
+    </author><guid>http://localhost:1313/posts/hdu24sd1/</guid>
     <description><![CDATA[1001-循环位移 题意将字符串$S=S_0+S_1+S_2+&hellip;+S_{n-1}$循环位移$k$次后得到$S(k)=S_{k\b]]></description>
 </item></channel>
 </rss>

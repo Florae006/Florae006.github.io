@@ -1,36 +1,36 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>2024暑假集训 - 标签 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/tags/2024%E6%9A%91%E5%81%87%E9%9B%86%E8%AE%AD/</link>
+        <link>http://localhost:1313/tags/2024%E6%9A%91%E5%81%87%E9%9B%86%E8%AE%AD/</link>
         <description>2024暑假集训 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Tue, 23 Jul 2024 18:37:58 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/2024%E6%9A%91%E5%81%87%E9%9B%86%E8%AE%AD/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Tue, 23 Jul 2024 18:37:58 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/2024%E6%9A%91%E5%81%87%E9%9B%86%E8%AE%AD/" rel="self" type="application/rss+xml" /><item>
     <title>2024牛客暑假多校训练营Day3||补题</title>
-    <link>http://dodolalorc.cn/posts/nc24sd3/</link>
+    <link>http://localhost:1313/posts/nc24sd3/</link>
     <pubDate>Tue, 23 Jul 2024 18:37:58 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/nc24sd3/</guid>
+    </author><guid>http://localhost:1313/posts/nc24sd3/</guid>
     <description><![CDATA[B-Crash Test 题意小车有$n$个引擎，第$i$个引擎可以让车前进$h[i]$米。在小车起点正前方距离为$D$处有一反弹墙面，小车如果撞在墙上将会被回弹]]></description>
 </item><item>
     <title>2024杭电钉耙编程联赛Day1||补题</title>
-    <link>http://dodolalorc.cn/posts/hdu24sd1/</link>
+    <link>http://localhost:1313/posts/hdu24sd1/</link>
     <pubDate>Fri, 19 Jul 2024 19:08:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/hdu24sd1/</guid>
+    </author><guid>http://localhost:1313/posts/hdu24sd1/</guid>
     <description><![CDATA[1001-循环位移 题意将字符串$S=S_0+S_1+S_2+&hellip;+S_{n-1}$循环位移$k$次后得到$S(k)=S_{k\b]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day2||补题</title>
-    <link>http://dodolalorc.cn/posts/nc24sd2/</link>
+    <link>http://localhost:1313/posts/nc24sd2/</link>
     <pubDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/nc24sd2/</guid>
+    </author><guid>http://localhost:1313/posts/nc24sd2/</guid>
     <description><![CDATA[B-MST 题意给定一个$n$顶点的带权无向图$G$。 每次询问一个点集$S$，求$S$关于$G$的导出子图的最小生成树的质量，若无则输出-1。 数据范围]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day1||补题</title>
-    <link>http://dodolalorc.cn/posts/nc24sd1/</link>
+    <link>http://localhost:1313/posts/nc24sd1/</link>
     <pubDate>Tue, 16 Jul 2024 19:36:00 &#43;0800</pubDate><author>
         <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/nc24sd1/</guid>
+    </author><guid>http://localhost:1313/posts/nc24sd1/</guid>
     <description><![CDATA[A-Bit Common 题意计算满足长度为$n$，每个元素小于$2^m$，且存在至少一个子序列满足按位$AND$后是$1$的序列的数量。 答案对正整数$q$取模。]]></description>
 </item></channel>
 </rss>
