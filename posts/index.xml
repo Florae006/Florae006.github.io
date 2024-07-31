@@ -5,6 +5,13 @@
         <description>所有文章 | Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
             <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 31 Jul 2024 15:56:19 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>2024牛客暑假多校训练营Day4||补题</title>
+    <link>http://localhost:1313/posts/nc24sd4/</link>
+    <pubDate>Wed, 31 Jul 2024 15:55:48 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd4/</guid>
+    <description><![CDATA[TODO]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day3||补题</title>
     <link>http://localhost:1313/posts/nc24sd3/</link>
     <pubDate>Tue, 23 Jul 2024 18:37:58 &#43;0800</pubDate><author>
@@ -67,12 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/datalab/</guid>
     <description><![CDATA[0. before start实验需要的材料在这里：CSAPP Datalab CSAPP原书在线阅读 将datalab-handout.tar下载复制到计划用来实验的目录下]]></description>
-</item><item>
-    <title>MutationObserver学习&#43;实践</title>
-    <link>http://localhost:1313/posts/mutationobserver/</link>
-    <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/mutationobserver/</guid>
-    <description><![CDATA[一篇学习 MutationObserver 的文章 背景今天调整新主题的时候，在重新设计友链样式的时候想保留原本的随机背景颜色，之前数量少的时候似乎不太明显，现在本地测试发觉加]]></description>
 </item></channel>
 </rss>

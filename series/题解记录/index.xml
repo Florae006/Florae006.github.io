@@ -4,7 +4,14 @@
         <link>http://localhost:1313/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/</link>
         <description>题解记录 - 系列 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Tue, 23 Jul 2024 18:37:58 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 31 Jul 2024 15:55:48 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
+    <title>2024牛客暑假多校训练营Day4||补题</title>
+    <link>http://localhost:1313/posts/nc24sd4/</link>
+    <pubDate>Wed, 31 Jul 2024 15:55:48 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd4/</guid>
+    <description><![CDATA[TODO]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day3||补题</title>
     <link>http://localhost:1313/posts/nc24sd3/</link>
     <pubDate>Tue, 23 Jul 2024 18:37:58 &#43;0800</pubDate><author>
@@ -67,12 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/cfround933div3/</guid>
     <description><![CDATA[A-Rudolf and the Ticket 题意左边口袋有一些面值为$b_1,b_2,b_3,&hellip;,b_n$的硬币，右边有一些面值为$c_1,c_2,c_3,&he]]></description>
-</item><item>
-    <title>Educational Codeforces Round 162(div2)</title>
-    <link>http://localhost:1313/posts/cfedu162div2/</link>
-    <pubDate>Thu, 29 Feb 2024 14:57:07 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfedu162div2/</guid>
-    <description><![CDATA[A-Moving Chips 题意每个单元格为空闲或有一个芯片，芯片可以向左移动到最近的空闲处（如果存在空闲格）。 现在有一排单元格，求问进行多少次移动，才能使得所有芯]]></description>
 </item></channel>
 </rss>
