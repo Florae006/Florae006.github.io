@@ -214,6 +214,91 @@ int main() {
 }
 ```
 
+## E-Malfunctioning Typewriter
+
+### 题意
+
+有一台打字机，对于每次键入的字符（只有`0`或`1`），每次有`p`的概率正确键入，有$n$句长度为$m$的不会重复的诗句，这些诗句可以以任意顺序组合成一首长度为$n$的诗。询问在打字这首诗的时候，有多大的概率成果打出。
+
+#### 数据范围
+
+* $1\leq n,m\leq 1000$
+* $0.5\leq q\leq 1$
+
+### 思路
+
+将$n$句诗建立字典树，对每个节点统计以该结点为前缀的字符串数目。
+
+考虑到只有`01`，每个节点下最多只有`0`或`1`的子节点。记某个节点为$u$，将节点$u$前缀打对的概率可以预处理（$f(x,y)$表示打对$x$个$1$，$y$个$0$的概率），打对一整首诗歌是遍历完字典树上的每个字符串$1$次，对于字典树上的某个非叶子节点，在遍历时，经过该结点的数目是它的子树中有多少个叶子结点决定的，假设有$x$是从该节点（表示一个前缀）往后以`1`为根节点的子树中的叶子结点数目，$y$是以`0`为根节点的子树中叶子结点的数目，那么在决策当前是否正确输出了`0/1`的概率是$f(x,y)$（相当于在当前节点输出正确的$x$个`1`和$y$个`0`的概率代表这一步打字输出了$x+y$个合法下行子串的概率），故总概率是$\prod_u f(sz(lp),sz(rp))$。
+
+对$f(x,y)$的预处理：
+$$
+f(x,y)=\max(p*f(x-1,y)+(1-p)*f(x,y),p*f(x,y-1)+(1-p)*f(x-1,y))
+$$
+
+### 代码
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+typedef double ld;
+const ll maxn = 1010;
+
+int node = 0;
+int nxt[maxn * maxn][2];
+int sz[maxn * maxn];
+void triInsert(string s) {
+    int n = s.size();
+    int p = 0;
+    for (int i = 0;i < n;i++) {
+        int c = s[i] - '0';
+        if (!nxt[p][c])nxt[p][c] = ++node;
+        sz[nxt[p][c]]++; // 以这个点为前缀的字符串数目
+        p = nxt[p][c];
+    }
+}
+
+
+ld f[maxn][maxn];
+void solve() {
+    int n, m;ld p;
+    cin >> n >> m >> p;
+    vector<string>st(n);
+    for (int i = 0;i < n;i++) {
+        string s;cin >> s;
+        triInsert(s);
+    }
+    f[0][0] = 1.0; // 打出0个1,0个0概率为1
+    for (int x = 0;x <= n;x++) {
+        // f(x,y):恰好正确打出x个1,y个0
+        for (int y = 0;y <= n;y++) {
+            if (!x && !y)continue;
+            ld w = x ? f[x - 1][y] : 0.0;
+            ld v = y ? f[x][y - 1] : 0.0;
+            f[x][y] = max(
+                p * w + (1 - p) * v,
+                p * v + (1 - p) * w
+            );
+        }
+    }
+    ld ans = 1.0;
+    for (int i = 0;i <= node;i++) {
+        ans *= f[sz[nxt[i][0]]][sz[nxt[i][1]]];
+    }
+    printf("%.12lf", ans);
+}
+
+int main() {
+    int _ = 1;
+    // cin >> _;cin.get();
+    while (_--)
+        solve();
+
+    return 0;
+}
+```
+
 ## J-Rigged Games
 
 ### 题意
