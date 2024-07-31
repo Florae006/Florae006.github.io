@@ -4,7 +4,7 @@
         <link>http://localhost:1313/</link>
         <description>Doごみ箱2.1</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 31 Jul 2024 15:55:48 &#43;0800</lastBuildDate>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 31 Jul 2024 15:56:19 &#43;0800</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>2024牛客暑假多校训练营Day4||补题</title>
@@ -12,7 +12,7 @@
     <pubDate>Wed, 31 Jul 2024 15:55:48 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd4/</guid>
-    <description><![CDATA[TODO]]></description>
+    <description><![CDATA[G-Horse Drinks Water 题意将军饮马问题。在平面坐标轴中，只有$x、y$轴的飞负半轴是水源，给出马儿的坐标和营地的坐标，求最短距离。 数据范围 $1\leq t\leq 10^5$ $0\leq x_G,y_G,x_T,u_T\leq 10^9$ 思路将]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day3||补题</title>
     <link>http://localhost:1313/posts/nc24sd3/</link>
