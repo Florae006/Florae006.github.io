@@ -4,9 +4,16 @@
         <link>http://localhost:1313/</link>
         <description>Doごみ箱2.1</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 31 Jul 2024 15:56:19 &#43;0800</lastBuildDate>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 05 Aug 2024 10:15:52 &#43;0800</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>2024牛客暑假多校训练营Day6||补题</title>
+    <link>http://localhost:1313/posts/nc24sd6/</link>
+    <pubDate>Mon, 05 Aug 2024 10:15:52 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd6/</guid>
+    <description><![CDATA[A-Cake 题意Oscar和Grammy玩游戏，第一阶段两人轮流在有根树上走，走到叶子停止，经过的边有两种，标0边或者标1边，记录走下的01串。设01]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day4||补题</title>
     <link>http://localhost:1313/posts/nc24sd4/</link>
     <pubDate>Wed, 31 Jul 2024 15:55:48 &#43;0800</pubDate><author>
@@ -69,12 +76,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/24jilinccpc/</guid>
     <description><![CDATA[阿巴阿巴 啊，省赛，怎么两个月过去了才整理题解，这一定是在复习（确信 GYM地址：2024吉林省赛 题目顺序按照从易到难排序。 I. The Easiest Problem 题意数一数 代]]></description>
-</item><item>
-    <title>CS-APP Datalab</title>
-    <link>http://localhost:1313/posts/datalab/</link>
-    <pubDate>Thu, 04 Jul 2024 20:49:31 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/datalab/</guid>
-    <description><![CDATA[0. before start实验需要的材料在这里：CSAPP Datalab CSAPP原书在线阅读 将datalab-handout.tar下载复制到计划用来实验的目录下]]></description>
 </item></channel>
 </rss>
