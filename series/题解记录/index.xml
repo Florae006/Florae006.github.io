@@ -4,7 +4,14 @@
         <link>http://localhost:1313/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/</link>
         <description>题解记录 - 系列 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 31 Jul 2024 15:55:48 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 05 Aug 2024 10:15:52 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
+    <title>2024牛客暑假多校训练营Day6||补题</title>
+    <link>http://localhost:1313/posts/nc24sd6/</link>
+    <pubDate>Mon, 05 Aug 2024 10:15:52 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd6/</guid>
+    <description><![CDATA[A-Cake 题意Oscar和Grammy玩游戏，第一阶段两人轮流在有根树上走，走到叶子停止，经过的边有两种，标0边或者标1边，记录走下的01串。设01]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day4||补题</title>
     <link>http://localhost:1313/posts/nc24sd4/</link>
     <pubDate>Wed, 31 Jul 2024 15:55:48 &#43;0800</pubDate><author>
@@ -67,12 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/cfround932div2/</guid>
     <description><![CDATA[A-Entertainment in MAC 题意可以对一个字符串进行两种操作： 将字符串反转 将该字符串反转后接在原串的后面。 可以进行任意次上述操作，获得字典序最小的字符串。 数据范围]]></description>
-</item><item>
-    <title>Codeforces Round 933(div3)</title>
-    <link>http://localhost:1313/posts/cfround933div3/</link>
-    <pubDate>Wed, 13 Mar 2024 12:25:46 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfround933div3/</guid>
-    <description><![CDATA[A-Rudolf and the Ticket 题意左边口袋有一些面值为$b_1,b_2,b_3,&hellip;,b_n$的硬币，右边有一些面值为$c_1,c_2,c_3,&he]]></description>
 </item></channel>
 </rss>
