@@ -8,17 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noodp" />
   <title>2024牛客暑假多校训练营Day4||补题 - Doごみ箱🪄</title><meta name="Description" content="Doごみ箱2.1"><meta property="og:title" content="2024牛客暑假多校训练营Day4||补题" />
-<meta property="og:description" content="G-Horse Drinks Water 题意将军饮马问题。在平面坐标轴中，只有$x、y$轴的飞负半轴是水源，给出马儿的坐标和营地的坐标，求最短距离。 数据范围 $1\leq t\leq 10^5$ $0\leq x_G,y_G,x_T,u_T\leq 10^9$ 思路将" />
+<meta property="og:description" content="F-Good Tree 题意一棵树，树上的边权都是$1$，定义$f(u)=\sum_v dis(u,v)$，给出一个$x$，寻找一个满足存在两个点$u,v$使得$" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/nc24sd4/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-07-31T15:55:48+08:00" />
-<meta property="article:modified_time" content="2024-08-01T01:28:09+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+<meta property="article:modified_time" content="2024-08-09T01:32:23+08:00" /><meta property="og:site_name" content="Doごみ箱" />
 
 
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="2024牛客暑假多校训练营Day4||补题"/>
-<meta name="twitter:description" content="G-Horse Drinks Water 题意将军饮马问题。在平面坐标轴中，只有$x、y$轴的飞负半轴是水源，给出马儿的坐标和营地的坐标，求最短距离。 数据范围 $1\leq t\leq 10^5$ $0\leq x_G,y_G,x_T,u_T\leq 10^9$ 思路将"/>
+<meta name="twitter:description" content="F-Good Tree 题意一棵树，树上的边权都是$1$，定义$f(u)=\sum_v dis(u,v)$，给出一个$x$，寻找一个满足存在两个点$u,v$使得$"/>
 <meta name="application-name" content="Doごみ箱-一只小菜鸡的Blog">
 <meta name="apple-mobile-web-app-title" content="Doごみ箱-一只小菜鸡的Blog">
 
@@ -33,8 +33,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/posts\/nc24sd4\/"
-        },"genre": "posts","keywords": "2024暑假集训, 算法, 牛客","wordcount":  771 ,
-        "url": "http:\/\/localhost:1313\/posts\/nc24sd4\/","datePublished": "2024-07-31T15:55:48+08:00","dateModified": "2024-08-01T01:28:09+08:00","license": "dodola","publisher": {
+        },"genre": "posts","keywords": "2024暑假集训, 算法, 牛客","wordcount":  1915 ,
+        "url": "http:\/\/localhost:1313\/posts\/nc24sd4\/","datePublished": "2024-07-31T15:55:48+08:00","dateModified": "2024-08-09T01:32:23+08:00","license": "dodola","publisher": {
             "@type": "Organization",
             "name": "DODOLA"},"author": {
                 "@type": "Person",
@@ -137,7 +137,7 @@
     <h2 class="toc-title">目录</h2>
     <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#g-horse-drinks-water">G-Horse Drinks Water</a>
+    <li><a href="#f-good-tree">F-Good Tree</a>
       <ul>
         <li><a href="#题意">题意</a>
           <ul>
@@ -148,7 +148,7 @@
         <li><a href="#代码">代码</a></li>
       </ul>
     </li>
-    <li><a href="#h-yet-another-origami-problem">H-Yet Another Origami Problem</a>
+    <li><a href="#g-horse-drinks-water">G-Horse Drinks Water</a>
       <ul>
         <li><a href="#题意-1">题意</a>
           <ul>
@@ -159,14 +159,36 @@
         <li><a href="#代码-1">代码</a></li>
       </ul>
     </li>
+    <li><a href="#h-yet-another-origami-problem">H-Yet Another Origami Problem</a>
+      <ul>
+        <li><a href="#题意-2">题意</a>
+          <ul>
+            <li><a href="#数据范围-2">数据范围</a></li>
+          </ul>
+        </li>
+        <li><a href="#思路-2">思路</a></li>
+        <li><a href="#代码-2">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-friends">I-Friends</a>
+      <ul>
+        <li><a href="#题意-3">题意</a>
+          <ul>
+            <li><a href="#数据范围-3">数据范围</a></li>
+          </ul>
+        </li>
+        <li><a href="#思路-3">思路</a></li>
+        <li><a href="#代码-3">代码</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
 </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">2024牛客暑假多校训练营Day4||补题</h1><div class="post-meta">
         <div class="post-meta-line">
             <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
             </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在学算法的日子里</a></span>&nbsp;<span class="post-category">和</span>&nbsp;<span class="post-series">系列 <a href="/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/"><i class="far fa-list-alt fa-fw"></i>题解记录</a></span></div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-07-31">2024-07-31</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-08-01">2024-08-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 771 字&nbsp;
-            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/nc24sd4/" class="leancloud_visitors" data-flag-title="2024牛客暑假多校训练营Day4||补题">
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-07-31">2024-07-31</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1915 字&nbsp;
+            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/nc24sd4/" class="leancloud_visitors" data-flag-title="2024牛客暑假多校训练营Day4||补题">
                 <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"
                     id=twikoo_visitors></span>&nbsp;次阅读
             </span>&nbsp;<span id="/posts/nc24sd4/" class="comment_count" data-flag-title="2024牛客暑假多校训练营Day4||补题">
@@ -195,6 +217,7 @@
         <div class="details-content series-content">
             <nav>
                 <ul>
+                    <li><a href="/posts/nc24sd8/">2024牛客暑假多校训练营Day8||补题</a></li>
                     <li><a href="/posts/nc24sd6/">2024牛客暑假多校训练营Day6||补题</a></li><li><span class="active">2024牛客暑假多校训练营Day4||补题</span></li>
                     <li><a href="/posts/nc24sd3/">2024牛客暑假多校训练营Day3||补题</a></li>
                     <li><a href="/posts/hdu24sd1/">2024杭电钉耙编程联赛Day1||补题</a></li>
@@ -224,7 +247,7 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#g-horse-drinks-water">G-Horse Drinks Water</a>
+    <li><a href="#f-good-tree">F-Good Tree</a>
       <ul>
         <li><a href="#题意">题意</a>
           <ul>
@@ -235,7 +258,7 @@
         <li><a href="#代码">代码</a></li>
       </ul>
     </li>
-    <li><a href="#h-yet-another-origami-problem">H-Yet Another Origami Problem</a>
+    <li><a href="#g-horse-drinks-water">G-Horse Drinks Water</a>
       <ul>
         <li><a href="#题意-1">题意</a>
           <ul>
@@ -246,20 +269,97 @@
         <li><a href="#代码-1">代码</a></li>
       </ul>
     </li>
+    <li><a href="#h-yet-another-origami-problem">H-Yet Another Origami Problem</a>
+      <ul>
+        <li><a href="#题意-2">题意</a>
+          <ul>
+            <li><a href="#数据范围-2">数据范围</a></li>
+          </ul>
+        </li>
+        <li><a href="#思路-2">思路</a></li>
+        <li><a href="#代码-2">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#i-friends">I-Friends</a>
+      <ul>
+        <li><a href="#题意-3">题意</a>
+          <ul>
+            <li><a href="#数据范围-3">数据范围</a></li>
+          </ul>
+        </li>
+        <li><a href="#思路-3">思路</a></li>
+        <li><a href="#代码-3">代码</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-    </div><div class="content" id="content"><h2 id="g-horse-drinks-water" class="headerLink">
-    <a href="#g-horse-drinks-water" class="header-mark"></a>G-Horse Drinks Water</h2><h3 id="题意" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>将军饮马问题。在平面坐标轴中，只有$x、y$轴的飞负半轴是水源，给出马儿的坐标和营地的坐标，求最短距离。</p>
+    </div><div class="content" id="content"><h2 id="f-good-tree" class="headerLink">
+    <a href="#f-good-tree" class="header-mark"></a>F-Good Tree</h2><h3 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>一棵树，树上的边权都是$1$，定义$f(u)=\sum_v dis(u,v)$，给出一个$x$，寻找一个满足存在两个点$u,v$使得$f(u)-f(v)=x$成立的最少节点子树，输出节点数。</p>
 <h4 id="数据范围" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><ul>
 <li>$1\leq t\leq 10^5$</li>
-<li>$0\leq x_G,y_G,x_T,u_T\leq 10^9$</li>
+<li>$1\leq x \leq 10^{18}$</li>
 </ul>
 <h3 id="思路" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>将坐标按坐标轴对称，求距离。</p>
+    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>$f(u)$为点$u$到各个其他节点的距离之和，只有$u\rightarrow v$一条路径的时候，$f(u)=f(v)=dia(u,v)$，若要增加$f(u)$和$f(v)$之间的差值，每在$v$上增加一个在$v$的子树中的节点，$f(u)-f(v)$的值就会增加一倍$dis(u,v)$。</p>
+<p>当有奇数个点，$2\times k +1$个点，另$dis(u,v)=k$，剩余$k$个点都是$v$的子树中的节点，$f(u)-f(v)$最大是$k^2$。</p>
+<p>当有偶数个点，$2\times k+2$，同理，$f(u)-f(v)$的最大值是$k(k+1)$。</p>
+<p>下一个奇数是$(k+1)^2$，再下一个偶数的是$(k+1)(k+2)$&hellip;</p>
+<p>故对于一个确定的$x$，我们需要确定落在哪个$(k^2,(k+1)^2]$区间，然后再确定是在区间$(k^2,k(k+1)]$还是$(k(k+1),(k+1)^2]$，也就是点数应该至少是大于$2\times k+1$还是$2\times k+2$。</p>
+<p>在区间$(k(k+1),(k+1)^2)$中，一定可以构造出$2\times k+3$的方法；</p>
+<p>在区间$(k^2,k(k+1)]$中，如果$k$为奇数，可以构造出$2\times k+3$，如果$k$为偶数，可以构造出$2\times k+2$。</p>
 <h3 id="代码" class="headerLink">
     <a href="#%e4%bb%a3%e7%a0%81" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">x</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">k</span> <span class="o">=</span> <span class="n">sqrtl</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="c1">// 注意开方long long
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">*</span> <span class="n">k</span> <span class="o">==</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">*</span> <span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">k</span> <span class="o">*</span> <span class="n">k</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2ll</span> <span class="o">!=</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">2ll</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="g-horse-drinks-water" class="headerLink">
+    <a href="#g-horse-drinks-water" class="header-mark"></a>G-Horse Drinks Water</h2><h3 id="题意-1" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>将军饮马问题。在平面坐标轴中，只有$x、y$轴的飞负半轴是水源，给出马儿的坐标和营地的坐标，求最短距离。</p>
+<h4 id="数据范围-1" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-1" class="header-mark"></a>数据范围</h4><ul>
+<li>$1\leq t\leq 10^5$</li>
+<li>$0\leq x_G,y_G,x_T,u_T\leq 10^9$</li>
+</ul>
+<h3 id="思路-1" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-1" class="header-mark"></a>思路</h3><p>将坐标按坐标轴对称，求距离。</p>
+<h3 id="代码-1" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -290,25 +390,25 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="h-yet-another-origami-problem" class="headerLink">
-    <a href="#h-yet-another-origami-problem" class="header-mark"></a>H-Yet Another Origami Problem</h2><h3 id="题意-1" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>可以选择任意坐标$p$，进行如下二选一操作：</p>
+    <a href="#h-yet-another-origami-problem" class="header-mark"></a>H-Yet Another Origami Problem</h2><h3 id="题意-2" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-2" class="header-mark"></a>题意</h3><p>可以选择任意坐标$p$，进行如下二选一操作：</p>
 <ol>
 <li>若符合$a_i\leq a_p$，可以重新赋值$a_i\leftarrow a_i + 2(a_p-a_i)$。</li>
 <li>若符合$a_i\geq a_p$，可以重新赋值$a_i \leftarrow a_i-a(a_i-a_p)$</li>
 </ol>
 <p>可以进行上述操作若干次，求问可以将$a$数组的范围收敛到多小。</p>
-<h4 id="数据范围-1" class="headerLink">
-    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-1" class="header-mark"></a>数据范围</h4><ul>
+<h4 id="数据范围-2" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-2" class="header-mark"></a>数据范围</h4><ul>
 <li>$1\leq t\leq 5\times 10^5$</li>
 <li>$1\leq n\leq 10^5$</li>
 <li>$0\leq a_i\leq 10^{16}$</li>
 </ul>
-<h3 id="思路-1" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-1" class="header-mark"></a>思路</h3><p>上面的操作可以进行无数次，通过模拟可以意识到，这是一个类似折纸的操作，是将某个数沿着某条线折叠到另一边的操作。注意到每次操作不是必须要对每个$a_i$进行这样的翻折的，例如当$a_i\lt a_p$时选择操作2，可以避免$a_i$的翻折。</p>
+<h3 id="思路-2" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-2" class="header-mark"></a>思路</h3><p>上面的操作可以进行无数次，通过模拟可以意识到，这是一个类似折纸的操作，是将某个数沿着某条线折叠到另一边的操作。注意到每次操作不是必须要对每个$a_i$进行这样的翻折的，例如当$a_i\lt a_p$时选择操作2，可以避免$a_i$的翻折。</p>
 <p>通过翻折让数组的范围收束到最小。假设当前只有3个各不相同的数，这三个数从小到大排列之后是${a,b,c}$，那么在数轴上形成了距离$x=b-a$和$y=c-b$，对于这三个数来说，通过折叠，假设是$a$沿着$b$向$c$折叠，将$x$变为$x\bmod y$（不断沿着$y$的两边折叠，直到落在$b、c$之间），若此时$x\neq 0$，则$y$也可以通过一样的方法收束到小于$x$的某个长度。故获得的最小的范围应该是$x、y$的$gcd$。</p>
 <p>同样的思想可以拓展到多个数的时候。</p>
-<h3 id="代码-1" class="headerLink">
-    <a href="#%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<h3 id="代码-2" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -352,6 +452,81 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h2 id="i-friends" class="headerLink">
+    <a href="#i-friends" class="header-mark"></a>I-Friends</h2><h3 id="题意-3" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-3" class="header-mark"></a>题意</h3><p>$n$个人从左到右排成一排，编号从$1$到$n-1$，这$n$个人之间有$m$对好朋友，求有多少个区间$[l,r]$中每两对都是好朋友。</p>
+<h4 id="数据范围-3" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-3" class="header-mark"></a>数据范围</h4><ul>
+<li>$1\leq n,m \leq 10^6$</li>
+</ul>
+<h3 id="思路-3" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-3" class="header-mark"></a>思路</h3><p>假设已有一个区间$[l,r]$符合要求，且$r$是以$l$为左端点的时候最远的符合要求的右端点。那么显然有：</p>
+<p>当加入$r+1$时，$r+1$号与$[l,r]$中的至少一个人不是好友关系。同时，区间$[l+1,r]$是一个友好区间，于是在移动左端点时，右端点只需要从上一个左端点的最远右端点开始检查即可。</p>
+<h3 id="代码-3" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;&gt;</span><span class="n">links</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">u</span> <span class="o">&gt;&gt;</span> <span class="n">v</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">links</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">links</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">u</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">prer</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">prer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// check
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kt">bool</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span><span class="n">k</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">;</span><span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">links</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">count</span><span class="p">(</span><span class="n">k</span><span class="p">))</span><span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">)</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ans</span> <span class="o">+=</span> <span class="n">j</span> <span class="o">-</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">prer</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
 </div></div>
 
     
@@ -359,6 +534,11 @@
 
 <h2>相关内容</h2>
 <div class="related-container">
+    <div class="related-item-container">
+            <h2 class="related-title">
+                <a href="/posts/nc24sd8/">2024牛客暑假多校训练营Day8||补题</a>
+            </h2>
+        </div>
     <div class="related-item-container">
             <h2 class="related-title">
                 <a href="/posts/nc24sd6/">2024牛客暑假多校训练营Day6||补题</a>
@@ -379,11 +559,6 @@
                 <a href="/posts/nc24sd2/">2024牛客暑假多校训练营Day2||补题</a>
             </h2>
         </div>
-    <div class="related-item-container">
-            <h2 class="related-title">
-                <a href="/posts/nc24sd1/">2024牛客暑假多校训练营Day1||补题</a>
-            </h2>
-        </div>
     
 
 </div>
@@ -392,7 +567,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-08-01</span>
+                <span>更新于 2024-08-09</span>
             </div>
             <div class="post-info-license"></div>
         </div>

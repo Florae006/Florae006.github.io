@@ -4,7 +4,14 @@
         <link>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</link>
         <description>算法 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 05 Aug 2024 10:15:52 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 09 Aug 2024 00:26:32 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>2024牛客暑假多校训练营Day8||补题</title>
+    <link>http://localhost:1313/posts/nc24sd8/</link>
+    <pubDate>Fri, 09 Aug 2024 00:26:32 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd8/</guid>
+    <description><![CDATA[A-Haitang and Game 题意给出一个数组，两人轮流，每次选择数组中的两个数，若这两个数的$gcd$不在当前的数组里，就将这两个数的$gcd$加入到数组中，不能]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day6||补题</title>
     <link>http://localhost:1313/posts/nc24sd6/</link>
     <pubDate>Mon, 05 Aug 2024 10:15:52 &#43;0800</pubDate><author>
@@ -17,7 +24,7 @@
     <pubDate>Wed, 31 Jul 2024 15:55:48 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd4/</guid>
-    <description><![CDATA[G-Horse Drinks Water 题意将军饮马问题。在平面坐标轴中，只有$x、y$轴的飞负半轴是水源，给出马儿的坐标和营地的坐标，求最短距离。 数据范围 $1\leq t\leq 10^5$ $0\leq x_G,y_G,x_T,u_T\leq 10^9$ 思路将]]></description>
+    <description><![CDATA[F-Good Tree 题意一棵树，树上的边权都是$1$，定义$f(u)=\sum_v dis(u,v)$，给出一个$x$，寻找一个满足存在两个点$u,v$使得$]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day3||补题</title>
     <link>http://localhost:1313/posts/nc24sd3/</link>
@@ -67,12 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/cfround930div2/</guid>
     <description><![CDATA[A-Shuffle Party 题意对一个数组，起初是$a_i=i$ 对操作swap(k)： 设$d$是不等于$k$本身的$k$的最大除数，然后交换元素$a_d$和$a_k]]></description>
-</item><item>
-    <title>Codeforces Round 931(div2)</title>
-    <link>http://localhost:1313/posts/cfround931div2/</link>
-    <pubDate>Wed, 13 Mar 2024 12:26:22 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfround931div2/</guid>
-    <description><![CDATA[A-Too Min Too Max 题意对一个数组，找到索引$(i,j,k,l)$使得$|a_i-a_j|+|a_j-a_k|+|a_k-a_l|+|a_l-a_i|$]]></description>
 </item></channel>
 </rss>

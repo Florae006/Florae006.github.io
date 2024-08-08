@@ -1,6 +1,54 @@
 # 2024牛客暑假多校训练营Day4||补题
 
 
+## F-Good Tree
+
+### 题意
+
+一棵树，树上的边权都是$1$，定义$f(u)=\sum_v dis(u,v)$，给出一个$x$，寻找一个满足存在两个点$u,v$使得$f(u)-f(v)=x$成立的最少节点子树，输出节点数。
+
+#### 数据范围
+
+* $1\leq t\leq 10^5$
+* $1\leq x \leq 10^{18}$
+
+### 思路
+
+$f(u)$为点$u$到各个其他节点的距离之和，只有$u\rightarrow v$一条路径的时候，$f(u)=f(v)=dia(u,v)$，若要增加$f(u)$和$f(v)$之间的差值，每在$v$上增加一个在$v$的子树中的节点，$f(u)-f(v)$的值就会增加一倍$dis(u,v)$。
+
+当有奇数个点，$2\times k +1$个点，另$dis(u,v)=k$，剩余$k$个点都是$v$的子树中的节点，$f(u)-f(v)$最大是$k^2$。
+
+当有偶数个点，$2\times k+2$，同理，$f(u)-f(v)$的最大值是$k(k+1)$。
+
+下一个奇数是$(k+1)^2$，再下一个偶数的是$(k+1)(k+2)$...
+
+故对于一个确定的$x$，我们需要确定落在哪个$(k^2,(k+1)^2]$区间，然后再确定是在区间$(k^2,k(k+1)]$还是$(k(k+1),(k+1)^2]$，也就是点数应该至少是大于$2\times k+1$还是$2\times k+2$。
+
+在区间$(k(k+1),(k+1)^2)$中，一定可以构造出$2\times k+3$的方法；
+
+在区间$(k^2,k(k+1)]$中，如果$k$为奇数，可以构造出$2\times k+3$，如果$k$为偶数，可以构造出$2\times k+2$。
+
+### 代码
+
+```cpp
+void solve() {
+    ll x;cin >> x;
+    ll k = sqrtl(x); // 注意开方long long
+    if (k * k == x) {
+        cout << 2 * k + 1 << "\n";
+    }
+    else if (k * (k + 1) < x) {
+        cout << 2 * k + 3 << "\n";
+    }
+    else if ((x - k * k) % 2ll != k % 2ll) {
+        cout << 2 * k + 3 << "\n";
+    }
+    else {
+        cout << 2 * k + 2 << "\n";
+    }
+}
+```
+
 ## G-Horse Drinks Water
 
 ### 题意
@@ -81,3 +129,67 @@ void solve() {
     cout << ans << "\n";
 }
 ```
+
+## I-Friends
+
+### 题意
+
+$n$个人从左到右排成一排，编号从$1$到$n-1$，这$n$个人之间有$m$对好朋友，求有多少个区间$[l,r]$中每两对都是好朋友。
+
+#### 数据范围
+
+* $1\leq n,m \leq 10^6$
+
+### 思路
+
+假设已有一个区间$[l,r]$符合要求，且$r$是以$l$为左端点的时候最远的符合要求的右端点。那么显然有：
+
+当加入$r+1$时，$r+1$号与$[l,r]$中的至少一个人不是好友关系。同时，区间$[l+1,r]$是一个友好区间，于是在移动左端点时，右端点只需要从上一个左端点的最远右端点开始检查即可。
+
+### 代码
+
+```cpp
+void solve() {
+    int n, m;cin >> n >> m;
+    vector<map<int, bool>>links(n + 1);
+    for (int i = 0;i < m;i++) {
+        int u, v;cin >> u >> v;
+        links[u][v] = true;
+        links[v][u] = true;
+    }
+    int ans = 0;
+    int prer = 1;
+    for (int i = 1;i <= n;i++) {
+        int j = prer;
+        while (j <= n) {
+            // check
+            bool f = true;
+            for (int k = i;k < j;k++) {
+                if (links[j].count(k))continue;
+                f = false;
+                break;
+            }
+            if (!f)break;
+            j++;
+        }
+        ans += j - i;
+        prer = j - 1;
+    }
+
+    cout << ans << "\n";
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
