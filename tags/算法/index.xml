@@ -12,6 +12,13 @@
     </author><guid>http://localhost:1313/posts/nc24sd8/</guid>
     <description><![CDATA[A-Haitang and Game 题意给出一个数组，两人轮流，每次选择数组中的两个数，若这两个数的$gcd$不在当前的数组里，就将这两个数的$gcd$加入到数组中，不能]]></description>
 </item><item>
+    <title>2024牛客暑假多校训练营Day7||补题</title>
+    <link>http://localhost:1313/posts/nc24sd7/</link>
+    <pubDate>Fri, 09 Aug 2024 00:26:24 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd7/</guid>
+    <description><![CDATA[I-Fight Against the Monster 题意使用机器对抗怪兽，一台机器有以下两种功能： 战斗：使怪兽血量减少1点，后技巧丧失所有功能 创造：需要$m$台机器同时使用，创造出$k]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day6||补题</title>
     <link>http://localhost:1313/posts/nc24sd6/</link>
     <pubDate>Mon, 05 Aug 2024 10:15:52 &#43;0800</pubDate><author>
@@ -67,12 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/segtreelecnote/</guid>
     <description><![CDATA[线段树介绍 线段树是一棵二叉树，每个节点维护一个区间内$[l,r]$的信息 左子树区间维护$[l,\lfloor \frac{l+r}{2} \rfloor]$的信息，右子]]></description>
-</item><item>
-    <title>Codeforces Round 930(div2)</title>
-    <link>http://localhost:1313/posts/cfround930div2/</link>
-    <pubDate>Wed, 13 Mar 2024 12:26:38 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfround930div2/</guid>
-    <description><![CDATA[A-Shuffle Party 题意对一个数组，起初是$a_i=i$ 对操作swap(k)： 设$d$是不等于$k$本身的$k$的最大除数，然后交换元素$a_d$和$a_k]]></description>
 </item></channel>
 </rss>

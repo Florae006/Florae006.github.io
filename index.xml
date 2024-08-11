@@ -14,6 +14,13 @@
     </author><guid>http://localhost:1313/posts/nc24sd8/</guid>
     <description><![CDATA[A-Haitang and Game 题意给出一个数组，两人轮流，每次选择数组中的两个数，若这两个数的$gcd$不在当前的数组里，就将这两个数的$gcd$加入到数组中，不能]]></description>
 </item><item>
+    <title>2024牛客暑假多校训练营Day7||补题</title>
+    <link>http://localhost:1313/posts/nc24sd7/</link>
+    <pubDate>Fri, 09 Aug 2024 00:26:24 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd7/</guid>
+    <description><![CDATA[I-Fight Against the Monster 题意使用机器对抗怪兽，一台机器有以下两种功能： 战斗：使怪兽血量减少1点，后技巧丧失所有功能 创造：需要$m$台机器同时使用，创造出$k]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day6||补题</title>
     <link>http://localhost:1313/posts/nc24sd6/</link>
     <pubDate>Mon, 05 Aug 2024 10:15:52 &#43;0800</pubDate><author>
@@ -69,12 +76,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/cartpage/</guid>
     <description><![CDATA[前言 这篇文章用于2024年蓝旭暑期项目前的培训作业教学，目的是从零开始构建一个购物车页面，以此来熟悉原生前端三件套。o((&gt;ω&lt;]]></description>
-</item><item>
-    <title>Github Action实践</title>
-    <link>http://localhost:1313/posts/github_action/</link>
-    <pubDate>Fri, 05 Jul 2024 23:11:39 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/github_action/</guid>
-    <description><![CDATA[前言本篇记录利用github action实现自动化构建和部署的过程。 本站除了部署在github page上，还部署在本人的服务器上，懒惰的dd]]></description>
 </item></channel>
 </rss>
