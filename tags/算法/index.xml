@@ -4,7 +4,21 @@
         <link>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</link>
         <description>算法 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 09 Aug 2024 00:26:32 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 16 Aug 2024 22:43:59 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>线段树专题练习</title>
+    <link>http://localhost:1313/posts/segtree_practice/</link>
+    <pubDate>Fri, 16 Aug 2024 22:43:59 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/segtree_practice/</guid>
+    <description><![CDATA[前言 痛定思痛练习线段树QAQ。 此篇包含尚未写完的题，事实上是一个TODO List。 TODO List Atlantis P5490 【模板】扫描线 &amp; 矩形面积并 - 洛谷 | 计算机科学教育新]]></description>
+</item><item>
+    <title>2024牛客暑假多校训练营Day10||补题</title>
+    <link>http://localhost:1313/posts/nc24sd10/</link>
+    <pubDate>Thu, 15 Aug 2024 18:45:46 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd10/</guid>
+    <description><![CDATA[A-Surrender to My Will 题意根据上票状态判断是否投降。4票及以上赞同投降则投降成功。 数据范围 $1\leq i \leq 5$ $1\leq j\leq i,S[j]\in\{Y,N\}$ 思路计数模拟即可。 代码 1 2 3 4 5 6 7 8 9 10 11 void solve() {]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day8||补题</title>
     <link>http://localhost:1313/posts/nc24sd8/</link>
     <pubDate>Fri, 09 Aug 2024 00:26:32 &#43;0800</pubDate><author>
@@ -45,7 +59,7 @@
     <pubDate>Fri, 19 Jul 2024 19:08:39 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/hdu24sd1/</guid>
-    <description><![CDATA[1001-循环位移 题意将字符串$S=S_0+S_1+S_2+&hellip;+S_{n-1}$循环位移$k$次后得到$S(k)=S_{k\b]]></description>
+    <description><![CDATA[1001-循环位移$(709/3775)$ 题意将字符串$S=S_0+S_1+S_2+&hellip;+S_{n-1}$循环位移$k$次后得到]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day2||补题</title>
     <link>http://localhost:1313/posts/nc24sd2/</link>
@@ -60,19 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd1/</guid>
     <description><![CDATA[A-Bit Common 题意计算满足长度为$n$，每个元素小于$2^m$，且存在至少一个子序列满足按位$AND$后是$1$的序列的数量。 答案对正整数$q$取模。]]></description>
-</item><item>
-    <title>2024吉林省赛补题记录</title>
-    <link>http://localhost:1313/posts/24jilinccpc/</link>
-    <pubDate>Fri, 05 Jul 2024 14:30:27 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/24jilinccpc/</guid>
-    <description><![CDATA[阿巴阿巴 啊，省赛，怎么两个月过去了才整理题解，这一定是在复习（确信 GYM地址：2024吉林省赛 题目顺序按照从易到难排序。 I. The Easiest Problem 题意数一数 代]]></description>
-</item><item>
-    <title>线段树讲义||寒假</title>
-    <link>http://localhost:1313/posts/segtreelecnote/</link>
-    <pubDate>Wed, 13 Mar 2024 13:29:07 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/segtreelecnote/</guid>
-    <description><![CDATA[线段树介绍 线段树是一棵二叉树，每个节点维护一个区间内$[l,r]$的信息 左子树区间维护$[l,\lfloor \frac{l+r}{2} \rfloor]$的信息，右子]]></description>
 </item></channel>
 </rss>

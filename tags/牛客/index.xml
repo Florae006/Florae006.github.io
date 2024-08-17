@@ -4,7 +4,14 @@
         <link>http://localhost:1313/tags/%E7%89%9B%E5%AE%A2/</link>
         <description>牛客 - 标签 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 09 Aug 2024 00:26:32 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%89%9B%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 15 Aug 2024 18:45:46 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%89%9B%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+    <title>2024牛客暑假多校训练营Day10||补题</title>
+    <link>http://localhost:1313/posts/nc24sd10/</link>
+    <pubDate>Thu, 15 Aug 2024 18:45:46 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd10/</guid>
+    <description><![CDATA[A-Surrender to My Will 题意根据上票状态判断是否投降。4票及以上赞同投降则投降成功。 数据范围 $1\leq i \leq 5$ $1\leq j\leq i,S[j]\in\{Y,N\}$ 思路计数模拟即可。 代码 1 2 3 4 5 6 7 8 9 10 11 void solve() {]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day8||补题</title>
     <link>http://localhost:1313/posts/nc24sd8/</link>
     <pubDate>Fri, 09 Aug 2024 00:26:32 &#43;0800</pubDate><author>
@@ -67,12 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24wd4/</guid>
     <description><![CDATA[A-柠檬可乐 题意输入$a,b,k$，判断$a\ge k\times b$是否成立 数据范围$a,b,k(1\leq a,b,k\leq 100)$ 思路简单判断 参考代码 1 2 3 4 5 void solve() { int a,]]></description>
-</item><item>
-    <title>2024牛客寒假营5||补题</title>
-    <link>http://localhost:1313/posts/nc24wd5/</link>
-    <pubDate>Wed, 21 Feb 2024 20:07:25 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/nc24wd5/</guid>
-    <description><![CDATA[A-mutsumi的质数合数 题意一个由$n$个正整数组成的数组，求其中质数和合数共有几个。 数据范围$n(1\leq n\leq 100)$ $a_i(1\leq a_i\leq 100)$ 思路1不是质数也]]></description>
 </item></channel>
 </rss>

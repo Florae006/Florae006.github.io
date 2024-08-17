@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>DP - 标签 - Doごみ箱🪄</title>
+        <link>http://localhost:1313/tags/dp/</link>
+        <description>DP - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 09 Mar 2024 21:47:13 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/dp/" rel="self" type="application/rss+xml" /><item>
+    <title>刷题记录||线性动态规划</title>
+    <link>http://localhost:1313/posts/lineardp/</link>
+    <pubDate>Sat, 09 Mar 2024 21:47:13 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/lineardp/</guid>
+    <description><![CDATA[👾线性动态规划线性动态规划，即具有线性阶段划分的动态规划。 💭[P1216]数字三角形 [USACO1.5] [IOI1994]数字三角形 Number Triangles 题目描述观察下面的数字]]></description>
+</item></channel>
+</rss>
