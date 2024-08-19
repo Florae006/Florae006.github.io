@@ -4,7 +4,7 @@
 ## 友人
 
 {{<friend name="思想犯" url="https://topdeoo.github.io/" avatar="https://topdeoo.github.io/img/avatar_hu11d5ca57a8818146df3410060fecfba1_570107_300x0_resize_box_3.png" bio="一个活的相对失败的 CSer" siteshot="" >}}
-{{<friend name="Windlinxy" url="https://www.windlinxy.top/" avatar="https://www.windlinxy.top/images/windlinxy.jpg" bio="测试岗牛马的失败生活" siteshot="" >}}
+{{<friend name="Windlinxy" url="https://windlinxy.github.io/" avatar="https://windlinxy.github.io/images/windlinxy.jpg" bio="测试岗牛马的失败生活" siteshot="" >}}
 {{<friend name="DODOLA-github.io" url="https://florae006.github.io/" avatar="https://florae006.github.io/img/dodola.png" bio="ddlの初始域名自链接" siteshot="" >}}
 {{<friend name="CCLMSY💫" url="https://www.cclmsy.cc/" avatar="https://www.cclmsy.cc/assets/Avatars/Avatar.jpg" bio="Never forget nor regret.⭐️" siteshot="https://www.cclmsy.cc/assets/SiteShot.png" >}}
 {{<friend name="YorkWu's Blog" url="https://wyy.ink/" avatar="https://wyy.ink/img/%E5%A4%B4%E5%83%8F.jpg" bio="ddl:一个很强的学长QwQ！！" siteshot="" >}}

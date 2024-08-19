@@ -24,7 +24,7 @@
 
 例图：
 
-![image-20240312195935541](https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312195935541.png)
+![img](https://img.dodolalorc.cn/i/2024/08/19/66c2be4cea5ed.png)
 
 ```cpp
 typedef double ld;
@@ -61,7 +61,7 @@ line l(A, B);
 
 例图：
 
-![image-20240312195958430](https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312195958430.png)
+![img](https://img.dodolalorc.cn/i/2024/08/19/66c2be692a189.png)
 
 ```cpp
 ld sqr(ld x) { return x * x; }
@@ -111,7 +111,7 @@ $$
 
 例图：
 
-<img src="https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200022870.png" alt="image-20240312200022870" style="zoom:50%;" />
+![img](https://img.dodolalorc.cn/i/2024/08/19/66c2be805b1cf.png)
 
 
 
@@ -144,7 +144,7 @@ ld det(const point& a, const point& b) {
 
 可以发现点积与叉积的正负由角度决定，故根据点积和叉积的正负，可以判断向量夹角的象限。
 
-![image-20240312200034965](https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200034965.png)
+![img](https://img.dodolalorc.cn/i/2024/08/19/66c2be92a8c59.png)
 
 ```cpp
 const ld eps = 1e-8;
@@ -195,7 +195,7 @@ friend bool operator==(const point& a, const point& b) {
 * 点在直线上：叉积判断共线
 * 点在两端点上：点积判断方向
 
-![image-20240312200043778](https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200043778.png)
+![img](https://img.dodolalorc.cn/i/2024/08/19/66c2bea404ca0.png)
 
 ```cpp
 bool point_on_segment(const point& a, const line& l) {
@@ -222,7 +222,7 @@ bool point_on_segment(const point& a, const line& l) {
 
 第二种用叉积判断角度异号。
 
-![image-20240312200051561](https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240312200051561.png)
+![img](https://img.dodolalorc.cn/i/2024/08/19/66c2beb712d81.png)
 
 ```cpp
 // l:AB, c:C, d:D;ABxAC * ABxAD < 0,表明旋转方向不同(两点在线段两侧)
@@ -242,9 +242,9 @@ bool inter_judge(const line& a, const line& b) {
 
 几种测试情况思考：
 
-| ![image-20240329151252281](https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240329151252281.png) | ![image-20240329151441830](https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240329151441830.png) |
+| ![img](https://img.dodolalorc.cn/i/2024/08/19/66c2bece91478.png) | ![img](https://img.dodolalorc.cn/i/2024/08/19/66c2bede8349c.png) |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| ![image-20240329151354763](https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240329151354763.png) | ![image-20240329151611939](https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240329151611939.png) |
+| ![img](https://img.dodolalorc.cn/i/2024/08/19/66c2beedc3463.png) | ![img](https://img.dodolalorc.cn/i/2024/08/19/66c2bf526f09a.png) |
 
 
 
@@ -301,7 +301,7 @@ bool collinear_judge(const line& a, const line& b) {
 
 注意：这里使用了除法，除法会导致精度严重下降(通常epsilon就是为了克服除法的误差而引入的)
 
-![image-20240313145344069](https://cdn.jsdelivr.net/gh/Florae006/dodolaPicBed/image-20240313145344069.png)
+![img](https://img.dodolalorc.cn/i/2024/08/19/66c2bf6d5bd18.png)
 
 
 
