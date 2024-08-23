@@ -1,6 +1,38 @@
 # 2024牛客暑假多校训练营Day3||补题
 
 
+## A-Bridging the Gap 2
+
+### 题意
+
+在河岸的一侧有$n$个人，每个人有一个体力值$h_i$，有一艘船可以将人从一侧载到另一侧，每次航行需要至少$L$个人掌舵，每次掌舵会花费每个掌舵人的一点体力，当体力不足一点时，这个人不能再掌舵，船的容量最大是$R$，提问是否能够将这些人都运送到对岸。
+
+#### 数据范围
+
+* $1\leq L\lt R\leq n\leq 5\times 10^5$​
+* $1\leq h_i\leq 5\times 10^5$
+
+### 思路
+
+贪心的运输，从左岸运输的最小次数是$k=\lceil \frac{n-R}{R-L} \rceil$，计算每个人最多的来回次数$a_i$，假如满足$\sum_{i-1}^{n} min(k,a_i)\geq k\times L$，则可以将所有人都运输到对岸。
+
+### 代码
+
+```cpp
+ll h[maxn], a[maxn];
+void solve() {
+    int n, L, R;cin >> n >> L >> R;
+    ll sum = 0, k = (n - L - 1) / (R - L);
+    for (int i = 0;i < n;i++) {
+        cin >> h[i];
+        a[i] = (h[i] - 1) / 2;
+        sum += min(k, a[i]);
+    }
+    if (sum >= k * L)cout << "Yes\n";
+    else cout << "No\n";
+}
+```
+
 ## B-Crash Test
 
 ### 题意

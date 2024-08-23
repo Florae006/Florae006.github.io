@@ -8,17 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noodp" />
   <title>2024牛客暑假多校训练营Day3||补题 - Doごみ箱🪄</title><meta name="Description" content="Doごみ箱2.1"><meta property="og:title" content="2024牛客暑假多校训练营Day3||补题" />
-<meta property="og:description" content="B-Crash Test 题意小车有$n$个引擎，第$i$个引擎可以让车前进$h[i]$米。在小车起点正前方距离为$D$处有一反弹墙面，小车如果撞在墙上将会被回弹" />
+<meta property="og:description" content="A-Bridging the Gap 2 题意在河岸的一侧有$n$个人，每个人有一个体力值$h_i$，有一艘船可以将人从一侧载到另一侧，每次航行需要至少$L$个人掌舵，每次掌" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/nc24sd3/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-07-23T18:37:58+08:00" />
-<meta property="article:modified_time" content="2024-07-31T16:10:06+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+<meta property="article:modified_time" content="2024-08-23T21:00:29+08:00" /><meta property="og:site_name" content="Doごみ箱" />
 
 
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="2024牛客暑假多校训练营Day3||补题"/>
-<meta name="twitter:description" content="B-Crash Test 题意小车有$n$个引擎，第$i$个引擎可以让车前进$h[i]$米。在小车起点正前方距离为$D$处有一反弹墙面，小车如果撞在墙上将会被回弹"/>
+<meta name="twitter:description" content="A-Bridging the Gap 2 题意在河岸的一侧有$n$个人，每个人有一个体力值$h_i$，有一艘船可以将人从一侧载到另一侧，每次航行需要至少$L$个人掌舵，每次掌"/>
 <meta name="application-name" content="Doごみ箱-一只小菜鸡的Blog">
 <meta name="apple-mobile-web-app-title" content="Doごみ箱-一只小菜鸡的Blog">
 
@@ -33,8 +33,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/posts\/nc24sd3\/"
-        },"genre": "posts","keywords": "2024暑假集训, 算法, 牛客","wordcount":  3503 ,
-        "url": "http:\/\/localhost:1313\/posts\/nc24sd3\/","datePublished": "2024-07-23T18:37:58+08:00","dateModified": "2024-07-31T16:10:06+08:00","license": "dodola","publisher": {
+        },"genre": "posts","keywords": "2024暑假集训, 算法, 牛客","wordcount":  3827 ,
+        "url": "http:\/\/localhost:1313\/posts\/nc24sd3\/","datePublished": "2024-07-23T18:37:58+08:00","dateModified": "2024-08-23T21:00:29+08:00","license": "dodola","publisher": {
             "@type": "Organization",
             "name": "DODOLA"},"author": {
                 "@type": "Person",
@@ -137,7 +137,7 @@
     <h2 class="toc-title">目录</h2>
     <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#b-crash-test">B-Crash Test</a>
+    <li><a href="#a-bridging-the-gap-2">A-Bridging the Gap 2</a>
       <ul>
         <li><a href="#题意">题意</a>
           <ul>
@@ -148,7 +148,7 @@
         <li><a href="#代码">代码</a></li>
       </ul>
     </li>
-    <li><a href="#d-dominoes">D-Dominoes!</a>
+    <li><a href="#b-crash-test">B-Crash Test</a>
       <ul>
         <li><a href="#题意-1">题意</a>
           <ul>
@@ -159,7 +159,7 @@
         <li><a href="#代码-1">代码</a></li>
       </ul>
     </li>
-    <li><a href="#e-malfunctioning-typewriter">E-Malfunctioning Typewriter</a>
+    <li><a href="#d-dominoes">D-Dominoes!</a>
       <ul>
         <li><a href="#题意-2">题意</a>
           <ul>
@@ -170,7 +170,7 @@
         <li><a href="#代码-2">代码</a></li>
       </ul>
     </li>
-    <li><a href="#j-rigged-games">J-Rigged Games</a>
+    <li><a href="#e-malfunctioning-typewriter">E-Malfunctioning Typewriter</a>
       <ul>
         <li><a href="#题意-3">题意</a>
           <ul>
@@ -181,11 +181,22 @@
         <li><a href="#代码-3">代码</a></li>
       </ul>
     </li>
-    <li><a href="#l-sudoku-and-minesweeper">L-Sudoku and Minesweeper</a>
+    <li><a href="#j-rigged-games">J-Rigged Games</a>
       <ul>
-        <li><a href="#题意-4">题意</a></li>
+        <li><a href="#题意-4">题意</a>
+          <ul>
+            <li><a href="#数据范围-4">数据范围</a></li>
+          </ul>
+        </li>
         <li><a href="#思路-4">思路</a></li>
         <li><a href="#代码-4">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#l-sudoku-and-minesweeper">L-Sudoku and Minesweeper</a>
+      <ul>
+        <li><a href="#题意-5">题意</a></li>
+        <li><a href="#思路-5">思路</a></li>
+        <li><a href="#代码-5">代码</a></li>
       </ul>
     </li>
   </ul>
@@ -194,8 +205,8 @@
         <div class="post-meta-line">
             <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
             </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在学算法的日子里</a></span>&nbsp;<span class="post-category">和</span>&nbsp;<span class="post-series">系列 <a href="/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/"><i class="far fa-list-alt fa-fw"></i>题解记录</a></span></div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-07-23">2024-07-23</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-07-31">2024-07-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3503 字&nbsp;
-            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;<span id="/posts/nc24sd3/" class="leancloud_visitors" data-flag-title="2024牛客暑假多校训练营Day3||补题">
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-07-23">2024-07-23</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-08-23">2024-08-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3827 字&nbsp;
+            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;<span id="/posts/nc24sd3/" class="leancloud_visitors" data-flag-title="2024牛客暑假多校训练营Day3||补题">
                 <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"
                     id=twikoo_visitors></span>&nbsp;次阅读
             </span>&nbsp;<span id="/posts/nc24sd3/" class="comment_count" data-flag-title="2024牛客暑假多校训练营Day3||补题">
@@ -258,7 +269,7 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#b-crash-test">B-Crash Test</a>
+    <li><a href="#a-bridging-the-gap-2">A-Bridging the Gap 2</a>
       <ul>
         <li><a href="#题意">题意</a>
           <ul>
@@ -269,7 +280,7 @@
         <li><a href="#代码">代码</a></li>
       </ul>
     </li>
-    <li><a href="#d-dominoes">D-Dominoes!</a>
+    <li><a href="#b-crash-test">B-Crash Test</a>
       <ul>
         <li><a href="#题意-1">题意</a>
           <ul>
@@ -280,7 +291,7 @@
         <li><a href="#代码-1">代码</a></li>
       </ul>
     </li>
-    <li><a href="#e-malfunctioning-typewriter">E-Malfunctioning Typewriter</a>
+    <li><a href="#d-dominoes">D-Dominoes!</a>
       <ul>
         <li><a href="#题意-2">题意</a>
           <ul>
@@ -291,7 +302,7 @@
         <li><a href="#代码-2">代码</a></li>
       </ul>
     </li>
-    <li><a href="#j-rigged-games">J-Rigged Games</a>
+    <li><a href="#e-malfunctioning-typewriter">E-Malfunctioning Typewriter</a>
       <ul>
         <li><a href="#题意-3">题意</a>
           <ul>
@@ -302,26 +313,78 @@
         <li><a href="#代码-3">代码</a></li>
       </ul>
     </li>
-    <li><a href="#l-sudoku-and-minesweeper">L-Sudoku and Minesweeper</a>
+    <li><a href="#j-rigged-games">J-Rigged Games</a>
       <ul>
-        <li><a href="#题意-4">题意</a></li>
+        <li><a href="#题意-4">题意</a>
+          <ul>
+            <li><a href="#数据范围-4">数据范围</a></li>
+          </ul>
+        </li>
         <li><a href="#思路-4">思路</a></li>
         <li><a href="#代码-4">代码</a></li>
       </ul>
     </li>
+    <li><a href="#l-sudoku-and-minesweeper">L-Sudoku and Minesweeper</a>
+      <ul>
+        <li><a href="#题意-5">题意</a></li>
+        <li><a href="#思路-5">思路</a></li>
+        <li><a href="#代码-5">代码</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-    </div><div class="content" id="content"><h2 id="b-crash-test" class="headerLink">
-    <a href="#b-crash-test" class="header-mark"></a>B-Crash Test</h2><h3 id="题意" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>小车有$n$个引擎，第$i$个引擎可以让车前进$h[i]$米。在小车起点正前方距离为$D$处有一反弹墙面，小车如果撞在墙上将会被回弹与当前剩余的前进米数相同的距离，并保持车头朝向墙面。小车可以使用任意引擎任意次，询问距离墙面最近的距离是多少。</p>
+    </div><div class="content" id="content"><h2 id="a-bridging-the-gap-2" class="headerLink">
+    <a href="#a-bridging-the-gap-2" class="header-mark"></a>A-Bridging the Gap 2</h2><h3 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>在河岸的一侧有$n$个人，每个人有一个体力值$h_i$，有一艘船可以将人从一侧载到另一侧，每次航行需要至少$L$个人掌舵，每次掌舵会花费每个掌舵人的一点体力，当体力不足一点时，这个人不能再掌舵，船的容量最大是$R$，提问是否能够将这些人都运送到对岸。</p>
 <h4 id="数据范围" class="headerLink">
     <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><ul>
+<li>$1\leq L\lt R\leq n\leq 5\times 10^5$​</li>
+<li>$1\leq h_i\leq 5\times 10^5$</li>
+</ul>
+<h3 id="思路" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>贪心的运输，从左岸运输的最小次数是$k=\lceil \frac{n-R}{R-L} \rceil$，计算每个人最多的来回次数$a_i$，假如满足$\sum_{i-1}^{n} min(k,a_i)\geq k\times L$，则可以将所有人都运输到对岸。</p>
+<h3 id="代码" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">ll</span> <span class="n">h</span><span class="p">[</span><span class="n">maxn</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">R</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">L</span> <span class="o">&gt;&gt;</span> <span class="n">R</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">L</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">R</span> <span class="o">-</span> <span class="n">L</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sum</span> <span class="o">+=</span> <span class="n">min</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">sum</span> <span class="o">&gt;=</span> <span class="n">k</span> <span class="o">*</span> <span class="n">L</span><span class="p">)</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Yes</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;No</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="b-crash-test" class="headerLink">
+    <a href="#b-crash-test" class="header-mark"></a>B-Crash Test</h2><h3 id="题意-1" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>小车有$n$个引擎，第$i$个引擎可以让车前进$h[i]$米。在小车起点正前方距离为$D$处有一反弹墙面，小车如果撞在墙上将会被回弹与当前剩余的前进米数相同的距离，并保持车头朝向墙面。小车可以使用任意引擎任意次，询问距离墙面最近的距离是多少。</p>
+<h4 id="数据范围-1" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-1" class="header-mark"></a>数据范围</h4><ul>
 <li>$1\leq n\leq 100$</li>
 <li>$1\leq D \leq 10^{18}$</li>
 <li>$1\leq h[i]\leq 10^{18}$</li>
 </ul>
-<h3 id="思路" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>假设当前选择了某个引擎，并只使用这个引擎，易知，我们可以将距离$d$减小到$\min(d\bmod h[i],h[i]-d\bmod h[i])$。</p>
+<h3 id="思路-1" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-1" class="header-mark"></a>思路</h3><p>假设当前选择了某个引擎，并只使用这个引擎，易知，我们可以将距离$d$减小到$\min(d\bmod h[i],h[i]-d\bmod h[i])$。</p>
 <p>接下来选择另一种引擎，在刚才的基础上，我们可以将距离减小到$\min(d\bmod h[i+1],h[i+1]-d\bmod h[i+1])$。</p>
 <p>设$gcd(h[i],h[i+1])=k$，$h[i]=ak,h[i+1]=bk$，则$d$的变化其实是这样的：</p>
 <p>$$
@@ -338,8 +401,8 @@ d_2=&amp;\min(d_1\bmod bk,d_1-d_1\bmod bk)\\
 \end{align*}
 $$</p>
 <p>观察结果，可以发现最小的$|dis-d|$之和所有引擎的$gcd$有关，计算$h[]$数组的$gcd$即可。</p>
-<h3 id="代码" class="headerLink">
-    <a href="#%e4%bb%a3%e7%a0%81" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<h3 id="代码-1" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -372,15 +435,15 @@ $$</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="d-dominoes" class="headerLink">
-    <a href="#d-dominoes" class="header-mark"></a>D-Dominoes!</h2><h3 id="题意-1" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>一张多米诺骨牌的左右两端各有一个数字，给出$n$张这样的多米诺骨牌，是否存在一个可以另所有相邻且不在同一张牌上的两个数字不一样的序列。</p>
-<h4 id="数据范围-1" class="headerLink">
-    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-1" class="header-mark"></a>数据范围</h4><ul>
+    <a href="#d-dominoes" class="header-mark"></a>D-Dominoes!</h2><h3 id="题意-2" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-2" class="header-mark"></a>题意</h3><p>一张多米诺骨牌的左右两端各有一个数字，给出$n$张这样的多米诺骨牌，是否存在一个可以另所有相邻且不在同一张牌上的两个数字不一样的序列。</p>
+<h4 id="数据范围-2" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-2" class="header-mark"></a>数据范围</h4><ul>
 <li>$1\leq n\leq 2\times 10^5$</li>
 <li>$1\leq x_i,y_i\leq 10^9$</li>
 </ul>
-<h3 id="思路-1" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-1" class="header-mark"></a>思路</h3><p>首先注意到当 某个数字的数量大于等于$n+2$时，一定没有合法的排列。</p>
+<h3 id="思路-2" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-2" class="header-mark"></a>思路</h3><p>首先注意到当 某个数字的数量大于等于$n+2$时，一定没有合法的排列。</p>
 <p><figure><a class="lightgallery" href="https://img.dodolalorc.cn/i/2024/07/27/66a4d60c0f2cc.png" title="af2ebec141701b271fd4041e35db8f45" data-thumbnail="https://img.dodolalorc.cn/i/2024/07/27/66a4d60c0f2cc.png">
         <img
             
@@ -394,8 +457,8 @@ $$</p>
 <p>而如果符合$\lt n+2$，一定有合法序列。</p>
 <p>如果所有骨牌都满足$x_i\neq y_i$，则只要满足每次从两侧加入的牌相邻没有相同数字即可，一定有合法序列。</p>
 <p>优先考虑排列$x_i=y_i$的骨牌。将$x_i = y_i$的骨牌按照数量从大到小排序，每次选择一张牌，假设这张牌的数字是$p$，之后选择现存数量最多的且符合$x_j = y_j\neq p$的一张牌，放在右侧，接下来继续取两侧相同骨牌中数目最多的，若两侧相同骨牌数目不足$2$种，则加入任意两侧不同的牌，注意接触端的条件</p>
-<h3 id="代码-1" class="headerLink">
-    <a href="#%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<h3 id="代码-2" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
@@ -676,22 +739,22 @@ $$</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="e-malfunctioning-typewriter" class="headerLink">
-    <a href="#e-malfunctioning-typewriter" class="header-mark"></a>E-Malfunctioning Typewriter</h2><h3 id="题意-2" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-2" class="header-mark"></a>题意</h3><p>有一台打字机，对于每次键入的字符（只有<code>0</code>或<code>1</code>），每次有<code>p</code>的概率正确键入，有$n$句长度为$m$的不会重复的诗句，这些诗句可以以任意顺序组合成一首长度为$n$的诗。询问在打字这首诗的时候，有多大的概率成果打出。</p>
-<h4 id="数据范围-2" class="headerLink">
-    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-2" class="header-mark"></a>数据范围</h4><ul>
+    <a href="#e-malfunctioning-typewriter" class="header-mark"></a>E-Malfunctioning Typewriter</h2><h3 id="题意-3" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-3" class="header-mark"></a>题意</h3><p>有一台打字机，对于每次键入的字符（只有<code>0</code>或<code>1</code>），每次有<code>p</code>的概率正确键入，有$n$句长度为$m$的不会重复的诗句，这些诗句可以以任意顺序组合成一首长度为$n$的诗。询问在打字这首诗的时候，有多大的概率成果打出。</p>
+<h4 id="数据范围-3" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-3" class="header-mark"></a>数据范围</h4><ul>
 <li>$1\leq n,m\leq 1000$</li>
 <li>$0.5\leq q\leq 1$</li>
 </ul>
-<h3 id="思路-2" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-2" class="header-mark"></a>思路</h3><p>将$n$句诗建立字典树，对每个节点统计以该结点为前缀的字符串数目。</p>
+<h3 id="思路-3" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-3" class="header-mark"></a>思路</h3><p>将$n$句诗建立字典树，对每个节点统计以该结点为前缀的字符串数目。</p>
 <p>考虑到只有<code>01</code>，每个节点下最多只有<code>0</code>或<code>1</code>的子节点。记某个节点为$u$，将节点$u$前缀打对的概率可以预处理（$f(x,y)$表示打对$x$个$1$，$y$个$0$的概率），打对一整首诗歌是遍历完字典树上的每个字符串$1$次，对于字典树上的某个非叶子节点，在遍历时，经过该结点的数目是它的子树中有多少个叶子结点决定的，假设有$x$是从该节点（表示一个前缀）往后以<code>1</code>为根节点的子树中的叶子结点数目，$y$是以<code>0</code>为根节点的子树中叶子结点的数目，那么在决策当前是否正确输出了<code>0/1</code>的概率是$f(x,y)$（相当于在当前节点输出正确的$x$个<code>1</code>和$y$个<code>0</code>的概率代表这一步打字输出了$x+y$个合法下行子串的概率），故总概率是$\prod_u f(sz(lp),sz(rp))$。</p>
 <p>对$f(x,y)$的预处理：</p>
 <p>$$
 f(x,y)=\max(p\times f(x-1,y)+(1-p)\times f(x,y),p\times f(x,y-1)+(1-p)\times f(x-1,y))
 $$</p>
-<h3 id="代码-2" class="headerLink">
-    <a href="#%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<h3 id="代码-3" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -814,18 +877,18 @@ $$</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="j-rigged-games" class="headerLink">
-    <a href="#j-rigged-games" class="header-mark"></a>J-Rigged Games</h2><h3 id="题意-3" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-3" class="header-mark"></a>题意</h3><p>比赛由大分比和小分比一同决定最终的胜负，小分比<code>Bo2a-1</code>：先胜出<code>a</code>场为胜。大分比<code>Bo2b-1</code>：先胜出<code>b</code>场为胜。记1次小分比胜负为大分比的一场。</p>
+    <a href="#j-rigged-games" class="header-mark"></a>J-Rigged Games</h2><h3 id="题意-4" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-4" class="header-mark"></a>题意</h3><p>比赛由大分比和小分比一同决定最终的胜负，小分比<code>Bo2a-1</code>：先胜出<code>a</code>场为胜。大分比<code>Bo2b-1</code>：先胜出<code>b</code>场为胜。记1次小分比胜负为大分比的一场。</p>
 <p>现在有一个长度为$n$的<code>01</code>字符串，字符串是无限循环重复的，用于记录每一次比赛的胜负，从<code>01</code>字符串的每个位置开始比赛，询问谁会赢得整个比赛。</p>
-<h4 id="数据范围-3" class="headerLink">
-    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-3" class="header-mark"></a>数据范围</h4><ul>
+<h4 id="数据范围-4" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-4" class="header-mark"></a>数据范围</h4><ul>
 <li>$1\leq n,a,b\leq 10^5$</li>
 </ul>
-<h3 id="思路-3" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-3" class="header-mark"></a>思路</h3><p>倍增思想，在<code>01</code>循环串中，记录每个位置开始后进行<code>Bo2a-1</code>小局的胜负，以及下一步从哪个位置开始。数组<code>f[i][j]</code>表示从$i$开始进行$2^j$轮后到达的位置、对应的$0$、$1$​的胜利次数。</p>
+<h3 id="思路-4" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-4" class="header-mark"></a>思路</h3><p>倍增思想，在<code>01</code>循环串中，记录每个位置开始后进行<code>Bo2a-1</code>小局的胜负，以及下一步从哪个位置开始。数组<code>f[i][j]</code>表示从$i$开始进行$2^j$轮后到达的位置、对应的$0$、$1$​的胜利次数。</p>
 <p>在统计<code>Bo2b-1</code>时，我们要找到第一次0或1胜利<code>b</code>次以上的位置，将<code>j</code>倒序处理，$2b-1$是最多获得终局的次数，$b$是最少获得终局的次数。假设$b=5$，需要至少$5$局，至多$9$局定胜负，注意到$9=2^3+2^0$，在计数恰好$9$局时，应当只统计先$2^3=8$局，然后往后再统计$2^0=1$局（这里先1后8也不会影响结果，只要保证不超过9局即可）。在计算<code>Bo2b-1</code>的结果时，每次统计恰好$2b-1$。</p>
-<h3 id="代码-3" class="headerLink">
-    <a href="#%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<h3 id="代码-4" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-4" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -948,13 +1011,13 @@ $$</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="l-sudoku-and-minesweeper" class="headerLink">
-    <a href="#l-sudoku-and-minesweeper" class="header-mark"></a>L-Sudoku and Minesweeper</h2><h3 id="题意-4" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-4" class="header-mark"></a>题意</h3><p>给出一个$9\times 9$的数独，在这个数独的基础上构造一个扫雷地图，将数独上的一些数字替换为<code>*</code>，但是不能将所有数字都替换为<code>*</code>，使得整个扫雷地图合法。</p>
-<h3 id="思路-4" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af-4" class="header-mark"></a>思路</h3><p>在铺满地雷的地图上保留一些数字，数字<code>8</code>表明该格周围都是<code>*</code>，所以选择保留所有的<code>8</code>，并再次遍历一遍所有的地图（注意边界），删掉不符合要求的<code>8</code>。</p>
+    <a href="#l-sudoku-and-minesweeper" class="header-mark"></a>L-Sudoku and Minesweeper</h2><h3 id="题意-5" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-5" class="header-mark"></a>题意</h3><p>给出一个$9\times 9$的数独，在这个数独的基础上构造一个扫雷地图，将数独上的一些数字替换为<code>*</code>，但是不能将所有数字都替换为<code>*</code>，使得整个扫雷地图合法。</p>
+<h3 id="思路-5" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-5" class="header-mark"></a>思路</h3><p>在铺满地雷的地图上保留一些数字，数字<code>8</code>表明该格周围都是<code>*</code>，所以选择保留所有的<code>8</code>，并再次遍历一遍所有的地图（注意边界），删掉不符合要求的<code>8</code>。</p>
 <p>或者另一个想法：中间$3\times 3$的格子中中一定有一个数字<code>8</code>，在去掉除了这个<code>8</code>以外的所有数字之后，这个<code>8</code>一定是符合要求的。</p>
-<h3 id="代码-4" class="headerLink">
-    <a href="#%e4%bb%a3%e7%a0%81-4" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<h3 id="代码-5" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81-5" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1068,7 +1131,7 @@ $$</p>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-07-31</span>
+                <span>更新于 2024-08-23</span>
             </div>
             <div class="post-info-license"></div>
         </div>

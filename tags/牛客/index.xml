@@ -45,7 +45,7 @@
     <pubDate>Tue, 23 Jul 2024 18:37:58 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd3/</guid>
-    <description><![CDATA[B-Crash Test 题意小车有$n$个引擎，第$i$个引擎可以让车前进$h[i]$米。在小车起点正前方距离为$D$处有一反弹墙面，小车如果撞在墙上将会被回弹]]></description>
+    <description><![CDATA[A-Bridging the Gap 2 题意在河岸的一侧有$n$个人，每个人有一个体力值$h_i$，有一艘船可以将人从一侧载到另一侧，每次航行需要至少$L$个人掌舵，每次掌]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day2||补题</title>
     <link>http://localhost:1313/posts/nc24sd2/</link>
