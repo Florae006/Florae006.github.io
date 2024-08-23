@@ -1,6 +1,95 @@
 # 2024牛客暑假多校训练营Day2||补题
 
 
+## A-Floor Tiles
+
+### 题意
+
+存在如下`A型`、`B型`两种砖：
+
+![img](https://img.dodolalorc.cn/i/2024/08/20/66c45194a139e.png)
+
+现用这两种砖拼成$N\times M$的矩形，提问是否有恰好存在$K$条曲线的平铺方式，曲线如下：
+
+![img](https://img.dodolalorc.cn/i/2024/08/20/66c451fa98412.png)
+
+#### 数据范围
+
+* $1\leq T\leq 10^5$
+* $1\leq N,M\leq 800$
+* $1\leq K \leq 2\times N\times M$
+
+### 思路
+
+边缘一圈的点所在的线一定不是一个环，所以最少的线数相当于都是`A型`或`B型`时的线数，也就是$N\times M$个，若要比$N\times M$个多，则多的部分只能是图形中环的数目，贪心的让所有的环最小，则能构造出最多的环，最小的环如例图中一样，当平铺的方式是
+$$
+AB\\\\BA
+$$
+时，形成的环是最小的。
+
+同时注意到，成环的四块砖块是可以共用的，也就是说在：
+$$
+ABAB\\\\
+BABA\\\\
+ABAB
+$$
+中有**3**个环。
+
+首先构造成环数量最多的$N\times M$，在输出时记录当前已经拥有多少个环，若超过所需的数量则不再输出可以成环的砖块类型。
+
+### 代码
+
+```cpp
+void solve() {
+    int x, y;
+    char ty;
+    int n, m, k;
+    char a = 'A', b = 'B';
+    cin >> n >> m >> k;
+    cin >> x >> y >> ty;
+    vector<string>ans(n + 1, string(m + 1, 'X'));
+    for (int i = 1;i <= n;i++) {
+        for (int j = 1;j <= m;j++) {
+            if (abs(i + j - x - y) % 2) {
+                ans[i][j] = a + b - ty;
+            }
+            else {
+                ans[i][j] = ty;
+            }
+        }
+    }
+
+    int cnt = n + m;
+    for (int i = 1;i <= n;i++) {
+        for (int j = 1;j <= m;j++) {
+            if (ans[i][j] == a && ans[i][j - 1] == b && ans[i - 1][j] == b && ans[i - 1][j - 1] == a)
+                cnt++;
+        }
+    }
+
+    if (cnt < k || k < n + m) {
+        cout << "No\n";
+        return;
+    }
+
+    k -= n + m;
+    cout << "Yes\n";
+    for (int i = 1;i <= n;i++) {
+        for (int j = 1;j <= m;j++) {
+            if (k > 0) {
+                cout << ans[i][j];
+                if (ans[i][j] == a && ans[i][j - 1] == b && ans[i - 1][j] == b && ans[i - 1][j - 1] == a)
+                    k--;
+            }
+            else cout << ty;
+        }
+        cout << '\n';
+    }
+}
+```
+
+
+
 ## B-MST
 
 ### 题意
@@ -18,9 +107,115 @@
 
 ### 思路
 
+注意点数$n$和边数$m$的范围都不超过$10^5$，若通过枚举两个点来确定符合条件的边，则复杂度是$O(n^2)$，而如果按照枚举边来确定符合条件的边，复杂度是$O(m)$，于是优化的思路是根据每次$k$和$\sqrt {maxn}$的大小关系来选择加入边的方式。
 
+代码
 
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int maxn = 1e5 + 50;
+struct edge {
+    int s, t, w;
+    bool operator<(const edge& e)const {
+        return w < e.w;
+    }
+};
 
+vector<vector<edge>>graph;
+map<pair<int, int>, int>gp;
+
+int s[maxn];
+int fa[maxn];
+int findfa(int x) {
+    if (x == fa[x])return x;
+    return fa[x] = findfa(fa[x]);
+}
+
+ll krus(int n, vector<edge>subgraph) {
+    ll res = 0;
+    int cnt = 0;
+    for (auto e : subgraph) {
+        if (cnt == n - 1)break;
+        if (!cnt) {
+            fa[e.t] = e.s;
+            res += e.w;
+            ++cnt;
+            continue;
+        }
+        auto [u, v, w] = e;
+        int fu = findfa(u), fv = findfa(v);
+        if (fu == fv)continue;
+        fa[fu] = fv;
+        res += w;
+        ++cnt;
+    }
+    int fx = findfa(s[1]);
+    for (int i = 2;i <= n;i++) {
+        if (fx != findfa(s[i])) {
+            return -1ll;
+        }
+    }
+
+    return res;
+}
+
+void solve() {
+    int n, m, q;cin >> n >> m >> q;
+    graph.assign(n + 1, vector<edge>());
+    for (int i = 0;i <= n;i++)fa[i] = i;
+
+    for (int i = 1;i <= m;i++) {
+        int u, v, w;cin >> u >> v >> w;
+        graph[u].push_back({ u,v,w });
+        graph[v].push_back({ v,u,w });
+        gp[{u, v}] = w;
+        gp[{v, u}] = w;
+    }
+    while (q--) {
+        int k;cin >> k;
+        map<int, bool>mp;
+        for (int i = 1;i <= k;i++) {
+            cin >> s[i];
+            fa[s[i]] = s[i];
+            mp[s[i]] = true;
+        }
+        vector<edge>subgraph;
+        if (k * k < maxn) { // 点少
+            // 取出符合要求的边
+            for (int i = 1;i <= k;i++) {
+                for (int j = i + 1;j <= k;j++) {
+                    int u = s[i], v = s[j];
+                    if (gp.count({ u,v })) {
+                        int w = gp[{u, v}];
+                        subgraph.push_back({ u,v,w });
+                    }
+                }
+            }
+        }
+        else {
+            for (int i = 1;i <= k;i++) {
+                int u = s[i];
+                for (auto e : graph[u]) {
+                    if (mp.count(e.t))
+                        subgraph.push_back(e);
+                }
+            }
+        }
+        sort(subgraph.begin(), subgraph.end());
+        cout << krus(k, subgraph) << "\n";
+    }
+}
+
+int main() {
+    int t = 1;
+    while (t--)
+        solve();
+
+    return 0;
+}
+```
 
 ## C-Red Walking on Grid
 

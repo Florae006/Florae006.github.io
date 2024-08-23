@@ -8,17 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noodp" />
   <title>刷题记录||线性动态规划 - Doごみ箱🪄</title><meta name="Description" content="Doごみ箱2.1"><meta property="og:title" content="刷题记录||线性动态规划" />
-<meta property="og:description" content="👾线性动态规划线性动态规划，即具有线性阶段划分的动态规划。 💭[P1216]数字三角形 [USACO1.5] [IOI1994]数字三角形 Number Triangles 题目描述观察下面的数字" />
+<meta property="og:description" content="线性动态规划线性动态规划，即具有线性阶段划分的动态规划。 [P1216]数字三角形 [USACO1.5] [IOI1994]数字三角形 Number Triangles 题目描述观察下面的数字金字" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/lineardp/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-03-09T21:47:13+08:00" />
-<meta property="article:modified_time" content="2024-08-18T01:49:05+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+<meta property="article:modified_time" content="2024-08-20T15:33:26+08:00" /><meta property="og:site_name" content="Doごみ箱" />
 
 
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="刷题记录||线性动态规划"/>
-<meta name="twitter:description" content="👾线性动态规划线性动态规划，即具有线性阶段划分的动态规划。 💭[P1216]数字三角形 [USACO1.5] [IOI1994]数字三角形 Number Triangles 题目描述观察下面的数字"/>
+<meta name="twitter:description" content="线性动态规划线性动态规划，即具有线性阶段划分的动态规划。 [P1216]数字三角形 [USACO1.5] [IOI1994]数字三角形 Number Triangles 题目描述观察下面的数字金字"/>
 <meta name="application-name" content="Doごみ箱-一只小菜鸡的Blog">
 <meta name="apple-mobile-web-app-title" content="Doごみ箱-一只小菜鸡的Blog">
 
@@ -33,8 +33,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/posts\/lineardp\/"
-        },"genre": "posts","keywords": "算法, DP","wordcount":  8308 ,
-        "url": "http:\/\/localhost:1313\/posts\/lineardp\/","datePublished": "2024-03-09T21:47:13+08:00","dateModified": "2024-08-18T01:49:05+08:00","license": "dodola","publisher": {
+        },"genre": "posts","keywords": "算法, DP","wordcount":  8267 ,
+        "url": "http:\/\/localhost:1313\/posts\/lineardp\/","datePublished": "2024-03-09T21:47:13+08:00","dateModified": "2024-08-20T15:33:26+08:00","license": "dodola","publisher": {
             "@type": "Organization",
             "name": "DODOLA"},"author": {
                 "@type": "Person",
@@ -137,9 +137,9 @@
     <h2 class="toc-title">目录</h2>
     <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#线性动态规划">👾线性动态规划</a>
+    <li><a href="#线性动态规划">线性动态规划</a>
       <ul>
-        <li><a href="#p1216数字三角形">💭[P1216]数字三角形</a></li>
+        <li><a href="#p1216数字三角形">[P1216]数字三角形</a></li>
       </ul>
     </li>
   </ul>
@@ -158,10 +158,10 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码">🎈参考代码</a></li>
+            <li><a href="#参考代码">参考代码</a></li>
           </ul>
         </li>
-        <li><a href="#p1020导弹拦截">💭[P1020]导弹拦截</a></li>
+        <li><a href="#p1020导弹拦截">[P1020]导弹拦截</a></li>
       </ul>
     </li>
   </ul>
@@ -180,10 +180,10 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码-1">🎈参考代码</a></li>
+            <li><a href="#参考代码-1">参考代码</a></li>
           </ul>
         </li>
-        <li><a href="#p1091合唱队形">💭[P1091]合唱队形</a></li>
+        <li><a href="#p1091合唱队形">[P1091]合唱队形</a></li>
       </ul>
     </li>
   </ul>
@@ -202,10 +202,10 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码-2">🎈参考代码</a></li>
+            <li><a href="#参考代码-2">参考代码</a></li>
           </ul>
         </li>
-        <li><a href="#p1095守望者的逃离">💭[P1095]守望者的逃离</a></li>
+        <li><a href="#p1095守望者的逃离">[P1095]守望者的逃离</a></li>
       </ul>
     </li>
   </ul>
@@ -231,10 +231,10 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码-3">🎈参考代码</a></li>
+            <li><a href="#参考代码-3">参考代码</a></li>
           </ul>
         </li>
-        <li><a href="#p1541乌龟棋">💭[P1541]乌龟棋</a></li>
+        <li><a href="#p1541乌龟棋">[P1541]乌龟棋</a></li>
       </ul>
     </li>
   </ul>
@@ -254,10 +254,10 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码-4">🎈参考代码</a></li>
+            <li><a href="#参考代码-4">参考代码</a></li>
           </ul>
         </li>
-        <li><a href="#p1868饥饿的奶牛">💭[P1868]饥饿的奶牛</a></li>
+        <li><a href="#p1868饥饿的奶牛">[P1868]饥饿的奶牛</a></li>
       </ul>
     </li>
   </ul>
@@ -276,7 +276,7 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码-5">🎈参考代码</a></li>
+            <li><a href="#参考代码-5">参考代码</a></li>
           </ul>
         </li>
       </ul>
@@ -286,7 +286,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#p2679子串">💭[P2679]子串</a></li>
+        <li><a href="#p2679子串">[P2679]子串</a></li>
       </ul>
     </li>
   </ul>
@@ -315,7 +315,7 @@
     </li>
     <li><a href="#提示-6">提示</a>
       <ul>
-        <li><a href="#p2501数字序列">💭[P2501]数字序列</a></li>
+        <li><a href="#p2501数字序列">[P2501]数字序列</a></li>
       </ul>
     </li>
   </ul>
@@ -337,7 +337,7 @@
             <li><a href="#数据规模与约定">数据规模与约定</a></li>
           </ul>
         </li>
-        <li><a href="#p3336话旧">💭[P3336]话旧</a></li>
+        <li><a href="#p3336话旧">[P3336]话旧</a></li>
       </ul>
     </li>
   </ul>
@@ -360,7 +360,7 @@
     </li>
     <li><a href="#提示-8">提示</a>
       <ul>
-        <li><a href="#p3558baj-bytecomputer">💭[P3558]BAJ-Bytecomputer</a></li>
+        <li><a href="#p3558baj-bytecomputer">[P3558]BAJ-Bytecomputer</a></li>
       </ul>
     </li>
   </ul>
@@ -374,7 +374,7 @@
       <ul>
         <li><a href="#样例输入-1-9">样例输入 #1</a></li>
         <li><a href="#样例输出-1-9">样例输出 #1</a></li>
-        <li><a href="#p4158粉刷匠">💭[P4158]粉刷匠</a></li>
+        <li><a href="#p4158粉刷匠">[P4158]粉刷匠</a></li>
       </ul>
     </li>
   </ul>
@@ -391,7 +391,7 @@
     </li>
     <li><a href="#提示-9">提示</a>
       <ul>
-        <li><a href="#p5301宝牌一大堆">💭[P5301]宝牌一大堆</a></li>
+        <li><a href="#p5301宝牌一大堆">[P5301]宝牌一大堆</a></li>
       </ul>
     </li>
   </ul>
@@ -429,7 +429,7 @@
         <div class="post-meta-line">
             <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
             </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在学算法的日子里</a></span>&nbsp;<span class="post-category">和</span>&nbsp;<span class="post-series">系列 <a href="/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/"><i class="far fa-list-alt fa-fw"></i>题解记录</a></span></div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-03-09">2024-03-09</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-08-18">2024-08-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 8308 字&nbsp;
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-03-09">2024-03-09</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-08-20">2024-08-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 8267 字&nbsp;
             <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 17 分钟&nbsp;<span id="/posts/lineardp/" class="leancloud_visitors" data-flag-title="刷题记录||线性动态规划">
                 <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"
                     id=twikoo_visitors></span>&nbsp;次阅读
@@ -493,9 +493,9 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#线性动态规划">👾线性动态规划</a>
+    <li><a href="#线性动态规划">线性动态规划</a>
       <ul>
-        <li><a href="#p1216数字三角形">💭[P1216]数字三角形</a></li>
+        <li><a href="#p1216数字三角形">[P1216]数字三角形</a></li>
       </ul>
     </li>
   </ul>
@@ -514,10 +514,10 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码">🎈参考代码</a></li>
+            <li><a href="#参考代码">参考代码</a></li>
           </ul>
         </li>
-        <li><a href="#p1020导弹拦截">💭[P1020]导弹拦截</a></li>
+        <li><a href="#p1020导弹拦截">[P1020]导弹拦截</a></li>
       </ul>
     </li>
   </ul>
@@ -536,10 +536,10 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码-1">🎈参考代码</a></li>
+            <li><a href="#参考代码-1">参考代码</a></li>
           </ul>
         </li>
-        <li><a href="#p1091合唱队形">💭[P1091]合唱队形</a></li>
+        <li><a href="#p1091合唱队形">[P1091]合唱队形</a></li>
       </ul>
     </li>
   </ul>
@@ -558,10 +558,10 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码-2">🎈参考代码</a></li>
+            <li><a href="#参考代码-2">参考代码</a></li>
           </ul>
         </li>
-        <li><a href="#p1095守望者的逃离">💭[P1095]守望者的逃离</a></li>
+        <li><a href="#p1095守望者的逃离">[P1095]守望者的逃离</a></li>
       </ul>
     </li>
   </ul>
@@ -587,10 +587,10 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码-3">🎈参考代码</a></li>
+            <li><a href="#参考代码-3">参考代码</a></li>
           </ul>
         </li>
-        <li><a href="#p1541乌龟棋">💭[P1541]乌龟棋</a></li>
+        <li><a href="#p1541乌龟棋">[P1541]乌龟棋</a></li>
       </ul>
     </li>
   </ul>
@@ -610,10 +610,10 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码-4">🎈参考代码</a></li>
+            <li><a href="#参考代码-4">参考代码</a></li>
           </ul>
         </li>
-        <li><a href="#p1868饥饿的奶牛">💭[P1868]饥饿的奶牛</a></li>
+        <li><a href="#p1868饥饿的奶牛">[P1868]饥饿的奶牛</a></li>
       </ul>
     </li>
   </ul>
@@ -632,7 +632,7 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#参考代码-5">🎈参考代码</a></li>
+            <li><a href="#参考代码-5">参考代码</a></li>
           </ul>
         </li>
       </ul>
@@ -642,7 +642,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#p2679子串">💭[P2679]子串</a></li>
+        <li><a href="#p2679子串">[P2679]子串</a></li>
       </ul>
     </li>
   </ul>
@@ -671,7 +671,7 @@
     </li>
     <li><a href="#提示-6">提示</a>
       <ul>
-        <li><a href="#p2501数字序列">💭[P2501]数字序列</a></li>
+        <li><a href="#p2501数字序列">[P2501]数字序列</a></li>
       </ul>
     </li>
   </ul>
@@ -693,7 +693,7 @@
             <li><a href="#数据规模与约定">数据规模与约定</a></li>
           </ul>
         </li>
-        <li><a href="#p3336话旧">💭[P3336]话旧</a></li>
+        <li><a href="#p3336话旧">[P3336]话旧</a></li>
       </ul>
     </li>
   </ul>
@@ -716,7 +716,7 @@
     </li>
     <li><a href="#提示-8">提示</a>
       <ul>
-        <li><a href="#p3558baj-bytecomputer">💭[P3558]BAJ-Bytecomputer</a></li>
+        <li><a href="#p3558baj-bytecomputer">[P3558]BAJ-Bytecomputer</a></li>
       </ul>
     </li>
   </ul>
@@ -730,7 +730,7 @@
       <ul>
         <li><a href="#样例输入-1-9">样例输入 #1</a></li>
         <li><a href="#样例输出-1-9">样例输出 #1</a></li>
-        <li><a href="#p4158粉刷匠">💭[P4158]粉刷匠</a></li>
+        <li><a href="#p4158粉刷匠">[P4158]粉刷匠</a></li>
       </ul>
     </li>
   </ul>
@@ -747,7 +747,7 @@
     </li>
     <li><a href="#提示-9">提示</a>
       <ul>
-        <li><a href="#p5301宝牌一大堆">💭[P5301]宝牌一大堆</a></li>
+        <li><a href="#p5301宝牌一大堆">[P5301]宝牌一大堆</a></li>
       </ul>
     </li>
   </ul>
@@ -782,9 +782,9 @@
   </ul>
 </nav></div>
     </div><div class="content" id="content"><h2 id="线性动态规划" class="headerLink">
-    <a href="#%e7%ba%bf%e6%80%a7%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" class="header-mark"></a>👾线性动态规划</h2><p><strong>线性动态规划，即具有线性阶段划分的动态规划。</strong></p>
+    <a href="#%e7%ba%bf%e6%80%a7%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" class="header-mark"></a>线性动态规划</h2><p><strong>线性动态规划，即具有线性阶段划分的动态规划。</strong></p>
 <h3 id="p1216数字三角形" class="headerLink">
-    <a href="#p1216%e6%95%b0%e5%ad%97%e4%b8%89%e8%a7%92%e5%bd%a2" class="header-mark"></a>💭[P1216]数字三角形</h3><blockquote>
+    <a href="#p1216%e6%95%b0%e5%ad%97%e4%b8%89%e8%a7%92%e5%bd%a2" class="header-mark"></a>[P1216]数字三角形</h3><blockquote>
 <h1 id="usaco15-ioi1994数字三角形-number-triangles" class="headerLink">
     <a href="#usaco15-ioi1994%e6%95%b0%e5%ad%97%e4%b8%89%e8%a7%92%e5%bd%a2-number-triangles" class="header-mark"></a>[USACO1.5] [IOI1994]数字三角形 Number Triangles</h1><h2 id="题目描述" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" class="header-mark"></a>题目描述</h2><p>观察下面的数字金字塔。</p>
@@ -842,7 +842,7 @@
 <p>IOI1994 Day1T1</p>
 </blockquote>
 <h4 id="参考代码" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>🎈参考代码</h4><div class="highlight"><div class="chroma">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -897,7 +897,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="p1020导弹拦截" class="headerLink">
-    <a href="#p1020%e5%af%bc%e5%bc%b9%e6%8b%a6%e6%88%aa" class="header-mark"></a>💭[P1020]导弹拦截</h3><blockquote>
+    <a href="#p1020%e5%af%bc%e5%bc%b9%e6%8b%a6%e6%88%aa" class="header-mark"></a>[P1020]导弹拦截</h3><blockquote>
 <h1 id="noip1999-普及组-导弹拦截" class="headerLink">
     <a href="#noip1999-%e6%99%ae%e5%8f%8a%e7%bb%84-%e5%af%bc%e5%bc%b9%e6%8b%a6%e6%88%aa" class="header-mark"></a>[NOIP1999 普及组] 导弹拦截</h1><h2 id="题目描述-1" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-1" class="header-mark"></a>题目描述</h2><p>某国为了防御敌国的导弹袭击，发展出一种导弹拦截系统。但是这种导弹拦截系统有一个缺陷：虽然它的第一发炮弹能够到达任意的高度，但是以后每一发炮弹都不能高于前一发的高度。某天，雷达捕捉到敌国的导弹来袭。由于该系统还在试用阶段，所以只有一套系统，因此有可能不能拦截所有的导弹。</p>
@@ -936,7 +936,7 @@
 <p>$\text{upd 2022.8.24}$：新增加一组 Hack 数据。</p>
 </blockquote>
 <h4 id="参考代码-1" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>🎈参考代码</h4><div class="highlight"><div class="chroma">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1021,7 +1021,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="p1091合唱队形" class="headerLink">
-    <a href="#p1091%e5%90%88%e5%94%b1%e9%98%9f%e5%bd%a2" class="header-mark"></a>💭[P1091]合唱队形</h3><blockquote>
+    <a href="#p1091%e5%90%88%e5%94%b1%e9%98%9f%e5%bd%a2" class="header-mark"></a>[P1091]合唱队形</h3><blockquote>
 <h1 id="noip2004-提高组-合唱队形" class="headerLink">
     <a href="#noip2004-%e6%8f%90%e9%ab%98%e7%bb%84-%e5%90%88%e5%94%b1%e9%98%9f%e5%bd%a2" class="header-mark"></a>[NOIP2004 提高组] 合唱队形</h1><h2 id="题目描述-2" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-2" class="header-mark"></a>题目描述</h2><p>$n$ 位同学站成一排，音乐老师要请其中的 $n-k$ 位同学出列，使得剩下的 $k$ 位同学排成合唱队形。</p>
@@ -1059,7 +1059,7 @@
 <p>对于全部的数据，保证有 $n \le 100$。</p>
 </blockquote>
 <h4 id="参考代码-2" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>🎈参考代码</h4><div class="highlight"><div class="chroma">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1162,7 +1162,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="p1095守望者的逃离" class="headerLink">
-    <a href="#p1095%e5%ae%88%e6%9c%9b%e8%80%85%e7%9a%84%e9%80%83%e7%a6%bb" class="header-mark"></a>💭[P1095]守望者的逃离</h3><blockquote>
+    <a href="#p1095%e5%ae%88%e6%9c%9b%e8%80%85%e7%9a%84%e9%80%83%e7%a6%bb" class="header-mark"></a>[P1095]守望者的逃离</h3><blockquote>
 <h1 id="noip2007-普及组-守望者的逃离" class="headerLink">
     <a href="#noip2007-%e6%99%ae%e5%8f%8a%e7%bb%84-%e5%ae%88%e6%9c%9b%e8%80%85%e7%9a%84%e9%80%83%e7%a6%bb" class="header-mark"></a>[NOIP2007 普及组] 守望者的逃离</h1><h2 id="题目背景" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af" class="header-mark"></a>题目背景</h2><p>恶魔猎手尤迪安野心勃勃，他背叛了暗夜精灵，率领深藏在海底的娜迦族企图叛变。</p>
@@ -1226,7 +1226,7 @@
 <p>对于 $100%$ 的数据，$1   \le   T   \le   3\times  10^5$，$0   \le   M   \le   10^3$，$ 1   \le  S   \le   10^8$。</p>
 </blockquote>
 <h4 id="参考代码-3" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>🎈参考代码</h4><div class="highlight"><div class="chroma">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1283,7 +1283,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="p1541乌龟棋" class="headerLink">
-    <a href="#p1541%e4%b9%8c%e9%be%9f%e6%a3%8b" class="header-mark"></a>💭[P1541]乌龟棋</h3><blockquote>
+    <a href="#p1541%e4%b9%8c%e9%be%9f%e6%a3%8b" class="header-mark"></a>[P1541]乌龟棋</h3><blockquote>
 <h1 id="noip2010-提高组-乌龟棋" class="headerLink">
     <a href="#noip2010-%e6%8f%90%e9%ab%98%e7%bb%84-%e4%b9%8c%e9%be%9f%e6%a3%8b" class="header-mark"></a>[NOIP2010 提高组] 乌龟棋</h1><h2 id="题目背景-1" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af-1" class="header-mark"></a>题目背景</h2><p>小明过生日的时候，爸爸送给他一副乌龟棋当作礼物。</p>
@@ -1332,7 +1332,7 @@
 <p>对于 $100%$ 的数据有 $1≤N≤350,1≤M≤120$，且 $4$ 种爬行卡片，每种卡片的张数不会超过 $40$；$0≤a_i≤100,1≤i≤N,1≤b_i≤4,1≤i≤M$。</p>
 </blockquote>
 <h4 id="参考代码-4" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-4" class="header-mark"></a>🎈参考代码</h4><div class="highlight"><div class="chroma">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-4" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1407,7 +1407,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="p1868饥饿的奶牛" class="headerLink">
-    <a href="#p1868%e9%a5%a5%e9%a5%bf%e7%9a%84%e5%a5%b6%e7%89%9b" class="header-mark"></a>💭[P1868]饥饿的奶牛</h3><blockquote>
+    <a href="#p1868%e9%a5%a5%e9%a5%bf%e7%9a%84%e5%a5%b6%e7%89%9b" class="header-mark"></a>[P1868]饥饿的奶牛</h3><blockquote>
 <h1 id="饥饿的奶牛" class="headerLink">
     <a href="#%e9%a5%a5%e9%a5%bf%e7%9a%84%e5%a5%b6%e7%89%9b" class="header-mark"></a>饥饿的奶牛</h1><h2 id="题目描述-5" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-5" class="header-mark"></a>题目描述</h2><p>有一条奶牛冲出了围栏，来到了一处圣地（对于奶牛来说），上面用牛语写着一段文字。</p>
@@ -1448,7 +1448,7 @@
     <a href="#%e6%8f%90%e7%a4%ba-5" class="header-mark"></a>提示</h2><p>$1 \leq n \leq 1.5 \times 10^5$，$0 \leq x \leq y \leq 3 \times 10^6$。</p>
 </blockquote>
 <h4 id="参考代码-5" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-5" class="header-mark"></a>🎈参考代码</h4><div class="highlight"><div class="chroma">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-5" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1502,7 +1502,7 @@
 </div>
 </div><h1 id="待完成部分" class="headerLink">
     <a href="#%e5%be%85%e5%ae%8c%e6%88%90%e9%83%a8%e5%88%86" class="header-mark"></a><code>=======</code>待完成部分<code>=======</code></h1><h3 id="p2679子串" class="headerLink">
-    <a href="#p2679%e5%ad%90%e4%b8%b2" class="header-mark"></a>💭[P2679]子串</h3><blockquote>
+    <a href="#p2679%e5%ad%90%e4%b8%b2" class="header-mark"></a>[P2679]子串</h3><blockquote>
 <h1 id="noip2015-提高组-子串" class="headerLink">
     <a href="#noip2015-%e6%8f%90%e9%ab%98%e7%bb%84-%e5%ad%90%e4%b8%b2" class="header-mark"></a>[NOIP2015 提高组] 子串</h1><h2 id="题目描述-6" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-6" class="header-mark"></a>题目描述</h2><p>有两个仅包含小写英文字母的字符串 $A$ 和 $B$。</p>
@@ -1603,7 +1603,7 @@
 对于所有 10 组数据:$1≤n≤1000,1≤m≤200,1≤k≤m$。</p>
 </blockquote>
 <h3 id="p2501数字序列" class="headerLink">
-    <a href="#p2501%e6%95%b0%e5%ad%97%e5%ba%8f%e5%88%97" class="header-mark"></a>💭[P2501]数字序列</h3><blockquote>
+    <a href="#p2501%e6%95%b0%e5%ad%97%e5%ba%8f%e5%88%97" class="header-mark"></a>[P2501]数字序列</h3><blockquote>
 <h1 id="haoi2006-数字序列" class="headerLink">
     <a href="#haoi2006-%e6%95%b0%e5%ad%97%e5%ba%8f%e5%88%97" class="header-mark"></a>[HAOI2006] 数字序列</h1><h2 id="题目描述-7" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-7" class="header-mark"></a>题目描述</h2><p>现在我们有一个长度为 $n$ 的整数序列 $a$。但是它太不好看了，于是我们希望把它变成一个单调严格上升的序列。但是不希望改变过多的数，也不希望改变的幅度太大。</p>
@@ -1644,7 +1644,7 @@
 </ul>
 </blockquote>
 <h3 id="p3336话旧" class="headerLink">
-    <a href="#p3336%e8%af%9d%e6%97%a7" class="header-mark"></a>💭[P3336]话旧</h3><blockquote>
+    <a href="#p3336%e8%af%9d%e6%97%a7" class="header-mark"></a>[P3336]话旧</h3><blockquote>
 <h1 id="zjoi2013-话旧" class="headerLink">
     <a href="#zjoi2013-%e8%af%9d%e6%97%a7" class="header-mark"></a>[ZJOI2013] 话旧</h1><h2 id="题目描述-8" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-8" class="header-mark"></a>题目描述</h2><p>小林跟着银河队选手去了一趟宇宙比赛，耳濡目染，变得学术起来。回来后，他发现世界大变样了。比丘兽究级进化，成了凤凰兽；金先生因为发了一篇 paper，一跃成为教授，也成为了银河队选拔委员会成员。</p>
@@ -1728,7 +1728,7 @@
 </ul>
 </blockquote>
 <h3 id="p3558baj-bytecomputer" class="headerLink">
-    <a href="#p3558baj-bytecomputer" class="header-mark"></a>💭[P3558]BAJ-Bytecomputer</h3><blockquote>
+    <a href="#p3558baj-bytecomputer" class="header-mark"></a>[P3558]BAJ-Bytecomputer</h3><blockquote>
 <h1 id="poi2013-baj-bytecomputer" class="headerLink">
     <a href="#poi2013-baj-bytecomputer" class="header-mark"></a>[POI2013] BAJ-Bytecomputer</h1><h2 id="题面翻译" class="headerLink">
     <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91" class="header-mark"></a>题面翻译</h2><p>给定一个长度为 $n$ 的只包含 $-1,0,1$ 的数列 $a$，每次操作可以使 $a_i\gets a_i+a_{i-1}$，求最少操作次数使得序列单调不降。如果不可能通过该操作使得序列单调不降，请输出 <code>BRAK</code>。</p>
@@ -1768,7 +1768,7 @@
 </div>
 </div></blockquote>
 <h3 id="p4158粉刷匠" class="headerLink">
-    <a href="#p4158%e7%b2%89%e5%88%b7%e5%8c%a0" class="header-mark"></a>💭[P4158]粉刷匠</h3><blockquote>
+    <a href="#p4158%e7%b2%89%e5%88%b7%e5%8c%a0" class="header-mark"></a>[P4158]粉刷匠</h3><blockquote>
 <h1 id="scoi2009-粉刷匠" class="headerLink">
     <a href="#scoi2009-%e7%b2%89%e5%88%b7%e5%8c%a0" class="header-mark"></a>[SCOI2009] 粉刷匠</h1><h2 id="题目描述-10" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-10" class="header-mark"></a>题目描述</h2><p>windy 有 $N$ 条木板需要被粉刷。 每条木板被分为 $M$ 个格子。 每个格子要被刷成红色或蓝色。</p>
@@ -1810,7 +1810,7 @@
 <p>$100%$ 的数据，满足 $1 \le N,M \le 50,0 \le T \le 2500$</p>
 </blockquote>
 <h3 id="p5301宝牌一大堆" class="headerLink">
-    <a href="#p5301%e5%ae%9d%e7%89%8c%e4%b8%80%e5%a4%a7%e5%a0%86" class="header-mark"></a>💭[P5301]宝牌一大堆</h3><blockquote>
+    <a href="#p5301%e5%ae%9d%e7%89%8c%e4%b8%80%e5%a4%a7%e5%a0%86" class="header-mark"></a>[P5301]宝牌一大堆</h3><blockquote>
 <h1 id="gxoigzoi2019-宝牌一大堆" class="headerLink">
     <a href="#gxoigzoi2019-%e5%ae%9d%e7%89%8c%e4%b8%80%e5%a4%a7%e5%a0%86" class="header-mark"></a>[GXOI/GZOI2019] 宝牌一大堆</h1><h2 id="题目描述-11" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-11" class="header-mark"></a>题目描述</h2><p>麻将是一种传统的博弈游戏，由 $4$ 名玩家参与，轮流摸牌、打牌。在竞技比赛中主要有国标麻将（中国）和立直麻将（日本）两大规则。本题采用一种特别的规则——「宝牌一大堆」规则。</p>
@@ -2025,7 +2025,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-08-18</span>
+                <span>更新于 2024-08-20</span>
             </div>
             <div class="post-info-license"></div>
         </div>

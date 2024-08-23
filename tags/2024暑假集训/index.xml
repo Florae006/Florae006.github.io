@@ -59,7 +59,7 @@
     <pubDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd2/</guid>
-    <description><![CDATA[B-MST 题意给定一个$n$顶点的带权无向图$G$。 每次询问一个点集$S$，求$S$关于$G$的导出子图的最小生成树的质量，若无则输出-1。 数据范围]]></description>
+    <description><![CDATA[A-Floor Tiles 题意存在如下A型、B型两种砖： 现用这两种砖拼成$N\times M$的矩形，提问是否有恰好存在$K$条曲线的平铺方式，曲线如下： 数据范围 $1\leq]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day1||补题</title>
     <link>http://localhost:1313/posts/nc24sd1/</link>
