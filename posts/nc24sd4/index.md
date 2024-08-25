@@ -1,7 +1,122 @@
 # 2024牛客暑假多校训练营Day4||补题
 
 
+## A-LCT
 
+### 题意
+
+给定一棵有根树，每次询问前$i$条边组成的森林中，第$c_i$个点为根的树的深度。
+
+#### 数据范围
+
+* $2\leq n\leq 10^6$
+* $1\leq a_i,b_i,c_i\leq n,a_i\neq b_i$
+
+### 思路
+
+带权并查集，维护每个节点在当前所属树的层数，维护所有以该节点为根节点的树的深度。
+
+### 代码
+
+```cpp
+int deep[maxn], fa[maxn], dis[maxn];
+int findfa(int x) {
+    if (x == fa[x])return x;
+    int fx = findfa(fa[x]);
+    // 更新deep,旧根:fa[x],新根:fx
+    deep[x] += deep[fa[x]];
+    return fa[x] = fx;
+}
+
+void merge(int u, int v) {
+    int fu = findfa(u);
+    fa[v] = fu;
+    deep[v] = deep[u] + 1;
+    dis[fu] = max(dis[fu], dis[v] + deep[v]);
+}
+
+void solve() {
+    int n;cin >> n;
+    for (int i = 1;i <= n;i++) {
+        fa[i] = i;
+        deep[i] = 0;
+        dis[i] = 0;
+    }
+    for (int i = 1;i <= n - 1;i++) {
+        int u, v, c;cin >> u >> v >> c;
+        merge(u, v);
+        cout << dis[c] << " ";
+    }
+    cout << "\n";
+}
+```
+
+## C-Sort4
+
+### 题意
+
+给出一个排列，每次选择四个位置交换其中的元素，求将该排列排序成上升序列的最小操作次数。
+
+#### 数据范围
+
+* $1\leq t\leq 10^5$
+* $1\leq n\leq 10^6$
+
+### 思路
+
+令$p_i$是排序之后数$a_i$的位置，每个$(p_i,a_i)$对应了一个关系。易知这样的关系会形成若干个环，如果环的长度是$3$或$4$，则一次交换可以让这个环上的数字都归位，如果是大于$4$的环，每次在这个环上进行一次操作可以让环的长度减少$3$，如果是两个长度为$2$的环，则一次操作可以让两个长度为$2$的环归位。
+
+### 代码
+
+```cpp
+int p[maxn], fa[maxn], len[maxn];
+
+int findfa(int x) {
+    if (x == fa[x])return x;
+    int fx = findfa(fa[x]);
+    len[fa[x]] = len[fx];
+    return fa[x] = fx;
+}
+
+void merge(int x, int y) {
+    int fx = findfa(x), fy = findfa(y);
+    if (fx == fy)return;
+    fa[fx] = fy;
+    len[fy] += len[fx];
+}
+
+void solve() {
+    int n;cin >> n;
+    for (int i = 1;i <= n;i++) {
+        len[i] = 1;fa[i] = i;
+    }
+    for (int i = 1;i <= n;i++) {
+        cin >> p[i];
+        merge(i, p[i]);
+    }
+    map<int, int>mp;
+    for (int i = 1;i <= n;i++) {
+        int fx = findfa(i);
+        if (mp.count(fx))continue;
+        mp[fx] = len[fx];
+    }
+    int ans = 0, cnt2 = 0;
+    for (auto [i, s] : mp) {
+        if (s == 1)continue;
+        else if (s == 3 || s == 4)ans++;
+        else if (s > 4) {
+            int t = s / 3;
+            ans += t;
+            if (s % 3 == 2) {
+                cnt2++;
+            }
+        }
+        else cnt2++;
+    }
+    ans += (cnt2 + 1) / 2;
+    cout << ans << "\n";
+}
+```
 
 ## F-Good Tree
 

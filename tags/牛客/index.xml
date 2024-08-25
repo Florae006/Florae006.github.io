@@ -33,12 +33,19 @@
     </author><guid>http://localhost:1313/posts/nc24sd6/</guid>
     <description><![CDATA[A-Cake 题意Oscar和Grammy玩游戏，第一阶段两人轮流在有根树上走，走到叶子停止，经过的边有两种，标0边或者标1边，记录走下的01串。设01]]></description>
 </item><item>
+    <title>2024牛客暑假多校训练营Day5||补题</title>
+    <link>http://localhost:1313/posts/nc24sd5/</link>
+    <pubDate>Wed, 31 Jul 2024 15:55:57 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/nc24sd5/</guid>
+    <description><![CDATA[TODO]]></description>
+</item><item>
     <title>2024牛客暑假多校训练营Day4||补题</title>
     <link>http://localhost:1313/posts/nc24sd4/</link>
     <pubDate>Wed, 31 Jul 2024 15:55:48 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd4/</guid>
-    <description><![CDATA[F-Good Tree 题意一棵树，树上的边权都是$1$，定义$f(u)=\sum_v dis(u,v)$，给出一个$x$，寻找一个满足存在两个点$u,v$使得$]]></description>
+    <description><![CDATA[A-LCT 题意给定一棵有根树，每次询问前$i$条边组成的森林中，第$c_i$个点为根的树的深度。 数据范围 $2\leq n\leq 10^6$ $1\leq a_i,b_i,c_i\leq n,a_i\neq b_i$ 思路带权并查集，维护每个节点在]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day3||补题</title>
     <link>http://localhost:1313/posts/nc24sd3/</link>
@@ -67,12 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24wd6/</guid>
     <description><![CDATA[A-宇宙的终结 题意在$[l,r]$中寻找某个恰好是三个不同素数的乘积的数，并输出任意一个合法答案即可。 数据范围$1\leq l\leq r \leq 100$ 思路数据小]]></description>
-</item><item>
-    <title>2024牛客寒假营4||补题</title>
-    <link>http://localhost:1313/posts/nc24wd4/</link>
-    <pubDate>Mon, 26 Feb 2024 19:54:28 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/nc24wd4/</guid>
-    <description><![CDATA[A-柠檬可乐 题意输入$a,b,k$，判断$a\ge k\times b$是否成立 数据范围$a,b,k(1\leq a,b,k\leq 100)$ 思路简单判断 参考代码 1 2 3 4 5 void solve() { int a,]]></description>
 </item></channel>
 </rss>
