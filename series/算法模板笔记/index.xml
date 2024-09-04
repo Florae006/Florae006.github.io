@@ -12,13 +12,6 @@
     </author><guid>http://localhost:1313/posts/segtreelecnote/</guid>
     <description><![CDATA[线段树介绍 线段树是一棵二叉树，每个节点维护一个区间内$[l,r]$的信息 左子树区间维护$[l,\lfloor \frac{l+r}{2} \rfloor]$的信息，右子]]></description>
 </item><item>
-    <title>计算几何模板</title>
-    <link>http://localhost:1313/posts/geometry/</link>
-    <pubDate>Sat, 09 Mar 2024 21:54:39 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/geometry/</guid>
-    <description><![CDATA[试着用计算机来解决几何问题吧(●&rsquo;◡&rsquo;●) 前置知识 几何基础 平面直角坐标系 极坐标与极坐标系 向量（向量积） 二维计算几何基]]></description>
-</item><item>
     <title>线段树模板</title>
     <link>http://localhost:1313/posts/seg_tree/</link>
     <pubDate>Sat, 06 Jan 2024 21:53:21 &#43;0800</pubDate><author>
