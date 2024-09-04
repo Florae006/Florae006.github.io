@@ -13,7 +13,7 @@
 {{<friend name="Echo 的小窝" url="https://www.liveout.cn/" avatar="https://yy.liveout.cn/photo/photo2.jpg" bio="漂泊于互联网中的小窝" siteshot="" >}}
 {{<friend name="KAMIASUKA’s Blog" url="https://kamiasuka.top/index.html" avatar="https://foruda.gitee.com/avatar/1699007508663606881/13417927_kamiasuka_1699007508.png!avatar200" bio="Patience is key in life" siteshot="" >}}
 {{<friend name="幻雪的博客" url="https://huanxueblog.top/" avatar="https://s1.hdslb.com/bfs/static/webssr/article/empty.png" bio="腐烂于花海，致死于所爱" siteshot="https://huanxueblog.top/url/" >}}
-{{<friend name="UTTN" url="https://www.galgalgal.icu/" avatar="http://www.galgalgal.icu/wp-content/uploads/2024/05/029d449c7b0a27af1a924233ed1dd4f.jpg" bio="我要当长毛文艺b" siteshot="" >}}
+{{<friend name="UTTN" url="https://www.galgalgal.icu/" avatar="https://www.galgalgal.icu/wp-content/uploads/2024/05/029d449c7b0a27af1a924233ed1dd4f.jpg" bio="我要当长毛文艺b" siteshot="" >}}
 
 
 ✨️✨️ 本站友链信息：
