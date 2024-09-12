@@ -4,7 +4,14 @@
         <link>http://localhost:1313/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link>
         <description>在学算法的日子里 - 分类 - Doごみ箱🪄</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 16 Aug 2024 22:43:59 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 11 Sep 2024 21:50:26 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/" rel="self" type="application/rss+xml" /><item>
+    <title>刷题记录||区间动态规划</title>
+    <link>http://localhost:1313/posts/intervaldp/</link>
+    <pubDate>Wed, 11 Sep 2024 21:50:26 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/intervaldp/</guid>
+    <description><![CDATA[区间动态规划一般以区间作为动态规划的阶段。 [P1880]石子合并 题目描述在一个圆形操场的四周摆放 $N$ 堆石子，现要将石子有次序地合并成一堆，规定]]></description>
+</item><item>
     <title>线段树专题练习</title>
     <link>http://localhost:1313/posts/segtree_practice/</link>
     <pubDate>Fri, 16 Aug 2024 22:43:59 &#43;0800</pubDate><author>
@@ -67,12 +74,5 @@
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/hdu24sd1/</guid>
     <description><![CDATA[1001-循环位移$(709/3775)$ 题意将字符串$S=S_0+S_1+S_2+&hellip;+S_{n-1}$循环位移$k$次后得到]]></description>
-</item><item>
-    <title>2024牛客暑假多校训练营Day2||补题</title>
-    <link>http://localhost:1313/posts/nc24sd2/</link>
-    <pubDate>Fri, 19 Jul 2024 19:06:03 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/nc24sd2/</guid>
-    <description><![CDATA[A-Floor Tiles 题意存在如下A型、B型两种砖： 现用这两种砖拼成$N\times M$的矩形，提问是否有恰好存在$K$条曲线的平铺方式，曲线如下： 数据范围 $1\leq]]></description>
 </item></channel>
 </rss>

@@ -8,17 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noodp" />
   <title>刷题记录||线性动态规划 - Doごみ箱🪄</title><meta name="Description" content="Doごみ箱2.1"><meta property="og:title" content="刷题记录||线性动态规划" />
-<meta property="og:description" content="线性动态规划线性动态规划，即具有线性阶段划分的动态规划。 [P1216]数字三角形 [USACO1.5] [IOI1994]数字三角形 Number Triangles 题目描述观察下面的数字金字" />
+<meta property="og:description" content="线性动态规划线性动态规划，即具有线性阶段划分的动态规划。 [P1216]数字三角形 题目描述观察下面的数字金字塔。 写一个程序来查找从最高点到底部" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/lineardp/" /><meta property="og:image" content="http://localhost:1313/img/dodola.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-03-09T21:47:13+08:00" />
-<meta property="article:modified_time" content="2024-08-20T15:33:26+08:00" /><meta property="og:site_name" content="Doごみ箱" />
+<meta property="article:modified_time" content="2024-09-12T21:30:11+08:00" /><meta property="og:site_name" content="Doごみ箱" />
 
 
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="http://localhost:1313/img/dodola.png" /><meta name="twitter:title" content="刷题记录||线性动态规划"/>
-<meta name="twitter:description" content="线性动态规划线性动态规划，即具有线性阶段划分的动态规划。 [P1216]数字三角形 [USACO1.5] [IOI1994]数字三角形 Number Triangles 题目描述观察下面的数字金字"/>
+<meta name="twitter:description" content="线性动态规划线性动态规划，即具有线性阶段划分的动态规划。 [P1216]数字三角形 题目描述观察下面的数字金字塔。 写一个程序来查找从最高点到底部"/>
 <meta name="application-name" content="Doごみ箱-一只小菜鸡的Blog">
 <meta name="apple-mobile-web-app-title" content="Doごみ箱-一只小菜鸡的Blog">
 
@@ -33,8 +33,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/localhost:1313\/posts\/lineardp\/"
-        },"genre": "posts","keywords": "算法, DP","wordcount":  8267 ,
-        "url": "http:\/\/localhost:1313\/posts\/lineardp\/","datePublished": "2024-03-09T21:47:13+08:00","dateModified": "2024-08-20T15:33:26+08:00","license": "dodola","publisher": {
+        },"genre": "posts","keywords": "算法, DP","wordcount":  4038 ,
+        "url": "http:\/\/localhost:1313\/posts\/lineardp\/","datePublished": "2024-03-09T21:47:13+08:00","dateModified": "2024-09-12T21:30:11+08:00","license": "dodola","publisher": {
             "@type": "Organization",
             "name": "DODOLA"},"author": {
                 "@type": "Person",
@@ -137,290 +137,41 @@
     <h2 class="toc-title">目录</h2>
     <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#线性动态规划">线性动态规划</a>
+    <li><a href="#线性动态规划">线性动态规划</a></li>
+    <li><a href="#p1216数字三角形">[P1216]数字三角形</a>
       <ul>
-        <li><a href="#p1216数字三角形">[P1216]数字三角形</a></li>
+        <li><a href="#题目描述">题目描述</a></li>
+        <li><a href="#参考代码">参考代码</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述">题目描述</a></li>
-    <li><a href="#输入格式">输入格式</a></li>
-    <li><a href="#输出格式">输出格式</a></li>
-    <li><a href="#样例-1">样例 #1</a>
+    <li><a href="#p1020导弹拦截">[P1020]导弹拦截</a>
       <ul>
-        <li><a href="#样例输入-1">样例输入 #1</a></li>
-        <li><a href="#样例输出-1">样例输出 #1</a></li>
+        <li><a href="#题目描述-1">题目描述</a></li>
+        <li><a href="#参考代码-1">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#提示">提示</a>
+    <li><a href="#p1091合唱队形">[P1091]合唱队形</a>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码">参考代码</a></li>
-          </ul>
-        </li>
-        <li><a href="#p1020导弹拦截">[P1020]导弹拦截</a></li>
+        <li><a href="#题目描述-2">题目描述</a></li>
+        <li><a href="#参考代码-2">参考代码</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-1">题目描述</a></li>
-    <li><a href="#输入格式-1">输入格式</a></li>
-    <li><a href="#输出格式-1">输出格式</a></li>
-    <li><a href="#样例-1-1">样例 #1</a>
+    <li><a href="#p1095守望者的逃离">[P1095]守望者的逃离</a>
       <ul>
-        <li><a href="#样例输入-1-1">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-1">样例输出 #1</a></li>
+        <li><a href="#题目描述-3">题目描述</a></li>
+        <li><a href="#参考代码-3">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#提示-1">提示</a>
+    <li><a href="#p1541乌龟棋">[P1541]乌龟棋</a>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码-1">参考代码</a></li>
-          </ul>
-        </li>
-        <li><a href="#p1091合唱队形">[P1091]合唱队形</a></li>
+        <li><a href="#题目描述-4">题目描述</a></li>
+        <li><a href="#参考代码-4">参考代码</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-2">题目描述</a></li>
-    <li><a href="#输入格式-2">输入格式</a></li>
-    <li><a href="#输出格式-2">输出格式</a></li>
-    <li><a href="#样例-1-2">样例 #1</a>
+    <li><a href="#p1868饥饿的奶牛">[P1868]饥饿的奶牛</a>
       <ul>
-        <li><a href="#样例输入-1-2">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-2">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-2">提示</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码-2">参考代码</a></li>
-          </ul>
-        </li>
-        <li><a href="#p1095守望者的逃离">[P1095]守望者的逃离</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目背景">题目背景</a></li>
-    <li><a href="#题目描述-3">题目描述</a></li>
-    <li><a href="#输入格式-3">输入格式</a></li>
-    <li><a href="#输出格式-3">输出格式</a></li>
-    <li><a href="#样例-1-3">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-3">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-3">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#样例-2">样例 #2</a>
-      <ul>
-        <li><a href="#样例输入-2">样例输入 #2</a></li>
-        <li><a href="#样例输出-2">样例输出 #2</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-3">提示</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码-3">参考代码</a></li>
-          </ul>
-        </li>
-        <li><a href="#p1541乌龟棋">[P1541]乌龟棋</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目背景-1">题目背景</a></li>
-    <li><a href="#题目描述-4">题目描述</a></li>
-    <li><a href="#输入格式-4">输入格式</a></li>
-    <li><a href="#输出格式-4">输出格式</a></li>
-    <li><a href="#样例-1-4">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-4">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-4">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-4">提示</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码-4">参考代码</a></li>
-          </ul>
-        </li>
-        <li><a href="#p1868饥饿的奶牛">[P1868]饥饿的奶牛</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-5">题目描述</a></li>
-    <li><a href="#输入格式-5">输入格式</a></li>
-    <li><a href="#输出格式-5">输出格式</a></li>
-    <li><a href="#样例-1-5">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-5">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-5">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-5">提示</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码-5">参考代码</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#p2679子串">[P2679]子串</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-6">题目描述</a></li>
-    <li><a href="#输入格式-6">输入格式</a></li>
-    <li><a href="#输出格式-6">输出格式</a></li>
-    <li><a href="#样例-1-6">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-6">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-6">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#样例-2-1">样例 #2</a>
-      <ul>
-        <li><a href="#样例输入-2-1">样例输入 #2</a></li>
-        <li><a href="#样例输出-2-1">样例输出 #2</a></li>
-      </ul>
-    </li>
-    <li><a href="#样例-3">样例 #3</a>
-      <ul>
-        <li><a href="#样例输入-3">样例输入 #3</a></li>
-        <li><a href="#样例输出-3">样例输出 #3</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-6">提示</a>
-      <ul>
-        <li><a href="#p2501数字序列">[P2501]数字序列</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-7">题目描述</a></li>
-    <li><a href="#输入格式-7">输入格式</a></li>
-    <li><a href="#输出格式-7">输出格式</a></li>
-    <li><a href="#样例-1-7">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-7">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-7">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-7">提示</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#数据规模与约定">数据规模与约定</a></li>
-          </ul>
-        </li>
-        <li><a href="#p3336话旧">[P3336]话旧</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-8">题目描述</a></li>
-    <li><a href="#输入格式-8">输入格式</a></li>
-    <li><a href="#输出格式-8">输出格式</a></li>
-    <li><a href="#样例-1-8">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-8">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-8">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#样例-2-2">样例 #2</a>
-      <ul>
-        <li><a href="#样例输入-2-2">样例输入 #2</a></li>
-        <li><a href="#样例输出-2-2">样例输出 #2</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-8">提示</a>
-      <ul>
-        <li><a href="#p3558baj-bytecomputer">[P3558]BAJ-Bytecomputer</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题面翻译">题面翻译</a></li>
-    <li><a href="#题目描述-9">题目描述</a></li>
-    <li><a href="#输入格式-9">输入格式</a></li>
-    <li><a href="#输出格式-9">输出格式</a></li>
-    <li><a href="#样例-1-9">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-9">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-9">样例输出 #1</a></li>
-        <li><a href="#p4158粉刷匠">[P4158]粉刷匠</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-10">题目描述</a></li>
-    <li><a href="#输入格式-10">输入格式</a></li>
-    <li><a href="#输出格式-10">输出格式</a></li>
-    <li><a href="#样例-1-10">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-10">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-10">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-9">提示</a>
-      <ul>
-        <li><a href="#p5301宝牌一大堆">[P5301]宝牌一大堆</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-11">题目描述</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#牌型">牌型</a></li>
-            <li><a href="#和牌">和牌</a></li>
-            <li><a href="#宝牌">宝牌</a></li>
-            <li><a href="#达成分数">达成分数</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#输入格式-11">输入格式</a></li>
-    <li><a href="#输出格式-11">输出格式</a></li>
-    <li><a href="#样例-1-11">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-11">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-11">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-10">提示</a>
-      <ul>
-        <li><a href="#样例解释">样例解释</a></li>
-        <li><a href="#数据范围">数据范围</a></li>
+        <li><a href="#题目描述-5">题目描述</a></li>
+        <li><a href="#参考代码-5">参考代码</a></li>
       </ul>
     </li>
   </ul>
@@ -429,8 +180,8 @@
         <div class="post-meta-line">
             <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="http://dodolalorc.cn/" title="Author" target="_blank" rel="noopener noreferrer author" class="author">DODOLA</a>
             </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/%E5%9C%A8%E5%AD%A6%E7%AE%97%E6%B3%95%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/"><i class="far fa-folder fa-fw"></i>在学算法的日子里</a></span>&nbsp;<span class="post-category">和</span>&nbsp;<span class="post-series">系列 <a href="/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/"><i class="far fa-list-alt fa-fw"></i>题解记录</a></span></div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-03-09">2024-03-09</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-08-20">2024-08-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 8267 字&nbsp;
-            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 17 分钟&nbsp;<span id="/posts/lineardp/" class="leancloud_visitors" data-flag-title="刷题记录||线性动态规划">
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-03-09">2024-03-09</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2024-09-12">2024-09-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 4038 字&nbsp;
+            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 9 分钟&nbsp;<span id="/posts/lineardp/" class="leancloud_visitors" data-flag-title="刷题记录||线性动态规划">
                 <i class="far fa-eye fa-fw"></i>&nbsp;<span class="leancloud-visitors-count"
                     id=twikoo_visitors></span>&nbsp;次阅读
             </span>&nbsp;<span id="/posts/lineardp/" class="comment_count" data-flag-title="刷题记录||线性动态规划">
@@ -459,6 +210,7 @@
         <div class="details-content series-content">
             <nav>
                 <ul>
+                    <li><a href="/posts/intervaldp/">刷题记录||区间动态规划</a></li>
                     <li><a href="/posts/segtree_practice/">线段树专题练习</a></li>
                     <li><a href="/posts/nc24sd10/">2024牛客暑假多校训练营Day10||补题</a></li>
                     <li><a href="/posts/nc24sd8/">2024牛客暑假多校训练营Day8||补题</a></li>
@@ -494,301 +246,50 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#线性动态规划">线性动态规划</a>
+    <li><a href="#线性动态规划">线性动态规划</a></li>
+    <li><a href="#p1216数字三角形">[P1216]数字三角形</a>
       <ul>
-        <li><a href="#p1216数字三角形">[P1216]数字三角形</a></li>
+        <li><a href="#题目描述">题目描述</a></li>
+        <li><a href="#参考代码">参考代码</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述">题目描述</a></li>
-    <li><a href="#输入格式">输入格式</a></li>
-    <li><a href="#输出格式">输出格式</a></li>
-    <li><a href="#样例-1">样例 #1</a>
+    <li><a href="#p1020导弹拦截">[P1020]导弹拦截</a>
       <ul>
-        <li><a href="#样例输入-1">样例输入 #1</a></li>
-        <li><a href="#样例输出-1">样例输出 #1</a></li>
+        <li><a href="#题目描述-1">题目描述</a></li>
+        <li><a href="#参考代码-1">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#提示">提示</a>
+    <li><a href="#p1091合唱队形">[P1091]合唱队形</a>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码">参考代码</a></li>
-          </ul>
-        </li>
-        <li><a href="#p1020导弹拦截">[P1020]导弹拦截</a></li>
+        <li><a href="#题目描述-2">题目描述</a></li>
+        <li><a href="#参考代码-2">参考代码</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-1">题目描述</a></li>
-    <li><a href="#输入格式-1">输入格式</a></li>
-    <li><a href="#输出格式-1">输出格式</a></li>
-    <li><a href="#样例-1-1">样例 #1</a>
+    <li><a href="#p1095守望者的逃离">[P1095]守望者的逃离</a>
       <ul>
-        <li><a href="#样例输入-1-1">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-1">样例输出 #1</a></li>
+        <li><a href="#题目描述-3">题目描述</a></li>
+        <li><a href="#参考代码-3">参考代码</a></li>
       </ul>
     </li>
-    <li><a href="#提示-1">提示</a>
+    <li><a href="#p1541乌龟棋">[P1541]乌龟棋</a>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码-1">参考代码</a></li>
-          </ul>
-        </li>
-        <li><a href="#p1091合唱队形">[P1091]合唱队形</a></li>
+        <li><a href="#题目描述-4">题目描述</a></li>
+        <li><a href="#参考代码-4">参考代码</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-2">题目描述</a></li>
-    <li><a href="#输入格式-2">输入格式</a></li>
-    <li><a href="#输出格式-2">输出格式</a></li>
-    <li><a href="#样例-1-2">样例 #1</a>
+    <li><a href="#p1868饥饿的奶牛">[P1868]饥饿的奶牛</a>
       <ul>
-        <li><a href="#样例输入-1-2">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-2">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-2">提示</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码-2">参考代码</a></li>
-          </ul>
-        </li>
-        <li><a href="#p1095守望者的逃离">[P1095]守望者的逃离</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目背景">题目背景</a></li>
-    <li><a href="#题目描述-3">题目描述</a></li>
-    <li><a href="#输入格式-3">输入格式</a></li>
-    <li><a href="#输出格式-3">输出格式</a></li>
-    <li><a href="#样例-1-3">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-3">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-3">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#样例-2">样例 #2</a>
-      <ul>
-        <li><a href="#样例输入-2">样例输入 #2</a></li>
-        <li><a href="#样例输出-2">样例输出 #2</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-3">提示</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码-3">参考代码</a></li>
-          </ul>
-        </li>
-        <li><a href="#p1541乌龟棋">[P1541]乌龟棋</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目背景-1">题目背景</a></li>
-    <li><a href="#题目描述-4">题目描述</a></li>
-    <li><a href="#输入格式-4">输入格式</a></li>
-    <li><a href="#输出格式-4">输出格式</a></li>
-    <li><a href="#样例-1-4">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-4">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-4">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-4">提示</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码-4">参考代码</a></li>
-          </ul>
-        </li>
-        <li><a href="#p1868饥饿的奶牛">[P1868]饥饿的奶牛</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-5">题目描述</a></li>
-    <li><a href="#输入格式-5">输入格式</a></li>
-    <li><a href="#输出格式-5">输出格式</a></li>
-    <li><a href="#样例-1-5">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-5">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-5">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-5">提示</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#参考代码-5">参考代码</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#p2679子串">[P2679]子串</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-6">题目描述</a></li>
-    <li><a href="#输入格式-6">输入格式</a></li>
-    <li><a href="#输出格式-6">输出格式</a></li>
-    <li><a href="#样例-1-6">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-6">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-6">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#样例-2-1">样例 #2</a>
-      <ul>
-        <li><a href="#样例输入-2-1">样例输入 #2</a></li>
-        <li><a href="#样例输出-2-1">样例输出 #2</a></li>
-      </ul>
-    </li>
-    <li><a href="#样例-3">样例 #3</a>
-      <ul>
-        <li><a href="#样例输入-3">样例输入 #3</a></li>
-        <li><a href="#样例输出-3">样例输出 #3</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-6">提示</a>
-      <ul>
-        <li><a href="#p2501数字序列">[P2501]数字序列</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-7">题目描述</a></li>
-    <li><a href="#输入格式-7">输入格式</a></li>
-    <li><a href="#输出格式-7">输出格式</a></li>
-    <li><a href="#样例-1-7">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-7">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-7">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-7">提示</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#数据规模与约定">数据规模与约定</a></li>
-          </ul>
-        </li>
-        <li><a href="#p3336话旧">[P3336]话旧</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-8">题目描述</a></li>
-    <li><a href="#输入格式-8">输入格式</a></li>
-    <li><a href="#输出格式-8">输出格式</a></li>
-    <li><a href="#样例-1-8">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-8">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-8">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#样例-2-2">样例 #2</a>
-      <ul>
-        <li><a href="#样例输入-2-2">样例输入 #2</a></li>
-        <li><a href="#样例输出-2-2">样例输出 #2</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-8">提示</a>
-      <ul>
-        <li><a href="#p3558baj-bytecomputer">[P3558]BAJ-Bytecomputer</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题面翻译">题面翻译</a></li>
-    <li><a href="#题目描述-9">题目描述</a></li>
-    <li><a href="#输入格式-9">输入格式</a></li>
-    <li><a href="#输出格式-9">输出格式</a></li>
-    <li><a href="#样例-1-9">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-9">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-9">样例输出 #1</a></li>
-        <li><a href="#p4158粉刷匠">[P4158]粉刷匠</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-10">题目描述</a></li>
-    <li><a href="#输入格式-10">输入格式</a></li>
-    <li><a href="#输出格式-10">输出格式</a></li>
-    <li><a href="#样例-1-10">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-10">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-10">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-9">提示</a>
-      <ul>
-        <li><a href="#p5301宝牌一大堆">[P5301]宝牌一大堆</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li><a href="#题目描述-11">题目描述</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#牌型">牌型</a></li>
-            <li><a href="#和牌">和牌</a></li>
-            <li><a href="#宝牌">宝牌</a></li>
-            <li><a href="#达成分数">达成分数</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#输入格式-11">输入格式</a></li>
-    <li><a href="#输出格式-11">输出格式</a></li>
-    <li><a href="#样例-1-11">样例 #1</a>
-      <ul>
-        <li><a href="#样例输入-1-11">样例输入 #1</a></li>
-        <li><a href="#样例输出-1-11">样例输出 #1</a></li>
-      </ul>
-    </li>
-    <li><a href="#提示-10">提示</a>
-      <ul>
-        <li><a href="#样例解释">样例解释</a></li>
-        <li><a href="#数据范围">数据范围</a></li>
+        <li><a href="#题目描述-5">题目描述</a></li>
+        <li><a href="#参考代码-5">参考代码</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
     </div><div class="content" id="content"><h2 id="线性动态规划" class="headerLink">
     <a href="#%e7%ba%bf%e6%80%a7%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" class="header-mark"></a>线性动态规划</h2><p><strong>线性动态规划，即具有线性阶段划分的动态规划。</strong></p>
-<h3 id="p1216数字三角形" class="headerLink">
-    <a href="#p1216%e6%95%b0%e5%ad%97%e4%b8%89%e8%a7%92%e5%bd%a2" class="header-mark"></a>[P1216]数字三角形</h3><blockquote>
-<h1 id="usaco15-ioi1994数字三角形-number-triangles" class="headerLink">
-    <a href="#usaco15-ioi1994%e6%95%b0%e5%ad%97%e4%b8%89%e8%a7%92%e5%bd%a2-number-triangles" class="header-mark"></a>[USACO1.5] [IOI1994]数字三角形 Number Triangles</h1><h2 id="题目描述" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" class="header-mark"></a>题目描述</h2><p>观察下面的数字金字塔。</p>
+<h2 id="p1216数字三角形" class="headerLink">
+    <a href="#p1216%e6%95%b0%e5%ad%97%e4%b8%89%e8%a7%92%e5%bd%a2" class="header-mark"></a>[P1216]数字三角形</h2><h3 id="题目描述" class="headerLink">
+    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" class="header-mark"></a>题目描述</h3><p>观察下面的数字金字塔。</p>
 <p>写一个程序来查找从最高点到底部任意处结束的路径，使路径经过数字的和最大。每一步可以走到左下方的点也可以到达右下方的点。</p>
 <p><figure><a class="lightgallery" href="https://cdn.luogu.com.cn/upload/image_hosting/95pzs0ne.png" title="img" data-thumbnail="https://cdn.luogu.com.cn/upload/image_hosting/95pzs0ne.png">
         <img
@@ -801,14 +302,14 @@
         >
     </a></figure></p>
 <p>在上面的样例中，从 $7 \to 3 \to 8 \to 7 \to 5$ 的路径产生了最大权值。</p>
-<h2 id="输入格式" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f" class="header-mark"></a>输入格式</h2><p>第一个行一个正整数 $r$ ,表示行的数目。</p>
+<p><strong>输入格式</strong></p>
+<p>第一个行一个正整数 $r$ ,表示行的数目。</p>
 <p>后面每行为这个数字金字塔特定行包含的整数。</p>
-<h2 id="输出格式" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f" class="header-mark"></a>输出格式</h2><p>单独的一行,包含那个可能得到的最大的和。</p>
-<h2 id="样例-1" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
+<p><strong>输出格式</strong></p>
+<p>单独的一行,包含那个可能得到的最大的和。</p>
+<p><strong>样例 #1</strong></p>
+<p>样例输入 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -826,8 +327,8 @@
 </span></span><span class="line"><span class="cl">4 5 2 6 5
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="样例输出-1" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
+</div><p>样例输出 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -835,15 +336,14 @@
 <pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">30
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="提示" class="headerLink">
-    <a href="#%e6%8f%90%e7%a4%ba" class="header-mark"></a>提示</h2><p>【数据范围】<br>
+</div><p><strong>提示</strong></p>
+<p>【数据范围】<br>
 对于 $100%$ 的数据，$1\le r \le 1000$，所有输入在 $[0,100]$ 范围内。</p>
 <p>题目翻译来自NOCOW。</p>
 <p>USACO Training Section 1.5</p>
 <p>IOI1994 Day1T1</p>
-</blockquote>
-<h4 id="参考代码" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
+<h3 id="参考代码" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -897,19 +397,17 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="p1020导弹拦截" class="headerLink">
-    <a href="#p1020%e5%af%bc%e5%bc%b9%e6%8b%a6%e6%88%aa" class="header-mark"></a>[P1020]导弹拦截</h3><blockquote>
-<h1 id="noip1999-普及组-导弹拦截" class="headerLink">
-    <a href="#noip1999-%e6%99%ae%e5%8f%8a%e7%bb%84-%e5%af%bc%e5%bc%b9%e6%8b%a6%e6%88%aa" class="header-mark"></a>[NOIP1999 普及组] 导弹拦截</h1><h2 id="题目描述-1" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-1" class="header-mark"></a>题目描述</h2><p>某国为了防御敌国的导弹袭击，发展出一种导弹拦截系统。但是这种导弹拦截系统有一个缺陷：虽然它的第一发炮弹能够到达任意的高度，但是以后每一发炮弹都不能高于前一发的高度。某天，雷达捕捉到敌国的导弹来袭。由于该系统还在试用阶段，所以只有一套系统，因此有可能不能拦截所有的导弹。</p>
+</div><h2 id="p1020导弹拦截" class="headerLink">
+    <a href="#p1020%e5%af%bc%e5%bc%b9%e6%8b%a6%e6%88%aa" class="header-mark"></a>[P1020]导弹拦截</h2><h3 id="题目描述-1" class="headerLink">
+    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-1" class="header-mark"></a>题目描述</h3><p>某国为了防御敌国的导弹袭击，发展出一种导弹拦截系统。但是这种导弹拦截系统有一个缺陷：虽然它的第一发炮弹能够到达任意的高度，但是以后每一发炮弹都不能高于前一发的高度。某天，雷达捕捉到敌国的导弹来袭。由于该系统还在试用阶段，所以只有一套系统，因此有可能不能拦截所有的导弹。</p>
 <p>输入导弹依次飞来的高度，计算这套系统最多能拦截多少导弹，如果要拦截所有导弹最少要配备多少套这种导弹拦截系统。</p>
-<h2 id="输入格式-1" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-1" class="header-mark"></a>输入格式</h2><p>一行，若干个整数，中间由空格隔开。</p>
-<h2 id="输出格式-1" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-1" class="header-mark"></a>输出格式</h2><p>两行，每行一个整数，第一个数字表示这套系统最多能拦截多少导弹，第二个数字表示如果要拦截所有导弹最少要配备多少套这种导弹拦截系统。</p>
-<h2 id="样例-1-1" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1-1" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1-1" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-1" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
+<p><strong>输入格式</strong></p>
+<p>一行，若干个整数，中间由空格隔开。</p>
+<p><strong>输出格式</strong></p>
+<p>两行，每行一个整数，第一个数字表示这套系统最多能拦截多少导弹，第二个数字表示如果要拦截所有导弹最少要配备多少套这种导弹拦截系统。</p>
+<p><strong>样例 #1</strong></p>
+<p>样例输入 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -917,8 +415,8 @@
 <pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">389 207 155 300 299 170 158 65
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="样例输出-1-1" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-1" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
+</div><p>样例输出 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -928,16 +426,15 @@
 </span></span><span class="line"><span class="cl">2
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="提示-1" class="headerLink">
-    <a href="#%e6%8f%90%e7%a4%ba-1" class="header-mark"></a>提示</h2><p>对于前 $50%$ 数据（NOIP 原题数据），满足导弹的个数不超过 $10^4$ 个。该部分数据总分共 $100$ 分。可使用$\mathcal O(n^2)$ 做法通过。<br>
+</div><p><strong>提示</strong></p>
+<p>对于前 $50%$ 数据（NOIP 原题数据），满足导弹的个数不超过 $10^4$ 个。该部分数据总分共 $100$ 分。可使用$\mathcal O(n^2)$ 做法通过。<br>
 对于后 $50%$ 的数据，满足导弹的个数不超过 $10^5$ 个。该部分数据总分也为 $100$ 分。请使用 $\mathcal O(n\log n)$ 做法通过。</p>
 <p>对于全部数据，满足导弹的高度为正整数，且不超过 $5\times 10^4$。</p>
 <p>此外本题开启 spj，每点两问，按问给分。</p>
 <hr>
 <p>$\text{upd 2022.8.24}$：新增加一组 Hack 数据。</p>
-</blockquote>
-<h4 id="参考代码-1" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
+<h3 id="参考代码-1" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1021,22 +518,20 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="p1091合唱队形" class="headerLink">
-    <a href="#p1091%e5%90%88%e5%94%b1%e9%98%9f%e5%bd%a2" class="header-mark"></a>[P1091]合唱队形</h3><blockquote>
-<h1 id="noip2004-提高组-合唱队形" class="headerLink">
-    <a href="#noip2004-%e6%8f%90%e9%ab%98%e7%bb%84-%e5%90%88%e5%94%b1%e9%98%9f%e5%bd%a2" class="header-mark"></a>[NOIP2004 提高组] 合唱队形</h1><h2 id="题目描述-2" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-2" class="header-mark"></a>题目描述</h2><p>$n$ 位同学站成一排，音乐老师要请其中的 $n-k$ 位同学出列，使得剩下的 $k$ 位同学排成合唱队形。</p>
+</div><h2 id="p1091合唱队形" class="headerLink">
+    <a href="#p1091%e5%90%88%e5%94%b1%e9%98%9f%e5%bd%a2" class="header-mark"></a>[P1091]合唱队形</h2><h3 id="题目描述-2" class="headerLink">
+    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-2" class="header-mark"></a>题目描述</h3><p>$n$ 位同学站成一排，音乐老师要请其中的 $n-k$ 位同学出列，使得剩下的 $k$ 位同学排成合唱队形。</p>
 <p>合唱队形是指这样的一种队形：设 $k$ 位同学从左到右依次编号为 $1,2,$ … $,k$，他们的身高分别为 $t_1,t_2,$ … $,t_k$，则他们的身高满足 $t_1&lt; \cdots &lt;t_i&gt;t_{i+1}&gt;$ … $&gt;t_k(1\le i\le k)$。</p>
 <p>你的任务是，已知所有 $n$ 位同学的身高，计算最少需要几位同学出列，可以使得剩下的同学排成合唱队形。</p>
-<h2 id="输入格式-2" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-2" class="header-mark"></a>输入格式</h2><p>共二行。</p>
+<p><strong>输入格式</strong></p>
+<p>共二行。</p>
 <p>第一行是一个整数 $n$（$2\le n\le100$），表示同学的总数。</p>
 <p>第二行有 $n$ 个整数，用空格分隔，第 $i$ 个整数 $t_i$（$130\le t_i\le230$）是第 $i$ 位同学的身高（厘米）。</p>
-<h2 id="输出格式-2" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-2" class="header-mark"></a>输出格式</h2><p>一个整数，最少需要几位同学出列。</p>
-<h2 id="样例-1-2" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1-2" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1-2" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-2" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
+<p><strong>输出格式</strong></p>
+<p>一个整数，最少需要几位同学出列。</p>
+<p><strong>样例 #1</strong></p>
+<p>样例输入 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -1046,8 +541,8 @@
 </span></span><span class="line"><span class="cl">186 186 150 200 160 130 197 220
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="样例输出-1-2" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-2" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
+</div><p>样例输出 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -1055,12 +550,11 @@
 <pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">4
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="提示-2" class="headerLink">
-    <a href="#%e6%8f%90%e7%a4%ba-2" class="header-mark"></a>提示</h2><p>对于 $50%$ 的数据，保证有 $n \le 20$。</p>
+</div><p><strong>提示</strong></p>
+<p>对于 $50%$ 的数据，保证有 $n \le 20$。</p>
 <p>对于全部的数据，保证有 $n \le 100$。</p>
-</blockquote>
-<h4 id="参考代码-2" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
+<h3 id="参考代码-2" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-2" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1162,26 +656,24 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="p1095守望者的逃离" class="headerLink">
-    <a href="#p1095%e5%ae%88%e6%9c%9b%e8%80%85%e7%9a%84%e9%80%83%e7%a6%bb" class="header-mark"></a>[P1095]守望者的逃离</h3><blockquote>
-<h1 id="noip2007-普及组-守望者的逃离" class="headerLink">
-    <a href="#noip2007-%e6%99%ae%e5%8f%8a%e7%bb%84-%e5%ae%88%e6%9c%9b%e8%80%85%e7%9a%84%e9%80%83%e7%a6%bb" class="header-mark"></a>[NOIP2007 普及组] 守望者的逃离</h1><h2 id="题目背景" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af" class="header-mark"></a>题目背景</h2><p>恶魔猎手尤迪安野心勃勃，他背叛了暗夜精灵，率领深藏在海底的娜迦族企图叛变。</p>
-<h2 id="题目描述-3" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-3" class="header-mark"></a>题目描述</h2><p>守望者在与尤迪安的交锋中遭遇了围杀，被困在一个荒芜的大岛上。</p>
+</div><h2 id="p1095守望者的逃离" class="headerLink">
+    <a href="#p1095%e5%ae%88%e6%9c%9b%e8%80%85%e7%9a%84%e9%80%83%e7%a6%bb" class="header-mark"></a>[P1095]守望者的逃离</h2><p><strong>题目背景</strong></p>
+<p>恶魔猎手尤迪安野心勃勃，他背叛了暗夜精灵，率领深藏在海底的娜迦族企图叛变。</p>
+<h3 id="题目描述-3" class="headerLink">
+    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-3" class="header-mark"></a>题目描述</h3><p>守望者在与尤迪安的交锋中遭遇了围杀，被困在一个荒芜的大岛上。</p>
 <p>为了杀死守望者，尤迪安开始对这个荒岛施咒，这座岛很快就会沉下去。到那时，岛上的所有人都会遇难。</p>
 <p>守望者的跑步速度为 $17m/s$，以这样的速度是无法逃离荒岛的。庆幸的是守望者拥有闪烁法术，可在 $1s$ 内移动 $60m$，不过每次使用闪烁法术都会消耗魔法值 $10$ 点。守望者的魔法值恢复的速度为 $4$ 点每秒，只有处在原地休息状态时才能恢复。</p>
 <p>现在已知守望者的魔法初值 $M$，他所在的初始位置与岛的出口之间的距离 $S$，岛沉没的时间 $T$。你的任务是写一个程序帮助守望者计算如何在最短的时间内逃离荒岛，若不能逃出，则输出守望者在剩下的时间内能走的最远距离。</p>
 <p>注意：守望者跑步、闪烁或休息活动均以秒为单位，且每次活动的持续时间为整数秒。距离的单位为米。</p>
-<h2 id="输入格式-3" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-3" class="header-mark"></a>输入格式</h2><p>输入数据共一行三个非负整数，分别表示 $M$，$S$，$T$。</p>
-<h2 id="输出格式-3" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-3" class="header-mark"></a>输出格式</h2><p>输出数据共两行。</p>
+<p><strong>输入格式</strong></p>
+<p>输入数据共一行三个非负整数，分别表示 $M$，$S$，$T$。</p>
+<p><strong>输出格式</strong></p>
+<p>输出数据共两行。</p>
 <p>第一行一个字符串 $\texttt{Yes}$ 或 $\texttt{No}$，即守望者是否能逃离荒岛。</p>
 <p>第二行包含一个整数。第一行为 $\texttt{Yes}$ 时表示守望者逃离荒岛的最短时间；第一行为 $\texttt{No}$ 时表示守望者能走的最远距离。</p>
-<h2 id="样例-1-3" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1-3" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1-3" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-3" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
+<p><strong>样例 #1</strong></p>
+<p>样例输入 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -1189,8 +681,8 @@
 <pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">39 200 4
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="样例输出-1-3" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-3" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
+</div><p>样例输出 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -1200,9 +692,9 @@
 </span></span><span class="line"><span class="cl">197
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="样例-2" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-2" class="header-mark"></a>样例 #2</h2><h3 id="样例输入-2" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-2" class="header-mark"></a>样例输入 #2</h3><div class="highlight"><div class="chroma">
+</div><p><strong>样例 #2</strong></p>
+<p>样例输入 #2</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -1210,8 +702,8 @@
 <pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">36 255 10
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="样例输出-2" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-2" class="header-mark"></a>样例输出 #2</h3><div class="highlight"><div class="chroma">
+</div><p>样例输出 #2</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -1221,13 +713,12 @@
 </span></span><span class="line"><span class="cl">6
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="提示-3" class="headerLink">
-    <a href="#%e6%8f%90%e7%a4%ba-3" class="header-mark"></a>提示</h2><p>对于 $30%$ 的数据，$1  \le  T   \le  10$，$ 1   \le   S   \le  100$；</p>
+</div><p><strong>提示</strong></p>
+<p>对于 $30%$ 的数据，$1  \le  T   \le  10$，$ 1   \le   S   \le  100$；</p>
 <p>对于 $50%$ 的数据，$1   \le  T   \le   10^3$，$ 1   \le  S  \le   10^4$；</p>
 <p>对于 $100%$ 的数据，$1   \le   T   \le   3\times  10^5$，$0   \le   M   \le   10^3$，$ 1   \le  S   \le   10^8$。</p>
-</blockquote>
-<h4 id="参考代码-3" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
+<h3 id="参考代码-3" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-3" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1283,28 +774,26 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="p1541乌龟棋" class="headerLink">
-    <a href="#p1541%e4%b9%8c%e9%be%9f%e6%a3%8b" class="header-mark"></a>[P1541]乌龟棋</h3><blockquote>
-<h1 id="noip2010-提高组-乌龟棋" class="headerLink">
-    <a href="#noip2010-%e6%8f%90%e9%ab%98%e7%bb%84-%e4%b9%8c%e9%be%9f%e6%a3%8b" class="header-mark"></a>[NOIP2010 提高组] 乌龟棋</h1><h2 id="题目背景-1" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e8%83%8c%e6%99%af-1" class="header-mark"></a>题目背景</h2><p>小明过生日的时候，爸爸送给他一副乌龟棋当作礼物。</p>
-<h2 id="题目描述-4" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-4" class="header-mark"></a>题目描述</h2><p>乌龟棋的棋盘是一行 $N$ 个格子，每个格子上一个分数（非负整数）。棋盘第 $1$ 格是唯一的起点，第 $N$ 格是终点，游戏要求玩家控制一个乌龟棋子从起点出发走到终点。</p>
+</div><h2 id="p1541乌龟棋" class="headerLink">
+    <a href="#p1541%e4%b9%8c%e9%be%9f%e6%a3%8b" class="header-mark"></a>[P1541]乌龟棋</h2><p><strong>题目背景</strong></p>
+<p>小明过生日的时候，爸爸送给他一副乌龟棋当作礼物。</p>
+<h3 id="题目描述-4" class="headerLink">
+    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-4" class="header-mark"></a>题目描述</h3><p>乌龟棋的棋盘是一行 $N$ 个格子，每个格子上一个分数（非负整数）。棋盘第 $1$ 格是唯一的起点，第 $N$ 格是终点，游戏要求玩家控制一个乌龟棋子从起点出发走到终点。</p>
 <p>乌龟棋中 $M$ 张爬行卡片，分成 $4$ 种不同的类型（$M$ 张卡片中不一定包含所有 $4$ 种类型的卡片，见样例），每种类型的卡片上分别标有 $1,2,3,4$ 四个数字之一，表示使用这种卡片后，乌龟棋子将向前爬行相应的格子数。游戏中，玩家每次需要从所有的爬行卡片中选择一张之前没有使用过的爬行卡片，控制乌龟棋子前进相应的格子数，每张卡片只能使用一次。</p>
 <p>游戏中，乌龟棋子自动获得起点格子的分数，并且在后续的爬行中每到达一个格子，就得到该格子相应的分数。玩家最终游戏得分就是乌龟棋子从起点到终点过程中到过的所有格子的分数总和。</p>
 <p>很明显，用不同的爬行卡片使用顺序会使得最终游戏的得分不同，小明想要找到一种卡片使用顺序使得最终游戏得分最多。</p>
 <p>现在，告诉你棋盘上每个格子的分数和所有的爬行卡片，你能告诉小明，他最多能得到多少分吗？</p>
-<h2 id="输入格式-4" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-4" class="header-mark"></a>输入格式</h2><p>每行中两个数之间用一个空格隔开。</p>
+<p><strong>输入格式</strong></p>
+<p>每行中两个数之间用一个空格隔开。</p>
 <p>第 $1$ 行 $2$ 个正整数 $N,M$，分别表示棋盘格子数和爬行卡片数。</p>
 <p>第 $2$ 行 $N$ 个非负整数，$a_1,a_2,…,a_N$，其中 $a_i$ 表示棋盘第 $i$ 个格子上的分数。</p>
 <p>第 $3$ 行 $M$ 个整数，$b_1,b_2,…,b_M$，表示 $M$ 张爬行卡片上的数字。</p>
 <p>输入数据保证到达终点时刚好用光$M$张爬行卡片。</p>
-<h2 id="输出格式-4" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-4" class="header-mark"></a>输出格式</h2><p>$1$ 个整数，表示小明最多能得到的分数。</p>
-<h2 id="样例-1-4" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1-4" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1-4" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-4" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
+<p><strong>输出格式</strong></p>
+<p>$1$ 个整数，表示小明最多能得到的分数。</p>
+<p><strong>样例 #1</strong></p>
+<p>样例输入 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -1316,8 +805,8 @@
 </span></span><span class="line"><span class="cl">1 3 1 2 1
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="样例输出-1-4" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-4" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
+</div><p>样例输出 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -1325,15 +814,14 @@
 <pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">73
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="提示-4" class="headerLink">
-    <a href="#%e6%8f%90%e7%a4%ba-4" class="header-mark"></a>提示</h2><p>每个测试点 1s。</p>
+</div><p><strong>提示</strong></p>
+<p>每个测试点 1s。</p>
 <p>小明使用爬行卡片顺序为 $1,1,3,1,2$，得到的分数为 $6+10+14+8+18+17=73$。注意，由于起点是 $1$，所以自动获得第 $1$ 格的分数 $6$。</p>
 <p>对于 $30%$ 的数据有 $1≤N≤30,1≤M≤12$。</p>
 <p>对于 $50%$ 的数据有 $1≤N≤120,1≤M≤50$，且 $4$ 种爬行卡片，每种卡片的张数不会超过 $20$。</p>
 <p>对于 $100%$ 的数据有 $1≤N≤350,1≤M≤120$，且 $4$ 种爬行卡片，每种卡片的张数不会超过 $40$；$0≤a_i≤100,1≤i≤N,1≤b_i≤4,1≤i≤M$。</p>
-</blockquote>
-<h4 id="参考代码-4" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-4" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
+<h3 id="参考代码-4" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-4" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1407,22 +895,20 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="p1868饥饿的奶牛" class="headerLink">
-    <a href="#p1868%e9%a5%a5%e9%a5%bf%e7%9a%84%e5%a5%b6%e7%89%9b" class="header-mark"></a>[P1868]饥饿的奶牛</h3><blockquote>
-<h1 id="饥饿的奶牛" class="headerLink">
-    <a href="#%e9%a5%a5%e9%a5%bf%e7%9a%84%e5%a5%b6%e7%89%9b" class="header-mark"></a>饥饿的奶牛</h1><h2 id="题目描述-5" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-5" class="header-mark"></a>题目描述</h2><p>有一条奶牛冲出了围栏，来到了一处圣地（对于奶牛来说），上面用牛语写着一段文字。</p>
+</div><h2 id="p1868饥饿的奶牛" class="headerLink">
+    <a href="#p1868%e9%a5%a5%e9%a5%bf%e7%9a%84%e5%a5%b6%e7%89%9b" class="header-mark"></a>[P1868]饥饿的奶牛</h2><h3 id="题目描述-5" class="headerLink">
+    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-5" class="header-mark"></a>题目描述</h3><p>有一条奶牛冲出了围栏，来到了一处圣地（对于奶牛来说），上面用牛语写着一段文字。</p>
 <p>现用汉语翻译为：</p>
 <p>有 $N$ 个区间，每个区间 $x,y$ 表示提供的 $x\sim y$ 共 $y-x+1$ 堆优质牧草。你可以选择任意区间但不能有重复的部分。</p>
 <p>对于奶牛来说，自然是吃的越多越好，然而奶牛智商有限，现在请你帮助他。</p>
-<h2 id="输入格式-5" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-5" class="header-mark"></a>输入格式</h2><p>第一行一个整数 $N$。</p>
+<p><strong>输入格式</strong></p>
+<p>第一行一个整数 $N$。</p>
 <p>接下来 $N$ 行，每行两个数 $x,y$，描述一个区间。</p>
-<h2 id="输出格式-5" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-5" class="header-mark"></a>输出格式</h2><p>输出最多能吃到的牧草堆数。</p>
-<h2 id="样例-1-5" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1-5" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1-5" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-5" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
+<p><strong>输出格式</strong></p>
+<p>输出最多能吃到的牧草堆数。</p>
+<p><strong>样例 #1</strong></p>
+<p>样例输入 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -1436,8 +922,8 @@
 </span></span><span class="line"><span class="cl">3 4
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="样例输出-1-5" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-5" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
+</div><p>样例输出 #1</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -1445,11 +931,10 @@
 <pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">5
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="提示-5" class="headerLink">
-    <a href="#%e6%8f%90%e7%a4%ba-5" class="header-mark"></a>提示</h2><p>$1 \leq n \leq 1.5 \times 10^5$，$0 \leq x \leq y \leq 3 \times 10^6$。</p>
-</blockquote>
-<h4 id="参考代码-5" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-5" class="header-mark"></a>参考代码</h4><div class="highlight"><div class="chroma">
+</div><p><strong>提示</strong></p>
+<p>$1 \leq n \leq 1.5 \times 10^5$，$0 \leq x \leq y \leq 3 \times 10^6$。</p>
+<h3 id="参考代码-5" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-5" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1501,498 +986,18 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="待完成部分" class="headerLink">
-    <a href="#%e5%be%85%e5%ae%8c%e6%88%90%e9%83%a8%e5%88%86" class="header-mark"></a><code>=======</code>待完成部分<code>=======</code></h1><h3 id="p2679子串" class="headerLink">
-    <a href="#p2679%e5%ad%90%e4%b8%b2" class="header-mark"></a>[P2679]子串</h3><blockquote>
-<h1 id="noip2015-提高组-子串" class="headerLink">
-    <a href="#noip2015-%e6%8f%90%e9%ab%98%e7%bb%84-%e5%ad%90%e4%b8%b2" class="header-mark"></a>[NOIP2015 提高组] 子串</h1><h2 id="题目描述-6" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-6" class="header-mark"></a>题目描述</h2><p>有两个仅包含小写英文字母的字符串 $A$ 和 $B$。</p>
-<p>现在要从字符串 $A$ 中取出 $k$ 个互不重叠的非空子串，然后把这 $k$ 个子串按照其在字符串 $A$ 中出现的顺序依次连接起来得到一个新的字符串。请问有多少种方案可以使得这个新串与字符串 $B$ 相等？</p>
-<p>注意：子串取出的位置不同也认为是不同的方案。</p>
-<h2 id="输入格式-6" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-6" class="header-mark"></a>输入格式</h2><p>第一行是三个正整数 $n,m,k$，分别表示字符串 $A$ 的长度，字符串 $B$ 的长度，以及问题描述中所提到的 $k$，每两个整数之间用一个空格隔开。</p>
-<p>第二行包含一个长度为 $n$ 的字符串，表示字符串 $A$。</p>
-<p>第三行包含一个长度为 $m$ 的字符串，表示字符串 $B$。</p>
-<h2 id="输出格式-6" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-6" class="header-mark"></a>输出格式</h2><p>一个整数，表示所求方案数。</p>
-<p>由于答案可能很大，所以这里要求输出答案对 $1000000007$ 取模的结果。</p>
-<h2 id="样例-1-6" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1-6" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1-6" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-6" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">6 3 1 
-</span></span><span class="line"><span class="cl">aabaab 
-</span></span><span class="line"><span class="cl">aab
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-6" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-6" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="样例-2-1" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-2-1" class="header-mark"></a>样例 #2</h2><h3 id="样例输入-2-1" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-2-1" class="header-mark"></a>样例输入 #2</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">6 3 2 
-</span></span><span class="line"><span class="cl">aabaab 
-</span></span><span class="line"><span class="cl">aab
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-2-1" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-2-1" class="header-mark"></a>样例输出 #2</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">7
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="样例-3" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-3" class="header-mark"></a>样例 #3</h2><h3 id="样例输入-3" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-3" class="header-mark"></a>样例输入 #3</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">6 3 3 
-</span></span><span class="line"><span class="cl">aabaab 
-</span></span><span class="line"><span class="cl">aab
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-3" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-3" class="header-mark"></a>样例输出 #3</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">7
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-6" class="headerLink">
-    <a href="#%e6%8f%90%e7%a4%ba-6" class="header-mark"></a>提示</h2><p><figure><a class="lightgallery" href="https://cdn.luogu.com.cn/upload/pic/1830.png" title="https://cdn.luogu.com.cn/upload/pic/1830.png" data-thumbnail="https://cdn.luogu.com.cn/upload/pic/1830.png">
-        <img
-            
-            loading="lazy"
-            src="https://cdn.luogu.com.cn/upload/pic/1830.png"
-            srcset="https://cdn.luogu.com.cn/upload/pic/1830.png, https://cdn.luogu.com.cn/upload/pic/1830.png 1.5x, https://cdn.luogu.com.cn/upload/pic/1830.png 2x"
-            
-            alt="https://cdn.luogu.com.cn/upload/pic/1830.png" 
-        >
-    </a></figure></p>
-<p>对于第 1 组数据:$1≤n≤500,1≤m≤50,k=1$;<br>
-对于第 2 组至第 3 组数据:$1≤n≤500,1≤m≤50,k=2$;<br>
-对于第 4 组至第 5 组数据:$1≤n≤500,1≤m≤50,k=m$;<br>
-对于第 1 组至第 7 组数据:$1≤n≤500,1≤m≤50,1≤k≤m$;<br>
-对于第 1 组至第 9 组数据:$1≤n≤1000,1≤m≤100,1≤k≤m$;<br>
-对于所有 10 组数据:$1≤n≤1000,1≤m≤200,1≤k≤m$。</p>
-</blockquote>
-<h3 id="p2501数字序列" class="headerLink">
-    <a href="#p2501%e6%95%b0%e5%ad%97%e5%ba%8f%e5%88%97" class="header-mark"></a>[P2501]数字序列</h3><blockquote>
-<h1 id="haoi2006-数字序列" class="headerLink">
-    <a href="#haoi2006-%e6%95%b0%e5%ad%97%e5%ba%8f%e5%88%97" class="header-mark"></a>[HAOI2006] 数字序列</h1><h2 id="题目描述-7" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-7" class="header-mark"></a>题目描述</h2><p>现在我们有一个长度为 $n$ 的整数序列 $a$。但是它太不好看了，于是我们希望把它变成一个单调严格上升的序列。但是不希望改变过多的数，也不希望改变的幅度太大。</p>
-<h2 id="输入格式-7" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-7" class="header-mark"></a>输入格式</h2><p>第一行是一个整数，表示序列长度 $n$。<br>
-第二行有 $n$ 个整数，第 $i$ 个整数表示序列的第 $i$ 项 $a_i$。</p>
-<h2 id="输出格式-7" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-7" class="header-mark"></a>输出格式</h2><p>第一行输出一个整数，表示最少需要改变多少个数。</p>
-<p>第二行输出一个整数，表示在改变的数最少的情况下，每个数改变的绝对值之和的最小值。</p>
-<h2 id="样例-1-7" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1-7" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1-7" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-7" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">4
-</span></span><span class="line"><span class="cl">5 2 3 5
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-7" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-7" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">1
-</span></span><span class="line"><span class="cl">4
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-7" class="headerLink">
-    <a href="#%e6%8f%90%e7%a4%ba-7" class="header-mark"></a>提示</h2><h4 id="数据规模与约定" class="headerLink">
-    <a href="#%e6%95%b0%e6%8d%ae%e8%a7%84%e6%a8%a1%e4%b8%8e%e7%ba%a6%e5%ae%9a" class="header-mark"></a>数据规模与约定</h4><ul>
-<li>对于 $90%$ 的数据，保证 $n \leq 6 \times 10^3$。</li>
-<li>对于 $100%$ 的数据，保证 $1 \leq n \leq 3.5 \times 10^4$，$1 \leq a_i \leq 10^5$。数据保证 $a_i$ 随机生成。</li>
-</ul>
-</blockquote>
-<h3 id="p3336话旧" class="headerLink">
-    <a href="#p3336%e8%af%9d%e6%97%a7" class="header-mark"></a>[P3336]话旧</h3><blockquote>
-<h1 id="zjoi2013-话旧" class="headerLink">
-    <a href="#zjoi2013-%e8%af%9d%e6%97%a7" class="header-mark"></a>[ZJOI2013] 话旧</h1><h2 id="题目描述-8" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-8" class="header-mark"></a>题目描述</h2><p>小林跟着银河队选手去了一趟宇宙比赛，耳濡目染，变得学术起来。回来后，他发现世界大变样了。比丘兽究级进化，成了凤凰兽；金先生因为发了一篇 paper，一跃成为教授，也成为了银河队选拔委员会成员。</p>
-<p>一日，小林与金教授聊天。金教授回忆起过去的岁月，那些年他学过的电路原理。他曾经对一种三角波很感兴趣，并且进行了一些探究。小林感到很好奇，于是金教授就将课题形式化地说了一遍。</p>
-<p>有一定义在 $[0,N]$ 的连续函数 $f(x)$，其中 $N$ 是整数，满足 $f(0)=f(N)=0$，它的所有极值点在整数处取到，且 $f(x)$ 的<strong>极小值</strong>均是 $0$。对于任意的 $0$ 到 $N-1$ 间的整数 $I$，$f(x)$ 在 $(I, I+1)$ 上是斜率为 $1$ 或 $-1$ 的一次函数。</p>
-<p>金先生研究的是，若他知道其中 $K$ 个整点的函数值，那么：</p>
-<ol>
-<li>有多少个函数满足条件？</li>
-<li>满足条件的函数中，$f(x)$ 的最大值，最大能是多少？</li>
-</ol>
-<p>小林思考了一下，便想出了很好的算法。那么作为经过多年训练的你呢？</p>
-<h2 id="输入格式-8" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-8" class="header-mark"></a>输入格式</h2><p>第一行包含两个用空格隔开的整数 $N,K$。接下来 $K$ 行，每行两个整数，表示 $x_i$ 和 $f(x_i)$。</p>
-<h2 id="输出格式-8" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-8" class="header-mark"></a>输出格式</h2><p>一行两个整数，分别对应两个问题的答案。考虑到第一问答案可能很大，你只要输出它除以 $19940417$ 的余数。</p>
-<h2 id="样例-1-8" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1-8" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1-8" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-8" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">2 0
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-8" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-8" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">1 1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="样例-2-2" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-2-2" class="header-mark"></a>样例 #2</h2><h3 id="样例输入-2-2" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-2-2" class="header-mark"></a>样例输入 #2</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">6 9
-</span></span><span class="line"><span class="cl">4 2
-</span></span><span class="line"><span class="cl">4 2
-</span></span><span class="line"><span class="cl">2 0
-</span></span><span class="line"><span class="cl">4 2
-</span></span><span class="line"><span class="cl">6 0
-</span></span><span class="line"><span class="cl">5 1
-</span></span><span class="line"><span class="cl">2 0
-</span></span><span class="line"><span class="cl">0 0
-</span></span><span class="line"><span class="cl">0 0
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-2-2" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-2-2" class="header-mark"></a>样例输出 #2</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">1 2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-8" class="headerLink">
-    <a href="#%e6%8f%90%e7%a4%ba-8" class="header-mark"></a>提示</h2><ul>
-<li>对于 $10%$ 的数据，$N \leq 10$。</li>
-<li>对于 $20%$ 的数据，$N \leq 50$。</li>
-<li>对于 $30%$ 的数据，$N \leq 100$，$K \leq 100$。</li>
-<li>对于 $50%$ 的数据，$N \leq 10^3$，$K \leq 10^3$。</li>
-<li>对于 $70%$ 的数据，$N \leq 10^5$。</li>
-<li>另有 $10%$ 的数据，$K=0$。</li>
-<li>对于 $100%$ 的数据，$ 0 \leq N \leq 10^9$，$0 \leq K \leq 10^6$。</li>
-</ul>
-</blockquote>
-<h3 id="p3558baj-bytecomputer" class="headerLink">
-    <a href="#p3558baj-bytecomputer" class="header-mark"></a>[P3558]BAJ-Bytecomputer</h3><blockquote>
-<h1 id="poi2013-baj-bytecomputer" class="headerLink">
-    <a href="#poi2013-baj-bytecomputer" class="header-mark"></a>[POI2013] BAJ-Bytecomputer</h1><h2 id="题面翻译" class="headerLink">
-    <a href="#%e9%a2%98%e9%9d%a2%e7%bf%bb%e8%af%91" class="header-mark"></a>题面翻译</h2><p>给定一个长度为 $n$ 的只包含 $-1,0,1$ 的数列 $a$，每次操作可以使 $a_i\gets a_i+a_{i-1}$，求最少操作次数使得序列单调不降。如果不可能通过该操作使得序列单调不降，请输出 <code>BRAK</code>。</p>
-<p>数据范围：$1\le n\le 10^6$。</p>
-<h2 id="题目描述-9" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-9" class="header-mark"></a>题目描述</h2><p>A sequence of  integers  from the set  is given.</p>
-<p>The bytecomputer is a device that allows the following operation on the sequence:</p>
-<p>incrementing  by  for any .</p>
-<p>There is no limit on the range of integers the bytecomputer can store, i.e., each  can (in principle) have arbitrarily small or large value.</p>
-<p>Program the bytecomputer so that it transforms the input sequence into a non-decreasing sequence (i.e., such that ) with the minimum number of operations.</p>
-<h2 id="输入格式-9" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-9" class="header-mark"></a>输入格式</h2><p>The first line of the standard input holds a single integer  (), the number of elements in the (bytecomputer&rsquo;s) input sequence.</p>
-<p>The second line contains  integers  () that are the successive elements of the (bytecomputer&rsquo;s) input sequence, separated by single spaces.</p>
-<p>In tests worth 24% of the total points it holds that , and in tests worth 48% of the total points it holds that .</p>
-<h2 id="输出格式-9" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-9" class="header-mark"></a>输出格式</h2><p>The first and only line of the standard output should give one integer, the minimum number of operations the bytecomputer has to perform to make its input sequence non-decreasing, of the single word BRAK (Polish for none) if obtaining such a sequence is impossible.</p>
-<h2 id="样例-1-9" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1-9" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1-9" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-9" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">6
-</span></span><span class="line"><span class="cl">-1 1 0 -1 0 1
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-9" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-9" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">3
-</span></span></code></pre></td></tr></table>
-</div>
-</div></blockquote>
-<h3 id="p4158粉刷匠" class="headerLink">
-    <a href="#p4158%e7%b2%89%e5%88%b7%e5%8c%a0" class="header-mark"></a>[P4158]粉刷匠</h3><blockquote>
-<h1 id="scoi2009-粉刷匠" class="headerLink">
-    <a href="#scoi2009-%e7%b2%89%e5%88%b7%e5%8c%a0" class="header-mark"></a>[SCOI2009] 粉刷匠</h1><h2 id="题目描述-10" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-10" class="header-mark"></a>题目描述</h2><p>windy 有 $N$ 条木板需要被粉刷。 每条木板被分为 $M$ 个格子。 每个格子要被刷成红色或蓝色。</p>
-<p>windy 每次粉刷，只能选择一条木板上一段连续的格子，然后涂上一种颜色。 每个格子最多只能被粉刷一次。</p>
-<p>如果 windy 只能粉刷 $T$ 次，他最多能正确粉刷多少格子？</p>
-<p>一个格子如果未被粉刷或者被粉刷错颜色，就算错误粉刷。</p>
-<h2 id="输入格式-10" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-10" class="header-mark"></a>输入格式</h2><p>第一行包含三个整数，$N,M,T$。</p>
-<p>接下来有 $N$ 行，每行一个长度为 $M$ 的字符串，<code>0</code> 表示红色，<code>1</code> 表示蓝色。</p>
-<h2 id="输出格式-10" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-10" class="header-mark"></a>输出格式</h2><p>包含一个整数，最多能正确粉刷的格子数。</p>
-<h2 id="样例-1-10" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1-10" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1-10" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-10" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">3 6 3
-</span></span><span class="line"><span class="cl">111111
-</span></span><span class="line"><span class="cl">000000
-</span></span><span class="line"><span class="cl">001100
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-10" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-10" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">16
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-9" class="headerLink">
-    <a href="#%e6%8f%90%e7%a4%ba-9" class="header-mark"></a>提示</h2><p>$30%$ 的数据，满足 $1 \le N,M \le 10,0 \le T \le 100$ 。</p>
-<p>$100%$ 的数据，满足 $1 \le N,M \le 50,0 \le T \le 2500$</p>
-</blockquote>
-<h3 id="p5301宝牌一大堆" class="headerLink">
-    <a href="#p5301%e5%ae%9d%e7%89%8c%e4%b8%80%e5%a4%a7%e5%a0%86" class="header-mark"></a>[P5301]宝牌一大堆</h3><blockquote>
-<h1 id="gxoigzoi2019-宝牌一大堆" class="headerLink">
-    <a href="#gxoigzoi2019-%e5%ae%9d%e7%89%8c%e4%b8%80%e5%a4%a7%e5%a0%86" class="header-mark"></a>[GXOI/GZOI2019] 宝牌一大堆</h1><h2 id="题目描述-11" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0-11" class="header-mark"></a>题目描述</h2><p>麻将是一种传统的博弈游戏，由 $4$ 名玩家参与，轮流摸牌、打牌。在竞技比赛中主要有国标麻将（中国）和立直麻将（日本）两大规则。本题采用一种特别的规则——「宝牌一大堆」规则。</p>
-<h4 id="牌型" class="headerLink">
-    <a href="#%e7%89%8c%e5%9e%8b" class="header-mark"></a>牌型</h4><p>一副麻将由 $136$ 张牌组成，其中包含 $34$ 种不同的牌，每种各有 $4$ 张。这 $34$ 种牌分别是：<br>
-一万到九万、一索到九索、一筒到九筒、东、南、西、北、中、白、发。</p>
-<p><figure><a class="lightgallery" href="https://cdn.luogu.com.cn/upload/pic/56677.png" title="doraippai1.png" data-thumbnail="https://cdn.luogu.com.cn/upload/pic/56677.png">
-        <img
-            
-            loading="lazy"
-            src="https://cdn.luogu.com.cn/upload/pic/56677.png"
-            srcset="https://cdn.luogu.com.cn/upload/pic/56677.png, https://cdn.luogu.com.cn/upload/pic/56677.png 1.5x, https://cdn.luogu.com.cn/upload/pic/56677.png 2x"
-            
-            alt="https://cdn.luogu.com.cn/upload/pic/56677.png" 
-        >
-    </a></figure></p>
-<p>它们可以组合成不同的牌型：</p>
-<ul>
-<li>顺子：$3$ 张数字连续的万，或 $3$ 张数字连续的索，或 $3$ 张数字连续的筒。</li>
-<li>刻子：$3$ 张完全一样的牌。</li>
-<li>杠子：$4$ 张完全一样的牌。</li>
-<li>雀头：$2$ 张完全一样的牌。</li>
-</ul>
-<p>其中顺子和刻子统称为面子。</p>
-<h4 id="和牌" class="headerLink">
-    <a href="#%e5%92%8c%e7%89%8c" class="header-mark"></a>和牌</h4><p>手牌（一名玩家持有的牌）宣告胜利的状况称为「和牌」。</p>
-<ul>
-<li>当玩家持有 $14$ 张牌，并且满足以下三个条件之一时，判定为「和牌」：
-<ol>
-<li>存在一种方案，使得这 $14$ 张牌可以分成 $4$ 组面子、$1$ 组雀头，简记为「$3 \times 4 + 2$」。</li>
-<li>存在一种方案，使得这 $14$ 张牌可以分成 $7$ 组<strong>不同的</strong>雀头，称为「七对子」。</li>
-<li>这 $14$ 张牌<strong>仅由</strong>一万、九万、一索、九索、一筒、九筒、东、南、西、北、中、白、发这 $13$ 种牌组成，并且这 $13$ 种牌<strong>每种至少有 $1$ 张</strong>，称为「国士无双」。</li>
-</ol>
-</li>
-<li>当玩家持有 $15$ 张牌，并且存在一种方案，使得这 $15$ 张牌可以分成 $1$ 组杠子、$3$ 组面子、$1$ 组雀头，判定为和牌。</li>
-<li>当玩家持有 $16$ 张牌，并且存在一种方案，使得这 $16$ 张牌可以分成 $2$ 组杠子、$2$ 组面子、$1$ 组雀头，判定为和牌。</li>
-<li>当玩家持有 $17$ 张牌，并且存在一种方案，使得这 $17$ 张牌可以分成 $3$ 组杠子、$1$ 组面子、$1$ 组雀头，判定为和牌。</li>
-<li>当玩家持有 $18$ 张牌，并且存在一种方案，使得这 $18$ 张牌可以分成 $4$ 组杠子、$1$ 组雀头，判定为和牌。</li>
-</ul>
-<h4 id="宝牌" class="headerLink">
-    <a href="#%e5%ae%9d%e7%89%8c" class="header-mark"></a>宝牌</h4><p>每局游戏还会指定若干张「宝牌」，和牌时，手牌中的每张宝牌会使收益翻一番（会在接下来详细介绍）。</p>
-<h4 id="达成分数" class="headerLink">
-    <a href="#%e8%be%be%e6%88%90%e5%88%86%e6%95%b0" class="header-mark"></a>达成分数</h4><p>由于可以「和牌」的手牌很多，可以给每种判定为「和牌」的手牌定义一个「达成分数」，这个分数等于从所有尚未打出的牌中选出若干张，能够组成该手牌的方法数，再乘上手牌中 $2$ 的「宝牌数」次方。<br>
-该分数综合考虑了和牌几率与和牌收益，理论上以分数较高的手牌为目标较好。</p>
-<p>例如下图手牌显然是可以「和牌」的，如果目前场上还剩 $3$ 张一万、$4$ 张九万，以及二到八万各 $2$ 张没有打出，宝牌为九万，那么下图手牌的「达成分数」就是 $C_3^3 C_4^3 C_2^2 (C_2^1)^6 2^3 = 2048$，其中 $C$ 表示组合数。</p>
-<p><figure><a class="lightgallery" href="https://cdn.luogu.com.cn/upload/pic/56678.png" title="doraippai2.png" data-thumbnail="https://cdn.luogu.com.cn/upload/pic/56678.png">
-        <img
-            
-            loading="lazy"
-            src="https://cdn.luogu.com.cn/upload/pic/56678.png"
-            srcset="https://cdn.luogu.com.cn/upload/pic/56678.png, https://cdn.luogu.com.cn/upload/pic/56678.png 1.5x, https://cdn.luogu.com.cn/upload/pic/56678.png 2x"
-            
-            alt="https://cdn.luogu.com.cn/upload/pic/56678.png" 
-        >
-    </a></figure></p>
-<p>特别地，「七对子」和牌的手牌，达成分数额外乘 $7$。「国士无双」和牌的手牌，达成分数额外乘 $13$。</p>
-<p>有一天，小 L，小 Y，小 I 和小 W 正在打麻将，路过的雪野和看到了所有已经打出的牌，但不知道任何一名玩家的手牌。也许你已经猜到了下面的剧情—
-—雪野和想知道在所有尚未打出的牌中，「达成分数」最高的可以「和牌」的手牌有多少分，但是她还要观看麻将比赛，所以这个问题就交给你了。</p>
-<h2 id="输入格式-11" class="headerLink">
-    <a href="#%e8%be%93%e5%85%a5%e6%a0%bc%e5%bc%8f-11" class="header-mark"></a>输入格式</h2><p>每个测试点包含多组数据，第一行是一个整数 $T$，表示数据组数。注意各组数据之间是互相独立的。</p>
-<p>每组数据包含两行，第一行给出场上已经打出的牌，第二行给出该局的所有宝牌。</p>
-<p>规定用 $\texttt{1m},\texttt{2m},\dots,\texttt{9m}$ 代表万，$\texttt{1p},\texttt{2p},\dots,\texttt{9p}$ 代表筒，$\texttt{1s},\texttt{2s},\dots,\texttt{9s}$ 代表索，$\texttt E,\texttt S,\texttt W,\texttt N$ 代表东、南、西、北，$\texttt Z,\texttt B,\texttt F$ 代表中、白、发，相邻两张牌之间用一个空格隔开，每行的末尾有一个单独的 $0$ 代表结束。</p>
-<h2 id="输出格式-11" class="headerLink">
-    <a href="#%e8%be%93%e5%87%ba%e6%a0%bc%e5%bc%8f-11" class="header-mark"></a>输出格式</h2><p>输出文件应包含 $T$ 行，对于每组数据，输出一个整数表示最高分数。</p>
-<h2 id="样例-1-11" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b-1-11" class="header-mark"></a>样例 #1</h2><h3 id="样例输入-1-11" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5-1-11" class="header-mark"></a>样例输入 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">2
-</span></span><span class="line"><span class="cl">0
-</span></span><span class="line"><span class="cl">0
-</span></span><span class="line"><span class="cl">7m 4p 2s 7s 6p 8s 7p 5s 9s 9s 1p 5m 9m 5s 4p 5s E 1p 6s 5p B 4m 6m W 6p 6s E 9s 5p 2s 8s 8p 4m 3s 9m 5p 3s 2s 6s 8s 8p 6p 5m 4s 3m 4s 5s 4s 6m 9s 6p N 5m 7s 4m 2m 2s 6s 3m 7p B B N 1m 3m B 8p F 7p 0
-</span></span><span class="line"><span class="cl">W 4p N 3m 2m B 9m 3p 1p 6p S 4s 5p 8s 4m 5s 2s 3s 0
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="样例输出-1-11" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba-1-11" class="header-mark"></a>样例输出 #1</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">1308622848
-</span></span><span class="line"><span class="cl">127401984
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="提示-10" class="headerLink">
-    <a href="#%e6%8f%90%e7%a4%ba-10" class="header-mark"></a>提示</h2><h3 id="样例解释" class="headerLink">
-    <a href="#%e6%a0%b7%e4%be%8b%e8%a7%a3%e9%87%8a" class="header-mark"></a>样例解释</h3><p>在第一组数据中，没有打出过任何牌，没有宝牌，和「国士无双」分数最高，为 $13 \times 6 \times 4^{12}$。<br>
-和「$3 \times 4 + 2$」和「七对子」的分数为 $100663296$ 和 $1959552$。</p>
-<p>在第二组数据中，和「$3 \times 4 + 2$」分数最高，为 $127401984$，可以得到该分数的手牌之一为「$\texttt{1m2m3m 7m8m9m 1p2p3p 3p4p5p SS}$」。<br>
-和「七对子」的分数为 $125411328$，不存在和「国士无双」的可能。</p>
-<h3 id="数据范围" class="headerLink">
-    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h3><p>保证已经打出的牌必定是合法的牌，且每种不超过 $4$ 张。宝牌不会重复给出。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">测试点编号</th>
-<th style="text-align:center">$T$ 的规模</th>
-<th style="text-align:center">已经打出的牌</th>
-<th style="text-align:center">宝牌数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">$1$</td>
-<td style="text-align:center">$T = 10$</td>
-<td style="text-align:center">无特殊限制</td>
-<td style="text-align:center">$\le 20$ 张</td>
-</tr>
-<tr>
-<td style="text-align:center">$2$</td>
-<td style="text-align:center">$T = 100$</td>
-<td style="text-align:center">至少包括所有数字为三到七的牌</td>
-<td style="text-align:center">$\le 20$ 张</td>
-</tr>
-<tr>
-<td style="text-align:center">$3$</td>
-<td style="text-align:center">$T = 500$</td>
-<td style="text-align:center">每种至少 $2$ 张</td>
-<td style="text-align:center">$\le 20$ 张</td>
-</tr>
-<tr>
-<td style="text-align:center">$4$</td>
-<td style="text-align:center">$T = 500$</td>
-<td style="text-align:center">每种至少 $3$ 张</td>
-<td style="text-align:center">$\le 20$ 张</td>
-</tr>
-<tr>
-<td style="text-align:center">$5$</td>
-<td style="text-align:center">$T = 500$</td>
-<td style="text-align:center">无特殊限制</td>
-<td style="text-align:center">$0$ 张</td>
-</tr>
-<tr>
-<td style="text-align:center">$6$</td>
-<td style="text-align:center">$T = 1,000$</td>
-<td style="text-align:center">无特殊限制</td>
-<td style="text-align:center">$0$ 张</td>
-</tr>
-<tr>
-<td style="text-align:center">$7$</td>
-<td style="text-align:center">$T = 1,000$</td>
-<td style="text-align:center">无特殊限制</td>
-<td style="text-align:center">$\le 20$ 张</td>
-</tr>
-<tr>
-<td style="text-align:center">$8$</td>
-<td style="text-align:center">$T = 1,500$</td>
-<td style="text-align:center">无特殊限制</td>
-<td style="text-align:center">$\le 20$ 张</td>
-</tr>
-<tr>
-<td style="text-align:center">$9$</td>
-<td style="text-align:center">$T = 2,000$</td>
-<td style="text-align:center">无特殊限制</td>
-<td style="text-align:center">$\le 20$ 张</td>
-</tr>
-<tr>
-<td style="text-align:center">$10$</td>
-<td style="text-align:center">$T = 2,500$</td>
-<td style="text-align:center">无特殊限制</td>
-<td style="text-align:center">$\le 20$ 张</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-</div>
+</div></div>
 
     
 
 
 <h2>相关内容</h2>
 <div class="related-container">
+    <div class="related-item-container">
+            <h2 class="related-title">
+                <a href="/posts/intervaldp/">刷题记录||区间动态规划</a>
+            </h2>
+        </div>
     <div class="related-item-container">
             <h2 class="related-title">
                 <a href="/posts/segtree_practice/">线段树专题练习</a>
@@ -2013,11 +1018,6 @@
                 <a href="/posts/nc24sd7/">2024牛客暑假多校训练营Day7||补题</a>
             </h2>
         </div>
-    <div class="related-item-container">
-            <h2 class="related-title">
-                <a href="/posts/nc24sd6/">2024牛客暑假多校训练营Day6||补题</a>
-            </h2>
-        </div>
     
 
 </div>
@@ -2026,7 +1026,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-08-20</span>
+                <span>更新于 2024-09-12</span>
             </div>
             <div class="post-info-license"></div>
         </div>
