@@ -12,7 +12,9 @@
     <pubDate>Wed, 11 Sep 2024 21:50:26 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/intervaldp/</guid>
-    <description><![CDATA[区间动态规划一般以区间作为动态规划的阶段。 [P1880]石子合并 题目描述在一个圆形操场的四周摆放 $N$ 堆石子，现要将石子有次序地合并成一堆，规定]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2024/09/21/66ee44837d8d9.jpg" referrerpolicy="no-referrer">
+            </div>区间动态规划一般以区间作为动态规划的阶段。 [P1880]石子合并 题目描述在一个圆形操场的四周摆放 $N$ 堆石子，现要将石子有次序地合并成一堆，规定]]></description>
 </item><item>
     <title>线段树专题练习</title>
     <link>http://localhost:1313/posts/segtree_practice/</link>
@@ -26,35 +28,45 @@
     <pubDate>Thu, 15 Aug 2024 18:45:46 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd10/</guid>
-    <description><![CDATA[A-Surrender to My Will 题意根据上票状态判断是否投降。4票及以上赞同投降则投降成功。 数据范围 $1\leq i \leq 5$ $1\leq j\leq i,S[j]\in\{Y,N\}$ 思路计数模拟即可。 代码 1 2 3 4 5 6 7 8 9 10 11 void solve() {]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2024/09/21/66ee44da04303.jpg" referrerpolicy="no-referrer">
+            </div>A-Surrender to My Will 题意根据上票状态判断是否投降。4票及以上赞同投降则投降成功。 数据范围 $1\leq i \leq 5$ $1\leq j\leq i,S[j]\in\{Y,N\}$ 思路计数模拟即可。 代码 1 2 3 4 5 6 7 8 9 10 11 void solve() {]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day8||补题</title>
     <link>http://localhost:1313/posts/nc24sd8/</link>
     <pubDate>Fri, 09 Aug 2024 00:26:32 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd8/</guid>
-    <description><![CDATA[A-Haitang and Game 题意给出一个数组，两人轮流，每次选择数组中的两个数，若这两个数的$gcd$不在当前的数组里，就将这两个数的$gcd$加入到数组中，不能]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2024/09/21/66ee44bb3e3fb.jpg" referrerpolicy="no-referrer">
+            </div>A-Haitang and Game 题意给出一个数组，两人轮流，每次选择数组中的两个数，若这两个数的$gcd$不在当前的数组里，就将这两个数的$gcd$加入到数组中，不能]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day7||补题</title>
     <link>http://localhost:1313/posts/nc24sd7/</link>
     <pubDate>Fri, 09 Aug 2024 00:26:24 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd7/</guid>
-    <description><![CDATA[I-Fight Against the Monster 题意使用机器对抗怪兽，一台机器有以下两种功能： 战斗：使怪兽血量减少1点，后技巧丧失所有功能 创造：需要$m$台机器同时使用，创造出$k]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2024/09/21/66ee4539036d2.jpg" referrerpolicy="no-referrer">
+            </div>I-Fight Against the Monster 题意使用机器对抗怪兽，一台机器有以下两种功能： 战斗：使怪兽血量减少1点，后技巧丧失所有功能 创造：需要$m$台机器同时使用，创造出$k]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day6||补题</title>
     <link>http://localhost:1313/posts/nc24sd6/</link>
     <pubDate>Mon, 05 Aug 2024 10:15:52 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd6/</guid>
-    <description><![CDATA[A-Cake 题意Oscar和Grammy玩游戏，第一阶段两人轮流在有根树上走，走到叶子停止，经过的边有两种，标0边或者标1边，记录走下的01串。设01]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2024/09/21/66ee44c98e60d.png" referrerpolicy="no-referrer">
+            </div>A-Cake 题意Oscar和Grammy玩游戏，第一阶段两人轮流在有根树上走，走到叶子停止，经过的边有两种，标0边或者标1边，记录走下的01串。设01]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day5||补题</title>
     <link>http://localhost:1313/posts/nc24sd5/</link>
     <pubDate>Wed, 31 Jul 2024 15:55:57 &#43;0800</pubDate><author>
         <name>DODOLA</name>
     </author><guid>http://localhost:1313/posts/nc24sd5/</guid>
-    <description><![CDATA[TODO]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2024/09/21/66ee459d33192.png" referrerpolicy="no-referrer">
+            </div>TODO]]></description>
 </item><item>
     <title>2024牛客暑假多校训练营Day4||补题</title>
     <link>http://localhost:1313/posts/nc24sd4/</link>
