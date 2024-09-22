@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>我们需要更多的鱼 - 分类 - Doごみ箱🪄</title>
+        <link>http://localhost:1313/categories/%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E6%9B%B4%E5%A4%9A%E7%9A%84%E9%B1%BC/</link>
+        <description>我们需要更多的鱼 - 分类 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 05 Jul 2024 23:11:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E6%9B%B4%E5%A4%9A%E7%9A%84%E9%B1%BC/" rel="self" type="application/rss+xml" /><item>
+    <title>Github Action实践</title>
+    <link>http://localhost:1313/posts/github_action/</link>
+    <pubDate>Fri, 05 Jul 2024 23:11:39 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/github_action/</guid>
+    <description><![CDATA[前言本篇记录利用github action实现自动化构建和部署的过程。 本站除了部署在github page上，还部署在本人的服务器上，懒惰的dd]]></description>
+</item><item>
+    <title>小机器人dodola，启动！</title>
+    <link>http://localhost:1313/posts/cq_bot/</link>
+    <pubDate>Wed, 06 Dec 2023 14:21:23 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/cq_bot/</guid>
+    <description><![CDATA[拥有一个自己的小机器人不是超酷的么😎 本部分将从0开始介绍一个qq机器人的制作以及部署到服务器。 0.环境一览 开发环境：Windows11 pyt]]></description>
+</item></channel>
+</rss>

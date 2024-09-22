@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>光标 - 标签 - Doごみ箱🪄</title>
+        <link>http://localhost:1313/tags/%E5%85%89%E6%A0%87/</link>
+        <description>光标 - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Tue, 19 Dec 2023 20:57:26 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%85%89%E6%A0%87/" rel="self" type="application/rss+xml" /><item>
+    <title>【网站美化】点击特效2</title>
+    <link>http://localhost:1313/posts/beautify_site_clickfollow/</link>
+    <pubDate>Tue, 19 Dec 2023 20:57:26 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/beautify_site_clickfollow/</guid>
+    <description><![CDATA[增加了一个鼠标追尾的效果 QwQ 添加文件的方式参考上一篇~指路这篇 js文件：pointerfollow.js js 原文件来源：Canva&rsquo;]]></description>
+</item></channel>
+</rss>

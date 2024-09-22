@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>CSAPP - 标签 - Doごみ箱🪄</title>
+        <link>http://localhost:1313/tags/csapp/</link>
+        <description>CSAPP - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 04 Jul 2024 20:49:31 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/csapp/" rel="self" type="application/rss+xml" /><item>
+    <title>CS-APP Datalab</title>
+    <link>http://localhost:1313/posts/datalab/</link>
+    <pubDate>Thu, 04 Jul 2024 20:49:31 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/datalab/</guid>
+    <description><![CDATA[0. before start实验需要的材料在这里：CSAPP Datalab CSAPP原书在线阅读 将datalab-handout.tar下载复制到计划用来实验的目录下]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>移动端 - 标签 - Doごみ箱🪄</title>
+        <link>http://localhost:1313/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/</link>
+        <description>移动端 - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 12 Jul 2024 02:04:49 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>【划水】Canacitor构建基于Vue/React的移动端应用</title>
+    <link>http://localhost:1313/posts/canacitor_init/</link>
+    <pubDate>Fri, 12 Jul 2024 02:04:49 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/canacitor_init/</guid>
+    <description><![CDATA[最近工作需要开发一个移动端应用，考虑到我们团队前端已经有Vue/React的开发经验，所以决定使用Canacitor来构建。 Canacito]]></description>
+</item></channel>
+</rss>

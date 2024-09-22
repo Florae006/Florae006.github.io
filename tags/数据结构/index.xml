@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数据结构 - 标签 - Doごみ箱🪄</title>
+        <link>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+        <description>数据结构 - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 16 Aug 2024 22:43:59 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="self" type="application/rss+xml" /><item>
+    <title>线段树专题练习</title>
+    <link>http://localhost:1313/posts/segtree_practice/</link>
+    <pubDate>Fri, 16 Aug 2024 22:43:59 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/segtree_practice/</guid>
+    <description><![CDATA[前言 痛定思痛练习线段树QAQ。 此篇包含尚未写完的题，事实上是一个TODO List。 TODO List Atlantis P5490 【模板】扫描线 &amp; 矩形面积并 - 洛谷 | 计算机科学教育新]]></description>
+</item><item>
+    <title>线段树讲义||寒假</title>
+    <link>http://localhost:1313/posts/segtreelecnote/</link>
+    <pubDate>Wed, 13 Mar 2024 13:29:07 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/segtreelecnote/</guid>
+    <description><![CDATA[线段树介绍 线段树是一棵二叉树，每个节点维护一个区间内$[l,r]$的信息 左子树区间维护$[l,\lfloor \frac{l+r}{2} \rfloor]$的信息，右子]]></description>
+</item><item>
+    <title>线段树模板</title>
+    <link>http://localhost:1313/posts/seg_tree/</link>
+    <pubDate>Sat, 06 Jan 2024 21:53:21 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://localhost:1313/posts/seg_tree/</guid>
+    <description><![CDATA[线段树(segment tree)线段树主要用于维护区间信息，与传统的树状数组相比，可以实现O(log n)的区间修改，还可以同时支持多种操作(]]></description>
+</item></channel>
+</rss>
