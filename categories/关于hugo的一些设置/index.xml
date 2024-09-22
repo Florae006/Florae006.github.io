@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>关于Hugo的一些设置 - 分类 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</link>
-        <description>关于Hugo的一些设置 - 分类 - Doごみ箱🪄</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/" rel="self" type="application/rss+xml" /><item>
-    <title>MutationObserver学习&#43;实践</title>
-    <link>http://dodolalorc.cn/posts/mutationobserver/</link>
-    <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid>
-    <description><![CDATA[<blockquote>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>关于Hugo的一些设置 - 分类 - Doごみ箱🪄</title><link>http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</link><description>关于Hugo的一些设置 - 分类 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor><webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 04 Jul 2024 16:31:24 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/" rel="self" type="application/rss+xml"/><item><title>MutationObserver学习+实践</title><link>http://dodolalorc.cn/posts/mutationobserver/</link><pubDate>Thu, 04 Jul 2024 16:31:24 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid><description><![CDATA[<blockquote>
 <p>一篇学习 MutationObserver 的文章</p>
 </blockquote>
 <h2 id="背景" class="headerLink">
@@ -40,43 +28,15 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>原本的思路就是简单的在页面加载完成后，获取所有的友链元素，然后给每个元素设置一个随机的背景颜色。但是这样的实现方式有一个问题，就是当友链数量较多的时候，会导致页面加载变慢，因为每次都要重新计算随机颜色，并且在等待本页面加载的时候，友链的背景颜色是白色的，这样会导致页面的视觉体验不好。</p>]]></description>
-</item><item>
-    <title>为twikoo添加图片功能</title>
-    <link>http://dodolalorc.cn/posts/twikoo_with_imgs/</link>
-    <pubDate>Wed, 29 May 2024 15:24:24 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/twikoo_with_imgs/</guid>
-    <description><![CDATA[<blockquote>
+</div><p>原本的思路就是简单的在页面加载完成后，获取所有的友链元素，然后给每个元素设置一个随机的背景颜色。但是这样的实现方式有一个问题，就是当友链数量较多的时候，会导致页面加载变慢，因为每次都要重新计算随机颜色，并且在等待本页面加载的时候，友链的背景颜色是白色的，这样会导致页面的视觉体验不好。</p>]]></description></item><item><title>为twikoo添加图片功能</title><link>http://dodolalorc.cn/posts/twikoo_with_imgs/</link><pubDate>Wed, 29 May 2024 15:24:24 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/twikoo_with_imgs/</guid><description><![CDATA[<blockquote>
 <p>一篇私有配置图床，给twikoo评论插件添加图片功能的文章。</p>
 </blockquote>
 <h2 id="背景" class="headerLink">
     <a href="#%e8%83%8c%e6%99%af" class="header-mark"></a>背景</h2><p>背景：最近回想起来本站的twikoo评论尚未配置过图床，所以此前评论区不能上传图片，这篇就记录一下twikoo官方推荐的lsky-pro私有部署图床。</p>
 <p>选用的图床是兰空图床👉<a href="https://github.com/lsky-org/lsky-pro" target="_blank" rel="noopener noreferrer">lsky-org/lsky-pro: ☁️兰空图床(Lsky Pro) - Your photo album on the cloud. (github.com)</a></p>
 <p>文档：<a href="https://docs.lsky.pro/" target="_blank" rel="noopener noreferrer">Lsky Pro</a></p>
-<p>服务器环境：</p>]]></description>
-</item><item>
-    <title>另一种为hugo渲染Mermaid绘图的方式</title>
-    <link>http://dodolalorc.cn/posts/mermaid_js_2/</link>
-    <pubDate>Sun, 10 Mar 2024 21:29:25 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mermaid_js_2/</guid>
-    <description><![CDATA[<p>最近研究英文的官方文档发现了HUGO官方给渲染<code>Mermaid</code>提供了思路（!原来Hugo可以支持这种渲染），此处做笔记记录，算作是另一种方式。</p>
-<p>上一篇指路：</p>]]></description>
-</item><item>
-    <title>【拓展Markdown】为hugo渲染Mermaid绘图</title>
-    <link>http://dodolalorc.cn/posts/mermaid_js/</link>
-    <pubDate>Sat, 23 Dec 2023 20:00:25 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mermaid_js/</guid>
-    <description><![CDATA[<p>今天打算转帖原来发过的一篇博文时，遇到了Markdown中嵌入的Mermaid无法正常显示的问题，Mermaid可以内嵌于Markdown中通过代码显示svg绘图，但是显然hugo本身不含，这篇记录如何调整hugo达到如下效果转换：</p>]]></description>
-</item><item>
-    <title>【拓展Markdown】为hugo渲染数学公式</title>
-    <link>http://dodolalorc.cn/posts/mathjax_js/</link>
-    <pubDate>Sat, 23 Dec 2023 19:16:50 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mathjax_js/</guid>
-    <description><![CDATA[<h3 id="效果" class="headerLink">
+<p>服务器环境：</p>]]></description></item><item><title>另一种为hugo渲染Mermaid绘图的方式</title><link>http://dodolalorc.cn/posts/mermaid_js_2/</link><pubDate>Sun, 10 Mar 2024 21:29:25 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mermaid_js_2/</guid><description><![CDATA[<p>最近研究英文的官方文档发现了HUGO官方给渲染<code>Mermaid</code>提供了思路（!原来Hugo可以支持这种渲染），此处做笔记记录，算作是另一种方式。</p>
+<p>上一篇指路：</p>]]></description></item><item><title>【拓展Markdown】为hugo渲染Mermaid绘图</title><link>http://dodolalorc.cn/posts/mermaid_js/</link><pubDate>Sat, 23 Dec 2023 20:00:25 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mermaid_js/</guid><description>&lt;p>今天打算转帖原来发过的一篇博文时，遇到了Markdown中嵌入的Mermaid无法正常显示的问题，Mermaid可以内嵌于Markdown中通过代码显示svg绘图，但是显然hugo本身不含，这篇记录如何调整hugo达到如下效果转换：&lt;/p></description></item><item><title>【拓展Markdown】为hugo渲染数学公式</title><link>http://dodolalorc.cn/posts/mathjax_js/</link><pubDate>Sat, 23 Dec 2023 19:16:50 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mathjax_js/</guid><description><![CDATA[<h3 id="效果" class="headerLink">
     <a href="#%e6%95%88%e6%9e%9c" class="header-mark"></a>效果</h3><p>解决了之前一直没有解决的一个小bug——我的hugo没有办法渲染Markdown里数学公式捏qwq
 现在成功从图1到图2了！</p>
 <table>
@@ -102,14 +62,7 @@
   </tbody>
 </table>
 <p>这里记录一下干了什么吧qwq</p>
-<p>数学公式与代码高亮不同，hugo本身不支持渲染数学公式，所以我们在前端新加一个html页面去处理这个渲染问题。</p>]]></description>
-</item><item>
-    <title>【网站美化】点击特效2</title>
-    <link>http://dodolalorc.cn/posts/beautify_site_clickfollow/</link>
-    <pubDate>Tue, 19 Dec 2023 20:57:26 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/beautify_site_clickfollow/</guid>
-    <description><![CDATA[<p>增加了一个鼠标追尾的效果 QwQ</p>
+<p>数学公式与代码高亮不同，hugo本身不支持渲染数学公式，所以我们在前端新加一个html页面去处理这个渲染问题。</p>]]></description></item><item><title>【网站美化】点击特效2</title><link>http://dodolalorc.cn/posts/beautify_site_clickfollow/</link><pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/beautify_site_clickfollow/</guid><description><![CDATA[<p>增加了一个鼠标追尾的效果 QwQ</p>
 <p>添加文件的方式参考上一篇~指路<a href="/posts/startsite/beautify_site_click/" rel="">这篇</a></p>
 <h1 id="js文件" class="headerLink">
     <a href="#js%e6%96%87%e4%bb%b6" class="header-mark"></a><code>js</code>文件：</h1><p><a href="/js/_extended/pointerfollow.js" rel="">pointerfollow.js</a></p>
@@ -264,26 +217,12 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div>]]></description>
-</item><item>
-    <title>【网站美化】点击特效</title>
-    <link>http://dodolalorc.cn/posts/beautify_site_click/</link>
-    <pubDate>Mon, 18 Dec 2023 14:12:39 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/beautify_site_click/</guid>
-    <description><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
+</div>]]></description></item><item><title>【网站美化】点击特效</title><link>http://dodolalorc.cn/posts/beautify_site_click/</link><pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/beautify_site_click/</guid><description><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
 <h1 id="添加js文件" class="headerLink">
     <a href="#%e6%b7%bb%e5%8a%a0js%e6%96%87%e4%bb%b6" class="header-mark"></a>添加js文件</h1><p>这次用到的两个js文件在这里：</p>
 <p><a href="/js/anime.min.js" rel="">anime.min.js</a></p>
 <p><a href="/js/fireworks.js" rel="">fireworks.js</a></p>
-<p>在<code>./static/</code>下新建一个<code>js</code>文件夹，文件夹下新建两个<code>js</code>文件，命名为<code>anime.min.js</code>和<code>fireworks.js</code>，然后将上面两个文件的内容粘贴进去。</p>]]></description>
-</item><item>
-    <title>【网站美化】标签美化</title>
-    <link>http://dodolalorc.cn/posts/beautify_site_tags/</link>
-    <pubDate>Wed, 13 Dec 2023 23:00:09 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/beautify_site_tags/</guid>
-    <description><![CDATA[<h2 id="简单设计" class="headerLink">
+<p>在<code>./static/</code>下新建一个<code>js</code>文件夹，文件夹下新建两个<code>js</code>文件，命名为<code>anime.min.js</code>和<code>fireworks.js</code>，然后将上面两个文件的内容粘贴进去。</p>]]></description></item><item><title>【网站美化】标签美化</title><link>http://dodolalorc.cn/posts/beautify_site_tags/</link><pubDate>Wed, 13 Dec 2023 23:00:09 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/beautify_site_tags/</guid><description><![CDATA[<h2 id="简单设计" class="headerLink">
     <a href="#%e7%ae%80%e5%8d%95%e8%ae%be%e8%ae%a1" class="header-mark"></a>简单设计</h2><p><code>assets/css/common/terms.css</code>添加：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -338,14 +277,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="字体大小按权重显示" class="headerLink">
-    <a href="#%e5%ad%97%e4%bd%93%e5%a4%a7%e5%b0%8f%e6%8c%89%e6%9d%83%e9%87%8d%e6%98%be%e7%a4%ba" class="header-mark"></a>字体大小按权重显示</h2><p><code>assets/css/common/terms.css</code>中设计：</p>]]></description>
-</item><item>
-    <title>第壹话|基本样式</title>
-    <link>http://dodolalorc.cn/posts/basic_setting/</link>
-    <pubDate>Thu, 30 Nov 2023 21:53:02 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/basic_setting/</guid>
-    <description><![CDATA[<p>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链</p>
+    <a href="#%e5%ad%97%e4%bd%93%e5%a4%a7%e5%b0%8f%e6%8c%89%e6%9d%83%e9%87%8d%e6%98%be%e7%a4%ba" class="header-mark"></a>字体大小按权重显示</h2><p><code>assets/css/common/terms.css</code>中设计：</p>]]></description></item><item><title>第壹话|基本样式</title><link>http://dodolalorc.cn/posts/basic_setting/</link><pubDate>Thu, 30 Nov 2023 21:53:02 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/basic_setting/</guid><description><![CDATA[<p>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链</p>
 <h3 id="基础设置" class="headerLink">
     <a href="#%e5%9f%ba%e7%a1%80%e8%ae%be%e7%bd%ae" class="header-mark"></a>基础设置</h3><p>参考：<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode" target="_blank" rel="noopener noreferrer">Features · adityatelange/hugo-PaperMod Wiki (github.com)</a></p>
 <p>我的初步设置一览：</p>
@@ -797,18 +729,9 @@
 </span></span><span class="line"><span class="cl"><span class="nx">disableInlineCSS</span> <span class="p">=</span> <span class="kc">true</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>呈现效果：</p>]]></description>
-</item><item>
-    <title>第零话|Hugo建站</title>
-    <link>http://dodolalorc.cn/posts/build_hugo/</link>
-    <pubDate>Wed, 29 Nov 2023 19:11:55 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/build_hugo/</guid>
-    <description><![CDATA[<p>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程</p>
+</div><p>呈现效果：</p>]]></description></item><item><title>第零话|Hugo建站</title><link>http://dodolalorc.cn/posts/build_hugo/</link><pubDate>Wed, 29 Nov 2023 19:11:55 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/build_hugo/</guid><description><![CDATA[<p>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程</p>
 <blockquote>
 <p>使用环境</p>
 <p>开发环境：Windows 11</p>
 <p>Hugo版本：Hugo v0.114.0</p>
-<p>Git版本： 2.43.0.windows.1</p>]]></description>
-</item></channel>
-</rss>
+<p>Git版本： 2.43.0.windows.1</p>]]></description></item></channel></rss>

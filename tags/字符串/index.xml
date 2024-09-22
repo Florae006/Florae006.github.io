@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>字符串 - 标签 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
-        <description>字符串 - 标签 - Doごみ箱🪄</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 05 Jan 2024 14:11:58 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="self" type="application/rss+xml" /><item>
-    <title>字符串匹配问题||前缀函数&#43;KMP&#43;字符串哈希</title>
-    <link>http://dodolalorc.cn/posts/string_match/</link>
-    <pubDate>Fri, 05 Jan 2024 14:11:58 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/string_match/</guid>
-    <description><![CDATA[<h2 id="字符串匹配算法" class="headerLink">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>字符串 - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link><description>字符串 - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor><webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 05 Jan 2024 14:11:58 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="self" type="application/rss+xml"/><item><title>字符串匹配问题||前缀函数+KMP+字符串哈希</title><link>http://dodolalorc.cn/posts/string_match/</link><pubDate>Fri, 05 Jan 2024 14:11:58 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/string_match/</guid><description><![CDATA[<h2 id="字符串匹配算法" class="headerLink">
     <a href="#%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8c%b9%e9%85%8d%e7%ae%97%e6%b3%95" class="header-mark"></a>字符串匹配算法</h2><h3 id="暴力做法bf" class="headerLink">
     <a href="#%e6%9a%b4%e5%8a%9b%e5%81%9a%e6%b3%95bf" class="header-mark"></a>暴力做法(BF)</h3><p>简称BF(Brute Force)算法。</p>
 <p>没什么好说的，就是看到描述直接能想到的朴素做法。</p>
@@ -46,6 +34,4 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>BF算法的时间复杂度不稳定。匹配成功时，最好为<code>O(n)</code>，最差为<code>O(mn)</code>；匹配失败时，最好为最好为<code>O(n)</code>，最差为<code>O(mn)</code>。平均时间复杂度为<code>O(n)</code>。</p>]]></description>
-</item></channel>
-</rss>
+</div><p>BF算法的时间复杂度不稳定。匹配成功时，最好为<code>O(n)</code>，最差为<code>O(mn)</code>；匹配失败时，最好为最好为<code>O(n)</code>，最差为<code>O(mn)</code>。平均时间复杂度为<code>O(n)</code>。</p>]]></description></item></channel></rss>

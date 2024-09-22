@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>2024寒假训练 - 标签 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/tags/2024%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83/</link>
-        <description>2024寒假训练 - 标签 - Doごみ箱🪄</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 26 Feb 2024 19:54:36 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/2024%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83/" rel="self" type="application/rss+xml" /><item>
-    <title>2024牛客寒假营6||补题</title>
-    <link>http://dodolalorc.cn/posts/nc24wd6/</link>
-    <pubDate>Mon, 26 Feb 2024 19:54:36 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/nc24wd6/</guid>
-    <description><![CDATA[<h2 id="a-宇宙的终结" class="headerLink">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>2024寒假训练 - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/2024%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83/</link><description>2024寒假训练 - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor><webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 26 Feb 2024 19:54:36 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/2024%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83/" rel="self" type="application/rss+xml"/><item><title>2024牛客寒假营6||补题</title><link>http://dodolalorc.cn/posts/nc24wd6/</link><pubDate>Mon, 26 Feb 2024 19:54:36 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24wd6/</guid><description><![CDATA[<h2 id="a-宇宙的终结" class="headerLink">
     <a href="#a-%e5%ae%87%e5%ae%99%e7%9a%84%e7%bb%88%e7%bb%93" class="header-mark"></a>A-宇宙的终结</h2><h3 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>在$[l,r]$中寻找某个恰好是三个不同素数的乘积的数，并输出任意一个合法答案即可。</p>
 <h4 id="数据范围" class="headerLink">
@@ -78,14 +66,7 @@
 </div>
 </div><h2 id="b-爱恨的纠葛" class="headerLink">
     <a href="#b-%e7%88%b1%e6%81%a8%e7%9a%84%e7%ba%a0%e8%91%9b" class="header-mark"></a>B-爱恨的纠葛</h2><h3 id="题意-1" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>定义两个等长数组的亲密值：$|a_i-b_i|(1\leq i\leq n)$的最小值。给定2个数组，可以任意排列$a$数组的元素顺序，输出一个亲密度最小的方案（数组$a$的操作结果）。</p>]]></description>
-</item><item>
-    <title>2024牛客寒假营4||补题</title>
-    <link>http://dodolalorc.cn/posts/nc24wd4/</link>
-    <pubDate>Mon, 26 Feb 2024 19:54:28 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/nc24wd4/</guid>
-    <description><![CDATA[<h2 id="a-柠檬可乐" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>定义两个等长数组的亲密值：$|a_i-b_i|(1\leq i\leq n)$的最小值。给定2个数组，可以任意排列$a$数组的元素顺序，输出一个亲密度最小的方案（数组$a$的操作结果）。</p>]]></description></item><item><title>2024牛客寒假营4||补题</title><link>http://dodolalorc.cn/posts/nc24wd4/</link><pubDate>Mon, 26 Feb 2024 19:54:28 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24wd4/</guid><description><![CDATA[<h2 id="a-柠檬可乐" class="headerLink">
     <a href="#a-%e6%9f%a0%e6%aa%ac%e5%8f%af%e4%b9%90" class="header-mark"></a>A-柠檬可乐</h2><h3 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>输入$a,b,k$，判断$a\ge k\times b$是否成立</p>
 <h4 id="数据范围" class="headerLink">
@@ -111,14 +92,7 @@
 </div>
 </div><h2 id="b-左右互博" class="headerLink">
     <a href="#b-%e5%b7%a6%e5%8f%b3%e4%ba%92%e5%8d%9a" class="header-mark"></a>B-左右互博</h2><h3 id="题意-1" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>有$n$堆石子，每次选择某堆石子，选一个整数$y(2\leq y\leq x)$，将石子分为$\lfloor \frac{x}{y} \rfloor$和$x-\lfloor \frac{x}{y} \rfloor$，直到某人不能操作时结束，不能操作者输。</p>]]></description>
-</item><item>
-    <title>2024牛客寒假营5||补题</title>
-    <link>http://dodolalorc.cn/posts/nc24wd5/</link>
-    <pubDate>Wed, 21 Feb 2024 20:07:25 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/nc24wd5/</guid>
-    <description><![CDATA[<h2 id="a-mutsumi的质数合数" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>有$n$堆石子，每次选择某堆石子，选一个整数$y(2\leq y\leq x)$，将石子分为$\lfloor \frac{x}{y} \rfloor$和$x-\lfloor \frac{x}{y} \rfloor$，直到某人不能操作时结束，不能操作者输。</p>]]></description></item><item><title>2024牛客寒假营5||补题</title><link>http://dodolalorc.cn/posts/nc24wd5/</link><pubDate>Wed, 21 Feb 2024 20:07:25 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24wd5/</guid><description><![CDATA[<h2 id="a-mutsumi的质数合数" class="headerLink">
     <a href="#a-mutsumi%e7%9a%84%e8%b4%a8%e6%95%b0%e5%90%88%e6%95%b0" class="header-mark"></a>A-mutsumi的质数合数</h2><h3 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>一个由$n$个正整数组成的数组，求其中质数和合数共有几个。</p>
 <h4 id="数据范围" class="headerLink">
@@ -228,14 +202,7 @@
 </div>
 </div><h2 id="e-soyorin的数组操作easy" class="headerLink">
     <a href="#e-soyorin%e7%9a%84%e6%95%b0%e7%bb%84%e6%93%8d%e4%bd%9ceasy" class="header-mark"></a>E-soyorin的数组操作（easy）</h2><h3 id="题意-2" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-2" class="header-mark"></a>题意</h3><p>有一个长为$n$的数组$a$</p>]]></description>
-</item><item>
-    <title>2024牛客寒假营3||补题</title>
-    <link>http://dodolalorc.cn/posts/nc24wd3/</link>
-    <pubDate>Tue, 13 Feb 2024 20:21:21 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/nc24wd3/</guid>
-    <description><![CDATA[<h2 id="a-智乃与瞩目狸猫幸运水母月宫龙虾" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-2" class="header-mark"></a>题意</h3><p>有一个长为$n$的数组$a$</p>]]></description></item><item><title>2024牛客寒假营3||补题</title><link>http://dodolalorc.cn/posts/nc24wd3/</link><pubDate>Tue, 13 Feb 2024 20:21:21 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24wd3/</guid><description><![CDATA[<h2 id="a-智乃与瞩目狸猫幸运水母月宫龙虾" class="headerLink">
     <a href="#a-%e6%99%ba%e4%b9%83%e4%b8%8e%e7%9e%a9%e7%9b%ae%e7%8b%b8%e7%8c%ab%e5%b9%b8%e8%bf%90%e6%b0%b4%e6%af%8d%e6%9c%88%e5%ae%ab%e9%be%99%e8%99%be" class="header-mark"></a>A-智乃与瞩目狸猫、幸运水母、月宫龙虾</h2><h3 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>在不考虑单词词性的前提下，只要求两个单词的首字母忽略大小写相同时就认为它们可能是一组ubuntu代号，请你编写程序判断给定的两个单词是否可能是一个ubuntu代号。</p>
 <h4 id="数据范围" class="headerLink">
@@ -274,14 +241,7 @@
 <h3 id="思路-1" class="headerLink">
     <a href="#%e6%80%9d%e8%b7%af-1" class="header-mark"></a>思路</h3><p>只有1个数时直接取走，先手赢。</p>
 <p>2个数时：奇偶/奇奇/偶偶，都是后手赢。</p>
-<p>3个数时：奇偶奇/偶奇偶/奇奇奇/偶偶偶，都是先手赢。</p>]]></description>
-</item><item>
-    <title>2024牛客寒假营2||补题</title>
-    <link>http://dodolalorc.cn/posts/nc24wd2/</link>
-    <pubDate>Fri, 09 Feb 2024 14:46:52 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/nc24wd2/</guid>
-    <description><![CDATA[<h2 id="a-tokitsukaze-and-bracelet" class="headerLink">
+<p>3个数时：奇偶奇/偶奇偶/奇奇奇/偶偶偶，都是先手赢。</p>]]></description></item><item><title>2024牛客寒假营2||补题</title><link>http://dodolalorc.cn/posts/nc24wd2/</link><pubDate>Fri, 09 Feb 2024 14:46:52 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24wd2/</guid><description><![CDATA[<h2 id="a-tokitsukaze-and-bracelet" class="headerLink">
     <a href="#a-tokitsukaze-and-bracelet" class="header-mark"></a>A-Tokitsukaze and Bracelet</h2><h3 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>根据手环的三个属性值判断手环的等级。</p>
 <ol>
@@ -289,14 +249,7 @@
 <li>对体力和精神来说，+0在${29,30,31,32}$里选择，+1在${34,36,38,40}$里选择，+2固定为45</li>
 </ol>
 <h4 id="数据范围" class="headerLink">
-    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><p>$n(1≤n≤100)$</p>]]></description>
-</item><item>
-    <title>2024牛客寒假营1||补题</title>
-    <link>http://dodolalorc.cn/posts/nc24wd1/</link>
-    <pubDate>Fri, 02 Feb 2024 20:30:40 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/nc24wd1/</guid>
-    <description><![CDATA[<h2 id="a-dfs搜索" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><p>$n(1≤n≤100)$</p>]]></description></item><item><title>2024牛客寒假营1||补题</title><link>http://dodolalorc.cn/posts/nc24wd1/</link><pubDate>Fri, 02 Feb 2024 20:30:40 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24wd1/</guid><description><![CDATA[<h2 id="a-dfs搜索" class="headerLink">
     <a href="#a-dfs%e6%90%9c%e7%b4%a2" class="header-mark"></a>A-DFS搜索</h2><h3 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>给一个字符串，判断其中是否包含<code>dfs</code>子序列和<code>DFS</code>子序列。</p>
 <h4 id="数据范围" class="headerLink">
@@ -363,6 +316,4 @@
     <a href="#b-%e5%85%b3%e9%b8%a1" class="header-mark"></a>B-关鸡</h2><h3 id="题意-1" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p><figure><a class="lightgallery" href="https://uploadfiles.nowcoder.com/images/20240121/0_1705849989132/3C73FD698696250B894A2646C4440896" title="img" data-thumbnail="https://uploadfiles.nowcoder.com/images/20240121/0_1705849989132/3C73FD698696250B894A2646C4440896">
         
-    </a></figure></p>]]></description>
-</item></channel>
-</rss>
+    </a></figure></p>]]></description></item></channel></rss>

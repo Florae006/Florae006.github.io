@@ -1,31 +1,5 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Hugo - 标签 - Doごみ箱🪄</title>
-        <link>http://dodolalorc.cn/tags/hugo/</link>
-        <description>Hugo - 标签 - Doごみ箱🪄</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sun, 10 Mar 2024 21:29:25 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/hugo/" rel="self" type="application/rss+xml" /><item>
-    <title>另一种为hugo渲染Mermaid绘图的方式</title>
-    <link>http://dodolalorc.cn/posts/mermaid_js_2/</link>
-    <pubDate>Sun, 10 Mar 2024 21:29:25 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mermaid_js_2/</guid>
-    <description><![CDATA[<p>最近研究英文的官方文档发现了HUGO官方给渲染<code>Mermaid</code>提供了思路（!原来Hugo可以支持这种渲染），此处做笔记记录，算作是另一种方式。</p>
-<p>上一篇指路：</p>]]></description>
-</item><item>
-    <title>【拓展Markdown】为hugo渲染Mermaid绘图</title>
-    <link>http://dodolalorc.cn/posts/mermaid_js/</link>
-    <pubDate>Sat, 23 Dec 2023 20:00:25 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mermaid_js/</guid>
-    <description><![CDATA[<p>今天打算转帖原来发过的一篇博文时，遇到了Markdown中嵌入的Mermaid无法正常显示的问题，Mermaid可以内嵌于Markdown中通过代码显示svg绘图，但是显然hugo本身不含，这篇记录如何调整hugo达到如下效果转换：</p>]]></description>
-</item><item>
-    <title>【拓展Markdown】为hugo渲染数学公式</title>
-    <link>http://dodolalorc.cn/posts/mathjax_js/</link>
-    <pubDate>Sat, 23 Dec 2023 19:16:50 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/mathjax_js/</guid>
-    <description><![CDATA[<h3 id="效果" class="headerLink">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Hugo - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/hugo/</link><description>Hugo - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor><webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sun, 10 Mar 2024 21:29:25 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>另一种为hugo渲染Mermaid绘图的方式</title><link>http://dodolalorc.cn/posts/mermaid_js_2/</link><pubDate>Sun, 10 Mar 2024 21:29:25 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mermaid_js_2/</guid><description><![CDATA[<p>最近研究英文的官方文档发现了HUGO官方给渲染<code>Mermaid</code>提供了思路（!原来Hugo可以支持这种渲染），此处做笔记记录，算作是另一种方式。</p>
+<p>上一篇指路：</p>]]></description></item><item><title>【拓展Markdown】为hugo渲染Mermaid绘图</title><link>http://dodolalorc.cn/posts/mermaid_js/</link><pubDate>Sat, 23 Dec 2023 20:00:25 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mermaid_js/</guid><description>&lt;p>今天打算转帖原来发过的一篇博文时，遇到了Markdown中嵌入的Mermaid无法正常显示的问题，Mermaid可以内嵌于Markdown中通过代码显示svg绘图，但是显然hugo本身不含，这篇记录如何调整hugo达到如下效果转换：&lt;/p></description></item><item><title>【拓展Markdown】为hugo渲染数学公式</title><link>http://dodolalorc.cn/posts/mathjax_js/</link><pubDate>Sat, 23 Dec 2023 19:16:50 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mathjax_js/</guid><description><![CDATA[<h3 id="效果" class="headerLink">
     <a href="#%e6%95%88%e6%9e%9c" class="header-mark"></a>效果</h3><p>解决了之前一直没有解决的一个小bug——我的hugo没有办法渲染Markdown里数学公式捏qwq
 现在成功从图1到图2了！</p>
 <table>
@@ -51,26 +25,12 @@
   </tbody>
 </table>
 <p>这里记录一下干了什么吧qwq</p>
-<p>数学公式与代码高亮不同，hugo本身不支持渲染数学公式，所以我们在前端新加一个html页面去处理这个渲染问题。</p>]]></description>
-</item><item>
-    <title>【网站美化】点击特效</title>
-    <link>http://dodolalorc.cn/posts/beautify_site_click/</link>
-    <pubDate>Mon, 18 Dec 2023 14:12:39 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/beautify_site_click/</guid>
-    <description><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
+<p>数学公式与代码高亮不同，hugo本身不支持渲染数学公式，所以我们在前端新加一个html页面去处理这个渲染问题。</p>]]></description></item><item><title>【网站美化】点击特效</title><link>http://dodolalorc.cn/posts/beautify_site_click/</link><pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/beautify_site_click/</guid><description><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
 <h1 id="添加js文件" class="headerLink">
     <a href="#%e6%b7%bb%e5%8a%a0js%e6%96%87%e4%bb%b6" class="header-mark"></a>添加js文件</h1><p>这次用到的两个js文件在这里：</p>
 <p><a href="/js/anime.min.js" rel="">anime.min.js</a></p>
 <p><a href="/js/fireworks.js" rel="">fireworks.js</a></p>
-<p>在<code>./static/</code>下新建一个<code>js</code>文件夹，文件夹下新建两个<code>js</code>文件，命名为<code>anime.min.js</code>和<code>fireworks.js</code>，然后将上面两个文件的内容粘贴进去。</p>]]></description>
-</item><item>
-    <title>第壹话|基本样式</title>
-    <link>http://dodolalorc.cn/posts/basic_setting/</link>
-    <pubDate>Thu, 30 Nov 2023 21:53:02 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/basic_setting/</guid>
-    <description><![CDATA[<p>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链</p>
+<p>在<code>./static/</code>下新建一个<code>js</code>文件夹，文件夹下新建两个<code>js</code>文件，命名为<code>anime.min.js</code>和<code>fireworks.js</code>，然后将上面两个文件的内容粘贴进去。</p>]]></description></item><item><title>第壹话|基本样式</title><link>http://dodolalorc.cn/posts/basic_setting/</link><pubDate>Thu, 30 Nov 2023 21:53:02 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/basic_setting/</guid><description><![CDATA[<p>这部分是2023/11/30更新的一些基础样式设置，包括到设置友链</p>
 <h3 id="基础设置" class="headerLink">
     <a href="#%e5%9f%ba%e7%a1%80%e8%ae%be%e7%bd%ae" class="header-mark"></a>基础设置</h3><p>参考：<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode" target="_blank" rel="noopener noreferrer">Features · adityatelange/hugo-PaperMod Wiki (github.com)</a></p>
 <p>我的初步设置一览：</p>
@@ -522,18 +482,9 @@
 </span></span><span class="line"><span class="cl"><span class="nx">disableInlineCSS</span> <span class="p">=</span> <span class="kc">true</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>呈现效果：</p>]]></description>
-</item><item>
-    <title>第零话|Hugo建站</title>
-    <link>http://dodolalorc.cn/posts/build_hugo/</link>
-    <pubDate>Wed, 29 Nov 2023 19:11:55 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://dodolalorc.cn/posts/build_hugo/</guid>
-    <description><![CDATA[<p>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程</p>
+</div><p>呈现效果：</p>]]></description></item><item><title>第零话|Hugo建站</title><link>http://dodolalorc.cn/posts/build_hugo/</link><pubDate>Wed, 29 Nov 2023 19:11:55 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/build_hugo/</guid><description><![CDATA[<p>这部分记录的是个人网站的初步构建以及成功渲染到个人github Page的过程</p>
 <blockquote>
 <p>使用环境</p>
 <p>开发环境：Windows 11</p>
 <p>Hugo版本：Hugo v0.114.0</p>
-<p>Git版本： 2.43.0.windows.1</p>]]></description>
-</item></channel>
-</rss>
+<p>Git版本： 2.43.0.windows.1</p>]]></description></item></channel></rss>
