@@ -1,4 +1,16 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>图论 - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/%E5%9B%BE%E8%AE%BA/</link><description>图论 - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor><webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 06 Jan 2024 14:15:17 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E5%9B%BE%E8%AE%BA/" rel="self" type="application/rss+xml"/><item><title>图论基础||存储图||DFS、BFS(图论)</title><link>http://dodolalorc.cn/posts/graph_basic/</link><pubDate>Sat, 06 Jan 2024 14:15:17 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/graph_basic/</guid><description><![CDATA[<h3 id="11图的定义" class="headerLink">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>图论 - 标签 - Doごみ箱🪄</title>
+        <link>http://dodolalorc.cn/tags/%E5%9B%BE%E8%AE%BA/</link>
+        <description>图论 - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 06 Jan 2024 14:15:17 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E5%9B%BE%E8%AE%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>图论基础||存储图||DFS、BFS(图论)</title>
+    <link>http://dodolalorc.cn/posts/graph_basic/</link>
+    <pubDate>Sat, 06 Jan 2024 14:15:17 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/graph_basic/</guid>
+    <description><![CDATA[<h3 id="11图的定义" class="headerLink">
     <a href="#11%e5%9b%be%e7%9a%84%e5%ae%9a%e4%b9%89" class="header-mark"></a>1.1图的定义</h3><p>上课讲过一大堆这里不再赘述，直接学习代码实现。</p>
 <h3 id="12图的存储" class="headerLink">
     <a href="#12%e5%9b%be%e7%9a%84%e5%ad%98%e5%82%a8" class="header-mark"></a>1.2图的存储</h3><p>例图展示：</p>
@@ -55,13 +67,29 @@ v8((v8))--11-->v3((v3))
 <li>对于稀疏图来说大部分是INF，空间利用效率也不高</li>
 </ul>
 <h4 id="前向星" class="headerLink">
-    <a href="#%e5%89%8d%e5%90%91%e6%98%9f" class="header-mark"></a>前向星</h4><p>前向星涉及排序，所以其时间复杂度和排序算法有关，一般情况下时间复杂度为<code>O(mlog m)</code>，空间上需要两个数组（记录边的边数组、记录各点在边数组中起始位置的head数组），空间复杂度为<code>O(m+n)</code></p>]]></description></item><item><title>拓扑排序</title><link>http://dodolalorc.cn/posts/topo/</link><pubDate>Fri, 05 Jan 2024 14:20:41 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/topo/</guid><description><![CDATA[<h2 id="拓扑排序" class="headerLink">
+    <a href="#%e5%89%8d%e5%90%91%e6%98%9f" class="header-mark"></a>前向星</h4><p>前向星涉及排序，所以其时间复杂度和排序算法有关，一般情况下时间复杂度为<code>O(mlog m)</code>，空间上需要两个数组（记录边的边数组、记录各点在边数组中起始位置的head数组），空间复杂度为<code>O(m+n)</code></p>]]></description>
+</item><item>
+    <title>拓扑排序</title>
+    <link>http://dodolalorc.cn/posts/topo/</link>
+    <pubDate>Fri, 05 Jan 2024 14:20:41 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/topo/</guid>
+    <description><![CDATA[<h2 id="拓扑排序" class="headerLink">
     <a href="#%e6%8b%93%e6%89%91%e6%8e%92%e5%ba%8f" class="header-mark"></a>拓扑排序</h2><p>前提：拓扑排序是对<u>有向无环图</u>来说的，无向图、有环图都不存在拓扑排序。</p>
 <p>拓扑排序是将图G中的所有顶点排成一个线性序列，使得对于任意一堆有边顶点&lt;u, v&gt;，在线性序列中，u都出现在v之前。</p>
-<p>拓扑排序可以反应某种方案是否是切实可行的。</p>]]></description></item><item><title>最短路问题（Dijkstra + SPFA + Floyd）</title><link>http://dodolalorc.cn/posts/shortest_path/</link><pubDate>Sat, 23 Dec 2023 16:08:47 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/shortest_path/</guid><description><![CDATA[<h3 id="思维先行" class="headerLink">
+<p>拓扑排序可以反应某种方案是否是切实可行的。</p>]]></description>
+</item><item>
+    <title>最短路问题（Dijkstra &#43; SPFA &#43; Floyd）</title>
+    <link>http://dodolalorc.cn/posts/shortest_path/</link>
+    <pubDate>Sat, 23 Dec 2023 16:08:47 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/shortest_path/</guid>
+    <description><![CDATA[<h3 id="思维先行" class="headerLink">
     <a href="#%e6%80%9d%e7%bb%b4%e5%85%88%e8%a1%8c" class="header-mark"></a>思维先行</h3><p>我们要找某点到某点的最短路径(记为点u到点v)，这样的路径只能从两种路径中选择——</p>
 <ol>
 <li>u和v之间有边连接时，存在边(u, v)，不存在的话可以视作这两点的距离无限大</li>
 <li>u和v可以通过某些点中转相连，这个(最短的)中转路径</li>
 </ol>
-<p>很明显，我们选最短路径肯定是在这两种路径当中选最短的来作为u和v的最短距离，而路径选择2又可以不断拆分，比如我们有<code>u -&gt; P -&gt; v</code>我们再去寻找这条路径的最短时，可以分为<code>u -&gt; P</code>最短+<code>P -&gt; v</code>最短，再去寻找中转点&hellip;而且每次取最小值最小的+最小的肯定得最小的（有一点贪心的感觉）。</p>]]></description></item></channel></rss>
+<p>很明显，我们选最短路径肯定是在这两种路径当中选最短的来作为u和v的最短距离，而路径选择2又可以不断拆分，比如我们有<code>u -&gt; P -&gt; v</code>我们再去寻找这条路径的最短时，可以分为<code>u -&gt; P</code>最短+<code>P -&gt; v</code>最短，再去寻找中转点&hellip;而且每次取最小值最小的+最小的肯定得最小的（有一点贪心的感觉）。</p>]]></description>
+</item></channel>
+</rss>

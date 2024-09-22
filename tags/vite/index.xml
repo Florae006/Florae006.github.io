@@ -1,4 +1,16 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Vite - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/vite/</link><description>Vite - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor><webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 23 Mar 2024 15:24:28 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/vite/" rel="self" type="application/rss+xml"/><item><title>Vue3封装一个SVG组件</title><link>http://dodolalorc.cn/posts/vue_svgicon/</link><pubDate>Sat, 23 Mar 2024 15:24:28 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/vue_svgicon/</guid><description><![CDATA[<h1 id="vue3vitesvg" class="headerLink">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Vite - 标签 - Doごみ箱🪄</title>
+        <link>http://dodolalorc.cn/tags/vite/</link>
+        <description>Vite - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/vite/" rel="self" type="application/rss+xml" /><item>
+    <title>Vue3封装一个SVG组件</title>
+    <link>http://dodolalorc.cn/posts/vue_svgicon/</link>
+    <pubDate>Sat, 23 Mar 2024 15:24:28 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/vue_svgicon/</guid>
+    <description><![CDATA[<h1 id="vue3vitesvg" class="headerLink">
     <a href="#vue3vitesvg" class="header-mark"></a><code>Vue3+Vite+Svg</code></h1><p>以前使用<code>Svg</code>的时候会图简单直接将内容巨长的<code>Svg</code>代码粘贴在项目中，结果导致需要用<code>Svg</code>图标的部分代码巨长，今天写项目又需要使用<code>Svg</code>了，于是想着对其进行封装。</p>
 <h2 id="插件安装" class="headerLink">
     <a href="#%e6%8f%92%e4%bb%b6%e5%ae%89%e8%a3%85" class="header-mark"></a>插件安装</h2><p>使用<code>vite-plugin-svg-icons</code>插件。</p>
@@ -59,7 +71,14 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="封装svgicon组件" class="headerLink">
-    <a href="#%e5%b0%81%e8%a3%85svgicon%e7%bb%84%e4%bb%b6" class="header-mark"></a>封装<code>SvgIcon</code>组件</h3><p>在<code>src/components/</code>新建<code>SvgIcon</code>文件夹，在其中新建<code>index.vue</code>，内容：</p>]]></description></item><item><title>一个Vue项目的基础模板||PC端+移动端适配</title><link>http://dodolalorc.cn/posts/vuemod/</link><pubDate>Sun, 10 Mar 2024 17:14:08 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/vuemod/</guid><description><![CDATA[<h2 id="创建项目" class="headerLink">
+    <a href="#%e5%b0%81%e8%a3%85svgicon%e7%bb%84%e4%bb%b6" class="header-mark"></a>封装<code>SvgIcon</code>组件</h3><p>在<code>src/components/</code>新建<code>SvgIcon</code>文件夹，在其中新建<code>index.vue</code>，内容：</p>]]></description>
+</item><item>
+    <title>一个Vue项目的基础模板||PC端&#43;移动端适配</title>
+    <link>http://dodolalorc.cn/posts/vuemod/</link>
+    <pubDate>Sun, 10 Mar 2024 17:14:08 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/vuemod/</guid>
+    <description><![CDATA[<h2 id="创建项目" class="headerLink">
     <a href="#%e5%88%9b%e5%bb%ba%e9%a1%b9%e7%9b%ae" class="header-mark"></a>创建项目</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -127,4 +146,6 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="path模板代理" class="headerLink">
-    <a href="#path%e6%a8%a1%e6%9d%bf%e4%bb%a3%e7%90%86" class="header-mark"></a>path模板+代理</h2><p>在<code>vite.config.ts</code>中，设置<code>@</code>指向<code>src</code>、服务器启动端口、打包路径、代理等等设置</p>]]></description></item></channel></rss>
+    <a href="#path%e6%a8%a1%e6%9d%bf%e4%bb%a3%e7%90%86" class="header-mark"></a>path模板+代理</h2><p>在<code>vite.config.ts</code>中，设置<code>@</code>指向<code>src</code>、服务器启动端口、打包路径、代理等等设置</p>]]></description>
+</item></channel>
+</rss>

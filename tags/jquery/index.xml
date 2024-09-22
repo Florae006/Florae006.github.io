@@ -1,4 +1,16 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>JQuery - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/jquery/</link><description>JQuery - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor><webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 01 Dec 2023 13:10:27 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/jquery/" rel="self" type="application/rss+xml"/><item><title>哆哆啦のjQuery学习笔记（超细）（23.07.28）</title><link>http://dodolalorc.cn/posts/jquery_notes/</link><pubDate>Fri, 01 Dec 2023 13:10:27 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/jquery_notes/</guid><description><![CDATA[<h2 id="1-jquery对象" class="headerLink">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JQuery - 标签 - Doごみ箱🪄</title>
+        <link>http://dodolalorc.cn/tags/jquery/</link>
+        <description>JQuery - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 01 Dec 2023 13:10:27 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/jquery/" rel="self" type="application/rss+xml" /><item>
+    <title>哆哆啦のjQuery学习笔记（超细）（23.07.28）</title>
+    <link>http://dodolalorc.cn/posts/jquery_notes/</link>
+    <pubDate>Fri, 01 Dec 2023 13:10:27 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/jquery_notes/</guid>
+    <description><![CDATA[<h2 id="1-jquery对象" class="headerLink">
     <a href="#1-jquery%e5%af%b9%e8%b1%a1" class="header-mark"></a>1. jQuery对象</h2><h3 id="jquery使用" class="headerLink">
     <a href="#jquery%e4%bd%bf%e7%94%a8" class="header-mark"></a>jQuery使用</h3><h3 id="dom对象和jquery包装集对象" class="headerLink">
     <a href="#dom%e5%af%b9%e8%b1%a1%e5%92%8cjquery%e5%8c%85%e8%a3%85%e9%9b%86%e5%af%b9%e8%b1%a1" class="header-mark"></a>Dom对象和jQuery包装集对象</h3><p>学习代码：</p>
@@ -146,4 +158,6 @@
 </div>
 </div><h2 id="2-jquery选择器" class="headerLink">
     <a href="#2-jquery%e9%80%89%e6%8b%a9%e5%99%a8" class="header-mark"></a>2. jQuery选择器</h2><h3 id="21-基础选择器" class="headerLink">
-    <a href="#21-%e5%9f%ba%e7%a1%80%e9%80%89%e6%8b%a9%e5%99%a8" class="header-mark"></a>2.1 基础选择器</h3><p>学习代码：</p>]]></description></item></channel></rss>
+    <a href="#21-%e5%9f%ba%e7%a1%80%e9%80%89%e6%8b%a9%e5%99%a8" class="header-mark"></a>2.1 基础选择器</h3><p>学习代码：</p>]]></description>
+</item></channel>
+</rss>

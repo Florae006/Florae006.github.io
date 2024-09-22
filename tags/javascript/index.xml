@@ -1,4 +1,16 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>JavaScript - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/javascript/</link><description>JavaScript - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor><webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 04 Jul 2024 16:31:24 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/javascript/" rel="self" type="application/rss+xml"/><item><title>MutationObserver学习+实践</title><link>http://dodolalorc.cn/posts/mutationobserver/</link><pubDate>Thu, 04 Jul 2024 16:31:24 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid><description><![CDATA[<blockquote>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JavaScript - 标签 - Doごみ箱🪄</title>
+        <link>http://dodolalorc.cn/tags/javascript/</link>
+        <description>JavaScript - 标签 - Doごみ箱🪄</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
+            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+    <title>MutationObserver学习&#43;实践</title>
+    <link>http://dodolalorc.cn/posts/mutationobserver/</link>
+    <pubDate>Thu, 04 Jul 2024 16:31:24 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid>
+    <description><![CDATA[<blockquote>
 <p>一篇学习 MutationObserver 的文章</p>
 </blockquote>
 <h2 id="背景" class="headerLink">
@@ -28,7 +40,14 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>原本的思路就是简单的在页面加载完成后，获取所有的友链元素，然后给每个元素设置一个随机的背景颜色。但是这样的实现方式有一个问题，就是当友链数量较多的时候，会导致页面加载变慢，因为每次都要重新计算随机颜色，并且在等待本页面加载的时候，友链的背景颜色是白色的，这样会导致页面的视觉体验不好。</p>]]></description></item><item><title>一个Vue项目的基础模板||PC端+移动端适配</title><link>http://dodolalorc.cn/posts/vuemod/</link><pubDate>Sun, 10 Mar 2024 17:14:08 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/vuemod/</guid><description><![CDATA[<h2 id="创建项目" class="headerLink">
+</div><p>原本的思路就是简单的在页面加载完成后，获取所有的友链元素，然后给每个元素设置一个随机的背景颜色。但是这样的实现方式有一个问题，就是当友链数量较多的时候，会导致页面加载变慢，因为每次都要重新计算随机颜色，并且在等待本页面加载的时候，友链的背景颜色是白色的，这样会导致页面的视觉体验不好。</p>]]></description>
+</item><item>
+    <title>一个Vue项目的基础模板||PC端&#43;移动端适配</title>
+    <link>http://dodolalorc.cn/posts/vuemod/</link>
+    <pubDate>Sun, 10 Mar 2024 17:14:08 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/vuemod/</guid>
+    <description><![CDATA[<h2 id="创建项目" class="headerLink">
     <a href="#%e5%88%9b%e5%bb%ba%e9%a1%b9%e7%9b%ae" class="header-mark"></a>创建项目</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -96,7 +115,14 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="path模板代理" class="headerLink">
-    <a href="#path%e6%a8%a1%e6%9d%bf%e4%bb%a3%e7%90%86" class="header-mark"></a>path模板+代理</h2><p>在<code>vite.config.ts</code>中，设置<code>@</code>指向<code>src</code>、服务器启动端口、打包路径、代理等等设置</p>]]></description></item><item><title>【网站美化】点击特效2</title><link>http://dodolalorc.cn/posts/beautify_site_clickfollow/</link><pubDate>Tue, 19 Dec 2023 20:57:26 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/beautify_site_clickfollow/</guid><description><![CDATA[<p>增加了一个鼠标追尾的效果 QwQ</p>
+    <a href="#path%e6%a8%a1%e6%9d%bf%e4%bb%a3%e7%90%86" class="header-mark"></a>path模板+代理</h2><p>在<code>vite.config.ts</code>中，设置<code>@</code>指向<code>src</code>、服务器启动端口、打包路径、代理等等设置</p>]]></description>
+</item><item>
+    <title>【网站美化】点击特效2</title>
+    <link>http://dodolalorc.cn/posts/beautify_site_clickfollow/</link>
+    <pubDate>Tue, 19 Dec 2023 20:57:26 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/beautify_site_clickfollow/</guid>
+    <description><![CDATA[<p>增加了一个鼠标追尾的效果 QwQ</p>
 <p>添加文件的方式参考上一篇~指路<a href="/posts/startsite/beautify_site_click/" rel="">这篇</a></p>
 <h1 id="js文件" class="headerLink">
     <a href="#js%e6%96%87%e4%bb%b6" class="header-mark"></a><code>js</code>文件：</h1><p><a href="/js/_extended/pointerfollow.js" rel="">pointerfollow.js</a></p>
@@ -251,12 +277,26 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div>]]></description></item><item><title>【网站美化】点击特效</title><link>http://dodolalorc.cn/posts/beautify_site_click/</link><pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/beautify_site_click/</guid><description><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
+</div>]]></description>
+</item><item>
+    <title>【网站美化】点击特效</title>
+    <link>http://dodolalorc.cn/posts/beautify_site_click/</link>
+    <pubDate>Mon, 18 Dec 2023 14:12:39 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/beautify_site_click/</guid>
+    <description><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
 <h1 id="添加js文件" class="headerLink">
     <a href="#%e6%b7%bb%e5%8a%a0js%e6%96%87%e4%bb%b6" class="header-mark"></a>添加js文件</h1><p>这次用到的两个js文件在这里：</p>
 <p><a href="/js/anime.min.js" rel="">anime.min.js</a></p>
 <p><a href="/js/fireworks.js" rel="">fireworks.js</a></p>
-<p>在<code>./static/</code>下新建一个<code>js</code>文件夹，文件夹下新建两个<code>js</code>文件，命名为<code>anime.min.js</code>和<code>fireworks.js</code>，然后将上面两个文件的内容粘贴进去。</p>]]></description></item><item><title>哆哆啦のjQuery学习笔记（超细）（23.07.28）</title><link>http://dodolalorc.cn/posts/jquery_notes/</link><pubDate>Fri, 01 Dec 2023 13:10:27 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/jquery_notes/</guid><description><![CDATA[<h2 id="1-jquery对象" class="headerLink">
+<p>在<code>./static/</code>下新建一个<code>js</code>文件夹，文件夹下新建两个<code>js</code>文件，命名为<code>anime.min.js</code>和<code>fireworks.js</code>，然后将上面两个文件的内容粘贴进去。</p>]]></description>
+</item><item>
+    <title>哆哆啦のjQuery学习笔记（超细）（23.07.28）</title>
+    <link>http://dodolalorc.cn/posts/jquery_notes/</link>
+    <pubDate>Fri, 01 Dec 2023 13:10:27 &#43;0800</pubDate><author>
+        <name>DODOLA</name>
+    </author><guid>http://dodolalorc.cn/posts/jquery_notes/</guid>
+    <description><![CDATA[<h2 id="1-jquery对象" class="headerLink">
     <a href="#1-jquery%e5%af%b9%e8%b1%a1" class="header-mark"></a>1. jQuery对象</h2><h3 id="jquery使用" class="headerLink">
     <a href="#jquery%e4%bd%bf%e7%94%a8" class="header-mark"></a>jQuery使用</h3><h3 id="dom对象和jquery包装集对象" class="headerLink">
     <a href="#dom%e5%af%b9%e8%b1%a1%e5%92%8cjquery%e5%8c%85%e8%a3%85%e9%9b%86%e5%af%b9%e8%b1%a1" class="header-mark"></a>Dom对象和jQuery包装集对象</h3><p>学习代码：</p>
@@ -404,4 +444,6 @@
 </div>
 </div><h2 id="2-jquery选择器" class="headerLink">
     <a href="#2-jquery%e9%80%89%e6%8b%a9%e5%99%a8" class="header-mark"></a>2. jQuery选择器</h2><h3 id="21-基础选择器" class="headerLink">
-    <a href="#21-%e5%9f%ba%e7%a1%80%e9%80%89%e6%8b%a9%e5%99%a8" class="header-mark"></a>2.1 基础选择器</h3><p>学习代码：</p>]]></description></item></channel></rss>
+    <a href="#21-%e5%9f%ba%e7%a1%80%e9%80%89%e6%8b%a9%e5%99%a8" class="header-mark"></a>2.1 基础选择器</h3><p>学习代码：</p>]]></description>
+</item></channel>
+</rss>
