@@ -1,15 +1,37 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>KMP - 标签 - Doごみ箱🪄</title>
-        <link>http://localhost:1313/tags/kmp/</link>
-        <description>KMP - 标签 - Doごみ箱🪄</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 05 Jan 2024 14:11:58 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/kmp/" rel="self" type="application/rss+xml" /><item>
-    <title>字符串匹配问题||前缀函数&#43;KMP&#43;字符串哈希</title>
-    <link>http://localhost:1313/posts/string_match/</link>
-    <pubDate>Fri, 05 Jan 2024 14:11:58 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/string_match/</guid>
-    <description><![CDATA[字符串匹配算法 暴力做法(BF)简称BF(Brute Force)算法。 没什么好说的，就是看到描述直接能想到的朴素做法。 1 2 3 4 5 6 7 8 9 10 11 12]]></description>
-</item></channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>KMP - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/kmp/</link><description>KMP - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor><webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 05 Jan 2024 14:11:58 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/kmp/" rel="self" type="application/rss+xml"/><item><title>字符串匹配问题||前缀函数+KMP+字符串哈希</title><link>http://dodolalorc.cn/posts/string_match/</link><pubDate>Fri, 05 Jan 2024 14:11:58 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/string_match/</guid><description><![CDATA[<h2 id="字符串匹配算法" class="headerLink">
+    <a href="#%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8c%b9%e9%85%8d%e7%ae%97%e6%b3%95" class="header-mark"></a>字符串匹配算法</h2><h3 id="暴力做法bf" class="headerLink">
+    <a href="#%e6%9a%b4%e5%8a%9b%e5%81%9a%e6%b3%95bf" class="header-mark"></a>暴力做法(BF)</h3><p>简称BF(Brute Force)算法。</p>
+<p>没什么好说的，就是看到描述直接能想到的朴素做法。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">BF_match</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="n">string</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// s是主串，p是模式串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">m</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span> <span class="o">-</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="n">p</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">m</span><span class="p">)</span> <span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>BF算法的时间复杂度不稳定。匹配成功时，最好为<code>O(n)</code>，最差为<code>O(mn)</code>；匹配失败时，最好为最好为<code>O(n)</code>，最差为<code>O(mn)</code>。平均时间复杂度为<code>O(n)</code>。</p>]]></description></item></channel></rss>

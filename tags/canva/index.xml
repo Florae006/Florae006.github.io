@@ -1,15 +1,6 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Canva - 标签 - Doごみ箱🪄</title>
-        <link>http://localhost:1313/tags/canva/</link>
-        <description>Canva - 标签 - Doごみ箱🪄</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 18 Dec 2023 14:12:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/canva/" rel="self" type="application/rss+xml" /><item>
-    <title>【网站美化】点击特效</title>
-    <link>http://localhost:1313/posts/beautify_site_click/</link>
-    <pubDate>Mon, 18 Dec 2023 14:12:39 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/beautify_site_click/</guid>
-    <description><![CDATA[今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码 添加js文件这]]></description>
-</item></channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Canva - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/canva/</link><description>Canva - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor><webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 18 Dec 2023 14:12:39 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/canva/" rel="self" type="application/rss+xml"/><item><title>【网站美化】点击特效</title><link>http://dodolalorc.cn/posts/beautify_site_click/</link><pubDate>Mon, 18 Dec 2023 14:12:39 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/beautify_site_click/</guid><description><![CDATA[<p>今天摸鱼把网站的点击特效做了QwQ，选用的效果是烟花（/逆飞的流星🎆🎆，主要摸索了如何在Hugo里添加JavaScript代码</p>
+<h1 id="添加js文件" class="headerLink">
+    <a href="#%e6%b7%bb%e5%8a%a0js%e6%96%87%e4%bb%b6" class="header-mark"></a>添加js文件</h1><p>这次用到的两个js文件在这里：</p>
+<p><a href="/js/anime.min.js" rel="">anime.min.js</a></p>
+<p><a href="/js/fireworks.js" rel="">fireworks.js</a></p>
+<p>在<code>./static/</code>下新建一个<code>js</code>文件夹，文件夹下新建两个<code>js</code>文件，命名为<code>anime.min.js</code>和<code>fireworks.js</code>，然后将上面两个文件的内容粘贴进去。</p>]]></description></item></channel></rss>

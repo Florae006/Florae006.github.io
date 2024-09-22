@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "F:/dodolamain/dodola",
+	"sourceRoot": "/home/runner/work/BlogSiteSource/BlogSiteSource",
 	"sources": [
 		"assets/css/style.scss",
 		"assets/css/_variables.scss",

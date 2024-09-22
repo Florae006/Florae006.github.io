@@ -1,50 +1,234 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>CF - 标签 - Doごみ箱🪄</title>
-        <link>http://localhost:1313/tags/cf/</link>
-        <description>CF - 标签 - Doごみ箱🪄</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor>
-            <webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 13 Mar 2024 12:26:38 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/cf/" rel="self" type="application/rss+xml" /><item>
-    <title>Codeforces Round 930(div2)</title>
-    <link>http://localhost:1313/posts/cfround930div2/</link>
-    <pubDate>Wed, 13 Mar 2024 12:26:38 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfround930div2/</guid>
-    <description><![CDATA[A-Shuffle Party 题意对一个数组，起初是$a_i=i$ 对操作swap(k)： 设$d$是不等于$k$本身的$k$的最大除数，然后交换元素$a_d$和$a_k]]></description>
-</item><item>
-    <title>Codeforces Round 931(div2)</title>
-    <link>http://localhost:1313/posts/cfround931div2/</link>
-    <pubDate>Wed, 13 Mar 2024 12:26:22 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfround931div2/</guid>
-    <description><![CDATA[A-Too Min Too Max 题意对一个数组，找到索引$(i,j,k,l)$使得$|a_i-a_j|+|a_j-a_k|+|a_k-a_l|+|a_l-a_i|$]]></description>
-</item><item>
-    <title>Codeforces Round 932(div2)</title>
-    <link>http://localhost:1313/posts/cfround932div2/</link>
-    <pubDate>Wed, 13 Mar 2024 12:26:06 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfround932div2/</guid>
-    <description><![CDATA[A-Entertainment in MAC 题意可以对一个字符串进行两种操作： 将字符串反转 将该字符串反转后接在原串的后面。 可以进行任意次上述操作，获得字典序最小的字符串。 数据范围]]></description>
-</item><item>
-    <title>Codeforces Round 933(div3)</title>
-    <link>http://localhost:1313/posts/cfround933div3/</link>
-    <pubDate>Wed, 13 Mar 2024 12:25:46 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfround933div3/</guid>
-    <description><![CDATA[A-Rudolf and the Ticket 题意左边口袋有一些面值为$b_1,b_2,b_3,&hellip;,b_n$的硬币，右边有一些面值为$c_1,c_2,c_3,&he]]></description>
-</item><item>
-    <title>Codeforces Round 929(div3)</title>
-    <link>http://localhost:1313/posts/cfround929div3/</link>
-    <pubDate>Thu, 29 Feb 2024 14:56:16 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfround929div3/</guid>
-    <description><![CDATA[A-Turtle Puzzle: Rearrange and Negate 题意对一个数组执行两个操作： 对数组进行重新排序或保持元素顺序不变 选择连续的一段，对该段中的元素取相反数，也可以不选择任何一段，即保]]></description>
-</item><item>
-    <title>Codeforces Round 927(div3)</title>
-    <link>http://localhost:1313/posts/cfround927div3/</link>
-    <pubDate>Thu, 29 Feb 2024 14:47:05 &#43;0800</pubDate><author>
-        <name>DODOLA</name>
-    </author><guid>http://localhost:1313/posts/cfround927div3/</guid>
-    <description><![CDATA[A-Thorns and Coins 题意长度为$n$的单元格路径，每个单元格有空、有金币、荆棘三种可能，人物从最左边开始向右移动，每次步长不多于2格，求能获得的最多金币数]]></description>
-</item></channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>CF - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/cf/</link><description>CF - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>flora_chen2021@163.com (DODOLA)</managingEditor><webMaster>flora_chen2021@163.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 13 Mar 2024 12:26:38 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/cf/" rel="self" type="application/rss+xml"/><item><title>Codeforces Round 930(div2)</title><link>http://dodolalorc.cn/posts/cfround930div2/</link><pubDate>Wed, 13 Mar 2024 12:26:38 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cfround930div2/</guid><description><![CDATA[<h1 id="a-shuffle-party" class="headerLink">
+    <a href="#a-shuffle-party" class="header-mark"></a>A-Shuffle Party</h1><h2 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h2><p>对一个数组，起初是$a_i=i$</p>
+<p>对操作<code>swap(k)</code>：</p>
+<p>设$d$是不等于$k$本身的$k$的最大除数，然后交换元素$a_d$和$a_k$。</p>
+<p>按顺序对每一个$i=2,3,..,n$进行$swap(i)$之后，找出$1$在数组中的位置。</p>]]></description></item><item><title>Codeforces Round 931(div2)</title><link>http://dodolalorc.cn/posts/cfround931div2/</link><pubDate>Wed, 13 Mar 2024 12:26:22 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cfround931div2/</guid><description><![CDATA[<h1 id="a-too-min-too-max" class="headerLink">
+    <a href="#a-too-min-too-max" class="header-mark"></a>A-Too Min Too Max</h1><h2 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h2><p>对一个数组，找到索引$(i,j,k,l)$使得$|a_i-a_j|+|a_j-a_k|+|a_k-a_l|+|a_l-a_i|$最大的值。</p>
+<h4 id="数据范围" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><p>$t(1≤t≤500)$</p>
+<p>$n(4≤n≤100)$​</p>
+<p>$a_i(-10^6\le a_i\le 10^6)$</p>
+<h2 id="思路" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h2><p>选则最大的两个数和最小的两个数，结果为最大-最小+次大-最小+最大-次小+次大-次小。</p>
+<h2 id="参考代码" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span><span class="n">a</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">a</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="b-yet-another-coin-problem" class="headerLink">
+    <a href="#b-yet-another-coin-problem" class="header-mark"></a>B-Yet Another Coin Problem</h1><h2 id="题意-1" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h2><p>有一些5种不同面值的金币，面值有：$1,3,6,10,15$。找到使用金币数目最少的组合方式达到数值为$n$的组合。</p>
+<h4 id="数据范围-1" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4-1" class="header-mark"></a>数据范围</h4><p>$t(1≤t≤10^4)$</p>
+<p>$n(1≤n≤10^9)$​</p>
+<h2 id="思路-1" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af-1" class="header-mark"></a>思路</h2><p>打表。</p>
+<h2 id="参考代码-1" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81-1" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">n</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span><span class="n">p</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">15</span> <span class="o">+</span> <span class="n">p</span><span class="p">[</span><span class="n">n</span> <span class="o">%</span> <span class="mi">15</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">15</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ans</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">15</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">p</span><span class="p">[</span><span class="n">n</span> <span class="o">%</span> <span class="mi">15</span> <span class="o">+</span> <span class="mi">15</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="c-find-a-mine" class="headerLink">
+    <a href="#c-find-a-mine" class="header-mark"></a>C-Find a Mine</h1><h2 id="题意-2" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-2" class="header-mark"></a>题意</h2><p>交互题。</p>]]></description></item><item><title>Codeforces Round 932(div2)</title><link>http://dodolalorc.cn/posts/cfround932div2/</link><pubDate>Wed, 13 Mar 2024 12:26:06 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cfround932div2/</guid><description><![CDATA[<h1 id="a-entertainment-in-mac" class="headerLink">
+    <a href="#a-entertainment-in-mac" class="header-mark"></a>A-Entertainment in MAC</h1><h2 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h2><p>可以对一个字符串进行两种操作：</p>
+<ol>
+<li>将字符串反转</li>
+<li>将该字符串反转后接在原串的后面。</li>
+</ol>
+<p>可以进行任意次上述操作，获得字典序最小的字符串。</p>
+<h4 id="数据范围" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><p>$t(1≤t≤500)$</p>
+<p>$n(2≤n≤10^9)$​</p>
+<p>$s(1\le |s|\le 100)$</p>
+<h2 id="思路" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h2><p>对比反转前后的字符串字典序大小，再决定是操作1还是操作2</p>
+<h2 id="参考代码" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">n</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="n">s</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="n">t</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reverse</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">t</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">&gt;</span> <span class="n">t</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">t</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="b-informatics-in-mac" class="headerLink">
+    <a href="#b-informatics-in-mac" class="header-mark"></a>B-Informatics in MAC</h1><h2 id="题意-1" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h2><p>$MEX$：不属于该数组的最小非负整数。</p>]]></description></item><item><title>Codeforces Round 933(div3)</title><link>http://dodolalorc.cn/posts/cfround933div3/</link><pubDate>Wed, 13 Mar 2024 12:25:46 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cfround933div3/</guid><description><![CDATA[<h1 id="a-rudolf-and-the-ticket" class="headerLink">
+    <a href="#a-rudolf-and-the-ticket" class="header-mark"></a>A-Rudolf and the Ticket</h1><h2 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h2><p>左边口袋有一些面值为$b_1,b_2,b_3,&hellip;,b_n$的硬币，右边有一些面值为$c_1,c_2,c_3,&hellip;,c_m$的硬币，问有多少个$(f,s)$可以使得$b_f+c_s\le k$成立</p>
+<h4 id="数据范围" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><p>$t(1≤t≤100)$</p>
+<p>$n,m(1≤n,m≤100)$</p>
+<p>$k(1\le k\le 2000)$</p>
+<p>$b_i,c_i(1\le b_i,c_i\le 1000)$</p>
+<h2 id="思路" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h2><p>双层循环遍历</p>
+<h2 id="参考代码" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">k</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span> <span class="o">&gt;&gt;</span> <span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span><span class="n">b</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">c</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">ll</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">ll</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ll</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sort</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">b</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sort</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">c</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">ll</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="n">ll</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ans</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="p">{</span> <span class="k">break</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">ans</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="b-rudolf-and-121" class="headerLink">
+    <a href="#b-rudolf-and-121" class="header-mark"></a>B-Rudolf and 121</h1><h2 id="题意-1" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h2><p>可以对一个数组执行如下操作：</p>]]></description></item><item><title>Codeforces Round 929(div3)</title><link>http://dodolalorc.cn/posts/cfround929div3/</link><pubDate>Thu, 29 Feb 2024 14:56:16 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cfround929div3/</guid><description><![CDATA[<h1 id="a-turtle-puzzle-rearrange-and-negate" class="headerLink">
+    <a href="#a-turtle-puzzle-rearrange-and-negate" class="header-mark"></a>A-Turtle Puzzle: Rearrange and Negate</h1><h2 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h2><p>对一个数组执行两个操作：</p>
+<ol>
+<li>对数组进行重新排序或保持元素顺序不变</li>
+<li>选择连续的一段，对该段中的元素取相反数，也可以不选择任何一段，即保持所有的元素符号不变。</li>
+</ol>
+<p>求进行上述操作之后数组的最大和是多少。</p>]]></description></item><item><title>Codeforces Round 927(div3)</title><link>http://dodolalorc.cn/posts/cfround927div3/</link><pubDate>Thu, 29 Feb 2024 14:47:05 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cfround927div3/</guid><description><![CDATA[<h1 id="a-thorns-and-coins" class="headerLink">
+    <a href="#a-thorns-and-coins" class="header-mark"></a>A-Thorns and Coins</h1><h2 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h2><p>长度为$n$的单元格路径，每个单元格有空、有金币、荆棘三种可能，人物从最左边开始向右移动，每次步长不多于2格，求能获得的最多金币数。</p>
+<h4 id="数据范围" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><p>$t(1≤t≤1000)$</p>
+<p>$n(1≤n≤50)$​</p>
+<p><code>.</code>代表空，<code>*</code>代表荆棘，<code>@</code>代表金币</p>
+<h2 id="思路" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h2><p>从左往右，寻找第一个含有2个以上<code>*</code>的<code>*</code>连通块，其前的金币都可以达到。</p>
+<h2 id="参考代码" class="headerLink">
+    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">string</span> <span class="n">s</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="n">f</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;@&#39;</span><span class="p">)</span><span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;*&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;*&#39;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cnt</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="b-chaya-calendar" class="headerLink">
+    <a href="#b-chaya-calendar" class="header-mark"></a>B-Chaya Calendar</h1><h2 id="题意-1" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h2><p>查亚部落相信世界末日有$n$个征兆，第$i$个征兆每隔$a_i$年出现一次，当观测到第$i-1$个征兆后才会等待第$i$个征兆。给出每个征兆的出现间隔，询问观测到所有$n$个征兆所需要的年数。</p>]]></description></item></channel></rss>
