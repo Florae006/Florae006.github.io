@@ -1,0 +1,15 @@
+.beian{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+.beian-icon{
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+}
+.gov,
+.icp{
+    padding:0 5px;
+}

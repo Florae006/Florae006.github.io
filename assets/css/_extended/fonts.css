@@ -1,0 +1,21 @@
+@font-face {
+    /* 杨任东竹石体 */
+    /* 喜欢 */
+    font-family: "YangRenDongZhuShiTi-Bold-2";
+    src: url("/fonts/YangRenDongZhuShiTi-Bold-2.ttf")format("truetype");
+    font-weight: 800;
+}
+@font-face {
+    /* 演示秋鸿楷 */
+    /* 有点看着太细了 */
+    font-family: "YanShiQiuHongKai-2";
+    src: url("/fonts/YanShiQiuHongKai-2.ttf")format("truetype");
+    font-weight: 800;
+}
+@font-face {
+    /* 霞鹜文楷 */
+    /* 舒服的，好看的，大气的，嘿嘿 */
+    font-family: "LXGWWenKaiMono-Bold";
+    src: url("/fonts/LXGWWenKaiMono-Bold.ttf")format("truetype");
+    font-weight: 800;
+}
