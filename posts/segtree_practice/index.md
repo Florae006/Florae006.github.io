@@ -1,6 +1,8 @@
 # 线段树专题练习
 
 
+
+
 {{< admonition abstract "前言" true>}}
 
 痛定思痛练习线段树QAQ。
@@ -17,7 +19,7 @@
 - [x] [覆盖的面积](https://acm.hdu.edu.cn/showproblem.php?pid=1255)
 - [x] [敌兵布阵](https://acm.hdu.edu.cn/showproblem.php?pid=1166)
 - [ ] [P4588 TJOI2018 数学计算 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)](https://www.luogu.com.cn/problem/P4588)
-- [ ] [单峰数列](https://acm.hdu.edu.cn/showproblem.php?pid=7463)
+- [x] [单峰数列](https://acm.hdu.edu.cn/showproblem.php?pid=7463) ✅ 2024-09-26
 - [ ] [树上询问](https://acm.hdu.edu.cn/showproblem.php?pid=7530)
 - [ ] [P1502 窗口的星星 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)](https://www.luogu.com.cn/problem/P1502)
 - [ ] [P2471 SCOI2007 降雨量 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)](https://www.luogu.com.cn/problem/P2471)
@@ -244,6 +246,8 @@ int main() {
 
 ## I Hate It
 
+[I Hate It](https://acm.hdu.edu.cn/showproblem.php?pid=1754)
+
 ### 题意
 
 老师想询问学生中从某某到某某分数最高的是多少，并支持修改单个学生的成绩。
@@ -354,6 +358,8 @@ int main() {
 ```
 
 ## 覆盖的面积
+
+[覆盖的面积](https://acm.hdu.edu.cn/showproblem.php?pid=1255)
 
 ### 题意
 
@@ -492,7 +498,7 @@ int main() {
 ```
 
 ## 敌兵布阵
-
+[敌兵布阵](https://acm.hdu.edu.cn/showproblem.php?pid=1166)
 ### 题意
 
 有$N$个营地，初始第$i$个营地有$a_i$个人，有$4$种命令。
@@ -607,10 +613,222 @@ int main() {
 }
 ```
 
+## 单峰数列
 
+[单峰数列](https://acm.hdu.edu.cn/showproblem.php?pid=7463)
 
+### 题意
 
+给定长度为$n$的数列$a$，支持以下操作：
 
+1. `1 l r x`：给区间$[l,r]$的所有数加上$x$
+2. `2 l r`：查询区间$[l,r]$中的元素是否全都相同
+3. `3 l r`：查询区间$[l,r]$中的元素是否严格上升，当$l==r$时认为是严格上升的
+4. `4 l r`：查询区间$[l,r]$中的元素是否严格下降，当$l==r$时认为是严格下降的
+5. `5 l r`：查询区间$[l,r]$是否是单峰数列，单峰数列符合右侧严格递增，左侧严格递减，并且左右侧的区间不为空，保证$r-l+1\geq 3$。
+
+#### 数据范围
+
+* $3\leq n \leq 10^5$
+* $0\leq a_i\leq 10^9$
+* $1\leq q \leq 2\times 10^5$
+
+对于第一类操作，保证$-10^9\leq x\leq 10^9$
+
+### 思路
+
+用三个变量记录区间左值、右值和懒标记。
+
+用三个布尔值变量记录当前区间是否是相同、上升、下降、单峰。在判断合并后是否是单峰时，主要满足单峰的区间必须大于等于3，当左右两个区间分别是上升、下降，且某个区间只有一个数时，要注意比较左右值。
+
+### 代码
+
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define lson(p) tree[p * 2]
+#define rson(p) tree[p * 2 + 1]
+
+typedef long long ll;
+typedef unsigned long long ull;
+
+const int maxn = 4e5 + 50;
+
+struct node {
+  int l, r;
+  ll lval, rval, lazy;
+  bool isup, isdown, issame, isheap;
+} tree[maxn << 2];
+
+ll a[maxn];
+
+node merge(node ret1, node ret2) {
+  node ret;
+
+  ret = {
+    ret1.l,
+    ret2.r,
+    ret1.lval,
+    ret2.rval,
+    0ll,
+    true,
+    true,
+    true,
+    false
+  };
+
+  ret.issame = ret1.issame && ret2.issame && ret1.rval == ret2.lval;
+  ret.isup = ret1.isup && ret2.isup && ret1.rval < ret2.lval;
+  ret.isdown = ret1.isdown && ret2.isdown && ret1.rval > ret2.lval;
+
+  if (ret1.isup && ret2.isdown) {
+    if (ret1.l == ret1.r && ret1.rval < ret2.lval && ret2.l != ret2.r)
+      ret.isheap = true;
+    else if (ret2.l == ret2.r && ret1.rval > ret2.lval && ret1.l != ret1.r)
+      ret.isheap = true;
+    else if (ret1.l != ret1.r && ret2.l != ret2.r)
+      ret.isheap = true;
+  }
+
+  if (ret1.isup && ret2.isheap && ret1.rval < ret2.lval)
+    ret.isheap = true;
+  if (ret1.isheap && ret2.isdown && ret1.rval > ret2.lval)
+    ret.isheap = true;
+
+  return ret;
+}
+
+void build(int p, int l, int r) {
+  if (l == r) {
+    tree[p] = {l, r, a[l], a[r], 0ll, true, true, true, false};
+    return;
+  }
+  int mid = l + (r - l) / 2;
+  build(p * 2, l, mid);
+  build(p * 2 + 1, mid + 1, r);
+  tree[p] = merge(lson(p), rson(p));
+}
+
+void pushdown(int p) {
+  int l = tree[p].l, r = tree[p].r;
+  if (l == r) {
+    return;
+  }
+  if (tree[p].lazy) {
+    ll x = tree[p].lazy;
+    lson(p).lazy += x, rson(p).lazy += x;
+    lson(p).lval += x, rson(p).lval += x;
+    lson(p).rval += x, rson(p).rval += x;
+    tree[p].lazy = 0ll;
+  }
+}
+
+void pushup(int p) {
+  int l = tree[p].l, r = tree[p].r;
+  if (l == r) {
+    return;
+  }
+  tree[p] = merge(lson(p), rson(p));
+}
+
+void update(int p, int cl, int cr, int l, int r, ll num) {
+  if (cl >= l && cr <= r) {
+    tree[p].lval += num, tree[p].rval += num;
+    tree[p].lazy += num;
+    pushdown(p);
+    pushup(p);
+    return;
+  }
+  pushdown(p);
+  int mid = cl + (cr - cl) / 2;
+  if (l <= mid)
+    update(p * 2, cl, mid, l, r, num);
+  if (mid + 1 <= r)
+    update(p * 2 + 1, mid + 1, cr, l, r, num);
+  pushup(p);
+}
+
+node query(int p, int cl, int cr, int l, int r) {
+  if (cl >= l && cr <= r) {
+    return tree[p];
+  }
+
+  pushdown(p);
+  int mid = cl + (cr - cl) / 2;
+
+  node ret, ret1, ret2;
+
+  ret1.l = ret2.l = -1;
+  ret.l = cl, ret.r = cr;
+
+  if (l <= mid) {
+    ret1 = query(p * 2, cl, mid, l, r);
+  }
+  if (mid + 1 <= r) {
+    ret2 = query(p * 2 + 1, mid + 1, cr, l, r);
+  }
+  pushup(p);
+
+  if (ret1.l == -1)
+    return ret2;
+  if (ret2.l == -1)
+    return ret1;
+
+  ret = merge(ret1, ret2);
+  
+  return ret;
+}
+
+void solve() {
+  int n;
+  cin >> n;
+  for (int i = 1; i <= n; i++) {
+    cin >> a[i];
+  }
+  build(1, 1, n);
+  int q;
+  cin >> q;
+  while (q--) {
+    int op, l, r;
+    cin >> op >> l >> r;
+    if (op == 1) {
+      ll x;
+      cin >> x;
+      update(1,1,n,l,r,x);
+    } else {
+      node ret = query(1, 1, n, l, r);
+      if (op == 2) {
+        cout << ret.issame << '\n';
+      } else if (op == 3) {
+        cout << ret.isup << '\n';
+      } else if (op == 4) {
+        cout << ret.isdown << '\n';
+      } else if (op == 5) {
+        cout << ret.isheap << '\n';
+      }
+    }
+  }
+}
+
+void init() {
+}
+
+int main(void) {
+  ios::sync_with_stdio(false);
+  cin.tie(0);
+  init();
+  int t = 1;
+  // cin >> t;
+  // cin.get();
+  while (t--)
+    solve();
+
+  return 0;
+}
+
+```
 
 
 
