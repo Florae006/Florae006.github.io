@@ -79,7 +79,7 @@ nb create
 
 之后脚手架会帮我们自动创建并引入所需要的依赖包
 
-![操作截图1](./botstart1.png)
+![botstart1](https://img.dodolalorc.cn/i/2024/10/01/66fbc12f60c58.png)
 
 最后选择安装内置插件`echo`，一个简单的复读插件用于初期测试机器人是否正常运行。
 
@@ -87,7 +87,7 @@ nb create
 [?] 要使用哪些内置插件? echo	# 注意这个插件要是没有安装，后续无法补装，只能重新创建一个机器人项目哩
 ```
 
-![操作截图2](./botstart2.png)
+![操作截图2](https://img.dodolalorc.cn/i/2024/10/01/66fbc181dc111.png)
 
 接下来按照提示run一下项目就行
 
@@ -98,13 +98,13 @@ nb run --reload
 
 现在run一下只是初始化，run成功之后ctrl+C终止进程，我们来到下一步编辑配置。
 
-![初始化](./firstrun.png)
+![firstrun](https://img.dodolalorc.cn/i/2024/10/01/66fbc18a5e97a.png)
 
 接下来的对机器人的构建都要在项目文件下，方便起见我们可以重新打开文件夹，使根目录是我们的awsome-bot
 
 如果之前虚拟环境激活成功的话，进入这个项目目录下会自动进入本项目的虚拟环境中，就像这样：
 
-![虚拟环境标志](./virtualenv.png)
+![virtualenv](https://img.dodolalorc.cn/i/2024/10/01/66fbc19be67a7.png)
 
 有框框内显示的这个括号代表我们在本项目的虚拟环境下哩。
 
@@ -149,29 +149,29 @@ nb plugin install
 
 或者直接一句`nb plugin install nonebot-plugin-gocqhttp`
 
-![安装gocqhttp插件](./plugininstall.png)
+![安装gocqhttp插件](https://img.dodolalorc.cn/i/2024/10/01/66fbc1acf106c.png)
 
 ## 登录机器人
 
 go-cqhttp插件安装完成之后，我们再nb run一下，激活插件的图形化界面。
 
-![图形化界面登录](./gocqhttpterminal.png)
+![图形化界面登录](https://img.dodolalorc.cn/i/2024/10/01/66fbc1c6a3ac1.png)
 
 复制这个网站到浏览器，或者按住Ctrl点击这步中的网址跳转到默认浏览器
 
-![浏览器打开网址](./gocqhttpchrome.png)
+![浏览器打开网址](https://img.dodolalorc.cn/i/2024/10/01/66fbc1d367861.png)
 
 我们点击左侧上方的添加账号，填入要用作机器人的qq号，密码留空，登录设备类型选择`Android Watch`点击提交
 
-![添加机器人账号](./regist.png)
+![添加机器人账号](https://img.dodolalorc.cn/i/2024/10/01/66fbc1de6a1d4.png)
 
 在进程这里点击启动
 
-![启动机器人](./start.png)
+![启动机器人](https://img.dodolalorc.cn/i/2024/10/01/66fbc1e7b54b9.png)
 
 接下来在手机上扫描出现的二维码登录即可
 
-![二维码登录](./qrcode.png)
+![二维码登录](https://img.dodolalorc.cn/i/2024/10/01/66fbc1eea52a3.png)
 
 如果出现当前协议不支持二维码登录这样的错误提示，可以先ctrl+c终止，然后在目录的`./accounts/机器人的qq号/device.json`中检查下方这一项是否是2，若不是，改为2，然后重新登录即可。
 
@@ -181,7 +181,7 @@ go-cqhttp插件安装完成之后，我们再nb run一下，激活插件的图�
 
 登录成功之后我们对这个机器人qq私聊发送复读消息（因为前面设置的命令起始字符是空的，所以直接echo即可，如果起始设置是"/"那就要写成"/echo xxx"
 
-![复读](./echo.jpg)
+![复读](https://img.dodolalorc.cn/i/2024/10/01/66fbc1fc36050.jpg)
 
 若成功复读表明机器人部署成功。
 
@@ -232,7 +232,7 @@ $ nb plugin create
 
 项目树像这样(展示项目树：`tree /f`)：
 
-![项目树](./tree.png)
+![项目树](https://img.dodolalorc.cn/i/2024/10/01/66fbc20b208f1.png)
 
 ## 功能编写
 
@@ -302,15 +302,15 @@ nb create
 
 根据脚手架的引导创建项目（参考前文部分的初始化设置
 
-![linux下初始化部署1](./linuxdeploy1.png)
+![linux下初始化部署1](https://img.dodolalorc.cn/i/2024/10/01/66fbc21648452.png)
 
-![linux下初始化部署2](./linuxdeploy2.png)
+![linux下初始化部署2](https://img.dodolalorc.cn/i/2024/10/01/66fbc219a1135.png)
 
-![linux下初始化部署3](./linuxdeploy3.png)
+![linux下初始化部署3](https://img.dodolalorc.cn/i/2024/10/01/66fbc21d717c2.png)
 
 按照提示run一下，然后Ctrl+C退出：
 
-![linux下初始化部署4](./linuxdeploy4.png)
+![linux下初始化部署4](https://img.dodolalorc.cn/i/2024/10/01/66fbc221ac7ad.png)
 
 然后我们修改配置文件`.env.prod`：
 
@@ -331,11 +331,11 @@ COMMAND_SEP=["."]  # 配置命令分割字符
 nb plugin install nonebot-plugin-gocqhttp
 ```
 
-![安装插件](./linuxplugininstall.png)
+![安装插件](https://img.dodolalorc.cn/i/2024/10/01/66fbc22c1c883.png)
 
 然后再run一下
 
-![第二次run](./linuxsecondrun.png)
+![第二次run](https://img.dodolalorc.cn/i/2024/10/01/66fbc232956fa.png)
 
 然后打开这个网址（注意把这个`0.0.0.0`换成自己的服务器ip并把这个端口号从安全组开放出来，进行正常的扫码登录
 
@@ -363,7 +363,7 @@ nb plugin install nonebot-plugin-gocqhttp
 source .venv/bin/activate
 ```
 
-![进入虚拟环境](./virtualdeploy.png)
+![进入虚拟环境](https://img.dodolalorc.cn/i/2024/10/01/66fbc23c9776f.png)
 
 然后在虚拟环境下安装我们需要的依赖就行
 
@@ -385,7 +385,7 @@ nohup nb run &
 
 想要取消挂起的话，可以使用`ps -ef |grep 端口号`查看当前后台进程的pid，然后使用`kill pid`来解放这个进程。
 
-![后台进程查看](./nohup.png)
+![后台进程查看](https://img.dodolalorc.cn/i/2024/10/01/66fbc246a2488.png)
 
 
 
