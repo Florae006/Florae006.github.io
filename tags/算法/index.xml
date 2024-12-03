@@ -1,4 +1,7 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>算法 - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</link><description>算法 - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 25 Oct 2024 14:57:19 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml"/><item><title>Codeforces Round 977 (Div. 2, based on COMPFEST 16 - Final Round)</title><link>http://dodolalorc.cn/posts/cfround977div2/</link><pubDate>Fri, 25 Oct 2024 14:57:19 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cfround977div2/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>算法 - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/</link><description>算法 - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 23 Nov 2024 18:51:44 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E7%AE%97%E6%B3%95/" rel="self" type="application/rss+xml"/><item><title>2023杭州ICPC区域赛</title><link>http://dodolalorc.cn/posts/23hangzhouicpc/</link><pubDate>Sat, 23 Nov 2024 18:51:44 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/23hangzhouicpc/</guid><description><![CDATA[<h2 id="g-snake-move" class="headerLink">
+    <a href="#g-snake-move" class="header-mark"></a>G. Snake Move</h2><h3 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>$n\times m$的网格中有一条长度为$k$的贪吃蛇，贪吃蛇支持上下左右移动 1 格的操作，以及缩短 1 个身体长度的操作。</p>
+<p>设$f(i,j)$为从蛇头从初始位置到达网格中点$(i,j)$所需要的最少的操作数，网格中不可到达的格子操作数设为$0$，求解输出：</p>]]></description></item><item><title>Codeforces Round 977 (Div. 2, based on COMPFEST 16 - Final Round)</title><link>http://dodolalorc.cn/posts/cfround977div2/</link><pubDate>Fri, 25 Oct 2024 14:57:19 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cfround977div2/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://img.dodolalorc.cn/i/2024/10/26/671ce188b91d3.jpg" referrerpolicy="no-referrer">
             </div><h1 id="a-meaning-mean" class="headerLink">
     <a href="#a-meaning-mean" class="header-mark"></a>A. Meaning Mean</h1><h2 id="题意" class="headerLink">
@@ -357,13 +360,4 @@
 </div>
 </div><h2 id="c-sort4" class="headerLink">
     <a href="#c-sort4" class="header-mark"></a>C-Sort4</h2><h3 id="题意-1" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>给出一个排列，每次选择四个位置交换其中的元素，求将该排列排序成上升序列的最小操作次数。</p>]]></description></item><item><title>2024牛客暑假多校训练营Day3||补题</title><link>http://dodolalorc.cn/posts/nc24sd3/</link><pubDate>Tue, 23 Jul 2024 18:37:58 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24sd3/</guid><description><![CDATA[<h2 id="a-bridging-the-gap-2" class="headerLink">
-    <a href="#a-bridging-the-gap-2" class="header-mark"></a>A-Bridging the Gap 2</h2><h3 id="题意" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>在河岸的一侧有$n$个人，每个人有一个体力值$h_i$，有一艘船可以将人从一侧载到另一侧，每次航行需要至少$L$个人掌舵，每次掌舵会花费每个掌舵人的一点体力，当体力不足一点时，这个人不能再掌舵，船的容量最大是$R$，提问是否能够将这些人都运送到对岸。</p>
-<h4 id="数据范围" class="headerLink">
-    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><ul>
-<li>$1\leq L\lt R\leq n\leq 5\times 10^5$​</li>
-<li>$1\leq h_i\leq 5\times 10^5$</li>
-</ul>
-<h3 id="思路" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>贪心的运输，从左岸运输的最小次数是$k=\lceil \frac{n-R}{R-L} \rceil$，计算每个人最多的来回次数$a_i$，假如满足$\sum_{i-1}^{n} min(k,a_i)\geq k\times L$，则可以将所有人都运输到对岸。</p>]]></description></item></channel></rss>
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>给出一个排列，每次选择四个位置交换其中的元素，求将该排列排序成上升序列的最小操作次数。</p>]]></description></item></channel></rss>

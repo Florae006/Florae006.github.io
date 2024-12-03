@@ -122,7 +122,7 @@ $n$个人排成一队，依次播放$m$张幻灯片，当一个人播放过幻�
 #### 数据范围
 
 - $1 \leq t\leq 10^4$
-- $1\leq n,m 2\times 10^5$
+- $1\leq n,m \leq 2\times 10^5$
 - $0\leq q\leq 2\times 10^5$
 - $1\leq a_i,b_i\leq n$
 - $1\leq s_i\leq m,1\leq t_i\leq n$
@@ -194,15 +194,24 @@ void solve() {
 
 # D. Boss, Thirsty
 
-
 # E1. Digital Village (Easy Version) && (Hard Version)
 
 ## 题意
 
+居民房屋构成一个无向图，包含$n$个点$m$条边，其中$p$户需要网络服务，可以在任意的房屋中安置交换机，房屋$s_i$与交换机所在房屋$s_j$之间的延迟是$s_i$到$s_j$的简单路径上最大的延迟。可以任意选择放置交换机的位置，询问在逐渐增加交换机的过程中，所有需要网络服务的居民的最小总延迟。
+
 #### 数据范围
+
+- $1\leq t \leq 2000$
+- $2\leq n,\leq 5000$
+- $n-1\leq m \leq 5000$
+- $1\leq p \leq n$
+- $1\leq s\leq n$
+- $1\leq u_i\lt w_i\leq n;1\leq w_i\leq 10^9$
 
 ## 思路
 
-## 参考代码
 
+
+## 参考代码
 
