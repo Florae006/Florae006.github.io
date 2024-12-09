@@ -1,4 +1,55 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Doごみ箱🪄</title><link>http://dodolalorc.cn/</link><description>Doごみ箱2.1</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Tue, 26 Nov 2024 14:28:27 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>2023杭州ICPC区域赛</title><link>http://dodolalorc.cn/posts/23hangzhouicpc/</link><pubDate>Sat, 23 Nov 2024 18:51:44 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/23hangzhouicpc/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Doごみ箱🪄</title><link>http://dodolalorc.cn/</link><description>Doごみ箱2.1</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 05 Dec 2024 19:27:40 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>cfround990div2</title><link>http://dodolalorc.cn/posts/cfround990div2/</link><pubDate>Thu, 05 Dec 2024 19:27:40 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cfround990div2/</guid><description><![CDATA[<h2 id="a-alyona-and-a-square-jigsaw-puzzle" class="headerLink">
+    <a href="#a-alyona-and-a-square-jigsaw-puzzle" class="header-mark"></a>A. Alyona and a Square Jigsaw Puzzle</h2><h3 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p><code>Alyona</code>按照顺时针围绕第一个拼图放置拼图，<code>Alyona</code>每天会按顺序放置一定数量的拼图，如果一天结束时拼图的组装部分没有任何已开始但未完成的层，<code>Alyona</code>会感到开心。给出每天放置拼图的数量，询问<code>Alyona</code>感到快乐的天数。</p>
+<h4 id="数据范围" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><ul>
+<li>$1\leq t\leq 500$</li>
+<li>$1\leq n\leq 100$</li>
+<li>$1\leq a_i\leq 100,a_1=1$</li>
+</ul>
+<h3 id="思路" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>检查每天完成添加拼图时的总拼图数是否恰好是一个奇数的平方数，若是则该天会感到快乐。</p>
+<h3 id="代码" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ll</span> <span class="n">tot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="n">ll</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tot</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ld</span> <span class="n">t</span> <span class="o">=</span> <span class="n">sqrtl</span><span class="p">(</span><span class="n">tot</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">((</span><span class="n">ll</span><span class="p">)</span><span class="n">t</span> <span class="o">&amp;</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">t</span> <span class="o">==</span> <span class="p">(</span><span class="n">ll</span><span class="p">)</span><span class="n">t</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">ans</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="b-replace-character" class="headerLink">
+    <a href="#b-replace-character" class="header-mark"></a>B. Replace Character</h2><h3 id="题意-1" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>在一个长度为$n$的字符串中，执行<strong>一次</strong>这样的操作：</p>
+<ul>
+<li>选择两个索引$i,j(1\leq i,j\leq n)$，可以选择$i = j$。</li>
+<li>进行赋值$s_i:=s_j$。</li>
+</ul>
+<p>要求输出在进行该操作之后，字典序最小的那个字符串。</p>]]></description></item><item><title>2023杭州ICPC区域赛</title><link>http://dodolalorc.cn/posts/23hangzhouicpc/</link><pubDate>Sat, 23 Nov 2024 18:51:44 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/23hangzhouicpc/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://img.dodolalorc.cn/i/2024/12/03/674e9e0b67e66.png" referrerpolicy="no-referrer">
             </div><h2 id="g-snake-move" class="headerLink">
     <a href="#g-snake-move" class="header-mark"></a>G. Snake Move</h2><h3 id="题意" class="headerLink">
@@ -283,83 +334,4 @@
     <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>在第二阶段，<code>Oscar</code>分蛋糕的时候，是对当前串寻找一个<code>0</code>占比最大的前缀，然后拿走占比一致的蛋糕。</p>
 <p>于是，在第一阶段时，首先树上每个节点即代表一个前缀，预处理出每个节点为前缀时<code>0</code>的占比，在之后两人轮流取数时，<code>Oscar</code>会取选择下一个节点轮流选择后<code>0</code>占比最大的节点，<code>Grammy</code>会选择<code>0</code>占比最小的节点。</p>]]></description></item><item><title>2024牛客暑假多校训练营Day5||补题</title><link>http://dodolalorc.cn/posts/nc24sd5/</link><pubDate>Wed, 31 Jul 2024 15:55:57 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24sd5/</guid><description>&lt;div class="featured-image">
                 &lt;img src="https://img.dodolalorc.cn/i/2024/09/21/66ee459d33192.png" referrerpolicy="no-referrer">
-            &lt;/div></description></item><item><title>2024牛客暑假多校训练营Day4||补题</title><link>http://dodolalorc.cn/posts/nc24sd4/</link><pubDate>Wed, 31 Jul 2024 15:55:48 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24sd4/</guid><description><![CDATA[<h2 id="a-lct" class="headerLink">
-    <a href="#a-lct" class="header-mark"></a>A-LCT</h2><h3 id="题意" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>给定一棵有根树，每次询问前$i$条边组成的森林中，第$c_i$个点为根的树的深度。</p>
-<h4 id="数据范围" class="headerLink">
-    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><ul>
-<li>$2\leq n\leq 10^6$</li>
-<li>$1\leq a_i,b_i,c_i\leq n,a_i\neq b_i$</li>
-</ul>
-<h3 id="思路" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>带权并查集，维护每个节点在当前所属树的层数，维护所有以该节点为根节点的树的深度。</p>
-<h3 id="代码" class="headerLink">
-    <a href="#%e4%bb%a3%e7%a0%81" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">deep</span><span class="p">[</span><span class="n">maxn</span><span class="p">],</span> <span class="n">fa</span><span class="p">[</span><span class="n">maxn</span><span class="p">],</span> <span class="n">dis</span><span class="p">[</span><span class="n">maxn</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">findfa</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="k">return</span> <span class="n">x</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">fx</span> <span class="o">=</span> <span class="n">findfa</span><span class="p">(</span><span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 更新deep,旧根:fa[x],新根:fx
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">deep</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="n">deep</span><span class="p">[</span><span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">]];</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">fa</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">fx</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">fu</span> <span class="o">=</span> <span class="n">findfa</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">fa</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">fu</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">deep</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">deep</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">dis</span><span class="p">[</span><span class="n">fu</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dis</span><span class="p">[</span><span class="n">fu</span><span class="p">],</span> <span class="n">dis</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">+</span> <span class="n">deep</span><span class="p">[</span><span class="n">v</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">fa</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">deep</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">u</span> <span class="o">&gt;&gt;</span> <span class="n">v</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">merge</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dis</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; &#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="c-sort4" class="headerLink">
-    <a href="#c-sort4" class="header-mark"></a>C-Sort4</h2><h3 id="题意-1" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>给出一个排列，每次选择四个位置交换其中的元素，求将该排列排序成上升序列的最小操作次数。</p>]]></description></item></channel></rss>
+            &lt;/div></description></item></channel></rss>
