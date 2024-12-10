@@ -5,13 +5,13 @@
 
 ### 题意
 
-存在如下`A型`、`B型`两种砖：
+存在`A型`、`B型`两种砖：
 
-![img](https://img.dodolalorc.cn/i/2024/08/20/66c45194a139e.png)
+![img](https://uploadfiles.nowcoder.com/images/20240709/0_1720523689688/FE07EEE1F0268775C646E844B05BFF2D)
 
 现用这两种砖拼成$N\times M$的矩形，提问是否有恰好存在$K$条曲线的平铺方式，曲线如下：
 
-![img](https://img.dodolalorc.cn/i/2024/08/20/66c451fa98412.png)
+![img](https://uploadfiles.nowcoder.com/images/20240709/0_1720523697889/D9B6F4554EAD74CEBD62EFFB6A671A52)
 
 #### 数据范围
 

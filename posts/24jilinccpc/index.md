@@ -1,11 +1,6 @@
 # 2024吉林省赛补题记录
 
 
-{{< admonition quote "阿巴阿巴" false >}}
-啊，省赛，怎么两个月过去了才整理题解，这一定是在复习（确信
-<img src="https://img.dodolalorc.cn/i/2024/07/07/6689b562da957.jpg" alt="502c28827d927240463a58b8a49e94c3" style="zoom:30%;" />
-{{< /admonition >}}
-
 GYM地址：[2024吉林省赛](https://codeforces.com/gym/105170)
 
 题目顺序按照从易到难排序。

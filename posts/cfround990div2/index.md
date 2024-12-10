@@ -1,4 +1,4 @@
-# cfround990div2
+# Codeforces Round 990 (Div. 2)
 
 
 ## A. Alyona and a Square Jigsaw Puzzle

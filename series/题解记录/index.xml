@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>题解记录 - 系列 - Doごみ箱🪄</title><link>http://dodolalorc.cn/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/</link><description>题解记录 - 系列 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sat, 23 Nov 2024 18:51:44 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml"/><item><title>2023杭州ICPC区域赛</title><link>http://dodolalorc.cn/posts/23hangzhouicpc/</link><pubDate>Sat, 23 Nov 2024 18:51:44 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/23hangzhouicpc/</guid><description><![CDATA[<div class="featured-image">
-                <img src="https://img.dodolalorc.cn/i/2024/12/03/674e9e0b67e66.png" referrerpolicy="no-referrer">
+                <img src="https://img.dodolalorc.cn/i/2024/12/10/67580b0b426f5.jpg" referrerpolicy="no-referrer">
             </div><h2 id="g-snake-move" class="headerLink">
     <a href="#g-snake-move" class="header-mark"></a>G. Snake Move</h2><h3 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>$n\times m$的网格中有一条长度为$k$的贪吃蛇，贪吃蛇支持上下左右移动 1 格的操作，以及缩短 1 个身体长度的操作。</p>
 <p>设$f(i,j)$为从蛇头从初始位置到达网格中点$(i,j)$所需要的最少的操作数，网格中不可到达的格子操作数设为$0$，求解输出：</p>]]></description></item><item><title>Codeforces Round 977 (Div. 2, based on COMPFEST 16 - Final Round)</title><link>http://dodolalorc.cn/posts/cfround977div2/</link><pubDate>Fri, 25 Oct 2024 14:57:19 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cfround977div2/</guid><description><![CDATA[<div class="featured-image">
-                <img src="https://img.dodolalorc.cn/i/2024/10/26/671ce188b91d3.jpg" referrerpolicy="no-referrer">
+                <img src="https://img.dodolalorc.cn/i/2024/12/10/67580a1859420.jpeg" referrerpolicy="no-referrer">
             </div><h1 id="a-meaning-mean" class="headerLink">
     <a href="#a-meaning-mean" class="header-mark"></a>A. Meaning Mean</h1><h2 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h2><p>可以选择 2 个不同的索引$i,j$，将数组中这两个索引对应的数删除，然后将$\lfloor \frac{a_i+a_j}{2} \rfloor$添加到数组的最后。可知到最后只会剩下一个数，最大化最后剩余的这个数$x$，并输出。</p>]]></description></item><item><title>刷题记录||区间动态规划</title><link>http://dodolalorc.cn/posts/intervaldp/</link><pubDate>Wed, 11 Sep 2024 21:50:26 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/intervaldp/</guid><description><![CDATA[<div class="featured-image">
-                <img src="https://img.dodolalorc.cn/i/2024/09/21/66ee44837d8d9.jpg" referrerpolicy="no-referrer">
+                <img src="https://img.dodolalorc.cn/i/2024/12/10/67580ba9b1658.png" referrerpolicy="no-referrer">
             </div><p><strong>区间动态规划一般以区间作为动态规划的阶段。</strong></p>
 <h2 id="p1880石子合并" class="headerLink">
     <a href="#p1880%e7%9f%b3%e5%ad%90%e5%90%88%e5%b9%b6" class="header-mark"></a>[P1880]石子合并</h2><h3 id="题目描述" class="headerLink">
@@ -250,7 +250,7 @@
 </div><h2 id="f-collinear-exception" class="headerLink">
     <a href="#f-collinear-exception" class="header-mark"></a>F-Collinear Exception</h2><h3 id="题意-2" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f-2" class="header-mark"></a>题意</h3><p>在$\{1,&hellip;,n\}\times \{1,&hellip;,n\}$的坐标逐渐加入$n\times n$个数，如果即将加入的这个数与已有的形成了三点共线，则该数不能被成功加入，输出一个长度为$n\times n$的<code>01</code>串，表示第$i$个点能否成功加入。</p>]]></description></item><item><title>2024牛客暑假多校训练营Day8||补题</title><link>http://dodolalorc.cn/posts/nc24sd8/</link><pubDate>Fri, 09 Aug 2024 00:26:32 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24sd8/</guid><description><![CDATA[<div class="featured-image">
-                <img src="https://img.dodolalorc.cn/i/2024/09/21/66ee44bb3e3fb.jpg" referrerpolicy="no-referrer">
+                <img src="https://img.dodolalorc.cn/i/2024/12/10/67580d3f3b117.png" referrerpolicy="no-referrer">
             </div><h2 id="a-haitang-and-game" class="headerLink">
     <a href="#a-haitang-and-game" class="header-mark"></a>A-Haitang and Game</h2><h3 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>给出一个数组，两人轮流，每次选择数组中的两个数，若这两个数的$gcd$不在当前的数组里，就将这两个数的$gcd$加入到数组中，不能再加数的一方输。</p>
@@ -262,7 +262,7 @@
 </ul>
 <h3 id="思路" class="headerLink">
     <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>整个数组的最终含有哪些数是确定的，枚举$1\sim a_{max}$的每个数，记为$x$，查看数组中大于$x$的整数倍的数，若这些倍数的$gcd$恰好等于$x$，则$x$会出现在最终的数组中。</p>]]></description></item><item><title>2024牛客暑假多校训练营Day7||补题</title><link>http://dodolalorc.cn/posts/nc24sd7/</link><pubDate>Fri, 09 Aug 2024 00:26:24 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24sd7/</guid><description><![CDATA[<div class="featured-image">
-                <img src="https://img.dodolalorc.cn/i/2024/09/21/66ee4539036d2.jpg" referrerpolicy="no-referrer">
+                <img src="https://img.dodolalorc.cn/i/2024/12/10/67580d0599587.png" referrerpolicy="no-referrer">
             </div><h2 id="i-fight-against-the-monster" class="headerLink">
     <a href="#i-fight-against-the-monster" class="header-mark"></a>I-Fight Against the Monster</h2><h3 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>使用机器对抗怪兽，一台机器有以下两种功能：</p>
@@ -271,7 +271,7 @@
 <li>创造：需要$m$台机器同时使用，创造出$k$台新机器，每台机器仅能使用一次创造功能。</li>
 </ul>
 <p>怪兽初始血量是$h$，血量下降至$0$​时死亡，请计算初始最少需要多少机器才能打败怪兽。</p>]]></description></item><item><title>2024牛客暑假多校训练营Day6||补题</title><link>http://dodolalorc.cn/posts/nc24sd6/</link><pubDate>Mon, 05 Aug 2024 10:15:52 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24sd6/</guid><description><![CDATA[<div class="featured-image">
-                <img src="https://img.dodolalorc.cn/i/2024/09/21/66ee44c98e60d.png" referrerpolicy="no-referrer">
+                <img src="https://img.dodolalorc.cn/i/2024/12/10/67580cc38a90f.png" referrerpolicy="no-referrer">
             </div><h2 id="a-cake" class="headerLink">
     <a href="#a-cake" class="header-mark"></a>A-Cake</h2><h3 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p><code>Oscar</code>和<code>Grammy</code>玩游戏，第一阶段两人轮流在有根树上走，走到叶子停止，经过的边有两种，标<code>0</code>边或者标<code>1</code>边，记录走下的<code>01</code>串。设<code>01</code>串的长度是$m$，第二阶段<code>Oscar</code>将蛋糕切成$m$份，有些蛋糕可以是空的，按照第一阶段的<code>01</code>串顺序依次拿蛋糕（<code>1</code>代表<code>Grammy</code>拿，<code>0</code>代表<code>Oscar</code>拿），两人都想获得最多的蛋糕，求最后<code>Grammy</code>获得的蛋糕比例。</p>
@@ -282,7 +282,7 @@
 <h3 id="思路" class="headerLink">
     <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>在第二阶段，<code>Oscar</code>分蛋糕的时候，是对当前串寻找一个<code>0</code>占比最大的前缀，然后拿走占比一致的蛋糕。</p>
 <p>于是，在第一阶段时，首先树上每个节点即代表一个前缀，预处理出每个节点为前缀时<code>0</code>的占比，在之后两人轮流取数时，<code>Oscar</code>会取选择下一个节点轮流选择后<code>0</code>占比最大的节点，<code>Grammy</code>会选择<code>0</code>占比最小的节点。</p>]]></description></item><item><title>2024牛客暑假多校训练营Day5||补题</title><link>http://dodolalorc.cn/posts/nc24sd5/</link><pubDate>Wed, 31 Jul 2024 15:55:57 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24sd5/</guid><description>&lt;div class="featured-image">
-                &lt;img src="https://img.dodolalorc.cn/i/2024/09/21/66ee459d33192.png" referrerpolicy="no-referrer">
+                &lt;img src="https://img.dodolalorc.cn/i/2024/12/10/67580c6f05b30.png" referrerpolicy="no-referrer">
             &lt;/div></description></item><item><title>2024牛客暑假多校训练营Day4||补题</title><link>http://dodolalorc.cn/posts/nc24sd4/</link><pubDate>Wed, 31 Jul 2024 15:55:48 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24sd4/</guid><description><![CDATA[<h2 id="a-lct" class="headerLink">
     <a href="#a-lct" class="header-mark"></a>A-LCT</h2><h3 id="题意" class="headerLink">
     <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>给定一棵有根树，每次询问前$i$条边组成的森林中，第$c_i$个点为根的树的深度。</p>
