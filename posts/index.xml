@@ -51,7 +51,11 @@
 <li>选择两个索引$i,j(1\leq i,j\leq n)$，可以选择$i = j$。</li>
 <li>进行赋值$s_i:=s_j$。</li>
 </ul>
-<p>要求输出在进行该操作之后，字典序最小的那个字符串。</p>]]></description></item><item><title>2023杭州ICPC区域赛</title><link>http://dodolalorc.cn/posts/23hangzhouicpc/</link><pubDate>Sat, 23 Nov 2024 18:51:44 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/23hangzhouicpc/</guid><description><![CDATA[<div class="featured-image">
+<p>要求输出在进行该操作之后，字典序最小的那个字符串。</p>]]></description></item><item><title>Codeforces Round 980 (Div. 2)</title><link>http://dodolalorc.cn/posts/cfround980div2/</link><pubDate>Tue, 26 Nov 2024 14:28:27 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cfround980div2/</guid><description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2024/12/10/67580e4ad64c9.png" referrerpolicy="no-referrer">
+            </div><h2 id="a-profitable-interest-rate" class="headerLink">
+    <a href="#a-profitable-interest-rate" class="header-mark"></a>A. Profitable Interest Rate</h2><h3 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>有两种储值方式——无利可图和盈利，“盈利”可以保证盈利，但是有最低储值要求，“无利可图”类型没有利息，但是可以让“盈利”的最低储值降低。在“无利可图”储值$x$元，可以让“盈利”的最低值要求降低$2\times x$元，最低储值不能低于$0$元，两种储值均不能取出。现在<code>Alice</code>拥有$a$元，并想使存入“盈利”的金额越多越好，求<code>Alice</code>最多存入多少“盈利”类型的金额。</p>]]></description></item><item><title>2023杭州ICPC区域赛</title><link>http://dodolalorc.cn/posts/23hangzhouicpc/</link><pubDate>Sat, 23 Nov 2024 18:51:44 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/23hangzhouicpc/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://img.dodolalorc.cn/i/2024/12/10/67580b0b426f5.jpg" referrerpolicy="no-referrer">
             </div><h2 id="g-snake-move" class="headerLink">
     <a href="#g-snake-move" class="header-mark"></a>G. Snake Move</h2><h3 id="题意" class="headerLink">
@@ -66,7 +70,7 @@
 <h2 id="p1880石子合并" class="headerLink">
     <a href="#p1880%e7%9f%b3%e5%ad%90%e5%90%88%e5%b9%b6" class="header-mark"></a>[P1880]石子合并</h2><h3 id="题目描述" class="headerLink">
     <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" class="header-mark"></a>题目描述</h3><p>在一个圆形操场的四周摆放 $N$ 堆石子，现要将石子有次序地合并成一堆，规定每次只能选相邻的 $2$ 堆合并成新的一堆，并将新的一堆的石子数，记为该次合并的得分。</p>]]></description></item><item><title>线段树专题练习</title><link>http://dodolalorc.cn/posts/segtree_practice/</link><pubDate>Fri, 16 Aug 2024 22:43:59 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/segtree_practice/</guid><description><![CDATA[<div class="featured-image">
-                <img src="https://img.dodolalorc.cn/i/2024/12/10/67580e4ad64c9.png" referrerpolicy="no-referrer">
+                <img src="https://img.dodolalorc.cn/i/2024/11/25/6744609fc7b08.jpg" referrerpolicy="no-referrer">
             </div><div class="details admonition abstract open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ul fa-fw"></i>前言<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -334,6 +338,4 @@
 </ul>
 <h3 id="思路" class="headerLink">
     <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>在第二阶段，<code>Oscar</code>分蛋糕的时候，是对当前串寻找一个<code>0</code>占比最大的前缀，然后拿走占比一致的蛋糕。</p>
-<p>于是，在第一阶段时，首先树上每个节点即代表一个前缀，预处理出每个节点为前缀时<code>0</code>的占比，在之后两人轮流取数时，<code>Oscar</code>会取选择下一个节点轮流选择后<code>0</code>占比最大的节点，<code>Grammy</code>会选择<code>0</code>占比最小的节点。</p>]]></description></item><item><title>2024牛客暑假多校训练营Day5||补题</title><link>http://dodolalorc.cn/posts/nc24sd5/</link><pubDate>Wed, 31 Jul 2024 15:55:57 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24sd5/</guid><description>&lt;div class="featured-image">
-                &lt;img src="https://img.dodolalorc.cn/i/2024/12/10/67580c6f05b30.png" referrerpolicy="no-referrer">
-            &lt;/div></description></item></channel></rss>
+<p>于是，在第一阶段时，首先树上每个节点即代表一个前缀，预处理出每个节点为前缀时<code>0</code>的占比，在之后两人轮流取数时，<code>Oscar</code>会取选择下一个节点轮流选择后<code>0</code>占比最大的节点，<code>Grammy</code>会选择<code>0</code>占比最小的节点。</p>]]></description></item></channel></rss>
