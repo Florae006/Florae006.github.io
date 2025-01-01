@@ -63,7 +63,10 @@ v8((v8))--11-->v3((v3))
 <li>对于稀疏图来说大部分是INF，空间利用效率也不高</li>
 </ul>
 <h4 id="前向星" class="headerLink">
-    <a href="#%e5%89%8d%e5%90%91%e6%98%9f" class="header-mark"></a>前向星</h4><p>前向星涉及排序，所以其时间复杂度和排序算法有关，一般情况下时间复杂度为<code>O(mlog m)</code>，空间上需要两个数组（记录边的边数组、记录各点在边数组中起始位置的head数组），空间复杂度为<code>O(m+n)</code></p>]]></description></item><item><title>字符串匹配问题||前缀函数+KMP+字符串哈希</title><link>http://dodolalorc.cn/posts/string_match/</link><pubDate>Fri, 05 Jan 2024 14:11:58 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/string_match/</guid><description><![CDATA[<h2 id="字符串匹配算法" class="headerLink">
+    <a href="#%e5%89%8d%e5%90%91%e6%98%9f" class="header-mark"></a>前向星</h4><p>前向星涉及排序，所以其时间复杂度和排序算法有关，一般情况下时间复杂度为<code>O(mlog m)</code>，空间上需要两个数组（记录边的边数组、记录各点在边数组中起始位置的head数组），空间复杂度为<code>O(m+n)</code></p>]]></description></item><item><title>拓扑排序</title><link>http://dodolalorc.cn/posts/topo/</link><pubDate>Fri, 05 Jan 2024 14:20:41 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/topo/</guid><description><![CDATA[<h2 id="拓扑排序" class="headerLink">
+    <a href="#%e6%8b%93%e6%89%91%e6%8e%92%e5%ba%8f" class="header-mark"></a>拓扑排序</h2><p>前提：拓扑排序是对<u>有向无环图</u>来说的，无向图、有环图都不存在拓扑排序。</p>
+<p>拓扑排序是将图G中的所有顶点排成一个线性序列，使得对于任意一堆有边顶点&lt;u, v&gt;，在线性序列中，u都出现在v之前。</p>
+<p>拓扑排序可以反应某种方案是否是切实可行的。</p>]]></description></item><item><title>字符串匹配问题||前缀函数+KMP+字符串哈希</title><link>http://dodolalorc.cn/posts/string_match/</link><pubDate>Fri, 05 Jan 2024 14:11:58 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/string_match/</guid><description><![CDATA[<h2 id="字符串匹配算法" class="headerLink">
     <a href="#%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8c%b9%e9%85%8d%e7%ae%97%e6%b3%95" class="header-mark"></a>字符串匹配算法</h2><h3 id="暴力做法bf" class="headerLink">
     <a href="#%e6%9a%b4%e5%8a%9b%e5%81%9a%e6%b3%95bf" class="header-mark"></a>暴力做法(BF)</h3><p>简称BF(Brute Force)算法。</p>
 <p>没什么好说的，就是看到描述直接能想到的朴素做法。</p>
