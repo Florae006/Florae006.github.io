@@ -1,6 +1,5 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Twikoo - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/twikoo/</link><description>Twikoo - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Wed, 29 May 2024 15:24:24 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/twikoo/" rel="self" type="application/rss+xml"/><item><title>为twikoo添加图片功能</title><link>http://dodolalorc.cn/posts/twikoo_with_imgs/</link><pubDate>Wed, 29 May 2024 15:24:24 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/twikoo_with_imgs/</guid><description><![CDATA[<blockquote>
-<p>一篇私有配置图床，给twikoo评论插件添加图片功能的文章。</p>
-</blockquote>
+<p>一篇私有配置图床，给twikoo评论插件添加图片功能的文章。</p></blockquote>
 <h2 id="背景" class="headerLink">
     <a href="#%e8%83%8c%e6%99%af" class="header-mark"></a>背景</h2><p>背景：最近回想起来本站的twikoo评论尚未配置过图床，所以此前评论区不能上传图片，这篇就记录一下twikoo官方推荐的lsky-pro私有部署图床。</p>
 <p>选用的图床是兰空图床👉<a href="https://github.com/lsky-org/lsky-pro" target="_blank" rel="noopener noreferrer">lsky-org/lsky-pro: ☁️兰空图床(Lsky Pro) - Your photo album on the cloud. (github.com)</a></p>

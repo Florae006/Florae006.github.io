@@ -334,15 +334,72 @@ void solve() {
 }
 ```
 
-## F
+## F 双生双宿之探
 
 ### 题意
 
+计算一个数组中有多少连续子数组是双生数组。
+
 #### 数据范围
+
+- $1\leq n\leq 1e5$
+- $1\leq a_i\leq 1e9$
 
 ### 思路
 
+根据双生数组的特点，选出所有仅包含两种数的区间，在这个确定的最大的仅包含两种数的区间内计算区间中有多少个双生数组，由于仅包含两种数，可以将某种数记为 1，另一种记为-1，计算该段区间的前缀和，前缀和相同的两个端点之间的区间是双生数组。
+
 ### 代码
+
+```cpp
+void solve() {
+  ll n;
+  cin >> n;
+  for (ll i = 1; i <= n; i++) {
+    cin >> a[i];
+  }
+  ll ans = 0;
+  ll l = 1, r = 1;
+  set<ll> st;
+  st.insert(a[l]);
+  while (r <= n) {
+    // 仅包含两种元素的最远的r
+    while (r + 1 <= n && (st.size() < 2 || st.find(a[r + 1]) != st.end())) {
+      st.insert(a[++r]);
+    }
+    if (st.size() == 2) {
+      // 计算区间内区间和是0的数量
+      ll x1 = *st.begin();
+      pre[l - 1] = 0;
+      map<ll, ll> mp;
+      mp[0]++;
+      for (ll i = l; i <= r; i++) {
+        if (a[i] == x1)
+          pre[i] = pre[i - 1] + 1;
+        else
+          pre[i] = pre[i - 1] - 1;
+        mp[pre[i]]++;
+      }
+      for (auto i : mp) {
+        ans += (i.second - 1) * i.second / 2;
+      }
+    } else {
+      break;
+    }
+    // 去掉一种数
+    while (l - 1 <= r) {
+      if (pre[r] - pre[l - 1] == r - l + 1 ||
+          pre[l - 1] - pre[r] == r - l + 1) {
+        break;
+      }
+      l++;
+    }
+    st.clear();
+    st.insert(a[l]);
+  }
+  cout << ans << '\n';
+}
+```
 
 ## G 井然有序之衡
 
@@ -449,17 +506,87 @@ void solve() {
 }
 ```
 
-## I
+## I 井然有序之桠
 
 ### 题意
+
+给出排列$a$，构造另一个排列$b$，使得$\sum_{i=1}^{n} gcd(a_i,b_i)=k$。
 
 #### 数据范围
 
 - $1\leq n\leq 1e5$
+- $1\leq a_i\leq n$
 
 ### 思路
 
+构造排列使$\sum gcd(a_i,i)=k$，易知$k$的合法上界是$\frac{(n+1)\times n}{2}$，下届是$n$。从大到小遍历，找到某个端点，将数组分为$[1,r]$和$[r+1,n]$两组，右侧区间均取$a_i=i$，这个区间可以为空，找到最小的$r-1+r\leq k'$成立的端点$r$，遍历的过程中$k$减去端点划过的值。
+
+分类讨论，记$x=k-(r-1)$。如果$x$为偶数，则取$a_x=x$，剩余的$1,...,x-1,x+1,...r$从大到小两两一组交换，实现除了$a_x=x$的其他小组都是 1。
+
+如果$x$为奇数，如果$r$为偶数，会出现$gcd(x-1,x+1)$，这个值是$2$，不符合要求，这时取$a_2=2$和$a_{x-1}=x-1$，可以实现与$a_x=x$一样的构造效果，注意判断$x=2$的情况。
+特殊的，当$x=3$时，可以构造$a_2=4$和$a_4=2$，这时$gcd(a_2,4)+gcd(a_4,2)=4=3+1$可行。
+
 ### 代码
+
+```cpp
+void solve() {
+  ll n, k;
+  cin >> n >> k;
+  set<ll> st;
+  for (ll i = 1; i <= n; i++) {
+    cin >> a[i];
+    b[i] = a[i], c[a[i]] = i;
+    st.insert(i);
+  }
+  if (k < n) {
+    cout << "-1\n";
+    return;
+  }
+  ll s = 0ll, r = n;
+  while (r >= 1) {
+    if (k < r - 1 + r)
+      break;
+    st.erase(r);
+    k -= r;
+    r--;
+  }
+  if (k == 0) {
+    for (ll i = 1; i <= n; i++) {
+      cout << b[i] << ' ';
+    }
+    cout << '\n';
+    return;
+  }
+  // [r+1~n]都对应ai=i
+  ll x = k - (r - 1);
+  // 把a[1~r]构造成r-1+x
+  if (x & 1) {
+    if (r & 1) {
+      st.erase(x);
+    } else if (x - 1 > 2) {
+      st.erase(x - 1), st.erase(2);
+    } else if (x == 3 && r >= 4) {
+      b[c[2]] = 4, b[c[4]] = 2;
+      st.erase(2), st.erase(4);
+    } else if (x != 1) {
+      cout << "-1\n";
+      return;
+    }
+  } else {
+    st.erase(x);
+  }
+  vector<ll> v(st.begin(), st.end());
+  for (ll i = v.size() - 1; i - 1 >= 0; i -= 2) {
+    swap(b[c[v[i]]], b[c[v[i - 1]]]);
+  }
+
+  for (ll i = 1; i <= n; i++) {
+    cout << b[i] << ' ';
+  }
+  cout << '\n';
+}
+
+```
 
 ## J 硝基甲苯之袭
 
@@ -512,3 +639,89 @@ void init() {
   }
 }
 ```
+
+## K 硝基甲苯之魇
+
+### 题意
+
+求一个数组中，有多少个区间$[l,r](l\lt r)$满足区间内元素的最大公约数恰好等于它们的异或和。
+
+#### 数据范围
+
+- $1\leq n\leq 2e5$
+- $1\leq a_i\leq 1e9$
+
+### 思路
+
+对于一个固定的区间$[l,r]$，其最大公约数可以用某种数据结构维护（线段树/ST 表/...），实现复杂度为$O(logn)$的查询。
+
+区间异或和可以利用前缀异或实现，根据异或的性质$A \oplus 0 = A$、$A\oplus A=0$，对于数组的前缀异或($pre[i]=pre[i-1]\oplus a[i]$)，有$a_l\oplus a_{l+1}\oplus \dots \oplus a_r=pre[r]\oplus pre[l-1]$，提供$O(1)$的查询。
+
+固定右端点$r$，当$l$逐渐减少，其区间$gcd$会逐渐变小，且变化的次数是 log 级别的，通过在数据结构上二分，找出这些变化的端点，并统计在这个区间中异或和是对应的 gcd 的数量的左端点，统计数量。这个异或的数量可以通过在求前缀异或数组时预处理获得，用 map 存一下每个前缀异或值出现的位置数组，查询时，二分统计$[l_l,l_r]$中$xor$为$g\oplus pre[r]$的数量。
+
+![image.png](https://img.dodolalorc.cn/i/2025/02/04/67a22d3552904.png)
+
+### 代码
+
+```cpp
+ll a[maxn], pre[maxn];
+// ST表
+ll dp[maxn][30];
+void rmq_st(ll n) {
+  for (ll i = 1; i <= n; i++) {
+    dp[i][0] = a[i]; // 2^0
+  }
+  ll m = log(1 * n) / log(2.0);
+  for (ll j = 1; j <= m; j++) {
+    ll t = n - (1 << j) + 1;
+    for (ll i = 1; i <= t; i++) {
+      dp[i][j] = gcd(dp[i][j - 1], dp[i + (1 << (j - 1))][j - 1]);
+    }
+  }
+}
+ll rmq_find(ll l, ll r) { // 从l开始,长度为r的区间
+  ll k = log(1.0 * (r - l + 1)) / log(2.0);
+  return gcd(dp[l][k], dp[r - (1 << k) + 1][k]);
+}
+
+void solve() {
+  ll n;
+  cin >> n;
+  map<ll, vector<ll>> mp;
+  mp[0].push_back(0);
+  for (ll i = 1; i <= n; i++) {
+    cin >> a[i];
+    pre[i] = pre[i - 1] ^ a[i];
+    mp[pre[i]].push_back(i);
+  }
+  rmq_st(n);
+  ll ans = 0;
+  for (ll R = 2; R <= n; R++) {
+    // 枚举右端点
+    ll L = R - 1;
+    while (L >= 1) {
+      ll g = rmq_find(L, R);
+      ll xl = 1, xr = L;
+      while (xl < xr) {
+        ll mid = (xl + xr) / 2;
+        if (rmq_find(mid, R) == g) {
+          xr = mid;
+        } else {
+          xl = mid + 1;
+        }
+      }
+      // [xl,L]是符合rmq_find(i,R)=g的区间
+      ll x = g ^ pre[R];
+      if (mp.count(x)) {
+        auto &v = mp[x];
+        ans += lower_bound(v.begin(), v.end(), L) -
+               lower_bound(v.begin(), v.end(), xl - 1);
+      }
+      L = xl - 1;
+    }
+  }
+
+  cout << ans << '\n';
+}
+```
+

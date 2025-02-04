@@ -1,6 +1,5 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>关于Hugo的一些设置 - 分类 - Doごみ箱🪄</title><link>http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</link><description>关于Hugo的一些设置 - 分类 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 04 Jul 2024 16:31:24 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/categories/%E5%85%B3%E4%BA%8Ehugo%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/" rel="self" type="application/rss+xml"/><item><title>MutationObserver学习+实践</title><link>http://dodolalorc.cn/posts/mutationobserver/</link><pubDate>Thu, 04 Jul 2024 16:31:24 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid><description><![CDATA[<blockquote>
-<p>一篇学习 MutationObserver 的文章</p>
-</blockquote>
+<p>一篇学习 MutationObserver 的文章</p></blockquote>
 <h2 id="背景" class="headerLink">
     <a href="#%e8%83%8c%e6%99%af" class="header-mark"></a>背景</h2><p>今天调整新主题的时候，在重新设计友链样式的时候想保留原本的随机背景颜色，之前数量少的时候似乎不太明显，现在本地测试发觉加载太慢了。于是上网寻找解决思路，找到了 MutationObserver 这个 API，于是就学习了一下//此处记录一下学习过程。</p>
 <h2 id="需求分析" class="headerLink">
@@ -29,8 +28,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>原本的思路就是简单的在页面加载完成后，获取所有的友链元素，然后给每个元素设置一个随机的背景颜色。但是这样的实现方式有一个问题，就是当友链数量较多的时候，会导致页面加载变慢，因为每次都要重新计算随机颜色，并且在等待本页面加载的时候，友链的背景颜色是白色的，这样会导致页面的视觉体验不好。</p>]]></description></item><item><title>为twikoo添加图片功能</title><link>http://dodolalorc.cn/posts/twikoo_with_imgs/</link><pubDate>Wed, 29 May 2024 15:24:24 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/twikoo_with_imgs/</guid><description><![CDATA[<blockquote>
-<p>一篇私有配置图床，给twikoo评论插件添加图片功能的文章。</p>
-</blockquote>
+<p>一篇私有配置图床，给twikoo评论插件添加图片功能的文章。</p></blockquote>
 <h2 id="背景" class="headerLink">
     <a href="#%e8%83%8c%e6%99%af" class="header-mark"></a>背景</h2><p>背景：最近回想起来本站的twikoo评论尚未配置过图床，所以此前评论区不能上传图片，这篇就记录一下twikoo官方推荐的lsky-pro私有部署图床。</p>
 <p>选用的图床是兰空图床👉<a href="https://github.com/lsky-org/lsky-pro" target="_blank" rel="noopener noreferrer">lsky-org/lsky-pro: ☁️兰空图床(Lsky Pro) - Your photo album on the cloud. (github.com)</a></p>

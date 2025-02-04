@@ -1,6 +1,5 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>在前端搬砖的日子里 - 分类 - Doごみ箱🪄</title><link>http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link><description>在前端搬砖的日子里 - 分类 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 04 Jul 2024 16:31:24 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/" rel="self" type="application/rss+xml"/><item><title>MutationObserver学习+实践</title><link>http://dodolalorc.cn/posts/mutationobserver/</link><pubDate>Thu, 04 Jul 2024 16:31:24 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid><description><![CDATA[<blockquote>
-<p>一篇学习 MutationObserver 的文章</p>
-</blockquote>
+<p>一篇学习 MutationObserver 的文章</p></blockquote>
 <h2 id="背景" class="headerLink">
     <a href="#%e8%83%8c%e6%99%af" class="header-mark"></a>背景</h2><p>今天调整新主题的时候，在重新设计友链样式的时候想保留原本的随机背景颜色，之前数量少的时候似乎不太明显，现在本地测试发觉加载太慢了。于是上网寻找解决思路，找到了 MutationObserver 这个 API，于是就学习了一下//此处记录一下学习过程。</p>
 <h2 id="需求分析" class="headerLink">
