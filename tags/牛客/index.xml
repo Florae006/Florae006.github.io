@@ -1,4 +1,52 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>牛客 - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/%E7%89%9B%E5%AE%A2/</link><description>牛客 - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 15 Aug 2024 18:45:46 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E7%89%9B%E5%AE%A2/" rel="self" type="application/rss+xml"/><item><title>2024牛客暑假多校训练营Day10||补题</title><link>http://dodolalorc.cn/posts/nc24sd10/</link><pubDate>Thu, 15 Aug 2024 18:45:46 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24sd10/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>牛客 - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/%E7%89%9B%E5%AE%A2/</link><description>牛客 - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 23 Jan 2025 12:58:36 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E7%89%9B%E5%AE%A2/" rel="self" type="application/rss+xml"/><item><title>2025牛客暑寒假多校训练营Day1</title><link>http://dodolalorc.cn/posts/nc25wd1/</link><pubDate>Thu, 23 Jan 2025 12:58:36 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc25wd1/</guid><description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2025/02/05/67a26952e01a0.jpg" referrerpolicy="no-referrer">
+            </div><h2 id="a-茕茕孑立之影" class="headerLink">
+    <a href="#a-%e8%8c%95%e8%8c%95%e5%ad%91%e7%ab%8b%e4%b9%8b%e5%bd%b1" class="header-mark"></a>A 茕茕孑立之影</h2><h3 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>找一个不超过$1e18$的数$x$，使得$x$既不是任何$a_i$的倍数，也不是任何$a_i$的因数。若没有输出$-1$。</p>
+<h4 id="数据范围" class="headerLink">
+    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><ul>
+<li>$1\leq n\leq 1e5$</li>
+<li>$1\leq a_i\leq 1e9$</li>
+</ul>
+<h3 id="思路" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>观察到，如果数组中有$1$则不存在这样的数。
+$1\leq a_i\leq 1e9$，而$1\leq x\leq 1e18$，有解时任意数=输出一个大于$1e9$的质数即可。</p>
+<h3 id="代码" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ll</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="n">ll</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">sort</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;-1</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;100000007</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="b-一气贯通之刃" class="headerLink">
+    <a href="#b-%e4%b8%80%e6%b0%94%e8%b4%af%e9%80%9a%e4%b9%8b%e5%88%83" class="header-mark"></a>B 一气贯通之刃</h2><h3 id="题意-1" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>给一棵树，寻找一条简单路径，使之遍历树上所有的顶点，输出起点和终点。如果没有这样的解则输出$-1$。</p>]]></description></item><item><title>2024牛客暑假多校训练营Day10||补题</title><link>http://dodolalorc.cn/posts/nc24sd10/</link><pubDate>Thu, 15 Aug 2024 18:45:46 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24sd10/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://img.dodolalorc.cn/i/2024/12/10/67580e5224009.png" referrerpolicy="no-referrer">
             </div><h2 id="a-surrender-to-my-will" class="headerLink">
     <a href="#a-surrender-to-my-will" class="header-mark"></a>A-Surrender to My Will</h2><h3 id="题意" class="headerLink">
@@ -373,72 +421,4 @@ $$
 $$
 \binom{n}{k}\times (2^k-1)^{m-1}\times (2^{n-k})^{(m-1)} = \binom{n}{k}\times (2^n-2^{n-k})^{m-1}
 $$
-最后对$q$取模即可。</p>]]></description></item><item><title>2024牛客寒假营6||补题</title><link>http://dodolalorc.cn/posts/nc24wd6/</link><pubDate>Mon, 26 Feb 2024 19:54:36 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc24wd6/</guid><description><![CDATA[<h2 id="a-宇宙的终结" class="headerLink">
-    <a href="#a-%e5%ae%87%e5%ae%99%e7%9a%84%e7%bb%88%e7%bb%93" class="header-mark"></a>A-宇宙的终结</h2><h3 id="题意" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>在$[l,r]$中寻找某个恰好是三个不同素数的乘积的数，并输出任意一个合法答案即可。</p>
-<h4 id="数据范围" class="headerLink">
-    <a href="#%e6%95%b0%e6%8d%ae%e8%8c%83%e5%9b%b4" class="header-mark"></a>数据范围</h4><p>$1\leq l\leq r \leq 100$</p>
-<h3 id="思路" class="headerLink">
-    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>数据小，模拟即可</p>
-<h3 id="参考代码" class="headerLink">
-    <a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-mark"></a>参考代码</h3><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="n">isprime</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>    <span class="c1">// 判断素数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">isprime</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">isprime</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">isprime</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">i</span><span class="p">;</span><span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span><span class="n">j</span> <span class="o">+=</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="n">isprime</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">&gt;&gt;</span> <span class="n">r</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span><span class="n">j</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span><span class="n">k</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="p">;</span><span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span><span class="n">isprime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">isprime</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">isprime</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">!=</span> <span class="n">k</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">j</span> <span class="o">*</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="n">l</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span> <span class="o">*</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span> <span class="o">*</span> <span class="n">k</span><span class="p">;</span><span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">                <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="b-爱恨的纠葛" class="headerLink">
-    <a href="#b-%e7%88%b1%e6%81%a8%e7%9a%84%e7%ba%a0%e8%91%9b" class="header-mark"></a>B-爱恨的纠葛</h2><h3 id="题意-1" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>定义两个等长数组的亲密值：$|a_i-b_i|(1\leq i\leq n)$的最小值。给定2个数组，可以任意排列$a$数组的元素顺序，输出一个亲密度最小的方案（数组$a$的操作结果）。</p>]]></description></item></channel></rss>
+最后对$q$取模即可。</p>]]></description></item></channel></rss>
