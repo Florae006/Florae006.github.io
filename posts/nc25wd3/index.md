@@ -1,4 +1,4 @@
-# nc25wd3
+# 2025牛客暑寒假多校训练营Day3
 
 
 ## A 智乃的博弈游戏
@@ -128,7 +128,7 @@ void solve() {
 
 赛时是直接冲了 6 重循环，暴力 for 遍历枚举 6 个位置的数量可以通过此题（注意边界）。
 
-也可以仅枚举 3 个顶点的位置，计算三遍的位置，判断成立条件。
+也可以仅枚举 3 个顶点的位置，计算三边位置的值，判断成立条件。
 
 ### 代码：枚举 6 位
 
@@ -203,11 +203,15 @@ void solve() {
 
 ### 思路
 
-要找出一种可以在任意层数上复刻的遍历思路，下图是一种思路，每次先向下遍历连到下层的点，再回复到右端点。
+$n$比较小，可以打表存答案输出。
+
+法2：要找出一种可以在任意层数上复刻的遍历思路，下图是一种思路，每次先向下遍历连到下层的点，再回复到右端点。
 
 ![abf8cedc5efe92d97000f75ce4c5429b.png](https://img.dodolalorc.cn/i/2025/02/16/67b13c2ae3c4b.png)
 
-### 代码
+法3：递归搜索，类比汉诺塔，如果想完成 1→2→3→1 的顺序，需要先把以 2 为上顶点的三角形遍历完，指针回复到 2 号位置，继续完成 2→3，遍历 3 为上顶点的三角形，最后回到 1。
+
+### 代码：某种顺序
 
 ```cpp
 void solve() {
@@ -246,6 +250,50 @@ void solve() {
 }
 ```
 
+### 代码：递归
+
+```cpp
+vector<ll> ans;
+vector<vector<pll>> G;
+ll tot;
+void add_edge(ll p1, ll p2) {
+  vis[tot] = false;
+  G[p1].push_back({p2, tot}); // 终点和这条边的编号
+  G[p2].push_back({p1, tot++});
+}
+
+void dfs(ll p) {
+  for (auto i : G[p]) {
+    if (vis[i.second])
+      continue;
+    vis[i.second] = true;
+    dfs(i.first);
+  }
+  ans.push_back(p);
+}
+
+void solve() {
+  ll n;
+  cin >> n;
+  G.assign((n + 1) * (n + 2) / 2 + 1, vector<pll>());
+  for (ll i = 1; i <= n; i++) {
+    // 第i层
+    for (ll j = 1; j <= i; j++) {
+      ll p1 = (i - 1) * i / 2 + j;
+      ll p2 = p1 + i, p3 = p1 + i + 1;
+      add_edge(p1, p2);
+      add_edge(p2, p3);
+      add_edge(p3, p1);
+    }
+  }
+  dfs(1);
+  cout << "Yes\n";
+  for (auto i : ans) {
+    cout << i << ' ';
+  }
+  cout << '\n';
+}
+```
 ## M 智乃的牛题
 
 ### 题意
