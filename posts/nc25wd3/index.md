@@ -271,6 +271,237 @@ void solve() {
 }
 ```
 
+<<<<<<< HEAD
+**类似题**：[因数个数和](https://ac.nowcoder.com/acm/problem/17450)
+
+## K 智乃的逆序数
+
+### 题意
+
+定义一个紧密排序数组：将数组元素按照从小到大排序后，相邻元素之间的差值是$1$。当两个数组没有任何相同元素，则这两个数组是不相交的。
+
+现在有$n$个互不相交的紧密数组，用这些数组中的元素组合成一个逆序数恰好为$k$的新数组，要求新数组中的数之间保持各自在原来数组中的相对顺序。
+
+#### 数据范围
+
+- $1\leq n\leq 1000$
+- $0\leq k\leq 1e6$
+- $1\leq a_{i,j}\leq 1e9$
+- 测试文件的数组长度之和不超过$10^3$
+
+### 思路
+
+新数组中不改变数字之间在原数组中的相对顺序，且这些数组不会相交，那么每个数组是一个范围在$[l,r]$的数的排列，不管怎么改变他们在新数组中的位置，这个小排列中的数形成的逆序数对对数不会减少或增加，当按照最小值排序依次填入新数组时，就是逆序数最小的新数组。
+
+数组之间按照最小值为第一关键字升序排序，如果排序序号较大的数组中的元素放在序号小的数组中的数前面，会增加逆序数。最多的逆序数是数组按照逆序填入新数组时，从大到小枚举数组，计算元素需要向前移动几个位置能恰好满足$k$，也可以按组进行冒泡排序，合法的冒泡排序交换的次数就是增加的逆序数的数量。
+
+### 代码：枚举
+
+```cpp
+pair<vector<ll>, ll> inverse_num(vector<ll> v) {  // 归并排序求逆序数
+  ll n = v.size();
+  if (n <= 1)
+    return {v, 0};
+  ll mid = n / 2;
+  vector<ll> vl, vr;
+  for (ll i = 0; i < n; i++) {
+    if (i < mid)
+      vl.push_back(v[i]);
+    else
+      vr.push_back(v[i]);
+  }
+  auto [arr_l, invl] = inverse_num(vl);
+  auto [arr_r, invr] = inverse_num(vr);
+  ll nl = arr_l.size(), nr = arr_r.size();
+
+  arr_l.push_back(inf), arr_r.push_back(inf);
+
+  ll i = 0, j = 0;
+
+  vector<ll> arr;
+  ll inv = invl + invr;
+  while (i < nl || j < nr) {
+    if (arr_l[i] <= arr_r[j]) {
+      inv += j;
+      arr.push_back(arr_l[i]);
+      i++;
+    } else {
+      arr.push_back(arr_r[j]);
+      j++;
+    }
+  }
+  return {arr, inv};
+}
+
+void solve() {
+  ll n, k;
+  cin >> n >> k;
+
+  vector<vector<ll>> v;
+  vector<array<ll, 3>> info;
+
+  ll tot_len = 0;
+  ll min_ans = 0, max_ans = 0;
+  for (ll i = 0; i < n; i++) {
+    ll m;
+    cin >> m;
+    tot_len += m;
+    vector<ll> w(m);
+    for (auto &j : w) {
+      cin >> j;
+    }
+    v.push_back(w);
+    ll ni = inverse_num(w).second;
+    info.push_back({*min_element(w.begin(), w.end()), m, i});
+    min_ans += ni, max_ans += ni;
+  }
+
+  // 每个数组的最小元素，大小，位置
+  sort(info.begin(), info.end());
+  for (ll i = 0; i < n; i++) {
+    auto [l, m, idx] = info[i];
+    if (i == 0) {
+      pre[i] = m;
+    } else {
+      pre[i] = pre[i - 1] + m;
+    }
+  }
+  for (ll i = n - 1; i >= 0; i--) {
+    auto [l, m, idx] = info[i];
+    max_ans += (pre[i] - m) * m;
+  }
+  if (k < min_ans || k > max_ans) {
+    cout << "No\n";
+    return;
+  }
+
+  cout << "Yes\n";
+  ll ans = min_ans, i = n - 1, p = 0;
+  ll las = -1;
+  vector<ll> arr(tot_len, -1);
+  while (ans < k && i < n && i >= 0) {
+    auto [l, m, idx] = info[i];
+    auto w = v[idx];
+    if (ans + (pre[i] - m) * m <= k) {
+      // 数组idx放在首位
+      for (ll j = p; j <= p + m - 1; j++) {
+        arr[j] = w[j - p];
+      }
+      p += m;
+      ans += (pre[i] - m) * m;
+      i--;
+      continue;
+    }
+
+    ll t = (k - ans) / (pre[i] - m); // 完整挪动t个数
+    for (ll j = p; j <= p + t - 1; j++) {
+      arr[j] = w[j - p];
+    }
+    p += t;
+    ll ti = (pre[i] - m) * (t + 1) - (k - ans);
+    arr[p + ti] = w[t];
+    las = t + 1;
+    break;
+  }
+  for (ll j = 0; j < i; j++) {
+    auto [l, m, idx] = info[j];
+    for (auto e : v[idx]) {
+      while (arr[p] != -1 && p + 1 < tot_len)
+        p++;
+      arr[p++] = e;
+    }
+  }
+  for (ll j = las == -1 ? 0 : las; i < n && i >= 0 && j < info[i][1]; j++) {
+    auto [l, m, idx] = info[i];
+    ll e = v[idx][j];
+    while (arr[p] != -1 && p + 1 < tot_len)
+      p++;
+    arr[p++] = e;
+  }
+
+  for (auto i : arr) {
+    cout << i << ' ';
+  }
+  cout << '\n';
+}
+```
+
+### 代码：冒泡排序
+
+```cpp
+void solve() {
+  ll n, k;
+  cin >> n >> k;
+
+  vector<vector<ll>> v;
+  vector<array<ll, 3>> info;
+
+  ll min_ans = 0, tot = 0;
+  for (ll i = 0; i < n; i++) {
+    ll m, l = inf;
+    cin >> m;
+    tot += m;
+    vector<ll> w(m);
+    for (auto &j : w) {
+      cin >> j;
+      l = min(l, j);
+    }
+    v.push_back(w);
+    ll ni = 0;
+    for (ll t = 0; t < m; t++) {
+      for (ll f = t + 1; f < m; f++) {
+        ni += (w[t] > w[f]);
+      }
+    }
+    min_ans += ni;
+    info.push_back({l, m, i});
+  }
+
+  if (k < min_ans) {
+    cout << "No\n";
+    return;
+  }
+
+  // 进行一定次数的冒泡排序
+  sort(info.begin(), info.end());
+  k -= min_ans;
+
+  vector<pll> arr;
+
+  for (ll i = 0; i < n; i++) {
+    ll idx = info[i][2];
+    for (ll j : v[idx]) {
+      arr.push_back({j, idx});
+    }
+  }
+
+  for (ll i = 0; i < tot && k > 0; i++) {
+    for (ll j = 0; j < tot - 1; j++) {
+      if (arr[j].first < arr[j + 1].first &&
+          arr[j].second != arr[j + 1].second && k > 0) {
+        k--;
+        swap(arr[j], arr[j + 1]);
+      } else if (k <= 0) {
+        break;
+      }
+    }
+  }
+
+  if (k > 0) {
+    cout << "No\n";
+    return;
+  }
+
+  cout << "Yes\n";
+  for (auto i : arr) {
+    cout << i.first << ' ';
+  }
+  cout << '\n';
+}
+```
+
+=======
+>>>>>>> refs/remotes/origin/main
 ## L 智乃的三角遍历
 
 ### 题意
