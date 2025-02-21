@@ -500,8 +500,6 @@ void solve() {
 }
 ```
 
-=======
->>>>>>> refs/remotes/origin/main
 ## L 智乃的三角遍历
 
 ### 题意
