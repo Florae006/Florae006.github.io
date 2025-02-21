@@ -271,7 +271,6 @@ void solve() {
 }
 ```
 
-<<<<<<< HEAD
 **类似题**：[因数个数和](https://ac.nowcoder.com/acm/problem/17450)
 
 ## K 智乃的逆序数
