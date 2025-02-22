@@ -273,6 +273,93 @@ void solve() {
 
 **类似题**：[因数个数和](https://ac.nowcoder.com/acm/problem/17450)
 
+## I 智乃的兔子跳
+
+### 题意
+
+在坐标$\{x_1,x_2,\dots ,x_n\}$上各有一个胡萝卜，这$n$个胡萝卜的坐标各不重合，兔子要选择一个起始坐标$p$和一个跳跃步长$k$，以获得最多的胡萝卜个数。求出获得最多胡萝卜的$p$和$k$。
+
+#### 数据范围
+
+- $1\leq n\leq 1e5$
+- $1\leq x_i\leq 1e9$
+- $0\leq p\leq 1e9$
+- $2\leq k\leq 1e9$
+
+### 思路
+
+随机化算法，如果每个坐标上都有胡萝卜，设计步长为 2，可以获得$\max (奇数个数,偶数个数)$个胡萝卜，任选两个胡萝卜，在最佳方案中的概率会大于$\frac{1}{2}\times \frac{1}{2}$，随机选择两个胡萝卜，枚举其距离的质因数，更新最优的方案，随机的次数不超过可行的时间复杂度即可。
+
+### 代码
+
+```cpp
+void solve() {
+  ll n;
+  cin >> n;
+  for (ll i = 1; i <= n; i++) {
+    cin >> a[i];
+  }
+
+  if (n == 1) {
+    cout << a[1] << " 2\n";
+    return;
+  }
+
+  ll ans = 0, pi = a[1], ki = 2;
+  auto update = [&](ll p, ll k) {
+    ll cnt = 0;
+    for (ll i = 1; i <= n; i++) {
+      if ((a[i] - p) % k == 0)
+        cnt++;
+    }
+    if (cnt > ans) {
+      ans = cnt;
+      pi = p, ki = k;
+    }
+  };
+
+  auto check = [&](ll x, ll y) {
+    x = a[x], y = a[y];
+    ll d = abs(y - x);
+    ll k = d;
+    ll p = x % k;
+    for (ll t = 2; t * t <= d; t++) {
+      if (d % t == 0) {
+        while (d % t == 0)
+          d /= t;
+        k = t;
+        p = x % k;
+        update(p, k);
+      }
+    }
+
+    if (d > 1) {
+      k = d;
+      p = x % k;
+      update(p, k);
+    }
+  };
+
+  random_device rd;
+  mt19937 gen(rd());
+  uniform_int_distribution<> rnd(1, n);
+
+  ll tot = 100;
+  while (tot--) {
+    ll i = rnd(gen);
+    ll j = rnd(gen);
+    while (i == j) {
+      j = rnd(gen);
+    }
+    if (abs(a[i] - a[j]) <= 1)
+      continue;
+    check(i, j);
+  }
+
+  cout << pi << ' ' << ki << '\n';
+}
+```
+
 ## K 智乃的逆序数
 
 ### 题意
