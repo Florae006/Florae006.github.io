@@ -360,6 +360,207 @@ void solve() {
 }
 ```
 
+## J 智乃画二叉树
+
+### 题意
+
+使用`\`、`/`、`_`画六边形二叉树，形似：
+
+![image.png](https://img.dodolalorc.cn/i/2025/02/25/67bd4123237d5.png)
+
+要去掉不存在的节点，并用一圈`*`区分范围。
+
+#### 数据范围
+
+- $1\leq n\leq 99$
+- $1\leq k\leq 7$
+
+### 思路
+
+先画出满二叉树，再根据树的结构填写序号和删去节点。
+### 代码
+
+```cpp
+ll a[maxn], b[maxn];
+ll fa[maxn];
+
+ll tot;
+pll tree[400];
+
+ll w(ll i) {
+  if (i == 1)
+    return 4;
+  return (w(i - 1) + 1) << 1;
+}
+ll h(ll i) { return 3 * (1ll << (i - 1)); }
+
+ll H, W;
+
+char maz[200][400];
+void paint() { // 满二叉树
+  memset(maz, ' ', sizeof(maz));
+  vector<pll> v;
+  for (ll j = 0; j < 3; j++) {
+    for (ll i = 1; i <= W; i++) {
+      char c = ' ';
+      if ((j == 0 && i % 6 == 1) || (j == 1 && i % 6 == 4) ||
+          (j == 2 && i % 12 == 7)) {
+        c = '\\';
+      } else if ((j == 0 && i % 6 == 4) || (j == 1 && i % 6 == 1) ||
+                 (j == 2 && i % 12 == 4)) {
+        c = '/';
+      } else if ((j == 0 || j == 2) && (i % 6 == 2 || i % 6 == 3)) {
+        c = '_';
+      } else if (j == 1 && i % 6 == 2) {
+        c = '0';
+      }
+      maz[H - j][i] = c;
+      if (j == 2 && (i % 12 == 4 || i % 12 == 7)) {
+        v.push_back({H - j, i});
+      }
+    }
+  }
+
+  while (v.size() >= 2) {
+    while (v.size() >= 2 && v[1].second - v[0].second > 3) { // 延长线
+      vector<pll> tmp;
+      for (ll i = 0; i < (ll)v.size(); i++) {
+        pll p = v[i];
+        char c = maz[p.first][p.second];
+        if (i % 2 == 0)
+          p.first -= 1, p.second += 1;
+        else
+          p.first -= 1, p.second -= 1;
+        maz[p.first][p.second] = c;
+        tmp.push_back(p);
+      }
+      v = tmp;
+    }
+
+    vector<pll> tmp;
+
+    for (ll i = 0; i + 1 < (ll)v.size(); i += 2) {
+      pll p = v[i];
+      p.first -= 1;
+      maz[p.first][p.second] = '\\', maz[p.first][p.second + 1] = '_',
+      maz[p.first][p.second + 2] = '_', maz[p.first][p.second + 3] = '/',
+      p.first -= 1;
+      maz[p.first][p.second] = '/', maz[p.first][p.second + 1] = '0',
+      maz[p.first][p.second + 3] = '\\';
+      p.first -= 1;
+      maz[p.first][p.second + 1] = maz[p.first][p.second + 2] = '_';
+      if (i % 4 == 0) {
+        p.second += 3;
+        maz[p.first][p.second] = '/';
+        tmp.push_back(p);
+      } else {
+        maz[p.first][p.second] = '\\';
+        tmp.push_back(p);
+      }
+    }
+    v = tmp;
+  }
+
+  maz[v.front().first][v.front().second] = ' ';
+
+  tot = 1;
+  for (ll i = 1; i <= H; i++) {
+    for (ll j = 1; j <= W; j++) {
+      if (maz[i][j] == '0') {
+        tree[tot++] = {i, j};
+      }
+    }
+  }
+}
+
+void dfs(ll p, ll i) {
+  if (p < 10)
+    maz[tree[i].first][tree[i].second] = p + '0';
+  else
+    maz[tree[i].first][tree[i].second] = p / 10 + '0',
+    maz[tree[i].first][tree[i].second + 1] = p % 10 + '0';
+
+  if (a[p] != -1)
+    dfs(a[p], i * 2);
+  if (b[p] != -1)
+    dfs(b[p], i * 2 + 1);
+}
+ll nI, I, nJ, J;
+void cut_zero() {
+  for (ll i = 1; i < tot; i++) {
+    pll p = tree[i];
+    if (maz[p.first][p.second] != '0') {
+      I = max(I, p.first + 1);
+      J = max(J, p.second + 2);
+      nI = min(nI, p.first - 1);
+      nJ = min(nJ, p.second - 1);
+      continue;
+    }
+    // 删掉六边形
+    maz[p.first][p.second] = maz[p.first][p.second - 1] =
+        maz[p.first][p.second + 2] = ' ';
+    maz[p.first + 1][p.second - 1] = maz[p.first + 1][p.second] =
+        maz[p.first + 1][p.second + 1] = maz[p.first + 1][p.second + 2] = ' ';
+    maz[p.first - 1][p.second] = maz[p.first - 1][p.second + 1] = ' ';
+    // 删掉延长线
+    char c = maz[p.first - 1][p.second - 1];
+    if (c == ' ') {
+      c = maz[p.first - 1][p.second + 2];
+      p.first -= 1, p.second += 2;
+    } else {
+      p.first -= 1, p.second -= 1;
+    }
+    while (c != ' ' && maz[p.first][p.second] == c) {
+      maz[p.first][p.second] = ' ';
+      if (c == '/')
+        p.first -= 1, p.second += 1;
+      else
+        p.first -= 1, p.second -= 1;
+    }
+  }
+}
+
+void solve() {
+  ll n, k;
+  cin >> n >> k;
+  for (ll i = 1; i <= n; i++) {
+    fa[i] = -1;
+  }
+  H = h(k), W = w(k);
+  paint();
+  for (ll i = 1; i <= n; i++) {
+    cin >> a[i] >> b[i];
+    if (a[i] != -1)
+      fa[a[i]] = i;
+    if (b[i] != -1)
+      fa[b[i]] = i;
+  }
+  ll rt = -1;
+  for (ll i = 1; i <= n; i++) {
+    if (fa[i] == -1) {
+      rt = i;
+      break;
+    }
+  }
+  // 填数
+  dfs(rt, 1);
+  // 删
+  nI = H, nJ = W, I = 1, J = 1;
+  cut_zero();
+  // 打印
+  for (ll i = nI - 1; i <= I + 1; i++) {
+    for (ll j = nJ - 1; j <= J + 1; j++) {
+      if (i == nI - 1 || i == I + 1 || j == nJ - 1 || j == J + 1) {
+        cout << '*';
+      } else {
+        cout << maz[i][j];
+      }
+    }
+    cout << '\n';
+  }
+}
+```
+
 ## K 智乃的逆序数
 
 ### 题意
