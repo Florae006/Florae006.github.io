@@ -273,6 +273,142 @@ void solve() {
 
 **类似题**：[因数个数和](https://ac.nowcoder.com/acm/problem/17450)
 
+## H 智乃与黑白树
+
+### 题意
+
+一棵节点数为$n$的黑白树，每个节点为黑色或白色，定义一棵黑白树的权值是树中所有黑色节点到白色节点的简单路径长度之和，路径长度是路径中经过边的数量。
+
+询问如果切掉第$i$条边，产生的两棵子树的权值分别是多少？
+
+#### 数据范围
+
+- $2\leq n\leq 1e5$
+
+### 思路
+
+换根更新以$i$为根的子树的权值。
+
+```mermaid
+flowchart TB
+    c1((p))-.连接.->a1((v))
+    subgraph 子树v
+    a1-->a2((s1))
+    a1-->a3((s2))
+    end
+    subgraph 当前的树p
+    c1-->c2((s1))
+    c1-->c3((s2))
+    end
+```
+
+如图，当前的操作是将子树$v$的信息更新到以$p$为根的树上，记以$i$为根的子树的黑/白色节点数是$num[i][0/1]$，子树$i$中的黑/白色节点到根$i$的距离之和是$g[i][0/1]$，$f[i]$为子树$i$的权值，那么在 dfs 递归更新的时候，转移是：
+
+```cpp
+void pushup(ll rt, ll p) { // 更新以rt为根，p为子节点的信息
+  f[rt] += f[p] + g[rt][0] * num[p][1] + g[rt][1] * num[p][0] +
+           (num[p][0] + g[p][0]) * num[rt][1] +
+           (num[p][1] + g[p][1]) * num[rt][0];
+  g[rt][0] += num[p][0] + g[p][0], g[rt][1] += num[p][1] + g[p][1];
+  num[rt][0] += num[p][0], num[rt][1] += num[p][1];
+}
+```
+
+而删边的时候转移是反过来：
+
+```cpp
+void cutlink(ll rt, ll p) { // 切断rt为父节点的子树p
+  g[rt][0] -= num[p][0] + g[p][0], g[rt][1] -= num[p][1] + g[p][1];
+  num[rt][0] -= num[p][0], num[rt][1] -= num[p][1];
+  f[rt] -= f[p] + g[rt][0] * num[p][1] + g[rt][1] * num[p][0] +
+           (num[p][0] + g[p][0]) * num[rt][1] +
+           (num[p][1] + g[p][1]) * num[rt][0];
+}
+```
+
+在切边的时候，按顺序换根，更新权值。
+
+### 代码
+
+```cpp
+ll f[maxn], g[maxn][2], num[maxn][2], clr[maxn];
+ll fa[maxn];
+vector<vector<ll>> tree;
+void add_edge(ll u, ll v) {
+  tree[u].push_back(v);
+  tree[v].push_back(u);
+}
+
+void pushup(ll rt, ll p) { // 更新以rt为根，p为子节点的信息
+  f[rt] += f[p] + g[rt][0] * num[p][1] + g[rt][1] * num[p][0] +
+           (num[p][0] + g[p][0]) * num[rt][1] +
+           (num[p][1] + g[p][1]) * num[rt][0];
+  g[rt][0] += num[p][0] + g[p][0], g[rt][1] += num[p][1] + g[p][1];
+  num[rt][0] += num[p][0], num[rt][1] += num[p][1];
+}
+void cutlink(ll rt, ll p) { // 切断rt为父节点的子树p
+  g[rt][0] -= num[p][0] + g[p][0], g[rt][1] -= num[p][1] + g[p][1];
+  num[rt][0] -= num[p][0], num[rt][1] -= num[p][1];
+  f[rt] -= f[p] + g[rt][0] * num[p][1] + g[rt][1] * num[p][0] +
+           (num[p][0] + g[p][0]) * num[rt][1] +
+           (num[p][1] + g[p][1]) * num[rt][0];
+}
+
+void dfs(ll p, ll fr) {
+  fa[p] = fr;
+  num[p][clr[p]]++;
+  for (auto v : tree[p]) {
+    if (v == fr)
+      continue;
+    dfs(v, p);
+    pushup(p, v);
+  }
+}
+
+void solve() {
+  ll n;
+  string s;
+  cin >> n >> s;
+  s = " " + s;
+  for (ll i = 1; i <= n; i++) {
+    clr[i] = s[i] == 'w';
+  }
+  tree.assign(n + 1, vector<ll>());
+  vector<pll> ve;
+  for (ll i = 1; i <= n - 1; i++) {
+    ll u, v;
+    cin >> u >> v;
+    add_edge(u, v);
+    ve.push_back({u, v});
+  }
+  ll cur = 1; // 当前根节点
+  dfs(cur, -1);
+  for (auto [u, v] : ve) {
+    ll p;
+    if (fa[v] == u)
+      p = v;
+    else
+      p = u;
+    vector<pll> w;
+    while (p != cur) {
+      w.push_back({fa[p], p}); // 要切除的边
+      p = fa[p];
+    }
+    reverse(w.begin(), w.end());
+    for (ll k = 0; k < (ll)w.size(); k++) {
+      auto [i, j] = w[k];
+      // 将i<-j变成j->i
+      cutlink(i, j);
+      if (k == (ll)w.size() - 1)
+        cout << f[u] << ' ' << f[v] << '\n';
+      pushup(j, i);
+      fa[i] = j;
+      cur = j;
+    }
+  }
+}
+```
+
 ## I 智乃的兔子跳
 
 ### 题意
@@ -378,6 +514,7 @@ void solve() {
 ### 思路
 
 先画出满二叉树，再根据树的结构填写序号和删去节点。
+
 ### 代码
 
 ```cpp
