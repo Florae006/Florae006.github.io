@@ -255,7 +255,7 @@ void solve() {
 #### 数据范围
 
 - $1\leq n\leq 1e5$
-- $1\leq m\leq qe5$
+- $1\leq m\leq 1e5$
 - $\sum|s_i|\leq 1e6$
 
 ### 思路
@@ -613,15 +613,15 @@ void solve() {
 
 ```mermaid
 flowchart TB
-    c1((p))-.连接.->a1((v))
-    subgraph 子树v
-    a1-->a2((s1))
-    a1-->a3((s2))
-    end
-    subgraph 当前的树p
-    c1-->c2((s1))
-    c1-->c3((s2))
-    end
+c1((p))-.连接.->a1((v))
+subgraph 子树v
+a1-->a2((s1))
+a1-->a3((s2))
+end
+subgraph 当前的树p
+c1-->c2((s1))
+c1-->c3((s2))
+end
 ```
 
 如图，当前的操作是将子树$v$的信息更新到以$p$为根的树上，记以$i$为根的子树的黑/白色节点数是$num[i][0/1]$，子树$i$中的黑/白色节点到根$i$的距离之和是$g[i][0/1]$，$f[i]$为子树$i$的权值，那么在 dfs 递归更新的时候，转移是：
