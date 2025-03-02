@@ -1,4 +1,4 @@
-# 2025牛客暑寒假多校训练营Day3
+# 2025牛客暑寒假多校训练营Day3（完結）
 
 
 ## A 智乃的博弈游戏
@@ -29,15 +29,337 @@ else:
     print("No")
 ```
 
-## B
+## B 智乃的质数手串
 
 ### 题意
 
+有一个环形的手串，第一个小球的编号是$0$，上面有一个数字$a_0$...第$n$个小球的编号是$n-1$，上面有一个数字$a_{n-1}$。
+
+遵循以下规则：
+
+- 手串上只有一个小球，则可以直接取下。
+- 若当前小球上的数字和其顺时针相邻的下一个小球的数字相加的和是一个质数，则可以拿下当前的小球。
+
+给出手串的结构，请问是否可以将小球全部取下来，取下来的合法序号顺序是什么？
+
 #### 数据范围
+
+- $1\leq n\leq 1e5$
+- $1\leq a_i\leq 1e5$
 
 ### 思路
 
+当手串是链状的时候，若要将第一个取下来，则需要将序号大于 1 的第一个小球前的所有小球取下来，或者第二个小球前的所有小球取下来...很明显这是一个栈的结构，当将要入栈的小球可以和栈顶的数构成质数，则进行`pop`操作，知道栈为空或不能构成质数，才停止操作，将小球入栈。
+
+而在环状手串上，需要维护一个长度为$n$的区间，在这个区间上测试是否存在栈的大小只剩 1 的情况，当栈底的小球的序号与栈顶的序号超过$n$的区间长度，需要将栈底的`pop`，这个数据结构需要支持两端的`pop`操作，应当使用`deque`模拟操作。
+
 ### 代码
+
+```cpp
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef double ld;
+typedef unsigned long ul;
+typedef long long ll;
+typedef unsigned long long ull;
+typedef pair<ll, ll> pll;
+
+const ll maxn = 2e6 + 50;
+
+ll lowbit(ll x) { return x & -x; }
+
+ll a[maxn], b[maxn], c[maxn], d[maxn];
+ll pre[maxn], suf[maxn];
+ll diff[maxn];
+bool vis[maxn];
+
+vector<ll> primes;
+bool isprime[maxn];
+void init_prime() {
+  ll w = maxn - 1;
+  for (ll i = 0; i <= w; i++) {
+    isprime[i] = true;
+  }
+  isprime[0] = isprime[1] = false;
+  for (ll i = 2; i <= w; i++) {
+    if (!isprime[i])
+      continue;
+    for (ll j = 2 * i; j <= w; j += i) {
+      isprime[j] = false;
+    }
+  }
+}
+vector<vector<ll>> factors;
+void init_factor() {
+  ll w = maxn - 1;
+  factors.assign(w + 1, vector<ll>());
+  for (ll i = 1; i <= w; i++) {
+    for (ll j = i; j <= w; j += i) {
+      factors[j].push_back(i);
+    }
+  }
+}
+
+void solve() {
+  ll n;
+  cin >> n;
+  for (ll i = 0; i < n; i++) {
+    cin >> a[i];
+    a[i + n] = a[i];
+  }
+  deque<pll> q;
+  ll pos = -1;
+  for (ll i = 0; i < 2 * n; i++) {
+    while (!q.empty() && isprime[a[i] + q.back().first]) {
+      q.pop_back();
+    }
+    while (!q.empty() && i - q.front().second + 1 > n) {
+      q.pop_front();
+    }
+    q.push_back({a[i], i});
+    if (q.size() == 1 && i >= n) {
+      pos = i % n; // 最后一个入栈的数
+      break;
+    }
+  }
+
+  if (pos == -1) {
+    cout << "No\n";
+    return;
+  }
+  cout << "Yes\n";
+  q.clear();
+  for (ll i = pos + 1; i <= pos + n; i++) {
+    while (!q.empty() && isprime[a[i] + q.back().first]) {
+      cout << q.back().second << ' ';
+      q.pop_back();
+    }
+    q.push_back({a[i], i % n});
+  }
+  cout << q.back().second << '\n';
+}
+
+void init() { init_prime(); }
+
+int main(void) {
+  ios::sync_with_stdio(false);
+  cin.tie(0);
+  ll _t = 1;
+  init();
+  while (_t--) {
+    solve();
+  }
+
+  return 0;
+}
+```
+
+## C 智乃的 Notepad(Easy version)
+
+### 题意
+
+有$n$个字符串，需要将它们都单独呈现在显示屏上，只能使用$26$个字母和退格键(`\b`可以删去一个字符)，提问至少需要敲几下键盘？
+
+#### 数据范围
+
+- $1\leq n\leq 1e5$
+- $m=1$
+- $\sum|s_i|\leq 1e6$
+
+### 思路
+
+当两个单词前缀相同时，对比分别打印两个单词，可以减少一个公共前缀的长度的次数，最后可以把最长的单词留在屏幕上。
+
+若建立字典树，答案就是字典树上边的数量的两倍减去最长单词的长度。
+
+也可以根据字典序排序，也可以把前缀相同的放在相邻的位置。
+
+### 代码：字典序排序
+
+```cpp
+void solve() {
+  ll n, m;
+  cin >> n >> m;
+  ll mx = 0;
+  vector<string> v;
+  for (ll i = 1; i <= n; i++) {
+    string s;
+    cin >> s;
+    v.push_back(s);
+    mx = max((ll)s.size(), mx);
+  }
+  sort(v.begin(), v.end());
+  while (m--) {
+    ll l, r;
+    cin >> l >> r;
+    ll ans = v[0].size() * 2;
+    for (ll i = 1; i < n; i++) {
+      ll j = 0;
+      ans += v[i].size() * 2;
+      while (j < (ll)v[i - 1].size() && j < (ll)v[i].size() &&
+             v[i - 1][j] == v[i][j]) {
+        j++;
+      }
+      ans -= j * 2;
+    }
+    cout << ans - mx << '\n';
+  }
+}
+```
+
+### 代码：字典树
+
+```cpp
+ll tot = 0;
+ll tree[maxn][26];
+bool exist[maxn];
+void insert(string s, ll n) {
+  ll p = 0;
+  for (ll i = 0; i < n; i++) {
+    ll c = s[i] - 'a';
+    if (!tree[p][c]) {
+      tree[p][c] = ++tot;
+    }
+    p = tree[p][c];
+  }
+  exist[p] = true;
+}
+
+void solve() {
+  ll n, m;
+  cin >> n >> m;
+  ll mx = 0;
+  for (ll i = 1; i <= n; i++) {
+    string s;
+    cin >> s;
+    insert(s, s.size());
+    mx = max((ll)s.size(), mx);
+  }
+  while (m--) {
+    ll l, r;
+    cin >> l >> r;
+    ll ans = tot * 2 - mx;
+    cout << ans << '\n';
+  }
+}
+```
+
+## D 智乃的 Notepad(Hard version)
+
+### 题意
+
+情景同 C 题，在此版本，需要支持$m$次查询，得到完成打印区间$[l,r]$内的单词需要的最少操作次数。
+
+#### 数据范围
+
+- $1\leq n\leq 1e5$
+- $1\leq m\leq qe5$
+- $\sum|s_i|\leq 1e6$
+
+### 思路
+
+离线处理查询的区间，范围$[l,r]$内的操作数是以$[l,r]$内的单词建立的字典树的边数 ×2-最长单词长度，考虑字典树的建树过程，每个单词会覆盖前若干个单词的部分前缀，在覆盖的过程中，前面的单词的贡献的点数部分转移到当前的单词上，将字符串的序号看作不同的颜色，在着色的过程中，更新各个颜色对应的贡献，在加入新的单词$i$时，可以计算所有以$i$为右端点的查询区间的答案。
+
+### 代码
+
+```cpp
+ll lowbit(ll x) { return (x) & (-x); }
+
+ll n, m;
+ll a[maxn], b[maxn], c[maxn];
+
+ll bitree[maxn];          // BIT树
+void update(ll p, ll x) { // 单点修改a[p]+=x
+  while (p && p <= n) {
+    bitree[p] += x;
+    p += lowbit(p);
+  }
+}
+ll query(ll n) {
+  ll ans = 0, p = n;
+  while (p) {
+    ans += bitree[p];
+    p -= lowbit(p);
+  }
+  return ans;
+}
+ll query(ll l, ll r) { return query(r) - query(l - 1); }
+
+ll tot = 0;
+ll tree[maxn][26], clr[maxn];
+void insert(string s, ll t) {
+  ll n = s.size();
+  s = " " + s;
+  ll p = 0;
+  for (ll i = 1; i <= n; i++) {
+    ll c = s[i] - 'a';
+    if (!tree[p][c]) {
+      tree[p][c] = ++tot;
+    }
+    p = tree[p][c];
+    if (clr[p]) {
+      update(clr[p], -1);
+    }
+    clr[p] = t; // 当前颜色
+    update(clr[p], 1);
+  }
+}
+
+// ST表
+ll dp[maxn][50]; // 0/1:最小值/最大值
+void rmq_st(ll n, vector<ll> &v) {
+  for (ll i = 1; i <= n; i++) {
+    dp[i][0] = v[i]; // 2^0
+  }
+  ll m = log(1 * n) / log(2.0);
+  for (ll j = 1; j <= m; j++) {
+    ll t = n - (1 << j) + 1;
+    for (ll i = 1; i <= t; i++) {
+      dp[i][j] = max(dp[i][j - 1], dp[i + (1 << (j - 1))][j - 1]);
+    }
+  }
+}
+ll rmq_query(ll l, ll r) { // 从l开始,长度为r的区间最大值
+  ll k = log(1.0 * (r - l + 1)) / log(2.0);
+  ll mx = max(dp[l][k], dp[r - (1 << k) + 1][k]);
+  return mx;
+}
+
+void solve() {
+  cin >> n >> m;
+
+  vector<string> s(n + 1);
+  vector<ll> sz(n + 1);
+
+  for (ll i = 1; i <= n; i++) {
+    cin >> s[i];
+    sz[i] = s[i].size();
+  }
+  rmq_st(n, sz);
+
+  vector<array<ll, 3>> v;
+  for (ll i = 1; i <= m; i++) {
+    ll l, r;
+    cin >> l >> r;
+    v.push_back({r, l, i});
+  }
+  sort(v.begin(), v.end());
+
+  ll cr = 0;
+  for (auto [r, l, i] : v) {
+    while (cr < r) {
+      cr++;
+      insert(s[cr], cr);
+    }
+    a[i] = 2 * query(l, r) - rmq_query(l, r);
+  }
+  for (ll i = 1; i <= m; i++) {
+    cout << a[i] << '\n';
+  }
+}
+```
 
 ## E 智乃的小球
 
@@ -408,6 +730,8 @@ void solve() {
   }
 }
 ```
+
+类似提：[树学](https://ac.nowcoder.com/acm/problem/201400)
 
 ## I 智乃的兔子跳
 
