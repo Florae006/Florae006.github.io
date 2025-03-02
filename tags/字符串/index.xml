@@ -1,4 +1,50 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>字符串 - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link><description>字符串 - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Fri, 05 Jan 2024 14:11:58 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="self" type="application/rss+xml"/><item><title>字符串匹配问题||前缀函数+KMP+字符串哈希</title><link>http://dodolalorc.cn/posts/string_match/</link><pubDate>Fri, 05 Jan 2024 14:11:58 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/string_match/</guid><description><![CDATA[<h2 id="字符串匹配算法" class="headerLink">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>字符串 - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link><description>字符串 - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 06 Feb 2025 00:40:31 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="self" type="application/rss+xml"/><item><title>2025牛客暑寒假多校训练营Day2</title><link>http://dodolalorc.cn/posts/nc25wd2/</link><pubDate>Thu, 06 Feb 2025 00:40:31 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc25wd2/</guid><description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2025/02/06/67a3a57b557f6.jpg" referrerpolicy="no-referrer">
+            </div><h2 id="a-一起奏响历史之音" class="headerLink">
+    <a href="#a-%e4%b8%80%e8%b5%b7%e5%a5%8f%e5%93%8d%e5%8e%86%e5%8f%b2%e4%b9%8b%e9%9f%b3" class="header-mark"></a>A 一起奏响历史之音！</h2><h3 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>中国传统五声调中包含 1、2、3、5、6，判断一个乐谱是否仅由全部或部分五声调铺成。</p>
+<h3 id="思路" class="headerLink">
+    <a href="#%e6%80%9d%e8%b7%af" class="header-mark"></a>思路</h3><p>按题意判断即可。</p>
+<h3 id="代码" class="headerLink">
+    <a href="#%e4%bb%a3%e7%a0%81" class="header-mark"></a>代码</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">bool</span> <span class="n">flag</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">set</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span> <span class="n">st</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ll</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">st</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">flag</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">flag</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;YES</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;NO</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="b-能去你家蹭口饭吃吗" class="headerLink">
+    <a href="#b-%e8%83%bd%e5%8e%bb%e4%bd%a0%e5%ae%b6%e8%b9%ad%e5%8f%a3%e9%a5%ad%e5%90%83%e5%90%97" class="header-mark"></a>B 能去你家蹭口饭吃吗</h2><h3 id="题意-1" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f-1" class="header-mark"></a>题意</h3><p>给出一个数组$a$，找到一个整数，要求整数尽可能大，但是至少要比数组中一半数量的数小。</p>]]></description></item><item><title>字符串匹配问题||前缀函数+KMP+字符串哈希</title><link>http://dodolalorc.cn/posts/string_match/</link><pubDate>Fri, 05 Jan 2024 14:11:58 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/string_match/</guid><description><![CDATA[<h2 id="字符串匹配算法" class="headerLink">
     <a href="#%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8c%b9%e9%85%8d%e7%ae%97%e6%b3%95" class="header-mark"></a>字符串匹配算法</h2><h3 id="暴力做法bf" class="headerLink">
     <a href="#%e6%9a%b4%e5%8a%9b%e5%81%9a%e6%b3%95bf" class="header-mark"></a>暴力做法(BF)</h3><p>简称BF(Brute Force)算法。</p>
 <p>没什么好说的，就是看到描述直接能想到的朴素做法。</p>
