@@ -1,8 +1,6 @@
 # Rust编程区块链项目 BlockChain in Rust
 
 
-# Rust 编程区块链项目 BlockChain in Rust
-
 {{< admonition type=info title="GitHub仓库地址" open=false >}}
 GitHub 仓库地址：[BlockChain](https://github.com/Florae006/BlockChain)
 {{< /admonition >}}

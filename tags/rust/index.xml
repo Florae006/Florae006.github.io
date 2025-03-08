@@ -1,7 +1,6 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Rust - 标签 - Doごみ箱🪄</title><link>http://dodolalorc.cn/tags/rust/</link><description>Rust - 标签 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 03 Mar 2025 15:20:51 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/tags/rust/" rel="self" type="application/rss+xml"/><item><title>Rust编程区块链项目 BlockChain in Rust</title><link>http://dodolalorc.cn/posts/block_chain/</link><pubDate>Mon, 03 Mar 2025 15:20:51 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/block_chain/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://img.dodolalorc.cn/i/2025/03/03/67c559ab9df13.jpg" referrerpolicy="no-referrer">
-            </div><h1 id="rust-编程区块链项目-blockchain-in-rust" class="headerLink">
-    <a href="#rust-%e7%bc%96%e7%a8%8b%e5%8c%ba%e5%9d%97%e9%93%be%e9%a1%b9%e7%9b%ae-blockchain-in-rust" class="header-mark"></a>Rust 编程区块链项目 BlockChain in Rust</h1><div class="details admonition info">
+            </div><div class="details admonition info">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-info-circle fa-fw"></i>GitHub仓库地址<i class="details-icon fas fa-angle-right fa-fw"></i>
         </div>
