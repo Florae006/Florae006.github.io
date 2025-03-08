@@ -1,4 +1,30 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Doごみ箱🪄</title><link>http://dodolalorc.cn/</link><description>Doごみ箱2.1</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sun, 02 Mar 2025 18:46:04 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>2025牛客暑寒假多校训练营Day4</title><link>http://dodolalorc.cn/posts/nc25wd4/</link><pubDate>Sun, 02 Mar 2025 18:46:04 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc25wd4/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Doごみ箱🪄</title><link>http://dodolalorc.cn/</link><description>Doごみ箱2.1</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 03 Mar 2025 15:20:51 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>Rust编程区块链项目 BlockChain in Rust</title><link>http://dodolalorc.cn/posts/block_chain/</link><pubDate>Mon, 03 Mar 2025 15:20:51 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/block_chain/</guid><description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2025/03/03/67c559ab9df13.jpg" referrerpolicy="no-referrer">
+            </div><h1 id="rust-编程区块链项目-blockchain-in-rust" class="headerLink">
+    <a href="#rust-%e7%bc%96%e7%a8%8b%e5%8c%ba%e5%9d%97%e9%93%be%e9%a1%b9%e7%9b%ae-blockchain-in-rust" class="header-mark"></a>Rust 编程区块链项目 BlockChain in Rust</h1><div class="details admonition info">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i>GitHub仓库地址<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">GitHub 仓库地址：<a href="https://github.com/Florae006/BlockChain" target="_blank" rel="noopener noreferrer">BlockChain</a></div>
+        </div>
+    </div>
+<h2 id="一产品方案" class="headerLink">
+    <a href="#%e4%b8%80%e4%ba%a7%e5%93%81%e6%96%b9%e6%a1%88" class="header-mark"></a>一、产品方案</h2><h3 id="项目目标" class="headerLink">
+    <a href="#%e9%a1%b9%e7%9b%ae%e7%9b%ae%e6%a0%87" class="header-mark"></a>项目目标</h3><p>实现一个轻量的简单高效的区块链系统项目，用于学习和研究。</p>
+<ul>
+<li>学习区块链的相关知识，实现一个由 Rust 实现的简单区块链系统。</li>
+<li>能够生成创世区块，支持区块的创建、验证和链式储存，实现工作量证明算法。</li>
+<li>利用本机端口构建服务系统，实现交易的广播、挖矿功能、简单的交易校验功能。</li>
+</ul>
+<h3 id="用户需求分析" class="headerLink">
+    <a href="#%e7%94%a8%e6%88%b7%e9%9c%80%e6%b1%82%e5%88%86%e6%9e%90" class="header-mark"></a>用户需求分析</h3><ul>
+<li>用户可以通过命令行启动本地服务，在<code>main.rs</code>中配置路由，参考下方的<a href="#%e4%bd%bf%e7%94%a8%e6%89%8b%e5%86%8c" rel="">使用手册</a>，进行创建交易、挖矿、查看信息等。</li>
+<li>通过时间戳、<code>lock_time</code>、签名校验等完成简单的对交易信息的核对。</li>
+<li>系统具有一定的可扩展性，用户可以通过调整 API 接口快速调试。</li>
+</ul>
+<h3 id="主要功能" class="headerLink">
+    <a href="#%e4%b8%bb%e8%a6%81%e5%8a%9f%e8%83%bd" class="header-mark"></a>主要功能</h3><p>本产品主要由<code>src/</code>下的<code>.rs</code>文件实现主要功能。</p>]]></description></item><item><title>2025牛客暑寒假多校训练营Day4</title><link>http://dodolalorc.cn/posts/nc25wd4/</link><pubDate>Sun, 02 Mar 2025 18:46:04 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc25wd4/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://img.dodolalorc.cn/i/2025/03/02/67c461f0d8665.jpg" referrerpolicy="no-referrer">
             </div><h2 id="a" class="headerLink">
     <a href="#a" class="header-mark"></a>A</h2><h3 id="题意" class="headerLink">
@@ -188,29 +214,4 @@
             </div><p><strong>区间动态规划一般以区间作为动态规划的阶段。</strong></p>
 <h2 id="p1880石子合并" class="headerLink">
     <a href="#p1880%e7%9f%b3%e5%ad%90%e5%90%88%e5%b9%b6" class="header-mark"></a>[P1880]石子合并</h2><h3 id="题目描述" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" class="header-mark"></a>题目描述</h3><p>在一个圆形操场的四周摆放 $N$ 堆石子，现要将石子有次序地合并成一堆，规定每次只能选相邻的 $2$ 堆合并成新的一堆，并将新的一堆的石子数，记为该次合并的得分。</p>]]></description></item><item><title>线段树专题练习</title><link>http://dodolalorc.cn/posts/segtree_practice/</link><pubDate>Fri, 16 Aug 2024 22:43:59 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/segtree_practice/</guid><description><![CDATA[<div class="featured-image">
-                <img src="https://img.dodolalorc.cn/i/2024/12/10/67580e58b035a.png" referrerpolicy="no-referrer">
-            </div><div class="details admonition abstract open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-list-ul fa-fw"></i>前言<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">痛定思痛练习线段树QAQ。</div>
-        </div>
-    </div>
-<p>此篇包含尚未写完的题，事实上是一个<strong>TODO List</strong>。</p>
-<h3 id="todo-list" class="headerLink">
-    <a href="#todo-list" class="header-mark"></a>TODO List</h3><ul>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=1542" target="_blank" rel="noopener noreferrer">Atlantis</a></li>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://www.luogu.com.cn/problem/P5490" target="_blank" rel="noopener noreferrer">P5490 【模板】扫描线 &amp; 矩形面积并 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></li>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=1754" target="_blank" rel="noopener noreferrer">I Hate It</a></li>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=1255" target="_blank" rel="noopener noreferrer">覆盖的面积</a></li>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=1166" target="_blank" rel="noopener noreferrer">敌兵布阵</a></li>
-<li><i class="far fa-square fa-fw"></i> <a href="https://www.luogu.com.cn/problem/P4588" target="_blank" rel="noopener noreferrer">P4588 TJOI2018 数学计算 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></li>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=7463" target="_blank" rel="noopener noreferrer">单峰数列</a> ✅ 2024-09-26</li>
-<li><i class="far fa-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=7530" target="_blank" rel="noopener noreferrer">树上询问</a></li>
-<li><i class="far fa-square fa-fw"></i> <a href="https://www.luogu.com.cn/problem/P1502" target="_blank" rel="noopener noreferrer">P1502 窗口的星星 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></li>
-<li><i class="far fa-square fa-fw"></i> <a href="https://www.luogu.com.cn/problem/P2471" target="_blank" rel="noopener noreferrer">P2471 SCOI2007 降雨量 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></li>
-</ul>
-<h2 id="atlantis--p5490-扫描线矩形面积并" class="headerLink">
-    <a href="#atlantis--p5490-%e6%89%ab%e6%8f%8f%e7%ba%bf%e7%9f%a9%e5%bd%a2%e9%9d%a2%e7%a7%af%e5%b9%b6" class="header-mark"></a>Atlantis &amp; P5490 扫描线矩形面积并</h2><p><a href="https://acm.hdu.edu.cn/showproblem.php?pid=1542" target="_blank" rel="noopener noreferrer">Problem - 1542 (hdu.edu.cn)</a></p>]]></description></item></channel></rss>
+    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" class="header-mark"></a>题目描述</h3><p>在一个圆形操场的四周摆放 $N$ 堆石子，现要将石子有次序地合并成一堆，规定每次只能选相邻的 $2$ 堆合并成新的一堆，并将新的一堆的石子数，记为该次合并的得分。</p>]]></description></item></channel></rss>
