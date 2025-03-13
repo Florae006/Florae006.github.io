@@ -1,4 +1,10 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>题解记录 - 系列 - Doごみ箱🪄</title><link>http://dodolalorc.cn/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/</link><description>题解记录 - 系列 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Sun, 02 Mar 2025 18:46:04 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml"/><item><title>2025牛客暑寒假多校训练营Day4</title><link>http://dodolalorc.cn/posts/nc25wd4/</link><pubDate>Sun, 02 Mar 2025 18:46:04 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc25wd4/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>题解记录 - 系列 - Doごみ箱🪄</title><link>http://dodolalorc.cn/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/</link><description>题解记录 - 系列 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 13 Mar 2025 14:13:22 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/series/%E9%A2%98%E8%A7%A3%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml"/><item><title>LeetCode Hot 100记录（13/100）</title><link>http://dodolalorc.cn/posts/lc100/</link><pubDate>Thu, 13 Mar 2025 14:13:22 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/lc100/</guid><description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2025/03/03/67c55994b7733.jpg" referrerpolicy="no-referrer">
+            </div><h1 id="哈希33" class="headerLink">
+    <a href="#%e5%93%88%e5%b8%8c33" class="header-mark"></a>哈希(3/3)</h1><h2 id="1-两数之和" class="headerLink">
+    <a href="#1-%e4%b8%a4%e6%95%b0%e4%b9%8b%e5%92%8c" class="header-mark"></a>1. 两数之和</h2><h3 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>给定一个整数数组  <code>nums</code>  和一个整数目标值  <code>target</code>，请你在该数组中找出  <strong>和为目标值</strong> <em><code>target</code></em>  的那  <strong>两个</strong>  整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。</p>]]></description></item><item><title>2025牛客暑寒假多校训练营Day4</title><link>http://dodolalorc.cn/posts/nc25wd4/</link><pubDate>Sun, 02 Mar 2025 18:46:04 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/nc25wd4/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://img.dodolalorc.cn/i/2025/03/02/67c461f0d8665.jpg" referrerpolicy="no-referrer">
             </div><h2 id="a" class="headerLink">
     <a href="#a" class="header-mark"></a>A</h2><h3 id="题意" class="headerLink">
@@ -188,29 +194,4 @@
             </div><p><strong>区间动态规划一般以区间作为动态规划的阶段。</strong></p>
 <h2 id="p1880石子合并" class="headerLink">
     <a href="#p1880%e7%9f%b3%e5%ad%90%e5%90%88%e5%b9%b6" class="header-mark"></a>[P1880]石子合并</h2><h3 id="题目描述" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" class="header-mark"></a>题目描述</h3><p>在一个圆形操场的四周摆放 $N$ 堆石子，现要将石子有次序地合并成一堆，规定每次只能选相邻的 $2$ 堆合并成新的一堆，并将新的一堆的石子数，记为该次合并的得分。</p>]]></description></item><item><title>线段树专题练习</title><link>http://dodolalorc.cn/posts/segtree_practice/</link><pubDate>Fri, 16 Aug 2024 22:43:59 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/segtree_practice/</guid><description><![CDATA[<div class="featured-image">
-                <img src="https://img.dodolalorc.cn/i/2024/12/10/67580e58b035a.png" referrerpolicy="no-referrer">
-            </div><div class="details admonition abstract open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-list-ul fa-fw"></i>前言<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">痛定思痛练习线段树QAQ。</div>
-        </div>
-    </div>
-<p>此篇包含尚未写完的题，事实上是一个<strong>TODO List</strong>。</p>
-<h3 id="todo-list" class="headerLink">
-    <a href="#todo-list" class="header-mark"></a>TODO List</h3><ul>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=1542" target="_blank" rel="noopener noreferrer">Atlantis</a></li>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://www.luogu.com.cn/problem/P5490" target="_blank" rel="noopener noreferrer">P5490 【模板】扫描线 &amp; 矩形面积并 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></li>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=1754" target="_blank" rel="noopener noreferrer">I Hate It</a></li>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=1255" target="_blank" rel="noopener noreferrer">覆盖的面积</a></li>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=1166" target="_blank" rel="noopener noreferrer">敌兵布阵</a></li>
-<li><i class="far fa-square fa-fw"></i> <a href="https://www.luogu.com.cn/problem/P4588" target="_blank" rel="noopener noreferrer">P4588 TJOI2018 数学计算 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></li>
-<li><i class="far fa-check-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=7463" target="_blank" rel="noopener noreferrer">单峰数列</a> ✅ 2024-09-26</li>
-<li><i class="far fa-square fa-fw"></i> <a href="https://acm.hdu.edu.cn/showproblem.php?pid=7530" target="_blank" rel="noopener noreferrer">树上询问</a></li>
-<li><i class="far fa-square fa-fw"></i> <a href="https://www.luogu.com.cn/problem/P1502" target="_blank" rel="noopener noreferrer">P1502 窗口的星星 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></li>
-<li><i class="far fa-square fa-fw"></i> <a href="https://www.luogu.com.cn/problem/P2471" target="_blank" rel="noopener noreferrer">P2471 SCOI2007 降雨量 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></li>
-</ul>
-<h2 id="atlantis--p5490-扫描线矩形面积并" class="headerLink">
-    <a href="#atlantis--p5490-%e6%89%ab%e6%8f%8f%e7%ba%bf%e7%9f%a9%e5%bd%a2%e9%9d%a2%e7%a7%af%e5%b9%b6" class="header-mark"></a>Atlantis &amp; P5490 扫描线矩形面积并</h2><p><a href="https://acm.hdu.edu.cn/showproblem.php?pid=1542" target="_blank" rel="noopener noreferrer">Problem - 1542 (hdu.edu.cn)</a></p>]]></description></item></channel></rss>
+    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" class="header-mark"></a>题目描述</h3><p>在一个圆形操场的四周摆放 $N$ 堆石子，现要将石子有次序地合并成一堆，规定每次只能选相邻的 $2$ 堆合并成新的一堆，并将新的一堆的石子数，记为该次合并的得分。</p>]]></description></item></channel></rss>

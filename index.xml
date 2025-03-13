@@ -1,4 +1,10 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Doごみ箱🪄</title><link>http://dodolalorc.cn/</link><description>Doごみ箱2.1</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 13 Mar 2025 14:13:22 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>Rust编程区块链项目 BlockChain in Rust</title><link>http://dodolalorc.cn/posts/block_chain/</link><pubDate>Mon, 03 Mar 2025 15:20:51 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/block_chain/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Doごみ箱🪄</title><link>http://dodolalorc.cn/</link><description>Doごみ箱2.1</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Thu, 13 Mar 2025 14:13:22 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>LeetCode Hot 100记录（13/100）</title><link>http://dodolalorc.cn/posts/lc100/</link><pubDate>Thu, 13 Mar 2025 14:13:22 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/lc100/</guid><description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2025/03/03/67c55994b7733.jpg" referrerpolicy="no-referrer">
+            </div><h1 id="哈希33" class="headerLink">
+    <a href="#%e5%93%88%e5%b8%8c33" class="header-mark"></a>哈希(3/3)</h1><h2 id="1-两数之和" class="headerLink">
+    <a href="#1-%e4%b8%a4%e6%95%b0%e4%b9%8b%e5%92%8c" class="header-mark"></a>1. 两数之和</h2><h3 id="题意" class="headerLink">
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h3><p>给定一个整数数组  <code>nums</code>  和一个整数目标值  <code>target</code>，请你在该数组中找出  <strong>和为目标值</strong> <em><code>target</code></em>  的那  <strong>两个</strong>  整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。</p>]]></description></item><item><title>Rust编程区块链项目 BlockChain in Rust</title><link>http://dodolalorc.cn/posts/block_chain/</link><pubDate>Mon, 03 Mar 2025 15:20:51 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/block_chain/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://img.dodolalorc.cn/i/2025/03/03/67c559ab9df13.jpg" referrerpolicy="no-referrer">
             </div><div class="details admonition info">
         <div class="details-summary admonition-title">
@@ -208,9 +214,4 @@
                 <img src="https://img.dodolalorc.cn/i/2024/12/10/67580a1859420.jpeg" referrerpolicy="no-referrer">
             </div><h1 id="a-meaning-mean" class="headerLink">
     <a href="#a-meaning-mean" class="header-mark"></a>A. Meaning Mean</h1><h2 id="题意" class="headerLink">
-    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h2><p>可以选择 2 个不同的索引$i,j$，将数组中这两个索引对应的数删除，然后将$\lfloor \frac{a_i+a_j}{2} \rfloor$添加到数组的最后。可知到最后只会剩下一个数，最大化最后剩余的这个数$x$，并输出。</p>]]></description></item><item><title>刷题记录||区间动态规划</title><link>http://dodolalorc.cn/posts/intervaldp/</link><pubDate>Wed, 11 Sep 2024 21:50:26 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/intervaldp/</guid><description><![CDATA[<div class="featured-image">
-                <img src="https://img.dodolalorc.cn/i/2024/12/10/67580ba9b1658.png" referrerpolicy="no-referrer">
-            </div><p><strong>区间动态规划一般以区间作为动态规划的阶段。</strong></p>
-<h2 id="p1880石子合并" class="headerLink">
-    <a href="#p1880%e7%9f%b3%e5%ad%90%e5%90%88%e5%b9%b6" class="header-mark"></a>[P1880]石子合并</h2><h3 id="题目描述" class="headerLink">
-    <a href="#%e9%a2%98%e7%9b%ae%e6%8f%8f%e8%bf%b0" class="header-mark"></a>题目描述</h3><p>在一个圆形操场的四周摆放 $N$ 堆石子，现要将石子有次序地合并成一堆，规定每次只能选相邻的 $2$ 堆合并成新的一堆，并将新的一堆的石子数，记为该次合并的得分。</p>]]></description></item></channel></rss>
+    <a href="#%e9%a2%98%e6%84%8f" class="header-mark"></a>题意</h2><p>可以选择 2 个不同的索引$i,j$，将数组中这两个索引对应的数删除，然后将$\lfloor \frac{a_i+a_j}{2} \rfloor$添加到数组的最后。可知到最后只会剩下一个数，最大化最后剩余的这个数$x$，并输出。</p>]]></description></item></channel></rss>
