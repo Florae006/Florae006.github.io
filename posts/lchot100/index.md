@@ -1,4 +1,4 @@
-# LeetCode Hot 100记录（17/100）
+# LeetCode Hot 100记录（19/100）
 
 
 # 哈希(3/3)
@@ -626,13 +626,94 @@ public:
 };
 ```
 
-# 矩阵(0/4)
+# 矩阵(2/4)
 
 ## 73. 矩阵置零
 
+### 题意
+
+给定一个  $m \times n$  的矩阵，如果一个元素为  **0** ，则将其所在行和列的所有元素都设为  **0** 。请使用  **[原地](http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95)**  算法。
+
+### 代码
+
+```cpp
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        if (!n)
+            return;
+        int m = matrix[0].size();
+        vector<bool> row(n), col(m);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (matrix[i][j] == 0) {
+                    row[i] = col[j] = true;
+                }
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (row[i] || col[j])
+                    matrix[i][j] = 0;
+            }
+        }
+    }
+};
+```
+
 ## 54. 螺旋矩阵
 
+### 题意
+
+给你一个  `m`  行  `n`  列的矩阵  `matrix` ，请按照  **顺时针螺旋顺序** ，返回矩阵中的所有元素。
+
+### 代码
+
+```cpp
+class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        if (!n)
+            return {};
+        if (n == 1)
+            return matrix[0];
+        int m = matrix[0].size();
+        if (m == 1) {
+            vector<int> v;
+            for (int i = 0; i < n; i++)
+                v.emplace_back(matrix[i][0]);
+            return v;
+        }
+        int x = 0, y = 0, k = 0;
+        vector<pair<int, int>> dxy = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        vector<int> v = {matrix[x][y]};
+        matrix[x][y] = -101;
+        while (v.size() < n * m) {
+            int px = x + dxy[k].first, py = y + dxy[k].second;
+            if (px < 0 || px >= n || py < 0 || py >= m ||
+                matrix[px][py] == -101) {
+                k = (k + 1) % 4;
+                px = x + dxy[k].first, py = y + dxy[k].second;
+            }
+            v.push_back(matrix[px][py]);
+            matrix[px][py] = -101;
+            x = px, y = py;
+        }
+
+        return v;
+    }
+};
+```
+
 ## 48. 旋转图像
+
+### 题意
+
+给定一个  $n\times n$ 的二维矩阵  `matrix`  表示一个图像。请你将图像顺时针旋转 90 度。
+
+你必须在  **[原地](https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95)**  旋转图像，这意味着你需要直接修改输入的二维矩阵。**请不要**  使用另一个矩阵来旋转图像。
 
 ## 240. 搜索二维矩阵 II
 
