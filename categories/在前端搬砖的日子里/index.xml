@@ -1,4 +1,60 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>在前端搬砖的日子里 - 分类 - Doごみ箱🪄</title><link>http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link><description>在前端搬砖的日子里 - 分类 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 17 Mar 2025 09:26:02 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/" rel="self" type="application/rss+xml"/><item><title>JavaScript 链式调用 | 设计模式 笔记</title><link>http://dodolalorc.cn/posts/method_chaining/</link><pubDate>Mon, 17 Mar 2025 09:26:02 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/method_chaining/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>在前端搬砖的日子里 - 分类 - Doごみ箱🪄</title><link>http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link><description>在前端搬砖的日子里 - 分类 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 17 Mar 2025 11:40:19 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/" rel="self" type="application/rss+xml"/><item><title>前端流量控制常用手段</title><link>http://dodolalorc.cn/posts/flow_control/</link><pubDate>Mon, 17 Mar 2025 11:40:19 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/flow_control/</guid><description><![CDATA[<div class="featured-image">
+                <img src="https://img.dodolalorc.cn/i/2025/03/03/67c5599367fe0.jpg" referrerpolicy="no-referrer">
+            </div><div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw"></i>问题预设<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">如何解决页面请求接口的大规模并发问题？</div>
+        </div>
+    </div>
+<p>在需要处理大规模请求的情境中，做好流量控制可以提升系统稳定性和性能。</p>
+<h2 id="防抖节流" class="headerLink">
+    <a href="#%e9%98%b2%e6%8a%96%e8%8a%82%e6%b5%81" class="header-mark"></a>防抖/节流</h2><h3 id="防抖debounce" class="headerLink">
+    <a href="#%e9%98%b2%e6%8a%96debounce" class="header-mark"></a>防抖（Debounce）</h3><p>在事件触发后，延迟执行函数，若在延迟期间再次出发，则重新计时，如在搜索框输入、调整窗口大小时。</p>
+<h4 id="实现" class="headerLink">
+    <a href="#%e5%ae%9e%e7%8e%b0" class="header-mark"></a>实现</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">debounce</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="nx">wait</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">timeout</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">context</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nx">args</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timeout</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">timeout</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">args</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span> <span class="nx">wait</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">sample</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;xxx&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;resize&#39;</span><span class="p">,</span> <span class="nx">debounce</span><span class="p">(</span><span class="nx">sample</span><span class="p">,</span> <span class="mi">300</span><span class="p">));</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="为什么在-debounce-函数中使用-let" class="headerLink">
+    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e5%9c%a8-debounce-%e5%87%bd%e6%95%b0%e4%b8%ad%e4%bd%bf%e7%94%a8-let" class="header-mark"></a>为什么在  <code>debounce</code>  函数中使用  <code>let</code>？</h4><p>在  <code>debounce</code>  函数中，<code>timeout</code>  变量需要满足以下条件：</p>]]></description></item><item><title>JavaScript 链式调用 | 设计模式 笔记</title><link>http://dodolalorc.cn/posts/method_chaining/</link><pubDate>Mon, 17 Mar 2025 09:26:02 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/method_chaining/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://img.dodolalorc.cn/i/2025/03/03/67c55994138f8.jpg" referrerpolicy="no-referrer">
             </div><h2 id="vue-从-createapp-开始的链式调用" class="headerLink">
     <a href="#vue-%e4%bb%8e-createapp-%e5%bc%80%e5%a7%8b%e7%9a%84%e9%93%be%e5%bc%8f%e8%b0%83%e7%94%a8" class="header-mark"></a>Vue :从 createApp 开始的链式调用</h2><h3 id="代码示例" class="headerLink">
@@ -83,7 +139,7 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="解释" class="headerLink">
-    <a href="#%e8%a7%a3%e9%87%8a" class="header-mark"></a>解释</h3><p><code>createApp</code>:创建一个 Vue 应用实例。传入一个根组件配置对象，包含 data 和 methods。</p>]]></description></item><item><title>购物车页面制作教程（包含分页设计）</title><link>http://dodolalorc.cn/posts/cartpage/</link><pubDate>Sat, 06 Jul 2024 19:16:27 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cartpage/</guid><description><![CDATA[<div class="details admonition abstract open">
+    <a href="#%e8%a7%a3%e9%87%8a" class="header-mark"></a>解释</h3><p><code>createApp</code>:创建一个 Vue 应用实例。传入一个根组件配置对象，包含 data 和 methods。</p>]]></description></item><item><title>购物车页面制作教程（包含分页设计）</title><link>http://dodolalorc.cn/posts/cart_page_sample/</link><pubDate>Sat, 06 Jul 2024 19:16:27 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cart_page_sample/</guid><description><![CDATA[<div class="details admonition abstract open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ul fa-fw"></i>前言<i class="details-icon fas fa-angle-right fa-fw"></i>
         </div>
