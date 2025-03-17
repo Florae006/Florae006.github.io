@@ -62,13 +62,50 @@ window.addEventListener('resize', debounce(sample, 300));
 
 {{< admonition tip "var、let和const" true>}}
 
-作用域区别：`var`是函数作用域，`let`和`const`是块级作用域。
+**作用域区别**：`var`是函数作用域，`let`和`const`是块级作用域。
 
-变量升级：`var`可以升级（初始值是`undefined`），`let`和`const`不能变量升级，是暂时性死区。
+**变量升级**：`var`可以升级（初始值是`undefined`），`let`和`const`不能变量升级，是暂时性死区。
 
-重新赋值：`var`和`let`可以重新赋值，`const`不可以。
+_变量提升指的是在代码执行前，js 引擎将变量和函数的声明提示到作用域的顶部，也就是说可以在声明之前使用变量或函数，但赋值操作会保留在原位置。_
 
-适用场景：
+Example：变量
+
+```js
+console.log(a); // 输出: undefined
+var a = 10;
+console.log(a); // 输出: 10
+```
+
+实际执行顺序：
+
+```js
+var a;
+console.log(a); // 输出: undefined
+a = 10;
+console.log(a); // 输出: 10
+```
+
+Example：函数
+
+```js
+foo(); // 输出: "Hello"
+function foo() {
+    console.log("Hello");
+}
+```
+
+实际执行顺序：
+
+```js
+function foo() {
+    console.log("Hello");
+}
+foo(); // 输出: "Hello"
+```
+
+**重新赋值**：`var`和`let`可以重新赋值，`const`不可以。
+
+**适用场景**：
 
 `var`：旧代码、全局变量
 
