@@ -3,7 +3,7 @@
 
 ## Vue :从 createApp 开始的链式调用
 
-在 Vue 3 中，createApp 创建的 Vue 应用实例提供了 use 方法，用于安装插件或扩展 Vue 的功能。use 方法的作用是将插件或库集成到 Vue 应用中，使其可以在全局范围内使用。
+### 代码示例
 
 ```ts
 import { createApp } from 'vue';
