@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>在前端搬砖的日子里 - 分类 - Doごみ箱🪄</title><link>http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link><description>在前端搬砖的日子里 - 分类 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 17 Mar 2025 09:26:02 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/" rel="self" type="application/rss+xml"/><item><title>JavaScript 链式调用 | 设计模式</title><link>http://dodolalorc.cn/posts/method_chaining/</link><pubDate>Mon, 17 Mar 2025 09:26:02 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/method_chaining/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>在前端搬砖的日子里 - 分类 - Doごみ箱🪄</title><link>http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/</link><description>在前端搬砖的日子里 - 分类 - Doごみ箱🪄</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>chenflora124@gmail.com (DODOLA)</managingEditor><webMaster>chenflora124@gmail.com (DODOLA)</webMaster><copyright>dodola</copyright><lastBuildDate>Mon, 17 Mar 2025 09:26:02 +0800</lastBuildDate><atom:link href="http://dodolalorc.cn/categories/%E5%9C%A8%E5%89%8D%E7%AB%AF%E6%90%AC%E7%A0%96%E7%9A%84%E6%97%A5%E5%AD%90%E9%87%8C/" rel="self" type="application/rss+xml"/><item><title>JavaScript 链式调用 | 设计模式 笔记</title><link>http://dodolalorc.cn/posts/method_chaining/</link><pubDate>Mon, 17 Mar 2025 09:26:02 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/method_chaining/</guid><description><![CDATA[<div class="featured-image">
                 <img src="https://img.dodolalorc.cn/i/2025/03/03/67c55994138f8.jpg" referrerpolicy="no-referrer">
             </div><h2 id="vue-从-createapp-开始的链式调用" class="headerLink">
     <a href="#vue-%e4%bb%8e-createapp-%e5%bc%80%e5%a7%8b%e7%9a%84%e9%93%be%e5%bc%8f%e8%b0%83%e7%94%a8" class="header-mark"></a>Vue :从 createApp 开始的链式调用</h2><h3 id="代码示例" class="headerLink">
@@ -83,7 +83,20 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="解释" class="headerLink">
-    <a href="#%e8%a7%a3%e9%87%8a" class="header-mark"></a>解释</h3><p><code>createApp</code>:创建一个 Vue 应用实例。传入一个根组件配置对象，包含 data 和 methods。</p>]]></description></item><item><title>MutationObserver学习+实践</title><link>http://dodolalorc.cn/posts/mutationobserver/</link><pubDate>Thu, 04 Jul 2024 16:31:24 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid><description><![CDATA[<blockquote>
+    <a href="#%e8%a7%a3%e9%87%8a" class="header-mark"></a>解释</h3><p><code>createApp</code>:创建一个 Vue 应用实例。传入一个根组件配置对象，包含 data 和 methods。</p>]]></description></item><item><title>购物车页面制作教程（包含分页设计）</title><link>http://dodolalorc.cn/posts/cartpage/</link><pubDate>Sat, 06 Jul 2024 19:16:27 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/cartpage/</guid><description><![CDATA[<div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw"></i>前言<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">这篇文章用于2024年蓝旭暑期项目前的培训作业教学，目的是从零开始构建一个购物车页面，以此来熟悉原生前端三件套。o((&gt;ω&lt; ))o</div>
+        </div>
+    </div>
+<h1 id="需求分析" class="headerLink">
+    <a href="#%e9%9c%80%e6%b1%82%e5%88%86%e6%9e%90" class="header-mark"></a>需求分析</h1><p><strong>功能要求</strong>：</p>
+<ul>
+<li>
+<p>全选、单选联动逻辑（包括依次选中所有物品时自动勾选全选按钮、勾选全选时勾选所
+有单选、取消全选后取消所有选中等）、结算小项总价以及整体总价。</p>]]></description></item><item><title>MutationObserver学习+实践</title><link>http://dodolalorc.cn/posts/mutationobserver/</link><pubDate>Thu, 04 Jul 2024 16:31:24 +0800</pubDate><author><name>DODOLA</name></author><guid>http://dodolalorc.cn/posts/mutationobserver/</guid><description><![CDATA[<blockquote>
 <p>一篇学习 MutationObserver 的文章</p></blockquote>
 <h2 id="背景" class="headerLink">
     <a href="#%e8%83%8c%e6%99%af" class="header-mark"></a>背景</h2><p>今天调整新主题的时候，在重新设计友链样式的时候想保留原本的随机背景颜色，之前数量少的时候似乎不太明显，现在本地测试发觉加载太慢了。于是上网寻找解决思路，找到了 MutationObserver 这个 API，于是就学习了一下//此处记录一下学习过程。</p>

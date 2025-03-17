@@ -1,4 +1,4 @@
-# JavaScript 链式调用 | 设计模式
+# JavaScript 链式调用 | 设计模式 笔记
 
 
 ## Vue :从 createApp 开始的链式调用
