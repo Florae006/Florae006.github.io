@@ -1,9 +1,185 @@
 # JavaScript 链式调用 | 设计模式
 
 
+## Vue :从 createApp 开始的链式调用
+
+在 Vue 3 中，createApp 创建的 Vue 应用实例提供了 use 方法，用于安装插件或扩展 Vue 的功能。use 方法的作用是将插件或库集成到 Vue 应用中，使其可以在全局范围内使用。
+
+```ts
+import { createApp } from 'vue';
+
+// 创建一个 Vue 应用实例
+const app = createApp({
+  data() {
+    return {
+      message: 'Hello, Vue!'
+    };
+  },
+  methods: {
+    handleClick() {
+      alert('Button clicked!');
+    }
+  }
+});
+
+// 链式调用：配置应用并绑定事件
+app
+  .component('MyButton', {
+    template: `<button @click="handleClick">Click Me</button>`,
+    methods: {
+      handleClick() {
+        this.$emit('custom-click');
+      }
+    }
+  })
+  .directive('highlight', {
+    mounted(el) {
+      el.style.backgroundColor = 'yellow';
+    }
+  })
+  .mixin({
+    created() {
+      console.log('Mixin created hook');
+    }
+  })
+  .mount('#app'); // 挂载到 DOM
+```
+
+### 解释
+
+`createApp`:创建一个 Vue 应用实例。传入一个根组件配置对象，包含 data 和 methods。
+
+**链式调用**
+
+- `.component()`: 注册一个全局组件 MyButton，组件中定义了一个按钮，点击按钮时会触发 custom-click 事件。
+- `.directive()`: 注册一个全局指令 highlight，当元素挂载时，背景颜色会变为黄色。
+- `.mixin()`: 添加一个全局混入，在组件的 created 生命周期钩子中输出日志。
+- `.mount()`: 将应用挂载到 DOM 中，挂载点为 `#app`。
+
+**事件绑定**
+
+在 `MyButton` 组件中，通过 `@click` 绑定了一个点击事件，触发时会调用 `handleClick` 方法，并通过` $emit` 触发 `custom-click` 事件。
+
+在父组件中，可以通过监听 custom-click 事件来处理按钮点击逻辑。
+
+### use 方法
+
+`use`  方法是 Vue 应用实例的一个方法，用于安装插件。插件可以是一个对象（必须提供  `install`  方法），也可以是一个函数（会被直接调用）。Vue 会调用插件的  `install`  方法，并将 Vue 应用实例作为参数传递给它。
+
+#### 语法
+
+```javascript
+app.use(plugin, options)
+```
+
+- **`plugin`**: 要安装的插件，可以是一个对象或函数。
+- **`options`**: 可选的配置对象，传递给插件的  `install`  方法。
+
+#### 实现 use
+
+1. use 的逻辑
+
+```js
+function use(plugin, options) {
+  if (typeof plugin.install === 'function') {
+    // 如果插件是一个对象，并且提供了 install 方法
+    plugin.install(this, options);
+  } else if (typeof plugin === 'function') {
+    // 如果插件是一个函数
+    plugin(this, options);
+  } else {
+    throw new Error('Plugin must be a function or an object with an install method.');
+  }
+  return this; // 返回应用实例，支持链式调用
+}
+```
+
+2. 使用
+
+```js
+// 自定义插件
+const myPlugin = {
+  install(app, options) {
+    console.log('My plugin is installed with options:', options);
+    // 添加全局方法或属性
+    app.config.globalProperties.$myMethod = () => {
+      console.log('Hello from my plugin!');
+    };
+    // 注册全局组件
+    app.component('my-component', {
+      template: '<div>My Custom Component</div>'
+    });
+  }
+};
+
+// 使用插件
+createApp(App)
+  .use(myPlugin, { someOption: true }) // 安装自定义插件
+  .mount('#app');
+```
+
 ## Promise 中的链式调用
 
 ### 手写 Promise 方法
+
+#### Promise A+规范
+
+PromiseA+规范详细描述了 JavaScript 中 Promise 的行为标准，确保不同的 Promise 实现可以相互兼容。
+
+##### **术语**
+
+`promise`：先是一个对象或函数，其具有，然后是方法，其行为符合本规范。
+`thenable`：先用一个具有，再用方法的对象或函数。
+`value`：任何合法的脚本值(包括未定义，一个已启用，或一个 Promise)。
+`exception`：一个使用抛出语句抛出的值。
+`reason`：一个表示 Promise 被拒绝的原因
+
+##### **要求**
+
+**Promise 状态**
+
+一个 promise 必须处于以下三种状态之一：pending(等待态），fulfilled(执行态)，或 rejected(拒绝态)。
+
+`pending`：可以迁移到 fulfilled 或 rejected 状态。
+`fulfilled`：不可迁移到其他状态，必须有一个 value。
+`rejected`：不可迁移到其他状态，必须有一个 reason。
+
+**then 方法**
+一个 promise 必须提供一个 then 方法来访问其当前或最终的 value 或 reason。
+promise.then(onFulfilled, onRejected)
+
+- onFulfilled 和 onRejected 都是可选参数。
+- 如果 onFulfilled 不是函数，必须忽略它。
+- 如果 onRejected 不是函数，必须忽略它。
+
+**onFulfilled 的执行**
+
+- onFulfilled 必须在 promise 完成后被调用，且 promise 的 value 作为其第一个参数。
+- onFulfilled 不得在 promise 完成前被调用。
+- onFulfilled 必须只被调用一次。
+
+**onRejected 的执行**
+
+- onRejected 必须在 promise 被拒绝后被调用，且 promise 的 reason 作为其第一个参数。
+- onRejected 不得在 promise 被拒绝前被调用。
+- onRejected 必须只被调用一次。
+
+**then 方法必须返回一个 promise**
+
+```js
+promise2 = promise1.then(onFulfilled, onRejected);
+```
+
+promise2 必须是一个新的 promise。
+
+**处理返回的值**
+
+- 如果 onFulfilled 或 onRejected 返回一个值，则运行 Promise 解决程序`Resolve(promise2, x)`。
+- 如果 onFulfilled 或 onRejected 抛出一个异常，则 promise2 必须以作为拒绝原因。
+- 如果 onFulfilled 不是一个函数且 promise1 完成，promise2 必须以 promise1 的 value 作为其 value。
+- 如果 onRejected 不是一个函数且 promise1 被拒绝，promise2 必须以 promise1 的 reason 作为其 reason。
+
+#### 代码示例
 
 ```js
 const PENDING = 'pending';
@@ -128,123 +304,6 @@ promise.then(value => {
 }).then(value => {
   console.log(value);
 });
-```
-
-## Vue :从 createApp 开始的链式调用
-
-在 Vue 3 中，createApp 创建的 Vue 应用实例提供了 use 方法，用于安装插件或扩展 Vue 的功能。use 方法的作用是将插件或库集成到 Vue 应用中，使其可以在全局范围内使用。
-
-```ts
-import { createApp } from 'vue';
-
-// 创建一个 Vue 应用实例
-const app = createApp({
-  data() {
-    return {
-      message: 'Hello, Vue!'
-    };
-  },
-  methods: {
-    handleClick() {
-      alert('Button clicked!');
-    }
-  }
-});
-
-// 链式调用：配置应用并绑定事件
-app
-  .component('MyButton', {
-    template: `<button @click="handleClick">Click Me</button>`,
-    methods: {
-      handleClick() {
-        this.$emit('custom-click');
-      }
-    }
-  })
-  .directive('highlight', {
-    mounted(el) {
-      el.style.backgroundColor = 'yellow';
-    }
-  })
-  .mixin({
-    created() {
-      console.log('Mixin created hook');
-    }
-  })
-  .mount('#app'); // 挂载到 DOM
-```
-
-### 解释
-
-`createApp`:创建一个 Vue 应用实例。传入一个根组件配置对象，包含 data 和 methods。
-
-**链式调用**
-
-- `.component()`: 注册一个全局组件 MyButton，组件中定义了一个按钮，点击按钮时会触发 custom-click 事件。
-- `.directive()`: 注册一个全局指令 highlight，当元素挂载时，背景颜色会变为黄色。
-- `.mixin()`: 添加一个全局混入，在组件的 created 生命周期钩子中输出日志。
-- `.mount()`: 将应用挂载到 DOM 中，挂载点为 `#app`。
-
-**事件绑定**
-
-在 `MyButton` 组件中，通过 `@click` 绑定了一个点击事件，触发时会调用 `handleClick` 方法，并通过` $emit` 触发 `custom-click` 事件。
-
-在父组件中，可以通过监听 custom-click 事件来处理按钮点击逻辑。
-
-### use 方法
-
-`use`  方法是 Vue 应用实例的一个方法，用于安装插件。插件可以是一个对象（必须提供  `install`  方法），也可以是一个函数（会被直接调用）。Vue 会调用插件的  `install`  方法，并将 Vue 应用实例作为参数传递给它。
-
-#### 语法
-
-```javascript
-app.use(plugin, options)
-```
-
-- **`plugin`**: 要安装的插件，可以是一个对象或函数。
-- **`options`**: 可选的配置对象，传递给插件的  `install`  方法。
-
-#### 实现 use
-
-1. use 的逻辑
-
-```js
-function use(plugin, options) {
-  if (typeof plugin.install === 'function') {
-    // 如果插件是一个对象，并且提供了 install 方法
-    plugin.install(this, options);
-  } else if (typeof plugin === 'function') {
-    // 如果插件是一个函数
-    plugin(this, options);
-  } else {
-    throw new Error('Plugin must be a function or an object with an install method.');
-  }
-  return this; // 返回应用实例，支持链式调用
-}
-```
-
-2. 使用
-
-```js
-// 自定义插件
-const myPlugin = {
-  install(app, options) {
-    console.log('My plugin is installed with options:', options);
-    // 添加全局方法或属性
-    app.config.globalProperties.$myMethod = () => {
-      console.log('Hello from my plugin!');
-    };
-    // 注册全局组件
-    app.component('my-component', {
-      template: '<div>My Custom Component</div>'
-    });
-  }
-};
-
-// 使用插件
-createApp(App)
-  .use(myPlugin, { someOption: true }) // 安装自定义插件
-  .mount('#app');
 ```
 
 ## 实现链式调用
